@@ -46,14 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinator.Designer.cs">
+      <DependentUpon>Coordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBform.Designer.cs">
+      <DependentUpon>DBform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="SQLmethods.cs" />
+    <EmbeddedResource Include="Coordinator.resx">
+      <DependentUpon>Coordinator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
