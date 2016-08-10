@@ -16,6 +16,8 @@ namespace GvanimVS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            RegionManager rm = new RegionManager();
+            Application.Run(rm);
             
         }
     }
