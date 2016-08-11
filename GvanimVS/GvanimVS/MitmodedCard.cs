@@ -15,12 +15,12 @@ namespace GvanimVS
         public MitmodedCard()
         {
             InitializeComponent();
-            Console.Write("MimodedCard-->empty c-tor--> create empty form");            
+            Console.Write("MimodedCard-->empty c-tor--> create empty form\n");            
         }
         public MitmodedCard(string ID)
         {
             InitializeComponent();
-            Console.Write("MimodedCard-->got ID--> pull data from DB by ID");
+            Console.Write("MimodedCard-->got ID--> pull data from DB by ID\n");
             /*DataTable dt =*/  getDataTable(ID);
             initFieldsFromDT(/*dt*/);
         }

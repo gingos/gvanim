@@ -21,8 +21,13 @@ namespace GvanimVS
         {
             using (var mitCard = new MitmodedCard())
             {
-                mitCard.Show();
+                mitCard.ShowDialog();
             }
+        }
+
+        private void ok_bt_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

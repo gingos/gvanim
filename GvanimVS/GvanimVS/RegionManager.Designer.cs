@@ -32,6 +32,8 @@
             this.addCoordinator_bt = new System.Windows.Forms.Button();
             this.showReports_bt = new System.Windows.Forms.Button();
             this.showMeetings_bt = new System.Windows.Forms.Button();
+            this.ok_bt = new System.Windows.Forms.Button();
+            this.cancel_bt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addMitmoded_bt
@@ -71,11 +73,33 @@
             this.showMeetings_bt.Text = "הצג פגישות";
             this.showMeetings_bt.UseVisualStyleBackColor = true;
             // 
+            // ok_bt
+            // 
+            this.ok_bt.Location = new System.Drawing.Point(229, 280);
+            this.ok_bt.Name = "ok_bt";
+            this.ok_bt.Size = new System.Drawing.Size(75, 23);
+            this.ok_bt.TabIndex = 4;
+            this.ok_bt.Text = "סגור";
+            this.ok_bt.UseMnemonic = false;
+            this.ok_bt.UseVisualStyleBackColor = true;
+            this.ok_bt.Click += new System.EventHandler(this.ok_bt_Click);
+            // 
+            // cancel_bt
+            // 
+            this.cancel_bt.Location = new System.Drawing.Point(140, 280);
+            this.cancel_bt.Name = "cancel_bt";
+            this.cancel_bt.Size = new System.Drawing.Size(75, 23);
+            this.cancel_bt.TabIndex = 5;
+            this.cancel_bt.Text = "ביטול";
+            this.cancel_bt.UseVisualStyleBackColor = true;
+            // 
             // RegionManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(687, 357);
+            this.Controls.Add(this.cancel_bt);
+            this.Controls.Add(this.ok_bt);
             this.Controls.Add(this.showMeetings_bt);
             this.Controls.Add(this.showReports_bt);
             this.Controls.Add(this.addCoordinator_bt);
@@ -93,5 +117,7 @@
         private System.Windows.Forms.Button addCoordinator_bt;
         private System.Windows.Forms.Button showReports_bt;
         private System.Windows.Forms.Button showMeetings_bt;
+        private System.Windows.Forms.Button ok_bt;
+        private System.Windows.Forms.Button cancel_bt;
     }
 }
