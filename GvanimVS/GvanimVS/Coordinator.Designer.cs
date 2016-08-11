@@ -45,6 +45,7 @@
             this.writeReport_bt.Text = "כתוב דו\"ח";
             this.writeReport_bt.UseMnemonic = false;
             this.writeReport_bt.UseVisualStyleBackColor = true;
+            this.writeReport_bt.Click += new System.EventHandler(this.writeReport_bt_Click);
             // 
             // editReport_bt
             // 
