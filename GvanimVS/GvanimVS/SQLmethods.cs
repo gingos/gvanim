@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GvanimVS
 {
-    class SQLmethods
+    static class SQLmethods
     {
+        static string MITMODED = "MitmodedTb";
     }
 }
