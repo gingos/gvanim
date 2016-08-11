@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MitmodedCard));
             this.firstName_lb = new System.Windows.Forms.Label();
             this.firstName_tb = new System.Windows.Forms.TextBox();
             this.lastName_tb = new System.Windows.Forms.TextBox();
@@ -88,8 +89,10 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Checked = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(221, 122);
             this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowCheckBox = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
@@ -190,11 +193,14 @@
             // 
             // profile_pb
             // 
+            this.profile_pb.Image = ((System.Drawing.Image)(resources.GetObject("profile_pb.Image")));
             this.profile_pb.Location = new System.Drawing.Point(12, 41);
             this.profile_pb.Name = "profile_pb";
             this.profile_pb.Size = new System.Drawing.Size(187, 140);
+            this.profile_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profile_pb.TabIndex = 16;
             this.profile_pb.TabStop = false;
+            this.profile_pb.Click += new System.EventHandler(this.profile_pb_Click);
             // 
             // history_bt
             // 

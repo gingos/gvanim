@@ -73,6 +73,7 @@
       <DependentUpon>RegionManager.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLmethods.cs" />
+    <Compile Include="Tools.cs" />
     <EmbeddedResource Include="Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
     </EmbeddedResource>
