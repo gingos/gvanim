@@ -125,7 +125,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\anonymous_profile.gif" />
+    <None Include="Resources\button.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundGvanim.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
