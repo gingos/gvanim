@@ -72,6 +72,12 @@
     <Compile Include="RegionManager.Designer.cs">
       <DependentUpon>RegionManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegionManagerCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegionManagerCard.Designer.cs">
+      <DependentUpon>RegionManagerCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQLmethods.cs" />
     <Compile Include="Tools.cs" />
     <EmbeddedResource Include="Coordinator.resx">
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="RegionManager.resx">
       <DependentUpon>RegionManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegionManagerCard.resx">
+      <DependentUpon>RegionManagerCard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

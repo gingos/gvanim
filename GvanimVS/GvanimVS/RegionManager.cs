@@ -24,7 +24,7 @@ namespace GvanimVS
 
         private void addMitmoded_bt_Click(object sender, EventArgs e)
         {
-            using (var mitCard = new MitmodedCard())
+            using (var mitCard = new MitmodedCard(con, "302184379"))
             {
                 mitCard.ShowDialog();
             }
@@ -33,6 +33,14 @@ namespace GvanimVS
         private void ok_bt_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void info_bt_Click(object sender, EventArgs e)
+        {
+            using (var rmCard = new RegionManagerCard(con, "yoad"))
+            {
+                rmCard.ShowDialog();
+            }
         }
     }
 }

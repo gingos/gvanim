@@ -15,6 +15,7 @@ namespace GvanimVS
     {
         protected SqlConnection con;
         protected SqlCommand cmd;
+        protected SqlDataAdapter da;
 
         public DBform()
         {
@@ -25,6 +26,7 @@ namespace GvanimVS
             this.con = con;
             cmd = new SqlCommand();
             cmd.Connection = con;
+            da = new SqlDataAdapter();
             InitializeComponent();
         }
     }

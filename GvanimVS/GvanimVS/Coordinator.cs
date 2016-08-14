@@ -21,5 +21,10 @@ namespace GvanimVS
         {
             Report.ActiveForm.Activate();
         }
+
+        private void Coordinator_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

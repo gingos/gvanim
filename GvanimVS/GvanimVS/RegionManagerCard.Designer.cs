@@ -1,6 +1,6 @@
 ﻿namespace GvanimVS
 {
-    partial class MitmodedCard
+    partial class RegionManagerCard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegionManagerCard));
             this.firstName_lb = new System.Windows.Forms.Label();
             this.firstName_tb = new System.Windows.Forms.TextBox();
             this.lastName_tb = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.phone2_tb = new System.Windows.Forms.TextBox();
             this.phone2_lb = new System.Windows.Forms.Label();
             this.profile_pb = new System.Windows.Forms.PictureBox();
-            this.history_bt = new System.Windows.Forms.Button();
             this.ok_bt = new System.Windows.Forms.Button();
             this.cancel_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
@@ -193,6 +193,7 @@
             // profile_pb
             // 
             this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
+            this.profile_pb.InitialImage = ((System.Drawing.Image)(resources.GetObject("profile_pb.InitialImage")));
             this.profile_pb.Location = new System.Drawing.Point(12, 41);
             this.profile_pb.Name = "profile_pb";
             this.profile_pb.Size = new System.Drawing.Size(187, 140);
@@ -201,22 +202,13 @@
             this.profile_pb.TabStop = false;
             this.profile_pb.Click += new System.EventHandler(this.profile_pb_Click);
             // 
-            // history_bt
-            // 
-            this.history_bt.Location = new System.Drawing.Point(12, 201);
-            this.history_bt.Name = "history_bt";
-            this.history_bt.Size = new System.Drawing.Size(187, 23);
-            this.history_bt.TabIndex = 17;
-            this.history_bt.Text = "פרטי תעסוקה";
-            this.history_bt.UseVisualStyleBackColor = true;
-            // 
             // ok_bt
             // 
             this.ok_bt.Location = new System.Drawing.Point(124, 317);
             this.ok_bt.Name = "ok_bt";
             this.ok_bt.Size = new System.Drawing.Size(75, 23);
             this.ok_bt.TabIndex = 18;
-            this.ok_bt.Text = "עדכון";
+            this.ok_bt.Text = "שמור וצא";
             this.ok_bt.UseVisualStyleBackColor = true;
             this.ok_bt.Click += new System.EventHandler(this.ok_bt_Click);
             // 
@@ -226,18 +218,17 @@
             this.cancel_bt.Name = "cancel_bt";
             this.cancel_bt.Size = new System.Drawing.Size(75, 23);
             this.cancel_bt.TabIndex = 19;
-            this.cancel_bt.Text = "צא";
+            this.cancel_bt.Text = "ביטול";
             this.cancel_bt.UseVisualStyleBackColor = true;
             this.cancel_bt.Click += new System.EventHandler(this.cancel_bt_Click);
             // 
-            // MitmodedCard
+            // RegionManagerCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 358);
             this.Controls.Add(this.cancel_bt);
             this.Controls.Add(this.ok_bt);
-            this.Controls.Add(this.history_bt);
             this.Controls.Add(this.profile_pb);
             this.Controls.Add(this.phone2_tb);
             this.Controls.Add(this.phone2_lb);
@@ -255,9 +246,9 @@
             this.Controls.Add(this.lastName_lb);
             this.Controls.Add(this.firstName_tb);
             this.Controls.Add(this.firstName_lb);
-            this.Name = "MitmodedCard";
+            this.Name = "RegionManagerCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MitmodedCard";
+            this.Text = "RegionManagerCard";
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -283,7 +274,6 @@
         private System.Windows.Forms.TextBox phone2_tb;
         private System.Windows.Forms.Label phone2_lb;
         private System.Windows.Forms.PictureBox profile_pb;
-        private System.Windows.Forms.Button history_bt;
         private System.Windows.Forms.Button ok_bt;
         private System.Windows.Forms.Button cancel_bt;
     }

@@ -104,10 +104,12 @@
             this.Controls.Add(this.addMeeting_bt);
             this.Controls.Add(this.editReport_bt);
             this.Controls.Add(this.writeReport_bt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Coordinator";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Coordinator";
+            this.Load += new System.EventHandler(this.Coordinator_Load);
             this.ResumeLayout(false);
 
         }

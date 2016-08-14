@@ -14,12 +14,12 @@ namespace GvanimVS
             bool valid = true;
             if (text.Equals(""))
             {
-                System.Windows.Forms.MessageBox.Show("number cannot be empty");
+                System.Windows.Forms.MessageBox.Show("השדה איננו יכול להיות ריק");
                 return false;
             }
             if (text.Contains("-"))
             {
-                System.Windows.Forms.MessageBox.Show("number cannot be negative");
+                System.Windows.Forms.MessageBox.Show("המספר איננו יכול להיות שלילי");
                 return false;
             }
             try
@@ -28,12 +28,12 @@ namespace GvanimVS
             }
             catch (FormatException)
             {
-                System.Windows.Forms.MessageBox.Show("{0}: Bad Format", text);
+                System.Windows.Forms.MessageBox.Show("{0}: שגיאת פורמט", text);
                 valid = false;
             }
             catch (OverflowException)
             {
-                System.Windows.Forms.MessageBox.Show("{0}: Overflow", text);
+                System.Windows.Forms.MessageBox.Show("{0}: המספר ארוך מדי", text);
                 valid = false;
             }
 
@@ -42,6 +42,8 @@ namespace GvanimVS
         public static bool IsAlphabets(string inputString)
         {
             Regex r = new Regex("^[a-zA-Z ]+$");
+            //Regex r = new Regex("^[a-zA-Z\\p{IsHebrew}]+$");
+           
             if (r.IsMatch(inputString))
                 return true;
             else

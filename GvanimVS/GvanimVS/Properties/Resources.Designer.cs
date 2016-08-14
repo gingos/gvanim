@@ -63,19 +63,9 @@ namespace GvanimVS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap backgroundGvanim {
+        internal static System.Drawing.Bitmap anonymous_profile {
             get {
-                object obj = ResourceManager.GetObject("backgroundGvanim", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap button {
-            get {
-                object obj = ResourceManager.GetObject("button", resourceCulture);
+                object obj = ResourceManager.GetObject("anonymous_profile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -34,6 +34,7 @@
             this.showMeetings_bt = new System.Windows.Forms.Button();
             this.ok_bt = new System.Windows.Forms.Button();
             this.cancel_bt = new System.Windows.Forms.Button();
+            this.info_bt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addMitmoded_bt
@@ -93,11 +94,22 @@
             this.cancel_bt.Text = "ביטול";
             this.cancel_bt.UseVisualStyleBackColor = true;
             // 
+            // info_bt
+            // 
+            this.info_bt.Location = new System.Drawing.Point(52, 25);
+            this.info_bt.Name = "info_bt";
+            this.info_bt.Size = new System.Drawing.Size(75, 23);
+            this.info_bt.TabIndex = 6;
+            this.info_bt.Text = "הצג פרטים";
+            this.info_bt.UseVisualStyleBackColor = true;
+            this.info_bt.Click += new System.EventHandler(this.info_bt_Click);
+            // 
             // RegionManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(687, 357);
+            this.Controls.Add(this.info_bt);
             this.Controls.Add(this.cancel_bt);
             this.Controls.Add(this.ok_bt);
             this.Controls.Add(this.showMeetings_bt);
@@ -119,5 +131,6 @@
         private System.Windows.Forms.Button showMeetings_bt;
         private System.Windows.Forms.Button ok_bt;
         private System.Windows.Forms.Button cancel_bt;
+        private System.Windows.Forms.Button info_bt;
     }
 }
