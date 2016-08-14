@@ -192,7 +192,7 @@
             // 
             // profile_pb
             // 
-            this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
+            this.profile_pb.Image = ((System.Drawing.Image)(resources.GetObject("profile_pb.Image")));
             this.profile_pb.InitialImage = ((System.Drawing.Image)(resources.GetObject("profile_pb.InitialImage")));
             this.profile_pb.Location = new System.Drawing.Point(12, 41);
             this.profile_pb.Name = "profile_pb";

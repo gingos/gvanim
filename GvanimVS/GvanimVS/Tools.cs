@@ -41,8 +41,8 @@ namespace GvanimVS
         }
         public static bool IsAlphabets(string inputString)
         {
-            Regex r = new Regex("^[a-zA-Z ]+$");
-            //Regex r = new Regex("^[a-zA-Z\\p{IsHebrew}]+$");
+            //Regex r = new Regex("^[a-zA-Z ]+$");
+            Regex r = new Regex("^[a-zA-Zא-ת ]+$");
            
             if (r.IsMatch(inputString))
                 return true;
