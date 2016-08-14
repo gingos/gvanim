@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GvanimVS
 {
-    public partial class Coordinator : Form
+    public partial class Coordinator : DBform
     {
         public Coordinator()
         {
             InitializeComponent();
+        }
+
+        private void writeReport_bt_Click(object sender, EventArgs e)
+        {
+            Report.ActiveForm.Activate();
         }
     }
 }
