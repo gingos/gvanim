@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.writeReport_bt = new System.Windows.Forms.Button();
             this.editReport_bt = new System.Windows.Forms.Button();
             this.addMeeting_bt = new System.Windows.Forms.Button();
             this.editMitmoded_bt = new System.Windows.Forms.Button();
             this.editMeeting_bt = new System.Windows.Forms.Button();
             this.showMeetings_bt = new System.Windows.Forms.Button();
+            this.writeReport_bt = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // writeReport_bt
-            // 
-            this.writeReport_bt.Location = new System.Drawing.Point(400, 164);
-            this.writeReport_bt.Name = "writeReport_bt";
-            this.writeReport_bt.Size = new System.Drawing.Size(97, 23);
-            this.writeReport_bt.TabIndex = 0;
-            this.writeReport_bt.Text = "כתוב דו\"ח";
-            this.writeReport_bt.UseMnemonic = false;
-            this.writeReport_bt.UseVisualStyleBackColor = true;
-            this.writeReport_bt.Click += new System.EventHandler(this.writeReport_bt_Click);
             // 
             // editReport_bt
             // 
@@ -92,6 +81,17 @@
             this.showMeetings_bt.Text = "הצג פגישות";
             this.showMeetings_bt.UseVisualStyleBackColor = true;
             // 
+            // writeReport_bt
+            // 
+            this.writeReport_bt.Location = new System.Drawing.Point(400, 164);
+            this.writeReport_bt.Name = "writeReport_bt";
+            this.writeReport_bt.Size = new System.Drawing.Size(97, 23);
+            this.writeReport_bt.TabIndex = 0;
+            this.writeReport_bt.Text = "כתוב דו\"ח";
+            this.writeReport_bt.UseMnemonic = false;
+            this.writeReport_bt.UseVisualStyleBackColor = true;
+            this.writeReport_bt.Click += new System.EventHandler(this.writeReport_bt_Click);
+            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,12 +113,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button writeReport_bt;
         private System.Windows.Forms.Button editReport_bt;
         private System.Windows.Forms.Button addMeeting_bt;
         private System.Windows.Forms.Button editMitmoded_bt;
         private System.Windows.Forms.Button editMeeting_bt;
         private System.Windows.Forms.Button showMeetings_bt;
+        private System.Windows.Forms.Button writeReport_bt;
     }
 }
