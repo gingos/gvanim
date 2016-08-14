@@ -17,13 +17,12 @@ namespace GvanimVS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
             RegionManager rm = tryConnection();
             if (rm!=null)
                 Application.Run(rm);
             else
             {
-                MessageBox.Show("Could not open Login Screen");
+                MessageBox.Show("אין אפשרות לפתוח את מסך ההתחברות");
             }
             
         }
@@ -37,7 +36,10 @@ namespace GvanimVS
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                //MessageBox.Show(e.ToString());
+                MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" +
+                    "\n" +
+                    "אנא נסו שוב בעוד מספר רגים");
                 return null;
 
             }
