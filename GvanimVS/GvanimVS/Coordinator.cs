@@ -19,12 +19,31 @@ namespace GvanimVS
 
         private void writeReport_bt_Click(object sender, EventArgs e)
         {
-            Report.ActiveForm.Activate();
+            Report r = new Report();
+            r.Activate();
         }
 
         private void Coordinator_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void editReport_bt_Click(object sender, EventArgs e)
+        {
+            FindReport fr = new FindReport();
+            fr.Activate();
+        }
+
+        private void addMeeting_bt_Click(object sender, EventArgs e)
+        {
+            AddMeeting am = new AddMeeting();
+            am.Activate();
+        }
+
+        private void editMeeting_bt_Click(object sender, EventArgs e)
+        {
+            FindMeeting fm = new FindMeeting();
+            fm.Activate();
         }
     }
 }

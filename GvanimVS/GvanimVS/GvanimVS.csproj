@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMeeting.Designer.cs">
+      <DependentUpon>AddMeeting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Coordinator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,18 @@
     </Compile>
     <Compile Include="DBform.Designer.cs">
       <DependentUpon>DBform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindMeeting.Designer.cs">
+      <DependentUpon>FindMeeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindReport.Designer.cs">
+      <DependentUpon>FindReport.cs</DependentUpon>
     </Compile>
     <Compile Include="MitmodedCard.cs">
       <SubType>Form</SubType>
@@ -86,8 +104,17 @@
     </Compile>
     <Compile Include="SQLmethods.cs" />
     <Compile Include="Tools.cs" />
+    <EmbeddedResource Include="AddMeeting.resx">
+      <DependentUpon>AddMeeting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindMeeting.resx">
+      <DependentUpon>FindMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindReport.resx">
+      <DependentUpon>FindReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MitmodedCard.resx">
       <DependentUpon>MitmodedCard.cs</DependentUpon>

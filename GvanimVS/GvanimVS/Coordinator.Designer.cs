@@ -44,6 +44,7 @@
             this.editReport_bt.TabIndex = 1;
             this.editReport_bt.Text = "ערוך דו\"ח";
             this.editReport_bt.UseVisualStyleBackColor = true;
+            this.editReport_bt.Click += new System.EventHandler(this.editReport_bt_Click);
             // 
             // addMeeting_bt
             // 
@@ -53,6 +54,7 @@
             this.addMeeting_bt.TabIndex = 2;
             this.addMeeting_bt.Text = "הוסף פגישה";
             this.addMeeting_bt.UseVisualStyleBackColor = true;
+            this.addMeeting_bt.Click += new System.EventHandler(this.addMeeting_bt_Click);
             // 
             // editMitmoded_bt
             // 
@@ -71,6 +73,7 @@
             this.editMeeting_bt.TabIndex = 4;
             this.editMeeting_bt.Text = "ערוך פרטי פגישה";
             this.editMeeting_bt.UseVisualStyleBackColor = true;
+            this.editMeeting_bt.Click += new System.EventHandler(this.editMeeting_bt_Click);
             // 
             // showMeetings_bt
             // 
