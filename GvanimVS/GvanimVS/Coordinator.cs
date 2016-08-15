@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace GvanimVS
 {
     public partial class Coordinator : DBform
     {
-        public Coordinator()
+        public Coordinator(SqlConnection con):base(con)
         {
             InitializeComponent();
         }

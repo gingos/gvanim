@@ -17,9 +17,17 @@ namespace GvanimVS
             InitializeComponent();
         }
 
+        public Report(int reportID)
+        {
+            InitializeComponent();
+            // ReportSerialNum_lb = 
+           // reportDiscription_tb = 
+           // activityDiscription_tb = 
+        }
+
         private void Report_Load(object sender, EventArgs e)
         {
-            //get new serial number for this report
+            
         }
 
         private void saveReport_bt_Click(object sender, EventArgs e)

@@ -127,6 +127,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FindReport";
             this.Text = "FindReport";
+            this.Load += new System.EventHandler(this.FindReport_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

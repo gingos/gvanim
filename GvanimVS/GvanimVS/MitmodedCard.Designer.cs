@@ -258,6 +258,7 @@
             this.Name = "MitmodedCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MitmodedCard";
+            this.Load += new System.EventHandler(this.MitmodedCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

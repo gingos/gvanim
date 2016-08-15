@@ -253,5 +253,10 @@ namespace GvanimVS
                 return ms.ToArray();
             }
         }
+
+        private void MitmodedCard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

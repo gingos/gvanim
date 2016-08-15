@@ -33,9 +33,12 @@ namespace GvanimVS
                     +      "streetAddress = @address, phone1 = @phone1, phone2 = @phone2, photo = @photo" 
                     + " WHERE ID = @ID";
         }
+
         private static string dateConverter(DateTime date)
         {
             return date.Date.ToString("yyyy-MM-dd");
         }
+
+        private static string findMeeting ()
     }
 }
