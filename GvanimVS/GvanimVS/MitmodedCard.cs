@@ -29,7 +29,6 @@ namespace GvanimVS
             InitializeComponent();
             this.ID = ID;
             ID_tb.Text = ID;
-            Console.Write("MimodedCard-->got " + ID + "--> pull data from DB by ID\n");
             imgChanged = false;
             DataTable dt = getDataTable(ID);
             initFieldsFromDT(dt);
@@ -46,16 +45,24 @@ namespace GvanimVS
         }
         private void initFieldsFromDT(DataTable dt)
         {
-            Console.Write("MimodedCard-->initFields-->IMPLEMENT!\n");
             foreach (DataRow dr in dt.Rows)
             {
-                MessageBox.Show( dr["firstName"].ToString());
-                MessageBox.Show( dr["lastName"].ToString());
-                
-                byte[] bytes = (byte[])dr["photo"];
-                var ms = new System.IO.MemoryStream(bytes);
-                profile_pb.Image = Image.FromStream(ms); //runtime here
-                
+                firstName_tb.Text = dr["firstName"].ToString();
+                lastName_tb.Text =  dr["lastName"].ToString();
+                dateTimePicker1.Value = (DateTime)dr["birthday"];
+                city_tb.Text = dr["city"].ToString();
+                address_tb.Text = dr["streetAddress"].ToString();
+                phone1_tb.Text = dr["phone1"].ToString();
+                phone2_tb.Text = dr["phone2"].ToString();
+                if (dr["photo"] != null)
+                {
+                    byte[] bytes = (byte[])dr["photo"];
+                    var ms = new System.IO.MemoryStream(bytes);
+                    profile_pb.Image = Image.FromStream(ms);
+                }
+                else
+                    profile_pb.Image = Properties.Resources.anonymous_profile;
+
             }
         }
 
@@ -69,10 +76,23 @@ namespace GvanimVS
                     ID_tb.Text, city_tb.Text, address_tb.Text,
                     phone1_tb.Text, phone2_tb.Text, imgByte);
                 */
+                /*
                 cmd = new SqlCommand("insert into MitmodedTb" +
                 " (ID, firstName ,lastName, birthDay, city, streetAddress, phone1, phone2, photo ) " +
                 " values(@pID, @pFirst, @pLast, @pBirthday, @pCity, @pAddress, @pPhone1,@pPhone2, @pPhoto)", con);
-
+                */
+                cmd = new SqlCommand(
+                    " IF NOT EXISTS (SELECT * FROM " + SQLmethods.MITMODED + " WHERE ID = @pID) "
+                    + "INSERT INTO " + SQLmethods.MITMODED + " (ID, firstName,lastName,birthday,city, "
+                    + "streetAddress,phone1,phone2, photo) "
+                    + "VALUES (@pID, @pFirst, @pLast, @pBirthday, @pCity, "
+                    + "@pAddress, @pPhone1, @pPhone2, @pPhoto) "
+                    + "ELSE "
+                    + "UPDATE " + SQLmethods.MITMODED
+                    + " SET firstName = @pFirst, lastName = @pLast, birthday = @pBirthday, city = @pCity, "
+                    + "streetAddress = @pAddress, phone1 = @pPhone1, phone2 = @pPhone2, photo = @pPhoto"
+                    + " WHERE ID = @pID",con);
+                    
                 cmd.Parameters.AddWithValue("@pID", ID_tb.Text);
                 cmd.Parameters.AddWithValue("@pFirst", firstName_tb.Text);
                 cmd.Parameters.AddWithValue("@pLast", lastName_tb.Text);
@@ -84,18 +104,10 @@ namespace GvanimVS
 
 
                 if (profile_pb.ImageLocation != null)
-                {
-                    //cmd.Parameters.AddWithValue("@proPicFileName", SqlDbType.Image,imgLoc.Length ).Value = imgLoc;
-                    byte[] photo = GetPhoto(profile_pb.ImageLocation);
-                    cmd.Parameters.Add("@pPhoto", SqlDbType.Image, photo.Length).Value = photo;
-                }
-                else
-                {
-                    SqlParameter imageParameter = new SqlParameter("@pPhoto", SqlDbType.Image);
-                    imageParameter.Value = DBNull.Value;
-                    cmd.Parameters.Add(imageParameter);
-                }
-
+                    imgByte = GetPhoto(profile_pb.ImageLocation);   
+                else //null because no new image was selected
+                    imgByte = imageToByteArray(profile_pb.Image);
+                cmd.Parameters.Add("@pPhoto", SqlDbType.Image, imgByte.Length).Value = imgByte;
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -209,7 +221,7 @@ namespace GvanimVS
                 DialogResult dialogResult = MessageBox.Show("לא נבחרה תמונה. האם ברצונך להמשיך?", "אישור בחירת תמונה", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    imgByte = imageToByteArray(profile_pb.Image);
+                    //continue
                 }
                 else if (dialogResult == DialogResult.No)
                 {
