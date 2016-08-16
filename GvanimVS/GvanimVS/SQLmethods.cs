@@ -39,6 +39,9 @@ namespace GvanimVS
             return date.Date.ToString("yyyy-MM-dd");
         }
 
-        private static string findMeeting ()
+        private static string findMeeting()
+        {
+            return null;
+        }
     }
 }
