@@ -36,7 +36,6 @@ namespace GvanimVS
             }
             catch (SqlException e)
             {
-                //MessageBox.Show(e.ToString());
                 MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" +
                     "\n" +
                     "אנא נסו שוב בעוד מספר רגים");
