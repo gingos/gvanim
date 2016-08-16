@@ -14,14 +14,12 @@ namespace GvanimVS
 {
     public partial class MitmodedCard : DBform
     {
-        //private string imgLoc;
         private byte[] imgByte;
         private bool imgChanged;
         private string ID;
         public MitmodedCard(SqlConnection con):base(con)
         {
             InitializeComponent();
-            Console.Write("MimodedCard-->empty c-tor--> create empty form\n");
             imgChanged = false;
         }
         public MitmodedCard(SqlConnection con, string ID):base(con)
@@ -30,19 +28,10 @@ namespace GvanimVS
             this.ID = ID;
             ID_tb.Text = ID;
             imgChanged = false;
-            DataTable dt = getDataTable(ID);
+            DataTable dt = SQLmethods.getDataTable(ID, cmd, da);
             initFieldsFromDT(dt);
         }
         
-        private DataTable getDataTable(string ID)
-        {
-            DataTable dt = new DataTable();
-            string cmdText = "SELECT * FROM MitmodedTb WHERE ID = " + ID;
-            da.SelectCommand = new SqlCommand(cmdText, con);
-            da.Fill(dt);
-            return dt;
-            
-        }
         private void initFieldsFromDT(DataTable dt)
         {
             foreach (DataRow dr in dt.Rows)
@@ -70,52 +59,20 @@ namespace GvanimVS
         {
             
             if (verifyFields())
-            {   /*
-                cmd.CommandText = SQLmethods.upsertMitmoded(
-                    firstName_tb.Text, lastName_tb.Text, dateTimePicker1.Value.Date,
-                    ID_tb.Text, city_tb.Text, address_tb.Text,
-                    phone1_tb.Text, phone2_tb.Text, imgByte);
-                */
-                /*
-                cmd = new SqlCommand("insert into MitmodedTb" +
-                " (ID, firstName ,lastName, birthDay, city, streetAddress, phone1, phone2, photo ) " +
-                " values(@pID, @pFirst, @pLast, @pBirthday, @pCity, @pAddress, @pPhone1,@pPhone2, @pPhoto)", con);
-                */
-                cmd = new SqlCommand(
-                    " IF NOT EXISTS (SELECT * FROM " + SQLmethods.MITMODED + " WHERE ID = @pID) "
-                    + "INSERT INTO " + SQLmethods.MITMODED + " (ID, firstName,lastName,birthday,city, "
-                    + "streetAddress,phone1,phone2, photo) "
-                    + "VALUES (@pID, @pFirst, @pLast, @pBirthday, @pCity, "
-                    + "@pAddress, @pPhone1, @pPhone2, @pPhoto) "
-                    + "ELSE "
-                    + "UPDATE " + SQLmethods.MITMODED
-                    + " SET firstName = @pFirst, lastName = @pLast, birthday = @pBirthday, city = @pCity, "
-                    + "streetAddress = @pAddress, phone1 = @pPhone1, phone2 = @pPhone2, photo = @pPhoto"
-                    + " WHERE ID = @pID",con);
-                    
-                cmd.Parameters.AddWithValue("@pID", ID_tb.Text);
-                cmd.Parameters.AddWithValue("@pFirst", firstName_tb.Text);
-                cmd.Parameters.AddWithValue("@pLast", lastName_tb.Text);
-                cmd.Parameters.Add("@pBirthday", SqlDbType.Date).Value = dateTimePicker1.Value.Date;
-                cmd.Parameters.AddWithValue("@pCity", city_tb.Text);
-                cmd.Parameters.AddWithValue("@pAddress", address_tb.Text);
-                cmd.Parameters.AddWithValue("@pPhone1", phone1_tb.Text);
-                cmd.Parameters.AddWithValue("@pPhone2", phone2_tb.Text);
-
+            {  
 
                 if (profile_pb.ImageLocation != null)
-                    imgByte = GetPhoto(profile_pb.ImageLocation);   
-                else //null because no new image was selected
+                    imgByte = GetPhoto(profile_pb.ImageLocation);
+                //null because no new image was selected 
+                else
                     imgByte = imageToByteArray(profile_pb.Image);
-                cmd.Parameters.Add("@pPhoto", SqlDbType.Image, imgByte.Length).Value = imgByte;
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
+                
+                if (SQLmethods.upsertMidmoded(firstName_tb.Text, lastName_tb.Text, dateTimePicker1.Value.Date,
+                   ID_tb.Text, city_tb.Text, address_tb.Text, phone1_tb.Text, phone2_tb.Text,
+                   imgByte, cmd))
+                    MessageBox.Show("המידע נשמר בהצלחה");
+                else
+                    MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
                 this.Close();
             }
         }
@@ -129,9 +86,6 @@ namespace GvanimVS
             var FD = new System.Windows.Forms.OpenFileDialog();
             if (FD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                //string fileToOpen = FD.FileName.ToString();
-                //imgLoc = fileToOpen;
-                //profile_pb.ImageLocation = imgLoc;
                 profile_pb.ImageLocation = FD.FileName.ToString();
                 imgByte = GetPhoto(profile_pb.ImageLocation);
                 imgChanged = true;
@@ -237,12 +191,10 @@ namespace GvanimVS
             FileStream stream = new FileStream(
                 imgLoc, FileMode.Open, FileAccess.Read);
             BinaryReader reader = new BinaryReader(stream);
-
             byte[] photo = reader.ReadBytes((int)stream.Length);
 
             reader.Close();
             stream.Close();
-
             return photo;
         }
         public byte[] imageToByteArray(System.Drawing.Image imageIn)

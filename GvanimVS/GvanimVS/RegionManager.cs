@@ -24,7 +24,7 @@ namespace GvanimVS
 
         private void addMitmoded_bt_Click(object sender, EventArgs e)
         {
-            using (var mitCard = new MitmodedCard(con, "302184379"))
+            using (var mitCard = new MitmodedCard(con))
             {
                 mitCard.ShowDialog();
             }
