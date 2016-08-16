@@ -9,6 +9,8 @@ namespace GvanimVS
     static class SQLmethods
     {
         public static string MITMODED = "MitmodedTb";
+        public static string MEETINGS = "MeetingsTB";
+        public static string REPORTS = "ReportsTB";
 
         public static string upsertMitmoded(string first, string last, DateTime date, string ID, string city, string address, string phone1, string phone2, byte[] photo)
         {
@@ -39,9 +41,13 @@ namespace GvanimVS
             return date.Date.ToString("yyyy-MM-dd");
         }
 
-        private static string findMeeting()
+        private static string findMeeting(int id, DateTime date, string name)
         {
-            return null;
+            return
+                     "DECLARE @id int ='" + id + "'"
+                   + "DECLARE @date datetime = '" + date + "'"
+                   + "DECLARE @mitmoded nvarchar(50) = '" + name + "'"
+                   + "SELECT FROM " + MEETINGS + "WHERE Id = @id OR mitmoded = @mitmoded OR Date = @date" ;
         }
     }
 }
