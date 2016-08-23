@@ -34,6 +34,7 @@
             this.editMeeting_bt = new System.Windows.Forms.Button();
             this.showMeetings_bt = new System.Windows.Forms.Button();
             this.writeReport_bt = new System.Windows.Forms.Button();
+            this.close_bt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // editReport_bt
@@ -95,19 +96,29 @@
             this.writeReport_bt.UseVisualStyleBackColor = true;
             this.writeReport_bt.Click += new System.EventHandler(this.writeReport_bt_Click);
             // 
+            // close_bt
+            // 
+            this.close_bt.Location = new System.Drawing.Point(141, 309);
+            this.close_bt.Name = "close_bt";
+            this.close_bt.Size = new System.Drawing.Size(75, 23);
+            this.close_bt.TabIndex = 6;
+            this.close_bt.Text = "יציאה";
+            this.close_bt.UseVisualStyleBackColor = true;
+            this.close_bt.Click += new System.EventHandler(this.close_bt_Click);
+            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 368);
             this.ControlBox = false;
+            this.Controls.Add(this.close_bt);
             this.Controls.Add(this.showMeetings_bt);
             this.Controls.Add(this.editMeeting_bt);
             this.Controls.Add(this.editMitmoded_bt);
             this.Controls.Add(this.addMeeting_bt);
             this.Controls.Add(this.editReport_bt);
             this.Controls.Add(this.writeReport_bt);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Coordinator";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -124,5 +135,6 @@
         private System.Windows.Forms.Button editMeeting_bt;
         private System.Windows.Forms.Button showMeetings_bt;
         private System.Windows.Forms.Button writeReport_bt;
+        private System.Windows.Forms.Button close_bt;
     }
 }

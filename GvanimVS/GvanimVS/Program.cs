@@ -17,16 +17,16 @@ namespace GvanimVS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            RegionManager rm = tryConnection();
-            if (rm!=null)
-                Application.Run(rm);
+            LoginPage login = tryConnection();
+            if (login!=null)
+                Application.Run(login);
             else
             {
                 MessageBox.Show("אין אפשרות לפתוח את מסך ההתחברות");
             }
             
         }
-        static RegionManager tryConnection()
+        static LoginPage tryConnection()
         {
             string connectionString = "Data Source= gingos.database.windows.net;Initial Catalog=gvanimDB;Persist Security Info=True;User ID=gingos;Password=wolf20Schneid!";
             SqlConnection con = new SqlConnection(connectionString);
@@ -42,7 +42,7 @@ namespace GvanimVS
                 return null;
 
             }
-            return new RegionManager(con);
+            return new LoginPage(con);
         }
     }
 }

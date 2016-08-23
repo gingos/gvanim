@@ -13,6 +13,7 @@ namespace GvanimVS
 {
     public partial class RegionManager : DBform
     {
+        string ID;
         public RegionManager():base()
         {
             InitializeComponent();
@@ -20,6 +21,12 @@ namespace GvanimVS
         public RegionManager(SqlConnection con) : base(con)
         {
             InitializeComponent();
+        }
+        public RegionManager(SqlConnection con, string ID) : base(con)
+        {
+            InitializeComponent();
+            this.ID = ID;
+            this.Text += ": " + ID;
         }
 
         private void addMitmoded_bt_Click(object sender, EventArgs e)

@@ -13,8 +13,9 @@ namespace GvanimVS
         public static string MITMODED = "MitmodedTb";
         public static string MEETINGS = "MeetingsTB";
         public static string REPORTS = "ReportsTB";
+        public static string USERS = "UsersTB";
 
-      
+
         public static bool upsertMidmoded(string first, string last, DateTime date, string ID, string city, string address, string phone1, string phone2, byte[] photo, SqlCommand cmd)
         {
            
@@ -84,13 +85,51 @@ namespace GvanimVS
             return true;
         }
         //in the future, perhaps add paramter: table name to look for various data
-        public static DataTable getDataTable(string ID, SqlCommand cmd, SqlDataAdapter da)
+        public static DataTable getDataTable(string table, string ID, SqlCommand cmd, SqlDataAdapter da)
         {
             DataTable dt = new DataTable();
-            string cmdText = "SELECT * FROM MitmodedTb WHERE ID = " + ID;
+            string cmdText = "";
+            #region sqlQuery
+            if (table.Equals(MITMODED))
+                cmdText = "SELECT * FROM MitmodedTb WHERE ID =@pID";
             cmd.CommandText = cmdText;
+            #endregion
+            #region addParamaters
+            cmd.Parameters.AddWithValue("@pID", ID);
+            #endregion
+            #region execute
             da.SelectCommand = cmd;
             da.Fill(dt);
+            #endregion
+            return dt;
+        }
+        public static DataTable getDataTable(string table, string user, string password, SqlCommand cmd, SqlDataAdapter da)
+        {
+            DataTable dt = new DataTable();
+            string cmdText = "";
+            #region sqlQuery
+            if (table.Equals(USERS))
+                cmdText = "SELECT * FROM UsersTB WHERE (ID = @pID OR email = @pEmail) "
+                    + "AND password = @pPassword";
+            #endregion
+            #region addParameters
+            cmd.CommandText = cmdText;
+            if (Tools.valid_number(user)) //user submitted ID
+            {
+                cmd.Parameters.AddWithValue("@pID", user);
+                cmd.Parameters.AddWithValue("@pEmail", DBNull.Value);
+            }
+            else                        //user submitted email
+            {
+                cmd.Parameters.AddWithValue("@pID", DBNull.Value);
+                cmd.Parameters.AddWithValue("@pEmail", user);
+            }
+            cmd.Parameters.AddWithValue("@pPassword", password);
+            #endregion
+            #region execute
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            #endregion
             return dt;
         }
 

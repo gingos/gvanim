@@ -28,7 +28,7 @@ namespace GvanimVS
             this.ID = ID;
             ID_tb.Text = ID;
             imgChanged = false;
-            DataTable dt = SQLmethods.getDataTable(ID, cmd, da);
+            DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
             initFieldsFromDT(dt);
         }
         

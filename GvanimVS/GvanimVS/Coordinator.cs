@@ -13,9 +13,16 @@ namespace GvanimVS
 {
     public partial class Coordinator : DBform
     {
+        string ID;
         public Coordinator(SqlConnection con):base(con)
         {
             InitializeComponent();
+        }
+        public Coordinator(SqlConnection con, string ID) : base(con)
+        {
+            InitializeComponent();
+            this.ID = ID;
+            this.Text += ": " + ID;
         }
 
         private void writeReport_bt_Click(object sender, EventArgs e)
@@ -45,6 +52,11 @@ namespace GvanimVS
         {
             FindMeeting fm = new FindMeeting();
             fm.Activate();
+        }
+
+        private void close_bt_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
