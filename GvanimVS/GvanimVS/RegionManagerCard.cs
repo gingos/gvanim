@@ -27,18 +27,36 @@ namespace GvanimVS
         {
             InitializeComponent();
             this.ID = ID;
-            Console.Write("MimodedCard-->got " + ID + "--> pull data from DB by ID\n");
-            firstName_tb.Text = ID;
-            /*DataTable dt =*/ getDataTable(ID);
-            initFieldsFromDT(/*dt*/);
+            DataTable dt = SQLmethods.getDataTable(SQLmethods.USERS, ID, cmd, da);
+            initFieldsFromDT(dt);
         }
         private void getDataTable(string iD)
         {
             Console.WriteLine("RegionManagerCard--> getDataTable (not implemented)");
         }
-        private void initFieldsFromDT(/*DataTable dt*/)
+        private void initFieldsFromDT(DataTable dt)
         {
-            Console.WriteLine("RegionManagerCard--> initFields (not implemented)");
+            foreach (DataRow dr in dt.Rows)
+            {
+                firstName_tb.Text = dr["firstName"].ToString();
+                lastName_tb.Text = dr["lastName"].ToString();
+                dateTimePicker1.Value = (DateTime)dr["birthday"];
+                city_tb.Text = dr["city"].ToString();
+                address_tb.Text = dr["streetAddress"].ToString();
+                phone1_tb.Text = dr["phone1"].ToString();
+                phone2_tb.Text = dr["phone2"].ToString();
+                email_tb.Text = dr["email"].ToString();
+                //if (dr["photo"] != null)
+                if (!(dr["photo"] is DBNull))
+                {
+                    byte[] bytes = (byte[])dr["photo"];
+                    var ms = new System.IO.MemoryStream(bytes);
+                    profile_pb.Image = Image.FromStream(ms);
+                }
+                else
+                    profile_pb.Image = Properties.Resources.anonymous_profile;
+
+            }
         }
         private void ok_bt_Click(object sender, EventArgs e)
         {
@@ -68,6 +86,7 @@ namespace GvanimVS
             if (firstName_tb.Text.Equals(""))
             {
                 MessageBox.Show("נא הכנס שם פרטי");
+                firstName_tb.Focus();
                 return false;
             }
             else if (!Tools.IsAlphabets(firstName_tb.Text.ToString()))
@@ -79,6 +98,7 @@ namespace GvanimVS
             if (lastName_tb.Text.Equals(""))
             {
                 MessageBox.Show("נא הכנס שם משפחה");
+                lastName_tb.Focus();
                 return false;
             }
             else if (!Tools.IsAlphabets(lastName_tb.Text.ToString()))
@@ -89,12 +109,14 @@ namespace GvanimVS
             if (!dateTimePicker1.Checked)
             {
                 MessageBox.Show("נא לבחור תאריך לידה");
+                dateTimePicker1.Focus();
                 return false;
             }
 
-            if (ID_tb == null)
+            if (ID_tb.Text.Equals(""))
             {
                 MessageBox.Show("נא הכנס תעודת זהות");
+                ID_tb.Focus();
                 return false;
             }
             else if (!Tools.valid_number(ID_tb.Text.ToString()))
@@ -111,6 +133,7 @@ namespace GvanimVS
             if (city_tb.Text.Equals(""))
             {
                 MessageBox.Show("נא הכנס עיר מגורים");
+                city_tb.Focus();
                 return false;
             }
             else if (!Tools.IsAlphabets(city_tb.Text.ToString()))
@@ -122,11 +145,13 @@ namespace GvanimVS
             if (address_tb.Text.Equals(""))
             {
                 MessageBox.Show("נא הכנס כתובת");
+                address_tb.Focus();
                 return false;
             }
             if (phone1_tb.Text.Equals(""))
             {
                 MessageBox.Show("נא הכנס טלפון");
+                phone1_tb.Focus();
                 return false;
             }
             else if (!Tools.valid_number(phone1_tb.Text.ToString()))
@@ -139,8 +164,21 @@ namespace GvanimVS
                 if (!Tools.valid_number(phone2_tb.Text.ToString()))
                 {
                     MessageBox.Show("נא הכנס מספר טלפון תקני");
+                    phone2_tb.Focus();
                     return false;
                 }
+            }
+            if (email_tb.Text.Equals(""))
+            {
+                MessageBox.Show("נא הכנס כתובת אימייל");
+                address_tb.Focus();
+                return false;
+            }
+            else if (!Tools.IsValidEmail(email_tb.Text))
+            {
+                MessageBox.Show("נא הכנס כתובת אימייל תקנית");
+                address_tb.Focus();
+                return false;
             }
             if (!imgChanged)
             {
@@ -155,6 +193,11 @@ namespace GvanimVS
                 }
             }
             return true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("NOT YET IMPLEMENTED");
         }
     }
 }

@@ -92,6 +92,8 @@ namespace GvanimVS
             #region sqlQuery
             if (table.Equals(MITMODED))
                 cmdText = "SELECT * FROM MitmodedTb WHERE ID =@pID";
+            else if (table.Equals(USERS))
+                cmdText = "SELECT * FROM UsersTB WHERE ID =@pID";
             cmd.CommandText = cmdText;
             #endregion
             #region addParamaters
@@ -117,11 +119,11 @@ namespace GvanimVS
             if (Tools.valid_number(user)) //user submitted ID
             {
                 cmd.Parameters.AddWithValue("@pID", user);
-                cmd.Parameters.AddWithValue("@pEmail", DBNull.Value);
+                cmd.Parameters.AddWithValue("@pEmail", "");
             }
             else                        //user submitted email
             {
-                cmd.Parameters.AddWithValue("@pID", DBNull.Value);
+                cmd.Parameters.AddWithValue("@pID", 0);
                 cmd.Parameters.AddWithValue("@pEmail", user);
             }
             cmd.Parameters.AddWithValue("@pPassword", password);

@@ -37,17 +37,22 @@ namespace GvanimVS
             }
         }
 
+        private void info_bt_Click(object sender, EventArgs e)
+        {
+            using (var rmCard = new RegionManagerCard(con, ID))
+            {
+                rmCard.ShowDialog();
+            }
+        }
+
         private void ok_bt_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void info_bt_Click(object sender, EventArgs e)
+        private void addCoordinator_bt_Click(object sender, EventArgs e)
         {
-            using (var rmCard = new RegionManagerCard(con, "yoad"))
-            {
-                rmCard.ShowDialog();
-            }
+            MessageBox.Show("activate coordinator card(?)");
         }
     }
 }

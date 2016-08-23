@@ -55,6 +55,7 @@
             this.addCoordinator_bt.TabIndex = 1;
             this.addCoordinator_bt.Text = "הוסף רכז";
             this.addCoordinator_bt.UseVisualStyleBackColor = true;
+            this.addCoordinator_bt.Click += new System.EventHandler(this.addCoordinator_bt_Click);
             // 
             // showReports_bt
             // 

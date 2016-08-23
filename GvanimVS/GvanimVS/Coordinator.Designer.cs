@@ -35,6 +35,8 @@
             this.showMeetings_bt = new System.Windows.Forms.Button();
             this.writeReport_bt = new System.Windows.Forms.Button();
             this.close_bt = new System.Windows.Forms.Button();
+            this.addMitmoded_bt = new System.Windows.Forms.Button();
+            this.editCoordinator_bt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // editReport_bt
@@ -106,12 +108,33 @@
             this.close_bt.UseVisualStyleBackColor = true;
             this.close_bt.Click += new System.EventHandler(this.close_bt_Click);
             // 
+            // addMitmoded_bt
+            // 
+            this.addMitmoded_bt.Location = new System.Drawing.Point(223, 258);
+            this.addMitmoded_bt.Name = "addMitmoded_bt";
+            this.addMitmoded_bt.Size = new System.Drawing.Size(133, 23);
+            this.addMitmoded_bt.TabIndex = 7;
+            this.addMitmoded_bt.Text = "הוסף מתמודד חדש";
+            this.addMitmoded_bt.UseVisualStyleBackColor = true;
+            this.addMitmoded_bt.Click += new System.EventHandler(this.addMitmoded_bt_Click);
+            // 
+            // editCoordinator_bt
+            // 
+            this.editCoordinator_bt.Location = new System.Drawing.Point(32, 23);
+            this.editCoordinator_bt.Name = "editCoordinator_bt";
+            this.editCoordinator_bt.Size = new System.Drawing.Size(106, 21);
+            this.editCoordinator_bt.TabIndex = 8;
+            this.editCoordinator_bt.Text = "עדכן פרטי רכז";
+            this.editCoordinator_bt.UseVisualStyleBackColor = true;
+            // 
             // Coordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 368);
             this.ControlBox = false;
+            this.Controls.Add(this.editCoordinator_bt);
+            this.Controls.Add(this.addMitmoded_bt);
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.showMeetings_bt);
             this.Controls.Add(this.editMeeting_bt);
@@ -136,5 +159,7 @@
         private System.Windows.Forms.Button showMeetings_bt;
         private System.Windows.Forms.Button writeReport_bt;
         private System.Windows.Forms.Button close_bt;
+        private System.Windows.Forms.Button addMitmoded_bt;
+        private System.Windows.Forms.Button editCoordinator_bt;
     }
 }

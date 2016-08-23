@@ -58,5 +58,15 @@ namespace GvanimVS
         {
             this.Close();
         }
+
+        private void addMitmoded_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var mc = new MitmodedCard(con))
+            {
+                mc.ShowDialog();
+            }
+            this.Show();
+        }
     }
 }

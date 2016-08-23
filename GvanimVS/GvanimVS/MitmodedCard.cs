@@ -76,11 +76,11 @@ namespace GvanimVS
                 this.Close();
             }
         }
-
         private void cancel_bt_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         private void profile_pb_Click(object sender, EventArgs e)
         {
             var FD = new System.Windows.Forms.OpenFileDialog();
@@ -185,7 +185,6 @@ namespace GvanimVS
             
             return true;
         }
-
         private byte[] GetPhoto(string imgLoc)
         {
             FileStream stream = new FileStream(
