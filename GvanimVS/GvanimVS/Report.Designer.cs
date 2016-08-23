@@ -108,8 +108,9 @@
             // reportDiscription_tb
             // 
             this.reportDiscription_tb.Location = new System.Drawing.Point(107, 168);
+            this.reportDiscription_tb.Multiline = true;
             this.reportDiscription_tb.Name = "reportDiscription_tb";
-            this.reportDiscription_tb.Size = new System.Drawing.Size(370, 20);
+            this.reportDiscription_tb.Size = new System.Drawing.Size(370, 54);
             this.reportDiscription_tb.TabIndex = 8;
             // 
             // label4
@@ -124,7 +125,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(495, 222);
+            this.label5.Location = new System.Drawing.Point(495, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 10;
@@ -132,9 +133,10 @@
             // 
             // activityDiscription_tb
             // 
-            this.activityDiscription_tb.Location = new System.Drawing.Point(107, 219);
+            this.activityDiscription_tb.Location = new System.Drawing.Point(106, 255);
+            this.activityDiscription_tb.Multiline = true;
             this.activityDiscription_tb.Name = "activityDiscription_tb";
-            this.activityDiscription_tb.Size = new System.Drawing.Size(370, 20);
+            this.activityDiscription_tb.Size = new System.Drawing.Size(370, 54);
             this.activityDiscription_tb.TabIndex = 8;
             // 
             // Report

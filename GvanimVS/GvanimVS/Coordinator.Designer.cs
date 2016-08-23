@@ -132,7 +132,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 368);
-            this.ControlBox = false;
             this.Controls.Add(this.editCoordinator_bt);
             this.Controls.Add(this.addMitmoded_bt);
             this.Controls.Add(this.close_bt);
@@ -144,7 +143,6 @@
             this.Controls.Add(this.writeReport_bt);
             this.Name = "Coordinator";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Text = "Coordinator";
             this.Load += new System.EventHandler(this.Coordinator_Load);
             this.ResumeLayout(false);

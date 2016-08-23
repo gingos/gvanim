@@ -27,8 +27,12 @@ namespace GvanimVS
 
         private void writeReport_bt_Click(object sender, EventArgs e)
         {
-            Report r = new Report();
-            r.Activate();
+            this.Hide();
+            using (Report r = new Report(con))
+            {
+                r.ShowDialog();
+            }
+            this.Show();
         }
 
         private void Coordinator_Load(object sender, EventArgs e)

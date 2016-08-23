@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,17 +13,25 @@ namespace GvanimVS
 {
     public partial class Report : DBform
     {
-        public Report()
+        public Report(SqlConnection con):base(con)
         {
             InitializeComponent();
+            DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, cmd, da);
+            foreach (DataRow dr in dt.Rows)
+            {
+                comboBox1.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString());
+            }
+            
         }
 
-        public Report(int reportID)
+        public Report(SqlConnection con, int reportID):base(con)
         {
             InitializeComponent();
+            DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, reportID.ToString(), cmd, da);
+            //TODO: init fields
             // ReportSerialNum_lb = 
-           // reportDiscription_tb = 
-           // activityDiscription_tb = 
+            // reportDiscription_tb = 
+            // activityDiscription_tb = 
         }
 
         private void Report_Load(object sender, EventArgs e)

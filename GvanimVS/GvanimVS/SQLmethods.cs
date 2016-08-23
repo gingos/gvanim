@@ -134,7 +134,22 @@ namespace GvanimVS
             #endregion
             return dt;
         }
-
+        public static DataTable getDataTable(string table, SqlCommand cmd, SqlDataAdapter da)
+        {
+            DataTable dt = new DataTable();
+            string cmdText = "";
+            #region sqlQuery
+            cmdText = "SELECT * FROM " + table;
+            #endregion
+            #region addParameters
+            cmd.CommandText = cmdText;
+            #endregion
+            #region execute
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            #endregion
+            return dt;
+        }
         //DEPRECATED
         private static string findMeeting(int id, DateTime date, string name)
         {
