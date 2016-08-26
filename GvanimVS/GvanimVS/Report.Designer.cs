@@ -73,9 +73,9 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(356, 80);
+            this.comboBox1.Location = new System.Drawing.Point(260, 80);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(217, 21);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -90,9 +90,11 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(344, 127);
+            this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(260, 127);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(132, 20);
+            this.dateTimePicker1.ShowCheckBox = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(216, 20);
             this.dateTimePicker1.TabIndex = 6;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -158,7 +160,6 @@
             this.Controls.Add(this.saveReport_bt);
             this.Name = "Report";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);
             this.ResumeLayout(false);

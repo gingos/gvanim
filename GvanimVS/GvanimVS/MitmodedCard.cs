@@ -67,7 +67,7 @@ namespace GvanimVS
                 else
                     imgByte = imageToByteArray(profile_pb.Image);
                 
-                if (SQLmethods.upsertMidmoded(firstName_tb.Text, lastName_tb.Text, dateTimePicker1.Value.Date,
+                if (SQLmethods.upsertMitmoded(firstName_tb.Text, lastName_tb.Text, dateTimePicker1.Value.Date,
                    ID_tb.Text, city_tb.Text, address_tb.Text, phone1_tb.Text, phone2_tb.Text,
                    imgByte, cmd))
                     MessageBox.Show("המידע נשמר בהצלחה");

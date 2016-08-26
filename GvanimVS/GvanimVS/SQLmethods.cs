@@ -16,7 +16,7 @@ namespace GvanimVS
         public static string USERS = "UsersTB";
 
 
-        public static bool upsertMidmoded(string first, string last, DateTime date, string ID, string city, string address, string phone1, string phone2, byte[] photo, SqlCommand cmd)
+        public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city, string address, string phone1, string phone2, byte[] photo, SqlCommand cmd)
         {
            
             cmd.CommandText =
@@ -56,7 +56,37 @@ namespace GvanimVS
             #endregion
             return true;
         }
-
+        public static bool upsertReport (string ID, DateTime date, string report, string actions, SqlCommand cmd)
+        {
+            cmd.CommandText =
+            #region sqlQuery
+            " IF NOT EXISTS (SELECT * FROM " + REPORTS + " WHERE mitmodedID = @pID) "
+           + "INSERT INTO " + REPORTS + " (mitmodedID, Date,Report,actions) "
+           + "VALUES (@pID, @pDate, @pReport, @pActions) "
+           + "ELSE "
+           + "UPDATE " + REPORTS
+           + " SET Date = @pDate, Report = @pReport, actions = @pActions "
+           + " WHERE mitmodedID = @pID";
+            #endregion
+            #region addParamters
+            cmd.Parameters.AddWithValue("@pID", ID);
+            cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
+            cmd.Parameters.AddWithValue("@pReport", report);
+            cmd.Parameters.AddWithValue("@pActions", actions);
+            #endregion
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            #endregion
+            return true;
+        }
         public static bool findMeeting(int ID, DateTime date, string name, SqlCommand cmd)
         {
             cmd.CommandText =
