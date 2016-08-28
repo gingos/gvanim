@@ -20,11 +20,11 @@ namespace GvanimVS
         public EmplyomentRecord(SqlConnection con, string ID, string name) : base(con)
         {
             InitializeComponent();
-            changeDataHeadersToHebrew();
             mitmoded_id_lb.Text = ID;
             mitmoded_name_lb.Text = name;
             DataTable dt = SQLmethods.getEmploymentRecordTable(mitmoded_id_lb.Text, cmd, da);
             dataGridView1.DataSource = dt;
+            changeDataHeadersToHebrew();
 
         }
 
@@ -43,6 +43,11 @@ namespace GvanimVS
         {
             
 
+        }
+
+        private void close_bt_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

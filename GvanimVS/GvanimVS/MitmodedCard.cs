@@ -212,6 +212,9 @@ namespace GvanimVS
 
         private void history_bt_Click(object sender, EventArgs e)
         {
+            //TODO create mitmoded <not card> form
+            //follow class diagram
+            //this function only for testing
             if (ID_tb.Text.Equals(""))
             {
                 MessageBox.Show("יש לציין תעודת זהות");

@@ -190,9 +190,9 @@ namespace GvanimVS
             DataTable dt = new DataTable();
             string cmdText = "";
             #region sqlQuery
-            cmdText = "SELECT employer, dateStart, dateEnd, decription, " +
+            cmdText = "SELECT employer, dateStart, dateEnd, description, " +
                 "responsibilities, achievements FROM " + RECORDS +
-                "WHERE ID = @pID";
+                " WHERE ID = @pID";
             #endregion
             #region addParameters
             cmd.CommandText = cmdText;
