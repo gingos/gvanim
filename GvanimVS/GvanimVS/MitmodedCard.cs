@@ -209,5 +209,22 @@ namespace GvanimVS
         {
 
         }
+
+        private void history_bt_Click(object sender, EventArgs e)
+        {
+            if (ID_tb.Text.Equals(""))
+            {
+                MessageBox.Show("יש לציין תעודת זהות");
+                ID_tb.Focus();
+            }
+            else
+            {
+                using (var employmentRec = new EmplyomentRecord(con, ID_tb.Text,
+                    firstName_tb.Text + " " + lastName_tb.Text))
+                {
+                    employmentRec.ShowDialog();
+                }
+            }
+        }
     }
 }

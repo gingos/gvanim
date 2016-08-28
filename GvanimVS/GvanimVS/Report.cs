@@ -23,7 +23,9 @@ namespace GvanimVS
                 comboBox1.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString()
                     +", תעודת זהות: " + dr["ID"]);
             }
-            
+            DateTime nowTime = DateTime.Now;
+            ReportSerialNum_lb.Text = String.Format("{0:yy-dd-MM}", nowTime);
+
         }
 
         public Report(SqlConnection con, int reportID):base(con)
@@ -45,7 +47,8 @@ namespace GvanimVS
         {
             if (verifyFields())
             {
-                if (SQLmethods.upsertReport(ID, dateTimePicker1.Value.Date,
+                if (SQLmethods.upsertReport(ReportSerialNum_lb.Text +"-"+ ID_lb.Text,
+                    ID, dateTimePicker1.Value.Date,
                     reportDiscription_tb.Text, activityDiscription_tb.Text, cmd))
                     MessageBox.Show("הדוח נשמר בהצלחה");
                 else
@@ -55,8 +58,10 @@ namespace GvanimVS
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {   
             ID = Tools.getID(comboBox1.SelectedItem.ToString());
+            ID_lb.Text = ID;
+            ReportSerialNum_lb.Refresh();
         }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
@@ -111,5 +116,9 @@ namespace GvanimVS
             return true;
         }
 
+        private void cancel_bt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

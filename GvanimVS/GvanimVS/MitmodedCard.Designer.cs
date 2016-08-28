@@ -192,7 +192,7 @@
             // 
             // profile_pb
             // 
-            this.profile_pb.Image = GvanimVS.Properties.Resources.anonymous_profile;
+            this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
             this.profile_pb.Location = new System.Drawing.Point(12, 41);
             this.profile_pb.Name = "profile_pb";
             this.profile_pb.Size = new System.Drawing.Size(187, 140);
@@ -209,6 +209,7 @@
             this.history_bt.TabIndex = 17;
             this.history_bt.Text = "פרטי תעסוקה";
             this.history_bt.UseVisualStyleBackColor = true;
+            this.history_bt.Click += new System.EventHandler(this.history_bt_Click);
             // 
             // ok_bt
             // 

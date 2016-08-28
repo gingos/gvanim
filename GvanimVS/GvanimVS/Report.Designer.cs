@@ -39,11 +39,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.activityDiscription_tb = new System.Windows.Forms.TextBox();
+            this.cancel_bt = new System.Windows.Forms.Button();
+            this.ID_lb = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // saveReport_bt
             // 
-            this.saveReport_bt.Location = new System.Drawing.Point(25, 334);
+            this.saveReport_bt.Location = new System.Drawing.Point(106, 334);
             this.saveReport_bt.Name = "saveReport_bt";
             this.saveReport_bt.Size = new System.Drawing.Size(129, 23);
             this.saveReport_bt.TabIndex = 0;
@@ -63,11 +65,11 @@
             // ReportSerialNum_lb
             // 
             this.ReportSerialNum_lb.AutoSize = true;
-            this.ReportSerialNum_lb.Location = new System.Drawing.Point(442, 49);
+            this.ReportSerialNum_lb.Location = new System.Drawing.Point(327, 49);
             this.ReportSerialNum_lb.Name = "ReportSerialNum_lb";
-            this.ReportSerialNum_lb.Size = new System.Drawing.Size(35, 13);
+            this.ReportSerialNum_lb.Size = new System.Drawing.Size(51, 13);
             this.ReportSerialNum_lb.TabIndex = 3;
-            this.ReportSerialNum_lb.Text = "label2";
+            this.ReportSerialNum_lb.Text = "yy-dd-mm";
             // 
             // comboBox1
             // 
@@ -139,7 +141,26 @@
             this.activityDiscription_tb.Multiline = true;
             this.activityDiscription_tb.Name = "activityDiscription_tb";
             this.activityDiscription_tb.Size = new System.Drawing.Size(370, 54);
-            this.activityDiscription_tb.TabIndex = 8;
+            this.activityDiscription_tb.TabIndex = 9;
+            // 
+            // cancel_bt
+            // 
+            this.cancel_bt.Location = new System.Drawing.Point(25, 334);
+            this.cancel_bt.Name = "cancel_bt";
+            this.cancel_bt.Size = new System.Drawing.Size(75, 23);
+            this.cancel_bt.TabIndex = 11;
+            this.cancel_bt.Text = "ביטול";
+            this.cancel_bt.UseVisualStyleBackColor = true;
+            this.cancel_bt.Click += new System.EventHandler(this.cancel_bt_Click);
+            // 
+            // ID_lb
+            // 
+            this.ID_lb.AutoSize = true;
+            this.ID_lb.Location = new System.Drawing.Point(384, 49);
+            this.ID_lb.Name = "ID_lb";
+            this.ID_lb.Size = new System.Drawing.Size(18, 13);
+            this.ID_lb.TabIndex = 12;
+            this.ID_lb.Text = "ID";
             // 
             // Report
             // 
@@ -147,6 +168,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 369);
             this.ControlBox = false;
+            this.Controls.Add(this.ID_lb);
+            this.Controls.Add(this.cancel_bt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.activityDiscription_tb);
@@ -180,5 +203,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox activityDiscription_tb;
+        private System.Windows.Forms.Button cancel_bt;
+        private System.Windows.Forms.Label ID_lb;
     }
 }

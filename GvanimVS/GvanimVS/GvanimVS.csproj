@@ -64,6 +64,12 @@
     <Compile Include="DBform.Designer.cs">
       <DependentUpon>DBform.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmplyomentRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmplyomentRecord.Designer.cs">
+      <DependentUpon>EmplyomentRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindMeeting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmplyomentRecord.resx">
+      <DependentUpon>EmplyomentRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindMeeting.resx">
       <DependentUpon>FindMeeting.cs</DependentUpon>

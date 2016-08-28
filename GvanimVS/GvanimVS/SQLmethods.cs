@@ -14,6 +14,7 @@ namespace GvanimVS
         public static string MEETINGS = "MeetingsTB";
         public static string REPORTS = "ReportsTB";
         public static string USERS = "UsersTB";
+        public static string RECORDS = "EmploymentRecordTB";
 
 
         public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city, string address, string phone1, string phone2, byte[] photo, SqlCommand cmd)
@@ -56,21 +57,22 @@ namespace GvanimVS
             #endregion
             return true;
         }
-        public static bool upsertReport (string ID, DateTime date, string report, string actions, SqlCommand cmd)
+        public static bool upsertReport (string reportID, string mitmodedID, DateTime date, string report, string actions, SqlCommand cmd)
         {
             cmd.CommandText =
             #region sqlQuery
-            " IF NOT EXISTS (SELECT * FROM " + REPORTS + " WHERE mitmodedID = @pID) "
-           + "INSERT INTO " + REPORTS + " (mitmodedID, Date,Report,actions) "
-           + "VALUES (@pID, @pDate, @pReport, @pActions) "
+            " IF NOT EXISTS (SELECT * FROM " + REPORTS + " WHERE Id = @pReportID) "
+           + "INSERT INTO " + REPORTS + " (Id, mitmodedID, Created,Report,actions) "
+           + "VALUES (@pReportID, @pMitmodedID, @pCreated, @pReport, @pActions) "
            + "ELSE "
            + "UPDATE " + REPORTS
-           + " SET Date = @pDate, Report = @pReport, actions = @pActions "
-           + " WHERE mitmodedID = @pID";
+           + " SET Created = @pCreated, Report = @pReport, actions = @pActions "
+           + " WHERE Id = @pReportID";
             #endregion
             #region addParamters
-            cmd.Parameters.AddWithValue("@pID", ID);
-            cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
+            cmd.Parameters.AddWithValue("@pReportID", reportID);
+            cmd.Parameters.AddWithValue("@pMitmodedID", mitmodedID);
+            cmd.Parameters.Add("@pCreated", SqlDbType.Date).Value = date;
             cmd.Parameters.AddWithValue("@pReport", report);
             cmd.Parameters.AddWithValue("@pActions", actions);
             #endregion
@@ -97,6 +99,7 @@ namespace GvanimVS
                    +*/ "SELECT FROM " + MEETINGS + "WHERE Id = @pID OR Mitmoded = @pMitmoded OR Date = @pDate";
             #endregion
             #region addParamters
+            cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@pID", ID);
             cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
             cmd.Parameters.AddWithValue("@pMitmoded", name);
@@ -127,6 +130,7 @@ namespace GvanimVS
             cmd.CommandText = cmdText;
             #endregion
             #region addParamaters
+            cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@pID", ID);
             #endregion
             #region execute
@@ -146,6 +150,7 @@ namespace GvanimVS
             #endregion
             #region addParameters
             cmd.CommandText = cmdText;
+            cmd.Parameters.Clear();
             if (Tools.valid_number(user)) //user submitted ID
             {
                 cmd.Parameters.AddWithValue("@pID", user);
@@ -173,6 +178,26 @@ namespace GvanimVS
             #endregion
             #region addParameters
             cmd.CommandText = cmdText;
+            #endregion
+            #region execute
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            #endregion
+            return dt;
+        }
+        public static DataTable getEmploymentRecordTable(string ID, SqlCommand cmd, SqlDataAdapter da)
+        {
+            DataTable dt = new DataTable();
+            string cmdText = "";
+            #region sqlQuery
+            cmdText = "SELECT employer, dateStart, dateEnd, decription, " +
+                "responsibilities, achievements FROM " + RECORDS +
+                "WHERE ID = @pID";
+            #endregion
+            #region addParameters
+            cmd.CommandText = cmdText;
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("pID", ID);
             #endregion
             #region execute
             da.SelectCommand = cmd;
