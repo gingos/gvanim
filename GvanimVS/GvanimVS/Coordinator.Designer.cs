@@ -41,9 +41,9 @@
             // 
             // editReport_bt
             // 
-            this.editReport_bt.Location = new System.Drawing.Point(281, 164);
+            this.editReport_bt.Location = new System.Drawing.Point(236, 135);
             this.editReport_bt.Name = "editReport_bt";
-            this.editReport_bt.Size = new System.Drawing.Size(97, 23);
+            this.editReport_bt.Size = new System.Drawing.Size(120, 23);
             this.editReport_bt.TabIndex = 1;
             this.editReport_bt.Text = "ערוך דו\"ח";
             this.editReport_bt.UseVisualStyleBackColor = true;
@@ -51,9 +51,9 @@
             // 
             // addMeeting_bt
             // 
-            this.addMeeting_bt.Location = new System.Drawing.Point(401, 209);
+            this.addMeeting_bt.Location = new System.Drawing.Point(364, 175);
             this.addMeeting_bt.Name = "addMeeting_bt";
-            this.addMeeting_bt.Size = new System.Drawing.Size(96, 23);
+            this.addMeeting_bt.Size = new System.Drawing.Size(133, 23);
             this.addMeeting_bt.TabIndex = 2;
             this.addMeeting_bt.Text = "הוסף פגישה";
             this.addMeeting_bt.UseVisualStyleBackColor = true;
@@ -61,16 +61,17 @@
             // 
             // editMitmoded_bt
             // 
-            this.editMitmoded_bt.Location = new System.Drawing.Point(375, 258);
+            this.editMitmoded_bt.Location = new System.Drawing.Point(236, 95);
             this.editMitmoded_bt.Name = "editMitmoded_bt";
             this.editMitmoded_bt.Size = new System.Drawing.Size(122, 23);
             this.editMitmoded_bt.TabIndex = 3;
-            this.editMitmoded_bt.Text = "ערוך פרטי מתמודד";
+            this.editMitmoded_bt.Text = "ערוך מתמודד";
             this.editMitmoded_bt.UseVisualStyleBackColor = true;
+            this.editMitmoded_bt.Click += new System.EventHandler(this.editMitmoded_bt_Click);
             // 
             // editMeeting_bt
             // 
-            this.editMeeting_bt.Location = new System.Drawing.Point(259, 209);
+            this.editMeeting_bt.Location = new System.Drawing.Point(236, 175);
             this.editMeeting_bt.Name = "editMeeting_bt";
             this.editMeeting_bt.Size = new System.Drawing.Size(119, 23);
             this.editMeeting_bt.TabIndex = 4;
@@ -80,7 +81,7 @@
             // 
             // showMeetings_bt
             // 
-            this.showMeetings_bt.Location = new System.Drawing.Point(141, 209);
+            this.showMeetings_bt.Location = new System.Drawing.Point(134, 175);
             this.showMeetings_bt.Name = "showMeetings_bt";
             this.showMeetings_bt.Size = new System.Drawing.Size(96, 23);
             this.showMeetings_bt.TabIndex = 5;
@@ -89,9 +90,9 @@
             // 
             // writeReport_bt
             // 
-            this.writeReport_bt.Location = new System.Drawing.Point(400, 164);
+            this.writeReport_bt.Location = new System.Drawing.Point(364, 135);
             this.writeReport_bt.Name = "writeReport_bt";
-            this.writeReport_bt.Size = new System.Drawing.Size(97, 23);
+            this.writeReport_bt.Size = new System.Drawing.Size(134, 23);
             this.writeReport_bt.TabIndex = 0;
             this.writeReport_bt.Text = "כתוב דו\"ח";
             this.writeReport_bt.UseMnemonic = false;
@@ -110,7 +111,7 @@
             // 
             // addMitmoded_bt
             // 
-            this.addMitmoded_bt.Location = new System.Drawing.Point(223, 258);
+            this.addMitmoded_bt.Location = new System.Drawing.Point(364, 95);
             this.addMitmoded_bt.Name = "addMitmoded_bt";
             this.addMitmoded_bt.Size = new System.Drawing.Size(133, 23);
             this.addMitmoded_bt.TabIndex = 7;

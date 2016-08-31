@@ -44,10 +44,10 @@
             this.phone1_lb = new System.Windows.Forms.Label();
             this.phone2_tb = new System.Windows.Forms.TextBox();
             this.phone2_lb = new System.Windows.Forms.Label();
-            this.profile_pb = new System.Windows.Forms.PictureBox();
             this.history_bt = new System.Windows.Forms.Button();
             this.ok_bt = new System.Windows.Forms.Button();
             this.cancel_bt = new System.Windows.Forms.Button();
+            this.profile_pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,22 +190,11 @@
             this.phone2_lb.TabIndex = 14;
             this.phone2_lb.Text = "טלפון 2";
             // 
-            // profile_pb
-            // 
-            this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
-            this.profile_pb.Location = new System.Drawing.Point(12, 41);
-            this.profile_pb.Name = "profile_pb";
-            this.profile_pb.Size = new System.Drawing.Size(187, 140);
-            this.profile_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.profile_pb.TabIndex = 16;
-            this.profile_pb.TabStop = false;
-            this.profile_pb.Click += new System.EventHandler(this.profile_pb_Click);
-            // 
             // history_bt
             // 
-            this.history_bt.Location = new System.Drawing.Point(12, 201);
+            this.history_bt.Location = new System.Drawing.Point(12, 219);
             this.history_bt.Name = "history_bt";
-            this.history_bt.Size = new System.Drawing.Size(187, 23);
+            this.history_bt.Size = new System.Drawing.Size(172, 23);
             this.history_bt.TabIndex = 17;
             this.history_bt.Text = "פרטי תעסוקה";
             this.history_bt.UseVisualStyleBackColor = true;
@@ -230,6 +219,17 @@
             this.cancel_bt.Text = "צא";
             this.cancel_bt.UseVisualStyleBackColor = true;
             this.cancel_bt.Click += new System.EventHandler(this.cancel_bt_Click);
+            // 
+            // profile_pb
+            // 
+            this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
+            this.profile_pb.Location = new System.Drawing.Point(12, 41);
+            this.profile_pb.Name = "profile_pb";
+            this.profile_pb.Size = new System.Drawing.Size(172, 172);
+            this.profile_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profile_pb.TabIndex = 16;
+            this.profile_pb.TabStop = false;
+            this.profile_pb.Click += new System.EventHandler(this.profile_pb_Click);
             // 
             // MitmodedCard
             // 
