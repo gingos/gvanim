@@ -64,5 +64,10 @@ namespace GvanimVS
             }
             this.Show();
         }
+
+        private void show_reports_bt_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

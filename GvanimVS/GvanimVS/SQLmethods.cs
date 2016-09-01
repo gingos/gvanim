@@ -57,6 +57,7 @@ namespace GvanimVS
             #endregion
             return true;
         }
+        //TODO add to Report search coordinator's ID
         public static bool upsertReport (string reportID, string mitmodedID, DateTime date, string report, string actions, SqlCommand cmd)
         {
             cmd.CommandText =
@@ -198,6 +199,36 @@ namespace GvanimVS
             cmd.CommandText = cmdText;
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("pID", ID);
+            #endregion
+            #region execute
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            #endregion
+            return dt;
+        }
+        public static DataTable searchUsersInTable(string table, string ID, string firstName, string lastName, string city, SqlCommand cmd, SqlDataAdapter da)
+        {
+            DataTable dt = new DataTable();
+            #region sqlQuery
+            if (ID.Equals(""))
+            {
+                cmd.CommandText = "SELECT ID, firstName, lastName, city, phone1 FROM " + table
+                    + "WHERE ((firstName LIKE '%@pFirstName%' OR lastName LIKE '%@pLastName%') and city LIKE '%@pCity%');";
+            }
+            else
+                cmd.CommandText = "SELECT ID, firstName, lastName, city, phone1 FROM " + table
+                    + " WHERE ID = @pID;";
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            if (ID.Equals(""))
+            {
+                cmd.Parameters.AddWithValue("@pFirstName", firstName);
+                cmd.Parameters.AddWithValue("@pLastName", lastName);
+                cmd.Parameters.AddWithValue("@pCity", city);
+            }
+            else
+                cmd.Parameters.AddWithValue("@pID", ID);
             #endregion
             #region execute
             da.SelectCommand = cmd;

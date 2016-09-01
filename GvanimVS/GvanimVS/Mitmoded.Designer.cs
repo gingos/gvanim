@@ -109,6 +109,7 @@
             this.show_reports_bt.TabIndex = 7;
             this.show_reports_bt.Text = "הצג דוחות";
             this.show_reports_bt.UseVisualStyleBackColor = true;
+            this.show_reports_bt.Click += new System.EventHandler(this.show_reports_bt_Click);
             // 
             // add_employment_bt
             // 

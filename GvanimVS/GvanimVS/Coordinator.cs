@@ -63,7 +63,7 @@ namespace GvanimVS
         private void editMitmoded_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (var select = new SelectMimoded(con, "editMitmoded"))
+            using (var select = new SelectMimoded(con))
             {
                 select.ShowDialog();
             }

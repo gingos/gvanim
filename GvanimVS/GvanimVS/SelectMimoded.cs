@@ -13,18 +13,17 @@ namespace GvanimVS
 {
     public partial class SelectMimoded : DBform
     {
-        string type;
+        string ID, firstName, lastName, city;
         public SelectMimoded()
         {
             InitializeComponent();
         }
-        public SelectMimoded(SqlConnection con, string type):base(con)
+        public SelectMimoded(SqlConnection con):base(con)
         {
             InitializeComponent();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "ID, firstName, lastName, city", cmd, da);
             dataGridView1.DataSource = dt;
             changeDataHeadersToHebrew();
-            this.type = type;
         }
     
 
@@ -36,23 +35,18 @@ namespace GvanimVS
         
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            string ID = dataGridView1["ID", e.RowIndex].Value.ToString();
+            ID = dataGridView1["ID", e.RowIndex].Value.ToString();
+            firstName_tb.Text = dataGridView1["firstName", e.RowIndex].Value.ToString();
+            lastName_tb.Text = dataGridView1["lastName", e.RowIndex].Value.ToString();
             Console.WriteLine("SelectMitmoded-->click--> ID = " + ID);
+            /*
             this.Hide();
-            switch (type)
+            using (var mit = new Mitmoded(con, ID))
             {
-                case "editMitmoded":
-                    this.Hide();
-                    using (var mit = new Mitmoded(con, ID))
-                    {
-                        mit.ShowDialog();
-                    }
-                    break;
-                default:
-                    break;
+                mit.ShowDialog();
             }
-
             this.Show();
+            */
         }
         private void changeDataHeadersToHebrew()
         {
@@ -65,7 +59,9 @@ namespace GvanimVS
         {
             if (verifyFields())
             {
-
+                DataTable dt = (SQLmethods.searchUsersInTable(SQLmethods.MITMODED, ID_tb.Text, firstName_tb.Text,
+                    lastName_tb.Text, city_tb.Text, cmd, da));
+                dataGridView1.DataSource = dt;
             }
         }
         private bool verifyFields()
@@ -74,7 +70,7 @@ namespace GvanimVS
 
             if (ID_tb.Text.Equals(""))
             {
-                if (name_tb.Text.Equals(""))
+                if (firstName_tb.Text.Equals(""))
                 {
                     DialogResult dialogResult = MessageBox.Show("לא נבחר שם לחיפוש. האם ברצונך להמשיך?", "אישור בחירת שם", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -83,14 +79,14 @@ namespace GvanimVS
                     }
                     else if (dialogResult == DialogResult.No)
                     {
-                        name_tb.Focus();
+                        firstName_tb.Focus();
                         return false;
                     }
                 }
-                else if (!Tools.IsAlphabets(name_tb.Text.ToString()))
+                else if (!Tools.IsAlphabets(firstName_tb.Text.ToString()))
                 {
                     MessageBox.Show("נא להכניס שם תקין");
-                    name_tb.Focus();
+                    firstName_tb.Focus();
                     return false;
                 }
 
