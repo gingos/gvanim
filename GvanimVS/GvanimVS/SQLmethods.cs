@@ -236,6 +236,22 @@ namespace GvanimVS
             #endregion
             return dt;
         }
+        public static DataTable findReport(string id, string mitmodedID, DateTime date, SqlCommand cmd, SqlDataAdapter da)
+        {
+            DataTable dt = new DataTable();
+
+            cmd.CommandText = "SELECT * FROM " + REPORTS + "WHERE Id = @pID AND MitmodedID = @pMitmoded AND Created = @pDate";
+
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pID", id);
+            cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
+            cmd.Parameters.AddWithValue("@pMitmoded", mitmodedID);
+
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+
+            return dt;
+        }
         //DEPRECATED
         private static string findMeeting(int id, DateTime date, string name)
         {
