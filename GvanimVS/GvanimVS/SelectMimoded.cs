@@ -128,5 +128,10 @@ namespace GvanimVS
 
             return true;
         }
+
+        private void SelectMimoded_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
