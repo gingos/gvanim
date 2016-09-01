@@ -169,12 +169,12 @@ namespace GvanimVS
             #endregion
             return dt;
         }
-        public static DataTable getDataTable(string table, SqlCommand cmd, SqlDataAdapter da)
+        public static DataTable getColsFromTable(string table, string cols, SqlCommand cmd, SqlDataAdapter da)
         {
             DataTable dt = new DataTable();
             string cmdText = "";
             #region sqlQuery
-            cmdText = "SELECT * FROM " + table;
+            cmdText = "SELECT " + cols + " FROM " + table;
             #endregion
             #region addParameters
             cmd.CommandText = cmdText;

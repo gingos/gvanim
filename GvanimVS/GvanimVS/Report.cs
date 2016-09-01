@@ -17,7 +17,7 @@ namespace GvanimVS
         public Report(SqlConnection con):base(con)
         {
             InitializeComponent();
-            DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, cmd, da);
+            DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", cmd, da);
             foreach (DataRow dr in dt.Rows)
             {
                 comboBox1.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString()
@@ -31,7 +31,7 @@ namespace GvanimVS
         public Report(SqlConnection con, int reportID):base(con)
         {
             InitializeComponent();
-            DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, reportID.ToString(), cmd, da);
+            //DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, reportID.ToString(), cmd, da);
             //TODO: init fields
             // ReportSerialNum_lb = 
             // reportDiscription_tb = 
