@@ -36,8 +36,15 @@ namespace GvanimVS
         }
         private void editReport_bt_Click(object sender, EventArgs e)
         {
-            FindReport fr = new FindReport();
-            fr.Activate();
+            //TODO: yair : create search by parameter in FindReport for reports and create a full ctor in Report for viewing the report
+            this.Hide();
+            using (FindReport fr = new FindReport(con))
+            {
+                fr.ShowDialog();
+            }
+            this.Show();
+           
+                
         }
     
         private void addMeeting_bt_Click(object sender, EventArgs e)

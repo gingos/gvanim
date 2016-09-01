@@ -36,6 +36,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.searchReport_bt = new System.Windows.Forms.Button();
             this.cancel_bt = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // reportNum_tb
@@ -90,10 +92,11 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // searchReport_bt
             // 
-            this.searchReport_bt.Location = new System.Drawing.Point(185, 347);
+            this.searchReport_bt.Location = new System.Drawing.Point(345, 347);
             this.searchReport_bt.Name = "searchReport_bt";
             this.searchReport_bt.Size = new System.Drawing.Size(75, 23);
             this.searchReport_bt.TabIndex = 7;
@@ -111,11 +114,21 @@
             this.cancel_bt.UseVisualStyleBackColor = true;
             this.cancel_bt.Click += new System.EventHandler(this.cancel_bt_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(27, 191);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(463, 150);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // FindReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 410);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cancel_bt);
             this.Controls.Add(this.searchReport_bt);
             this.Controls.Add(this.comboBox1);
@@ -128,6 +141,7 @@
             this.Name = "FindReport";
             this.Text = "FindReport";
             this.Load += new System.EventHandler(this.FindReport_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,5 +157,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button searchReport_bt;
         private System.Windows.Forms.Button cancel_bt;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
