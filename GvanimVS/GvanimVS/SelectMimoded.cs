@@ -25,7 +25,14 @@ namespace GvanimVS
             dataGridView1.DataSource = dt;
             changeDataHeadersToHebrew();
         }
-    
+        public SelectMimoded(SqlConnection con, string coordinatorID) : base(con)
+        {
+            InitializeComponent();
+            DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "ID, firstName, lastName, city", "coordinatorID", coordinatorID , cmd, da);
+            dataGridView1.DataSource = dt;
+            changeDataHeadersToHebrew();
+        }
+
 
         private void close_bt_Click(object sender, EventArgs e)
         {

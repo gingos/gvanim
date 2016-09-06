@@ -13,7 +13,7 @@ namespace GvanimVS
 {
     public partial class Coordinator : DBform
     {
-        string ID;
+        string coordinatorID;
         public Coordinator(SqlConnection con):base(con)
         {
             InitializeComponent();
@@ -21,14 +21,14 @@ namespace GvanimVS
         public Coordinator(SqlConnection con, string ID) : base(con)
         {
             InitializeComponent();
-            this.ID = ID;
+            this.coordinatorID = ID;
             this.Text += ": " + ID;
         }
 
         private void writeReport_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (Report r = new Report(con))
+            using (Report r = new Report(con, coordinatorID))
             {
                 r.ShowDialog();
             }
@@ -70,7 +70,7 @@ namespace GvanimVS
         private void editMitmoded_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (var select = new SelectMimoded(con))
+            using (var select = new SelectMimoded(con, coordinatorID))
             {
                 select.ShowDialog();
             }

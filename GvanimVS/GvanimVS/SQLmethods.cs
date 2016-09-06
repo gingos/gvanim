@@ -186,6 +186,25 @@ namespace GvanimVS
             #endregion
             return dt;
         }
+        public static DataTable getColsFromTable(string table, string cols, string key, string value, SqlCommand cmd, SqlDataAdapter da)
+        {
+            DataTable dt = new DataTable();
+            string cmdText = "";
+            #region sqlQuery
+            cmdText = "SELECT " + cols + " FROM " + table
+                + " WHERE " + key + " = @pValue";
+            #endregion
+            #region addParameters
+            cmd.CommandText = cmdText;
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pValue", value);
+            #endregion
+            #region execute
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            #endregion
+            return dt;
+        }
         public static DataTable getEmploymentRecordTable(string ID, SqlCommand cmd, SqlDataAdapter da)
         {
             DataTable dt = new DataTable();
@@ -213,7 +232,8 @@ namespace GvanimVS
             if (ID.Equals(""))
             {
                 cmd.CommandText = "SELECT ID, firstName, lastName, city, phone1 FROM " + table
-                    + "WHERE ((firstName LIKE '%@pFirstName%' OR lastName LIKE '%@pLastName%') and city LIKE '%@pCity%');";
+                    + " WHERE ((firstName LIKE '%' + @pFirstName + '%' AND lastName LIKE '%' + @pLastName + '%') "
+                    + " AND city LIKE '%' + @pCity + '%');";
             }
             else
                 cmd.CommandText = "SELECT ID, firstName, lastName, city, phone1 FROM " + table
