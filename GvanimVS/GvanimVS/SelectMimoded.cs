@@ -42,17 +42,29 @@ namespace GvanimVS
         
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ID = dataGridView1["ID", e.RowIndex].Value.ToString();
-            firstName_tb.Text = dataGridView1["firstName", e.RowIndex].Value.ToString();
-            lastName_tb.Text = dataGridView1["lastName", e.RowIndex].Value.ToString();
-            Console.WriteLine("SelectMitmoded-->click--> ID = " + ID);
-            /*
-            this.Hide();
-            using (var mit = new Mitmoded(con, ID))
+            string first = dataGridView1["firstName", e.RowIndex].Value.ToString();
+            string last = dataGridView1["lastName", e.RowIndex].Value.ToString();
+            DialogResult dialogResult = MessageBox.Show("האם ברצונך לערוך את" + "\n" +first +" " + last, "אישור בחירת מתמודד", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
+            if (dialogResult == DialogResult.Yes)
             {
-                mit.ShowDialog();
+                ID = dataGridView1["ID", e.RowIndex].Value.ToString();
+                Console.WriteLine("SelectMitmoded-->click--> ID = " + ID);
+                this.Hide();
+                using (var mit = new Mitmoded(con, ID))
+                {
+                    mit.ShowDialog();
+                }
+                this.Show();
             }
-            this.Show();
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+            
+            
+            
+            /*
+            
             */
         }
         private void changeDataHeadersToHebrew()
@@ -60,6 +72,7 @@ namespace GvanimVS
             dataGridView1.Columns["ID"].HeaderCell.Value = "תעודת זהות";
             dataGridView1.Columns["firstName"].HeaderCell.Value = "שם פרטי";
             dataGridView1.Columns["lastName"].HeaderCell.Value = "שם משפחה";
+            dataGridView1.Columns["city"].HeaderCell.Value = "עיר";
         }
 
         private void search_bt_Click(object sender, EventArgs e)
