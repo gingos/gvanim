@@ -13,10 +13,12 @@ namespace GvanimVS
 {
     public partial class Report : DBform
     {
-        string ID;
-        public Report(SqlConnection con):base(con)
+        string mitmodedID, coordinatorID;
+        public Report(SqlConnection con, string coordinatorID):base(con)
         {
             InitializeComponent();
+            this.coordinatorID = coordinatorID;
+            this.Text = "Report by UserID " + coordinatorID;
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", cmd, da);
             foreach (DataRow dr in dt.Rows)
             {
@@ -27,16 +29,18 @@ namespace GvanimVS
             ReportSerialNum_lb.Text = String.Format("{0:yy-dd-MM}", nowTime);
 
         }
-
-        public Report(SqlConnection con, int reportID):base(con)
+        /*
+        POSSIBLE PROBLEM: DUPLICATE C-TOR (CON, ID)
+        public Report(SqlConnection con, string mitmodedID):base(con)
         {
             InitializeComponent();
+            this.mitmodedID = mitmodedID;
             //DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, reportID.ToString(), cmd, da);
             //TODO: init fields
             // ReportSerialNum_lb = 
             // reportDiscription_tb = 
             // activityDiscription_tb = 
-        }
+        }*/
 
         private void Report_Load(object sender, EventArgs e)
         {
@@ -48,7 +52,7 @@ namespace GvanimVS
             if (verifyFields())
             {
                 if (SQLmethods.upsertReport(ReportSerialNum_lb.Text +"-"+ ID_lb.Text,
-                    ID, dateTimePicker1.Value.Date,
+                    mitmodedID, dateTimePicker1.Value.Date,
                     reportDiscription_tb.Text, activityDiscription_tb.Text, cmd))
                     MessageBox.Show("הדוח נשמר בהצלחה");
                 else
@@ -59,8 +63,8 @@ namespace GvanimVS
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {   
-            ID = Tools.getID(comboBox1.SelectedItem.ToString());
-            ID_lb.Text = ID;
+            mitmodedID = Tools.getID(comboBox1.SelectedItem.ToString());
+            ID_lb.Text = mitmodedID;
             ReportSerialNum_lb.Refresh();
         }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
