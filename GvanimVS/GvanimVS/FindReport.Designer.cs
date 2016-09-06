@@ -158,5 +158,7 @@
         private System.Windows.Forms.Button searchReport_bt;
         private System.Windows.Forms.Button cancel_bt;
         private System.Windows.Forms.DataGridView dataGridView1;
+
+       
     }
 }

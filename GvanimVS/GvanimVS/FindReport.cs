@@ -57,12 +57,16 @@ namespace GvanimVS
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //show all mitmodedim for coordinator
+            
 
+          
+            //change mitmoded name to mitmodedID from sql
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void changeDataHeadersToHebrew()
