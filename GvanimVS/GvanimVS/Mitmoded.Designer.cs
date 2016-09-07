@@ -39,6 +39,9 @@
             this.add_report_bt = new System.Windows.Forms.Button();
             this.profile_pb = new System.Windows.Forms.PictureBox();
             this.close_bt = new System.Windows.Forms.Button();
+            this.change_coordinator_bt = new System.Windows.Forms.Button();
+            this.coordinator_name_lb = new System.Windows.Forms.Label();
+            this.coordinator_dynamic_lb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +88,7 @@
             // 
             this.info_bt.Location = new System.Drawing.Point(22, 22);
             this.info_bt.Name = "info_bt";
-            this.info_bt.Size = new System.Drawing.Size(111, 23);
+            this.info_bt.Size = new System.Drawing.Size(84, 23);
             this.info_bt.TabIndex = 4;
             this.info_bt.Text = "שינוי פרטים";
             this.info_bt.UseVisualStyleBackColor = true;
@@ -149,11 +152,44 @@
             this.close_bt.UseVisualStyleBackColor = true;
             this.close_bt.Click += new System.EventHandler(this.close_bt_Click);
             // 
+            // change_coordinator_bt
+            // 
+            this.change_coordinator_bt.Location = new System.Drawing.Point(119, 22);
+            this.change_coordinator_bt.Name = "change_coordinator_bt";
+            this.change_coordinator_bt.Size = new System.Drawing.Size(75, 23);
+            this.change_coordinator_bt.TabIndex = 11;
+            this.change_coordinator_bt.Text = "שינוי רכזת";
+            this.change_coordinator_bt.UseVisualStyleBackColor = true;
+            this.change_coordinator_bt.Click += new System.EventHandler(this.change_coordinator_bt_Click);
+            // 
+            // coordinator_name_lb
+            // 
+            this.coordinator_name_lb.AutoSize = true;
+            this.coordinator_name_lb.Location = new System.Drawing.Point(343, 31);
+            this.coordinator_name_lb.Name = "coordinator_name_lb";
+            this.coordinator_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.coordinator_name_lb.Size = new System.Drawing.Size(35, 13);
+            this.coordinator_name_lb.TabIndex = 12;
+            this.coordinator_name_lb.Text = "רכזת:";
+            // 
+            // coordinator_dynamic_lb
+            // 
+            this.coordinator_dynamic_lb.AutoSize = true;
+            this.coordinator_dynamic_lb.Location = new System.Drawing.Point(213, 32);
+            this.coordinator_dynamic_lb.Name = "coordinator_dynamic_lb";
+            this.coordinator_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.coordinator_dynamic_lb.Size = new System.Drawing.Size(72, 13);
+            this.coordinator_dynamic_lb.TabIndex = 13;
+            this.coordinator_dynamic_lb.Text = "<coordinator>";
+            // 
             // Mitmoded
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 358);
+            this.Controls.Add(this.coordinator_dynamic_lb);
+            this.Controls.Add(this.coordinator_name_lb);
+            this.Controls.Add(this.change_coordinator_bt);
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.add_report_bt);
             this.Controls.Add(this.add_employment_bt);
@@ -187,5 +223,8 @@
         private System.Windows.Forms.Button add_employment_bt;
         private System.Windows.Forms.Button add_report_bt;
         private System.Windows.Forms.Button close_bt;
+        private System.Windows.Forms.Button change_coordinator_bt;
+        private System.Windows.Forms.Label coordinator_name_lb;
+        private System.Windows.Forms.Label coordinator_dynamic_lb;
     }
 }

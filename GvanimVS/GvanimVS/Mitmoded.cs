@@ -13,6 +13,7 @@ namespace GvanimVS
 {
     public partial class Mitmoded : DBform
     {
+        private string coordinatorID;
         public Mitmoded()
         {
             InitializeComponent();
@@ -29,13 +30,11 @@ namespace GvanimVS
             initFieldsFromDT(dt);
         }
 
-        private void Mitmoded_Load(object sender, EventArgs e)
-        {
-
-        }
         private void initFieldsFromDT(DataTable dt)
         {
             name_dynamic_lb.Text = dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["lastName"].ToString();
+            coordinatorID = dt.Rows[0]["coordinatorID"].ToString();
+            coordinator_dynamic_lb.Text = getCoordinatorName(coordinatorID);
             if (!(dt.Rows[0]["photo"] is DBNull))
             {
                 byte[] bytes = (byte[])dt.Rows[0]["photo"];
@@ -45,16 +44,25 @@ namespace GvanimVS
             else
                 profile_pb.Image = Properties.Resources.anonymous_profile;
         }
+        private string getCoordinatorName(string coordinatorID)
+        {
+            DataTable dt = SQLmethods.getColsFromTable(SQLmethods.USERS, "*", "ID", coordinatorID, cmd, da);
+            return dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["lastName"].ToString();
+        }
+
         private void employment_bt_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            using (var employmentRec = new EmplyomentRecord(con, ID_dynamic_lb.Text, name_dynamic_lb.Text))
+            {
+                employmentRec.ShowDialog();
+            }
+            this.Show();
         }
-
-        private void close_bt_Click(object sender, EventArgs e)
+        private void show_reports_bt_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
 
+        }
         private void info_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -64,10 +72,19 @@ namespace GvanimVS
             }
             this.Show();
         }
-
-        private void show_reports_bt_Click(object sender, EventArgs e)
+        private void close_bt_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+        }
+        private void change_coordinator_bt_Click(object sender, EventArgs e)
+        {
+            //TODO
+           throw new NotImplementedException();
+        }
+
+        private void Mitmoded_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

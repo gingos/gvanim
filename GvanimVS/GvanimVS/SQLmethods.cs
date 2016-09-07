@@ -17,20 +17,20 @@ namespace GvanimVS
         public static string RECORDS = "EmploymentRecordTB";
 
 
-        public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city, string address, string phone1, string phone2, byte[] photo, SqlCommand cmd)
+        public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city, string address, string phone1, string phone2, string coordinatorID, byte[] photo, SqlCommand cmd)
         {
            
             cmd.CommandText =
             #region sqlQuery
             " IF NOT EXISTS (SELECT * FROM " + SQLmethods.MITMODED + " WHERE ID = @pID) "
             + "INSERT INTO " + SQLmethods.MITMODED + " (ID, firstName,lastName,birthday,city, "
-            + "streetAddress,phone1,phone2, photo) "
+            + "streetAddress,phone1,phone2,coordinatorID, photo) "
             + "VALUES (@pID, @pFirst, @pLast, @pBirthday, @pCity, "
-            + "@pAddress, @pPhone1, @pPhone2, @pPhoto) "
+            + "@pAddress, @pPhone1, @pPhone2, @pCoordinatorID, @pPhoto) "
             + "ELSE "
             + "UPDATE " + SQLmethods.MITMODED
             + " SET firstName = @pFirst, lastName = @pLast, birthday = @pBirthday, city = @pCity, "
-            + "streetAddress = @pAddress, phone1 = @pPhone1, phone2 = @pPhone2, photo = @pPhoto"
+            + "streetAddress = @pAddress, phone1 = @pPhone1, phone2 = @pPhone2, coordinatorID=@pCoordinatorID, photo = @pPhoto"
             + " WHERE ID = @pID";
             #endregion
             #region addParamters
@@ -42,6 +42,7 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pAddress", address);
             cmd.Parameters.AddWithValue("@pPhone1", phone1);
             cmd.Parameters.AddWithValue("@pPhone2", phone2);
+            cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
             cmd.Parameters.Add("@pPhoto", SqlDbType.Image, photo.Length).Value = photo;
             #endregion
             #region execute
@@ -57,17 +58,16 @@ namespace GvanimVS
             #endregion
             return true;
         }
-        //TODO add to Report search coordinator's ID
-        public static bool upsertReport (string reportID, string mitmodedID, DateTime date, string report, string actions, SqlCommand cmd)
+        public static bool upsertReport (string reportID, string mitmodedID, DateTime date, string report, string actions, string coordinatorID, SqlCommand cmd)
         {
             cmd.CommandText =
             #region sqlQuery
             " IF NOT EXISTS (SELECT * FROM " + REPORTS + " WHERE Id = @pReportID) "
-           + "INSERT INTO " + REPORTS + " (Id, mitmodedID, Created,Report,actions) "
-           + "VALUES (@pReportID, @pMitmodedID, @pCreated, @pReport, @pActions) "
+           + "INSERT INTO " + REPORTS + " (Id, mitmodedID, Created, Report, actions, coordinatorID) "
+           + "VALUES (@pReportID, @pMitmodedID, @pCreated, @pReport, @pActions, @pCoordinatorID) "
            + "ELSE "
            + "UPDATE " + REPORTS
-           + " SET Created = @pCreated, Report = @pReport, actions = @pActions "
+           + " SET Created = @pCreated, Report = @pReport, actions = @pActions, coordinatorID = @pCoordinatorID "
            + " WHERE Id = @pReportID";
             #endregion
             #region addParamters
@@ -76,6 +76,7 @@ namespace GvanimVS
             cmd.Parameters.Add("@pCreated", SqlDbType.Date).Value = date;
             cmd.Parameters.AddWithValue("@pReport", report);
             cmd.Parameters.AddWithValue("@pActions", actions);
+            cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID); 
             #endregion
             #region execute
             try
@@ -310,6 +311,14 @@ namespace GvanimVS
         {
             return date.Date.ToString("yyyy-MM-dd");
         }
-        
+        /*
+        if we don't want to edit reports.coordinatorID
+        SELECT ReportsTB.Id, ReportsTB.mitmodedID, ReportsTB.firstName, ReportsTB.lastName
+        FROM 
+        ReportsTB JOIN MitmodedTb
+        ON ReportsTB.mitmodedID=MitmodedTb.ID
+        where ReportsTB.mitmodedID = '222222222'
+        AND MitmodedTb.coordinatorID = '379184302';
+        */
     }
 }

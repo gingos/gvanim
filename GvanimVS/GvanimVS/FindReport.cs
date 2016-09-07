@@ -58,7 +58,8 @@ namespace GvanimVS
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //show all mitmodedim for coordinator
-            
+            // message from yoad: use sql method
+            // SQLmethods.getColsFromTable() second overload (with key-value search)
 
           
             //change mitmoded name to mitmodedID from sql

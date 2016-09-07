@@ -44,10 +44,11 @@
             this.phone1_lb = new System.Windows.Forms.Label();
             this.phone2_tb = new System.Windows.Forms.TextBox();
             this.phone2_lb = new System.Windows.Forms.Label();
-            this.history_bt = new System.Windows.Forms.Button();
             this.ok_bt = new System.Windows.Forms.Button();
             this.cancel_bt = new System.Windows.Forms.Button();
             this.profile_pb = new System.Windows.Forms.PictureBox();
+            this.coordinator_id_lb = new System.Windows.Forms.Label();
+            this.coordinator_id_tb = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,16 +191,6 @@
             this.phone2_lb.TabIndex = 14;
             this.phone2_lb.Text = "טלפון 2";
             // 
-            // history_bt
-            // 
-            this.history_bt.Location = new System.Drawing.Point(12, 219);
-            this.history_bt.Name = "history_bt";
-            this.history_bt.Size = new System.Drawing.Size(172, 23);
-            this.history_bt.TabIndex = 17;
-            this.history_bt.Text = "פרטי תעסוקה";
-            this.history_bt.UseVisualStyleBackColor = true;
-            this.history_bt.Click += new System.EventHandler(this.history_bt_Click);
-            // 
             // ok_bt
             // 
             this.ok_bt.Location = new System.Drawing.Point(124, 317);
@@ -231,14 +222,32 @@
             this.profile_pb.TabStop = false;
             this.profile_pb.Click += new System.EventHandler(this.profile_pb_Click);
             // 
+            // coordinator_id_lb
+            // 
+            this.coordinator_id_lb.AutoSize = true;
+            this.coordinator_id_lb.Location = new System.Drawing.Point(125, 227);
+            this.coordinator_id_lb.Name = "coordinator_id_lb";
+            this.coordinator_id_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.coordinator_id_lb.Size = new System.Drawing.Size(62, 13);
+            this.coordinator_id_lb.TabIndex = 20;
+            this.coordinator_id_lb.Text = "רכזת (ת.ז.):";
+            // 
+            // coordinator_id_tb
+            // 
+            this.coordinator_id_tb.Location = new System.Drawing.Point(12, 224);
+            this.coordinator_id_tb.Name = "coordinator_id_tb";
+            this.coordinator_id_tb.Size = new System.Drawing.Size(100, 20);
+            this.coordinator_id_tb.TabIndex = 21;
+            // 
             // MitmodedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 358);
+            this.Controls.Add(this.coordinator_id_tb);
+            this.Controls.Add(this.coordinator_id_lb);
             this.Controls.Add(this.cancel_bt);
             this.Controls.Add(this.ok_bt);
-            this.Controls.Add(this.history_bt);
             this.Controls.Add(this.profile_pb);
             this.Controls.Add(this.phone2_tb);
             this.Controls.Add(this.phone2_lb);
@@ -285,8 +294,9 @@
         private System.Windows.Forms.TextBox phone2_tb;
         private System.Windows.Forms.Label phone2_lb;
         private System.Windows.Forms.PictureBox profile_pb;
-        private System.Windows.Forms.Button history_bt;
         private System.Windows.Forms.Button ok_bt;
         private System.Windows.Forms.Button cancel_bt;
+        private System.Windows.Forms.Label coordinator_id_lb;
+        private System.Windows.Forms.TextBox coordinator_id_tb;
     }
 }

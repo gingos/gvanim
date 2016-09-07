@@ -19,7 +19,7 @@ namespace GvanimVS
             InitializeComponent();
             this.coordinatorID = coordinatorID;
             this.Text = "Report by UserID " + coordinatorID;
-            DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", cmd, da);
+            DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "coordinatorID", coordinatorID, cmd, da);
             foreach (DataRow dr in dt.Rows)
             {
                 comboBox1.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString()
@@ -52,8 +52,8 @@ namespace GvanimVS
             if (verifyFields())
             {
                 if (SQLmethods.upsertReport(ReportSerialNum_lb.Text +"-"+ ID_lb.Text,
-                    mitmodedID, dateTimePicker1.Value.Date,
-                    reportDiscription_tb.Text, activityDiscription_tb.Text, cmd))
+                    mitmodedID, dateTimePicker1.Value.Date, reportDiscription_tb.Text,
+                    activityDiscription_tb.Text, coordinatorID, cmd))
                     MessageBox.Show("הדוח נשמר בהצלחה");
                 else
                     MessageBox.Show("אירעה שגיאה בעת רישום הדוח");
@@ -119,7 +119,6 @@ namespace GvanimVS
             }
             return true;
         }
-
         private void cancel_bt_Click(object sender, EventArgs e)
         {
             this.Close();

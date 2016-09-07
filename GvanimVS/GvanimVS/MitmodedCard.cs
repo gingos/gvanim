@@ -68,7 +68,7 @@ namespace GvanimVS
                     imgByte = imageToByteArray(profile_pb.Image);
                 
                 if (SQLmethods.upsertMitmoded(firstName_tb.Text, lastName_tb.Text, dateTimePicker1.Value.Date,
-                   ID_tb.Text, city_tb.Text, address_tb.Text, phone1_tb.Text, phone2_tb.Text,
+                   ID_tb.Text, city_tb.Text, address_tb.Text, phone1_tb.Text, phone2_tb.Text, coordinator_id_tb.Text,
                    imgByte, cmd))
                     MessageBox.Show("המידע נשמר בהצלחה");
                 else
@@ -182,7 +182,22 @@ namespace GvanimVS
                     return false;
                 }
             }
-            
+            if (coordinator_id_tb.Text.Equals(""))
+            {
+                MessageBox.Show("נא הכנס תעודת זהות");
+                return false;
+            }
+            else if (!Tools.valid_number(coordinator_id_tb.Text.ToString()))
+            {
+                MessageBox.Show("על תעודת הזהות להכיל ספרות בלבד");
+                return false;
+            }
+            else if (coordinator_id_tb.Text.ToString().Length != 9)
+            {
+                MessageBox.Show("על תעודת הזהות להכיל 9 ספרות בדיוק");
+                return false;
+            }
+
             return true;
         }
         private byte[] GetPhoto(string imgLoc)
@@ -210,22 +225,6 @@ namespace GvanimVS
 
         }
 
-        private void history_bt_Click(object sender, EventArgs e)
-        {
-            //TODO move this function to mitmoded form
-            if (ID_tb.Text.Equals(""))
-            {
-                MessageBox.Show("יש לציין תעודת זהות");
-                ID_tb.Focus();
-            }
-            else
-            {
-                using (var employmentRec = new EmplyomentRecord(con, ID_tb.Text,
-                    firstName_tb.Text + " " + lastName_tb.Text))
-                {
-                    employmentRec.ShowDialog();
-                }
-            }
-        }
+
     }
 }
