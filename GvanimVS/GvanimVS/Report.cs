@@ -29,18 +29,24 @@ namespace GvanimVS
             ReportSerialNum_lb.Text = String.Format("{0:yy-dd-MM}", nowTime);
 
         }
-        /*
-        POSSIBLE PROBLEM: DUPLICATE C-TOR (CON, ID)
-        public Report(SqlConnection con, string mitmodedID):base(con)
+        
+        
+        public Report(SqlConnection con, string coordinatorID, string mitmodedID):base(con)
         {
             InitializeComponent();
             this.mitmodedID = mitmodedID;
-            //DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, reportID.ToString(), cmd, da);
-            //TODO: init fields
-            // ReportSerialNum_lb = 
-            // reportDiscription_tb = 
-            // activityDiscription_tb = 
-        }*/
+            ID_lb.Text = mitmodedID;
+            this.coordinatorID = coordinatorID;
+            DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "ID", mitmodedID, cmd, da);
+            comboBox1.Items.Clear();
+            comboBox1.Items.Add(dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["lastName"].ToString()
+                + ", תעודת זהות: " + dt.Rows[0]["ID"].ToString());
+            comboBox1.SelectedIndex = 0;
+            DateTime nowTime = DateTime.Now;
+            ReportSerialNum_lb.Text = String.Format("{0:yy-dd-MM}", nowTime);
+
+
+        }
 
         private void Report_Load(object sender, EventArgs e)
         {

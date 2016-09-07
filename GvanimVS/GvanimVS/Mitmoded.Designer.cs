@@ -131,6 +131,7 @@
             this.add_report_bt.TabIndex = 9;
             this.add_report_bt.Text = "הוסף דוח";
             this.add_report_bt.UseVisualStyleBackColor = true;
+            this.add_report_bt.Click += new System.EventHandler(this.add_report_bt_Click);
             // 
             // profile_pb
             // 
