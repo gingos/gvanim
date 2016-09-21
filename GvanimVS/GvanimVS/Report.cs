@@ -14,6 +14,7 @@ namespace GvanimVS
     public partial class Report : DBform
     {
         string mitmodedID, coordinatorID;
+        //TODO: create third ctor for a spesific report
         public Report(SqlConnection con, string coordinatorID):base(con)
         {
             InitializeComponent();

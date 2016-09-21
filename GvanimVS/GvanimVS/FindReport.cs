@@ -13,12 +13,19 @@ namespace GvanimVS
 {
     public partial class FindReport : DBform
     {
-        public FindReport(SqlConnection con) : base(con)
+        string mitmodedID, coordinatorID;
+        public FindReport(SqlConnection con, string coordinatorID) : base(con)
         {
             InitializeComponent();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.REPORTS, "Id, mitmodedID, firstName, lastName, Created, Report, actions", cmd, da);
             dataGridView1.DataSource = dt;
             changeDataHeadersToHebrew();
+            DataTable dt1 = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "coordinatorID", coordinatorID, cmd, da);
+            foreach (DataRow dr in dt1.Rows)
+            {
+                comboBox1.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString()
+                    + ", תעודת זהות: " + dr["ID"]);
+            }
 
         }
 
@@ -57,17 +64,13 @@ namespace GvanimVS
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //show all mitmodedim for coordinator
-            // message from yoad: use sql method
-            // SQLmethods.getColsFromTable() second overload (with key-value search)
-
           
-            //change mitmoded name to mitmodedID from sql
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            //TODO: create third ctor for report
+            //Report r = new Report()
         }
 
         private void changeDataHeadersToHebrew()

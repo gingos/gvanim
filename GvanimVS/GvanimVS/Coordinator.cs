@@ -38,7 +38,7 @@ namespace GvanimVS
         {
             //TODO: yair : create search by parameter in FindReport for reports and create a full ctor in Report for viewing the report
             this.Hide();
-            using (FindReport fr = new FindReport(con))
+            using (FindReport fr = new FindReport(con, coordinatorID))
             {
                 fr.ShowDialog();
             }
