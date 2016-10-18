@@ -49,13 +49,19 @@
             this.profile_pb = new System.Windows.Forms.PictureBox();
             this.coordinator_id_lb = new System.Windows.Forms.Label();
             this.coordinator_id_tb = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstName_lb
             // 
             this.firstName_lb.AutoSize = true;
-            this.firstName_lb.Location = new System.Drawing.Point(427, 41);
+            this.firstName_lb.Location = new System.Drawing.Point(621, 29);
             this.firstName_lb.Name = "firstName_lb";
             this.firstName_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.firstName_lb.Size = new System.Drawing.Size(51, 13);
@@ -65,14 +71,14 @@
             // 
             // firstName_tb
             // 
-            this.firstName_tb.Location = new System.Drawing.Point(221, 41);
+            this.firstName_tb.Location = new System.Drawing.Point(415, 29);
             this.firstName_tb.Name = "firstName_tb";
             this.firstName_tb.Size = new System.Drawing.Size(200, 20);
             this.firstName_tb.TabIndex = 1;
             // 
             // lastName_tb
             // 
-            this.lastName_tb.Location = new System.Drawing.Point(221, 79);
+            this.lastName_tb.Location = new System.Drawing.Point(415, 67);
             this.lastName_tb.Name = "lastName_tb";
             this.lastName_tb.Size = new System.Drawing.Size(200, 20);
             this.lastName_tb.TabIndex = 3;
@@ -80,7 +86,7 @@
             // lastName_lb
             // 
             this.lastName_lb.AutoSize = true;
-            this.lastName_lb.Location = new System.Drawing.Point(427, 79);
+            this.lastName_lb.Location = new System.Drawing.Point(621, 67);
             this.lastName_lb.Name = "lastName_lb";
             this.lastName_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lastName_lb.Size = new System.Drawing.Size(63, 13);
@@ -90,7 +96,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(221, 122);
+            this.dateTimePicker1.Location = new System.Drawing.Point(415, 110);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowCheckBox = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
@@ -99,7 +105,7 @@
             // birth_lb
             // 
             this.birth_lb.AutoSize = true;
-            this.birth_lb.Location = new System.Drawing.Point(427, 122);
+            this.birth_lb.Location = new System.Drawing.Point(621, 110);
             this.birth_lb.Name = "birth_lb";
             this.birth_lb.Size = new System.Drawing.Size(69, 13);
             this.birth_lb.TabIndex = 5;
@@ -107,7 +113,7 @@
             // 
             // ID_tb
             // 
-            this.ID_tb.Location = new System.Drawing.Point(221, 161);
+            this.ID_tb.Location = new System.Drawing.Point(415, 149);
             this.ID_tb.Name = "ID_tb";
             this.ID_tb.Size = new System.Drawing.Size(200, 20);
             this.ID_tb.TabIndex = 7;
@@ -115,7 +121,7 @@
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
-            this.ID_lb.Location = new System.Drawing.Point(427, 161);
+            this.ID_lb.Location = new System.Drawing.Point(621, 149);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ID_lb.Size = new System.Drawing.Size(67, 13);
@@ -125,7 +131,7 @@
             // 
             // city_tb
             // 
-            this.city_tb.Location = new System.Drawing.Point(221, 201);
+            this.city_tb.Location = new System.Drawing.Point(415, 189);
             this.city_tb.Name = "city_tb";
             this.city_tb.Size = new System.Drawing.Size(200, 20);
             this.city_tb.TabIndex = 9;
@@ -133,7 +139,7 @@
             // city_lb
             // 
             this.city_lb.AutoSize = true;
-            this.city_lb.Location = new System.Drawing.Point(427, 201);
+            this.city_lb.Location = new System.Drawing.Point(621, 189);
             this.city_lb.Name = "city_lb";
             this.city_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.city_lb.Size = new System.Drawing.Size(64, 13);
@@ -142,7 +148,7 @@
             // 
             // address_tb
             // 
-            this.address_tb.Location = new System.Drawing.Point(221, 243);
+            this.address_tb.Location = new System.Drawing.Point(415, 231);
             this.address_tb.Name = "address_tb";
             this.address_tb.Size = new System.Drawing.Size(200, 20);
             this.address_tb.TabIndex = 11;
@@ -150,7 +156,7 @@
             // street_lb
             // 
             this.street_lb.AutoSize = true;
-            this.street_lb.Location = new System.Drawing.Point(427, 243);
+            this.street_lb.Location = new System.Drawing.Point(621, 231);
             this.street_lb.Name = "street_lb";
             this.street_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.street_lb.Size = new System.Drawing.Size(56, 13);
@@ -159,7 +165,7 @@
             // 
             // phone1_tb
             // 
-            this.phone1_tb.Location = new System.Drawing.Point(221, 280);
+            this.phone1_tb.Location = new System.Drawing.Point(415, 268);
             this.phone1_tb.Name = "phone1_tb";
             this.phone1_tb.Size = new System.Drawing.Size(200, 20);
             this.phone1_tb.TabIndex = 13;
@@ -167,7 +173,7 @@
             // phone1_lb
             // 
             this.phone1_lb.AutoSize = true;
-            this.phone1_lb.Location = new System.Drawing.Point(427, 280);
+            this.phone1_lb.Location = new System.Drawing.Point(621, 268);
             this.phone1_lb.Name = "phone1_lb";
             this.phone1_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.phone1_lb.Size = new System.Drawing.Size(47, 13);
@@ -176,7 +182,7 @@
             // 
             // phone2_tb
             // 
-            this.phone2_tb.Location = new System.Drawing.Point(221, 317);
+            this.phone2_tb.Location = new System.Drawing.Point(415, 305);
             this.phone2_tb.Name = "phone2_tb";
             this.phone2_tb.Size = new System.Drawing.Size(200, 20);
             this.phone2_tb.TabIndex = 15;
@@ -184,7 +190,7 @@
             // phone2_lb
             // 
             this.phone2_lb.AutoSize = true;
-            this.phone2_lb.Location = new System.Drawing.Point(427, 317);
+            this.phone2_lb.Location = new System.Drawing.Point(621, 305);
             this.phone2_lb.Name = "phone2_lb";
             this.phone2_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.phone2_lb.Size = new System.Drawing.Size(47, 13);
@@ -193,7 +199,7 @@
             // 
             // ok_bt
             // 
-            this.ok_bt.Location = new System.Drawing.Point(124, 317);
+            this.ok_bt.Location = new System.Drawing.Point(128, 500);
             this.ok_bt.Name = "ok_bt";
             this.ok_bt.Size = new System.Drawing.Size(75, 23);
             this.ok_bt.TabIndex = 18;
@@ -203,7 +209,7 @@
             // 
             // cancel_bt
             // 
-            this.cancel_bt.Location = new System.Drawing.Point(12, 317);
+            this.cancel_bt.Location = new System.Drawing.Point(16, 500);
             this.cancel_bt.Name = "cancel_bt";
             this.cancel_bt.Size = new System.Drawing.Size(75, 23);
             this.cancel_bt.TabIndex = 19;
@@ -214,7 +220,7 @@
             // profile_pb
             // 
             this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
-            this.profile_pb.Location = new System.Drawing.Point(12, 41);
+            this.profile_pb.Location = new System.Drawing.Point(206, 29);
             this.profile_pb.Name = "profile_pb";
             this.profile_pb.Size = new System.Drawing.Size(172, 172);
             this.profile_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,7 +231,7 @@
             // coordinator_id_lb
             // 
             this.coordinator_id_lb.AutoSize = true;
-            this.coordinator_id_lb.Location = new System.Drawing.Point(125, 227);
+            this.coordinator_id_lb.Location = new System.Drawing.Point(319, 215);
             this.coordinator_id_lb.Name = "coordinator_id_lb";
             this.coordinator_id_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.coordinator_id_lb.Size = new System.Drawing.Size(62, 13);
@@ -234,44 +240,90 @@
             // 
             // coordinator_id_tb
             // 
-            this.coordinator_id_tb.Location = new System.Drawing.Point(12, 224);
+            this.coordinator_id_tb.Location = new System.Drawing.Point(206, 212);
             this.coordinator_id_tb.Name = "coordinator_id_tb";
             this.coordinator_id_tb.Size = new System.Drawing.Size(100, 20);
             this.coordinator_id_tb.TabIndex = 21;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(12, 9);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tabControl1.RightToLeftLayout = true;
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(832, 476);
+            this.tabControl1.TabIndex = 22;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.coordinator_id_tb);
+            this.tabPage1.Controls.Add(this.firstName_lb);
+            this.tabPage1.Controls.Add(this.coordinator_id_lb);
+            this.tabPage1.Controls.Add(this.firstName_tb);
+            this.tabPage1.Controls.Add(this.lastName_lb);
+            this.tabPage1.Controls.Add(this.lastName_tb);
+            this.tabPage1.Controls.Add(this.profile_pb);
+            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.phone2_tb);
+            this.tabPage1.Controls.Add(this.birth_lb);
+            this.tabPage1.Controls.Add(this.phone2_lb);
+            this.tabPage1.Controls.Add(this.ID_lb);
+            this.tabPage1.Controls.Add(this.phone1_tb);
+            this.tabPage1.Controls.Add(this.ID_tb);
+            this.tabPage1.Controls.Add(this.phone1_lb);
+            this.tabPage1.Controls.Add(this.city_lb);
+            this.tabPage1.Controls.Add(this.address_tb);
+            this.tabPage1.Controls.Add(this.city_tb);
+            this.tabPage1.Controls.Add(this.street_lb);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(824, 450);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(824, 450);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(375, 205);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // MitmodedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 358);
-            this.Controls.Add(this.coordinator_id_tb);
-            this.Controls.Add(this.coordinator_id_lb);
+            this.ClientSize = new System.Drawing.Size(856, 548);
             this.Controls.Add(this.cancel_bt);
             this.Controls.Add(this.ok_bt);
-            this.Controls.Add(this.profile_pb);
-            this.Controls.Add(this.phone2_tb);
-            this.Controls.Add(this.phone2_lb);
-            this.Controls.Add(this.phone1_tb);
-            this.Controls.Add(this.phone1_lb);
-            this.Controls.Add(this.address_tb);
-            this.Controls.Add(this.street_lb);
-            this.Controls.Add(this.city_tb);
-            this.Controls.Add(this.city_lb);
-            this.Controls.Add(this.ID_tb);
-            this.Controls.Add(this.ID_lb);
-            this.Controls.Add(this.birth_lb);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.lastName_tb);
-            this.Controls.Add(this.lastName_lb);
-            this.Controls.Add(this.firstName_tb);
-            this.Controls.Add(this.firstName_lb);
+            this.Controls.Add(this.tabControl1);
             this.Name = "MitmodedCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MitmodedCard";
             this.Load += new System.EventHandler(this.MitmodedCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -298,5 +350,9 @@
         private System.Windows.Forms.Button cancel_bt;
         private System.Windows.Forms.Label coordinator_id_lb;
         private System.Windows.Forms.TextBox coordinator_id_tb;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
