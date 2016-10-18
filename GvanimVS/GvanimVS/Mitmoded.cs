@@ -94,7 +94,7 @@ namespace GvanimVS
             {
                 report.ShowDialog();
             }
-            this.Close();
+            this.Show();
         }
     }
 }
