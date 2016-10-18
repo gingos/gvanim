@@ -49,8 +49,17 @@ namespace GvanimVS
     
         private void addMeeting_bt_Click(object sender, EventArgs e)
         {
+            /*
+            // Nothing happens in the GUI :(
             AddMeeting am = new AddMeeting();
             am.Activate();
+            */
+            this.Hide();
+            using (var am = new AddMeeting(con))
+            {
+                am.ShowDialog();
+            }
+            this.Show();
         }
         private void editMeeting_bt_Click(object sender, EventArgs e)
         {

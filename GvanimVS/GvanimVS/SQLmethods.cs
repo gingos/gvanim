@@ -58,20 +58,22 @@ namespace GvanimVS
             #endregion
             return true;
         }
-        public static bool upsertReport (string reportID, string mitmodedID, DateTime date, string report, string actions, string coordinatorID, SqlCommand cmd)
+        public static bool upsertReport (string reportID, string mitmodedID, string firstName, string lastName, DateTime date, string report, string actions, string coordinatorID, SqlCommand cmd)
         {
             cmd.CommandText =
             #region sqlQuery
             " IF NOT EXISTS (SELECT * FROM " + REPORTS + " WHERE Id = @pReportID) "
-           + "INSERT INTO " + REPORTS + " (Id, mitmodedID, Created, Report, actions, coordinatorID) "
-           + "VALUES (@pReportID, @pMitmodedID, @pCreated, @pReport, @pActions, @pCoordinatorID) "
+           + "INSERT INTO " + REPORTS + " (Id, mitmodedID, firstName, lastName, Created, Report, actions, coordinatorID) "
+           + "VALUES (@pReportID, @pMitmodedID, @pFirstName, @pLastName, @pCreated, @pReport, @pActions, @pCoordinatorID) "
            + "ELSE "
            + "UPDATE " + REPORTS
-           + " SET Created = @pCreated, Report = @pReport, actions = @pActions, coordinatorID = @pCoordinatorID "
+           + " SET firstName = @pFirstName, lastName = @pLastName, Created = @pCreated, Report = @pReport, actions = @pActions, coordinatorID = @pCoordinatorID "
            + " WHERE Id = @pReportID";
             #endregion
             #region addParamters
             cmd.Parameters.AddWithValue("@pReportID", reportID);
+            cmd.Parameters.AddWithValue("@pFirstName", firstName);
+            cmd.Parameters.AddWithValue("@pLastName", lastName);
             cmd.Parameters.AddWithValue("@pMitmodedID", mitmodedID);
             cmd.Parameters.Add("@pCreated", SqlDbType.Date).Value = date;
             cmd.Parameters.AddWithValue("@pReport", report);
