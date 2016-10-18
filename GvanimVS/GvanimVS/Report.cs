@@ -36,20 +36,20 @@ namespace GvanimVS
             ReportSerialNum_lb.Text = String.Format("{0:yy-dd-MM}", nowTime);
             if (caller.Equals("from coordinator"))
             {
-                DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "coordinatorID", coordinatorID, cmd, da);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    comboBox1.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString() + " " + dr["ID"]);
-                }
-            }
-            else if (caller.Equals("from mitmoded"))
+            DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "coordinatorID", coordinatorID, cmd, da);
+            foreach (DataRow dr in dt.Rows)
             {
-                ID_lb.Text = mitmodedID;
-                DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "ID", mitmodedID, cmd, da);
+                    comboBox1.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString() + " " + dr["ID"]);
+            }
+        }
+            else if (caller.Equals("from mitmoded"))
+        {
+            ID_lb.Text = mitmodedID;
+            DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "ID", mitmodedID, cmd, da);
                 mitmodedFirst = dt.Rows[0]["firstName"].ToString();
                 mitmodedLast = dt.Rows[0]["lastName"].ToString();
                 comboBox1.Items.Add(mitmodedFirst + " " + mitmodedLast + " " + mitmodedID);
-                comboBox1.SelectedIndex = 0;
+            comboBox1.SelectedIndex = 0;
             }
         }
         private void Report_Load(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace GvanimVS
         private void saveReport_bt_Click(object sender, EventArgs e)
         {
             if (verifyFields())
-            {   
+            {
                 if (SQLmethods.upsertReport(ReportSerialNum_lb.Text +"-"+ ID_lb.Text,
                     mitmodedID, mitmodedFirst, mitmodedLast, dateTimePicker1.Value.Date, reportDiscription_tb.Text,
                     activityDiscription_tb.Text, coordinatorID, cmd))
@@ -71,7 +71,7 @@ namespace GvanimVS
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {   
             
             string[] parsedName = comboBox1.SelectedItem.ToString().Split(' ');
             mitmodedFirst = parsedName[0];
