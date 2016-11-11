@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace GvanimVS
 {
@@ -17,6 +18,7 @@ namespace GvanimVS
         private byte[] imgByte;
         private bool imgChanged;
         private string ID;
+        private DataTable dt, educationDT, empHistoryDT; 
         public MitmodedCard(SqlConnection con):base(con)
         {
             InitializeComponent();
@@ -28,17 +30,20 @@ namespace GvanimVS
             this.ID = ID;
             ID_tb.Text = ID;
             imgChanged = false;
-            DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
+            dt = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
             initFieldsFromDT(dt);
         }
         
         private void initFieldsFromDT(DataTable dt)
         {
+            educationDT = new DataTable();
+            empHistoryDT = new DataTable();
+            education_dg.DataSource = educationDT;
             foreach (DataRow dr in dt.Rows)
             {
                 firstName_tb.Text = dr["firstName"].ToString();
                 lastName_tb.Text =  dr["lastName"].ToString();
-                dateTimePicker1.Value = (DateTime)dr["birthday"];
+                birth_dtp.Value = (DateTime)dr["birthday"];
                 city_tb.Text = dr["city"].ToString();
                 address_tb.Text = dr["streetAddress"].ToString();
                 phone1_tb.Text = dr["phone1"].ToString();
@@ -67,7 +72,7 @@ namespace GvanimVS
                 else
                     imgByte = imageToByteArray(profile_pb.Image);
                 
-                if (SQLmethods.upsertMitmoded(firstName_tb.Text, lastName_tb.Text, dateTimePicker1.Value.Date,
+                if (SQLmethods.upsertMitmoded(firstName_tb.Text, lastName_tb.Text, birth_dtp.Value.Date,
                    ID_tb.Text, city_tb.Text, address_tb.Text, phone1_tb.Text, phone2_tb.Text, coordinator_id_tb.Text,
                    imgByte, cmd))
                     MessageBox.Show("המידע נשמר בהצלחה");
@@ -114,7 +119,7 @@ namespace GvanimVS
                 MessageBox.Show("שם משפחה יכול להכיל אותיות בלבד");
                 return false;
             }
-            if (!dateTimePicker1.Checked)
+            if (!birth_dtp.Checked)
             {
                 MessageBox.Show("נא לבחור תאריך לידה");
                 return false;
@@ -211,6 +216,7 @@ namespace GvanimVS
             stream.Close();
             return photo;
         }
+
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
             using (var ms = new MemoryStream())

@@ -90,7 +90,7 @@
             this.info_bt.Name = "info_bt";
             this.info_bt.Size = new System.Drawing.Size(84, 23);
             this.info_bt.TabIndex = 4;
-            this.info_bt.Text = "שינוי פרטים";
+            this.info_bt.Text = "אינטק מועמד";
             this.info_bt.UseVisualStyleBackColor = true;
             this.info_bt.Click += new System.EventHandler(this.info_bt_Click);
             // 
