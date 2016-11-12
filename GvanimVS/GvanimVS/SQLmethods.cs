@@ -17,23 +17,27 @@ namespace GvanimVS
         public static string RECORDS = "EmploymentRecordTB";
 
 
-        public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city, string address, string phone1, string phone2, string coordinatorID, byte[] photo, SqlCommand cmd)
+        public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city,
+            string address, string phone1, string phone2, string coordinatorID, byte[] photo,
+            byte[] education, SqlCommand cmd)
         {
            
             cmd.CommandText =
             #region sqlQuery
             " IF NOT EXISTS (SELECT * FROM " + SQLmethods.MITMODED + " WHERE ID = @pID) "
             + "INSERT INTO " + SQLmethods.MITMODED + " (ID, firstName,lastName,birthday,city, "
-            + "streetAddress,phone1,phone2,coordinatorID, photo) "
+            + "streetAddress,phone1,phone2,coordinatorID, photo, education) "
             + "VALUES (@pID, @pFirst, @pLast, @pBirthday, @pCity, "
-            + "@pAddress, @pPhone1, @pPhone2, @pCoordinatorID, @pPhoto) "
+            + "@pAddress, @pPhone1, @pPhone2, @pCoordinatorID, @pPhoto, @pEducation) "
             + "ELSE "
             + "UPDATE " + SQLmethods.MITMODED
             + " SET firstName = @pFirst, lastName = @pLast, birthday = @pBirthday, city = @pCity, "
-            + "streetAddress = @pAddress, phone1 = @pPhone1, phone2 = @pPhone2, coordinatorID=@pCoordinatorID, photo = @pPhoto"
+            + "streetAddress = @pAddress, phone1 = @pPhone1, phone2 = @pPhone2, coordinatorID=@pCoordinatorID, "
+            + "photo = @pPhoto, education = @pEducation"
             + " WHERE ID = @pID";
             #endregion
             #region addParamters
+            cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@pID", ID);
             cmd.Parameters.AddWithValue("@pFirst", first);
             cmd.Parameters.AddWithValue("@pLast", last);
@@ -44,6 +48,7 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pPhone2", phone2);
             cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
             cmd.Parameters.Add("@pPhoto", SqlDbType.Image, photo.Length).Value = photo;
+            cmd.Parameters.Add("@pEducation", SqlDbType.VarBinary, education.Length).Value = education;
             #endregion
             #region execute
             try

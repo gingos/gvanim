@@ -62,6 +62,7 @@ namespace GvanimVS
             {
                 if (dgv.ColumnCount == 0) return null;
                 DataTable dtSource = new DataTable();
+                dtSource.TableName = dgv.Name;
                 foreach (DataGridViewColumn col in dgv.Columns)
                 {
                     if (IgnoreHideColumns & !col.Visible) continue;

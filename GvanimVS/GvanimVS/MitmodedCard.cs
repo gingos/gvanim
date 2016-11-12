@@ -42,10 +42,7 @@ namespace GvanimVS
         private void initDataTables()
         {
             education_dg.AutoGenerateColumns = false;
-            educationDT.TableName = "educationDT";
-
             employment_dg.AutoGenerateColumns = false;
-            empHistoryDT.TableName = "employmentHistoryDT";
         }
 
         private void initFieldsFromDT(DataTable dt)
@@ -55,11 +52,20 @@ namespace GvanimVS
             {
                 firstName_tb.Text = dr["firstName"].ToString();
                 lastName_tb.Text =  dr["lastName"].ToString();
-                birth_dtp.Value = (DateTime)dr["birthday"];
+                if (dr["birthday"] != null)
+                {
+                    birth_dtp.Value = (DateTime)dr["birthday"];
+                    birth_dtp.Refresh();
+                    birth_dtp.Checked = true;
+                }
+                else birth_dtp.Value = DateTime.Now;
                 city_tb.Text = dr["city"].ToString();
                 address_tb.Text = dr["streetAddress"].ToString();
                 phone1_tb.Text = dr["phone1"].ToString();
                 phone2_tb.Text = dr["phone2"].ToString();
+                byte[] educ_data = dr["education"] as byte[];
+                if (educ_data != null)
+                    education_dg.DataSource = streamToDataTable ( new MemoryStream(educ_data), education_dg  );
                 if (dr["photo"] != null)
                 {
                     byte[] bytes = (byte[])dr["photo"];
@@ -68,7 +74,6 @@ namespace GvanimVS
                 }
                 else
                     profile_pb.Image = Properties.Resources.anonymous_profile;
-
             }
         }
 
@@ -93,12 +98,12 @@ namespace GvanimVS
                 stream = Tools.SerializeToStream(empHistoryDT);
                 byte[] history_binary = stream.ToArray();
 
-                // ADD EDUC BINARY AND HISTORY BINARY TO SQL QUERY
+                // ADD HISTORY BINARY TO SQL QUERY
 
                 //insert data into SQL server
                 if (SQLmethods.upsertMitmoded(firstName_tb.Text, lastName_tb.Text, birth_dtp.Value.Date,
                    ID_tb.Text, city_tb.Text, address_tb.Text, phone1_tb.Text, phone2_tb.Text, coordinator_id_tb.Text,
-                   imgByte, cmd))
+                   imgByte, educ_binary, cmd))
                     MessageBox.Show("המידע נשמר בהצלחה");
                 else
                     MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
@@ -213,7 +218,7 @@ namespace GvanimVS
             }
             if (coordinator_id_tb.Text.Equals(""))
             {
-                MessageBox.Show("נא הכנס תעודת זהות");
+                MessageBox.Show("נא הכנס תעודת זהות של הרכזת");
                 return false;
             }
             else if (!Tools.valid_number(coordinator_id_tb.Text.ToString()))
@@ -240,79 +245,18 @@ namespace GvanimVS
             stream.Close();
             return photo;
         }
+        
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-            educationDT = Tools.GetContentAsDataTable(education_dg, true);
-            stream = Tools.SerializeToStream(educationDT);
-
-            //MemoryStream streamSer = new MemoryStream();
-            //IFormatter formatter = new BinaryFormatter();
-            //formatter.Serialize(streamSer, educationDT);
-
-           
-            byte[] str1 = stream.ToArray();
-
-            //TODO:
-            // Already serielized the file to memory
-            // Can i send byte[] to server?
-            // if not, have to serliaize to xml
-            cmd.CommandText =
-            #region sqlQuery
-
-            "INSERT INTO " + SQLmethods.MITMODED + " (ID, phone1, education) "
-            + "VALUES (@pID, @pPhone1, @pEducation); ";
-
-            #endregion
-            #region addParamters
-            cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@pID", "1111");
-            cmd.Parameters.AddWithValue("@pPhone1", "0523");
-            cmd.Parameters.Add("@pEducation", SqlDbType.VarBinary, str1.Length).Value = str1;
-            #endregion
-            #region execute
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.ToString());
-            }
-            #endregion
-
-
-
-            //MemoryStream StreamDe = new MemoryStream(streamSer.ToArray());            
-            //StreamDe.Seek(0, SeekOrigin.Begin);
-            //DataTable dt2 = (DataTable)formatter.Deserialize(StreamDe);
-            
-
-            //educationDT.WriteXml(@"myfile.xml");
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private DataTable streamToDataTable(MemoryStream stream, DataGridView dg)
         {
             DataTable dt2 = (DataTable)Tools.DeserializeFromStream(stream);
             
-            foreach (DataGridViewColumn col in education_dg.Columns)
+            foreach (DataGridViewColumn col in dg.Columns)
             {
 
                 col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
             }
-            education_dg.DataSource = dt2;
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //educationDT.Clear(); // does noting?
-            //education_dg.Columns.Clear(); //deleted all colls and all data with them
-            education_dg.Rows.Clear();
-            //education_dg.DataSource = null;
+            return dt2;  
         }
 
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
@@ -328,7 +272,85 @@ namespace GvanimVS
         {
 
         }
+        /*
+private void button1_Click(object sender, EventArgs e)
+{
 
-        
+
+    educationDT = Tools.GetContentAsDataTable(education_dg, true);
+    stream = Tools.SerializeToStream(educationDT);
+
+    //MemoryStream streamSer = new MemoryStream();
+    //IFormatter formatter = new BinaryFormatter();
+    //formatter.Serialize(streamSer, educationDT);
+
+
+    byte[] str1 = stream.ToArray();
+
+    //TODO:
+    // Already serielized the file to memory
+    // Can i send byte[] to server?
+    // if not, have to serliaize to xml
+    cmd.CommandText =
+    #region sqlQuery
+
+    "INSERT INTO " + SQLmethods.MITMODED + " (ID, phone1, education) "
+    + "VALUES (@pID, @pPhone1, @pEducation); ";
+
+    #endregion
+    #region addParamters
+    cmd.Parameters.Clear();
+    cmd.Parameters.AddWithValue("@pID", "1111");
+    cmd.Parameters.AddWithValue("@pPhone1", "0523");
+    cmd.Parameters.Add("@pEducation", SqlDbType.VarBinary, str1.Length).Value = str1;
+    #endregion
+    #region execute
+    try
+    {
+        cmd.ExecuteNonQuery();
+    }
+    catch (SqlException ex)
+    {
+        System.Windows.Forms.MessageBox.Show(ex.ToString());
+    }
+    #endregion
+
+
+
+    //MemoryStream StreamDe = new MemoryStream(streamSer.ToArray());            
+    //StreamDe.Seek(0, SeekOrigin.Begin);
+    //DataTable dt2 = (DataTable)formatter.Deserialize(StreamDe);
+
+
+    //educationDT.WriteXml(@"myfile.xml");
+
+}
+*/
+        /*
+                private void button3_Click(object sender, EventArgs e)
+                {
+                    DataTable dt2 = (DataTable)Tools.DeserializeFromStream(stream);
+
+                    foreach (DataGridViewColumn col in education_dg.Columns)
+                    {
+
+                        col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
+                    }
+                    education_dg.DataSource = dt2;
+
+                }
+
+
+                private void button2_Click(object sender, EventArgs e)
+                {
+                    //educationDT.Clear(); // does noting?
+                    //education_dg.Columns.Clear(); //deleted all colls and all data with them
+                    education_dg.Rows.Clear();
+                    //education_dg.DataSource = null;
+                }
+                */
+
+
+
     }
 }
