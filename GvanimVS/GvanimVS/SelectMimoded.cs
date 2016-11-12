@@ -42,6 +42,8 @@ namespace GvanimVS
         
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            //TOOD:
+            // weird bug, this function fails when sorting
             string first = dataGridView1["firstName", e.RowIndex].Value.ToString();
             string last = dataGridView1["lastName", e.RowIndex].Value.ToString();
             DialogResult dialogResult = MessageBox.Show("האם ברצונך לערוך את" + "\n" +first +" " + last, "אישור בחירת מתמודד", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);

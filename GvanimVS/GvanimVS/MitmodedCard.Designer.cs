@@ -77,11 +77,15 @@
             this.addictions_lb = new System.Windows.Forms.Label();
             this.general_info_tb = new System.Windows.Forms.TextBox();
             this.mitmoded_ed_army_tab = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.military_tb = new System.Windows.Forms.TextBox();
             this.military_lb = new System.Windows.Forms.Label();
             this.education_lb = new System.Windows.Forms.Label();
             this.education_dg = new System.Windows.Forms.DataGridView();
+            this.education_dg_year_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.education_dg_edu_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mitmoded_job_tab = new System.Windows.Forms.TabPage();
             this.dream_lb = new System.Windows.Forms.Label();
             this.dream_tb = new System.Windows.Forms.TextBox();
@@ -90,7 +94,10 @@
             this.rec_activity_tb = new System.Windows.Forms.TextBox();
             this.rec_activity_lb = new System.Windows.Forms.Label();
             this.employment_lb = new System.Windows.Forms.Label();
-            this.empyloyment_dg = new System.Windows.Forms.DataGridView();
+            this.employment_dg = new System.Windows.Forms.DataGridView();
+            this.employment_year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employment_place = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employment_roles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mitmoded_job2_tab = new System.Windows.Forms.TabPage();
             this.job_free_txt_tb = new System.Windows.Forms.TextBox();
             this.job_free_txt_lb = new System.Windows.Forms.Label();
@@ -131,11 +138,6 @@
             this.job_target_tb = new System.Windows.Forms.TextBox();
             this.job_target_lb = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.year_dg_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.education_dg_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employment_year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employment_place = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employment_roles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.mitmoded_card_tc.SuspendLayout();
             this.mitmoded_personal_tab.SuspendLayout();
@@ -143,7 +145,7 @@
             this.mitmoded_ed_army_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.education_dg)).BeginInit();
             this.mitmoded_job_tab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empyloyment_dg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employment_dg)).BeginInit();
             this.mitmoded_job2_tab.SuspendLayout();
             this.mitmoded_job3_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -638,6 +640,8 @@
             // 
             // mitmoded_ed_army_tab
             // 
+            this.mitmoded_ed_army_tab.Controls.Add(this.button3);
+            this.mitmoded_ed_army_tab.Controls.Add(this.button2);
             this.mitmoded_ed_army_tab.Controls.Add(this.button1);
             this.mitmoded_ed_army_tab.Controls.Add(this.military_tb);
             this.mitmoded_ed_army_tab.Controls.Add(this.military_lb);
@@ -651,6 +655,26 @@
             this.mitmoded_ed_army_tab.Text = "השכלה ושירות צבאי";
             this.mitmoded_ed_army_tab.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(851, 148);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "restore";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(851, 109);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "clear";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(851, 62);
@@ -659,6 +683,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "toXML";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // military_tb
             // 
@@ -690,13 +715,24 @@
             // 
             this.education_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.education_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.year_dg_col,
-            this.education_dg_col});
+            this.education_dg_year_col,
+            this.education_dg_edu_col});
             this.education_dg.Location = new System.Drawing.Point(174, 62);
             this.education_dg.Name = "education_dg";
             this.education_dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.education_dg.Size = new System.Drawing.Size(647, 194);
             this.education_dg.TabIndex = 0;
+            // 
+            // education_dg_year_col
+            // 
+            this.education_dg_year_col.HeaderText = "שנה";
+            this.education_dg_year_col.Name = "education_dg_year_col";
+            // 
+            // education_dg_edu_col
+            // 
+            this.education_dg_edu_col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.education_dg_edu_col.HeaderText = "השכלה (תיכון, אקדמית, קורסים)";
+            this.education_dg_edu_col.Name = "education_dg_edu_col";
             // 
             // mitmoded_job_tab
             // 
@@ -707,7 +743,7 @@
             this.mitmoded_job_tab.Controls.Add(this.rec_activity_tb);
             this.mitmoded_job_tab.Controls.Add(this.rec_activity_lb);
             this.mitmoded_job_tab.Controls.Add(this.employment_lb);
-            this.mitmoded_job_tab.Controls.Add(this.empyloyment_dg);
+            this.mitmoded_job_tab.Controls.Add(this.employment_dg);
             this.mitmoded_job_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job_tab.Name = "mitmoded_job_tab";
             this.mitmoded_job_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -776,17 +812,34 @@
             this.employment_lb.TabIndex = 2;
             this.employment_lb.Text = "ניסיון עבודה והסטוריה שיקומית";
             // 
-            // empyloyment_dg
+            // employment_dg
             // 
-            this.empyloyment_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empyloyment_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.employment_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employment_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.employment_year,
             this.employment_place,
             this.employment_roles});
-            this.empyloyment_dg.Location = new System.Drawing.Point(286, 53);
-            this.empyloyment_dg.Name = "empyloyment_dg";
-            this.empyloyment_dg.Size = new System.Drawing.Size(647, 231);
-            this.empyloyment_dg.TabIndex = 0;
+            this.employment_dg.Location = new System.Drawing.Point(286, 53);
+            this.employment_dg.Name = "employment_dg";
+            this.employment_dg.Size = new System.Drawing.Size(647, 231);
+            this.employment_dg.TabIndex = 0;
+            // 
+            // employment_year
+            // 
+            this.employment_year.HeaderText = "שנה";
+            this.employment_year.Name = "employment_year";
+            // 
+            // employment_place
+            // 
+            this.employment_place.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.employment_place.HeaderText = "מקום העבודה";
+            this.employment_place.Name = "employment_place";
+            // 
+            // employment_roles
+            // 
+            this.employment_roles.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.employment_roles.HeaderText = "תפקיד/ים";
+            this.employment_roles.Name = "employment_roles";
             // 
             // mitmoded_job2_tab
             // 
@@ -1161,34 +1214,6 @@
             this.tabPage1.Text = "חתימה והדפסה";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // year_dg_col
-            // 
-            this.year_dg_col.HeaderText = "שנה";
-            this.year_dg_col.Name = "year_dg_col";
-            // 
-            // education_dg_col
-            // 
-            this.education_dg_col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.education_dg_col.HeaderText = "השכלה (תיכון, אקדמית, קורסים)";
-            this.education_dg_col.Name = "education_dg_col";
-            // 
-            // employment_year
-            // 
-            this.employment_year.HeaderText = "שנה";
-            this.employment_year.Name = "employment_year";
-            // 
-            // employment_place
-            // 
-            this.employment_place.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.employment_place.HeaderText = "מקום העבודה";
-            this.employment_place.Name = "employment_place";
-            // 
-            // employment_roles
-            // 
-            this.employment_roles.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.employment_roles.HeaderText = "תפקיד/ים";
-            this.employment_roles.Name = "employment_roles";
-            // 
             // MitmodedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1212,7 +1237,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.education_dg)).EndInit();
             this.mitmoded_job_tab.ResumeLayout(false);
             this.mitmoded_job_tab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empyloyment_dg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employment_dg)).EndInit();
             this.mitmoded_job2_tab.ResumeLayout(false);
             this.mitmoded_job2_tab.PerformLayout();
             this.mitmoded_job3_tab.ResumeLayout(false);
@@ -1275,12 +1300,11 @@
         private System.Windows.Forms.Label meds_lb;
         private System.Windows.Forms.Label psych_track_lb;
         private System.Windows.Forms.TextBox psych_track_tb;
-        private System.Windows.Forms.DataGridView education_dg;
         private System.Windows.Forms.TextBox military_tb;
         private System.Windows.Forms.Label military_lb;
         private System.Windows.Forms.Label education_lb;
         private System.Windows.Forms.TabPage mitmoded_job_tab;
-        private System.Windows.Forms.DataGridView empyloyment_dg;
+        private System.Windows.Forms.DataGridView employment_dg;
         private System.Windows.Forms.Label rec_activity_lb;
         private System.Windows.Forms.Label employment_lb;
         private System.Windows.Forms.TextBox rec_activity_tb;
@@ -1329,10 +1353,13 @@
         private System.Windows.Forms.Label job_target_lb;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn year_dg_col;
-        private System.Windows.Forms.DataGridViewTextBoxColumn education_dg_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn employment_year;
         private System.Windows.Forms.DataGridViewTextBoxColumn employment_place;
         private System.Windows.Forms.DataGridViewTextBoxColumn employment_roles;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn education_dg_year_col;
+        private System.Windows.Forms.DataGridViewTextBoxColumn education_dg_edu_col;
+        private System.Windows.Forms.DataGridView education_dg;
     }
 }
