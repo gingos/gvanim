@@ -182,6 +182,7 @@
             this.coordinator_dynamic_lb.Size = new System.Drawing.Size(72, 13);
             this.coordinator_dynamic_lb.TabIndex = 13;
             this.coordinator_dynamic_lb.Text = "<coordinator>";
+            this.coordinator_dynamic_lb.Click += new System.EventHandler(this.coordinator_dynamic_lb_Click);
             // 
             // Mitmoded
             // 

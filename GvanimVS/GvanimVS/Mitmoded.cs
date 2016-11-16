@@ -96,5 +96,10 @@ namespace GvanimVS
             }
             this.Show();
         }
+
+        private void coordinator_dynamic_lb_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
