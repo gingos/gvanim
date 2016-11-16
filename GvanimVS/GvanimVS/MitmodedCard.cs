@@ -22,6 +22,7 @@ namespace GvanimVS
         private string ID;
         private DataTable dt, educationDT, empHistoryDT;
         public MemoryStream stream;
+        public string educationXML;
 
         public MitmodedCard(SqlConnection con):base(con)
         {
@@ -63,9 +64,12 @@ namespace GvanimVS
                 address_tb.Text = dr["streetAddress"].ToString();
                 phone1_tb.Text = dr["phone1"].ToString();
                 phone2_tb.Text = dr["phone2"].ToString();
-                byte[] educ_data = dr["education"] as byte[];
-                if (educ_data != null)
-                    education_dg.DataSource = streamToDataTable ( new MemoryStream(educ_data), education_dg  );
+                //byte[] educ_data = dr["education"] as byte[];
+                //if (educ_data != null)
+                //    education_dg.DataSource = streamToDataTable ( new MemoryStream(educ_data), education_dg  );
+                educationXML = dr["educationXML"].ToString();
+                if (educationXML != null)
+                    XmlToDataGrid(educationXML);
                 if (dr["photo"] != null)
                 {
                     byte[] bytes = (byte[])dr["photo"];
@@ -272,20 +276,20 @@ namespace GvanimVS
         {
 
         }
-        /*
+        
 private void button1_Click(object sender, EventArgs e)
 {
 
 
     educationDT = Tools.GetContentAsDataTable(education_dg, true);
-    stream = Tools.SerializeToStream(educationDT);
-
+            //stream = Tools.SerializeToStream(educationDT);
+            educationXML = Tools.Serialize<DataTable>(educationDT);
     //MemoryStream streamSer = new MemoryStream();
     //IFormatter formatter = new BinaryFormatter();
     //formatter.Serialize(streamSer, educationDT);
 
 
-    byte[] str1 = stream.ToArray();
+    //byte[] str1 = stream.ToArray();
 
     //TODO:
     // Already serielized the file to memory
@@ -294,7 +298,7 @@ private void button1_Click(object sender, EventArgs e)
     cmd.CommandText =
     #region sqlQuery
 
-    "INSERT INTO " + SQLmethods.MITMODED + " (ID, phone1, education) "
+    "INSERT INTO " + SQLmethods.MITMODED + " (ID, phone1, educationXML) "
     + "VALUES (@pID, @pPhone1, @pEducation); ";
 
     #endregion
@@ -302,7 +306,7 @@ private void button1_Click(object sender, EventArgs e)
     cmd.Parameters.Clear();
     cmd.Parameters.AddWithValue("@pID", "1111");
     cmd.Parameters.AddWithValue("@pPhone1", "0523");
-    cmd.Parameters.Add("@pEducation", SqlDbType.VarBinary, str1.Length).Value = str1;
+    cmd.Parameters.Add("@pEducation", SqlDbType.Xml, educationXML.Length).Value = educationXML;
     #endregion
     #region execute
     try
@@ -325,30 +329,39 @@ private void button1_Click(object sender, EventArgs e)
     //educationDT.WriteXml(@"myfile.xml");
 
 }
-*/
-        /*
-                private void button3_Click(object sender, EventArgs e)
-                {
-                    DataTable dt2 = (DataTable)Tools.DeserializeFromStream(stream);
 
-                    foreach (DataGridViewColumn col in education_dg.Columns)
-                    {
+        private void XmlToDataGrid(string educationXML)
+        {
+            DataTable dt2 = Tools.Deserialize<DataTable>(educationXML);
+            foreach (DataGridViewColumn col in education_dg.Columns)
+            {
 
-                        col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
-                    }
-                    education_dg.DataSource = dt2;
+                col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
+            }
+            education_dg.DataSource = dt2;
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //DataTable dt2 = (DataTable)Tools.DeserializeFromStream(stream);
+            DataTable dt2 = Tools.Deserialize<DataTable>(educationXML);
+            foreach (DataGridViewColumn col in education_dg.Columns)
+            {
 
-                }
+                col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
+            }
+            education_dg.DataSource = dt2;
+
+        }
 
 
-                private void button2_Click(object sender, EventArgs e)
-                {
-                    //educationDT.Clear(); // does noting?
-                    //education_dg.Columns.Clear(); //deleted all colls and all data with them
-                    education_dg.Rows.Clear();
-                    //education_dg.DataSource = null;
-                }
-                */
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //educationDT.Clear(); // does noting?
+            //education_dg.Columns.Clear(); //deleted all colls and all data with them
+            education_dg.Rows.Clear();
+            //education_dg.DataSource = null;
+        }
+
 
 
 
