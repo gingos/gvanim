@@ -293,11 +293,11 @@ namespace GvanimVS
             foreach (DataGridViewColumn col in education_dg.Columns)
             {
 
-                col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
-            }
-            education_dg.DataSource = dt2;
+                        col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
+                    }
+                    education_dg.DataSource = dt2;
 
-        }
+                }
 
 
         private void button2_Click(object sender, EventArgs e)
