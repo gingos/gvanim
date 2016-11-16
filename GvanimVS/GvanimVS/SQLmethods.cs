@@ -129,6 +129,7 @@ namespace GvanimVS
         //in the future, perhaps add paramter: table name to look for various data
         public static DataTable getDataTable(string table, string ID, SqlCommand cmd, SqlDataAdapter da)
         {
+            //OVERLOAD: used for mimoded (and more, not login)
             DataTable dt = new DataTable();
             string cmdText = "";
             #region sqlQuery
@@ -150,6 +151,7 @@ namespace GvanimVS
         }
         public static DataTable getDataTable(string table, string user, string password, SqlCommand cmd, SqlDataAdapter da)
         {
+            //OVERLOAD: used for users login
             DataTable dt = new DataTable();
             string cmdText = "";
             #region sqlQuery
