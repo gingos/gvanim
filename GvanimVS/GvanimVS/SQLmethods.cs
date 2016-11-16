@@ -19,21 +19,21 @@ namespace GvanimVS
 
         public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city,
             string address, string phone1, string phone2, string coordinatorID, byte[] photo,
-            byte[] education, SqlCommand cmd)
+            /*byte[] education*/string educationXML, SqlCommand cmd)
         {
            
             cmd.CommandText =
             #region sqlQuery
             " IF NOT EXISTS (SELECT * FROM " + SQLmethods.MITMODED + " WHERE ID = @pID) "
             + "INSERT INTO " + SQLmethods.MITMODED + " (ID, firstName,lastName,birthday,city, "
-            + "streetAddress,phone1,phone2,coordinatorID, photo, education) "
+            + "streetAddress,phone1,phone2,coordinatorID, photo, educationXML) "
             + "VALUES (@pID, @pFirst, @pLast, @pBirthday, @pCity, "
             + "@pAddress, @pPhone1, @pPhone2, @pCoordinatorID, @pPhoto, @pEducation) "
             + "ELSE "
             + "UPDATE " + SQLmethods.MITMODED
             + " SET firstName = @pFirst, lastName = @pLast, birthday = @pBirthday, city = @pCity, "
             + "streetAddress = @pAddress, phone1 = @pPhone1, phone2 = @pPhone2, coordinatorID=@pCoordinatorID, "
-            + "photo = @pPhoto, education = @pEducation"
+            + "photo = @pPhoto, educationXML = @pEducation"
             + " WHERE ID = @pID";
             #endregion
             #region addParamters
@@ -48,7 +48,7 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pPhone2", phone2);
             cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
             cmd.Parameters.Add("@pPhoto", SqlDbType.Image, photo.Length).Value = photo;
-            cmd.Parameters.Add("@pEducation", SqlDbType.VarBinary, education.Length).Value = education;
+            cmd.Parameters.Add("@pEducation", SqlDbType.Xml, educationXML.Length).Value = educationXML;
             #endregion
             #region execute
             try

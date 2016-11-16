@@ -663,6 +663,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "restore";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
@@ -673,6 +674,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "clear";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
@@ -683,6 +685,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "toXML";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // military_tb

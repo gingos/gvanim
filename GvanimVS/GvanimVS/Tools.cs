@@ -105,28 +105,26 @@ namespace GvanimVS
             object o = formatter.Deserialize(stream);
             return o;
         }
-        public static string SerializeToXML(object item)
+
+        public static void XmlToDataGrid(string educationXML, DataGridView dgv)
         {
-            if (item == null)
-                return null;
+            DataTable dt2 = DeserializeXML<DataTable>(educationXML);
+            foreach (DataGridViewColumn col in dgv.Columns)
+            {
 
-            var stringBuilder = new System.Text.StringBuilder();
-            var itemType = item.GetType();
-
-            new XmlSerializer
-                (itemType).Serialize(new System.IO.StringWriter(stringBuilder), item);
-
-            return stringBuilder.ToString();
-
+                col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
+            }
+            dgv.DataSource = dt2;
         }
-        public static T Deserialize<T>(this string toDeserialize)
+        
+        public static T DeserializeXML<T>(this string toDeserialize)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
             StringReader textReader = new StringReader(toDeserialize);
             return (T)xmlSerializer.Deserialize(textReader);
         }
 
-        public static string Serialize<T>(this T toSerialize)
+        public static string SerializeXML<T>(this T toSerialize)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
             StringWriter textWriter = new StringWriter();
