@@ -2,6 +2,7 @@
 using System.Data;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace GvanimVS
 {
@@ -41,7 +42,7 @@ namespace GvanimVS
         {
             //Regex r = new Regex("^[a-zA-Z ]+$");
             Regex r = new Regex("^[a-zA-Zא-ת ]+$");
-           
+
             if (r.IsMatch(input))
                 return true;
             else
@@ -89,7 +90,8 @@ namespace GvanimVS
                 return null;
             }
         }
-        public static System.IO.MemoryStream SerializeToStream(object o){
+        public static System.IO.MemoryStream SerializeToStream(object o)
+        {
             System.IO.MemoryStream stream = new System.IO.MemoryStream();
             System.Runtime.Serialization.IFormatter formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
             formatter.Serialize(stream, o);
@@ -102,5 +104,21 @@ namespace GvanimVS
             object o = formatter.Deserialize(stream);
             return o;
         }
+        public static string SerializeToXML(object item)
+        {
+            if (item == null)
+                return null;
+
+            var stringBuilder = new System.Text.StringBuilder();
+            var itemType = item.GetType();
+
+            new XmlSerializer
+                (itemType).Serialize(new System.IO.StringWriter(stringBuilder), item);
+
+            return stringBuilder.ToString();
+
+        }
+
+        
     }
 }
