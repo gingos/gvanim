@@ -15,8 +15,9 @@ namespace GvanimVS
         private byte[] imgByte;
         private bool imgChanged;
         private string ID;
-        private DataTable dt, educationDT, empHistoryDT;
-        private string educationXML, empHistoryXML;
+        private DataTable MainDT, educationDT, empHistoryDT;
+        private SerializableDictionary<string, SerializableDictionary<string, string>> xml_organizer;
+
 
         public MitmodedCard(SqlConnection con) : base(con)
         {
@@ -29,13 +30,18 @@ namespace GvanimVS
             this.ID = ID;
             ID_tb.Text = ID;
             imgChanged = false;
-            dt = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
-            initDataTables();
-            initFieldsFromDT(dt);
+            MainDT = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
+            initDataGridViews();
+            initFieldsFromDT(MainDT);
         }
 
-        private void initDataTables()
-        {
+        private void initDataGridViews()
+        {   
+            /*
+             * set "Auto Generate Columns" to false
+             * now, columns (and data) from data tables will join existing data,
+             * not instead of adding the new columns
+             */
             education_dg.AutoGenerateColumns = false;
             employment_dg.AutoGenerateColumns = false;
         }
@@ -44,7 +50,7 @@ namespace GvanimVS
         {
 
             foreach (DataRow dr in dt.Rows)
-            {
+            {   
                 firstName_tb.Text = dr["firstName"].ToString();
                 lastName_tb.Text = dr["lastName"].ToString();
                 if (dr["birthday"] != null)
@@ -58,9 +64,7 @@ namespace GvanimVS
                 address_tb.Text = dr["streetAddress"].ToString();
                 phone1_tb.Text = dr["phone1"].ToString();
                 phone2_tb.Text = dr["phone2"].ToString();
-                educationXML = dr["educationXML"].ToString();
-                if (!educationXML.Equals(""))
-                    Tools.XmlToDataGrid(educationXML, education_dg);
+
                 if (dr["photo"] != null)
                 {
                     byte[] bytes = (byte[])dr["photo"];
@@ -69,7 +73,65 @@ namespace GvanimVS
                 }
                 else
                     profile_pb.Image = Properties.Resources.anonymous_profile;
+
+                initEducationDGVFromXML(dr["educationXML"].ToString());
+                initHistoryDGVFromXML(dr["historyXML"].ToString());
+                initInfoTextBoxes(dr["intec_tabs"].ToString());
+                
             }
+        }
+
+        private void initHistoryDGVFromXML(string historyFromDT)
+        {
+            if (!historyFromDT.Equals(""))
+                Tools.XmlToDataGrid(historyFromDT, employment_dg);
+        }
+
+        private void initEducationDGVFromXML(string educationFromDT)
+        {
+            if (!educationFromDT.Equals(""))
+                Tools.XmlToDataGrid(educationFromDT, education_dg);
+        }
+
+        private void initInfoTextBoxes(string OrganzierToDeserialize)
+        {
+            //fill non-necessary text boxes (labeld "xml_*")
+            //using dictionary of dictionarys: per tab, and per text controls
+            //using custom class - serializable dictionary 
+            if (OrganzierToDeserialize.Equals(""))
+                return;
+            xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(OrganzierToDeserialize);
+
+            foreach (KeyValuePair<string, SerializableDictionary<string, string>> dic in xml_organizer)
+            {
+                TabPage page = mitmoded_card_tc.TabPages[dic.Key];
+                SerializableDictionary<string, string> xml_tab = dic.Value;
+                foreach (KeyValuePair<string, string> textBoxKVP in xml_tab)
+                    page.Controls[textBoxKVP.Key].Text = textBoxKVP.Value;
+            }
+            
+        }
+        private string textBoxesToDictionary()
+        {
+            //creates a dictionary of dictionarys, per tab, per text controls
+            //using custom class - serializable dictionary 
+            //returns the serialization xml as string
+            xml_organizer = new SerializableDictionary<string, SerializableDictionary<string, string>>();
+            foreach (TabPage page in mitmoded_card_tc.TabPages)
+            {
+                SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
+                foreach (Control control in page.Controls)
+                {
+                    if (control is TextBox)
+                        if (control.Name.StartsWith("xml"))
+                            xml_tab.Add(control.Name, control.Text);
+                        
+                }
+                xml_organizer.Add(page.Name, xml_tab);
+            }
+            string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
+            return serializedOrganizer;
+
         }
 
         private void ok_bt_Click(object sender, EventArgs e)
@@ -86,18 +148,19 @@ namespace GvanimVS
 
                 //Serialize gridviews: grid -> data table -> serialized ->XML
                 educationDT = Tools.GetContentAsDataTable(education_dg, true);
-                educationXML = Tools.SerializeXML<DataTable>(educationDT);
+                string empEducationXML = Tools.SerializeXML<DataTable>(educationDT);
 
                 empHistoryDT = Tools.GetContentAsDataTable(employment_dg, true);
-                empHistoryXML = Tools.SerializeXML(empHistoryDT);
+                string empHistoryXML = Tools.SerializeXML(empHistoryDT);
 
+                //Serialize TextBoxes to xml string
+                string serializedOrganizer = textBoxesToDictionary();
 
-                // ADD HISTORY XML TO SQL QUERY
 
                 //insert data into SQL server
                 if (SQLmethods.upsertMitmoded(firstName_tb.Text, lastName_tb.Text, birth_dtp.Value.Date,
                    ID_tb.Text, city_tb.Text, address_tb.Text, phone1_tb.Text, phone2_tb.Text, coordinator_id_tb.Text,
-                   imgByte, educationXML, cmd))
+                   imgByte, empEducationXML, empHistoryXML, serializedOrganizer, cmd))
                     MessageBox.Show("המידע נשמר בהצלחה");
                 else
                     MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
@@ -254,59 +317,7 @@ namespace GvanimVS
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
 
-            educationDT = Tools.GetContentAsDataTable(education_dg, true);
-            educationXML = Tools.SerializeXML<DataTable>(educationDT);
-            cmd.CommandText =
-            #region sqlQuery
-
-            "INSERT INTO " + SQLmethods.MITMODED + " (ID, phone1, educationXML) "
-            + "VALUES (@pID, @pPhone1, @pEducation); ";
-
-            #endregion
-            #region addParamters
-            cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@pID", "1111");
-            cmd.Parameters.AddWithValue("@pPhone1", "0523");
-            cmd.Parameters.Add("@pEducation", SqlDbType.Xml, educationXML.Length).Value = educationXML;
-            #endregion
-            #region execute
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.ToString());
-            }
-            #endregion
-            
-        }
-
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            DataTable dt2 = Tools.DeserializeXML<DataTable>(educationXML);
-            foreach (DataGridViewColumn col in education_dg.Columns)
-            {
-
-                        col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
-                    }
-                    education_dg.DataSource = dt2;
-
-                }
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //educationDT.Clear(); // does noting?
-            //education_dg.Columns.Clear(); //deleted all colls and all data with them
-            education_dg.Rows.Clear();
-            //education_dg.DataSource = null;
-        }
-        
     }
 }

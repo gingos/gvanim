@@ -62,25 +62,22 @@
             this.intake_date_dtp = new System.Windows.Forms.DateTimePicker();
             this.intake_date_lb = new System.Windows.Forms.Label();
             this.mitmoded_personal2_tab = new System.Windows.Forms.TabPage();
-            this.meds_tb = new System.Windows.Forms.TextBox();
+            this.xml_meds_tb = new System.Windows.Forms.TextBox();
             this.meds_lb = new System.Windows.Forms.Label();
             this.psych_track_lb = new System.Windows.Forms.Label();
-            this.psych_track_tb = new System.Windows.Forms.TextBox();
+            this.xml_psych_track_tb = new System.Windows.Forms.TextBox();
             this.medical_issues_lb = new System.Windows.Forms.Label();
-            this.medical_issues_tb = new System.Windows.Forms.TextBox();
+            this.xml_medical_issues_tb = new System.Windows.Forms.TextBox();
             this.general_info_lb = new System.Windows.Forms.Label();
-            this.homicidal_tb = new System.Windows.Forms.TextBox();
+            this.xml_homicidal_tb = new System.Windows.Forms.TextBox();
             this.homicidal_lb = new System.Windows.Forms.Label();
-            this.violence_tb = new System.Windows.Forms.TextBox();
+            this.xml_violence_tb = new System.Windows.Forms.TextBox();
             this.violence_lb = new System.Windows.Forms.Label();
-            this.addictions_tb = new System.Windows.Forms.TextBox();
+            this.xml_addictions_tb = new System.Windows.Forms.TextBox();
             this.addictions_lb = new System.Windows.Forms.Label();
-            this.general_info_tb = new System.Windows.Forms.TextBox();
+            this.xml_general_info_tb = new System.Windows.Forms.TextBox();
             this.mitmoded_ed_army_tab = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.military_tb = new System.Windows.Forms.TextBox();
+            this.xml_military_tb = new System.Windows.Forms.TextBox();
             this.military_lb = new System.Windows.Forms.Label();
             this.education_lb = new System.Windows.Forms.Label();
             this.education_dg = new System.Windows.Forms.DataGridView();
@@ -88,10 +85,10 @@
             this.education_dg_edu_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mitmoded_job_tab = new System.Windows.Forms.TabPage();
             this.dream_lb = new System.Windows.Forms.Label();
-            this.dream_tb = new System.Windows.Forms.TextBox();
-            this.reason_tb = new System.Windows.Forms.TextBox();
+            this.xml_dream_tb = new System.Windows.Forms.TextBox();
+            this.xml_reason_tb = new System.Windows.Forms.TextBox();
             this.reason_lb = new System.Windows.Forms.Label();
-            this.rec_activity_tb = new System.Windows.Forms.TextBox();
+            this.xml_rec_activity_tb = new System.Windows.Forms.TextBox();
             this.rec_activity_lb = new System.Windows.Forms.Label();
             this.employment_lb = new System.Windows.Forms.Label();
             this.employment_dg = new System.Windows.Forms.DataGridView();
@@ -99,27 +96,27 @@
             this.employment_place = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employment_roles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mitmoded_job2_tab = new System.Windows.Forms.TabPage();
-            this.job_free_txt_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_free_txt_tb = new System.Windows.Forms.TextBox();
             this.job_free_txt_lb = new System.Windows.Forms.Label();
-            this.job_sal_expc_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_sal_expc_tb = new System.Windows.Forms.TextBox();
             this.job_sal_expc_lb = new System.Windows.Forms.Label();
-            this.job_hours_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_hours_tb = new System.Windows.Forms.TextBox();
             this.job_hours_lb = new System.Windows.Forms.Label();
-            this.job_max_hours_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_max_hours_tb = new System.Windows.Forms.TextBox();
             this.job_max_hours_lb = new System.Windows.Forms.Label();
-            this.job_day_off_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_day_off_tb = new System.Windows.Forms.TextBox();
             this.day_off_lb = new System.Windows.Forms.Label();
-            this.job_days_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_days_tb = new System.Windows.Forms.TextBox();
             this.job_days_lb = new System.Windows.Forms.Label();
             this.job_size_lb = new System.Windows.Forms.Label();
             this.job_type_lb = new System.Windows.Forms.Label();
-            this.skills_improve_tb = new System.Windows.Forms.TextBox();
+            this.xml_skills_improve_tb = new System.Windows.Forms.TextBox();
             this.skills_improve_lb = new System.Windows.Forms.Label();
-            this.dream_todo_tb = new System.Windows.Forms.TextBox();
+            this.xml_dream_todo_tb = new System.Windows.Forms.TextBox();
             this.dream_todo_lb = new System.Windows.Forms.Label();
-            this.weakness_tb = new System.Windows.Forms.TextBox();
+            this.xml_weakness_tb = new System.Windows.Forms.TextBox();
             this.weakness_lb = new System.Windows.Forms.Label();
-            this.strengths_tb = new System.Windows.Forms.TextBox();
+            this.xml_strengths_tb = new System.Windows.Forms.TextBox();
             this.strengths_lb = new System.Windows.Forms.Label();
             this.expectations_lb = new System.Windows.Forms.Label();
             this.mitmoded_job3_tab = new System.Windows.Forms.TabPage();
@@ -128,14 +125,14 @@
             this.skills_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notes_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mitmoded_job4_tab = new System.Windows.Forms.TabPage();
-            this.job_first_targets_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_first_targets_tb = new System.Windows.Forms.TextBox();
             this.job_first_targets_lb = new System.Windows.Forms.Label();
             this.job_initial_lb = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.xml_first_impression = new System.Windows.Forms.TextBox();
             this.summary_lb = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.xml_additional_job_info = new System.Windows.Forms.TextBox();
             this.job_important_lb = new System.Windows.Forms.Label();
-            this.job_target_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_target_tb = new System.Windows.Forms.TextBox();
             this.job_target_lb = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
@@ -486,20 +483,20 @@
             // 
             // mitmoded_personal2_tab
             // 
-            this.mitmoded_personal2_tab.Controls.Add(this.meds_tb);
+            this.mitmoded_personal2_tab.Controls.Add(this.xml_meds_tb);
             this.mitmoded_personal2_tab.Controls.Add(this.meds_lb);
             this.mitmoded_personal2_tab.Controls.Add(this.psych_track_lb);
-            this.mitmoded_personal2_tab.Controls.Add(this.psych_track_tb);
+            this.mitmoded_personal2_tab.Controls.Add(this.xml_psych_track_tb);
             this.mitmoded_personal2_tab.Controls.Add(this.medical_issues_lb);
-            this.mitmoded_personal2_tab.Controls.Add(this.medical_issues_tb);
+            this.mitmoded_personal2_tab.Controls.Add(this.xml_medical_issues_tb);
             this.mitmoded_personal2_tab.Controls.Add(this.general_info_lb);
-            this.mitmoded_personal2_tab.Controls.Add(this.homicidal_tb);
+            this.mitmoded_personal2_tab.Controls.Add(this.xml_homicidal_tb);
             this.mitmoded_personal2_tab.Controls.Add(this.homicidal_lb);
-            this.mitmoded_personal2_tab.Controls.Add(this.violence_tb);
+            this.mitmoded_personal2_tab.Controls.Add(this.xml_violence_tb);
             this.mitmoded_personal2_tab.Controls.Add(this.violence_lb);
-            this.mitmoded_personal2_tab.Controls.Add(this.addictions_tb);
+            this.mitmoded_personal2_tab.Controls.Add(this.xml_addictions_tb);
             this.mitmoded_personal2_tab.Controls.Add(this.addictions_lb);
-            this.mitmoded_personal2_tab.Controls.Add(this.general_info_tb);
+            this.mitmoded_personal2_tab.Controls.Add(this.xml_general_info_tb);
             this.mitmoded_personal2_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_personal2_tab.Name = "mitmoded_personal2_tab";
             this.mitmoded_personal2_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -508,15 +505,15 @@
             this.mitmoded_personal2_tab.Text = "רקע אישי משפחתי רפואי";
             this.mitmoded_personal2_tab.UseVisualStyleBackColor = true;
             // 
-            // meds_tb
+            // xml_meds_tb
             // 
-            this.meds_tb.AcceptsReturn = true;
-            this.meds_tb.Location = new System.Drawing.Point(30, 363);
-            this.meds_tb.Multiline = true;
-            this.meds_tb.Name = "meds_tb";
-            this.meds_tb.Size = new System.Drawing.Size(385, 76);
-            this.meds_tb.TabIndex = 13;
-            this.meds_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.xml_meds_tb.AcceptsReturn = true;
+            this.xml_meds_tb.Location = new System.Drawing.Point(30, 363);
+            this.xml_meds_tb.Multiline = true;
+            this.xml_meds_tb.Name = "xml_meds_tb";
+            this.xml_meds_tb.Size = new System.Drawing.Size(385, 76);
+            this.xml_meds_tb.TabIndex = 13;
+            this.xml_meds_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // meds_lb
             // 
@@ -536,15 +533,15 @@
             this.psych_track_lb.TabIndex = 11;
             this.psych_track_lb.Text = "מסגרת מעקב פסיכיאטרי כולל תדירות";
             // 
-            // psych_track_tb
+            // xml_psych_track_tb
             // 
-            this.psych_track_tb.AcceptsReturn = true;
-            this.psych_track_tb.Location = new System.Drawing.Point(30, 256);
-            this.psych_track_tb.Multiline = true;
-            this.psych_track_tb.Name = "psych_track_tb";
-            this.psych_track_tb.Size = new System.Drawing.Size(385, 66);
-            this.psych_track_tb.TabIndex = 10;
-            this.psych_track_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.xml_psych_track_tb.AcceptsReturn = true;
+            this.xml_psych_track_tb.Location = new System.Drawing.Point(30, 256);
+            this.xml_psych_track_tb.Multiline = true;
+            this.xml_psych_track_tb.Name = "xml_psych_track_tb";
+            this.xml_psych_track_tb.Size = new System.Drawing.Size(385, 66);
+            this.xml_psych_track_tb.TabIndex = 10;
+            this.xml_psych_track_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // medical_issues_lb
             // 
@@ -555,15 +552,15 @@
             this.medical_issues_lb.TabIndex = 9;
             this.medical_issues_lb.Text = "בעיות רפואיות";
             // 
-            // medical_issues_tb
+            // xml_medical_issues_tb
             // 
-            this.medical_issues_tb.AcceptsReturn = true;
-            this.medical_issues_tb.Location = new System.Drawing.Point(30, 46);
-            this.medical_issues_tb.Multiline = true;
-            this.medical_issues_tb.Name = "medical_issues_tb";
-            this.medical_issues_tb.Size = new System.Drawing.Size(385, 155);
-            this.medical_issues_tb.TabIndex = 8;
-            this.medical_issues_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.xml_medical_issues_tb.AcceptsReturn = true;
+            this.xml_medical_issues_tb.Location = new System.Drawing.Point(30, 46);
+            this.xml_medical_issues_tb.Multiline = true;
+            this.xml_medical_issues_tb.Name = "xml_medical_issues_tb";
+            this.xml_medical_issues_tb.Size = new System.Drawing.Size(385, 155);
+            this.xml_medical_issues_tb.TabIndex = 8;
+            this.xml_medical_issues_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // general_info_lb
             // 
@@ -574,14 +571,14 @@
             this.general_info_lb.TabIndex = 7;
             this.general_info_lb.Text = "מצב משפחתי, גיל, מגורים ופרטים רלוונטיים";
             // 
-            // homicidal_tb
+            // xml_homicidal_tb
             // 
-            this.homicidal_tb.Location = new System.Drawing.Point(516, 478);
-            this.homicidal_tb.Multiline = true;
-            this.homicidal_tb.Name = "homicidal_tb";
-            this.homicidal_tb.Size = new System.Drawing.Size(399, 76);
-            this.homicidal_tb.TabIndex = 6;
-            this.homicidal_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.xml_homicidal_tb.Location = new System.Drawing.Point(516, 478);
+            this.xml_homicidal_tb.Multiline = true;
+            this.xml_homicidal_tb.Name = "xml_homicidal_tb";
+            this.xml_homicidal_tb.Size = new System.Drawing.Size(399, 76);
+            this.xml_homicidal_tb.TabIndex = 6;
+            this.xml_homicidal_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // homicidal_lb
             // 
@@ -591,14 +588,14 @@
             this.homicidal_lb.TabIndex = 5;
             this.homicidal_lb.Text = "נסיונות התאבדות בעבר: כן\\לא, פירוט";
             // 
-            // violence_tb
+            // xml_violence_tb
             // 
-            this.violence_tb.Location = new System.Drawing.Point(516, 363);
-            this.violence_tb.Multiline = true;
-            this.violence_tb.Name = "violence_tb";
-            this.violence_tb.Size = new System.Drawing.Size(399, 76);
-            this.violence_tb.TabIndex = 4;
-            this.violence_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.xml_violence_tb.Location = new System.Drawing.Point(516, 363);
+            this.xml_violence_tb.Multiline = true;
+            this.xml_violence_tb.Name = "xml_violence_tb";
+            this.xml_violence_tb.Size = new System.Drawing.Size(399, 76);
+            this.xml_violence_tb.TabIndex = 4;
+            this.xml_violence_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // violence_lb
             // 
@@ -609,15 +606,15 @@
             this.violence_lb.TabIndex = 3;
             this.violence_lb.Text = "אלימות בעבר: כן\\לא, פירוט";
             // 
-            // addictions_tb
+            // xml_addictions_tb
             // 
-            this.addictions_tb.AcceptsReturn = true;
-            this.addictions_tb.Location = new System.Drawing.Point(516, 256);
-            this.addictions_tb.Multiline = true;
-            this.addictions_tb.Name = "addictions_tb";
-            this.addictions_tb.Size = new System.Drawing.Size(399, 66);
-            this.addictions_tb.TabIndex = 2;
-            this.addictions_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.xml_addictions_tb.AcceptsReturn = true;
+            this.xml_addictions_tb.Location = new System.Drawing.Point(516, 256);
+            this.xml_addictions_tb.Multiline = true;
+            this.xml_addictions_tb.Name = "xml_addictions_tb";
+            this.xml_addictions_tb.Size = new System.Drawing.Size(399, 66);
+            this.xml_addictions_tb.TabIndex = 2;
+            this.xml_addictions_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // addictions_lb
             // 
@@ -628,22 +625,19 @@
             this.addictions_lb.TabIndex = 1;
             this.addictions_lb.Text = "התמכרויות בעבר: כן\\לא, פירוט";
             // 
-            // general_info_tb
+            // xml_general_info_tb
             // 
-            this.general_info_tb.AcceptsReturn = true;
-            this.general_info_tb.Location = new System.Drawing.Point(516, 46);
-            this.general_info_tb.Multiline = true;
-            this.general_info_tb.Name = "general_info_tb";
-            this.general_info_tb.Size = new System.Drawing.Size(399, 155);
-            this.general_info_tb.TabIndex = 0;
-            this.general_info_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.xml_general_info_tb.AcceptsReturn = true;
+            this.xml_general_info_tb.Location = new System.Drawing.Point(516, 46);
+            this.xml_general_info_tb.Multiline = true;
+            this.xml_general_info_tb.Name = "xml_general_info_tb";
+            this.xml_general_info_tb.Size = new System.Drawing.Size(399, 155);
+            this.xml_general_info_tb.TabIndex = 0;
+            this.xml_general_info_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // mitmoded_ed_army_tab
             // 
-            this.mitmoded_ed_army_tab.Controls.Add(this.button3);
-            this.mitmoded_ed_army_tab.Controls.Add(this.button2);
-            this.mitmoded_ed_army_tab.Controls.Add(this.button1);
-            this.mitmoded_ed_army_tab.Controls.Add(this.military_tb);
+            this.mitmoded_ed_army_tab.Controls.Add(this.xml_military_tb);
             this.mitmoded_ed_army_tab.Controls.Add(this.military_lb);
             this.mitmoded_ed_army_tab.Controls.Add(this.education_lb);
             this.mitmoded_ed_army_tab.Controls.Add(this.education_dg);
@@ -655,46 +649,13 @@
             this.mitmoded_ed_army_tab.Text = "השכלה ושירות צבאי";
             this.mitmoded_ed_army_tab.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // xml_military_tb
             // 
-            this.button3.Location = new System.Drawing.Point(851, 148);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "restore";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(851, 109);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "clear";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(851, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "toXML";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // military_tb
-            // 
-            this.military_tb.Location = new System.Drawing.Point(174, 328);
-            this.military_tb.Multiline = true;
-            this.military_tb.Name = "military_tb";
-            this.military_tb.Size = new System.Drawing.Size(647, 157);
-            this.military_tb.TabIndex = 3;
+            this.xml_military_tb.Location = new System.Drawing.Point(174, 328);
+            this.xml_military_tb.Multiline = true;
+            this.xml_military_tb.Name = "xml_military_tb";
+            this.xml_military_tb.Size = new System.Drawing.Size(647, 157);
+            this.xml_military_tb.TabIndex = 3;
             // 
             // military_lb
             // 
@@ -740,10 +701,10 @@
             // mitmoded_job_tab
             // 
             this.mitmoded_job_tab.Controls.Add(this.dream_lb);
-            this.mitmoded_job_tab.Controls.Add(this.dream_tb);
-            this.mitmoded_job_tab.Controls.Add(this.reason_tb);
+            this.mitmoded_job_tab.Controls.Add(this.xml_dream_tb);
+            this.mitmoded_job_tab.Controls.Add(this.xml_reason_tb);
             this.mitmoded_job_tab.Controls.Add(this.reason_lb);
-            this.mitmoded_job_tab.Controls.Add(this.rec_activity_tb);
+            this.mitmoded_job_tab.Controls.Add(this.xml_rec_activity_tb);
             this.mitmoded_job_tab.Controls.Add(this.rec_activity_lb);
             this.mitmoded_job_tab.Controls.Add(this.employment_lb);
             this.mitmoded_job_tab.Controls.Add(this.employment_dg);
@@ -764,21 +725,21 @@
             this.dream_lb.TabIndex = 16;
             this.dream_lb.Text = "מהו החלום שלך בתחום התעסוקה?";
             // 
-            // dream_tb
+            // xml_dream_tb
             // 
-            this.dream_tb.Location = new System.Drawing.Point(83, 459);
-            this.dream_tb.Multiline = true;
-            this.dream_tb.Name = "dream_tb";
-            this.dream_tb.Size = new System.Drawing.Size(394, 118);
-            this.dream_tb.TabIndex = 15;
+            this.xml_dream_tb.Location = new System.Drawing.Point(83, 459);
+            this.xml_dream_tb.Multiline = true;
+            this.xml_dream_tb.Name = "xml_dream_tb";
+            this.xml_dream_tb.Size = new System.Drawing.Size(394, 118);
+            this.xml_dream_tb.TabIndex = 15;
             // 
-            // reason_tb
+            // xml_reason_tb
             // 
-            this.reason_tb.Location = new System.Drawing.Point(562, 459);
-            this.reason_tb.Multiline = true;
-            this.reason_tb.Name = "reason_tb";
-            this.reason_tb.Size = new System.Drawing.Size(371, 118);
-            this.reason_tb.TabIndex = 14;
+            this.xml_reason_tb.Location = new System.Drawing.Point(562, 459);
+            this.xml_reason_tb.Multiline = true;
+            this.xml_reason_tb.Name = "xml_reason_tb";
+            this.xml_reason_tb.Size = new System.Drawing.Size(371, 118);
+            this.xml_reason_tb.TabIndex = 14;
             // 
             // reason_lb
             // 
@@ -789,13 +750,13 @@
             this.reason_lb.TabIndex = 13;
             this.reason_lb.Text = "מה הסיבה שבגללה עכשיו אתה רוצה להשתלב בשוק העבודה?";
             // 
-            // rec_activity_tb
+            // xml_rec_activity_tb
             // 
-            this.rec_activity_tb.Location = new System.Drawing.Point(286, 323);
-            this.rec_activity_tb.Multiline = true;
-            this.rec_activity_tb.Name = "rec_activity_tb";
-            this.rec_activity_tb.Size = new System.Drawing.Size(647, 96);
-            this.rec_activity_tb.TabIndex = 4;
+            this.xml_rec_activity_tb.Location = new System.Drawing.Point(286, 323);
+            this.xml_rec_activity_tb.Multiline = true;
+            this.xml_rec_activity_tb.Name = "xml_rec_activity_tb";
+            this.xml_rec_activity_tb.Size = new System.Drawing.Size(647, 96);
+            this.xml_rec_activity_tb.TabIndex = 4;
             // 
             // rec_activity_lb
             // 
@@ -846,27 +807,27 @@
             // 
             // mitmoded_job2_tab
             // 
-            this.mitmoded_job2_tab.Controls.Add(this.job_free_txt_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_job_free_txt_tb);
             this.mitmoded_job2_tab.Controls.Add(this.job_free_txt_lb);
-            this.mitmoded_job2_tab.Controls.Add(this.job_sal_expc_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_job_sal_expc_tb);
             this.mitmoded_job2_tab.Controls.Add(this.job_sal_expc_lb);
-            this.mitmoded_job2_tab.Controls.Add(this.job_hours_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_job_hours_tb);
             this.mitmoded_job2_tab.Controls.Add(this.job_hours_lb);
-            this.mitmoded_job2_tab.Controls.Add(this.job_max_hours_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_job_max_hours_tb);
             this.mitmoded_job2_tab.Controls.Add(this.job_max_hours_lb);
-            this.mitmoded_job2_tab.Controls.Add(this.job_day_off_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_job_day_off_tb);
             this.mitmoded_job2_tab.Controls.Add(this.day_off_lb);
-            this.mitmoded_job2_tab.Controls.Add(this.job_days_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_job_days_tb);
             this.mitmoded_job2_tab.Controls.Add(this.job_days_lb);
             this.mitmoded_job2_tab.Controls.Add(this.job_size_lb);
             this.mitmoded_job2_tab.Controls.Add(this.job_type_lb);
-            this.mitmoded_job2_tab.Controls.Add(this.skills_improve_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_skills_improve_tb);
             this.mitmoded_job2_tab.Controls.Add(this.skills_improve_lb);
-            this.mitmoded_job2_tab.Controls.Add(this.dream_todo_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_dream_todo_tb);
             this.mitmoded_job2_tab.Controls.Add(this.dream_todo_lb);
-            this.mitmoded_job2_tab.Controls.Add(this.weakness_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_weakness_tb);
             this.mitmoded_job2_tab.Controls.Add(this.weakness_lb);
-            this.mitmoded_job2_tab.Controls.Add(this.strengths_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_strengths_tb);
             this.mitmoded_job2_tab.Controls.Add(this.strengths_lb);
             this.mitmoded_job2_tab.Controls.Add(this.expectations_lb);
             this.mitmoded_job2_tab.Location = new System.Drawing.Point(4, 22);
@@ -877,13 +838,13 @@
             this.mitmoded_job2_tab.Text = "עבודה 2";
             this.mitmoded_job2_tab.UseVisualStyleBackColor = true;
             // 
-            // job_free_txt_tb
+            // xml_job_free_txt_tb
             // 
-            this.job_free_txt_tb.Location = new System.Drawing.Point(186, 544);
-            this.job_free_txt_tb.Multiline = true;
-            this.job_free_txt_tb.Name = "job_free_txt_tb";
-            this.job_free_txt_tb.Size = new System.Drawing.Size(754, 30);
-            this.job_free_txt_tb.TabIndex = 25;
+            this.xml_job_free_txt_tb.Location = new System.Drawing.Point(186, 544);
+            this.xml_job_free_txt_tb.Multiline = true;
+            this.xml_job_free_txt_tb.Name = "xml_job_free_txt_tb";
+            this.xml_job_free_txt_tb.Size = new System.Drawing.Size(754, 30);
+            this.xml_job_free_txt_tb.TabIndex = 25;
             // 
             // job_free_txt_lb
             // 
@@ -895,13 +856,13 @@
             this.job_free_txt_lb.Text = "תחומים לשיפור במסגרת העבודה או שהוו קושי בעבר (התמדה, הגעה בזמן, יכולת לקבל ביקור" +
     "ת וכו\'): ";
             // 
-            // job_sal_expc_tb
+            // xml_job_sal_expc_tb
             // 
-            this.job_sal_expc_tb.Location = new System.Drawing.Point(337, 480);
-            this.job_sal_expc_tb.Multiline = true;
-            this.job_sal_expc_tb.Name = "job_sal_expc_tb";
-            this.job_sal_expc_tb.Size = new System.Drawing.Size(185, 30);
-            this.job_sal_expc_tb.TabIndex = 23;
+            this.xml_job_sal_expc_tb.Location = new System.Drawing.Point(337, 480);
+            this.xml_job_sal_expc_tb.Multiline = true;
+            this.xml_job_sal_expc_tb.Name = "xml_job_sal_expc_tb";
+            this.xml_job_sal_expc_tb.Size = new System.Drawing.Size(185, 30);
+            this.xml_job_sal_expc_tb.TabIndex = 23;
             // 
             // job_sal_expc_lb
             // 
@@ -912,13 +873,13 @@
             this.job_sal_expc_lb.TabIndex = 22;
             this.job_sal_expc_lb.Text = "ציפיות מהעבודה";
             // 
-            // job_hours_tb
+            // xml_job_hours_tb
             // 
-            this.job_hours_tb.Location = new System.Drawing.Point(643, 480);
-            this.job_hours_tb.Multiline = true;
-            this.job_hours_tb.Name = "job_hours_tb";
-            this.job_hours_tb.Size = new System.Drawing.Size(185, 30);
-            this.job_hours_tb.TabIndex = 21;
+            this.xml_job_hours_tb.Location = new System.Drawing.Point(643, 480);
+            this.xml_job_hours_tb.Multiline = true;
+            this.xml_job_hours_tb.Name = "xml_job_hours_tb";
+            this.xml_job_hours_tb.Size = new System.Drawing.Size(185, 30);
+            this.xml_job_hours_tb.TabIndex = 21;
             // 
             // job_hours_lb
             // 
@@ -929,12 +890,12 @@
             this.job_hours_lb.TabIndex = 20;
             this.job_hours_lb.Text = "שעות עבודה רצויות";
             // 
-            // job_max_hours_tb
+            // xml_job_max_hours_tb
             // 
-            this.job_max_hours_tb.Location = new System.Drawing.Point(74, 437);
-            this.job_max_hours_tb.Name = "job_max_hours_tb";
-            this.job_max_hours_tb.Size = new System.Drawing.Size(146, 20);
-            this.job_max_hours_tb.TabIndex = 19;
+            this.xml_job_max_hours_tb.Location = new System.Drawing.Point(74, 437);
+            this.xml_job_max_hours_tb.Name = "xml_job_max_hours_tb";
+            this.xml_job_max_hours_tb.Size = new System.Drawing.Size(146, 20);
+            this.xml_job_max_hours_tb.TabIndex = 19;
             // 
             // job_max_hours_lb
             // 
@@ -944,12 +905,12 @@
             this.job_max_hours_lb.TabIndex = 18;
             this.job_max_hours_lb.Text = "מס\' שעות מקסימלי ביום";
             // 
-            // job_day_off_tb
+            // xml_job_day_off_tb
             // 
-            this.job_day_off_tb.Location = new System.Drawing.Point(337, 440);
-            this.job_day_off_tb.Name = "job_day_off_tb";
-            this.job_day_off_tb.Size = new System.Drawing.Size(185, 20);
-            this.job_day_off_tb.TabIndex = 17;
+            this.xml_job_day_off_tb.Location = new System.Drawing.Point(337, 440);
+            this.xml_job_day_off_tb.Name = "xml_job_day_off_tb";
+            this.xml_job_day_off_tb.Size = new System.Drawing.Size(185, 20);
+            this.xml_job_day_off_tb.TabIndex = 17;
             // 
             // day_off_lb
             // 
@@ -960,12 +921,12 @@
             this.day_off_lb.TabIndex = 16;
             this.day_off_lb.Text = "יום חופשי קבוע";
             // 
-            // job_days_tb
+            // xml_job_days_tb
             // 
-            this.job_days_tb.Location = new System.Drawing.Point(643, 437);
-            this.job_days_tb.Name = "job_days_tb";
-            this.job_days_tb.Size = new System.Drawing.Size(185, 20);
-            this.job_days_tb.TabIndex = 15;
+            this.xml_job_days_tb.Location = new System.Drawing.Point(643, 437);
+            this.xml_job_days_tb.Name = "xml_job_days_tb";
+            this.xml_job_days_tb.Size = new System.Drawing.Size(185, 20);
+            this.xml_job_days_tb.TabIndex = 15;
             // 
             // job_days_lb
             // 
@@ -994,13 +955,13 @@
             this.job_type_lb.TabIndex = 12;
             this.job_type_lb.Text = "סוג העבודה המבוקש – העדפות למקום עבודה:";
             // 
-            // skills_improve_tb
+            // xml_skills_improve_tb
             // 
-            this.skills_improve_tb.Location = new System.Drawing.Point(74, 240);
-            this.skills_improve_tb.Multiline = true;
-            this.skills_improve_tb.Name = "skills_improve_tb";
-            this.skills_improve_tb.Size = new System.Drawing.Size(394, 113);
-            this.skills_improve_tb.TabIndex = 11;
+            this.xml_skills_improve_tb.Location = new System.Drawing.Point(74, 240);
+            this.xml_skills_improve_tb.Multiline = true;
+            this.xml_skills_improve_tb.Name = "xml_skills_improve_tb";
+            this.xml_skills_improve_tb.Size = new System.Drawing.Size(394, 113);
+            this.xml_skills_improve_tb.TabIndex = 11;
             // 
             // skills_improve_lb
             // 
@@ -1011,13 +972,13 @@
             this.skills_improve_lb.TabIndex = 10;
             this.skills_improve_lb.Text = "האם יש כישורים נוספים שהיית רוצה לפתח/לרכוש כדי להיכנס לעולם העבודה? ";
             // 
-            // dream_todo_tb
+            // xml_dream_todo_tb
             // 
-            this.dream_todo_tb.Location = new System.Drawing.Point(74, 93);
-            this.dream_todo_tb.Multiline = true;
-            this.dream_todo_tb.Name = "dream_todo_tb";
-            this.dream_todo_tb.Size = new System.Drawing.Size(394, 111);
-            this.dream_todo_tb.TabIndex = 9;
+            this.xml_dream_todo_tb.Location = new System.Drawing.Point(74, 93);
+            this.xml_dream_todo_tb.Multiline = true;
+            this.xml_dream_todo_tb.Name = "xml_dream_todo_tb";
+            this.xml_dream_todo_tb.Size = new System.Drawing.Size(394, 111);
+            this.xml_dream_todo_tb.TabIndex = 9;
             // 
             // dream_todo_lb
             // 
@@ -1028,13 +989,13 @@
             this.dream_todo_lb.TabIndex = 8;
             this.dream_todo_lb.Text = "בכדי להגשים את החלום שלך, מה צריך לעשות לדעתך?";
             // 
-            // weakness_tb
+            // xml_weakness_tb
             // 
-            this.weakness_tb.Location = new System.Drawing.Point(553, 240);
-            this.weakness_tb.Multiline = true;
-            this.weakness_tb.Name = "weakness_tb";
-            this.weakness_tb.Size = new System.Drawing.Size(371, 113);
-            this.weakness_tb.TabIndex = 6;
+            this.xml_weakness_tb.Location = new System.Drawing.Point(553, 240);
+            this.xml_weakness_tb.Multiline = true;
+            this.xml_weakness_tb.Name = "xml_weakness_tb";
+            this.xml_weakness_tb.Size = new System.Drawing.Size(371, 113);
+            this.xml_weakness_tb.TabIndex = 6;
             // 
             // weakness_lb
             // 
@@ -1045,13 +1006,13 @@
             this.weakness_lb.TabIndex = 5;
             this.weakness_lb.Text = "איפה יותר קשה לך? (נקודות חולשה)";
             // 
-            // strengths_tb
+            // xml_strengths_tb
             // 
-            this.strengths_tb.Location = new System.Drawing.Point(553, 93);
-            this.strengths_tb.Multiline = true;
-            this.strengths_tb.Name = "strengths_tb";
-            this.strengths_tb.Size = new System.Drawing.Size(371, 111);
-            this.strengths_tb.TabIndex = 4;
+            this.xml_strengths_tb.Location = new System.Drawing.Point(553, 93);
+            this.xml_strengths_tb.Multiline = true;
+            this.xml_strengths_tb.Name = "xml_strengths_tb";
+            this.xml_strengths_tb.Size = new System.Drawing.Size(371, 111);
+            this.xml_strengths_tb.TabIndex = 4;
             // 
             // strengths_lb
             // 
@@ -1116,14 +1077,14 @@
             // 
             // mitmoded_job4_tab
             // 
-            this.mitmoded_job4_tab.Controls.Add(this.job_first_targets_tb);
+            this.mitmoded_job4_tab.Controls.Add(this.xml_job_first_targets_tb);
             this.mitmoded_job4_tab.Controls.Add(this.job_first_targets_lb);
             this.mitmoded_job4_tab.Controls.Add(this.job_initial_lb);
-            this.mitmoded_job4_tab.Controls.Add(this.textBox3);
+            this.mitmoded_job4_tab.Controls.Add(this.xml_first_impression);
             this.mitmoded_job4_tab.Controls.Add(this.summary_lb);
-            this.mitmoded_job4_tab.Controls.Add(this.textBox2);
+            this.mitmoded_job4_tab.Controls.Add(this.xml_additional_job_info);
             this.mitmoded_job4_tab.Controls.Add(this.job_important_lb);
-            this.mitmoded_job4_tab.Controls.Add(this.job_target_tb);
+            this.mitmoded_job4_tab.Controls.Add(this.xml_job_target_tb);
             this.mitmoded_job4_tab.Controls.Add(this.job_target_lb);
             this.mitmoded_job4_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job4_tab.Name = "mitmoded_job4_tab";
@@ -1133,14 +1094,14 @@
             this.mitmoded_job4_tab.Text = "עבודה 4";
             this.mitmoded_job4_tab.UseVisualStyleBackColor = true;
             // 
-            // job_first_targets_tb
+            // xml_job_first_targets_tb
             // 
-            this.job_first_targets_tb.Location = new System.Drawing.Point(193, 217);
-            this.job_first_targets_tb.Multiline = true;
-            this.job_first_targets_tb.Name = "job_first_targets_tb";
-            this.job_first_targets_tb.Size = new System.Drawing.Size(538, 68);
-            this.job_first_targets_tb.TabIndex = 8;
-            this.job_first_targets_tb.Text = "1. \r\n2. \r\n3. ";
+            this.xml_job_first_targets_tb.Location = new System.Drawing.Point(193, 217);
+            this.xml_job_first_targets_tb.Multiline = true;
+            this.xml_job_first_targets_tb.Name = "xml_job_first_targets_tb";
+            this.xml_job_first_targets_tb.Size = new System.Drawing.Size(538, 68);
+            this.xml_job_first_targets_tb.TabIndex = 8;
+            this.xml_job_first_targets_tb.Text = "1. \r\n2. \r\n3. ";
             // 
             // job_first_targets_lb
             // 
@@ -1160,12 +1121,12 @@
             this.job_initial_lb.TabIndex = 6;
             this.job_initial_lb.Text = "הערכה ראשונית של המתמודד";
             // 
-            // textBox3
+            // xml_first_impression
             // 
-            this.textBox3.Location = new System.Drawing.Point(193, 168);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(538, 20);
-            this.textBox3.TabIndex = 5;
+            this.xml_first_impression.Location = new System.Drawing.Point(193, 168);
+            this.xml_first_impression.Name = "xml_first_impression";
+            this.xml_first_impression.Size = new System.Drawing.Size(538, 20);
+            this.xml_first_impression.TabIndex = 5;
             // 
             // summary_lb
             // 
@@ -1176,12 +1137,12 @@
             this.summary_lb.TabIndex = 4;
             this.summary_lb.Text = "סיכום";
             // 
-            // textBox2
+            // xml_additional_job_info
             // 
-            this.textBox2.Location = new System.Drawing.Point(193, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(538, 20);
-            this.textBox2.TabIndex = 3;
+            this.xml_additional_job_info.Location = new System.Drawing.Point(193, 84);
+            this.xml_additional_job_info.Name = "xml_additional_job_info";
+            this.xml_additional_job_info.Size = new System.Drawing.Size(538, 20);
+            this.xml_additional_job_info.TabIndex = 3;
             // 
             // job_important_lb
             // 
@@ -1191,12 +1152,12 @@
             this.job_important_lb.TabIndex = 2;
             this.job_important_lb.Text = "דברים נוספים שחשוב שנדע, לעבודה המשותפת";
             // 
-            // job_target_tb
+            // xml_job_target_tb
             // 
-            this.job_target_tb.Location = new System.Drawing.Point(193, 43);
-            this.job_target_tb.Name = "job_target_tb";
-            this.job_target_tb.Size = new System.Drawing.Size(538, 20);
-            this.job_target_tb.TabIndex = 1;
+            this.xml_job_target_tb.Location = new System.Drawing.Point(193, 43);
+            this.xml_job_target_tb.Name = "xml_job_target_tb";
+            this.xml_job_target_tb.Size = new System.Drawing.Size(538, 20);
+            this.xml_job_target_tb.TabIndex = 1;
             // 
             // job_target_lb
             // 
@@ -1290,54 +1251,54 @@
         private System.Windows.Forms.DateTimePicker rehab_commitee_dtp;
         private System.Windows.Forms.Label rehab_ok_lb;
         private System.Windows.Forms.Label addictions_lb;
-        private System.Windows.Forms.TextBox general_info_tb;
-        private System.Windows.Forms.TextBox homicidal_tb;
+        private System.Windows.Forms.TextBox xml_general_info_tb;
+        private System.Windows.Forms.TextBox xml_homicidal_tb;
         private System.Windows.Forms.Label homicidal_lb;
-        private System.Windows.Forms.TextBox violence_tb;
+        private System.Windows.Forms.TextBox xml_violence_tb;
         private System.Windows.Forms.Label violence_lb;
-        private System.Windows.Forms.TextBox addictions_tb;
+        private System.Windows.Forms.TextBox xml_addictions_tb;
         private System.Windows.Forms.Label general_info_lb;
         private System.Windows.Forms.Label medical_issues_lb;
-        private System.Windows.Forms.TextBox medical_issues_tb;
-        private System.Windows.Forms.TextBox meds_tb;
+        private System.Windows.Forms.TextBox xml_medical_issues_tb;
+        private System.Windows.Forms.TextBox xml_meds_tb;
         private System.Windows.Forms.Label meds_lb;
         private System.Windows.Forms.Label psych_track_lb;
-        private System.Windows.Forms.TextBox psych_track_tb;
-        private System.Windows.Forms.TextBox military_tb;
+        private System.Windows.Forms.TextBox xml_psych_track_tb;
+        private System.Windows.Forms.TextBox xml_military_tb;
         private System.Windows.Forms.Label military_lb;
         private System.Windows.Forms.Label education_lb;
         private System.Windows.Forms.TabPage mitmoded_job_tab;
         private System.Windows.Forms.DataGridView employment_dg;
         private System.Windows.Forms.Label rec_activity_lb;
         private System.Windows.Forms.Label employment_lb;
-        private System.Windows.Forms.TextBox rec_activity_tb;
+        private System.Windows.Forms.TextBox xml_rec_activity_tb;
         private System.Windows.Forms.TabPage mitmoded_job2_tab;
         private System.Windows.Forms.Label expectations_lb;
-        private System.Windows.Forms.TextBox strengths_tb;
+        private System.Windows.Forms.TextBox xml_strengths_tb;
         private System.Windows.Forms.Label strengths_lb;
-        private System.Windows.Forms.TextBox weakness_tb;
+        private System.Windows.Forms.TextBox xml_weakness_tb;
         private System.Windows.Forms.Label weakness_lb;
-        private System.Windows.Forms.TextBox skills_improve_tb;
+        private System.Windows.Forms.TextBox xml_skills_improve_tb;
         private System.Windows.Forms.Label skills_improve_lb;
-        private System.Windows.Forms.TextBox dream_todo_tb;
+        private System.Windows.Forms.TextBox xml_dream_todo_tb;
         private System.Windows.Forms.Label dream_todo_lb;
         private System.Windows.Forms.TabPage mitmoded_job3_tab;
         private System.Windows.Forms.Label dream_lb;
-        private System.Windows.Forms.TextBox dream_tb;
-        private System.Windows.Forms.TextBox reason_tb;
+        private System.Windows.Forms.TextBox xml_dream_tb;
+        private System.Windows.Forms.TextBox xml_reason_tb;
         private System.Windows.Forms.Label reason_lb;
         private System.Windows.Forms.Label job_type_lb;
-        private System.Windows.Forms.TextBox job_free_txt_tb;
+        private System.Windows.Forms.TextBox xml_job_free_txt_tb;
         private System.Windows.Forms.Label job_free_txt_lb;
-        private System.Windows.Forms.TextBox job_sal_expc_tb;
+        private System.Windows.Forms.TextBox xml_job_sal_expc_tb;
         private System.Windows.Forms.Label job_sal_expc_lb;
-        private System.Windows.Forms.TextBox job_hours_tb;
+        private System.Windows.Forms.TextBox xml_job_hours_tb;
         private System.Windows.Forms.Label job_hours_lb;
-        private System.Windows.Forms.TextBox job_max_hours_tb;
+        private System.Windows.Forms.TextBox xml_job_max_hours_tb;
         private System.Windows.Forms.Label job_max_hours_lb;
-        private System.Windows.Forms.TextBox job_day_off_tb;
+        private System.Windows.Forms.TextBox xml_job_day_off_tb;
         private System.Windows.Forms.Label day_off_lb;
-        private System.Windows.Forms.TextBox job_days_tb;
+        private System.Windows.Forms.TextBox xml_job_days_tb;
         private System.Windows.Forms.Label job_days_lb;
         private System.Windows.Forms.Label job_size_lb;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -1345,22 +1306,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn skills_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn notes_col;
         private System.Windows.Forms.TabPage mitmoded_job4_tab;
-        private System.Windows.Forms.TextBox job_first_targets_tb;
+        private System.Windows.Forms.TextBox xml_job_first_targets_tb;
         private System.Windows.Forms.Label job_first_targets_lb;
         private System.Windows.Forms.Label job_initial_lb;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox xml_first_impression;
         private System.Windows.Forms.Label summary_lb;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox xml_additional_job_info;
         private System.Windows.Forms.Label job_important_lb;
-        private System.Windows.Forms.TextBox job_target_tb;
+        private System.Windows.Forms.TextBox xml_job_target_tb;
         private System.Windows.Forms.Label job_target_lb;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn employment_year;
         private System.Windows.Forms.DataGridViewTextBoxColumn employment_place;
         private System.Windows.Forms.DataGridViewTextBoxColumn employment_roles;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn education_dg_year_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn education_dg_edu_col;
         private System.Windows.Forms.DataGridView education_dg;

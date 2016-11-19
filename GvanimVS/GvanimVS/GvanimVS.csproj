@@ -131,6 +131,7 @@
     <Compile Include="SelectMimoded.Designer.cs">
       <DependentUpon>SelectMimoded.cs</DependentUpon>
     </Compile>
+    <Compile Include="SerializableDictionary.cs" />
     <Compile Include="SQLmethods.cs" />
     <Compile Include="Tools.cs" />
     <EmbeddedResource Include="AddMeeting.resx">

@@ -91,21 +91,7 @@ namespace GvanimVS
                 return null;
             }
         }
-        public static System.IO.MemoryStream SerializeToStream(object o)
-        {
-            System.IO.MemoryStream stream = new System.IO.MemoryStream();
-            System.Runtime.Serialization.IFormatter formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-            formatter.Serialize(stream, o);
-            return stream;
-        }
-        public static object DeserializeFromStream(System.IO.MemoryStream stream)
-        {
-            System.Runtime.Serialization.IFormatter formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-            stream.Seek(0, System.IO.SeekOrigin.Begin);
-            object o = formatter.Deserialize(stream);
-            return o;
-        }
-
+        
         public static void XmlToDataGrid(string educationXML, DataGridView dgv)
         {
             DataTable dt2 = DeserializeXML<DataTable>(educationXML);
@@ -115,15 +101,13 @@ namespace GvanimVS
                 col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
             }
             dgv.DataSource = dt2;
-        }
-        
+        }       
         public static T DeserializeXML<T>(this string toDeserialize)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
             StringReader textReader = new StringReader(toDeserialize);
             return (T)xmlSerializer.Deserialize(textReader);
         }
-
         public static string SerializeXML<T>(this T toSerialize)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
