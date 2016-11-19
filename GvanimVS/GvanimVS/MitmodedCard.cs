@@ -15,7 +15,8 @@ namespace GvanimVS
         private byte[] imgByte;
         private bool imgChanged;
         private string ID;
-        private DataTable MainDT, educationDT, empHistoryDT;
+        private DataTable MainDT;
+        //private DataTable educationDT, empHistoryDT;
         private SerializableDictionary<string, SerializableDictionary<string, string>> xml_organizer;
 
 
@@ -44,6 +45,55 @@ namespace GvanimVS
              */
             education_dg.AutoGenerateColumns = false;
             employment_dg.AutoGenerateColumns = false;
+            setJobPreferencesDGV();
+        }
+
+        private void setJobPreferencesDGV()
+        {
+            DataTable PrefsDT = new DataTable();
+            job_preferences_dg.DataSource = PrefsDT;
+            initJobCols(PrefsDT);
+            initJobRows(PrefsDT);
+
+        }
+
+        private void initJobRows(DataTable prefsDT)
+        {
+            //TODO
+            /*
+             * 1. \n doesn't work
+             * 2. fix "fill row"
+             */
+            string[] row = new string[] 
+            { "מקום דינאמי / רועש / שקט \n עבודה בחוץ / בפנים ",
+                "עבודות ניקיון כן / לא \n עבודה עם חומרים ומים כן /לא \n בעלי חיים כן / לא \n צמחייה כן / לא",
+                "מכירות / שירות לקוחות כן / לא \n טלפונית / ישירות \n מחשב / בלי מחשב"
+            };
+            
+            prefsDT.Rows.Add(row);
+        }
+
+        private void initJobCols(DataTable PrefsDT)
+        {
+
+            DataColumn c1 = new DataColumn("location");
+            c1.Caption = "מקום העבודה וסביבתו";
+
+            DataColumn c2 = new DataColumn("content");
+            c2.Caption = "תכני העבודה";
+
+            DataColumn c3 = new DataColumn("type");
+            c3.Caption = "סוג העבודה";
+
+            PrefsDT.Columns.Add(c1);
+            PrefsDT.Columns.Add(c2);
+            PrefsDT.Columns.Add(c3);
+
+            
+            foreach (DataGridViewColumn col in job_preferences_dg.Columns)
+            {
+                col.HeaderText = PrefsDT.Columns[col.HeaderText].Caption;
+            }
         }
 
         private void initFieldsFromDT(DataTable dt)
@@ -64,6 +114,7 @@ namespace GvanimVS
                 address_tb.Text = dr["streetAddress"].ToString();
                 phone1_tb.Text = dr["phone1"].ToString();
                 phone2_tb.Text = dr["phone2"].ToString();
+                coordinator_id_tb.Text = dr["coordinatorID"].ToString();
 
                 if (dr["photo"] != null)
                 {
@@ -147,10 +198,10 @@ namespace GvanimVS
                     imgByte = imageToByteArray(profile_pb.Image);
 
                 //Serialize gridviews: grid -> data table -> serialized ->XML
-                educationDT = Tools.GetContentAsDataTable(education_dg, true);
+                DataTable educationDT = Tools.GetContentAsDataTable(education_dg, true);
                 string empEducationXML = Tools.SerializeXML<DataTable>(educationDT);
 
-                empHistoryDT = Tools.GetContentAsDataTable(employment_dg, true);
+                DataTable empHistoryDT = Tools.GetContentAsDataTable(employment_dg, true);
                 string empHistoryXML = Tools.SerializeXML(empHistoryDT);
 
                 //Serialize TextBoxes to xml string
@@ -314,10 +365,9 @@ namespace GvanimVS
 
         private void MitmodedCard_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-
-
+        
     }
 }

@@ -120,7 +120,7 @@
             this.strengths_lb = new System.Windows.Forms.Label();
             this.expectations_lb = new System.Windows.Forms.Label();
             this.mitmoded_job3_tab = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.job_preferences_dg = new System.Windows.Forms.DataGridView();
             this.skills_dgv = new System.Windows.Forms.DataGridView();
             this.skills_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notes_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -145,7 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.employment_dg)).BeginInit();
             this.mitmoded_job2_tab.SuspendLayout();
             this.mitmoded_job3_tab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.job_preferences_dg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skills_dgv)).BeginInit();
             this.mitmoded_job4_tab.SuspendLayout();
             this.SuspendLayout();
@@ -1034,7 +1034,7 @@
             // 
             // mitmoded_job3_tab
             // 
-            this.mitmoded_job3_tab.Controls.Add(this.dataGridView2);
+            this.mitmoded_job3_tab.Controls.Add(this.job_preferences_dg);
             this.mitmoded_job3_tab.Controls.Add(this.skills_dgv);
             this.mitmoded_job3_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job3_tab.Name = "mitmoded_job3_tab";
@@ -1044,16 +1044,18 @@
             this.mitmoded_job3_tab.Text = "עבודה 3";
             this.mitmoded_job3_tab.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // job_preferences_dg
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(155, 287);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(695, 215);
-            this.dataGridView2.TabIndex = 1;
+            this.job_preferences_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.job_preferences_dg.Location = new System.Drawing.Point(155, 287);
+            this.job_preferences_dg.Name = "job_preferences_dg";
+            this.job_preferences_dg.Size = new System.Drawing.Size(695, 215);
+            this.job_preferences_dg.TabIndex = 1;
             // 
             // skills_dgv
             // 
+            this.skills_dgv.AllowUserToAddRows = false;
+            this.skills_dgv.AllowUserToDeleteRows = false;
             this.skills_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.skills_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.skills_col,
@@ -1205,7 +1207,7 @@
             this.mitmoded_job2_tab.ResumeLayout(false);
             this.mitmoded_job2_tab.PerformLayout();
             this.mitmoded_job3_tab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.job_preferences_dg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skills_dgv)).EndInit();
             this.mitmoded_job4_tab.ResumeLayout(false);
             this.mitmoded_job4_tab.PerformLayout();
@@ -1301,7 +1303,7 @@
         private System.Windows.Forms.TextBox xml_job_days_tb;
         private System.Windows.Forms.Label job_days_lb;
         private System.Windows.Forms.Label job_size_lb;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView job_preferences_dg;
         private System.Windows.Forms.DataGridView skills_dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn skills_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn notes_col;
