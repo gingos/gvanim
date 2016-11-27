@@ -22,15 +22,18 @@ namespace GvanimVS
         {
             InitializeComponent();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "ID, firstName, lastName, city", cmd, da);
-            dataGridView1.DataSource = dt;
+            mitmoded_dgv.DataSource = dt;
             changeDataHeadersToHebrew();
         }
         public SelectMimoded(SqlConnection con, string coordinatorID) : base(con)
         {
             InitializeComponent();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "ID, firstName, lastName, city", "coordinatorID", coordinatorID , cmd, da);
-            dataGridView1.DataSource = dt;
+            mitmoded_dgv.DataSource = dt;
+            mitmoded_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            mitmoded_dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             changeDataHeadersToHebrew();
+
         }
 
 
@@ -44,12 +47,12 @@ namespace GvanimVS
         {
             //TOOD:
             // weird bug, this function fails when sorting
-            string first = dataGridView1["firstName", e.RowIndex].Value.ToString();
-            string last = dataGridView1["lastName", e.RowIndex].Value.ToString();
+            string first = mitmoded_dgv["firstName", e.RowIndex].Value.ToString();
+            string last = mitmoded_dgv["lastName", e.RowIndex].Value.ToString();
             DialogResult dialogResult = MessageBox.Show("האם ברצונך לערוך את" + "\n" +first +" " + last, "אישור בחירת מתמודד", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
             if (dialogResult == DialogResult.Yes)
             {
-                ID = dataGridView1["ID", e.RowIndex].Value.ToString();
+                ID = mitmoded_dgv["ID", e.RowIndex].Value.ToString();
                 Console.WriteLine("SelectMitmoded-->click--> ID = " + ID);
                 this.Hide();
                 using (var mit = new Mitmoded(con, ID))
@@ -71,10 +74,10 @@ namespace GvanimVS
         }
         private void changeDataHeadersToHebrew()
         {
-            dataGridView1.Columns["ID"].HeaderCell.Value = "תעודת זהות";
-            dataGridView1.Columns["firstName"].HeaderCell.Value = "שם פרטי";
-            dataGridView1.Columns["lastName"].HeaderCell.Value = "שם משפחה";
-            dataGridView1.Columns["city"].HeaderCell.Value = "עיר";
+            mitmoded_dgv.Columns["ID"].HeaderCell.Value = "תעודת זהות";
+            mitmoded_dgv.Columns["firstName"].HeaderCell.Value = "שם פרטי";
+            mitmoded_dgv.Columns["lastName"].HeaderCell.Value = "שם משפחה";
+            mitmoded_dgv.Columns["city"].HeaderCell.Value = "עיר";
         }
 
         private void search_bt_Click(object sender, EventArgs e)
@@ -83,7 +86,7 @@ namespace GvanimVS
             {
                 DataTable dt = (SQLmethods.searchUsersInTable(SQLmethods.MITMODED, ID_tb.Text, firstName_tb.Text,
                     lastName_tb.Text, city_tb.Text, cmd, da));
-                dataGridView1.DataSource = dt;
+                mitmoded_dgv.DataSource = dt;
             }
         }
         private bool verifyFields()

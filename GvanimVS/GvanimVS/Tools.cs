@@ -92,9 +92,9 @@ namespace GvanimVS
             }
         }
         
-        public static void XmlToDataGrid(string educationXML, DataGridView dgv)
+        public static void XmlToDataGrid(string XMLstring, DataGridView dgv)
         {
-            DataTable dt2 = DeserializeXML<DataTable>(educationXML);
+            DataTable dt2 = DeserializeXML<DataTable>(XMLstring);
             foreach (DataGridViewColumn col in dgv.Columns)
             {
 

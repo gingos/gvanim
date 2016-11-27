@@ -120,7 +120,7 @@
             this.strengths_lb = new System.Windows.Forms.Label();
             this.expectations_lb = new System.Windows.Forms.Label();
             this.mitmoded_job3_tab = new System.Windows.Forms.TabPage();
-            this.job_preferences_dg = new System.Windows.Forms.DataGridView();
+            this.job_preferences_dgv = new System.Windows.Forms.DataGridView();
             this.skills_dgv = new System.Windows.Forms.DataGridView();
             this.skills_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notes_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -145,7 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.employment_dg)).BeginInit();
             this.mitmoded_job2_tab.SuspendLayout();
             this.mitmoded_job3_tab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.job_preferences_dg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.job_preferences_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skills_dgv)).BeginInit();
             this.mitmoded_job4_tab.SuspendLayout();
             this.SuspendLayout();
@@ -305,7 +305,7 @@
             this.cancel_bt.Name = "cancel_bt";
             this.cancel_bt.Size = new System.Drawing.Size(75, 23);
             this.cancel_bt.TabIndex = 19;
-            this.cancel_bt.Text = "צא";
+            this.cancel_bt.Text = "סגור";
             this.cancel_bt.UseVisualStyleBackColor = true;
             this.cancel_bt.Click += new System.EventHandler(this.cancel_bt_Click);
             // 
@@ -1034,7 +1034,7 @@
             // 
             // mitmoded_job3_tab
             // 
-            this.mitmoded_job3_tab.Controls.Add(this.job_preferences_dg);
+            this.mitmoded_job3_tab.Controls.Add(this.job_preferences_dgv);
             this.mitmoded_job3_tab.Controls.Add(this.skills_dgv);
             this.mitmoded_job3_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job3_tab.Name = "mitmoded_job3_tab";
@@ -1044,25 +1044,28 @@
             this.mitmoded_job3_tab.Text = "עבודה 3";
             this.mitmoded_job3_tab.UseVisualStyleBackColor = true;
             // 
-            // job_preferences_dg
+            // job_preferences_dgv
             // 
-            this.job_preferences_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.job_preferences_dg.Location = new System.Drawing.Point(155, 287);
-            this.job_preferences_dg.Name = "job_preferences_dg";
-            this.job_preferences_dg.Size = new System.Drawing.Size(695, 215);
-            this.job_preferences_dg.TabIndex = 1;
+            this.job_preferences_dgv.AllowUserToDeleteRows = false;
+            this.job_preferences_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.job_preferences_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.job_preferences_dgv.Location = new System.Drawing.Point(84, 292);
+            this.job_preferences_dgv.Name = "job_preferences_dgv";
+            this.job_preferences_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.job_preferences_dgv.Size = new System.Drawing.Size(837, 215);
+            this.job_preferences_dgv.TabIndex = 1;
             // 
             // skills_dgv
             // 
-            this.skills_dgv.AllowUserToAddRows = false;
             this.skills_dgv.AllowUserToDeleteRows = false;
             this.skills_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.skills_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.skills_col,
             this.notes_col});
-            this.skills_dgv.Location = new System.Drawing.Point(155, 49);
+            this.skills_dgv.Location = new System.Drawing.Point(84, 49);
             this.skills_dgv.Name = "skills_dgv";
-            this.skills_dgv.Size = new System.Drawing.Size(695, 188);
+            this.skills_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.skills_dgv.Size = new System.Drawing.Size(837, 188);
             this.skills_dgv.TabIndex = 0;
             // 
             // skills_col
@@ -1070,6 +1073,7 @@
             this.skills_col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.skills_col.HeaderText = "יכולות ומיומנויות בעבודה";
             this.skills_col.Name = "skills_col";
+            this.skills_col.ReadOnly = true;
             // 
             // notes_col
             // 
@@ -1207,7 +1211,7 @@
             this.mitmoded_job2_tab.ResumeLayout(false);
             this.mitmoded_job2_tab.PerformLayout();
             this.mitmoded_job3_tab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.job_preferences_dg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.job_preferences_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skills_dgv)).EndInit();
             this.mitmoded_job4_tab.ResumeLayout(false);
             this.mitmoded_job4_tab.PerformLayout();
@@ -1303,10 +1307,8 @@
         private System.Windows.Forms.TextBox xml_job_days_tb;
         private System.Windows.Forms.Label job_days_lb;
         private System.Windows.Forms.Label job_size_lb;
-        private System.Windows.Forms.DataGridView job_preferences_dg;
+        private System.Windows.Forms.DataGridView job_preferences_dgv;
         private System.Windows.Forms.DataGridView skills_dgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn skills_col;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notes_col;
         private System.Windows.Forms.TabPage mitmoded_job4_tab;
         private System.Windows.Forms.TextBox xml_job_first_targets_tb;
         private System.Windows.Forms.Label job_first_targets_lb;
@@ -1324,5 +1326,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn education_dg_year_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn education_dg_edu_col;
         private System.Windows.Forms.DataGridView education_dg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skills_col;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notes_col;
     }
 }

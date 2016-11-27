@@ -45,55 +45,110 @@ namespace GvanimVS
              */
             education_dg.AutoGenerateColumns = false;
             employment_dg.AutoGenerateColumns = false;
-            setJobPreferencesDGV();
+            init_jobPreferencesDFB();
+            fill_jobPreferencesDFB();
+            fill_skills();
         }
 
-        private void setJobPreferencesDGV()
+        private void fill_skills()
         {
-            DataTable PrefsDT = new DataTable();
-            job_preferences_dg.DataSource = PrefsDT;
-            initJobCols(PrefsDT);
-            initJobRows(PrefsDT);
+            skills_dgv.AutoGenerateColumns = false;
+            skills_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
-        }
+            System.Windows.Forms.DataGridViewCellStyle boldStyle = new System.Windows.Forms.DataGridViewCellStyle();
+            boldStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
 
-        private void initJobRows(DataTable prefsDT)
-        {
-            //TODO
-            /*
-             * 1. \n doesn't work
-             * 2. fix "fill row"
-             */
-            string[] row = new string[] 
-            { "מקום דינאמי / רועש / שקט \n עבודה בחוץ / בפנים ",
-                "עבודות ניקיון כן / לא \n עבודה עם חומרים ומים כן /לא \n בעלי חיים כן / לא \n צמחייה כן / לא",
-                "מכירות / שירות לקוחות כן / לא \n טלפונית / ישירות \n מחשב / בלי מחשב"
-            };
+            skills_dgv.Rows.Add(new string[] { "מיומנויות תקשורת", "" });
+            skills_dgv.Rows[0].Cells[0].Style = boldStyle;
+
+            skills_dgv.Rows.Add(new string[] { "קשר עם עובדים אחרים", "" });
+            skills_dgv.Rows.Add(new string[] { "קשר עם לקוחות", "" });
+            skills_dgv.Rows.Add(new string[] { "קשר עם סמכות / מנהל", "" });
+
+            skills_dgv.Rows.Add(new string[] { "דרישות אישיות", "" });
+            skills_dgv.Rows[4].Cells[0].Style = boldStyle;
+
+            skills_dgv.Rows.Add(new string[] { "יכולת לעבודה פיסית", "" });
+            skills_dgv.Rows.Add(new string[] { "יכולת קריאה בעברית ושפות אחרות", "" });
+            skills_dgv.Rows.Add(new string[] { "יכולת מילולית בעברית ושפות אחרות", "" });
+            skills_dgv.Rows.Add(new string[] { "יכולת כתיבה בעברית ושפות אחרות", "" });
+            skills_dgv.Rows.Add(new string[] { "יכולת לחישוב מספרים", "" });
+            skills_dgv.Rows.Add(new string[] { "יכולת לעבוד עם כספים", "" });
+            skills_dgv.Rows.Add(new string[] { "יכולה לעמידה בזמנים", "" });
+            skills_dgv.Rows.Add(new string[] { "יכולת לשימוש במחשב", "" });
+
+            skills_dgv.Rows.Add(new string[] { "דרישות אחרות", "" });
+            skills_dgv.Rows[13].Cells[0].Style = boldStyle;
+
+            skills_dgv.Rows.Add(new string[] { "יכולת ריכוז", "" });
+            skills_dgv.Rows.Add(new string[] { "יוזמה - היכולת לקחת משימה מעבר לנדרש", "" });
+            skills_dgv.Rows.Add(new string[] { "יכולת לבצע עבודה עצמאית בהתאם להנחיות", "" });
+
+            skills_dgv.Rows.Add(new string[] { ":התמודדות עם תנאים משתנים" + Environment.NewLine + "לחץ ממצבים חדשים ושינויים-" + Environment.NewLine + "דרישות התפקיד משתנות-" + Environment.NewLine + "תנאי הסביבה משתנים-", "" });
             
-            prefsDT.Rows.Add(row);
+
+            skills_dgv.Rows.Add(new string[] { "יכולת לעבודה מורכבת", "" });
+            skills_dgv.Rows.Add(new string[] { "יכולת לקבל סמכות / ביקורת", "" });
+            skills_dgv.Rows.Add(new string[] { "יכולת לעבודה בזריזות / מהירות", "" });
+            
+
         }
 
-        private void initJobCols(DataTable PrefsDT)
+        private void init_jobPreferencesDFB()
         {
+            job_preferences_dgv.AutoGenerateColumns = false;
 
-            DataColumn c1 = new DataColumn("location");
-            c1.Caption = "מקום העבודה וסביבתו";
+            job_preferences_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            job_preferences_dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-            DataColumn c2 = new DataColumn("content");
-            c2.Caption = "תכני העבודה";
+            DataGridViewTextBoxColumn location = new DataGridViewTextBoxColumn();
+            location.HeaderText = "מקום העבודה ומיקומו";
+            location.DataPropertyName = "location";
+            location.ReadOnly = true;
 
-            DataColumn c3 = new DataColumn("type");
-            c3.Caption = "סוג העבודה";
-
-            PrefsDT.Columns.Add(c1);
-            PrefsDT.Columns.Add(c2);
-            PrefsDT.Columns.Add(c3);
-
+            DataGridViewTextBoxColumn locationInput = new DataGridViewTextBoxColumn();
+            locationInput.HeaderText = "אפשרויות";
+            locationInput.DataPropertyName = "locationInput";
             
-            foreach (DataGridViewColumn col in job_preferences_dg.Columns)
-            {
-                col.HeaderText = PrefsDT.Columns[col.HeaderText].Caption;
-            }
+            DataGridViewTextBoxColumn contents = new DataGridViewTextBoxColumn();
+            contents.HeaderText = "תכני העבודה";
+            contents.DataPropertyName = "contents";
+            contents.ReadOnly = true;
+
+            DataGridViewTextBoxColumn contentsInput = new DataGridViewTextBoxColumn();
+            contentsInput.HeaderText = "אפשרויות";
+            contentsInput.DataPropertyName = "contentsInput";
+
+            DataGridViewTextBoxColumn type = new DataGridViewTextBoxColumn();
+            type.HeaderText = "סוג העבודה";
+            type.DataPropertyName = "type";
+            type.ReadOnly = true;
+
+            DataGridViewTextBoxColumn typeInput = new DataGridViewTextBoxColumn();
+            typeInput.HeaderText = "אפשרויות";
+            typeInput.DataPropertyName = "typeInput";
+
+            //job_preferences_dg.DataSource = dt;
+            job_preferences_dgv.Columns.AddRange(location, locationInput, contents, contentsInput, type, typeInput);
+            
+        }
+        private void fill_jobPreferencesDFB()
+        {
+            job_preferences_dgv.Rows.Add(new string[] { "מקום דינאמי / שקט / רועש", "", "עבודות ניקיון כן / לא", "", "מכירות / שירות לקוחות כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "עבודה בחוץ / בפנים", "", "עבודה עם חומרים ומים כן / לא", "", "טלפונית / ישירות", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "בעלי חיים כן / לא", "", "מחשב / בלי מחשב", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "צמחייה כן / לא", "", "", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "מקום בתוך / מחוץ לעיר", "", "עבודה בישיבה כן / לא", "", "עבודה חרושתית כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "באזור תעשייה כן / לא", "", "עבודה בעמידה כן / לא", "", "חד-שלבית / מורכבת", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "בחוץ / בפנים", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "בעל רכב פרטי כן / לא", "", "עבודה בקרב אחרים / בודד", "", "עבודה עם מזון כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "יכול להגיע לעבודה באופן עצמאי כן / לא", "", "עבודה מול אדם / מכונה", "", "מלצור / בישול / מטבח כללי", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "עצמאי כן / לא", "", "", "", "בית קפה / מסעדה / קייטרינג", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "רישיון כן / לא", "", "", "", "", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "טיפול באנשים כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "ילדים / קשישים / נכות", "" });
+
+
         }
 
         private void initFieldsFromDT(DataTable dt)
@@ -137,7 +192,6 @@ namespace GvanimVS
             if (!historyFromDT.Equals(""))
                 Tools.XmlToDataGrid(historyFromDT, employment_dg);
         }
-
         private void initEducationDGVFromXML(string educationFromDT)
         {
             if (!educationFromDT.Equals(""))
@@ -367,7 +421,5 @@ namespace GvanimVS
         {
             
         }
-
-        
     }
 }
