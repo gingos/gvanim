@@ -1054,6 +1054,7 @@
             this.job_preferences_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.job_preferences_dgv.Size = new System.Drawing.Size(837, 215);
             this.job_preferences_dgv.TabIndex = 1;
+            this.job_preferences_dgv.ColumnDividerDoubleClick += new System.Windows.Forms.DataGridViewColumnDividerDoubleClickEventHandler(this.job_preferences_dgv_ColumnDividerDoubleClick);
             // 
             // skills_dgv
             // 

@@ -45,9 +45,10 @@ namespace GvanimVS
              */
             education_dg.AutoGenerateColumns = false;
             employment_dg.AutoGenerateColumns = false;
-            init_jobPreferencesDFB();
-            fill_jobPreferencesDFB();
             fill_skills();
+            init_jobPreferencesDGV();
+            fill_jobPreferencesDGV();
+            
         }
 
         private void fill_skills()
@@ -92,9 +93,8 @@ namespace GvanimVS
             skills_dgv.Rows.Add(new string[] { "יכולת לעבודה בזריזות / מהירות", "" });
             
 
-        }
-
-        private void init_jobPreferencesDFB()
+        }   //fill the category column in the "skills" grid
+        private void init_jobPreferencesDGV()
         {
             job_preferences_dgv.AutoGenerateColumns = false;
 
@@ -131,8 +131,8 @@ namespace GvanimVS
             //job_preferences_dg.DataSource = dt;
             job_preferences_dgv.Columns.AddRange(location, locationInput, contents, contentsInput, type, typeInput);
             
-        }
-        private void fill_jobPreferencesDFB()
+        }   //init category and input columns in "job preferences" grid
+        private void fill_jobPreferencesDGV()
         {
             job_preferences_dgv.Rows.Add(new string[] { "מקום דינאמי / שקט / רועש", "", "עבודות ניקיון כן / לא", "", "מכירות / שירות לקוחות כן / לא", "" });
             job_preferences_dgv.Rows.Add(new string[] { "עבודה בחוץ / בפנים", "", "עבודה עם חומרים ומים כן / לא", "", "טלפונית / ישירות", "" });
@@ -149,9 +149,9 @@ namespace GvanimVS
             job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "ילדים / קשישים / נכות", "" });
 
 
-        }
+        }   //fill category column in "job preferences" grid
 
-        private void initFieldsFromDT(DataTable dt)
+        private void initFieldsFromDT(DataTable dt) //init ALL controls from the data table retrieved from server (represents entire form)
         {
 
             foreach (DataRow dr in dt.Rows)
@@ -180,23 +180,13 @@ namespace GvanimVS
                 else
                     profile_pb.Image = Properties.Resources.anonymous_profile;
 
-                initEducationDGVFromXML(dr["educationXML"].ToString());
-                initHistoryDGVFromXML(dr["historyXML"].ToString());
+                Tools.initDataGridFromXML(dr["educationXML"].ToString(), education_dg);
+                Tools.initDataGridFromXML(dr["historyXML"].ToString(), employment_dg);
                 initInfoTextBoxes(dr["intec_tabs"].ToString());
                 
             }
         }
 
-        private void initHistoryDGVFromXML(string historyFromDT)
-        {
-            if (!historyFromDT.Equals(""))
-                Tools.XmlToDataGrid(historyFromDT, employment_dg);
-        }
-        private void initEducationDGVFromXML(string educationFromDT)
-        {
-            if (!educationFromDT.Equals(""))
-                Tools.XmlToDataGrid(educationFromDT, education_dg);
-        }
 
         private void initInfoTextBoxes(string OrganzierToDeserialize)
         {
@@ -420,6 +410,11 @@ namespace GvanimVS
         private void MitmodedCard_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void job_preferences_dgv_ColumnDividerDoubleClick(object sender, DataGridViewColumnDividerDoubleClickEventArgs e)
+        {
+
         }
     }
 }

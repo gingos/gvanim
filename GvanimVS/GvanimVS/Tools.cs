@@ -91,7 +91,12 @@ namespace GvanimVS
                 return null;
             }
         }
-        
+
+        public static void initDataGridFromXML(string XMLfromDT, DataGridView dgv)
+        {
+            if (!XMLfromDT.Equals(""))
+                XmlToDataGrid(XMLfromDT, dgv);
+        }
         public static void XmlToDataGrid(string XMLstring, DataGridView dgv)
         {
             DataTable dt2 = DeserializeXML<DataTable>(XMLstring);
