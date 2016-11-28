@@ -19,21 +19,25 @@ namespace GvanimVS
 
         public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city,
             string address, string phone1, string phone2, string coordinatorID, byte[] photo,
-            string educationXML, string historyXML, string serializedOrganizer, SqlCommand cmd)
+            string educationXML, string historyXML, string jobPreferencesXML, string skillsXML,
+            string serializedOrganizer, SqlCommand cmd)
         {
            
             cmd.CommandText =
             #region sqlQuery
             " IF NOT EXISTS (SELECT * FROM " + SQLmethods.MITMODED + " WHERE ID = @pID) "
             + "INSERT INTO " + SQLmethods.MITMODED + " (ID, firstName,lastName,birthday,city, "
-            + "streetAddress,phone1,phone2,coordinatorID, photo, educationXML, historyXML, intec_tabs ) "
+            + "streetAddress,phone1,phone2,coordinatorID, photo, educationXML, historyXML, "
+            + "jobPreferencesXML, skillsXML, intec_tabs ) "
             + "VALUES (@pID, @pFirst, @pLast, @pBirthday, @pCity, @pAddress, "
-            + "@pPhone1, @pPhone2, @pCoordinatorID, @pPhoto, @pEducation, @pHistory, @pIntec_tabs) "
+            + "@pPhone1, @pPhone2, @pCoordinatorID, @pPhoto, @pEducation, @pHistory, "
+            + "@pJobs, @pSkills, @pIntec_tabs) "
             + "ELSE "
             + "UPDATE " + SQLmethods.MITMODED
             + " SET firstName = @pFirst, lastName = @pLast, birthday = @pBirthday, city = @pCity, "
             + "streetAddress = @pAddress, phone1 = @pPhone1, phone2 = @pPhone2, coordinatorID=@pCoordinatorID, "
-            + "photo = @pPhoto, educationXML = @pEducation, historyXML = @pHistory, intec_tabs = @pIntec_tabs"
+            + "photo = @pPhoto, educationXML = @pEducation, historyXML = @pHistory, "
+            + "jobPreferencesXML = @pJobs, skillsXML = @pSkills, intec_tabs = @pIntec_tabs"
             + " WHERE ID = @pID";
             #endregion
             #region addParamters
@@ -50,6 +54,8 @@ namespace GvanimVS
             cmd.Parameters.Add("@pPhoto", SqlDbType.Image, photo.Length).Value = photo;
             cmd.Parameters.Add("@pEducation", SqlDbType.Xml, educationXML.Length).Value = educationXML;
             cmd.Parameters.Add("@pHistory", SqlDbType.Xml, historyXML.Length).Value = historyXML;
+            cmd.Parameters.Add("@pJobs", SqlDbType.Xml, jobPreferencesXML.Length).Value = jobPreferencesXML;
+            cmd.Parameters.Add("@pSkills", SqlDbType.Xml, skillsXML.Length).Value = skillsXML;
             cmd.Parameters.Add("@pIntec_tabs", SqlDbType.Xml, serializedOrganizer.Length).Value = serializedOrganizer;
 
             #endregion

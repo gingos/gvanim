@@ -31,7 +31,6 @@ namespace GvanimVS
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "ID, firstName, lastName, city", "coordinatorID", coordinatorID , cmd, da);
             mitmoded_dgv.DataSource = dt;
             mitmoded_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            mitmoded_dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             changeDataHeadersToHebrew();
 
         }

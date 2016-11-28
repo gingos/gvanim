@@ -16,7 +16,6 @@ namespace GvanimVS
         private bool imgChanged;
         private string ID;
         private DataTable MainDT;
-        //private DataTable educationDT, empHistoryDT;
         private SerializableDictionary<string, SerializableDictionary<string, string>> xml_organizer;
 
 
@@ -43,8 +42,8 @@ namespace GvanimVS
              * now, columns (and data) from data tables will join existing data,
              * not instead of adding the new columns
              */
-            education_dg.AutoGenerateColumns = false;
-            employment_dg.AutoGenerateColumns = false;
+            education_dgv.AutoGenerateColumns = false;
+            employment_dgv.AutoGenerateColumns = false;
             fill_skills();
             init_jobPreferencesDGV();
             fill_jobPreferencesDGV();
@@ -104,29 +103,35 @@ namespace GvanimVS
             DataGridViewTextBoxColumn location = new DataGridViewTextBoxColumn();
             location.HeaderText = "מקום העבודה ומיקומו";
             location.DataPropertyName = "location";
+            location.Name = "location";
             location.ReadOnly = true;
 
             DataGridViewTextBoxColumn locationInput = new DataGridViewTextBoxColumn();
             locationInput.HeaderText = "אפשרויות";
             locationInput.DataPropertyName = "locationInput";
+            locationInput.Name = "locationInput";
             
             DataGridViewTextBoxColumn contents = new DataGridViewTextBoxColumn();
             contents.HeaderText = "תכני העבודה";
             contents.DataPropertyName = "contents";
+            contents.Name = "contents";
             contents.ReadOnly = true;
 
             DataGridViewTextBoxColumn contentsInput = new DataGridViewTextBoxColumn();
             contentsInput.HeaderText = "אפשרויות";
             contentsInput.DataPropertyName = "contentsInput";
+            contentsInput.Name = "contentsInput";
 
             DataGridViewTextBoxColumn type = new DataGridViewTextBoxColumn();
             type.HeaderText = "סוג העבודה";
             type.DataPropertyName = "type";
+            type.Name = "type";
             type.ReadOnly = true;
 
             DataGridViewTextBoxColumn typeInput = new DataGridViewTextBoxColumn();
             typeInput.HeaderText = "אפשרויות";
             typeInput.DataPropertyName = "typeInput";
+            typeInput.Name = "typeInput";
 
             //job_preferences_dg.DataSource = dt;
             job_preferences_dgv.Columns.AddRange(location, locationInput, contents, contentsInput, type, typeInput);
@@ -180,13 +185,14 @@ namespace GvanimVS
                 else
                     profile_pb.Image = Properties.Resources.anonymous_profile;
 
-                Tools.initDataGridFromXML(dr["educationXML"].ToString(), education_dg);
-                Tools.initDataGridFromXML(dr["historyXML"].ToString(), employment_dg);
+                Tools.initDataGridFromXML(dr["educationXML"].ToString(), education_dgv);
+                Tools.initDataGridFromXML(dr["historyXML"].ToString(), employment_dgv);
+                Tools.initDataGridFromXML(dr["jobPreferencesXML"].ToString(), job_preferences_dgv);
+                Tools.initDataGridFromXML(dr["skillsXML"].ToString(), skills_dgv);
                 initInfoTextBoxes(dr["intec_tabs"].ToString());
                 
             }
         }
-
 
         private void initInfoTextBoxes(string OrganzierToDeserialize)
         {
@@ -242,11 +248,17 @@ namespace GvanimVS
                     imgByte = imageToByteArray(profile_pb.Image);
 
                 //Serialize gridviews: grid -> data table -> serialized ->XML
-                DataTable educationDT = Tools.GetContentAsDataTable(education_dg, true);
-                string empEducationXML = Tools.SerializeXML<DataTable>(educationDT);
+                DataTable empEducationDT = Tools.GetContentAsDataTable(education_dgv, true);
+                string empEducationXML = Tools.SerializeXML<DataTable>(empEducationDT);
 
-                DataTable empHistoryDT = Tools.GetContentAsDataTable(employment_dg, true);
-                string empHistoryXML = Tools.SerializeXML(empHistoryDT);
+                DataTable empHistoryDT = Tools.GetContentAsDataTable(employment_dgv, true);
+                string empHistoryXML = Tools.SerializeXML<DataTable>(empHistoryDT);
+
+                DataTable empJobPreferencesDT = Tools.GetContentAsDataTable(job_preferences_dgv, true);
+                string empJobPreferencesXML = Tools.SerializeXML<DataTable>(empJobPreferencesDT);
+
+                DataTable empSkillsDT = Tools.GetContentAsDataTable(skills_dgv, true);
+                string empSkillsXML = Tools.SerializeXML<DataTable>(empSkillsDT);
 
                 //Serialize TextBoxes to xml string
                 string serializedOrganizer = textBoxesToDictionary();
@@ -255,7 +267,8 @@ namespace GvanimVS
                 //insert data into SQL server
                 if (SQLmethods.upsertMitmoded(firstName_tb.Text, lastName_tb.Text, birth_dtp.Value.Date,
                    ID_tb.Text, city_tb.Text, address_tb.Text, phone1_tb.Text, phone2_tb.Text, coordinator_id_tb.Text,
-                   imgByte, empEducationXML, empHistoryXML, serializedOrganizer, cmd))
+                   imgByte, empEducationXML, empHistoryXML, empJobPreferencesXML, empSkillsXML,
+                   serializedOrganizer, cmd))
                     MessageBox.Show("המידע נשמר בהצלחה");
                 else
                     MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");

@@ -48,7 +48,7 @@
             this.mitmoded_dgv.AllowUserToDeleteRows = false;
             this.mitmoded_dgv.AllowUserToOrderColumns = true;
             this.mitmoded_dgv.AllowUserToResizeRows = false;
-            this.mitmoded_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.mitmoded_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.mitmoded_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mitmoded_dgv.Location = new System.Drawing.Point(40, 123);
             this.mitmoded_dgv.Name = "mitmoded_dgv";
