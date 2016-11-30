@@ -192,10 +192,7 @@ namespace GvanimVS
                 else
                     profile_pb.Image = Properties.Resources.anonymous_profile;
 
-                Tools.initDataGridFromXML(dr["educationXML"].ToString(), education_dgv);
-                Tools.initDataGridFromXML(dr["historyXML"].ToString(), employment_dgv);
-                Tools.initDataGridFromXML(dr["jobPreferencesXML"].ToString(), job_preferences_dgv);
-                Tools.initDataGridFromXML(dr["skillsXML"].ToString(), skills_dgv);
+                
                 initInfoTextBoxes(dr["intec_tabs"].ToString());
                 
             }
@@ -214,12 +211,24 @@ namespace GvanimVS
             {
                 TabPage page = mitmoded_card_tc.TabPages[dic.Key];
                 SerializableDictionary<string, string> xml_tab = dic.Value;
-                foreach (KeyValuePair<string, string> textBoxKVP in xml_tab)
-                    page.Controls[textBoxKVP.Key].Text = textBoxKVP.Value;
+                foreach (KeyValuePair<string, string> controlKVP in xml_tab)
+                {
+                    if (controlKVP.Key.StartsWith("xml"))
+                    {
+                        if (page.Controls.ContainsKey(controlKVP.Key))
+                            page.Controls[controlKVP.Key].Text = controlKVP.Value;
+                    }
+                    else if (controlKVP.Key.Contains("dgv"))
+                    {
+                        if (page.Controls.ContainsKey(controlKVP.Key))
+                            Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page.Controls[controlKVP.Key]);
+                    }
+                }
             }
             
         }
-        private string textBoxesToDictionary()
+
+        private string controlsToDictionary()
         {
             //creates a dictionary of dictionarys, per tab, per text controls
             //using custom class - serializable dictionary 
@@ -233,6 +242,12 @@ namespace GvanimVS
                     if (control is TextBox)
                         if (control.Name.StartsWith("xml"))
                             xml_tab.Add(control.Name, control.Text);
+                    if (control is DataGridView)
+                        {
+                            DataTable dt = Tools.GetContentAsDataTable((DataGridView)control, true);
+                            string dtToXml = Tools.SerializeXML<DataTable>(dt);
+                            xml_tab.Add(control.Name, dtToXml);
+                        }
                         
                 }
                 xml_organizer.Add(page.Name, xml_tab);
@@ -253,32 +268,19 @@ namespace GvanimVS
                 //null because no new image was selected 
                 else
                     imgByte = imageToByteArray(profile_pb.Image);
-
-                //Serialize gridviews: grid -> data table -> serialized ->XML
-                DataTable empEducationDT = Tools.GetContentAsDataTable(education_dgv, true);
-                string empEducationXML = Tools.SerializeXML<DataTable>(empEducationDT);
-
-                DataTable empHistoryDT = Tools.GetContentAsDataTable(employment_dgv, true);
-                string empHistoryXML = Tools.SerializeXML<DataTable>(empHistoryDT);
-
-                DataTable empJobPreferencesDT = Tools.GetContentAsDataTable(job_preferences_dgv, true);
-                string empJobPreferencesXML = Tools.SerializeXML<DataTable>(empJobPreferencesDT);
-
-                DataTable empSkillsDT = Tools.GetContentAsDataTable(skills_dgv, true);
-                string empSkillsXML = Tools.SerializeXML<DataTable>(empSkillsDT);
-
+                
                 //Serialize TextBoxes to xml string
-                string serializedOrganizer = textBoxesToDictionary();
+                string serializedOrganizer = controlsToDictionary();
 
-
+                
                 //insert data into SQL server
                 if (SQLmethods.upsertMitmoded(firstName_tb.Text, lastName_tb.Text, birth_dtp.Value.Date,
                    ID_tb.Text, city_tb.Text, address_tb.Text, phone1_tb.Text, phone2_tb.Text, coordinator_id_tb.Text,
-                   imgByte, empEducationXML, empHistoryXML, empJobPreferencesXML, empSkillsXML,
-                   serializedOrganizer, cmd))
+                   imgByte, serializedOrganizer, cmd))
                     MessageBox.Show("המידע נשמר בהצלחה");
                 else
                     MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
+                    
                 this.Close();
             }
         }

@@ -13,6 +13,12 @@ namespace GvanimVS
 {
     public partial class LoginPage : DBform
     {
+        /* TODO
+         * add red\green status button
+         * add "accept on enter" to press enter on keyboard and choose OK
+         * 
+         * 
+         */
         public LoginPage(SqlConnection con):base(con)
         {
             InitializeComponent();

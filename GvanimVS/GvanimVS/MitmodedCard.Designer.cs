@@ -387,6 +387,7 @@
             this.mitmoded_personal_tab.Controls.Add(this.address_tb);
             this.mitmoded_personal_tab.Controls.Add(this.city_tb);
             this.mitmoded_personal_tab.Controls.Add(this.street_lb);
+            this.mitmoded_personal_tab.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mitmoded_personal_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_personal_tab.Name = "mitmoded_personal_tab";
             this.mitmoded_personal_tab.Padding = new System.Windows.Forms.Padding(3);

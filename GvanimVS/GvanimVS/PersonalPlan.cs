@@ -83,10 +83,10 @@ namespace GvanimVS
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control box in page.Controls)
                     if (box is CheckedListBox)
-                    {
-                         if (box.Name.StartsWith("xmlc"))
+                {
+                    if (box.Name.StartsWith("xmlc"))
                           xml_tab.Add(box.Name, ((CheckedListBox) box).CheckedItems.ToString());
-                     }
+                }
                 xml_organizer.Add(page.Name, xml_tab);
 
             }
@@ -162,24 +162,9 @@ namespace GvanimVS
             this.Close();
         }
 
-        private void xmlc_checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void quit_page_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void xmlc_checkedListBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void xmlc_checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            xmlc_checkedListBox1.SetSelected(e.Index, !xmlc_checkedListBox1.GetItemChecked(e.Index));
         }
     }
 }
