@@ -160,5 +160,10 @@ namespace GvanimVS
                 MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
             this.Close();
         }
+
+        private void quit_page_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -61,6 +61,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -69,17 +70,9 @@
             this.xml_hearotKatzev = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.xml_hearotEichut = new System.Windows.Forms.TextBox();
-            this.xmlc_checkedListBox8 = new System.Windows.Forms.CheckedListBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.xmlc_checkedListBox6 = new System.Windows.Forms.CheckedListBox();
             this.xml_hearotHatmada = new System.Windows.Forms.TextBox();
-            this.xmlc_checkedListBox7 = new System.Windows.Forms.CheckedListBox();
-            this.xmlc_checkedListBox4 = new System.Windows.Forms.CheckedListBox();
-            this.xmlc_checkedListBox5 = new System.Windows.Forms.CheckedListBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.xmlc_checkedListBox3 = new System.Windows.Forms.CheckedListBox();
-            this.xmlc_checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.xmlc_checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label16 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label24 = new System.Windows.Forms.Label();
@@ -521,6 +514,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.checkedListBox1);
             this.tabPage3.Controls.Add(this.label23);
             this.tabPage3.Controls.Add(this.label22);
             this.tabPage3.Controls.Add(this.label21);
@@ -529,17 +523,9 @@
             this.tabPage3.Controls.Add(this.xml_hearotKatzev);
             this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.xml_hearotEichut);
-            this.tabPage3.Controls.Add(this.xmlc_checkedListBox8);
             this.tabPage3.Controls.Add(this.label18);
-            this.tabPage3.Controls.Add(this.xmlc_checkedListBox6);
             this.tabPage3.Controls.Add(this.xml_hearotHatmada);
-            this.tabPage3.Controls.Add(this.xmlc_checkedListBox7);
-            this.tabPage3.Controls.Add(this.xmlc_checkedListBox4);
-            this.tabPage3.Controls.Add(this.xmlc_checkedListBox5);
             this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.xmlc_checkedListBox3);
-            this.tabPage3.Controls.Add(this.xmlc_checkedListBox2);
-            this.tabPage3.Controls.Add(this.xmlc_checkedListBox1);
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -548,6 +534,23 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "תפקוד בעבודה";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.ColumnWidth = 45;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.IntegralHeight = false;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.checkedListBox1.Location = new System.Drawing.Point(556, 91);
+            this.checkedListBox1.MultiColumn = true;
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(230, 20);
+            this.checkedListBox1.TabIndex = 22;
             // 
             // label23
             // 
@@ -618,27 +621,6 @@
             this.xml_hearotEichut.Size = new System.Drawing.Size(199, 20);
             this.xml_hearotEichut.TabIndex = 19;
             // 
-            // xmlc_checkedListBox8
-            // 
-            this.xmlc_checkedListBox8.BackColor = System.Drawing.Color.White;
-            this.xmlc_checkedListBox8.ColumnWidth = 45;
-            this.xmlc_checkedListBox8.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.xmlc_checkedListBox8.FormatString = "N2";
-            this.xmlc_checkedListBox8.IntegralHeight = false;
-            this.xmlc_checkedListBox8.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.xmlc_checkedListBox8.Location = new System.Drawing.Point(298, 239);
-            this.xmlc_checkedListBox8.MultiColumn = true;
-            this.xmlc_checkedListBox8.Name = "xmlc_checkedListBox8";
-            this.xmlc_checkedListBox8.Size = new System.Drawing.Size(213, 19);
-            this.xmlc_checkedListBox8.Sorted = true;
-            this.xmlc_checkedListBox8.TabIndex = 7;
-            this.xmlc_checkedListBox8.ThreeDCheckBoxes = true;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -648,96 +630,12 @@
             this.label18.TabIndex = 15;
             this.label18.Text = "איכות ביצוע המשימות";
             // 
-            // xmlc_checkedListBox6
-            // 
-            this.xmlc_checkedListBox6.BackColor = System.Drawing.Color.White;
-            this.xmlc_checkedListBox6.ColumnWidth = 45;
-            this.xmlc_checkedListBox6.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.xmlc_checkedListBox6.FormatString = "N2";
-            this.xmlc_checkedListBox6.IntegralHeight = false;
-            this.xmlc_checkedListBox6.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.xmlc_checkedListBox6.Location = new System.Drawing.Point(298, 190);
-            this.xmlc_checkedListBox6.MultiColumn = true;
-            this.xmlc_checkedListBox6.Name = "xmlc_checkedListBox6";
-            this.xmlc_checkedListBox6.Size = new System.Drawing.Size(213, 19);
-            this.xmlc_checkedListBox6.Sorted = true;
-            this.xmlc_checkedListBox6.TabIndex = 8;
-            this.xmlc_checkedListBox6.ThreeDCheckBoxes = true;
-            // 
             // xml_hearotHatmada
             // 
             this.xml_hearotHatmada.Location = new System.Drawing.Point(57, 91);
             this.xml_hearotHatmada.Name = "xml_hearotHatmada";
             this.xml_hearotHatmada.Size = new System.Drawing.Size(199, 20);
             this.xml_hearotHatmada.TabIndex = 17;
-            // 
-            // xmlc_checkedListBox7
-            // 
-            this.xmlc_checkedListBox7.BackColor = System.Drawing.Color.White;
-            this.xmlc_checkedListBox7.ColumnWidth = 45;
-            this.xmlc_checkedListBox7.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.xmlc_checkedListBox7.FormatString = "N2";
-            this.xmlc_checkedListBox7.IntegralHeight = false;
-            this.xmlc_checkedListBox7.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.xmlc_checkedListBox7.Location = new System.Drawing.Point(564, 239);
-            this.xmlc_checkedListBox7.MultiColumn = true;
-            this.xmlc_checkedListBox7.Name = "xmlc_checkedListBox7";
-            this.xmlc_checkedListBox7.Size = new System.Drawing.Size(213, 19);
-            this.xmlc_checkedListBox7.Sorted = true;
-            this.xmlc_checkedListBox7.TabIndex = 10;
-            this.xmlc_checkedListBox7.ThreeDCheckBoxes = true;
-            // 
-            // xmlc_checkedListBox4
-            // 
-            this.xmlc_checkedListBox4.BackColor = System.Drawing.Color.White;
-            this.xmlc_checkedListBox4.ColumnWidth = 45;
-            this.xmlc_checkedListBox4.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.xmlc_checkedListBox4.FormatString = "N2";
-            this.xmlc_checkedListBox4.IntegralHeight = false;
-            this.xmlc_checkedListBox4.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.xmlc_checkedListBox4.Location = new System.Drawing.Point(298, 142);
-            this.xmlc_checkedListBox4.MultiColumn = true;
-            this.xmlc_checkedListBox4.Name = "xmlc_checkedListBox4";
-            this.xmlc_checkedListBox4.Size = new System.Drawing.Size(213, 19);
-            this.xmlc_checkedListBox4.Sorted = true;
-            this.xmlc_checkedListBox4.TabIndex = 11;
-            this.xmlc_checkedListBox4.ThreeDCheckBoxes = true;
-            // 
-            // xmlc_checkedListBox5
-            // 
-            this.xmlc_checkedListBox5.BackColor = System.Drawing.Color.White;
-            this.xmlc_checkedListBox5.ColumnWidth = 45;
-            this.xmlc_checkedListBox5.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.xmlc_checkedListBox5.FormatString = "N2";
-            this.xmlc_checkedListBox5.IntegralHeight = false;
-            this.xmlc_checkedListBox5.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.xmlc_checkedListBox5.Location = new System.Drawing.Point(564, 190);
-            this.xmlc_checkedListBox5.MultiColumn = true;
-            this.xmlc_checkedListBox5.Name = "xmlc_checkedListBox5";
-            this.xmlc_checkedListBox5.Size = new System.Drawing.Size(213, 19);
-            this.xmlc_checkedListBox5.Sorted = true;
-            this.xmlc_checkedListBox5.TabIndex = 12;
-            this.xmlc_checkedListBox5.ThreeDCheckBoxes = true;
             // 
             // label17
             // 
@@ -747,69 +645,6 @@
             this.label17.Size = new System.Drawing.Size(42, 13);
             this.label17.TabIndex = 16;
             this.label17.Text = "התמדה";
-            // 
-            // xmlc_checkedListBox3
-            // 
-            this.xmlc_checkedListBox3.BackColor = System.Drawing.Color.White;
-            this.xmlc_checkedListBox3.ColumnWidth = 45;
-            this.xmlc_checkedListBox3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.xmlc_checkedListBox3.FormatString = "N2";
-            this.xmlc_checkedListBox3.IntegralHeight = false;
-            this.xmlc_checkedListBox3.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.xmlc_checkedListBox3.Location = new System.Drawing.Point(564, 142);
-            this.xmlc_checkedListBox3.MultiColumn = true;
-            this.xmlc_checkedListBox3.Name = "xmlc_checkedListBox3";
-            this.xmlc_checkedListBox3.Size = new System.Drawing.Size(213, 19);
-            this.xmlc_checkedListBox3.Sorted = true;
-            this.xmlc_checkedListBox3.TabIndex = 6;
-            this.xmlc_checkedListBox3.ThreeDCheckBoxes = true;
-            // 
-            // xmlc_checkedListBox2
-            // 
-            this.xmlc_checkedListBox2.BackColor = System.Drawing.Color.White;
-            this.xmlc_checkedListBox2.ColumnWidth = 45;
-            this.xmlc_checkedListBox2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.xmlc_checkedListBox2.FormatString = "N2";
-            this.xmlc_checkedListBox2.IntegralHeight = false;
-            this.xmlc_checkedListBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.xmlc_checkedListBox2.Location = new System.Drawing.Point(298, 92);
-            this.xmlc_checkedListBox2.MultiColumn = true;
-            this.xmlc_checkedListBox2.Name = "xmlc_checkedListBox2";
-            this.xmlc_checkedListBox2.Size = new System.Drawing.Size(213, 19);
-            this.xmlc_checkedListBox2.Sorted = true;
-            this.xmlc_checkedListBox2.TabIndex = 5;
-            this.xmlc_checkedListBox2.ThreeDCheckBoxes = true;
-            // 
-            // xmlc_checkedListBox1
-            // 
-            this.xmlc_checkedListBox1.BackColor = System.Drawing.Color.White;
-            this.xmlc_checkedListBox1.ColumnWidth = 45;
-            this.xmlc_checkedListBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.xmlc_checkedListBox1.FormatString = "N2";
-            this.xmlc_checkedListBox1.IntegralHeight = false;
-            this.xmlc_checkedListBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.xmlc_checkedListBox1.Location = new System.Drawing.Point(564, 92);
-            this.xmlc_checkedListBox1.MultiColumn = true;
-            this.xmlc_checkedListBox1.Name = "xmlc_checkedListBox1";
-            this.xmlc_checkedListBox1.Size = new System.Drawing.Size(213, 19);
-            this.xmlc_checkedListBox1.Sorted = true;
-            this.xmlc_checkedListBox1.TabIndex = 9;
-            this.xmlc_checkedListBox1.ThreeDCheckBoxes = true;
             // 
             // label16
             // 
@@ -1924,6 +1759,7 @@
             this.quit_page.TabIndex = 1;
             this.quit_page.Text = "צא";
             this.quit_page.UseVisualStyleBackColor = true;
+            this.quit_page.Click += new System.EventHandler(this.quit_page_Click);
             // 
             // btn_update
             // 
@@ -2032,17 +1868,9 @@
         private System.Windows.Forms.TextBox xml_hearotKatzev;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox xml_hearotEichut;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox8;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox6;
         private System.Windows.Forms.TextBox xml_hearotHatmada;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox7;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox4;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox5;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox3;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox2;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label24;
@@ -2130,5 +1958,6 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button test_upload;
         private System.Windows.Forms.Button test_download;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
