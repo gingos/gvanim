@@ -621,6 +621,7 @@
             // xmlc_checkedListBox8
             // 
             this.xmlc_checkedListBox8.BackColor = System.Drawing.Color.White;
+            this.xmlc_checkedListBox8.CheckOnClick = true;
             this.xmlc_checkedListBox8.ColumnWidth = 45;
             this.xmlc_checkedListBox8.ForeColor = System.Drawing.SystemColors.InfoText;
             this.xmlc_checkedListBox8.FormatString = "N2";
@@ -651,6 +652,7 @@
             // xmlc_checkedListBox6
             // 
             this.xmlc_checkedListBox6.BackColor = System.Drawing.Color.White;
+            this.xmlc_checkedListBox6.CheckOnClick = true;
             this.xmlc_checkedListBox6.ColumnWidth = 45;
             this.xmlc_checkedListBox6.ForeColor = System.Drawing.SystemColors.InfoText;
             this.xmlc_checkedListBox6.FormatString = "N2";
@@ -679,6 +681,7 @@
             // xmlc_checkedListBox7
             // 
             this.xmlc_checkedListBox7.BackColor = System.Drawing.Color.White;
+            this.xmlc_checkedListBox7.CheckOnClick = true;
             this.xmlc_checkedListBox7.ColumnWidth = 45;
             this.xmlc_checkedListBox7.ForeColor = System.Drawing.SystemColors.InfoText;
             this.xmlc_checkedListBox7.FormatString = "N2";
@@ -700,6 +703,7 @@
             // xmlc_checkedListBox4
             // 
             this.xmlc_checkedListBox4.BackColor = System.Drawing.Color.White;
+            this.xmlc_checkedListBox4.CheckOnClick = true;
             this.xmlc_checkedListBox4.ColumnWidth = 45;
             this.xmlc_checkedListBox4.ForeColor = System.Drawing.SystemColors.InfoText;
             this.xmlc_checkedListBox4.FormatString = "N2";
@@ -721,6 +725,7 @@
             // xmlc_checkedListBox5
             // 
             this.xmlc_checkedListBox5.BackColor = System.Drawing.Color.White;
+            this.xmlc_checkedListBox5.CheckOnClick = true;
             this.xmlc_checkedListBox5.ColumnWidth = 45;
             this.xmlc_checkedListBox5.ForeColor = System.Drawing.SystemColors.InfoText;
             this.xmlc_checkedListBox5.FormatString = "N2";
@@ -751,6 +756,7 @@
             // xmlc_checkedListBox3
             // 
             this.xmlc_checkedListBox3.BackColor = System.Drawing.Color.White;
+            this.xmlc_checkedListBox3.CheckOnClick = true;
             this.xmlc_checkedListBox3.ColumnWidth = 45;
             this.xmlc_checkedListBox3.ForeColor = System.Drawing.SystemColors.InfoText;
             this.xmlc_checkedListBox3.FormatString = "N2";
@@ -772,6 +778,7 @@
             // xmlc_checkedListBox2
             // 
             this.xmlc_checkedListBox2.BackColor = System.Drawing.Color.White;
+            this.xmlc_checkedListBox2.CheckOnClick = true;
             this.xmlc_checkedListBox2.ColumnWidth = 45;
             this.xmlc_checkedListBox2.ForeColor = System.Drawing.SystemColors.InfoText;
             this.xmlc_checkedListBox2.FormatString = "N2";
@@ -793,6 +800,7 @@
             // xmlc_checkedListBox1
             // 
             this.xmlc_checkedListBox1.BackColor = System.Drawing.Color.White;
+            this.xmlc_checkedListBox1.CheckOnClick = true;
             this.xmlc_checkedListBox1.ColumnWidth = 45;
             this.xmlc_checkedListBox1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.xmlc_checkedListBox1.FormatString = "N2";
@@ -810,6 +818,8 @@
             this.xmlc_checkedListBox1.Sorted = true;
             this.xmlc_checkedListBox1.TabIndex = 9;
             this.xmlc_checkedListBox1.ThreeDCheckBoxes = true;
+            this.xmlc_checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.xmlc_checkedListBox1_ItemCheck);
+            this.xmlc_checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.xmlc_checkedListBox1_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -1924,6 +1934,7 @@
             this.quit_page.TabIndex = 1;
             this.quit_page.Text = "צא";
             this.quit_page.UseVisualStyleBackColor = true;
+            this.quit_page.Click += new System.EventHandler(this.quit_page_Click);
             // 
             // btn_update
             // 
@@ -2036,13 +2047,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.CheckedListBox xmlc_checkedListBox6;
         private System.Windows.Forms.TextBox xml_hearotHatmada;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox7;
         private System.Windows.Forms.CheckedListBox xmlc_checkedListBox4;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox5;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox3;
         private System.Windows.Forms.CheckedListBox xmlc_checkedListBox2;
-        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label24;
@@ -2130,5 +2137,9 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button test_upload;
         private System.Windows.Forms.Button test_download;
+        public System.Windows.Forms.CheckedListBox xmlc_checkedListBox7;
+        public System.Windows.Forms.CheckedListBox xmlc_checkedListBox5;
+        public System.Windows.Forms.CheckedListBox xmlc_checkedListBox3;
+        private System.Windows.Forms.CheckedListBox xmlc_checkedListBox1;
     }
 }
