@@ -347,12 +347,13 @@
             this.mitmoded_card_tc.Controls.Add(this.mitmoded_job3_tab);
             this.mitmoded_card_tc.Controls.Add(this.mitmoded_job4_tab);
             this.mitmoded_card_tc.Controls.Add(this.tabPage1);
-            this.mitmoded_card_tc.Location = new System.Drawing.Point(16, 9);
+            this.mitmoded_card_tc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mitmoded_card_tc.Location = new System.Drawing.Point(0, 0);
             this.mitmoded_card_tc.Name = "mitmoded_card_tc";
             this.mitmoded_card_tc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.mitmoded_card_tc.RightToLeftLayout = true;
             this.mitmoded_card_tc.SelectedIndex = 0;
-            this.mitmoded_card_tc.Size = new System.Drawing.Size(975, 620);
+            this.mitmoded_card_tc.Size = new System.Drawing.Size(1019, 620);
             this.mitmoded_card_tc.TabIndex = 22;
             // 
             // mitmoded_personal_tab
@@ -389,7 +390,7 @@
             this.mitmoded_personal_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_personal_tab.Name = "mitmoded_personal_tab";
             this.mitmoded_personal_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.mitmoded_personal_tab.Size = new System.Drawing.Size(967, 594);
+            this.mitmoded_personal_tab.Size = new System.Drawing.Size(1011, 594);
             this.mitmoded_personal_tab.TabIndex = 0;
             this.mitmoded_personal_tab.Text = "פרטים אישיים";
             this.mitmoded_personal_tab.UseVisualStyleBackColor = true;
@@ -500,7 +501,7 @@
             this.mitmoded_personal2_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_personal2_tab.Name = "mitmoded_personal2_tab";
             this.mitmoded_personal2_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.mitmoded_personal2_tab.Size = new System.Drawing.Size(967, 594);
+            this.mitmoded_personal2_tab.Size = new System.Drawing.Size(1011, 594);
             this.mitmoded_personal2_tab.TabIndex = 1;
             this.mitmoded_personal2_tab.Text = "רקע אישי משפחתי רפואי";
             this.mitmoded_personal2_tab.UseVisualStyleBackColor = true;
@@ -644,7 +645,7 @@
             this.mitmoded_ed_army_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_ed_army_tab.Name = "mitmoded_ed_army_tab";
             this.mitmoded_ed_army_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.mitmoded_ed_army_tab.Size = new System.Drawing.Size(967, 594);
+            this.mitmoded_ed_army_tab.Size = new System.Drawing.Size(1011, 594);
             this.mitmoded_ed_army_tab.TabIndex = 2;
             this.mitmoded_ed_army_tab.Text = "השכלה ושירות צבאי";
             this.mitmoded_ed_army_tab.UseVisualStyleBackColor = true;
@@ -711,7 +712,7 @@
             this.mitmoded_job_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job_tab.Name = "mitmoded_job_tab";
             this.mitmoded_job_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.mitmoded_job_tab.Size = new System.Drawing.Size(967, 594);
+            this.mitmoded_job_tab.Size = new System.Drawing.Size(1011, 594);
             this.mitmoded_job_tab.TabIndex = 3;
             this.mitmoded_job_tab.Text = "עבודה 1";
             this.mitmoded_job_tab.UseVisualStyleBackColor = true;
@@ -833,7 +834,7 @@
             this.mitmoded_job2_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job2_tab.Name = "mitmoded_job2_tab";
             this.mitmoded_job2_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.mitmoded_job2_tab.Size = new System.Drawing.Size(967, 594);
+            this.mitmoded_job2_tab.Size = new System.Drawing.Size(1011, 594);
             this.mitmoded_job2_tab.TabIndex = 4;
             this.mitmoded_job2_tab.Text = "עבודה 2";
             this.mitmoded_job2_tab.UseVisualStyleBackColor = true;
@@ -1039,14 +1040,13 @@
             this.mitmoded_job3_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job3_tab.Name = "mitmoded_job3_tab";
             this.mitmoded_job3_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.mitmoded_job3_tab.Size = new System.Drawing.Size(967, 594);
+            this.mitmoded_job3_tab.Size = new System.Drawing.Size(1011, 594);
             this.mitmoded_job3_tab.TabIndex = 5;
             this.mitmoded_job3_tab.Text = "עבודה 3";
             this.mitmoded_job3_tab.UseVisualStyleBackColor = true;
             // 
             // job_preferences_dgv
             // 
-            this.job_preferences_dgv.AllowUserToDeleteRows = false;
             this.job_preferences_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.job_preferences_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.job_preferences_dgv.Location = new System.Drawing.Point(84, 292);
@@ -1054,11 +1054,12 @@
             this.job_preferences_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.job_preferences_dgv.Size = new System.Drawing.Size(837, 215);
             this.job_preferences_dgv.TabIndex = 1;
-            this.job_preferences_dgv.ColumnDividerDoubleClick += new System.Windows.Forms.DataGridViewColumnDividerDoubleClickEventHandler(this.job_preferences_dgv_ColumnDividerDoubleClick);
+            this.job_preferences_dgv.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.job_preferences_dgv_CellBeginEdit);
+            this.job_preferences_dgv.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.job_preferences_dgv_UserDeletingRow);
             // 
             // skills_dgv
             // 
-            this.skills_dgv.AllowUserToDeleteRows = false;
+            this.skills_dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.skills_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.skills_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.skills_col,
@@ -1068,13 +1069,14 @@
             this.skills_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.skills_dgv.Size = new System.Drawing.Size(837, 188);
             this.skills_dgv.TabIndex = 0;
+            this.skills_dgv.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.skills_dgv_CellBeginEdit);
+            this.skills_dgv.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.skills_dgv_UserDeletingRow);
             // 
             // skills_col
             // 
             this.skills_col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.skills_col.HeaderText = "יכולות ומיומנויות בעבודה";
             this.skills_col.Name = "skills_col";
-            this.skills_col.ReadOnly = true;
             // 
             // notes_col
             // 
@@ -1096,7 +1098,7 @@
             this.mitmoded_job4_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job4_tab.Name = "mitmoded_job4_tab";
             this.mitmoded_job4_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.mitmoded_job4_tab.Size = new System.Drawing.Size(967, 594);
+            this.mitmoded_job4_tab.Size = new System.Drawing.Size(1011, 594);
             this.mitmoded_job4_tab.TabIndex = 6;
             this.mitmoded_job4_tab.Text = "עבודה 4";
             this.mitmoded_job4_tab.UseVisualStyleBackColor = true;
@@ -1180,7 +1182,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(967, 594);
+            this.tabPage1.Size = new System.Drawing.Size(1011, 594);
             this.tabPage1.TabIndex = 7;
             this.tabPage1.Text = "חתימה והדפסה";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1196,7 +1198,6 @@
             this.Name = "MitmodedCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "אינטק מועמד";
-            this.Load += new System.EventHandler(this.MitmodedCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
             this.mitmoded_card_tc.ResumeLayout(false);
             this.mitmoded_personal_tab.ResumeLayout(false);

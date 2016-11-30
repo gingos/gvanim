@@ -76,6 +76,8 @@ namespace GvanimVS
                 if (dtSource.Columns.Count == 0) return null;
                 foreach (DataGridViewRow row in dgv.Rows)
                 {
+                    if (row.Index == dgv.Rows.Count-1)  //skip last row, added by default
+                        continue;
                     DataRow drNewRow = dtSource.NewRow();
                     foreach (DataColumn col in dtSource.Columns)
                     {

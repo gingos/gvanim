@@ -54,9 +54,12 @@ namespace GvanimVS
         {
             skills_dgv.AutoGenerateColumns = false;
             skills_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            skills_dgv.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
 
             System.Windows.Forms.DataGridViewCellStyle boldStyle = new System.Windows.Forms.DataGridViewCellStyle();
             boldStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            
 
             skills_dgv.Rows.Add(new string[] { "מיומנויות תקשורת", "" });
             skills_dgv.Rows[0].Cells[0].Style = boldStyle;
@@ -83,14 +86,12 @@ namespace GvanimVS
             skills_dgv.Rows.Add(new string[] { "יכולת ריכוז", "" });
             skills_dgv.Rows.Add(new string[] { "יוזמה - היכולת לקחת משימה מעבר לנדרש", "" });
             skills_dgv.Rows.Add(new string[] { "יכולת לבצע עבודה עצמאית בהתאם להנחיות", "" });
-
-            skills_dgv.Rows.Add(new string[] { ":התמודדות עם תנאים משתנים" + Environment.NewLine + "לחץ ממצבים חדשים ושינויים-" + Environment.NewLine + "דרישות התפקיד משתנות-" + Environment.NewLine + "תנאי הסביבה משתנים-", "" });
-            
-
+            skills_dgv.Rows.Add(new string[] { "התמודדות עם תנאים משתנים:" + Environment.NewLine + "-לחץ ממצבים חדשים ושינויים" + Environment.NewLine + "-דרישות התפקיד משתנות" + Environment.NewLine + "-תנאי הסביבה משתנים" , "" });
             skills_dgv.Rows.Add(new string[] { "יכולת לעבודה מורכבת", "" });
             skills_dgv.Rows.Add(new string[] { "יכולת לקבל סמכות / ביקורת", "" });
             skills_dgv.Rows.Add(new string[] { "יכולת לעבודה בזריזות / מהירות", "" });
-            
+
+
 
         }   //fill the category column in the "skills" grid
         private void init_jobPreferencesDGV()
@@ -104,7 +105,7 @@ namespace GvanimVS
             location.HeaderText = "מקום העבודה ומיקומו";
             location.DataPropertyName = "location";
             location.Name = "location";
-            location.ReadOnly = true;
+            //location.ReadOnly = true;
 
             DataGridViewTextBoxColumn locationInput = new DataGridViewTextBoxColumn();
             locationInput.HeaderText = "אפשרויות";
@@ -115,7 +116,7 @@ namespace GvanimVS
             contents.HeaderText = "תכני העבודה";
             contents.DataPropertyName = "contents";
             contents.Name = "contents";
-            contents.ReadOnly = true;
+            //contents.ReadOnly = true;
 
             DataGridViewTextBoxColumn contentsInput = new DataGridViewTextBoxColumn();
             contentsInput.HeaderText = "אפשרויות";
@@ -126,7 +127,7 @@ namespace GvanimVS
             type.HeaderText = "סוג העבודה";
             type.DataPropertyName = "type";
             type.Name = "type";
-            type.ReadOnly = true;
+            //type.ReadOnly = true;
 
             DataGridViewTextBoxColumn typeInput = new DataGridViewTextBoxColumn();
             typeInput.HeaderText = "אפשרויות";
@@ -152,6 +153,12 @@ namespace GvanimVS
             job_preferences_dgv.Rows.Add(new string[] { "רישיון כן / לא", "", "", "", "", "" });
             job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "טיפול באנשים כן / לא", "" });
             job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "ילדים / קשישים / נכות", "" });
+
+            // save existing rows as read only
+            /*
+            foreach (DataGridViewRow row in job_preferences_dgv.Rows)
+                row.ReadOnly = true;
+              */  
 
 
         }   //fill category column in "job preferences" grid
@@ -420,14 +427,28 @@ namespace GvanimVS
             }
         }
 
-        private void MitmodedCard_Load(object sender, EventArgs e)
+        private void skills_dgv_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            
-        }
-
-        private void job_preferences_dgv_ColumnDividerDoubleClick(object sender, DataGridViewColumnDividerDoubleClickEventArgs e)
-        {
+            if (e.Row.Index <= 20)
+                e.Cancel = true;
 
         }
+        private void skills_dgv_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            if (e.RowIndex <=20 && e.ColumnIndex % 2 == 0)
+                e.Cancel = true;
+        }
+        private void job_preferences_dgv_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (e.Row.Index <= 12)
+                e.Cancel = true;
+        }
+        private void job_preferences_dgv_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            if (e.RowIndex <=12 && e.ColumnIndex % 2 == 0)
+                e.Cancel = true;
+        }
+
+
     }
 }
