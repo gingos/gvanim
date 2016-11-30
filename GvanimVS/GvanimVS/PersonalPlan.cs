@@ -81,10 +81,11 @@ namespace GvanimVS
             foreach (TabPage page in this.tabControl2.TabPages)
             {
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
-                foreach (CheckedListBox box in this.tabControl2.Controls)
+                foreach (Control box in page.Controls)
+                    if (box is CheckedListBox)
                 {
                     if (box.Name.StartsWith("xmlc"))
-                        xml_tab.Add(box.Name, box.CheckedItems.ToString());
+                          xml_tab.Add(box.Name, ((CheckedListBox) box).CheckedItems.ToString());
                 }
                 xml_organizer.Add(page.Name, xml_tab);
 
