@@ -101,5 +101,15 @@ namespace GvanimVS
         {
 
         }
+
+        private void btn_tochnit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var tochnit = new PersonalPlan(con, ID_dynamic_lb.Text))
+            {
+                tochnit.ShowDialog();
+            }
+            this.Show();
+        }
     }
 }

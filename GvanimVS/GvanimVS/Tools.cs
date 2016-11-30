@@ -90,8 +90,7 @@ namespace GvanimVS
                 ex.ToString();
                 return null;
             }
-        }
-        
+        }  
         public static void XmlToDataGrid(string educationXML, DataGridView dgv)
         {
             DataTable dt2 = DeserializeXML<DataTable>(educationXML);
@@ -115,7 +114,7 @@ namespace GvanimVS
             xmlSerializer.Serialize(textWriter, toSerialize);
             return textWriter.ToString();
         }
-
+        
 
     }
 }

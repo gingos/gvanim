@@ -42,6 +42,7 @@
             this.change_coordinator_bt = new System.Windows.Forms.Button();
             this.coordinator_name_lb = new System.Windows.Forms.Label();
             this.coordinator_dynamic_lb = new System.Windows.Forms.Label();
+            this.tochnit_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,11 +185,22 @@
             this.coordinator_dynamic_lb.Text = "<coordinator>";
             this.coordinator_dynamic_lb.Click += new System.EventHandler(this.coordinator_dynamic_lb_Click);
             // 
+            // tochnit_bt
+            // 
+            this.tochnit_bt.Location = new System.Drawing.Point(119, 229);
+            this.tochnit_bt.Name = "tochnit_bt";
+            this.tochnit_bt.Size = new System.Drawing.Size(75, 23);
+            this.tochnit_bt.TabIndex = 14;
+            this.tochnit_bt.Text = "תכנית אישית";
+            this.tochnit_bt.UseVisualStyleBackColor = true;
+            this.tochnit_bt.Click += new System.EventHandler(this.btn_tochnit_Click);
+            // 
             // Mitmoded
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 358);
+            this.Controls.Add(this.tochnit_bt);
             this.Controls.Add(this.coordinator_dynamic_lb);
             this.Controls.Add(this.coordinator_name_lb);
             this.Controls.Add(this.change_coordinator_bt);
@@ -228,5 +240,6 @@
         private System.Windows.Forms.Button change_coordinator_bt;
         private System.Windows.Forms.Label coordinator_name_lb;
         private System.Windows.Forms.Label coordinator_dynamic_lb;
+        private System.Windows.Forms.Button tochnit_bt;
     }
 }

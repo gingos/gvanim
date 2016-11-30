@@ -332,5 +332,40 @@ namespace GvanimVS
         where ReportsTB.mitmodedID = '222222222'
         AND MitmodedTb.coordinatorID = '379184302';
         */
+        
+        /// <summary>
+        /// update table in database using table name, column, row, key and data to insert
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="column"></param>
+        /// <param name="row"></param>
+        /// <param name="key"></param>
+        /// <param name="XMLinfo"></param>
+        /// <param name="cmd"></param>
+        /// <returns></returns>
+        public static bool updateXMLFormInDB(string table, string column, string row, string key, string XMLinfo, SqlCommand cmd)
+        {
+           cmd.CommandText =
+            #region sqlQuery
+           "UPDATE " + table
+           + " SET "+column+" = "+XMLinfo
+           + " WHERE "+row+" = "+key;
+            #endregion
+            #region addParameters
+            #endregion
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            #endregion
+            return true;
+
+        }
     }
 }

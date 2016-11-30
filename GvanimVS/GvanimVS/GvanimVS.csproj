@@ -100,12 +100,24 @@
     <Compile Include="MitmodedCard.Designer.cs">
       <DependentUpon>MitmodedCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonalPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalPlan.Designer.cs">
+      <DependentUpon>PersonalPlan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PsychiatricCheckUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PsychiatricCheckUp.Designer.cs">
+      <DependentUpon>PsychiatricCheckUp.cs</DependentUpon>
     </Compile>
     <Compile Include="RegionManager.cs">
       <SubType>Form</SubType>
@@ -158,10 +170,16 @@
     <EmbeddedResource Include="MitmodedCard.resx">
       <DependentUpon>MitmodedCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PersonalPlan.resx">
+      <DependentUpon>PersonalPlan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PsychiatricCheckUp.resx">
+      <DependentUpon>PsychiatricCheckUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegionManager.resx">
       <DependentUpon>RegionManager.cs</DependentUpon>
