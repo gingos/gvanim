@@ -94,13 +94,17 @@ namespace GvanimVS
             }
         }
 
-        public static void initDataGridFromXML(string XMLfromDT, DataGridView dgv)
+        public static void initDataGridFromXML(string XMLfromSQL, DataGridView dgv)
         {
-            if (!XMLfromDT.Equals(""))
-                XmlToDataGrid(XMLfromDT, dgv);
+            if (!XMLfromSQL.Equals(""))
+                XmlToDataGrid(XMLfromSQL, dgv);
         }
-        public static void XmlToDataGrid(string XMLstring, DataGridView dgv)
+        private static void XmlToDataGrid(string XMLstring, DataGridView dgv)
         {
+            /*
+             * gets string that represents XML table, and empty datagrid 
+             * fills the datagrid with the table represented by the table
+             */
             DataTable dt2 = DeserializeXML<DataTable>(XMLstring);
             foreach (DataGridViewColumn col in dgv.Columns)
             {
@@ -111,6 +115,9 @@ namespace GvanimVS
         }       
         public static T DeserializeXML<T>(this string toDeserialize)
         {
+            /*
+             * gets string, returns it in <T> format  
+             */
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
             StringReader textReader = new StringReader(toDeserialize);
             return (T)xmlSerializer.Deserialize(textReader);
