@@ -160,6 +160,8 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.test_upload = new System.Windows.Forms.Button();
             this.test_download = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -514,6 +516,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.radioButton2);
+            this.tabPage3.Controls.Add(this.radioButton1);
             this.tabPage3.Controls.Add(this.checkedListBox1);
             this.tabPage3.Controls.Add(this.label23);
             this.tabPage3.Controls.Add(this.label22);
@@ -1789,6 +1793,28 @@
             this.test_download.Text = "test - download";
             this.test_download.UseVisualStyleBackColor = true;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(614, 191);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 23;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(521, 187);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.TabIndex = 24;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // PersonalPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1959,5 +1985,7 @@
         private System.Windows.Forms.Button test_upload;
         private System.Windows.Forms.Button test_download;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
