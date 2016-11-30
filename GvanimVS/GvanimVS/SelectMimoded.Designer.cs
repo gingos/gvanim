@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mitmoded_dgv = new System.Windows.Forms.DataGridView();
             this.close_bt = new System.Windows.Forms.Button();
             this.ID_lb = new System.Windows.Forms.Label();
             this.firstName_lb = new System.Windows.Forms.Label();
@@ -39,23 +39,25 @@
             this.city_tb = new System.Windows.Forms.TextBox();
             this.lastName_lb = new System.Windows.Forms.Label();
             this.lastName_tb = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mitmoded_dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // mitmoded_dgv
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 123);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.Size = new System.Drawing.Size(463, 164);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            this.mitmoded_dgv.AllowUserToAddRows = false;
+            this.mitmoded_dgv.AllowUserToDeleteRows = false;
+            this.mitmoded_dgv.AllowUserToOrderColumns = true;
+            this.mitmoded_dgv.AllowUserToResizeRows = false;
+            this.mitmoded_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.mitmoded_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mitmoded_dgv.Location = new System.Drawing.Point(40, 123);
+            this.mitmoded_dgv.Name = "mitmoded_dgv";
+            this.mitmoded_dgv.ReadOnly = true;
+            this.mitmoded_dgv.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.mitmoded_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.mitmoded_dgv.Size = new System.Drawing.Size(463, 164);
+            this.mitmoded_dgv.TabIndex = 0;
+            this.mitmoded_dgv.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // close_bt
             // 
@@ -158,11 +160,11 @@
             this.Controls.Add(this.firstName_lb);
             this.Controls.Add(this.ID_lb);
             this.Controls.Add(this.close_bt);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.mitmoded_dgv);
             this.Name = "SelectMimoded";
             this.Text = "SelectMimoded";
             this.Load += new System.EventHandler(this.SelectMimoded_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mitmoded_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,7 +172,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView mitmoded_dgv;
         private System.Windows.Forms.Button close_bt;
         private System.Windows.Forms.Label ID_lb;
         private System.Windows.Forms.Label firstName_lb;

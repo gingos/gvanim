@@ -76,6 +76,8 @@ namespace GvanimVS
                 if (dtSource.Columns.Count == 0) return null;
                 foreach (DataGridViewRow row in dgv.Rows)
                 {
+                    if (row.Index == dgv.Rows.Count-1)  //skip last row, added by default
+                        continue;
                     DataRow drNewRow = dtSource.NewRow();
                     foreach (DataColumn col in dtSource.Columns)
                     {
@@ -90,10 +92,16 @@ namespace GvanimVS
                 ex.ToString();
                 return null;
             }
-        }  
-        public static void XmlToDataGrid(string educationXML, DataGridView dgv)
+        }
+
+        public static void initDataGridFromXML(string XMLfromDT, DataGridView dgv)
         {
-            DataTable dt2 = DeserializeXML<DataTable>(educationXML);
+            if (!XMLfromDT.Equals(""))
+                XmlToDataGrid(XMLfromDT, dgv);
+        }
+        public static void XmlToDataGrid(string XMLstring, DataGridView dgv)
+        {
+            DataTable dt2 = DeserializeXML<DataTable>(XMLstring);
             foreach (DataGridViewColumn col in dgv.Columns)
             {
 
@@ -114,7 +122,7 @@ namespace GvanimVS
             xmlSerializer.Serialize(textWriter, toSerialize);
             return textWriter.ToString();
         }
-        
+
 
     }
 }
