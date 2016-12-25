@@ -82,6 +82,12 @@
     <Compile Include="FindReport.Designer.cs">
       <DependentUpon>FindReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hitkashrut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hitkashrut.Designer.cs">
+      <DependentUpon>Hitkashrut.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FindReport.resx">
       <DependentUpon>FindReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hitkashrut.resx">
+      <DependentUpon>Hitkashrut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>

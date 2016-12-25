@@ -47,6 +47,7 @@
             this.cat_personal_tab = new System.Windows.Forms.TabPage();
             this.cat_report_tab = new System.Windows.Forms.TabPage();
             this.cat_meeting_tab = new System.Windows.Forms.TabPage();
+            this.open_hitkashrut_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.form_categories_tc.SuspendLayout();
             this.cat_personal_tab.SuspendLayout();
@@ -95,9 +96,9 @@
             // 
             // info_bt
             // 
-            this.info_bt.Location = new System.Drawing.Point(272, 6);
+            this.info_bt.Location = new System.Drawing.Point(250, 16);
             this.info_bt.Name = "info_bt";
-            this.info_bt.Size = new System.Drawing.Size(84, 23);
+            this.info_bt.Size = new System.Drawing.Size(108, 23);
             this.info_bt.TabIndex = 4;
             this.info_bt.Text = "אינטק מועמד";
             this.info_bt.UseVisualStyleBackColor = true;
@@ -197,9 +198,9 @@
             // 
             // tochnit_bt
             // 
-            this.tochnit_bt.Location = new System.Drawing.Point(272, 35);
+            this.tochnit_bt.Location = new System.Drawing.Point(250, 45);
             this.tochnit_bt.Name = "tochnit_bt";
-            this.tochnit_bt.Size = new System.Drawing.Size(75, 23);
+            this.tochnit_bt.Size = new System.Drawing.Size(108, 23);
             this.tochnit_bt.TabIndex = 14;
             this.tochnit_bt.Text = "תכנית אישית";
             this.tochnit_bt.UseVisualStyleBackColor = true;
@@ -220,6 +221,7 @@
             // 
             // cat_personal_tab
             // 
+            this.cat_personal_tab.Controls.Add(this.open_hitkashrut_bt);
             this.cat_personal_tab.Controls.Add(this.info_bt);
             this.cat_personal_tab.Controls.Add(this.tochnit_bt);
             this.cat_personal_tab.Location = new System.Drawing.Point(4, 22);
@@ -252,6 +254,16 @@
             this.cat_meeting_tab.TabIndex = 2;
             this.cat_meeting_tab.Text = "פגישות ומעקבים";
             this.cat_meeting_tab.UseVisualStyleBackColor = true;
+            // 
+            // open_hitkashrut_bt
+            // 
+            this.open_hitkashrut_bt.Location = new System.Drawing.Point(122, 16);
+            this.open_hitkashrut_bt.Name = "open_hitkashrut_bt";
+            this.open_hitkashrut_bt.Size = new System.Drawing.Size(106, 23);
+            this.open_hitkashrut_bt.TabIndex = 15;
+            this.open_hitkashrut_bt.Text = "הסכם התקשרות";
+            this.open_hitkashrut_bt.UseVisualStyleBackColor = true;
+            this.open_hitkashrut_bt.Click += new System.EventHandler(this.open_hitkashrut_bt_Click);
             // 
             // Mitmoded
             // 
@@ -302,5 +314,6 @@
         private System.Windows.Forms.TabPage cat_personal_tab;
         private System.Windows.Forms.TabPage cat_report_tab;
         private System.Windows.Forms.TabPage cat_meeting_tab;
+        private System.Windows.Forms.Button open_hitkashrut_bt;
     }
 }
