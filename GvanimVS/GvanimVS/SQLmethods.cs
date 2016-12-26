@@ -350,6 +350,7 @@ namespace GvanimVS
         {
             return date.Date.ToString("yyyy-MM-dd");
         }
+
         /*
         if we don't want to edit reports.coordinatorID
         SELECT ReportsTB.Id, ReportsTB.mitmodedID, ReportsTB.firstName, ReportsTB.lastName
@@ -359,7 +360,7 @@ namespace GvanimVS
         where ReportsTB.mitmodedID = '222222222'
         AND MitmodedTb.coordinatorID = '379184302';
         */
-        
+
         /// <summary>
         /// update table in database using table name, column, row, key and data to insert
         /// </summary>
@@ -372,11 +373,11 @@ namespace GvanimVS
         /// <returns></returns>
         public static bool updateXMLFormInDB(string table, string column, string row, string key, string XMLinfo, SqlCommand cmd)
         {
-           cmd.CommandText =
+            cmd.CommandText =
             #region sqlQuery
            "UPDATE " + table
-           + " SET "+column+" = "+XMLinfo
-           + " WHERE "+row+" = "+key;
+            + " SET " + column + " = " + XMLinfo
+            + " WHERE " + row + " = " + key;
             #endregion
             #region addParameters
             #endregion
@@ -392,7 +393,16 @@ namespace GvanimVS
             }
             #endregion
             return true;
-
         }
+
+        public static string getXMLFromDB(string table, string column, string row, SqlCommand cmd)
+        {
+            return
+                "SELECT " + column +
+                "FROM " + table +
+                "WHERE " + row + " = " + row;
+            
+        }
+        
     }
 }

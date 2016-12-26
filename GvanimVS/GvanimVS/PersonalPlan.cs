@@ -50,6 +50,7 @@ namespace GvanimVS
                     if (control is TextBox)
                         if (control.Name.StartsWith("xml"))
                             xml_tab.Add(control.Name, control.Text);
+                                    
                     if (control is DateTimePicker)
                         xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
                     if (control is DataGridView)
@@ -70,32 +71,103 @@ namespace GvanimVS
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
-                    if (control is TextBox)
-                        if (control.Name.StartsWith("xml"))
-                            xml_tab.Add(control.Name, control.Text);
-
+                    if (control is GroupBox)
+                    {
+                        if (control.Name.StartsWith("xmlgr"))
+                        {
+                            foreach (RadioButton r in control.Controls.OfType<RadioButton>())
+                                if (r.Checked)
+                                    xml_tab.Add(control.Name, r.Text);
+                        }
+                    }
                 }
                 xml_organizer.Add(page.Name, xml_tab);
             }
 
-            foreach (TabPage page in this.tabControl2.TabPages)
-            {
-                SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
-                foreach (Control box in page.Controls)
-                    if (box is CheckedListBox)
-                {
-                    if (box.Name.StartsWith("xmlc"))
-                          xml_tab.Add(box.Name, ((CheckedListBox) box).CheckedItems.ToString());
-                }
-                xml_organizer.Add(page.Name, xml_tab);
+            //foreach (TabPage page in this.tabControl2.TabPages)
+            //{
+            //    SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
+            //    foreach (Control control in page.Controls)
+            //        if (control is GroupBox)
+            //        {
+            //            if (control.Name.StartsWith("xmlgr"))
+            //            {
+            //                var checkedButton = control.Controls.OfType<RadioButton>()
+            //                                .FirstOrDefault(r => r.Checked);
+            //                xml_tab.Add(control.Name, checkedButton.Text);
+            //            }
+            //        }
+            //    xml_organizer.Add(page.Name, xml_tab);
 
-            }
+          //  }
             string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
             return serializedOrganizer;
+        }    
+
+        private void PersonalPlan_Load(object sender, EventArgs e)
+        {
+            xmlg_dataGridView1.Rows.Add(new string[] { "1", "", "", "", "" });
+            xmlg_dataGridView1.Rows.Add(new string[] { "2", "", "", "", "" });
+            xmlg_dataGridView1.Rows.Add(new string[] { "3", "", "", "", "" });
+            xmlg_dataGridView1.Rows.Add(new string[] { "4", "", "", "", "" });
+        }
+                
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+           string information = textBoxesToDictionary();
+            
+            //insert data into SQL server
+            if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "personalPlanXML", "ID", ID_tb.Text, information, cmd))
+                MessageBox.Show("המידע נשמר בהצלחה");
+            else
+                MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
+            this.Close();
+        }
+
+        /// <summary>
+        /// Get XML file from the DataBase, DeSerialize the XML file and update every fiels in the form by its name.
+        /// </summary>
+        /// <param name=""></param>
+        private void updateFieldsFromDB()
+        {
+            //get XML file from DB
+            string orgenizer = SQLmethods.getXMLFromDB(SQLmethods.MITMODED, "personalPlanXML", ID_tb.Text, cmd);
+            //DeSerialize XML file
+            string serialized = Tools.DeserializeXML<string>(orgenizer);
+            //Update every field by xml_tab.name
+            foreach (TabPage page in this.tabControl1.TabPages)
+            {
+               
+                foreach (Control control in page.Controls)
+                {
+                    if (control is TextBox)
+                        if (control.Name.StartsWith("xml"))
+                            //enter the control.text with the xml.tab.name
+
+                    if (control is DateTimePicker)
+                          //enter the control.text with the xml.tab.name
+                    
+                    if (control is GroupBox)
+                        //enter the radiobox that is checked by the XML indication
+                             
+                }
+             }
+        }
+
+        private void quit_page_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
 
-        
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -132,14 +204,6 @@ namespace GvanimVS
 
         }
 
-        private void PersonalPlan_Load(object sender, EventArgs e)
-        {
-            xmlg_dataGridView1.Rows.Add(new string[] { "1", "", "", "", "" });
-            xmlg_dataGridView1.Rows.Add(new string[] { "2", "", "", "", "" });
-            xmlg_dataGridView1.Rows.Add(new string[] { "3", "", "", "", "" });
-            xmlg_dataGridView1.Rows.Add(new string[] { "4", "", "", "", "" });
-        }
-
         private void textBox28_TextChanged(object sender, EventArgs e)
         {
 
@@ -148,23 +212,6 @@ namespace GvanimVS
         private void checkedListBox31_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-        
-        private void btn_update_Click(object sender, EventArgs e)
-        {
-           string information = textBoxesToDictionary();
-            
-            //insert data into SQL server
-            if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "personalPlanXML", "ID", ID_tb.Text, information, cmd))
-                MessageBox.Show("המידע נשמר בהצלחה");
-            else
-                MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
-            this.Close();
-        }
-
-        private void quit_page_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
