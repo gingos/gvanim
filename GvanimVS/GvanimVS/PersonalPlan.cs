@@ -56,8 +56,8 @@ namespace GvanimVS
                     if (control is DataGridView)
                         if(control.Name.StartsWith("xmlg"))
                     {
-                        dat = Tools.GetContentAsDataTable(xmlg_dataGridView1, false);
-                        string dataGrid = Tools.SerializeXML(dat);
+                        dat = Tools.GetContentAsDataTable((DataGridView)xmlg_dataGridView1, false);
+                        string dataGrid = Tools.SerializeXML<DataTable>(dat);
                         xml_tab.Add(control.Name, dataGrid);
                     }
 
@@ -128,7 +128,8 @@ namespace GvanimVS
         /// Get XML file from the DataBase, DeSerialize the XML file and update every fiels in the form by its name.
         /// </summary>
         /// <param name=""></param>
-        private void updateFieldsFromDB()
+
+        /* private void updateFieldsFromDB()
         {
             //get XML file from DB
             string orgenizer = SQLmethods.getXMLFromDB(SQLmethods.MITMODED, "personalPlanXML", ID_tb.Text, cmd);
@@ -153,7 +154,7 @@ namespace GvanimVS
                 }
              }
         }
-
+        */
         private void quit_page_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -170,11 +171,6 @@ namespace GvanimVS
         }
 
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

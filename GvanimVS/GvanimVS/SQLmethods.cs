@@ -376,10 +376,13 @@ namespace GvanimVS
             cmd.CommandText =
             #region sqlQuery
            "UPDATE " + table
-            + " SET " + column + " = " + XMLinfo
-            + " WHERE " + row + " = " + key;
+            + " SET " + column + " = @pXmlInfo"
+            + " WHERE " + row + " = @pKey";
             #endregion
             #region addParameters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pKey", key);
+            cmd.Parameters.Add("@pXmlInfo", SqlDbType.Xml, XMLinfo.Length).Value = XMLinfo;
             #endregion
             #region execute
             try
