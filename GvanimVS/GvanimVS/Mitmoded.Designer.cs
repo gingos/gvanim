@@ -43,13 +43,22 @@
             this.coordinator_name_lb = new System.Windows.Forms.Label();
             this.coordinator_dynamic_lb = new System.Windows.Forms.Label();
             this.tochnit_bt = new System.Windows.Forms.Button();
+            this.form_categories_tc = new System.Windows.Forms.TabControl();
+            this.cat_personal_tab = new System.Windows.Forms.TabPage();
+            this.cat_report_tab = new System.Windows.Forms.TabPage();
+            this.cat_meeting_tab = new System.Windows.Forms.TabPage();
+            this.open_hitkashrut_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
+            this.form_categories_tc.SuspendLayout();
+            this.cat_personal_tab.SuspendLayout();
+            this.cat_report_tab.SuspendLayout();
+            this.cat_meeting_tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // name_lb
             // 
             this.name_lb.AutoSize = true;
-            this.name_lb.Location = new System.Drawing.Point(557, 32);
+            this.name_lb.Location = new System.Drawing.Point(610, 32);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.name_lb.Size = new System.Drawing.Size(29, 13);
@@ -60,7 +69,7 @@
             // 
             this.name_dynamic_lb.AutoSize = true;
             this.name_dynamic_lb.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.name_dynamic_lb.Location = new System.Drawing.Point(460, 32);
+            this.name_dynamic_lb.Location = new System.Drawing.Point(468, 32);
             this.name_dynamic_lb.Name = "name_dynamic_lb";
             this.name_dynamic_lb.Size = new System.Drawing.Size(45, 13);
             this.name_dynamic_lb.TabIndex = 1;
@@ -69,7 +78,7 @@
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
-            this.ID_lb.Location = new System.Drawing.Point(516, 68);
+            this.ID_lb.Location = new System.Drawing.Point(312, 32);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ID_lb.Size = new System.Drawing.Size(70, 13);
@@ -79,7 +88,7 @@
             // ID_dynamic_lb
             // 
             this.ID_dynamic_lb.AutoSize = true;
-            this.ID_dynamic_lb.Location = new System.Drawing.Point(460, 67);
+            this.ID_dynamic_lb.Location = new System.Drawing.Point(256, 31);
             this.ID_dynamic_lb.Name = "ID_dynamic_lb";
             this.ID_dynamic_lb.Size = new System.Drawing.Size(30, 13);
             this.ID_dynamic_lb.TabIndex = 3;
@@ -87,9 +96,9 @@
             // 
             // info_bt
             // 
-            this.info_bt.Location = new System.Drawing.Point(22, 22);
+            this.info_bt.Location = new System.Drawing.Point(250, 16);
             this.info_bt.Name = "info_bt";
-            this.info_bt.Size = new System.Drawing.Size(84, 23);
+            this.info_bt.Size = new System.Drawing.Size(108, 23);
             this.info_bt.TabIndex = 4;
             this.info_bt.Text = "אינטק מועמד";
             this.info_bt.UseVisualStyleBackColor = true;
@@ -97,7 +106,8 @@
             // 
             // show_employment_bt
             // 
-            this.show_employment_bt.Location = new System.Drawing.Point(417, 132);
+            this.show_employment_bt.Enabled = false;
+            this.show_employment_bt.Location = new System.Drawing.Point(207, 14);
             this.show_employment_bt.Name = "show_employment_bt";
             this.show_employment_bt.Size = new System.Drawing.Size(166, 23);
             this.show_employment_bt.TabIndex = 6;
@@ -107,7 +117,7 @@
             // 
             // show_reports_bt
             // 
-            this.show_reports_bt.Location = new System.Drawing.Point(213, 132);
+            this.show_reports_bt.Location = new System.Drawing.Point(21, 20);
             this.show_reports_bt.Name = "show_reports_bt";
             this.show_reports_bt.Size = new System.Drawing.Size(166, 23);
             this.show_reports_bt.TabIndex = 7;
@@ -117,7 +127,8 @@
             // 
             // add_employment_bt
             // 
-            this.add_employment_bt.Location = new System.Drawing.Point(417, 161);
+            this.add_employment_bt.Enabled = false;
+            this.add_employment_bt.Location = new System.Drawing.Point(207, 43);
             this.add_employment_bt.Name = "add_employment_bt";
             this.add_employment_bt.Size = new System.Drawing.Size(166, 23);
             this.add_employment_bt.TabIndex = 8;
@@ -126,7 +137,7 @@
             // 
             // add_report_bt
             // 
-            this.add_report_bt.Location = new System.Drawing.Point(213, 161);
+            this.add_report_bt.Location = new System.Drawing.Point(21, 49);
             this.add_report_bt.Name = "add_report_bt";
             this.add_report_bt.Size = new System.Drawing.Size(166, 23);
             this.add_report_bt.TabIndex = 9;
@@ -137,7 +148,7 @@
             // profile_pb
             // 
             this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
-            this.profile_pb.Location = new System.Drawing.Point(22, 51);
+            this.profile_pb.Location = new System.Drawing.Point(53, 68);
             this.profile_pb.Name = "profile_pb";
             this.profile_pb.Size = new System.Drawing.Size(172, 172);
             this.profile_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -146,7 +157,7 @@
             // 
             // close_bt
             // 
-            this.close_bt.Location = new System.Drawing.Point(22, 299);
+            this.close_bt.Location = new System.Drawing.Point(53, 297);
             this.close_bt.Name = "close_bt";
             this.close_bt.Size = new System.Drawing.Size(75, 23);
             this.close_bt.TabIndex = 10;
@@ -156,7 +167,7 @@
             // 
             // change_coordinator_bt
             // 
-            this.change_coordinator_bt.Location = new System.Drawing.Point(119, 22);
+            this.change_coordinator_bt.Location = new System.Drawing.Point(259, 59);
             this.change_coordinator_bt.Name = "change_coordinator_bt";
             this.change_coordinator_bt.Size = new System.Drawing.Size(75, 23);
             this.change_coordinator_bt.TabIndex = 11;
@@ -167,7 +178,7 @@
             // coordinator_name_lb
             // 
             this.coordinator_name_lb.AutoSize = true;
-            this.coordinator_name_lb.Location = new System.Drawing.Point(343, 31);
+            this.coordinator_name_lb.Location = new System.Drawing.Point(604, 64);
             this.coordinator_name_lb.Name = "coordinator_name_lb";
             this.coordinator_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.coordinator_name_lb.Size = new System.Drawing.Size(35, 13);
@@ -177,7 +188,7 @@
             // coordinator_dynamic_lb
             // 
             this.coordinator_dynamic_lb.AutoSize = true;
-            this.coordinator_dynamic_lb.Location = new System.Drawing.Point(213, 32);
+            this.coordinator_dynamic_lb.Location = new System.Drawing.Point(458, 64);
             this.coordinator_dynamic_lb.Name = "coordinator_dynamic_lb";
             this.coordinator_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.coordinator_dynamic_lb.Size = new System.Drawing.Size(72, 13);
@@ -187,30 +198,84 @@
             // 
             // tochnit_bt
             // 
-            this.tochnit_bt.Location = new System.Drawing.Point(119, 229);
+            this.tochnit_bt.Location = new System.Drawing.Point(250, 45);
             this.tochnit_bt.Name = "tochnit_bt";
-            this.tochnit_bt.Size = new System.Drawing.Size(75, 23);
+            this.tochnit_bt.Size = new System.Drawing.Size(108, 23);
             this.tochnit_bt.TabIndex = 14;
             this.tochnit_bt.Text = "תכנית אישית";
             this.tochnit_bt.UseVisualStyleBackColor = true;
             this.tochnit_bt.Click += new System.EventHandler(this.btn_tochnit_Click);
             // 
+            // form_categories_tc
+            // 
+            this.form_categories_tc.Controls.Add(this.cat_personal_tab);
+            this.form_categories_tc.Controls.Add(this.cat_report_tab);
+            this.form_categories_tc.Controls.Add(this.cat_meeting_tab);
+            this.form_categories_tc.Location = new System.Drawing.Point(259, 101);
+            this.form_categories_tc.Name = "form_categories_tc";
+            this.form_categories_tc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.form_categories_tc.RightToLeftLayout = true;
+            this.form_categories_tc.SelectedIndex = 0;
+            this.form_categories_tc.Size = new System.Drawing.Size(392, 139);
+            this.form_categories_tc.TabIndex = 15;
+            // 
+            // cat_personal_tab
+            // 
+            this.cat_personal_tab.Controls.Add(this.open_hitkashrut_bt);
+            this.cat_personal_tab.Controls.Add(this.info_bt);
+            this.cat_personal_tab.Controls.Add(this.tochnit_bt);
+            this.cat_personal_tab.Location = new System.Drawing.Point(4, 22);
+            this.cat_personal_tab.Name = "cat_personal_tab";
+            this.cat_personal_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.cat_personal_tab.Size = new System.Drawing.Size(384, 113);
+            this.cat_personal_tab.TabIndex = 0;
+            this.cat_personal_tab.Text = "פרטים וקליטה";
+            this.cat_personal_tab.UseVisualStyleBackColor = true;
+            // 
+            // cat_report_tab
+            // 
+            this.cat_report_tab.Controls.Add(this.show_reports_bt);
+            this.cat_report_tab.Controls.Add(this.add_report_bt);
+            this.cat_report_tab.Location = new System.Drawing.Point(4, 22);
+            this.cat_report_tab.Name = "cat_report_tab";
+            this.cat_report_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.cat_report_tab.Size = new System.Drawing.Size(384, 113);
+            this.cat_report_tab.TabIndex = 1;
+            this.cat_report_tab.Text = "דו\"חות והתראות";
+            this.cat_report_tab.UseVisualStyleBackColor = true;
+            // 
+            // cat_meeting_tab
+            // 
+            this.cat_meeting_tab.Controls.Add(this.show_employment_bt);
+            this.cat_meeting_tab.Controls.Add(this.add_employment_bt);
+            this.cat_meeting_tab.Location = new System.Drawing.Point(4, 22);
+            this.cat_meeting_tab.Name = "cat_meeting_tab";
+            this.cat_meeting_tab.Size = new System.Drawing.Size(384, 113);
+            this.cat_meeting_tab.TabIndex = 2;
+            this.cat_meeting_tab.Text = "פגישות ומעקבים";
+            this.cat_meeting_tab.UseVisualStyleBackColor = true;
+            // 
+            // open_hitkashrut_bt
+            // 
+            this.open_hitkashrut_bt.Location = new System.Drawing.Point(122, 16);
+            this.open_hitkashrut_bt.Name = "open_hitkashrut_bt";
+            this.open_hitkashrut_bt.Size = new System.Drawing.Size(106, 23);
+            this.open_hitkashrut_bt.TabIndex = 15;
+            this.open_hitkashrut_bt.Text = "הסכם התקשרות";
+            this.open_hitkashrut_bt.UseVisualStyleBackColor = true;
+            this.open_hitkashrut_bt.Click += new System.EventHandler(this.open_hitkashrut_bt_Click);
+            // 
             // Mitmoded
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 358);
-            this.Controls.Add(this.tochnit_bt);
+            this.ClientSize = new System.Drawing.Size(724, 358);
+            this.Controls.Add(this.form_categories_tc);
             this.Controls.Add(this.coordinator_dynamic_lb);
             this.Controls.Add(this.coordinator_name_lb);
             this.Controls.Add(this.change_coordinator_bt);
             this.Controls.Add(this.close_bt);
-            this.Controls.Add(this.add_report_bt);
-            this.Controls.Add(this.add_employment_bt);
-            this.Controls.Add(this.show_reports_bt);
-            this.Controls.Add(this.show_employment_bt);
             this.Controls.Add(this.profile_pb);
-            this.Controls.Add(this.info_bt);
             this.Controls.Add(this.ID_dynamic_lb);
             this.Controls.Add(this.ID_lb);
             this.Controls.Add(this.name_dynamic_lb);
@@ -219,6 +284,10 @@
             this.Text = "Mitmoded";
             this.Load += new System.EventHandler(this.Mitmoded_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
+            this.form_categories_tc.ResumeLayout(false);
+            this.cat_personal_tab.ResumeLayout(false);
+            this.cat_report_tab.ResumeLayout(false);
+            this.cat_meeting_tab.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +310,10 @@
         private System.Windows.Forms.Label coordinator_name_lb;
         private System.Windows.Forms.Label coordinator_dynamic_lb;
         private System.Windows.Forms.Button tochnit_bt;
+        private System.Windows.Forms.TabControl form_categories_tc;
+        private System.Windows.Forms.TabPage cat_personal_tab;
+        private System.Windows.Forms.TabPage cat_report_tab;
+        private System.Windows.Forms.TabPage cat_meeting_tab;
+        private System.Windows.Forms.Button open_hitkashrut_bt;
     }
 }

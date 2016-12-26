@@ -111,5 +111,15 @@ namespace GvanimVS
             }
             this.Show();
         }
+
+        private void open_hitkashrut_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var hit = new Hitkashrut())
+            {
+                hit.ShowDialog();
+            }
+            this.Show();
+        }
     }
 }

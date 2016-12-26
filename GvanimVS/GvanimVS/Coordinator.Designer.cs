@@ -45,12 +45,13 @@
             this.editReport_bt.Name = "editReport_bt";
             this.editReport_bt.Size = new System.Drawing.Size(120, 23);
             this.editReport_bt.TabIndex = 1;
-            this.editReport_bt.Text = "ערוך דו\"ח";
+            this.editReport_bt.Text = "חפש דו\"ח";
             this.editReport_bt.UseVisualStyleBackColor = true;
             this.editReport_bt.Click += new System.EventHandler(this.editReport_bt_Click);
             // 
             // addMeeting_bt
             // 
+            this.addMeeting_bt.Enabled = false;
             this.addMeeting_bt.Location = new System.Drawing.Point(364, 175);
             this.addMeeting_bt.Name = "addMeeting_bt";
             this.addMeeting_bt.Size = new System.Drawing.Size(133, 23);
@@ -90,6 +91,7 @@
             // 
             // writeReport_bt
             // 
+            this.writeReport_bt.Enabled = false;
             this.writeReport_bt.Location = new System.Drawing.Point(364, 135);
             this.writeReport_bt.Name = "writeReport_bt";
             this.writeReport_bt.Size = new System.Drawing.Size(134, 23);
