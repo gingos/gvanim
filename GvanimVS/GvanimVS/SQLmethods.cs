@@ -67,6 +67,32 @@ namespace GvanimVS
             #endregion
             return true;
         }
+        public static bool upsertHitkashrut (string mitmodedID, string serializedOrganizer, SqlCommand cmd)
+        {
+            cmd.CommandText =
+            #region sqlQuery
+            "UPDATE " + SQLmethods.MITMODED
+            + " SET hitkashrutXML = @pHitkashrut WHERE ID = @pID";
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pID", mitmodedID);
+            cmd.Parameters.Add("@pHitkashrut", SqlDbType.Xml, serializedOrganizer.Length).Value = serializedOrganizer;
+
+            #endregion
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            #endregion
+            return true;
+        }
         public static bool upsertReport (string reportID, string mitmodedID, string firstName, string lastName, DateTime date, string report, string actions, string coordinatorID, SqlCommand cmd)
         {
             cmd.CommandText =

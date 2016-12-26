@@ -34,6 +34,8 @@ namespace GvanimVS
         {
             name_dynamic_lb.Text = dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["lastName"].ToString();
             coordinatorID = dt.Rows[0]["coordinatorID"].ToString();
+            //TODO:
+            //possible query: equal\inner join on "coordinatorID:
             coordinator_dynamic_lb.Text = getCoordinatorName(coordinatorID);
             if (!(dt.Rows[0]["photo"] is DBNull))
             {
@@ -115,7 +117,7 @@ namespace GvanimVS
         private void open_hitkashrut_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (var hit = new Hitkashrut())
+            using (var hit = new Hitkashrut(con, ID_dynamic_lb.Text))
             {
                 hit.ShowDialog();
             }
