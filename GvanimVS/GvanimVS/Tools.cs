@@ -112,7 +112,8 @@ namespace GvanimVS
                 col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
             }
             dgv.DataSource = dt2;
-        }       
+        } 
+              
         public static T DeserializeXML<T>(this string toDeserialize)
         {
             /*
@@ -122,6 +123,7 @@ namespace GvanimVS
             StringReader textReader = new StringReader(toDeserialize);
             return (T)xmlSerializer.Deserialize(textReader);
         }
+
         public static string SerializeXML<T>(this T toSerialize)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));

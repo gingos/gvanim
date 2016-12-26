@@ -299,6 +299,7 @@ namespace GvanimVS
                 imgChanged = true;
             }
         }
+
         private bool verifyFields()
         {
 
