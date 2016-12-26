@@ -50,6 +50,7 @@ namespace GvanimVS
                     if (control is TextBox)
                         if (control.Name.StartsWith("xml"))
                             xml_tab.Add(control.Name, control.Text);
+                                    
                     if (control is DateTimePicker)
                         xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
                     if (control is DataGridView)
@@ -70,26 +71,35 @@ namespace GvanimVS
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
-                    if (control is TextBox)
-                        if (control.Name.StartsWith("xml"))
-                            xml_tab.Add(control.Name, control.Text);
-
+                    if (control is GroupBox)
+                    {
+                        if (control.Name.StartsWith("xmlgr"))
+                        {
+                            foreach (RadioButton r in control.Controls.OfType<RadioButton>())
+                                if (r.Checked)
+                                    xml_tab.Add(control.Name, r.Text);
+                        }
+                    }
                 }
                 xml_organizer.Add(page.Name, xml_tab);
             }
 
-            foreach (TabPage page in this.tabControl2.TabPages)
-            {
-                SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
-                foreach (Control box in page.Controls)
-                    if (box is CheckedListBox)
-                {
-                    if (box.Name.StartsWith("xmlc"))
-                          xml_tab.Add(box.Name, ((CheckedListBox) box).CheckedItems.ToString());
-                }
-                xml_organizer.Add(page.Name, xml_tab);
+            //foreach (TabPage page in this.tabControl2.TabPages)
+            //{
+            //    SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
+            //    foreach (Control control in page.Controls)
+            //        if (control is GroupBox)
+            //        {
+            //            if (control.Name.StartsWith("xmlgr"))
+            //            {
+            //                var checkedButton = control.Controls.OfType<RadioButton>()
+            //                                .FirstOrDefault(r => r.Checked);
+            //                xml_tab.Add(control.Name, checkedButton.Text);
+            //            }
+            //        }
+            //    xml_organizer.Add(page.Name, xml_tab);
 
-            }
+          //  }
             string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
             return serializedOrganizer;
 
@@ -165,6 +175,16 @@ namespace GvanimVS
         private void quit_page_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
 }
