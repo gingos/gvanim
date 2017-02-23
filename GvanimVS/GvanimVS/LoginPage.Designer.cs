@@ -36,6 +36,7 @@
             this.login_bt = new System.Windows.Forms.Button();
             this.signup_bt = new System.Windows.Forms.Button();
             this.exit_bt = new System.Windows.Forms.Button();
+            this.indicator_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::GvanimVS.Properties.Resources.backgroundGvanim;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(41, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(507, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,6 +87,7 @@
             // 
             // login_bt
             // 
+            this.login_bt.Enabled = false;
             this.login_bt.Location = new System.Drawing.Point(328, 278);
             this.login_bt.Name = "login_bt";
             this.login_bt.Size = new System.Drawing.Size(75, 56);
@@ -96,6 +98,7 @@
             // 
             // signup_bt
             // 
+            this.signup_bt.Enabled = false;
             this.signup_bt.Location = new System.Drawing.Point(224, 278);
             this.signup_bt.Name = "signup_bt";
             this.signup_bt.Size = new System.Drawing.Size(75, 56);
@@ -113,11 +116,23 @@
             this.exit_bt.UseVisualStyleBackColor = true;
             this.exit_bt.Click += new System.EventHandler(this.exit_bt_Click);
             // 
+            // indicator_bt
+            // 
+            this.indicator_bt.BackColor = System.Drawing.Color.IndianRed;
+            this.indicator_bt.Location = new System.Drawing.Point(41, 12);
+            this.indicator_bt.Name = "indicator_bt";
+            this.indicator_bt.Size = new System.Drawing.Size(96, 23);
+            this.indicator_bt.TabIndex = 8;
+            this.indicator_bt.Text = "אין קישור";
+            this.indicator_bt.UseVisualStyleBackColor = false;
+            this.indicator_bt.Click += new System.EventHandler(this.indicator_bt_Click);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 360);
+            this.Controls.Add(this.indicator_bt);
             this.Controls.Add(this.exit_bt);
             this.Controls.Add(this.signup_bt);
             this.Controls.Add(this.login_bt);
@@ -128,6 +143,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "LoginPage";
             this.Text = "LoginPage";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,5 +160,6 @@
         private System.Windows.Forms.Button login_bt;
         private System.Windows.Forms.Button signup_bt;
         private System.Windows.Forms.Button exit_bt;
+        private System.Windows.Forms.Button indicator_bt;
     }
 }

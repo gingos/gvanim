@@ -17,32 +17,10 @@ namespace GvanimVS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            LoginPage login = tryConnection();
-            if (login!=null)
-                Application.Run(login);
-            else
-            {
-                MessageBox.Show("אין אפשרות לפתוח את מסך ההתחברות");
-            }
-            
+            LoginPage login = new LoginPage();
+            Application.Run(login);
+                        
         }
-        static LoginPage tryConnection()
-        {
-            string connectionString = "Data Source= gingos.database.windows.net;Initial Catalog=gvanimDB;Persist Security Info=True;User ID=gingos;Password=wolf20Schneid!";
-            SqlConnection con = new SqlConnection(connectionString);
-            try
-            {
-                con.Open();
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" +
-                    "\n" +
-                    "אנא נסי שוב בעוד מספר רגעים");
-                return null;
-
-            }
-            return new LoginPage(con);
-        }
+        
     }
 }

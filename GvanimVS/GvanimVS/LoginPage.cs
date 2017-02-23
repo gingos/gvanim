@@ -13,15 +13,34 @@ namespace GvanimVS
 {
     public partial class LoginPage : DBform
     {
+        string CONNECTIONSTRING = "Data Source= gingos.database.windows.net;Initial Catalog=gvanimDB;Persist Security Info=True;User ID=gingos;Password=wolf20Schneid!";
         /* TODO
          * add red\green status button
          * add "accept on enter" to press enter on keyboard and choose OK
          * 
          * 
          */
-        public LoginPage(SqlConnection con):base(con)
+        public LoginPage(SqlConnection con) : base(con)
         {
             InitializeComponent();
+        }
+        public LoginPage():base()
+        {
+            InitializeComponent();
+            con = new SqlConnection(CONNECTIONSTRING);
+        }
+
+        private void successLogin()
+        {
+            cmd = new SqlCommand();
+            cmd.Connection = con;
+            da = new SqlDataAdapter();
+
+            login_bt.Enabled = true;
+            signup_bt.Enabled = true;
+
+            indicator_bt.BackColor = Color.LightGreen;
+            indicator_bt.Text = "מחובר";
         }
 
         private void exit_bt_Click(object sender, EventArgs e)
@@ -85,6 +104,54 @@ namespace GvanimVS
                     MessageBox.Show("אנא בדקו שוב שם וסיסמא");
                     break;
             }
+        }
+
+        private Task<bool> CheckInternetConnectionAsync()
+        {
+            return Task<bool>.Run(() => {
+                if (con.State == ConnectionState.Open)
+                    return true;
+                try
+                {
+                    con.Open();
+                    return true;
+                }
+                catch
+                {
+                    MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" +
+                       "\n" +
+                       "אנא נסי שוב בעוד מספר רגעים");
+                    return false;
+                }
+            });
+        }
+        private async void CheckInternetConnection()
+        {
+            bool hasConnection = await CheckInternetConnectionAsync();
+            if (hasConnection)
+                successLogin();
+        }
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    con.Open();
+                    successLogin();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" +
+                        "\n" +
+                        "אנא נסי שוב בעוד מספר רגעים");
+                }
+            }
+        }
+
+        private void indicator_bt_Click(object sender, EventArgs e)
+        {
+            CheckInternetConnection();
         }
     }
 }

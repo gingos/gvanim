@@ -20,6 +20,7 @@ namespace GvanimVS
         public DBform()
         {
             InitializeComponent();
+
         }
         public DBform(SqlConnection con)
         {

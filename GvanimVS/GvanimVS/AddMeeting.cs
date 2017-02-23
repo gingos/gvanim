@@ -13,7 +13,7 @@ namespace GvanimVS
 {
     public partial class AddMeeting : DBform
     {
-        //TODO merge time picker and date picker
+        //TODO: is this class obsolete?
         public AddMeeting(SqlConnection con):base(con)
         {
             InitializeComponent();
