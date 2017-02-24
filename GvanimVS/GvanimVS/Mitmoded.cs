@@ -123,5 +123,15 @@ namespace GvanimVS
             }
             this.Show();
         }
+
+        private void confidentiality_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var conf = new Confidentiality(con, ID_dynamic_lb.Text))
+            {
+                conf.ShowDialog();
+            }
+            this.Show();
+        }
     }
 }

@@ -1,61 +1,65 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GvanimVS
 {
-    public partial class Hitkashrut : DBform
+    public partial class Confidentiality : DBform
     {
-        /* Hitkashrut Form Summary
-         * Upload and Download טופס התקשרות
-         * 
-         */
         private string ID;
         string serializedOrganizer, savedFileName, chosenFileName;
         byte[] savedFileBytes, chosenFileBytes;
         SerializableDictionary<string, string> xml_organizer;
+
+        private void close_bt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private bool chosenChanged;
 
-        /// <summary>
-        ///  Hitkashrut Empty c-tor (not used)
-        /// </summary>
-        public Hitkashrut()
+        public Confidentiality()
         {
             InitializeComponent();
         }
-        
+
         /// <summary>
-        /// Hitkashrut: init form using Mitmoded ID
+        /// Confidentiality: init form using Mitmoded ID
         /// </summary>
         /// <param name="con"> connection data</param>
         /// <param name="ID"> mitmoded ID</param>
-        public Hitkashrut(SqlConnection con, string ID) : base(con)
+        public Confidentiality(SqlConnection con, string ID) : base(con)
         {
             InitializeComponent();
             this.ID = ID;
             ID_dynamic_lb.Text = ID;
             xml_organizer = new SerializableDictionary<string, string>();
-            DataTable MainDT = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "firstName, lastName, hitkashrutXML", "ID" , this.ID , cmd, da);
+            DataTable MainDT = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "firstName, lastName, confidentialityXML", "ID", this.ID, cmd, da);
             savedFileName = null;
             savedFileBytes = null;
             initFieldsFromDT(MainDT);
             chosen_file_lb.Text = "בחרו קובץ חדש לעלות" + "\n" + "Jpeg, Doc, PDF";
             chosenChanged = false;
-            
         }
-        
+
         /// <summary>
         /// init labels and file from the DB on the server
         /// </summary>
         /// <param name="dt"> DataTable which holds ID and file info</param>
         private void initFieldsFromDT(DataTable dt)
-        {         
+        {
             name_dynamic_lb.Text = dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["lastName"].ToString();
-            initInfoTextBoxes(dt.Rows[0]["hitkashrutXML"].ToString());
+            initInfoTextBoxes(dt.Rows[0]["confidentialityXML"].ToString());
         }
-        
+
         /// <summary>
         /// retrieve labell and file
         /// </summary>
@@ -69,7 +73,7 @@ namespace GvanimVS
             }
             xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, string>>(OrganzierToDeserialize);
             last_signed_dynamic_lb.Text = xml_organizer["date"];
-            string[] fileFromXml =xml_organizer["file"].Split('@');
+            string[] fileFromXml = xml_organizer["file"].Split('@');
             saved_file__lb.Text = savedFileName = fileFromXml[0];
             savedFileBytes = strToByte(fileFromXml[1]);
         }
@@ -83,12 +87,25 @@ namespace GvanimVS
         {
             try
             {
-                openTempFile(global::GvanimVS.Properties.Resources.hitkashrut, ".pdf");
+                openTempFile(global::GvanimVS.Properties.Resources.confidentiality_pdf, ".pdf");
             }
-            catch (System.IO.IOException )
+            catch (System.IO.IOException)
             {
-                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation,  MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
             }
+        }
+
+        /// <summary>
+        /// open the file for preview
+        /// allocates temp file in \TEMP folder
+        /// </summary>
+        /// <param name="file"> byteArray of file to be opened</param>
+        /// <param name="fileType"> file suffix, to be used by system process</param>
+        private void openTempFile(byte[] file, string fileType)
+        {
+            string tempPath = System.IO.Path.GetTempFileName().Replace(".tmp", fileType);
+            System.IO.File.WriteAllBytes(tempPath, file);
+            System.Diagnostics.Process.Start(tempPath);
         }
 
         /// <summary>
@@ -156,11 +173,12 @@ namespace GvanimVS
                 return;
             }
             addToOrganizer();
-            
+
             serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_organizer);
             if (serializedOrganizer != null)
             {
-                if (SQLmethods.upsertHitkashrut(ID, serializedOrganizer, cmd))
+                //if (SQLmethods.upsertConfidentiality(ID, serializedOrganizer, cmd))
+                if (2>1)
                 {
                     MessageBox.Show("המידע נשמר בהצלחה");
                     saved_file__lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
@@ -229,7 +247,7 @@ namespace GvanimVS
         /// <returns></returns>
         private string byteToStr(byte[] bytes)
         {
-            return BitConverter.ToString(bytes);   
+            return BitConverter.ToString(bytes);
         }
 
         /// <summary>
@@ -238,7 +256,7 @@ namespace GvanimVS
         /// </summary>
         /// <param name="str"> byteArray as string</param>
         /// <returns></returns>
-        private byte[] strToByte (string str)
+        private byte[] strToByte(string str)
         {
             string[] tempAry = str.Split('-');
             byte[] decBytes2 = new byte[tempAry.Length];
@@ -263,7 +281,7 @@ namespace GvanimVS
             else
                 return null;
         }
-       
+
         /// <summary>
         /// return the byteArray of chosen file
         /// </summary>
@@ -280,29 +298,5 @@ namespace GvanimVS
             stream.Close();
             return fileByte;
         }
-
-        /// <summary>
-        /// open the file for preview
-        /// allocates temp file in \TEMP folder
-        /// </summary>
-        /// <param name="file"> byteArray of file to be opened</param>
-        /// <param name="fileType"> file suffix, to be used by system process</param>
-        private void openTempFile(byte[] file, string fileType)
-        {
-            string tempPath = System.IO.Path.GetTempFileName().Replace(".tmp", fileType);
-            System.IO.File.WriteAllBytes(tempPath, file);
-            System.Diagnostics.Process.Start(tempPath);
-        }
-
-       /// <summary>
-       /// close the form
-       /// </summary>
-       /// <param name="sender"></param>
-       /// <param name="e"></param>
-        private void close_bt_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
     }
 }
