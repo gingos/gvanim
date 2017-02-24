@@ -33,6 +33,11 @@ namespace GvanimVS
             this.Close();
         }
 
+        /// <summary>
+        /// Occures when "Login" button is clicked.
+        /// If username & password are valid, and connection available, will attempt user login.
+        /// if no connection available, force retry and then attempt user login
+        /// </summary>
         private void login_bt_Click(object sender, EventArgs e)
         {
             if (verifyFields())
@@ -57,6 +62,10 @@ namespace GvanimVS
                 }
             }
         }
+
+        /// <summary>
+        /// Verifies that username & password are not empty
+        /// </summary>
         private bool verifyFields()
         {
             if (user_tb.Text.Equals(""))
@@ -73,6 +82,10 @@ namespace GvanimVS
             }
             return true;
         }
+
+        /// <summary>
+        /// Compare user-specified Credentials to DB, show welcome message if correct
+        /// </summary>
         private void attemptLogin()
         {
             DataTable dt = SQLmethods.getDataTable(SQLmethods.USERS, user_tb.Text, password_tb.Text,
@@ -84,6 +97,11 @@ namespace GvanimVS
                 showWelcomeMessage(dt);
             }
         }
+
+        /// <summary>
+        /// Prints user's welcome: full name & position
+        /// </summary>
+        /// <param name="dt">User row from Employees table</param>
         private void showWelcomeMessage(DataTable dt)
         {
             DataRow dr = dt.Rows[0];
@@ -96,6 +114,10 @@ namespace GvanimVS
             signup_bt.Enabled = true;
             this.Show();
         }
+
+        /// <summary>
+        /// Open GUI according to its role
+        /// </summary>
         private void openMatchingUserGui(DataRow dr)
         {
             switch (dr["role"].ToString())
@@ -118,6 +140,10 @@ namespace GvanimVS
             }
         }
 
+        /// <summary>
+        /// Check for SQL Connection with server
+        /// catches no-connection (SQL Exception) and double-attempt (Invalid Operation)
+        /// </summary>
         private void CheckInternetConnectionSync()
         {
             
@@ -165,6 +191,10 @@ namespace GvanimVS
         }
         */
 
+        /// <summary>
+        /// As login page first shows, test SQL connection, if so, init sql-command and data reader
+        /// else, begin busy-wait thread on connection
+        /// </summary>
         private void LoginPage_Shown(object sender, EventArgs e)
         {
             if (con.State == ConnectionState.Closed)
@@ -180,6 +210,9 @@ namespace GvanimVS
             }
         }
 
+        /// <summary>
+        /// If no connection available, begin busy-wait thread
+        /// </summary>
         private void beginConnectionThread()
         {
             var th = new Thread(ExecuteInForeground);
@@ -189,6 +222,9 @@ namespace GvanimVS
             
         }
 
+        /// <summary>
+        /// This thread runs in the background: 15-sec intervals to retry sql connection
+        /// </summary>
         private void ExecuteInForeground()
         {
             do
@@ -203,6 +239,9 @@ namespace GvanimVS
 
         }
 
+        /// <summary>
+        /// Upon success, initialize sql classes and change indicator led to green
+        /// </summary>
         private void connectionSuccess()
         {
             cmd = new SqlCommand();
