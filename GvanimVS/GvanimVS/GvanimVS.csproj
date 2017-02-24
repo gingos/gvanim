@@ -221,6 +221,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\anonymous_profile.gif" />
+    <None Include="Resources\red.png" />
+    <None Include="Resources\green.png" />
     <None Include="Resources\backgroundGvanim.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

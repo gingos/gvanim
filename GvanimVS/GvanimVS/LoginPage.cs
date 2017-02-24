@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,34 +14,18 @@ namespace GvanimVS
 {
     public partial class LoginPage : DBform
     {
-        string CONNECTIONSTRING = "Data Source= gingos.database.windows.net;Initial Catalog=gvanimDB;Persist Security Info=True;User ID=gingos;Password=wolf20Schneid!";
-        /* TODO
-         * add red\green status button
-         * add "accept on enter" to press enter on keyboard and choose OK
-         * 
-         * 
-         */
+        string CONNECTION_STRING = "Data Source= gingos.database.windows.net;Initial Catalog=gvanimDB;Persist Security Info=True;User ID=gingos;Password=wolf20Schneid!";
+        volatile bool connected;
+
         public LoginPage(SqlConnection con) : base(con)
         {
             InitializeComponent();
         }
-        public LoginPage():base()
+        public LoginPage() : base()
         {
             InitializeComponent();
-            con = new SqlConnection(CONNECTIONSTRING);
-        }
-
-        private void successLogin()
-        {
-            cmd = new SqlCommand();
-            cmd.Connection = con;
-            da = new SqlDataAdapter();
-
-            login_bt.Enabled = true;
-            signup_bt.Enabled = true;
-
-            indicator_bt.BackColor = Color.LightGreen;
-            indicator_bt.Text = "מחובר";
+            con = new SqlConnection(CONNECTION_STRING);
+            connected = false;
         }
 
         private void exit_bt_Click(object sender, EventArgs e)
@@ -52,19 +37,23 @@ namespace GvanimVS
         {
             if (verifyFields())
             {
-                DataTable dt = SQLmethods.getDataTable(SQLmethods.USERS, user_tb.Text, password_tb.Text,
-                    cmd, da);
-                if (dt.Rows.Count == 0)
-                    MessageBox.Show("שם משתמש או סיסמא אינם נכונים");
+                if (connected)
+                {
+                    attemptLogin();
+                }
                 else
                 {
-                    DataRow dr = dt.Rows[0];
-                    MessageBox.Show("ברוך הבא\n " +
-                        dr["firstName"] + " " + dr["lastName"] + "\n" +
-                        dr["role"].ToString());
-                    this.Hide();
-                    openMatchingUserGui(dr);
-                    this.Show();
+                    login_bt.Enabled = false;
+                    signup_bt.Enabled = false;
+                    MessageBox.Show("קיימת בעיה בחיבור האינטרנט" + "\n" + "התכנית תנסה להתחבר שוב, אנא המתינו");
+                    CheckInternetConnectionSync();
+                    if (connected)
+                        attemptLogin();
+                    else
+                        MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" + "\n" + "אנא נסו שוב בעוד מספר רגעים");
+                    login_bt.Enabled = true;
+                    signup_bt.Enabled = true;
+
                 }
             }
         }
@@ -84,7 +73,30 @@ namespace GvanimVS
             }
             return true;
         }
-        private void openMatchingUserGui (DataRow dr)
+        private void attemptLogin()
+        {
+            DataTable dt = SQLmethods.getDataTable(SQLmethods.USERS, user_tb.Text, password_tb.Text,
+                        cmd, da);
+            if (dt.Rows.Count == 0)
+                MessageBox.Show("שם משתמש או סיסמא אינם נכונים");
+            else
+            {
+                showWelcomeMessage(dt);
+            }
+        }
+        private void showWelcomeMessage(DataTable dt)
+        {
+            DataRow dr = dt.Rows[0];
+            MessageBox.Show("ברוך הבא\n " +
+                dr["firstName"] + " " + dr["lastName"] + "\n" +
+                dr["role"].ToString());
+            this.Hide();
+            openMatchingUserGui(dr);
+            login_bt.Enabled = true;
+            signup_bt.Enabled = true;
+            this.Show();
+        }
+        private void openMatchingUserGui(DataRow dr)
         {
             switch (dr["role"].ToString())
             {
@@ -106,6 +118,26 @@ namespace GvanimVS
             }
         }
 
+        private void CheckInternetConnectionSync()
+        {
+            
+            try
+            {
+                con.Open();
+                connected = true;
+
+            }
+            catch (SqlException sqlex)
+            {
+                
+            }
+            catch (InvalidOperationException opex)
+            {
+                
+            }
+
+        }
+        /*
         private Task<bool> CheckInternetConnectionAsync()
         {
             return Task<bool>.Run(() => {
@@ -131,27 +163,53 @@ namespace GvanimVS
             if (hasConnection)
                 successLogin();
         }
-        private void LoginPage_Load(object sender, EventArgs e)
+        */
+
+        private void LoginPage_Shown(object sender, EventArgs e)
         {
             if (con.State == ConnectionState.Closed)
             {
-                try
+                CheckInternetConnectionSync();
+                if (connected)
+                    connectionSuccess();
+                else
                 {
-                    con.Open();
-                    successLogin();
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" +
-                        "\n" +
-                        "אנא נסי שוב בעוד מספר רגעים");
+                    beginConnectionThread();
+                    MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" + "\n" + "אנא נסו שוב בעוד מספר רגעים");
                 }
             }
         }
 
-        private void indicator_bt_Click(object sender, EventArgs e)
+        private void beginConnectionThread()
         {
-            CheckInternetConnection();
+            var th = new Thread(ExecuteInForeground);
+           
+            th.Start();
+            Console.WriteLine("Connection Thread Start");
+            
+        }
+
+        private void ExecuteInForeground()
+        {
+            do
+            {
+                Thread.Sleep(15000);
+                Console.WriteLine("Connection Thread Woke Up");
+                CheckInternetConnectionSync();
+                if (connected)
+                    connectionSuccess();
+                
+            } while (!connected);
+
+        }
+
+        private void connectionSuccess()
+        {
+            cmd = new SqlCommand();
+            cmd.Connection = con;
+            da = new SqlDataAdapter();
+
+            this.status_pb.Image = global::GvanimVS.Properties.Resources.green;
         }
     }
 }
