@@ -53,7 +53,10 @@ namespace GvanimVS
                     MessageBox.Show("קיימת בעיה בחיבור האינטרנט" + "\n" + "התכנית תנסה להתחבר שוב, אנא המתינו");
                     CheckInternetConnectionSync();
                     if (connected)
+                    {
+                        connectionSuccess();
                         attemptLogin();
+                    }
                     else
                         MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" + "\n" + "אנא נסו שוב בעוד מספר רגעים");
                     login_bt.Enabled = true;

@@ -76,7 +76,8 @@ namespace GvanimVS
                 if (dtSource.Columns.Count == 0) return null;
                 foreach (DataGridViewRow row in dgv.Rows)
                 {
-                    if (row.Index == dgv.Rows.Count-1)  //skip last row, added by default
+                    //if (row.Index == dgv.Rows.Count-1)  //skip last row, added by default
+                    if (isEmptyRow(row))
                         continue;
                     DataRow drNewRow = dtSource.NewRow();
                     foreach (DataColumn col in dtSource.Columns)
@@ -92,6 +93,16 @@ namespace GvanimVS
                 ex.ToString();
                 return null;
             }
+        }
+
+        private static bool isEmptyRow(DataGridViewRow row)
+        {
+            foreach (DataGridViewCell cell in row.Cells)
+            {
+                if (cell.Value != null)
+                    return false;
+            }
+            return true;
         }
 
         public static void initDataGridFromXML(string XMLfromSQL, DataGridView dgv)
@@ -110,6 +121,7 @@ namespace GvanimVS
             {
 
                 col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
+                col.HeaderText = dt2.Columns[col.Name].Caption;
             }
             dgv.DataSource = dt2;
         } 

@@ -44,8 +44,11 @@ namespace GvanimVS
         
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //TOOD:
-            // weird bug, this function fails when sorting
+            // column header cell is also a cell, with index -1
+            // sorting with double click caused an IndexOutOfBounds error
+            // first condition cancels the double-click-sorting bug
+            if (e.RowIndex == -1)
+                return;
             string first = mitmoded_dgv["firstName", e.RowIndex].Value.ToString();
             string last = mitmoded_dgv["lastName", e.RowIndex].Value.ToString();
             DialogResult dialogResult = MessageBox.Show("האם ברצונך לערוך את" + "\n" +first +" " + last, "אישור בחירת מתמודד", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
