@@ -50,13 +50,17 @@ namespace GvanimVS
             
         }
 
+        /// <summary>
+        /// fill the category column in the "skills" grid
+        /// </summary>
         private void fill_skills()
         {
+            // avoid column duplicate by disabling auto colomn creation
             skills_dgv.AutoGenerateColumns = false;
             skills_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             skills_dgv.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-
+            // change header font style
             System.Windows.Forms.DataGridViewCellStyle boldStyle = new System.Windows.Forms.DataGridViewCellStyle();
             boldStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             
@@ -93,11 +97,43 @@ namespace GvanimVS
 
 
 
-        }   //fill the category column in the "skills" grid
+        }
+
+        /// <summary>
+        /// fill category column in "job preferences" grid
+        /// </summary>
+        private void fill_jobPreferencesDGV()
+        {
+            job_preferences_dgv.Rows.Add(new string[] { "מקום דינאמי / שקט / רועש", "", "עבודות ניקיון כן / לא", "", "מכירות / שירות לקוחות כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "עבודה בחוץ / בפנים", "", "עבודה עם חומרים ומים כן / לא", "", "טלפונית / ישירות", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "בעלי חיים כן / לא", "", "מחשב / בלי מחשב", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "צמחייה כן / לא", "", "", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "מקום בתוך / מחוץ לעיר", "", "עבודה בישיבה כן / לא", "", "עבודה חרושתית כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "באזור תעשייה כן / לא", "", "עבודה בעמידה כן / לא", "", "חד-שלבית / מורכבת", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "בחוץ / בפנים", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "בעל רכב פרטי כן / לא", "", "עבודה בקרב אחרים / בודד", "", "עבודה עם מזון כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "יכול להגיע לעבודה באופן עצמאי כן / לא", "", "עבודה מול אדם / מכונה", "", "מלצור / בישול / מטבח כללי", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "עצמאי כן / לא", "", "", "", "בית קפה / מסעדה / קייטרינג", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "רישיון כן / לא", "", "", "", "", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "טיפול באנשים כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "ילדים / קשישים / נכות", "" });
+
+            // save existing rows as read only
+            /*
+            foreach (DataGridViewRow row in job_preferences_dgv.Rows)
+                row.ReadOnly = true;
+              */
+
+
+        }   //
+
+        /// <summary>
+        /// init category and input columns in "job preferences" grid
+        /// </summary>
         private void init_jobPreferencesDGV()
         {
+            // avoid column duplicate by disabling auto colomn creation
             job_preferences_dgv.AutoGenerateColumns = false;
-
             job_preferences_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             job_preferences_dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -137,33 +173,13 @@ namespace GvanimVS
             //job_preferences_dg.DataSource = dt;
             job_preferences_dgv.Columns.AddRange(location, locationInput, contents, contentsInput, type, typeInput);
             
-        }   //init category and input columns in "job preferences" grid
-        private void fill_jobPreferencesDGV()
-        {
-            job_preferences_dgv.Rows.Add(new string[] { "מקום דינאמי / שקט / רועש", "", "עבודות ניקיון כן / לא", "", "מכירות / שירות לקוחות כן / לא", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "עבודה בחוץ / בפנים", "", "עבודה עם חומרים ומים כן / לא", "", "טלפונית / ישירות", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "", "", "בעלי חיים כן / לא", "", "מחשב / בלי מחשב", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "", "", "צמחייה כן / לא", "", "", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "מקום בתוך / מחוץ לעיר", "", "עבודה בישיבה כן / לא", "", "עבודה חרושתית כן / לא", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "באזור תעשייה כן / לא", "", "עבודה בעמידה כן / לא", "", "חד-שלבית / מורכבת", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "בחוץ / בפנים", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "בעל רכב פרטי כן / לא", "", "עבודה בקרב אחרים / בודד", "", "עבודה עם מזון כן / לא", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "יכול להגיע לעבודה באופן עצמאי כן / לא", "", "עבודה מול אדם / מכונה", "", "מלצור / בישול / מטבח כללי", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "עצמאי כן / לא", "", "", "", "בית קפה / מסעדה / קייטרינג", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "רישיון כן / לא", "", "", "", "", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "טיפול באנשים כן / לא", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "ילדים / קשישים / נכות", "" });
+        }
 
-            // save existing rows as read only
-            /*
-            foreach (DataGridViewRow row in job_preferences_dgv.Rows)
-                row.ReadOnly = true;
-              */  
-
-
-        }   //fill category column in "job preferences" grid
-
-        private void initFieldsFromDT(DataTable dt) //init ALL controls from the data table retrieved from server (represents entire form)
+        /// <summary>
+        /// init ALL controls from the data table retrieved from server (represents entire form)
+        /// </summary>
+        /// <param name="dt">datatable hold form important fields & xml repr</param>
+        private void initFieldsFromDT(DataTable dt) 
         {
 
             foreach (DataRow dr in dt.Rows)
@@ -192,19 +208,25 @@ namespace GvanimVS
                 else
                     profile_pb.Image = Properties.Resources.anonymous_profile;
 
-                
+                //fill the non-critical form controls
                 initInfoTextBoxes(dr["intec_tabs"].ToString());
                 
             }
         }
 
+        /// <summary> 
+        /// fill the non-critical form controls
+        /// fill non-necessary text boxes (labeld "xml_*") 
+        /// using dictionary of dictionarys: per tab, and per text controls
+        /// using custom class - serializable dictionary 
+        /// </summary>
+        /// <param name="OrganzierToDeserialize">XML representation of non-critical controls</param>
         private void initInfoTextBoxes(string OrganzierToDeserialize)
         {
-            //fill non-necessary text boxes (labeld "xml_*")
-            //using dictionary of dictionarys: per tab, and per text controls
-            //using custom class - serializable dictionary 
+            
             if (OrganzierToDeserialize.Equals(""))
                 return;
+
             xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(OrganzierToDeserialize);
 
             foreach (KeyValuePair<string, SerializableDictionary<string, string>> dic in xml_organizer)
@@ -228,6 +250,12 @@ namespace GvanimVS
             
         }
 
+        /// <summary>
+        /// creates a dictionary of dictionarys, per tab, per text controls
+        /// using custom class - serializable dictionary 
+        /// returns the serialization xml as string
+        /// </summary>
+        /// <returns>XML repr of non-critical controls</returns>
         private string controlsToDictionary()
         {
             //creates a dictionary of dictionarys, per tab, per text controls
@@ -257,6 +285,9 @@ namespace GvanimVS
 
         }
 
+        /// <summary>
+        /// save all information to database
+        /// </summary>
         private void ok_bt_Click(object sender, EventArgs e)
         {
 
@@ -284,22 +315,11 @@ namespace GvanimVS
                 this.Close();
             }
         }
-        private void cancel_bt_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void profile_pb_Click(object sender, EventArgs e)
-        {
-            var FD = new System.Windows.Forms.OpenFileDialog();
-            if (FD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                profile_pb.ImageLocation = FD.FileName.ToString();
-                imgByte = GetPhoto(profile_pb.ImageLocation);
-                imgChanged = true;
-            }
-        }
-
+        /// <summary>
+        /// Verify all critical fields before save
+        /// </summary>
+        /// <returns>true if all are valid, false if one or more not</returns>
         private bool verifyFields()
         {
 
@@ -410,6 +430,34 @@ namespace GvanimVS
 
             return true;
         }
+
+        /// <summary>
+        /// close form
+        /// </summary>
+        private void cancel_bt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// change user photo
+        /// </summary>
+        private void profile_pb_Click(object sender, EventArgs e)
+        {
+            var FD = new System.Windows.Forms.OpenFileDialog();
+            if (FD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                profile_pb.ImageLocation = FD.FileName.ToString();
+                imgByte = GetPhoto(profile_pb.ImageLocation);
+                imgChanged = true;
+            }
+        }
+
+        /// <summary>
+        /// convert chose path to image byte[]
+        /// </summary>
+        /// <param name="imgLoc">path of image on user pc</param>
+        /// <returns>byte[] representation of image</returns>
         private byte[] GetPhoto(string imgLoc)
         {
             FileStream stream = new FileStream(
@@ -421,6 +469,10 @@ namespace GvanimVS
             stream.Close();
             return photo;
         }
+
+        /// <summary>
+        /// convert image resource from Image type to byte[]
+        /// </summary>
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
             using (var ms = new MemoryStream())
@@ -430,22 +482,41 @@ namespace GvanimVS
             }
         }
 
+        /// <summary>
+        /// only allow delete of rows with index >20
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skills_dgv_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             if (e.Row.Index <= 20)
                 e.Cancel = true;
 
         }
+
+        /// <summary>
+        /// only allow delete of user content cells
+        /// ignore action if cell changed is from system column (all even columns)
+        /// </summary>
         private void skills_dgv_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             if (e.RowIndex <=20 && e.ColumnIndex % 2 == 0)
                 e.Cancel = true;
         }
+
+        /// <summary>
+        /// only allow delete of rows with index >12
+        /// </summary>        
         private void job_preferences_dgv_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             if (e.Row.Index <= 12)
                 e.Cancel = true;
         }
+
+        /// <summary>
+        /// only allow delete of user content cells
+        /// ignore action if cell changed is from system column (all even columns)
+        /// </summary>
         private void job_preferences_dgv_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             if (e.RowIndex <=12 && e.ColumnIndex % 2 == 0)
