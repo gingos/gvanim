@@ -33,8 +33,12 @@ namespace GvanimVS
             MainDT = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
             initDataGridViews();
             initFieldsFromDT(MainDT);
+            xml_rehab_validity_cb.DataSource = bindDictionary();
         }
 
+        /// <summary>
+        /// init the skills datagrid and job preferences datagrid
+        /// </summary>
         private void initDataGridViews()
         {   
             /*
@@ -199,7 +203,7 @@ namespace GvanimVS
                 phone2_tb.Text = dr["phone2"].ToString();
                 coordinator_id_tb.Text = dr["coordinatorID"].ToString();
 
-                if (dr["photo"] != null)
+                if (dr["photo"] != DBNull.Value)    //was dr["photo"] != null
                 {
                     byte[] bytes = (byte[])dr["photo"];
                     var ms = new System.IO.MemoryStream(bytes);
@@ -216,10 +220,10 @@ namespace GvanimVS
 
         /// <summary> 
         /// fill the non-critical form controls
+        /// </summary>
         /// fill non-necessary text boxes (labeld "xml_*") 
         /// using dictionary of dictionarys: per tab, and per text controls
         /// using custom class - serializable dictionary 
-        /// </summary>
         /// <param name="OrganzierToDeserialize">XML representation of non-critical controls</param>
         private void initInfoTextBoxes(string OrganzierToDeserialize)
         {
@@ -238,7 +242,18 @@ namespace GvanimVS
                     if (controlKVP.Key.StartsWith("xml"))
                     {
                         if (page.Controls.ContainsKey(controlKVP.Key))
-                            page.Controls[controlKVP.Key].Text = controlKVP.Value;
+                        {
+                            if (page.Controls[controlKVP.Key] is TextBox)
+                                page.Controls[controlKVP.Key].Text = controlKVP.Value;
+                            else if ((page.Controls[controlKVP.Key] is DateTimePicker))
+                            {
+                                ((DateTimePicker)page.Controls[controlKVP.Key]).Value =
+                                   //DateTime.ParseExact("dd/MM/yyyy", controlKVP.Value, System.Globalization.CultureInfo.InvariantCulture);
+                                    DateTime.Parse(controlKVP.Value); //not restoring correct date(not saving? not restoring?)
+                                page.Controls[controlKVP.Key].Refresh();
+                            }
+                        }
+                        
                     }
                     else if (controlKVP.Key.Contains("dgv"))
                     {
@@ -251,32 +266,53 @@ namespace GvanimVS
         }
 
         /// <summary>
+        /// bind a "Text:Value" dictionary to committee duration combo box
+        /// </summary>
+        private BindingSource bindDictionary()
+        {
+            //for future reference, this is how you (worst case) access the members
+            //int monthsToAdd = ((KeyValuePair<string, int>)xml_rehab_validity_cb.SelectedItem).Value;
+            Dictionary<string, int> length = new Dictionary<string, int>();
+            length.Add("אנא בחרו משך זמן", 0);
+            length.Add("1 חודשים", 1);
+            length.Add("3 חודשים", 3);
+            length.Add("6 חודשים", 6);
+            length.Add("12 חודשים", 12);
+            xml_rehab_validity_cb.DisplayMember = "Key";
+            xml_rehab_validity_cb.ValueMember = "Value";
+            return new BindingSource(length, null);
+        }
+
+        /// <summary>
         /// creates a dictionary of dictionarys, per tab, per text controls
+        /// </summary>
         /// using custom class - serializable dictionary 
         /// returns the serialization xml as string
-        /// </summary>
         /// <returns>XML repr of non-critical controls</returns>
         private string controlsToDictionary()
         {
-            //creates a dictionary of dictionarys, per tab, per text controls
-            //using custom class - serializable dictionary 
-            //returns the serialization xml as string
             xml_organizer = new SerializableDictionary<string, SerializableDictionary<string, string>>();
             foreach (TabPage page in mitmoded_card_tc.TabPages)
             {
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
-                    if (control is TextBox)
-                        if (control.Name.StartsWith("xml"))
+                    if (control.Name.StartsWith("xml"))
+                    {
+                        if (control is TextBox)
                             xml_tab.Add(control.Name, control.Text);
+                        else if (control is DateTimePicker && ((DateTimePicker)control).Checked)
+                            xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
+                        else if (control is ComboBox)
+                            xml_tab.Add(control.Name, ((ComboBox)control).SelectedValue.ToString());
+                    }
+                    
                     if (control is DataGridView)
                         {
                             DataTable dt = Tools.GetContentAsDataTable((DataGridView)control, true);
                             string dtToXml = Tools.SerializeXML<DataTable>(dt);
                             xml_tab.Add(control.Name, dtToXml);
                         }
-                        
                 }
                 xml_organizer.Add(page.Name, xml_tab);
             }
@@ -428,6 +464,12 @@ namespace GvanimVS
                 return false;
             }
 
+            if (xml_rehab_committee_dtp.Checked && xml_rehab_validity_cb.SelectedIndex == 0)
+            {
+                MessageBox.Show("יש לבחור משך תוקף לאישור ההעסקה");
+                return false;
+            }
+
             return true;
         }
 
@@ -496,8 +538,8 @@ namespace GvanimVS
 
         /// <summary>
         /// only allow delete of user content cells
-        /// ignore action if cell changed is from system column (all even columns)
         /// </summary>
+        /// ignore action if cell changed is from system column (all even columns)
         private void skills_dgv_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             if (e.RowIndex <=20 && e.ColumnIndex % 2 == 0)
@@ -515,14 +557,33 @@ namespace GvanimVS
 
         /// <summary>
         /// only allow delete of user content cells
-        /// ignore action if cell changed is from system column (all even columns)
         /// </summary>
+        /// ignore action if cell changed is from system column (all even columns)
         private void job_preferences_dgv_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             if (e.RowIndex <=12 && e.ColumnIndex % 2 == 0)
                 e.Cancel = true;
         }
 
+        /// <summary>
+        /// add selected duration (in months) to committee's deadline
+        /// </summary>
+        private void xml_rehab_validity_cm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (xml_rehab_validity_cb.SelectedIndex != 0)
+            {
+                DateTime expires = xml_rehab_committee_dtp.Value;
+                int monthsToAdd = (int)xml_rehab_validity_cb.SelectedValue;
+                xml_rehab_validity_expires_lb.Text = expires.AddMonths(monthsToAdd).ToShortDateString();
+            }
+        }
 
+        /// <summary>
+        /// make the duration combo box "Enabled" only when committee approval date is chosen
+        /// </summary>
+        private void rehab_committee_dtp_ValueChanged(object sender, EventArgs e)
+        {
+            xml_rehab_validity_cb.Enabled = xml_rehab_committee_dtp.Checked ? true : false;
+        }
     }
 }

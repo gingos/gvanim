@@ -18,7 +18,22 @@ namespace GvanimVS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             LoginPage login = new LoginPage();
-            Application.Run(login);
+            while (true)
+            {
+                try
+                {
+                    Application.Run(login);
+                    break;
+                }
+                catch (TimeoutException)
+                {
+                    MessageBox.Show("הקשר עם השרת נותק. אנא בדקו את החיבור ונסו שוב");
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("הקשר עם השרת נותק. אנא בדקו את החיבור ונסו שוב");
+                }
+            }
                         
         }
         
