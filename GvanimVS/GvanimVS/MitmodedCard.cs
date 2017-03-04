@@ -257,6 +257,13 @@ namespace GvanimVS
                                 page.Controls[controlKVP.Key].Enabled = true;
                                 ((ComboBox)page.Controls[controlKVP.Key]).SelectedIndex = int.Parse (controlKVP.Value);
                             }
+                            else if ((page.Controls[controlKVP.Key] is Panel))
+                            {
+                                //xml_tab.Add(control.Name, ((Panel)control).Controls.OfType<RadioButton>().First(r => r.Checked).Name);
+                                RadioButton rb = (RadioButton)((Panel)page.Controls[controlKVP.Key]).Controls[controlKVP.Value]; 
+                                rb.Checked = true;
+                            }
+
                         }
                         
                     }
@@ -310,6 +317,8 @@ namespace GvanimVS
                             xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
                         else if (control is ComboBox)
                             xml_tab.Add(control.Name, ((ComboBox)control).SelectedIndex.ToString()); //was selected value
+                        else if (control is Panel)
+                            xml_tab.Add(control.Name, ((Panel)control).Controls.OfType<RadioButton>().First(r => r.Checked).Name);
                     }
                     
                     if (control is DataGridView)
@@ -476,7 +485,7 @@ namespace GvanimVS
                 MessageBox.Show("יש לבחור משך תוקף לאישור ההעסקה");
                 return false;
             }
-
+            
             return true;
         }
 
@@ -593,5 +602,9 @@ namespace GvanimVS
             xml_rehab_validity_cb.Enabled = xml_rehab_committee_dtp.Checked ? true : false;
         }
 
+        private void gender_pnl_VisibleChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine(sender.ToString());
+        }
     }
 }
