@@ -22,18 +22,19 @@ namespace GvanimVS
         public MitmodedCard(SqlConnection con) : base(con)
         {
             InitializeComponent();
-            imgChanged = false;
+            //imgChanged = false;
         }
         public MitmodedCard(SqlConnection con, string ID) : base(con)
         {
             InitializeComponent();
             this.ID = ID;
             ID_tb.Text = ID;
-            imgChanged = false;
+            //imgChanged = false;
             MainDT = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
             initDataGridViews();
-            initFieldsFromDT(MainDT);
             xml_rehab_validity_cb.DataSource = bindDictionary();
+            initFieldsFromDT(MainDT);
+            
         }
 
         /// <summary>
@@ -247,10 +248,14 @@ namespace GvanimVS
                                 page.Controls[controlKVP.Key].Text = controlKVP.Value;
                             else if ((page.Controls[controlKVP.Key] is DateTimePicker))
                             {
+                                ((DateTimePicker)page.Controls[controlKVP.Key]).Checked = true;
                                 ((DateTimePicker)page.Controls[controlKVP.Key]).Value =
-                                   //DateTime.ParseExact("dd/MM/yyyy", controlKVP.Value, System.Globalization.CultureInfo.InvariantCulture);
-                                    DateTime.Parse(controlKVP.Value); //not restoring correct date(not saving? not restoring?)
-                                page.Controls[controlKVP.Key].Refresh();
+                                    DateTime.Parse(controlKVP.Value); //DateTime.ParseExact("dd/MM/yyyy", controlKVP.Value, System.Globalization.CultureInfo.InvariantCulture);
+                            }
+                            else if ((page.Controls[controlKVP.Key] is ComboBox))
+                            {
+                                page.Controls[controlKVP.Key].Enabled = true;
+                                ((ComboBox)page.Controls[controlKVP.Key]).SelectedIndex = int.Parse (controlKVP.Value);
                             }
                         }
                         
@@ -304,7 +309,7 @@ namespace GvanimVS
                         else if (control is DateTimePicker && ((DateTimePicker)control).Checked)
                             xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
                         else if (control is ComboBox)
-                            xml_tab.Add(control.Name, ((ComboBox)control).SelectedValue.ToString());
+                            xml_tab.Add(control.Name, ((ComboBox)control).SelectedIndex.ToString()); //was selected value
                     }
                     
                     if (control is DataGridView)
@@ -436,6 +441,7 @@ namespace GvanimVS
                     return false;
                 }
             }
+            /*
             if (!imgChanged)
             {
                 DialogResult dialogResult = MessageBox.Show("לא נבחרה תמונה. האם ברצונך להמשיך?", "אישור בחירת תמונה", MessageBoxButtons.YesNo);
@@ -448,6 +454,7 @@ namespace GvanimVS
                     return false;
                 }
             }
+            */
             if (coordinator_id_tb.Text.Equals(""))
             {
                 MessageBox.Show("נא הכנס תעודת זהות של הרכזת");
@@ -491,7 +498,7 @@ namespace GvanimVS
             {
                 profile_pb.ImageLocation = FD.FileName.ToString();
                 imgByte = GetPhoto(profile_pb.ImageLocation);
-                imgChanged = true;
+                //imgChanged = true;
             }
         }
 
@@ -585,5 +592,6 @@ namespace GvanimVS
         {
             xml_rehab_validity_cb.Enabled = xml_rehab_committee_dtp.Checked ? true : false;
         }
+
     }
 }
