@@ -32,7 +32,10 @@ namespace GvanimVS
             //imgChanged = false;
             MainDT = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
             initDataGridViews();
-            xml_rehab_validity_cb.DataSource = bindDictionary();
+            //xml_rehab_validity_cb.DataSource = bindDictionary();
+            xml_rehab_validity_cb.DataSource = Tools.bindDictionary2<string, int>(new Dictionary<string, int>
+                { { "אנא בחרו משך זמן", 0 }, { "3 חודשים", 3 }, {"6 חודשים", 6 }, {"12 חודשים", 12 } },
+                xml_rehab_validity_cb);
             initFieldsFromDT(MainDT);
             
         }
@@ -294,6 +297,7 @@ namespace GvanimVS
             xml_rehab_validity_cb.ValueMember = "Value";
             return new BindingSource(length, null);
         }
+
 
         /// <summary>
         /// creates a dictionary of dictionarys, per tab, per text controls

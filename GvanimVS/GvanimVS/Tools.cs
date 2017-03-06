@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -144,6 +145,17 @@ namespace GvanimVS
             return textWriter.ToString();
         }
 
+        /// <summary>
+        /// bind a dictionary to committee duration combo box, using templates
+        /// </summary>
+        public static BindingSource bindDictionary2<T1, T2>(Dictionary<T1, T2> dic, Control control)
+        {
+            //for future reference, this is how you (worst case) access the members
+            //int monthsToAdd = ((KeyValuePair<string, int>)xml_rehab_validity_cb.SelectedItem).Value;
+            ((ComboBox)control).DisplayMember = "Key";
+            ((ComboBox)control).ValueMember = "Value";
+            return new BindingSource(dic, null);
+        }
 
     }
 }

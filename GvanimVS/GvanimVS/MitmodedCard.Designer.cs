@@ -51,8 +51,6 @@
             this.coordinator_id_tb = new System.Windows.Forms.TextBox();
             this.mitmoded_card_tc = new System.Windows.Forms.TabControl();
             this.mitmoded_personal_tab = new System.Windows.Forms.TabPage();
-            this.gender_female_rb = new System.Windows.Forms.RadioButton();
-            this.gender_male_rb = new System.Windows.Forms.RadioButton();
             this.sex_lb = new System.Windows.Forms.Label();
             this.xml_rehab_validity_expires_lb = new System.Windows.Forms.Label();
             this.validity_expires_lb = new System.Windows.Forms.Label();
@@ -63,6 +61,8 @@
             this.xml_intake_date_dtp = new System.Windows.Forms.DateTimePicker();
             this.intake_date_lb = new System.Windows.Forms.Label();
             this.xml_gender_pnl = new System.Windows.Forms.Panel();
+            this.gender_female_rb = new System.Windows.Forms.RadioButton();
+            this.gender_male_rb = new System.Windows.Forms.RadioButton();
             this.mitmoded_contacts_tab = new System.Windows.Forms.TabPage();
             this.xml_psychiatrist_phone_tb = new System.Windows.Forms.TextBox();
             this.psychiatrist_phone_lb = new System.Windows.Forms.Label();
@@ -166,6 +166,8 @@
             this.xml_job_target_tb = new System.Windows.Forms.TextBox();
             this.job_target_lb = new System.Windows.Forms.Label();
             this.mitmoded_print_tab = new System.Windows.Forms.TabPage();
+            this.xml_family_status_tb = new System.Windows.Forms.TextBox();
+            this.family_status_lb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.mitmoded_card_tc.SuspendLayout();
             this.mitmoded_personal_tab.SuspendLayout();
@@ -392,6 +394,8 @@
             // 
             // mitmoded_personal_tab
             // 
+            this.mitmoded_personal_tab.Controls.Add(this.xml_family_status_tb);
+            this.mitmoded_personal_tab.Controls.Add(this.family_status_lb);
             this.mitmoded_personal_tab.Controls.Add(this.sex_lb);
             this.mitmoded_personal_tab.Controls.Add(this.xml_rehab_validity_expires_lb);
             this.mitmoded_personal_tab.Controls.Add(this.validity_expires_lb);
@@ -429,28 +433,6 @@
             this.mitmoded_personal_tab.TabIndex = 0;
             this.mitmoded_personal_tab.Text = "פרטים אישיים";
             this.mitmoded_personal_tab.UseVisualStyleBackColor = true;
-            // 
-            // gender_female_rb
-            // 
-            this.gender_female_rb.AutoSize = true;
-            this.gender_female_rb.Location = new System.Drawing.Point(46, 4);
-            this.gender_female_rb.Name = "gender_female_rb";
-            this.gender_female_rb.Size = new System.Drawing.Size(51, 17);
-            this.gender_female_rb.TabIndex = 38;
-            this.gender_female_rb.TabStop = true;
-            this.gender_female_rb.Text = "נקבה";
-            this.gender_female_rb.UseVisualStyleBackColor = true;
-            // 
-            // gender_male_rb
-            // 
-            this.gender_male_rb.AutoSize = true;
-            this.gender_male_rb.Location = new System.Drawing.Point(143, 4);
-            this.gender_male_rb.Name = "gender_male_rb";
-            this.gender_male_rb.Size = new System.Drawing.Size(43, 17);
-            this.gender_male_rb.TabIndex = 37;
-            this.gender_male_rb.TabStop = true;
-            this.gender_male_rb.Text = "זכר";
-            this.gender_male_rb.UseVisualStyleBackColor = true;
             // 
             // sex_lb
             // 
@@ -546,6 +528,28 @@
             this.xml_gender_pnl.Size = new System.Drawing.Size(200, 25);
             this.xml_gender_pnl.TabIndex = 39;
             this.xml_gender_pnl.VisibleChanged += new System.EventHandler(this.gender_pnl_VisibleChanged);
+            // 
+            // gender_female_rb
+            // 
+            this.gender_female_rb.AutoSize = true;
+            this.gender_female_rb.Location = new System.Drawing.Point(46, 4);
+            this.gender_female_rb.Name = "gender_female_rb";
+            this.gender_female_rb.Size = new System.Drawing.Size(51, 17);
+            this.gender_female_rb.TabIndex = 38;
+            this.gender_female_rb.TabStop = true;
+            this.gender_female_rb.Text = "נקבה";
+            this.gender_female_rb.UseVisualStyleBackColor = true;
+            // 
+            // gender_male_rb
+            // 
+            this.gender_male_rb.AutoSize = true;
+            this.gender_male_rb.Location = new System.Drawing.Point(143, 4);
+            this.gender_male_rb.Name = "gender_male_rb";
+            this.gender_male_rb.Size = new System.Drawing.Size(43, 17);
+            this.gender_male_rb.TabIndex = 37;
+            this.gender_male_rb.TabStop = true;
+            this.gender_male_rb.Text = "זכר";
+            this.gender_male_rb.UseVisualStyleBackColor = true;
             // 
             // mitmoded_contacts_tab
             // 
@@ -1528,6 +1532,23 @@
             this.mitmoded_print_tab.Text = "חתימה והדפסה";
             this.mitmoded_print_tab.UseVisualStyleBackColor = true;
             // 
+            // xml_family_status_tb
+            // 
+            this.xml_family_status_tb.Location = new System.Drawing.Point(285, 196);
+            this.xml_family_status_tb.Name = "xml_family_status_tb";
+            this.xml_family_status_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_family_status_tb.TabIndex = 41;
+            // 
+            // family_status_lb
+            // 
+            this.family_status_lb.AutoSize = true;
+            this.family_status_lb.Location = new System.Drawing.Point(491, 196);
+            this.family_status_lb.Name = "family_status_lb";
+            this.family_status_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.family_status_lb.Size = new System.Drawing.Size(76, 13);
+            this.family_status_lb.TabIndex = 40;
+            this.family_status_lb.Text = "מצב משפחתי:";
+            // 
             // MitmodedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1706,5 +1727,7 @@
         private System.Windows.Forms.RadioButton gender_male_rb;
         private System.Windows.Forms.Label sex_lb;
         private System.Windows.Forms.Panel xml_gender_pnl;
+        private System.Windows.Forms.TextBox xml_family_status_tb;
+        private System.Windows.Forms.Label family_status_lb;
     }
 }
