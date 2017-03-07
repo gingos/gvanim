@@ -40,7 +40,8 @@ namespace GvanimVS
             DataTable MainDT = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "firstName, lastName, hitkashrutXML", "ID" , this.ID , cmd, da);
             savedFileName = null;
             savedFileBytes = null;
-            initFieldsFromDT(MainDT);
+            if (MainDT !=null)
+                initFieldsFromDT(MainDT);
             chosen_file_lb.Text = "בחרו קובץ חדש לעלות" + "\n" + "Jpeg, Doc, PDF";
             chosenChanged = false;
             
@@ -57,7 +58,7 @@ namespace GvanimVS
         }
         
         /// <summary>
-        /// retrieve labell and file
+        /// retrieve labels and file from server
         /// </summary>
         /// <param name="OrganzierToDeserialize"> serialized dictionary holds string data </param>
         private void initInfoTextBoxes(string OrganzierToDeserialize)
@@ -71,7 +72,7 @@ namespace GvanimVS
             last_signed_dynamic_lb.Text = xml_organizer["date"];
             string[] fileFromXml =xml_organizer["file"].Split('@');
             saved_file__lb.Text = savedFileName = fileFromXml[0];
-            savedFileBytes = strToByte(fileFromXml[1]);
+            savedFileBytes = Tools.strToByte(fileFromXml[1]);
         }
 
         /// <summary>
@@ -206,7 +207,7 @@ namespace GvanimVS
                 if (dialogResult == DialogResult.Yes)
                 {
                     string shortName = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
-                    xml_organizer["file"] = shortName + "@" + byteToStr(chosenFileBytes);
+                    xml_organizer["file"] = shortName + "@" + Tools.byteToStr(chosenFileBytes);
                     xml_organizer["date"] = System.DateTime.Now.ToShortDateString();
                 }
                 else
@@ -215,36 +216,10 @@ namespace GvanimVS
             else
             {
                 string shortName = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
-                xml_organizer.Add("file", shortName + "@" + byteToStr(chosenFileBytes));
+                xml_organizer.Add("file", shortName + "@" + Tools.byteToStr(chosenFileBytes));
                 xml_organizer.Add("date", System.DateTime.Now.ToShortDateString());
             }
 
-        }
-
-        /// <summary>
-        /// returns '-' delimited string representation of the byte array
-        /// {32,   0,   0,} --> "20-00-00"
-        /// </summary>
-        /// <param name="bytes"> byteArray to be converted</param>
-        /// <returns></returns>
-        private string byteToStr(byte[] bytes)
-        {
-            return BitConverter.ToString(bytes);   
-        }
-
-        /// <summary>
-        /// returns the original byteArray from the representing string
-        ///  "20-00-00" --> {32,   0,   0,}
-        /// </summary>
-        /// <param name="str"> byteArray as string</param>
-        /// <returns></returns>
-        private byte[] strToByte (string str)
-        {
-            string[] tempAry = str.Split('-');
-            byte[] decBytes2 = new byte[tempAry.Length];
-            for (int i = 0; i < tempAry.Length; i++)
-                decBytes2[i] = Convert.ToByte(tempAry[i], 16);
-            return decBytes2;
         }
 
         /// <summary>

@@ -37,6 +37,8 @@ namespace GvanimVS
             if (caller.Equals("from coordinator"))
             {
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "coordinatorID", coordinatorID, cmd, da);
+            if (dt == null)
+                return;
             foreach (DataRow dr in dt.Rows)
             {
                     comboBox1.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString() + " " + dr["ID"]);
@@ -46,9 +48,11 @@ namespace GvanimVS
         {
             ID_lb.Text = mitmodedID;
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "ID", mitmodedID, cmd, da);
-                mitmodedFirst = dt.Rows[0]["firstName"].ToString();
-                mitmodedLast = dt.Rows[0]["lastName"].ToString();
-                comboBox1.Items.Add(mitmodedFirst + " " + mitmodedLast + " " + mitmodedID);
+            if (dt == null)
+                return;
+            mitmodedFirst = dt.Rows[0]["firstName"].ToString();
+            mitmodedLast = dt.Rows[0]["lastName"].ToString();
+            comboBox1.Items.Add(mitmodedFirst + " " + mitmodedLast + " " + mitmodedID);
             comboBox1.SelectedIndex = 0;
             }
         }

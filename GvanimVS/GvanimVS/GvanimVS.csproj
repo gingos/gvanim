@@ -245,6 +245,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\anonymous_profile.gif" />
+    <None Include="Resources\personal_details.pdf" />
+    <EmbeddedResource Include="Resources\personal_details_template.docx" />
     <None Include="Resources\red.png" />
     <None Include="Resources\green.png" />
     <None Include="Resources\backgroundGvanim.jpg" />

@@ -22,13 +22,16 @@ namespace GvanimVS
         {
             InitializeComponent();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "ID, firstName, lastName, city", cmd, da);
-            mitmoded_dgv.DataSource = dt;
+            if (dt!=null)
+                mitmoded_dgv.DataSource = dt;
             changeDataHeadersToHebrew();
         }
         public SelectMimoded(SqlConnection con, string coordinatorID) : base(con)
         {
             InitializeComponent();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "ID, firstName, lastName, city", "coordinatorID", coordinatorID , cmd, da);
+            if (dt == null)
+                return;
             mitmoded_dgv.DataSource = dt;
             mitmoded_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             changeDataHeadersToHebrew();
@@ -88,6 +91,8 @@ namespace GvanimVS
             {
                 DataTable dt = (SQLmethods.searchUsersInTable(SQLmethods.MITMODED, ID_tb.Text, firstName_tb.Text,
                     lastName_tb.Text, city_tb.Text, cmd, da));
+                if (dt == null)
+                    return;
                 mitmoded_dgv.DataSource = dt;
             }
         }

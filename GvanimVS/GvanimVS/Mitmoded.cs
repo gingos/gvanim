@@ -27,7 +27,8 @@ namespace GvanimVS
             InitializeComponent();
             ID_dynamic_lb.Text = ID;
             DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
-            initFieldsFromDT(dt);
+            if (dt!= null)
+                initFieldsFromDT(dt);
         }
 
         private void initFieldsFromDT(DataTable dt)
@@ -49,6 +50,8 @@ namespace GvanimVS
         private string getCoordinatorName(string coordinatorID)
         {
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.USERS, "*", "ID", coordinatorID, cmd, da);
+            if (dt == null)
+                return null;
             return dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["lastName"].ToString();
         }
 

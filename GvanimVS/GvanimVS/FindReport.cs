@@ -18,9 +18,12 @@ namespace GvanimVS
         {
             InitializeComponent();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.REPORTS, "Id, mitmodedID, firstName, lastName, Created, Report, actions", cmd, da);
-            dataGridView1.DataSource = dt;
+            if (dt != null)
+                dataGridView1.DataSource = dt;
             changeDataHeadersToHebrew();
             DataTable dt1 = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "coordinatorID", coordinatorID, cmd, da);
+            if (dt1 == null)
+                return;
             foreach (DataRow dr in dt1.Rows)
             {
                 comboBox1.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString()
@@ -42,6 +45,8 @@ namespace GvanimVS
         private void searchReport_bt_Click(object sender, EventArgs e)
         {
            DataTable dt = SQLmethods.findReport(reportNum_tb.Text, comboBox1.SelectedItem.ToString(), dateTimePicker1.Value.Date, cmd, da);
+           if (dt == null)
+               return;
            dataGridView1.DataSource = dt;
            changeDataHeadersToHebrew();
             

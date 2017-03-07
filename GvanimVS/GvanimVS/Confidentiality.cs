@@ -39,14 +39,24 @@ namespace GvanimVS
         {
             InitializeComponent();
             this.ID = ID;
+            initMembers();
+            DataTable MainDT = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "firstName, lastName, confidentialityXML", "ID", this.ID, cmd, da);
+            if (MainDT != null)
+                initFieldsFromDT(MainDT);
+        }
+
+        /// <summary>
+        /// init global variables & labels
+        /// </summary>
+        private void initMembers()
+        {
             ID_dynamic_lb.Text = ID;
             xml_organizer = new SerializableDictionary<string, string>();
-            DataTable MainDT = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "firstName, lastName, confidentialityXML", "ID", this.ID, cmd, da);
             savedFileName = null;
             savedFileBytes = null;
-            initFieldsFromDT(MainDT);
-            chosen_file_lb.Text = "בחרו קובץ חדש להעלות" + "\n" + "Jpeg, Doc, PDF";
             chosenChanged = false;
+            chosen_file_lb.Text = "בחרו קובץ חדש להעלות" + "\n" + "Jpeg, Doc, PDF";
+
         }
 
         /// <summary>
@@ -60,7 +70,7 @@ namespace GvanimVS
         }
 
         /// <summary>
-        /// retrieve label and file
+        /// retrieve labels and file from server
         /// </summary>
         /// <param name="OrganzierToDeserialize"> serialized dictionary holds string data </param>
         private void initInfoTextBoxes(string OrganzierToDeserialize)
@@ -71,6 +81,8 @@ namespace GvanimVS
                 return;
             }
             xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, string>>(OrganzierToDeserialize);
+
+            //not all paramters have to change, checking individually
             if (xml_organizer.ContainsKey("date"))
                 last_signed_dynamic_lb.Text = xml_organizer["date"];
             else
@@ -78,9 +90,10 @@ namespace GvanimVS
 
             if (xml_organizer.ContainsKey("file"))
             {
+                //file is saved as name@byte[]
                 fileFromXml = xml_organizer["file"].Split('@');
                 saved_file__lb.Text = savedFileName = fileFromXml[0];
-                savedFileBytes = strToByte(fileFromXml[1]);
+                savedFileBytes = Tools.strToByte(fileFromXml[1]);
             }
             else
                 saved_file__lb.Text = "עדיין לא נחתם הסכם סודיות";
@@ -100,28 +113,14 @@ namespace GvanimVS
         {
             try
             {
-                openTempFile(global::GvanimVS.Properties.Resources.confidentiality_pdf, ".pdf");
+                Tools.openTempFile(CONF_PDF, ".pdf");
             }
             catch (System.IO.IOException)
             {
                 MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
             }
         }
-
-        /// <summary>
-        /// open the file for preview
-        /// allocates temp file in \TEMP folder
-        /// </summary>
-        /// <param name="file"> byteArray of file to be opened</param>
-        /// <param name="fileType"> file suffix, to be used by system process</param>
-        private void openTempFile(byte[] file, string fileType)
-        {
-
-            string tempPath = System.IO.Path.GetTempFileName().Replace(".tmp", fileType);
-            System.IO.File.WriteAllBytes(tempPath, file);
-            System.Diagnostics.Process.Start(tempPath);
-        }
-
+        
         /// <summary>
         /// opens dialog box to choose which file to upload
         /// </summary>
@@ -132,21 +131,13 @@ namespace GvanimVS
             if (chosenChanged)
             {
                 DialogResult dialogResult = MessageBox.Show("שימו לב: נבחר קובץ זמני. האם להחליפו?", "אישור בחירת קובץ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    chosenFileBytes = getFileFromUser();
-                    chosen_file_lb.Text = chosenFileName;
-                    chosenChanged = true;
-
-                }
-                else return;
+                if (dialogResult == DialogResult.No)
+                    return;
             }
-            else
-            {
-                chosenFileBytes = getFileFromUser();
-                chosen_file_lb.Text = chosenFileName;
-                chosenChanged = true;
-            }
+            chosenFileBytes = getFileFromUser();
+            chosen_file_lb.Text = chosenFileName;
+            chosenChanged = true;
+            
         }
 
         /// <summary>
@@ -165,7 +156,7 @@ namespace GvanimVS
             string suffix = chosenFileName.Substring(chosenFileName.LastIndexOf("."));
             try
             {
-                openTempFile(chosenFileBytes, suffix);
+                Tools.openTempFile(chosenFileBytes, suffix);
             }
             catch (System.IO.IOException)
             {
@@ -194,7 +185,7 @@ namespace GvanimVS
                 {
                     MessageBox.Show("המידע נשמר בהצלחה");
                     saved_file__lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
-                    last_signed_dynamic_lb.Text = System.DateTime.Now.ToShortDateString();
+                    last_signed_dynamic_lb.Text = xml_organizer["date"].ToString();
                 }
                 else
                     MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
@@ -217,7 +208,7 @@ namespace GvanimVS
             string suffix = savedFileName.Substring(savedFileName.LastIndexOf("."));
             try
             {
-                openTempFile(savedFileBytes, suffix);
+                Tools.openTempFile(savedFileBytes, suffix);
             }
             catch (System.IO.IOException)
             {
@@ -227,8 +218,9 @@ namespace GvanimVS
         }
 
         /// <summary>
-        /// helper function: determines if a file exists on dictionary
+        /// deprecated: using addToOrganizer1
         /// </summary>
+        /// helper function: determines if a file exists on dictionary
         private void addToOrganizer2()
         {
             string staff_dgv_xml = serializeDGV();
@@ -240,7 +232,7 @@ namespace GvanimVS
 
                     string shortName = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
                     //save file as: name@[byte representation]
-                    xml_organizer["file"] = shortName + "@" + byteToStr(chosenFileBytes);
+                    xml_organizer["file"] = shortName + "@" + Tools.byteToStr(chosenFileBytes);
                     xml_organizer["date"] = System.DateTime.Now.ToShortDateString();
                     xml_organizer["staff_dgv"] = staff_dgv_xml;
                 }
@@ -250,7 +242,7 @@ namespace GvanimVS
             else
             {
                 string shortName = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
-                xml_organizer["file"] = shortName + "@" + byteToStr(chosenFileBytes);
+                xml_organizer["file"] = shortName + "@" + Tools.byteToStr(chosenFileBytes);
                 xml_organizer["date"] = System.DateTime.Now.ToShortDateString();
                 xml_organizer["staff_dgv"] = staff_dgv_xml;
                 //save file as: name@[byte representation]
@@ -259,6 +251,10 @@ namespace GvanimVS
                 //xml_organizer.Add("staff_dgv", staff_dgv_xml);                
             }
         }
+
+        /// <summary>
+        /// helper function: determines if a file exists on dictionary
+        /// </summary>
         private void addToOrganizer()
         {
             string staff_dgv_xml = serializeDGV();
@@ -272,35 +268,9 @@ namespace GvanimVS
                 
             }
             string shortName = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
-            xml_organizer["file"] = shortName + "@" + byteToStr(chosenFileBytes);
+            xml_organizer["file"] = shortName + "@" + Tools.byteToStr(chosenFileBytes);
             xml_organizer["date"] = System.DateTime.Now.ToShortDateString();
             xml_organizer["staff_dgv"] = staff_dgv_xml;
-        }
-
-        /// <summary>
-        /// returns '-' delimited string representation of the byte array
-        /// {32,   0,   0,} --> "20-00-00"
-        /// </summary>
-        /// <param name="bytes"> byteArray to be converted</param>
-        /// <returns></returns>
-        private string byteToStr(byte[] bytes)
-        {
-            return BitConverter.ToString(bytes);
-        }
-
-        /// <summary>
-        /// returns the original byteArray from the representing string
-        ///  "20-00-00" --> {32,   0,   0,}
-        /// </summary>
-        /// <param name="str"> byteArray as string</param>
-        /// <returns></returns>
-        private byte[] strToByte(string str)
-        {
-            string[] tempAry = str.Split('-');
-            byte[] decBytes2 = new byte[tempAry.Length];
-            for (int i = 0; i < tempAry.Length; i++)
-                decBytes2[i] = Convert.ToByte(tempAry[i], 16);
-            return decBytes2;
         }
 
         /// <summary>
@@ -318,6 +288,23 @@ namespace GvanimVS
             }
             else
                 return null;
+        }
+
+        /// <summary>
+        /// return the byteArray of chosen file
+        /// </summary>
+        /// <param name="fileLoc"> file full path, to be converted to byteArray</param>
+        /// <returns></returns>
+        private byte[] GetBytes(string fileLoc)
+        {
+            FileStream stream = new FileStream(
+                fileLoc, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            BinaryReader reader = new BinaryReader(stream);
+            byte[] fileByte = reader.ReadBytes((int)stream.Length);
+
+            reader.Close();
+            stream.Close();
+            return fileByte;
         }
 
         /// <summary>
@@ -372,7 +359,7 @@ namespace GvanimVS
             MemoryStream ms = new MemoryStream();
             document.SaveToStream(ms, FileFormat.Doc);
             MessageBox.Show("עיבוד המסמך הסתיים" + "\n" + "שימו לב, עדיין חסרה חתימה למסמך עצמו", "עיבוד המסמך", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            openTempFile(ms.ToArray(), ".doc");          
+            Tools.openTempFile(ms.ToArray(), ".doc");          
             document.Close();
         }
 
@@ -445,32 +432,14 @@ namespace GvanimVS
         {
             try
             {
-                openTempFile(CONF_PDF, ".pdf");
+                Tools.openTempFile(CONF_PDF, ".pdf");
             }
             catch (System.IO.IOException)
             {
                 MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
             }
         }
-
-
-        /// <summary>
-        /// return the byteArray of chosen file
-        /// </summary>
-        /// <param name="fileLoc"> file full path, to be converted to byteArray</param>
-        /// <returns></returns>
-        private byte[] GetBytes(string fileLoc)
-        {
-            FileStream stream = new FileStream(
-                fileLoc, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            BinaryReader reader = new BinaryReader(stream);
-            byte[] fileByte = reader.ReadBytes((int)stream.Length);
-
-            reader.Close();
-            stream.Close();
-            return fileByte;
-        }
-
+        
         /// <summary>
         /// Allow a maximum of 4 people here
         /// if more than 4 rows, adding will be disabled

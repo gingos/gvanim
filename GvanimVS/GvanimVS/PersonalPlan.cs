@@ -30,9 +30,13 @@ namespace GvanimVS
             this.con = con;
             ID_tb.Text = text;
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "ID", text, cmd, da);
+            if (dt == null)
+                return;
             firstName_tb.Text = dt.Rows[0]["firstName"].ToString();
             lastName_tb.Text = dt.Rows[0]["lastName"].ToString();
             DataTable dt1 = SQLmethods.getColsFromTable(SQLmethods.USERS, "*", "ID", dt.Rows[0]["coordinatorID"].ToString(), cmd, da);
+            if (dt1 == null)
+                return;
             coord_tb.Text = dt1.Rows[0]["firstName"].ToString() + " " + dt1.Rows[0]["lastName"].ToString();
         }
 

@@ -93,6 +93,8 @@ namespace GvanimVS
         {
             DataTable dt = SQLmethods.getDataTable(SQLmethods.USERS, user_tb.Text, password_tb.Text,
                         cmd, da);
+            if (dt == null)
+                return;
             if (dt.Rows.Count == 0)
                 MessageBox.Show("שם משתמש או סיסמא אינם נכונים");
             else

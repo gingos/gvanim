@@ -12,12 +12,15 @@ namespace GvanimVS
 {
     public partial class MitmodedCard : DBform
     {
-        private byte[] imgByte;
-        private bool imgChanged;
-        private string ID;
+        byte[] PERSONAL_PDF = global::GvanimVS.Properties.Resources.personal_details;
+        byte[] PERSONAL_DOC = global::GvanimVS.Properties.Resources.personal_details_template;
+
+        private byte[] imgByte, chosenFileBytes;
+        //private bool imgChanged;
+        private string ID, chosenFileName;
         private DataTable MainDT;
         private SerializableDictionary<string, SerializableDictionary<string, string>> xml_organizer;
-
+        private bool chosenChanged;
 
         public MitmodedCard(SqlConnection con) : base(con)
         {
@@ -28,16 +31,28 @@ namespace GvanimVS
         {
             InitializeComponent();
             this.ID = ID;
-            ID_tb.Text = ID;
+            initMembers();
             //imgChanged = false;
             MainDT = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
             initDataGridViews();
             //xml_rehab_validity_cb.DataSource = bindDictionary();
+            if (MainDT != null)
+                initFieldsFromDT(MainDT);
+            
+        }
+
+        /// <summary>
+        /// Confidentiality: init form using Mitmoded ID
+        /// </summary>
+        /// <param name="con"> connection data</param>
+        /// <param name="ID"> mitmoded ID</param>
+        private void initMembers()
+        {
+            ID_tb.Text = ID;
+            chosenChanged = false;
             xml_rehab_validity_cb.DataSource = Tools.bindDictionary2<string, int>(new Dictionary<string, int>
                 { { "אנא בחרו משך זמן", 0 }, { "3 חודשים", 3 }, {"6 חודשים", 6 }, {"12 חודשים", 12 } },
                 xml_rehab_validity_cb);
-            initFieldsFromDT(MainDT);
-            
         }
 
         /// <summary>
@@ -191,9 +206,11 @@ namespace GvanimVS
         {
 
             foreach (DataRow dr in dt.Rows)
-            {   
+            {
+                ID_dynamic_lb.Text = ID;
                 firstName_tb.Text = dr["firstName"].ToString();
                 lastName_tb.Text = dr["lastName"].ToString();
+                name_dynamic_lb.Text = firstName_tb.Text + lastName_tb.Text;
                 if (dr["birthday"] != null)
                 {
                     birth_dtp.Value = (DateTime)dr["birthday"];
@@ -217,7 +234,7 @@ namespace GvanimVS
                     profile_pb.Image = Properties.Resources.anonymous_profile;
 
                 //fill the non-critical form controls
-                initInfoTextBoxes(dr["intec_tabs"].ToString());
+                initInfoTextBoxes(dr["intecXML"].ToString());
                 
             }
         }
@@ -280,24 +297,6 @@ namespace GvanimVS
             
         }
 
-        /// <summary>
-        /// bind a "Text:Value" dictionary to committee duration combo box
-        /// </summary>
-        private BindingSource bindDictionary()
-        {
-            //for future reference, this is how you (worst case) access the members
-            //int monthsToAdd = ((KeyValuePair<string, int>)xml_rehab_validity_cb.SelectedItem).Value;
-            Dictionary<string, int> length = new Dictionary<string, int>();
-            length.Add("אנא בחרו משך זמן", 0);
-            length.Add("1 חודשים", 1);
-            length.Add("3 חודשים", 3);
-            length.Add("6 חודשים", 6);
-            length.Add("12 חודשים", 12);
-            xml_rehab_validity_cb.DisplayMember = "Key";
-            xml_rehab_validity_cb.ValueMember = "Value";
-            return new BindingSource(length, null);
-        }
-
 
         /// <summary>
         /// creates a dictionary of dictionarys, per tab, per text controls
@@ -310,6 +309,11 @@ namespace GvanimVS
             xml_organizer = new SerializableDictionary<string, SerializableDictionary<string, string>>();
             foreach (TabPage page in mitmoded_card_tc.TabPages)
             {
+                if (page.Name.Equals("mitmoded_print_tab"))
+                {
+                    addToOrganizer();
+                    continue;
+                }
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
@@ -322,7 +326,8 @@ namespace GvanimVS
                         else if (control is ComboBox)
                             xml_tab.Add(control.Name, ((ComboBox)control).SelectedIndex.ToString()); //was selected value
                         else if (control is Panel)
-                            xml_tab.Add(control.Name, ((Panel)control).Controls.OfType<RadioButton>().First(r => r.Checked).Name);
+                            if (((Panel)control).Controls.OfType<RadioButton>().Any(r => r.Checked))
+                                xml_tab.Add(control.Name, ((Panel)control).Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Name);
                     }
                     
                     if (control is DataGridView)
@@ -606,9 +611,147 @@ namespace GvanimVS
             xml_rehab_validity_cb.Enabled = xml_rehab_committee_dtp.Checked ? true : false;
         }
 
-        private void gender_pnl_VisibleChanged(object sender, EventArgs e)
+        /// <summary>
+        /// open file: an empty template of hitkashrut form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void show_pdf_bt_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(sender.ToString());
+            try
+            {
+                Tools.openTempFile(PERSONAL_PDF, ".pdf");
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+            }
+        }
+
+        /// <summary>
+        /// opens dialog box to choose which file to upload
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void choose_file_bt_Click(object sender, EventArgs e)
+        {
+            if (chosenChanged)
+            {
+                DialogResult dialogResult = MessageBox.Show("שימו לב: נבחר קובץ זמני. האם להחליפו?", "אישור בחירת קובץ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+                if (dialogResult == DialogResult.No)
+                    return;
+            }
+            chosenFileBytes = getFileFromUser();
+            chosen_file_lb.Text = chosenFileName;
+            chosenChanged = true;
+        }
+
+        /// <summary>
+        /// opens fileDialog to choose file
+        /// returns byteArray of chosen file
+        /// </summary>
+        /// <returns></returns>
+        private byte[] getFileFromUser()
+        {
+            var FD = new System.Windows.Forms.OpenFileDialog();
+            if (FD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                chosenFileName = FD.FileName.ToString();
+                return GetBytes(chosenFileName);
+            }
+            else
+                return null;
+        }
+
+        /// <summary>
+        /// return the byteArray of chosen file
+        /// </summary>
+        /// <param name="fileLoc"> file full path, to be converted to byteArray</param>
+        /// <returns></returns>
+        private byte[] GetBytes(string fileLoc)
+        {
+            FileStream stream = new FileStream(
+                fileLoc, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            BinaryReader reader = new BinaryReader(stream);
+            byte[] fileByte = reader.ReadBytes((int)stream.Length);
+
+            reader.Close();
+            stream.Close();
+            return fileByte;
+        }
+
+        /// <summary>
+        /// preview selected file (warns user if not chosen)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void preview_selected_bt_Click(object sender, EventArgs e)
+        {
+            if (chosenFileBytes == null)
+            {
+                MessageBox.Show("יש לבחור קובץ");
+                return;
+            }
+            // get suffix to decide file type   
+            string suffix = chosenFileName.Substring(chosenFileName.LastIndexOf("."));
+            try
+            {
+                Tools.openTempFile(chosenFileBytes, suffix);
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+            }
+
+        }
+
+        /// <summary>
+        /// update dictionary and upload it to SQL. can only hold one record!
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void upload_file_bt_Click(object sender, EventArgs e)
+        {
+            if (chosenFileBytes == null)
+            {
+                MessageBox.Show("יש לבחור קובץ קודם");
+                return;
+            }
+            if (xml_organizer.ContainsKey("mitmoded_print_tab"))
+            {
+                DialogResult dialogResult = MessageBox.Show("שימו לב: העלאת מסמך חדש תמחוק את המסמך הקודם." + "\n" + "האם ברצונכם להמשיך?", "אישור בחירת קובץ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            addToOrganizer();
+            string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
+            if (serializedOrganizer != null)
+            {
+                if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "intecXML","ID",ID,serializedOrganizer,cmd))
+                {
+                    MessageBox.Show("המידע נשמר בהצלחה");
+                    saved_file__lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
+                    last_signed_dynamic_lb.Text = xml_organizer["mitmoded_print_tab"]["date"].ToString();
+                }
+                else
+                    MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
+            }
+        }
+
+        /// <summary>
+        /// helper function: determines if a file exists on dictionary
+        /// </summary>
+        private void addToOrganizer()
+        {
+            
+            SerializableDictionary<string, string> print_tab = new SerializableDictionary<string, string>();
+            string shortName = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
+            print_tab["file"] = shortName + "@" + Tools.byteToStr(chosenFileBytes);
+            print_tab["date"] = System.DateTime.Now.ToShortDateString();
+
+            xml_organizer["mitmoded_print_tab"] = print_tab;
         }
     }
 }
