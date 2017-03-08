@@ -253,7 +253,7 @@ namespace GvanimVS
                 return;
 
             xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(OrganzierToDeserialize);
-
+            
             foreach (KeyValuePair<string, SerializableDictionary<string, string>> dic in xml_organizer)
             {
                 TabPage page = mitmoded_card_tc.TabPages[dic.Key];
@@ -276,6 +276,7 @@ namespace GvanimVS
                             {
                                 page.Controls[controlKVP.Key].Enabled = true;
                                 ((ComboBox)page.Controls[controlKVP.Key]).SelectedIndex = int.Parse (controlKVP.Value);
+                                //((ComboBox)page.Controls[controlKVP.Key]).SelectedItem = int.Parse(controlKVP.Value);
                             }
                             else if ((page.Controls[controlKVP.Key] is Panel))
                             {
@@ -311,7 +312,8 @@ namespace GvanimVS
             {
                 if (page.Name.Equals("mitmoded_print_tab"))
                 {
-                    addToOrganizer();
+                    if (chosenFileBytes!=null)
+                        addToOrganizer();
                     continue;
                 }
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
@@ -732,8 +734,8 @@ namespace GvanimVS
                 if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "intecXML","ID",ID,serializedOrganizer,cmd))
                 {
                     MessageBox.Show("המידע נשמר בהצלחה");
-                    saved_file__lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
-                    last_signed_dynamic_lb.Text = xml_organizer["mitmoded_print_tab"]["date"].ToString();
+                    xml_saved_file__lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
+                    xml_last_signed_dynamic_lb.Text = xml_organizer["mitmoded_print_tab"]["xml_last_signed_dynamic_lb"].ToString();
                 }
                 else
                     MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
@@ -748,10 +750,12 @@ namespace GvanimVS
             
             SerializableDictionary<string, string> print_tab = new SerializableDictionary<string, string>();
             string shortName = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
-            print_tab["file"] = shortName + "@" + Tools.byteToStr(chosenFileBytes);
-            print_tab["date"] = System.DateTime.Now.ToShortDateString();
+            print_tab["chosenfilebytes"] = Tools.byteToStr(chosenFileBytes);
+            print_tab["xml_saved_file__lb"] = shortName;
+            print_tab["xml_last_signed_dynamic_lb"] = System.DateTime.Now.ToShortDateString();
 
             xml_organizer["mitmoded_print_tab"] = print_tab;
+            
         }
     }
 }

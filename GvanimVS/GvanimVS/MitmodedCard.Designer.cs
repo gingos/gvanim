@@ -170,9 +170,9 @@
             this.job_target_lb = new System.Windows.Forms.Label();
             this.mitmoded_print_tab = new System.Windows.Forms.TabPage();
             this.export_bt = new System.Windows.Forms.Button();
-            this.last_signed_dynamic_lb = new System.Windows.Forms.Label();
+            this.xml_last_signed_dynamic_lb = new System.Windows.Forms.Label();
             this.last_signed_lb = new System.Windows.Forms.Label();
-            this.saved_file__lb = new System.Windows.Forms.Label();
+            this.xml_saved_file__lb = new System.Windows.Forms.Label();
             this.chosen_file_lb = new System.Windows.Forms.Label();
             this.preview_saved_bt = new System.Windows.Forms.Button();
             this.preview_selected_bt = new System.Windows.Forms.Button();
@@ -1567,9 +1567,9 @@
             // mitmoded_print_tab
             // 
             this.mitmoded_print_tab.Controls.Add(this.export_bt);
-            this.mitmoded_print_tab.Controls.Add(this.last_signed_dynamic_lb);
+            this.mitmoded_print_tab.Controls.Add(this.xml_last_signed_dynamic_lb);
             this.mitmoded_print_tab.Controls.Add(this.last_signed_lb);
-            this.mitmoded_print_tab.Controls.Add(this.saved_file__lb);
+            this.mitmoded_print_tab.Controls.Add(this.xml_saved_file__lb);
             this.mitmoded_print_tab.Controls.Add(this.chosen_file_lb);
             this.mitmoded_print_tab.Controls.Add(this.preview_saved_bt);
             this.mitmoded_print_tab.Controls.Add(this.preview_selected_bt);
@@ -1597,15 +1597,15 @@
             this.export_bt.Text = "צור קובץ מוכן להדפסה";
             this.export_bt.UseVisualStyleBackColor = true;
             // 
-            // last_signed_dynamic_lb
+            // xml_last_signed_dynamic_lb
             // 
-            this.last_signed_dynamic_lb.AutoSize = true;
-            this.last_signed_dynamic_lb.Location = new System.Drawing.Point(402, 70);
-            this.last_signed_dynamic_lb.Name = "last_signed_dynamic_lb";
-            this.last_signed_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.last_signed_dynamic_lb.Size = new System.Drawing.Size(72, 13);
-            this.last_signed_dynamic_lb.TabIndex = 38;
-            this.last_signed_dynamic_lb.Text = "<last_signed>";
+            this.xml_last_signed_dynamic_lb.AutoSize = true;
+            this.xml_last_signed_dynamic_lb.Location = new System.Drawing.Point(402, 70);
+            this.xml_last_signed_dynamic_lb.Name = "xml_last_signed_dynamic_lb";
+            this.xml_last_signed_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.xml_last_signed_dynamic_lb.Size = new System.Drawing.Size(72, 13);
+            this.xml_last_signed_dynamic_lb.TabIndex = 38;
+            this.xml_last_signed_dynamic_lb.Text = "<last_signed>";
             // 
             // last_signed_lb
             // 
@@ -1617,18 +1617,18 @@
             this.last_signed_lb.TabIndex = 37;
             this.last_signed_lb.Text = "תאריך חתימה אחרון: ";
             // 
-            // saved_file__lb
+            // xml_saved_file__lb
             // 
-            this.saved_file__lb.AutoEllipsis = true;
-            this.saved_file__lb.AutoSize = true;
-            this.saved_file__lb.Location = new System.Drawing.Point(838, 304);
-            this.saved_file__lb.Name = "saved_file__lb";
-            this.saved_file__lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.saved_file__lb.Size = new System.Drawing.Size(99, 13);
-            this.saved_file__lb.TabIndex = 36;
-            this.saved_file__lb.Text = "<saved_file_name>";
-            this.saved_file__lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.saved_file__lb.Visible = false;
+            this.xml_saved_file__lb.AutoEllipsis = true;
+            this.xml_saved_file__lb.AutoSize = true;
+            this.xml_saved_file__lb.Location = new System.Drawing.Point(838, 304);
+            this.xml_saved_file__lb.Name = "xml_saved_file__lb";
+            this.xml_saved_file__lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.xml_saved_file__lb.Size = new System.Drawing.Size(99, 13);
+            this.xml_saved_file__lb.TabIndex = 36;
+            this.xml_saved_file__lb.Text = "<saved_file_name>";
+            this.xml_saved_file__lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.xml_saved_file__lb.Visible = false;
             // 
             // chosen_file_lb
             // 
@@ -1923,9 +1923,9 @@
         private System.Windows.Forms.Label family_status_lb;
         private System.Windows.Forms.TextBox xml_job_scope_tb;
         private System.Windows.Forms.Button export_bt;
-        private System.Windows.Forms.Label last_signed_dynamic_lb;
+        private System.Windows.Forms.Label xml_last_signed_dynamic_lb;
         private System.Windows.Forms.Label last_signed_lb;
-        private System.Windows.Forms.Label saved_file__lb;
+        private System.Windows.Forms.Label xml_saved_file__lb;
         private System.Windows.Forms.Label chosen_file_lb;
         private System.Windows.Forms.Button preview_saved_bt;
         private System.Windows.Forms.Button preview_selected_bt;
