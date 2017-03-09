@@ -33,7 +33,7 @@
             this.name_dynamic_lb = new System.Windows.Forms.Label();
             this.ID_dynamic_lb = new System.Windows.Forms.Label();
             this.show_pdf_bt = new System.Windows.Forms.Button();
-            this.saved_file__lb = new System.Windows.Forms.Label();
+            this.saved_file_lb = new System.Windows.Forms.Label();
             this.chosen_file_lb = new System.Windows.Forms.Label();
             this.preview_saved_bt = new System.Windows.Forms.Button();
             this.preview_selected_bt = new System.Windows.Forms.Button();
@@ -103,18 +103,18 @@
             this.show_pdf_bt.UseVisualStyleBackColor = true;
             this.show_pdf_bt.Click += new System.EventHandler(this.show_pdf_bt_Click_1);
             // 
-            // saved_file__lb
+            // saved_file_lb
             // 
-            this.saved_file__lb.AutoEllipsis = true;
-            this.saved_file__lb.AutoSize = true;
-            this.saved_file__lb.Location = new System.Drawing.Point(736, 290);
-            this.saved_file__lb.Name = "saved_file__lb";
-            this.saved_file__lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.saved_file__lb.Size = new System.Drawing.Size(99, 13);
-            this.saved_file__lb.TabIndex = 20;
-            this.saved_file__lb.Text = "<saved_file_name>";
-            this.saved_file__lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.saved_file__lb.Visible = false;
+            this.saved_file_lb.AutoEllipsis = true;
+            this.saved_file_lb.AutoSize = true;
+            this.saved_file_lb.Location = new System.Drawing.Point(736, 290);
+            this.saved_file_lb.Name = "saved_file_lb";
+            this.saved_file_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.saved_file_lb.Size = new System.Drawing.Size(99, 13);
+            this.saved_file_lb.TabIndex = 20;
+            this.saved_file_lb.Text = "<saved_file_name>";
+            this.saved_file_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.saved_file_lb.Visible = false;
             // 
             // chosen_file_lb
             // 
@@ -248,7 +248,7 @@
             this.Controls.Add(this.last_signed_dynamic_lb);
             this.Controls.Add(this.last_signed_lb);
             this.Controls.Add(this.close_bt);
-            this.Controls.Add(this.saved_file__lb);
+            this.Controls.Add(this.saved_file_lb);
             this.Controls.Add(this.chosen_file_lb);
             this.Controls.Add(this.preview_saved_bt);
             this.Controls.Add(this.preview_selected_bt);
@@ -274,7 +274,7 @@
         private System.Windows.Forms.Label name_dynamic_lb;
         private System.Windows.Forms.Label ID_dynamic_lb;
         private System.Windows.Forms.Button show_pdf_bt;
-        private System.Windows.Forms.Label saved_file__lb;
+        private System.Windows.Forms.Label saved_file_lb;
         private System.Windows.Forms.Label chosen_file_lb;
         private System.Windows.Forms.Button preview_saved_bt;
         private System.Windows.Forms.Button preview_selected_bt;

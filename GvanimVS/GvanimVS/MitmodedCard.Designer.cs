@@ -172,7 +172,7 @@
             this.export_bt = new System.Windows.Forms.Button();
             this.xml_last_signed_dynamic_lb = new System.Windows.Forms.Label();
             this.last_signed_lb = new System.Windows.Forms.Label();
-            this.xml_saved_file__lb = new System.Windows.Forms.Label();
+            this.xml_saved_file_lb = new System.Windows.Forms.Label();
             this.chosen_file_lb = new System.Windows.Forms.Label();
             this.preview_saved_bt = new System.Windows.Forms.Button();
             this.preview_selected_bt = new System.Windows.Forms.Button();
@@ -1569,7 +1569,7 @@
             this.mitmoded_print_tab.Controls.Add(this.export_bt);
             this.mitmoded_print_tab.Controls.Add(this.xml_last_signed_dynamic_lb);
             this.mitmoded_print_tab.Controls.Add(this.last_signed_lb);
-            this.mitmoded_print_tab.Controls.Add(this.xml_saved_file__lb);
+            this.mitmoded_print_tab.Controls.Add(this.xml_saved_file_lb);
             this.mitmoded_print_tab.Controls.Add(this.chosen_file_lb);
             this.mitmoded_print_tab.Controls.Add(this.preview_saved_bt);
             this.mitmoded_print_tab.Controls.Add(this.preview_selected_bt);
@@ -1617,18 +1617,17 @@
             this.last_signed_lb.TabIndex = 37;
             this.last_signed_lb.Text = "תאריך חתימה אחרון: ";
             // 
-            // xml_saved_file__lb
+            // xml_saved_file_lb
             // 
-            this.xml_saved_file__lb.AutoEllipsis = true;
-            this.xml_saved_file__lb.AutoSize = true;
-            this.xml_saved_file__lb.Location = new System.Drawing.Point(838, 304);
-            this.xml_saved_file__lb.Name = "xml_saved_file__lb";
-            this.xml_saved_file__lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.xml_saved_file__lb.Size = new System.Drawing.Size(99, 13);
-            this.xml_saved_file__lb.TabIndex = 36;
-            this.xml_saved_file__lb.Text = "<saved_file_name>";
-            this.xml_saved_file__lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.xml_saved_file__lb.Visible = false;
+            this.xml_saved_file_lb.AutoEllipsis = true;
+            this.xml_saved_file_lb.AutoSize = true;
+            this.xml_saved_file_lb.Location = new System.Drawing.Point(838, 304);
+            this.xml_saved_file_lb.Name = "xml_saved_file_lb";
+            this.xml_saved_file_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.xml_saved_file_lb.Size = new System.Drawing.Size(129, 13);
+            this.xml_saved_file_lb.TabIndex = 36;
+            this.xml_saved_file_lb.Text = "אין קובץ שמור במערכת";
+            this.xml_saved_file_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chosen_file_lb
             // 
@@ -1638,22 +1637,20 @@
             this.chosen_file_lb.Location = new System.Drawing.Point(838, 177);
             this.chosen_file_lb.Name = "chosen_file_lb";
             this.chosen_file_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chosen_file_lb.Size = new System.Drawing.Size(105, 13);
+            this.chosen_file_lb.Size = new System.Drawing.Size(106, 13);
             this.chosen_file_lb.TabIndex = 35;
-            this.chosen_file_lb.Text = "<chosen_file_name>";
+            this.chosen_file_lb.Text = "בחרו קובץ לשמירה";
             this.chosen_file_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chosen_file_lb.Visible = false;
             // 
             // preview_saved_bt
             // 
-            this.preview_saved_bt.Enabled = false;
             this.preview_saved_bt.Location = new System.Drawing.Point(869, 261);
             this.preview_saved_bt.Name = "preview_saved_bt";
             this.preview_saved_bt.Size = new System.Drawing.Size(109, 23);
             this.preview_saved_bt.TabIndex = 34;
             this.preview_saved_bt.Text = "הצג קובץ שמור";
             this.preview_saved_bt.UseVisualStyleBackColor = true;
-            this.preview_saved_bt.Visible = false;
+            this.preview_saved_bt.Click += new System.EventHandler(this.preview_saved_bt_Click);
             // 
             // preview_selected_bt
             // 
@@ -1925,7 +1922,7 @@
         private System.Windows.Forms.Button export_bt;
         private System.Windows.Forms.Label xml_last_signed_dynamic_lb;
         private System.Windows.Forms.Label last_signed_lb;
-        private System.Windows.Forms.Label xml_saved_file__lb;
+        private System.Windows.Forms.Label xml_saved_file_lb;
         private System.Windows.Forms.Label chosen_file_lb;
         private System.Windows.Forms.Button preview_saved_bt;
         private System.Windows.Forms.Button preview_selected_bt;

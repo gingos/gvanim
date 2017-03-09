@@ -92,11 +92,11 @@ namespace GvanimVS
             {
                 //file is saved as name@byte[]
                 fileFromXml = xml_organizer["file"].Split('@');
-                saved_file__lb.Text = savedFileName = fileFromXml[0];
+                saved_file_lb.Text = savedFileName = fileFromXml[0];
                 savedFileBytes = Tools.strToByte(fileFromXml[1]);
             }
             else
-                saved_file__lb.Text = "עדיין לא נחתם הסכם סודיות";
+                saved_file_lb.Text = "עדיין לא נחתם הסכם סודיות";
 
             if (xml_organizer.ContainsKey("staff_dgv"))
                 deserializeDGV(xml_organizer["staff_dgv"]);
@@ -184,7 +184,7 @@ namespace GvanimVS
                 if (SQLmethods.upsertConfidentiality(ID, serializedOrganizer, cmd))
                 {
                     MessageBox.Show("המידע נשמר בהצלחה");
-                    saved_file__lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
+                    saved_file_lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
                     last_signed_dynamic_lb.Text = xml_organizer["date"].ToString();
                 }
                 else

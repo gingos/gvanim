@@ -15,9 +15,9 @@ namespace GvanimVS
         byte[] PERSONAL_PDF = global::GvanimVS.Properties.Resources.personal_details;
         byte[] PERSONAL_DOC = global::GvanimVS.Properties.Resources.personal_details_template;
 
-        private byte[] imgByte, chosenFileBytes;
+        private byte[] imgByte, chosenFileBytes, savedFileBytes;
         //private bool imgChanged;
-        private string ID, chosenFileName;
+        private string ID, chosenFileName, savedFileName;
         private DataTable MainDT;
         private SerializableDictionary<string, SerializableDictionary<string, string>> xml_organizer;
         private bool chosenChanged;
@@ -257,7 +257,13 @@ namespace GvanimVS
             foreach (KeyValuePair<string, SerializableDictionary<string, string>> dic in xml_organizer)
             {
                 TabPage page = mitmoded_card_tc.TabPages[dic.Key];
+                
                 SerializableDictionary<string, string> xml_tab = dic.Value;
+                if (page.Name.Equals("mitmoded_print_tab"))
+                {
+                    loadFileTab(xml_tab);
+                    continue;
+                }
                 foreach (KeyValuePair<string, string> controlKVP in xml_tab)
                 {
                     if (controlKVP.Key.StartsWith("xml"))
@@ -276,7 +282,6 @@ namespace GvanimVS
                             {
                                 page.Controls[controlKVP.Key].Enabled = true;
                                 ((ComboBox)page.Controls[controlKVP.Key]).SelectedIndex = int.Parse (controlKVP.Value);
-                                //((ComboBox)page.Controls[controlKVP.Key]).SelectedItem = int.Parse(controlKVP.Value);
                             }
                             else if ((page.Controls[controlKVP.Key] is Panel))
                             {
@@ -313,7 +318,7 @@ namespace GvanimVS
                 if (page.Name.Equals("mitmoded_print_tab"))
                 {
                     if (chosenFileBytes!=null)
-                        addToOrganizer();
+                        saveFileTab();
                     continue;
                 }
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
@@ -682,6 +687,25 @@ namespace GvanimVS
             return fileByte;
         }
 
+        private void preview_saved_bt_Click(object sender, EventArgs e)
+        {
+            if (savedFileBytes == null)
+            {
+                MessageBox.Show("יש לשמור קובץ");
+                return;
+            }
+
+            string suffix = savedFileName.Substring(savedFileName.LastIndexOf("."));
+            try
+            {
+                Tools.openTempFile(savedFileBytes, suffix);
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+            }
+        }
+
         /// <summary>
         /// preview selected file (warns user if not chosen)
         /// </summary>
@@ -727,14 +751,14 @@ namespace GvanimVS
                     return;
                 }
             }
-            addToOrganizer();
+            saveFileTab();
             string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
             if (serializedOrganizer != null)
             {
                 if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "intecXML","ID",ID,serializedOrganizer,cmd))
                 {
                     MessageBox.Show("המידע נשמר בהצלחה");
-                    xml_saved_file__lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
+                    xml_saved_file_lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
                     xml_last_signed_dynamic_lb.Text = xml_organizer["mitmoded_print_tab"]["xml_last_signed_dynamic_lb"].ToString();
                 }
                 else
@@ -745,17 +769,23 @@ namespace GvanimVS
         /// <summary>
         /// helper function: determines if a file exists on dictionary
         /// </summary>
-        private void addToOrganizer()
+        private void saveFileTab()
         {
-            
-            SerializableDictionary<string, string> print_tab = new SerializableDictionary<string, string>();
             string shortName = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
-            print_tab["chosenfilebytes"] = Tools.byteToStr(chosenFileBytes);
-            print_tab["xml_saved_file__lb"] = shortName;
+            savedFileBytes = chosenFileBytes;
+
+            SerializableDictionary<string, string> print_tab = new SerializableDictionary<string, string>();
+            print_tab["savedfilebytes"] = Tools.byteToStr(chosenFileBytes);
+            print_tab["xml_saved_file_lb"] = shortName;
             print_tab["xml_last_signed_dynamic_lb"] = System.DateTime.Now.ToShortDateString();
 
             xml_organizer["mitmoded_print_tab"] = print_tab;
-            
+        }
+        private void loadFileTab(Dictionary<string, string> dic)
+        {
+            savedFileBytes = Tools.strToByte(dic["savedfilebytes"]);
+            xml_saved_file_lb.Text = savedFileName = dic["xml_saved_file_lb"];
+            xml_last_signed_dynamic_lb.Text = dic["xml_last_signed_dynamic_lb"];
         }
     }
 }
