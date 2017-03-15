@@ -88,7 +88,6 @@ namespace GvanimVS
                         {
                             if (control.Controls.OfType<RadioButton>().Any(r => r.Checked))
                                 xml_tab.Add(control.Name, (control.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Name));
-                           
                         }
                     }
                 }
@@ -159,7 +158,7 @@ namespace GvanimVS
                         RadioButton rb = (RadioButton)((GroupBox)page1.Controls[controlKVP.Key]).Controls[controlKVP.Value];
                         rb.Checked = true;
                     }
-                    
+
 
 
                 }
