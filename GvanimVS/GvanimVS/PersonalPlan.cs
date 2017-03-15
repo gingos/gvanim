@@ -38,7 +38,7 @@ namespace GvanimVS
             if (dt1 == null)
                 return;
             coord_tb.Text = dt1.Rows[0]["firstName"].ToString() + " " + dt1.Rows[0]["lastName"].ToString();
-            //updateFieldsFromDB();
+            updateFieldsFromDB();
         }
 
         private string textBoxesToDictionary()
@@ -47,31 +47,36 @@ namespace GvanimVS
             //using custom class - serializable dictionary 
             //returns the serialization xml as string
             xml_organizer = new SerializableDictionary<string, SerializableDictionary<string, string>>();
+            SerializableDictionary<string, string> xml_tab;
             foreach (TabPage page in this.personal_plan_tc.TabPages)
             {
-                SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
+                xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
-                    if (control is TextBox)
                         if (control.Name.StartsWith("xml"))
+                    {
+                        if (control is TextBox)
                             xml_tab.Add(control.Name, control.Text);
-                                    
-                    if (control is DateTimePicker)
+                        else if (control is DateTimePicker)
                         xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
-                    if (control is DataGridView)
-                        if(control.Name.StartsWith("xml"))
+                        else if (control is DataGridView)
                     {
                         dat = Tools.GetContentAsDataTable((DataGridView)xml_rehab_dgv, false);
                         string dataGrid = Tools.SerializeXML<DataTable>(dat);
                         xml_tab.Add(control.Name, dataGrid);
                     }
-
+                        else if (control is TabControl)
+                        {
+                            string test = Tools.SerializeXML(control.Controls);
+                            xml_tab.Add(control.Name,test );
+                }
+                    }
                 }
                 xml_organizer.Add(page.Name, xml_tab);              
             }
             foreach (TabPage page in this.mazav_tc.TabPages)
             {
-                SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
+                xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
                     if (control is TextBox)
@@ -120,7 +125,7 @@ namespace GvanimVS
         /// </summary>
         /// <param name=""></param>
 
-         private void updateFieldsFromDB()
+        private void updateFieldsFromDB()
         {
             //get XML file from DB
 
@@ -130,26 +135,34 @@ namespace GvanimVS
             //Update every field by xml_tab.name
             foreach (KeyValuePair<string, SerializableDictionary<string, string>> dic in xml_organizer)
             {
-                TabPage page1 = tabControl1.TabPages[dic.Key];
-                TabPage page2 = tabControl2.TabPages[dic.Key];
+                TabPage page1 = personal_plan_tc.TabPages[dic.Key];
                 SerializableDictionary<string, string> xml_tab = dic.Value;
                 foreach (KeyValuePair<string, string> controlKVP in xml_tab)
                 {
-                    if (controlKVP.Key.StartsWith("xml"))
+                    if (controlKVP.Key.EndsWith("tb"))
                     {
                         if (page1.Controls.ContainsKey(controlKVP.Key))
                             page1.Controls[controlKVP.Key].Text = controlKVP.Value;
-                        if (page2.Controls.ContainsKey(controlKVP.Key))
-                            page2.Controls[controlKVP.Key].Text = controlKVP.Value;
                     }
-                    else if (controlKVP.Key.Contains("xml"))
+                    else if ((page1.Controls[controlKVP.Key] is DateTimePicker))
+                    {
+                        ((DateTimePicker)page1.Controls[controlKVP.Key]).Checked = true;
+                        ((DateTimePicker)page1.Controls[controlKVP.Key]).Value =
+                            DateTime.Parse(controlKVP.Value); //DateTime.ParseExact("dd/MM/yyyy", controlKVP.Value, System.Globalization.CultureInfo.InvariantCulture);
+                    }
+                    else if (controlKVP.Key.EndsWith("dgv"))
                     {
                         if (page1.Controls.ContainsKey(controlKVP.Key))
                             Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page1.Controls[controlKVP.Key]);
-                        if (page2.Controls.ContainsKey(controlKVP.Key))
-                            Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page2.Controls[controlKVP.Key]);
                     }
-                   
+                    else if ((page1.Controls[controlKVP.Key] is GroupBox))
+                    {
+                        //xml_tab.Add(control.Name, ((Panel)control).Controls.OfType<RadioButton>().First(r => r.Checked).Name);
+                        RadioButton rb = (RadioButton)((GroupBox)page1.Controls[controlKVP.Key]).Controls[controlKVP.Value];
+                        rb.Checked = true;
+                    }
+
+
 
                 }
             }

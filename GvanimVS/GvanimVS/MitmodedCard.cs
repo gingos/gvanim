@@ -313,6 +313,7 @@ namespace GvanimVS
         private string controlsToDictionary()
         {
             xml_organizer = new SerializableDictionary<string, SerializableDictionary<string, string>>();
+            SerializableDictionary<string, string> xml_tab;
             foreach (TabPage page in mitmoded_card_tc.TabPages)
             {
                 if (page.Name.Equals("mitmoded_print_tab"))
@@ -321,7 +322,7 @@ namespace GvanimVS
                         saveFileTab();
                     continue;
                 }
-                SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
+                xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
                     if (control.Name.StartsWith("xml"))
