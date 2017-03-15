@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -76,7 +77,8 @@ namespace GvanimVS
                 if (dtSource.Columns.Count == 0) return null;
                 foreach (DataGridViewRow row in dgv.Rows)
                 {
-                    if (row.Index == dgv.Rows.Count-1)  //skip last row, added by default
+                    //if (row.Index == dgv.Rows.Count-1)  //skip last row, added by default
+                    if (isEmptyRow(row))
                         continue;
                     DataRow drNewRow = dtSource.NewRow();
                     foreach (DataColumn col in dtSource.Columns)
@@ -92,6 +94,16 @@ namespace GvanimVS
                 ex.ToString();
                 return null;
             }
+        }
+
+        private static bool isEmptyRow(DataGridViewRow row)
+        {
+            foreach (DataGridViewCell cell in row.Cells)
+            {
+                if (cell.Value != null)
+                    return false;
+            }
+            return true;
         }
 
         public static void initDataGridFromXML(string XMLfromSQL, DataGridView dgv)
@@ -110,6 +122,7 @@ namespace GvanimVS
             {
 
                 col.DataPropertyName = dt2.Columns[col.Name].ColumnName;
+                col.HeaderText = dt2.Columns[col.Name].Caption;
             }
             dgv.DataSource = dt2;
         } 
@@ -132,6 +145,55 @@ namespace GvanimVS
             return textWriter.ToString();
         }
 
+        /// <summary>
+        /// bind a dictionary to committee duration combo box, using templates
+        /// </summary>
+        public static BindingSource bindDictionary2<TKey, TValue>(Dictionary<TKey, TValue> dic, Control control)
+        {
+            //for future reference, this is how you (worst case) access the members
+            //int monthsToAdd = ((KeyValuePair<string, int>)xml_rehab_validity_cb.SelectedItem).Value;
+            ((ComboBox)control).DisplayMember = "Key";
+            ((ComboBox)control).ValueMember = "Value";
+            return new BindingSource(dic, null);
+        }
 
+        /// <summary>
+        /// open the file for preview
+        /// allocates temp file in \TEMP folder
+        /// </summary>
+        /// <param name="file"> byteArray of file to be opened</param>
+        /// <param name="fileType"> file suffix, to be used by system process</param>
+        public static void openTempFile(byte[] file, string fileType)
+        {
+            string tempPath = System.IO.Path.GetTempFileName().Replace(".tmp", fileType);
+            System.IO.File.WriteAllBytes(tempPath, file);
+            System.Diagnostics.Process.Start(tempPath);
+        }
+
+        /// <summary>
+        /// returns '-' delimited string representation of the byte array
+        /// {32,   0,   0,} --> "20-00-00"
+        /// </summary>
+        /// <param name="bytes"> byteArray to be converted</param>
+        /// <returns></returns>
+        public static string byteToStr(byte[] bytes)
+        {
+            return BitConverter.ToString(bytes);
+        }
+
+        /// <summary>
+        /// returns the original byteArray from the representing string
+        ///  "20-00-00" --> {32,   0,   0,}
+        /// </summary>
+        /// <param name="str"> byteArray as string</param>
+        /// <returns></returns>
+        public static byte[] strToByte(string str)
+        {
+            string[] tempAry = str.Split('-');
+            byte[] decBytes2 = new byte[tempAry.Length];
+            for (int i = 0; i < tempAry.Length; i++)
+                decBytes2[i] = Convert.ToByte(tempAry[i], 16);
+            return decBytes2;
+        }
     }
 }

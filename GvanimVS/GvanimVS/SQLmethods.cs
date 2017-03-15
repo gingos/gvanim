@@ -27,16 +27,16 @@ namespace GvanimVS
             " IF NOT EXISTS (SELECT * FROM " + SQLmethods.MITMODED + " WHERE ID = @pID) "
             + "INSERT INTO " + SQLmethods.MITMODED + " (ID, firstName,lastName,birthday,city, "
             + "streetAddress,phone1,phone2,coordinatorID, photo, "
-            + "intec_tabs ) "
+            + "intecXML) "
             + "VALUES (@pID, @pFirst, @pLast, @pBirthday, @pCity, @pAddress, "
             + "@pPhone1, @pPhone2, @pCoordinatorID, @pPhoto, "
-            + "@pIntec_tabs) "
+            + "@pIntecXML) "
             + "ELSE "
             + "UPDATE " + SQLmethods.MITMODED
             + " SET firstName = @pFirst, lastName = @pLast, birthday = @pBirthday, city = @pCity, "
             + "streetAddress = @pAddress, phone1 = @pPhone1, phone2 = @pPhone2, coordinatorID=@pCoordinatorID, "
             + "photo = @pPhoto, "
-            + " intec_tabs = @pIntec_tabs"
+            + " intecXML = @pIntecXML"
             + " WHERE ID = @pID";
             #endregion
             #region addParamters
@@ -51,7 +51,7 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pPhone2", phone2);
             cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
             cmd.Parameters.Add("@pPhoto", SqlDbType.Image, photo.Length).Value = photo;
-            cmd.Parameters.Add("@pIntec_tabs", SqlDbType.Xml, serializedOrganizer.Length).Value = serializedOrganizer;
+            cmd.Parameters.Add("@pIntecXML", SqlDbType.Xml, serializedOrganizer.Length).Value = serializedOrganizer;
 
             #endregion
             #region execute
@@ -62,6 +62,79 @@ namespace GvanimVS
             catch (SqlException ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    +"אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return false;
+            }
+            #endregion
+            return true;
+        }
+        public static bool upsertHitkashrut (string mitmodedID, string serializedOrganizer, SqlCommand cmd)
+        {
+            cmd.CommandText =
+            #region sqlQuery
+            "UPDATE " + SQLmethods.MITMODED
+            + " SET hitkashrutXML = @pHitkashrut WHERE ID = @pID";
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pID", mitmodedID);
+            cmd.Parameters.Add("@pHitkashrut", SqlDbType.Xml, serializedOrganizer.Length).Value = serializedOrganizer;
+
+            #endregion
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return false;
+            }
+            #endregion
+            return true;
+        }
+        public static bool upsertConfidentiality(string mitmodedID, string serializedOrganizer, SqlCommand cmd)
+        {
+            cmd.CommandText =
+            #region sqlQuery
+            "UPDATE " + SQLmethods.MITMODED
+            + " SET confidentialityXML = @pConfidentiality WHERE ID = @pID";
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pID", mitmodedID);
+            cmd.Parameters.Add("@pConfidentiality", SqlDbType.Xml, serializedOrganizer.Length).Value = serializedOrganizer;
+
+            #endregion
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
                 return false;
             }
             #endregion
@@ -99,6 +172,13 @@ namespace GvanimVS
                 System.Windows.Forms.MessageBox.Show(ex.ToString());
                 return false;
             }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return false;
+            }
             #endregion
             return true;
         }
@@ -127,6 +207,13 @@ namespace GvanimVS
                 System.Windows.Forms.MessageBox.Show(ex.ToString());
                 return false;
             }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return false;
+            }
             #endregion
             return true;
         }
@@ -149,7 +236,23 @@ namespace GvanimVS
             #endregion
             #region execute
             da.SelectCommand = cmd;
-            da.Fill(dt);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
+
             #endregion
             return dt;
         }
@@ -180,7 +283,22 @@ namespace GvanimVS
             #endregion
             #region execute
             da.SelectCommand = cmd;
-            da.Fill(dt);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
             #endregion
             return dt;
         }
@@ -196,7 +314,22 @@ namespace GvanimVS
             #endregion
             #region execute
             da.SelectCommand = cmd;
-            da.Fill(dt);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
             #endregion
             return dt;
         }
@@ -215,7 +348,22 @@ namespace GvanimVS
             #endregion
             #region execute
             da.SelectCommand = cmd;
-            da.Fill(dt);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
             #endregion
             return dt;
         }
@@ -235,7 +383,22 @@ namespace GvanimVS
             #endregion
             #region execute
             da.SelectCommand = cmd;
-            da.Fill(dt);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
             #endregion
             return dt;
         }
@@ -266,7 +429,22 @@ namespace GvanimVS
             #endregion
             #region execute
             da.SelectCommand = cmd;
-            da.Fill(dt);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
             #endregion
             return dt;
         }
@@ -282,7 +460,22 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pMitmoded", mitmodedID);
 
             da.SelectCommand = cmd;
-            da.Fill(dt);
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
 
             return dt;
         }
@@ -345,15 +538,19 @@ namespace GvanimVS
         /// <param name="XMLinfo"></param>
         /// <param name="cmd"></param>
         /// <returns></returns>
-        public static bool updateXMLFormInDB(string table, string column, string row, string key, string XMLinfo, SqlCommand cmd)
+
+        public static bool updateXMLFormInDB(string table, string column, string key, string value, string XMLinfo, SqlCommand cmd)
         {
             cmd.CommandText =
             #region sqlQuery
            "UPDATE " + table
-            + " SET " + column + " = " + XMLinfo
-            + " WHERE " + row + " = " + key;
+            + " SET " + column + " = @pXmlInfo"
+            + " WHERE " + key + " = @pValue";
             #endregion
             #region addParameters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pValue", value);
+            cmd.Parameters.Add("@pXmlInfo", SqlDbType.Xml, XMLinfo.Length).Value = XMLinfo;
             #endregion
             #region execute
             try
@@ -363,6 +560,13 @@ namespace GvanimVS
             catch (SqlException ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
                 return false;
             }
             #endregion

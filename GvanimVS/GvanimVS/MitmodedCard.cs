@@ -12,29 +12,52 @@ namespace GvanimVS
 {
     public partial class MitmodedCard : DBform
     {
-        private byte[] imgByte;
-        private bool imgChanged;
-        private string ID;
+        byte[] PERSONAL_PDF = global::GvanimVS.Properties.Resources.personal_details;
+        byte[] PERSONAL_DOC = global::GvanimVS.Properties.Resources.personal_details_template;
+
+        private byte[] imgByte, chosenFileBytes, savedFileBytes;
+        //private bool imgChanged;
+        private string ID, chosenFileName, savedFileName;
         private DataTable MainDT;
         private SerializableDictionary<string, SerializableDictionary<string, string>> xml_organizer;
-
+        private bool chosenChanged;
 
         public MitmodedCard(SqlConnection con) : base(con)
         {
             InitializeComponent();
-            imgChanged = false;
+            //imgChanged = false;
         }
         public MitmodedCard(SqlConnection con, string ID) : base(con)
         {
             InitializeComponent();
             this.ID = ID;
-            ID_tb.Text = ID;
-            imgChanged = false;
+            initMembers();
+            //imgChanged = false;
             MainDT = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
             initDataGridViews();
-            initFieldsFromDT(MainDT);
+            //xml_rehab_validity_cb.DataSource = bindDictionary();
+            if (MainDT != null)
+                initFieldsFromDT(MainDT);
+            
         }
 
+        /// <summary>
+        /// Confidentiality: init form using Mitmoded ID
+        /// </summary>
+        /// <param name="con"> connection data</param>
+        /// <param name="ID"> mitmoded ID</param>
+        private void initMembers()
+        {
+            ID_tb.Text = ID;
+            chosenChanged = false;
+            xml_rehab_validity_cb.DataSource = Tools.bindDictionary2<string, int>(new Dictionary<string, int>
+                { { "אנא בחרו משך זמן", 0 }, { "3 חודשים", 3 }, {"6 חודשים", 6 }, {"12 חודשים", 12 } },
+                xml_rehab_validity_cb);
+        }
+
+        /// <summary>
+        /// init the skills datagrid and job preferences datagrid
+        /// </summary>
         private void initDataGridViews()
         {   
             /*
@@ -50,13 +73,17 @@ namespace GvanimVS
             
         }
 
+        /// <summary>
+        /// fill the category column in the "skills" grid
+        /// </summary>
         private void fill_skills()
         {
+            // avoid column duplicate by disabling auto colomn creation
             skills_dgv.AutoGenerateColumns = false;
             skills_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             skills_dgv.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-
+            // change header font style
             System.Windows.Forms.DataGridViewCellStyle boldStyle = new System.Windows.Forms.DataGridViewCellStyle();
             boldStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             
@@ -93,11 +120,43 @@ namespace GvanimVS
 
 
 
-        }   //fill the category column in the "skills" grid
+        }
+
+        /// <summary>
+        /// fill category column in "job preferences" grid
+        /// </summary>
+        private void fill_jobPreferencesDGV()
+        {
+            job_preferences_dgv.Rows.Add(new string[] { "מקום דינאמי / שקט / רועש", "", "עבודות ניקיון כן / לא", "", "מכירות / שירות לקוחות כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "עבודה בחוץ / בפנים", "", "עבודה עם חומרים ומים כן / לא", "", "טלפונית / ישירות", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "בעלי חיים כן / לא", "", "מחשב / בלי מחשב", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "צמחייה כן / לא", "", "", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "מקום בתוך / מחוץ לעיר", "", "עבודה בישיבה כן / לא", "", "עבודה חרושתית כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "באזור תעשייה כן / לא", "", "עבודה בעמידה כן / לא", "", "חד-שלבית / מורכבת", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "בחוץ / בפנים", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "בעל רכב פרטי כן / לא", "", "עבודה בקרב אחרים / בודד", "", "עבודה עם מזון כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "יכול להגיע לעבודה באופן עצמאי כן / לא", "", "עבודה מול אדם / מכונה", "", "מלצור / בישול / מטבח כללי", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "עצמאי כן / לא", "", "", "", "בית קפה / מסעדה / קייטרינג", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "רישיון כן / לא", "", "", "", "", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "טיפול באנשים כן / לא", "" });
+            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "ילדים / קשישים / נכות", "" });
+
+            // save existing rows as read only
+            /*
+            foreach (DataGridViewRow row in job_preferences_dgv.Rows)
+                row.ReadOnly = true;
+              */
+
+
+        }   //
+
+        /// <summary>
+        /// init category and input columns in "job preferences" grid
+        /// </summary>
         private void init_jobPreferencesDGV()
         {
+            // avoid column duplicate by disabling auto colomn creation
             job_preferences_dgv.AutoGenerateColumns = false;
-
             job_preferences_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             job_preferences_dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -137,39 +196,21 @@ namespace GvanimVS
             //job_preferences_dg.DataSource = dt;
             job_preferences_dgv.Columns.AddRange(location, locationInput, contents, contentsInput, type, typeInput);
             
-        }   //init category and input columns in "job preferences" grid
-        private void fill_jobPreferencesDGV()
-        {
-            job_preferences_dgv.Rows.Add(new string[] { "מקום דינאמי / שקט / רועש", "", "עבודות ניקיון כן / לא", "", "מכירות / שירות לקוחות כן / לא", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "עבודה בחוץ / בפנים", "", "עבודה עם חומרים ומים כן / לא", "", "טלפונית / ישירות", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "", "", "בעלי חיים כן / לא", "", "מחשב / בלי מחשב", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "", "", "צמחייה כן / לא", "", "", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "מקום בתוך / מחוץ לעיר", "", "עבודה בישיבה כן / לא", "", "עבודה חרושתית כן / לא", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "באזור תעשייה כן / לא", "", "עבודה בעמידה כן / לא", "", "חד-שלבית / מורכבת", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "בחוץ / בפנים", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "בעל רכב פרטי כן / לא", "", "עבודה בקרב אחרים / בודד", "", "עבודה עם מזון כן / לא", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "יכול להגיע לעבודה באופן עצמאי כן / לא", "", "עבודה מול אדם / מכונה", "", "מלצור / בישול / מטבח כללי", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "עצמאי כן / לא", "", "", "", "בית קפה / מסעדה / קייטרינג", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "רישיון כן / לא", "", "", "", "", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "טיפול באנשים כן / לא", "" });
-            job_preferences_dgv.Rows.Add(new string[] { "", "", "", "", "ילדים / קשישים / נכות", "" });
+        }
 
-            // save existing rows as read only
-            /*
-            foreach (DataGridViewRow row in job_preferences_dgv.Rows)
-                row.ReadOnly = true;
-              */  
-
-
-        }   //fill category column in "job preferences" grid
-
-        private void initFieldsFromDT(DataTable dt) //init ALL controls from the data table retrieved from server (represents entire form)
+        /// <summary>
+        /// init ALL controls from the data table retrieved from server (represents entire form)
+        /// </summary>
+        /// <param name="dt">datatable hold form important fields & xml repr</param>
+        private void initFieldsFromDT(DataTable dt) 
         {
 
             foreach (DataRow dr in dt.Rows)
-            {   
+            {
+                ID_dynamic_lb.Text = ID;
                 firstName_tb.Text = dr["firstName"].ToString();
                 lastName_tb.Text = dr["lastName"].ToString();
+                name_dynamic_lb.Text = firstName_tb.Text + lastName_tb.Text;
                 if (dr["birthday"] != null)
                 {
                     birth_dtp.Value = (DateTime)dr["birthday"];
@@ -183,7 +224,7 @@ namespace GvanimVS
                 phone2_tb.Text = dr["phone2"].ToString();
                 coordinator_id_tb.Text = dr["coordinatorID"].ToString();
 
-                if (dr["photo"] != null)
+                if (dr["photo"] != DBNull.Value)    //was dr["photo"] != null
                 {
                     byte[] bytes = (byte[])dr["photo"];
                     var ms = new System.IO.MemoryStream(bytes);
@@ -192,31 +233,65 @@ namespace GvanimVS
                 else
                     profile_pb.Image = Properties.Resources.anonymous_profile;
 
-                
-                initInfoTextBoxes(dr["intec_tabs"].ToString());
+                //fill the non-critical form controls
+                initInfoTextBoxes(dr["intecXML"].ToString());
                 
             }
         }
 
+        /// <summary> 
+        /// fill the non-critical form controls
+        /// </summary>
+        /// fill non-necessary text boxes (labeld "xml_*") 
+        /// using dictionary of dictionarys: per tab, and per text controls
+        /// using custom class - serializable dictionary 
+        /// <param name="OrganzierToDeserialize">XML representation of non-critical controls</param>
         private void initInfoTextBoxes(string OrganzierToDeserialize)
         {
-            //fill non-necessary text boxes (labeld "xml_*")
-            //using dictionary of dictionarys: per tab, and per text controls
-            //using custom class - serializable dictionary 
+            
             if (OrganzierToDeserialize.Equals(""))
                 return;
-            xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(OrganzierToDeserialize);
 
+            xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(OrganzierToDeserialize);
+            
             foreach (KeyValuePair<string, SerializableDictionary<string, string>> dic in xml_organizer)
             {
                 TabPage page = mitmoded_card_tc.TabPages[dic.Key];
+                
                 SerializableDictionary<string, string> xml_tab = dic.Value;
+                if (page.Name.Equals("mitmoded_print_tab"))
+                {
+                    loadFileTab(xml_tab);
+                    continue;
+                }
                 foreach (KeyValuePair<string, string> controlKVP in xml_tab)
                 {
                     if (controlKVP.Key.StartsWith("xml"))
                     {
                         if (page.Controls.ContainsKey(controlKVP.Key))
-                            page.Controls[controlKVP.Key].Text = controlKVP.Value;
+                        {
+                            if (page.Controls[controlKVP.Key] is TextBox)
+                                page.Controls[controlKVP.Key].Text = controlKVP.Value;
+                            else if ((page.Controls[controlKVP.Key] is DateTimePicker))
+                            {
+                                ((DateTimePicker)page.Controls[controlKVP.Key]).Checked = true;
+                                ((DateTimePicker)page.Controls[controlKVP.Key]).Value =
+                                    DateTime.Parse(controlKVP.Value); //DateTime.ParseExact("dd/MM/yyyy", controlKVP.Value, System.Globalization.CultureInfo.InvariantCulture);
+                            }
+                            else if ((page.Controls[controlKVP.Key] is ComboBox))
+                            {
+                                page.Controls[controlKVP.Key].Enabled = true;
+                                ((ComboBox)page.Controls[controlKVP.Key]).SelectedIndex = int.Parse (controlKVP.Value);
+                            }
+                            else if ((page.Controls[controlKVP.Key] is Panel))
+                            {
+                                //xml_tab.Add(control.Name, ((Panel)control).Controls.OfType<RadioButton>().First(r => r.Checked).Name);
+                                RadioButton rb = (RadioButton)((Panel)page.Controls[controlKVP.Key]).Controls[controlKVP.Value]; 
+                                rb.Checked = true;
+                            }
+
+                        }
+                        
                     }
                     else if (controlKVP.Key.Contains("dgv"))
                     {
@@ -228,27 +303,46 @@ namespace GvanimVS
             
         }
 
+
+        /// <summary>
+        /// creates a dictionary of dictionarys, per tab, per text controls
+        /// </summary>
+        /// using custom class - serializable dictionary 
+        /// returns the serialization xml as string
+        /// <returns>XML repr of non-critical controls</returns>
         private string controlsToDictionary()
         {
-            //creates a dictionary of dictionarys, per tab, per text controls
-            //using custom class - serializable dictionary 
-            //returns the serialization xml as string
             xml_organizer = new SerializableDictionary<string, SerializableDictionary<string, string>>();
             foreach (TabPage page in mitmoded_card_tc.TabPages)
             {
+                if (page.Name.Equals("mitmoded_print_tab"))
+                {
+                    if (chosenFileBytes!=null)
+                        saveFileTab();
+                    continue;
+                }
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
-                    if (control is TextBox)
-                        if (control.Name.StartsWith("xml"))
+                    if (control.Name.StartsWith("xml"))
+                    {
+                        if (control is TextBox)
                             xml_tab.Add(control.Name, control.Text);
+                        else if (control is DateTimePicker && ((DateTimePicker)control).Checked)
+                            xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
+                        else if (control is ComboBox)
+                            xml_tab.Add(control.Name, ((ComboBox)control).SelectedIndex.ToString()); //was selected value
+                        else if (control is Panel)
+                            if (((Panel)control).Controls.OfType<RadioButton>().Any(r => r.Checked))
+                                xml_tab.Add(control.Name, ((Panel)control).Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Name);
+                    }
+                    
                     if (control is DataGridView)
                         {
                             DataTable dt = Tools.GetContentAsDataTable((DataGridView)control, true);
                             string dtToXml = Tools.SerializeXML<DataTable>(dt);
                             xml_tab.Add(control.Name, dtToXml);
                         }
-                        
                 }
                 xml_organizer.Add(page.Name, xml_tab);
             }
@@ -257,6 +351,9 @@ namespace GvanimVS
 
         }
 
+        /// <summary>
+        /// save all information to database
+        /// </summary>
         private void ok_bt_Click(object sender, EventArgs e)
         {
 
@@ -284,22 +381,11 @@ namespace GvanimVS
                 this.Close();
             }
         }
-        private void cancel_bt_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void profile_pb_Click(object sender, EventArgs e)
-        {
-            var FD = new System.Windows.Forms.OpenFileDialog();
-            if (FD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                profile_pb.ImageLocation = FD.FileName.ToString();
-                imgByte = GetPhoto(profile_pb.ImageLocation);
-                imgChanged = true;
-            }
-        }
-
+        /// <summary>
+        /// Verify all critical fields before save
+        /// </summary>
+        /// <returns>true if all are valid, false if one or more not</returns>
         private bool verifyFields()
         {
 
@@ -380,6 +466,7 @@ namespace GvanimVS
                     return false;
                 }
             }
+            /*
             if (!imgChanged)
             {
                 DialogResult dialogResult = MessageBox.Show("לא נבחרה תמונה. האם ברצונך להמשיך?", "אישור בחירת תמונה", MessageBoxButtons.YesNo);
@@ -392,6 +479,7 @@ namespace GvanimVS
                     return false;
                 }
             }
+            */
             if (coordinator_id_tb.Text.Equals(""))
             {
                 MessageBox.Show("נא הכנס תעודת זהות של הרכזת");
@@ -408,8 +496,42 @@ namespace GvanimVS
                 return false;
             }
 
+            if (xml_rehab_committee_dtp.Checked && xml_rehab_validity_cb.SelectedIndex == 0)
+            {
+                MessageBox.Show("יש לבחור משך תוקף לאישור ההעסקה");
+                return false;
+            }
+            
             return true;
         }
+
+        /// <summary>
+        /// close form
+        /// </summary>
+        private void cancel_bt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// change user photo
+        /// </summary>
+        private void profile_pb_Click(object sender, EventArgs e)
+        {
+            var FD = new System.Windows.Forms.OpenFileDialog();
+            if (FD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                profile_pb.ImageLocation = FD.FileName.ToString();
+                imgByte = GetPhoto(profile_pb.ImageLocation);
+                //imgChanged = true;
+            }
+        }
+
+        /// <summary>
+        /// convert chose path to image byte[]
+        /// </summary>
+        /// <param name="imgLoc">path of image on user pc</param>
+        /// <returns>byte[] representation of image</returns>
         private byte[] GetPhoto(string imgLoc)
         {
             FileStream stream = new FileStream(
@@ -421,6 +543,10 @@ namespace GvanimVS
             stream.Close();
             return photo;
         }
+
+        /// <summary>
+        /// convert image resource from Image type to byte[]
+        /// </summary>
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
             using (var ms = new MemoryStream())
@@ -430,28 +556,236 @@ namespace GvanimVS
             }
         }
 
+        /// <summary>
+        /// only allow delete of rows with index >20
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void skills_dgv_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             if (e.Row.Index <= 20)
                 e.Cancel = true;
 
         }
+
+        /// <summary>
+        /// only allow delete of user content cells
+        /// </summary>
+        /// ignore action if cell changed is from system column (all even columns)
         private void skills_dgv_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             if (e.RowIndex <=20 && e.ColumnIndex % 2 == 0)
                 e.Cancel = true;
         }
+
+        /// <summary>
+        /// only allow delete of rows with index >12
+        /// </summary>        
         private void job_preferences_dgv_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             if (e.Row.Index <= 12)
                 e.Cancel = true;
         }
+
+        /// <summary>
+        /// only allow delete of user content cells
+        /// </summary>
+        /// ignore action if cell changed is from system column (all even columns)
         private void job_preferences_dgv_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             if (e.RowIndex <=12 && e.ColumnIndex % 2 == 0)
                 e.Cancel = true;
         }
 
+        /// <summary>
+        /// add selected duration (in months) to committee's deadline
+        /// </summary>
+        private void xml_rehab_validity_cm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (xml_rehab_validity_cb.SelectedIndex != 0)
+            {
+                DateTime expires = xml_rehab_committee_dtp.Value;
+                int monthsToAdd = (int)xml_rehab_validity_cb.SelectedValue;
+                xml_rehab_validity_expires_lb.Text = expires.AddMonths(monthsToAdd).ToShortDateString();
+            }
+        }
 
+        /// <summary>
+        /// make the duration combo box "Enabled" only when committee approval date is chosen
+        /// </summary>
+        private void rehab_committee_dtp_ValueChanged(object sender, EventArgs e)
+        {
+            xml_rehab_validity_cb.Enabled = xml_rehab_committee_dtp.Checked ? true : false;
+        }
+
+        /// <summary>
+        /// open file: an empty template of hitkashrut form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void show_pdf_bt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Tools.openTempFile(PERSONAL_PDF, ".pdf");
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+            }
+        }
+
+        /// <summary>
+        /// opens dialog box to choose which file to upload
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void choose_file_bt_Click(object sender, EventArgs e)
+        {
+            if (chosenChanged)
+            {
+                DialogResult dialogResult = MessageBox.Show("שימו לב: נבחר קובץ זמני. האם להחליפו?", "אישור בחירת קובץ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+                if (dialogResult == DialogResult.No)
+                    return;
+            }
+            chosenFileBytes = getFileFromUser();
+            chosen_file_lb.Text = chosenFileName;
+            chosenChanged = true;
+        }
+
+        /// <summary>
+        /// opens fileDialog to choose file
+        /// returns byteArray of chosen file
+        /// </summary>
+        /// <returns></returns>
+        private byte[] getFileFromUser()
+        {
+            var FD = new System.Windows.Forms.OpenFileDialog();
+            if (FD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                chosenFileName = FD.FileName.ToString();
+                return GetBytes(chosenFileName);
+            }
+            else
+                return null;
+        }
+
+        /// <summary>
+        /// return the byteArray of chosen file
+        /// </summary>
+        /// <param name="fileLoc"> file full path, to be converted to byteArray</param>
+        /// <returns></returns>
+        private byte[] GetBytes(string fileLoc)
+        {
+            FileStream stream = new FileStream(
+                fileLoc, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            BinaryReader reader = new BinaryReader(stream);
+            byte[] fileByte = reader.ReadBytes((int)stream.Length);
+
+            reader.Close();
+            stream.Close();
+            return fileByte;
+        }
+
+        private void preview_saved_bt_Click(object sender, EventArgs e)
+        {
+            if (savedFileBytes == null)
+            {
+                MessageBox.Show("יש לשמור קובץ");
+                return;
+            }
+
+            string suffix = savedFileName.Substring(savedFileName.LastIndexOf("."));
+            try
+            {
+                Tools.openTempFile(savedFileBytes, suffix);
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+            }
+        }
+
+        /// <summary>
+        /// preview selected file (warns user if not chosen)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void preview_selected_bt_Click(object sender, EventArgs e)
+        {
+            if (chosenFileBytes == null)
+            {
+                MessageBox.Show("יש לבחור קובץ");
+                return;
+            }
+            // get suffix to decide file type   
+            string suffix = chosenFileName.Substring(chosenFileName.LastIndexOf("."));
+            try
+            {
+                Tools.openTempFile(chosenFileBytes, suffix);
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+            }
+
+        }
+
+        /// <summary>
+        /// update dictionary and upload it to SQL. can only hold one record!
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void upload_file_bt_Click(object sender, EventArgs e)
+        {
+            if (chosenFileBytes == null)
+            {
+                MessageBox.Show("יש לבחור קובץ קודם");
+                return;
+            }
+            if (xml_organizer.ContainsKey("mitmoded_print_tab"))
+            {
+                DialogResult dialogResult = MessageBox.Show("שימו לב: העלאת מסמך חדש תמחוק את המסמך הקודם." + "\n" + "האם ברצונכם להמשיך?", "אישור בחירת קובץ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            saveFileTab();
+            string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
+            if (serializedOrganizer != null)
+            {
+                if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "intecXML","ID",ID,serializedOrganizer,cmd))
+                {
+                    MessageBox.Show("המידע נשמר בהצלחה");
+                    xml_saved_file_lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
+                    xml_last_signed_dynamic_lb.Text = xml_organizer["mitmoded_print_tab"]["xml_last_signed_dynamic_lb"].ToString();
+                }
+                else
+                    MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
+            }
+        }
+
+        /// <summary>
+        /// helper function: determines if a file exists on dictionary
+        /// </summary>
+        private void saveFileTab()
+        {
+            string shortName = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
+            savedFileBytes = chosenFileBytes;
+
+            SerializableDictionary<string, string> print_tab = new SerializableDictionary<string, string>();
+            print_tab["savedfilebytes"] = Tools.byteToStr(chosenFileBytes);
+            print_tab["xml_saved_file_lb"] = shortName;
+            print_tab["xml_last_signed_dynamic_lb"] = System.DateTime.Now.ToShortDateString();
+
+            xml_organizer["mitmoded_print_tab"] = print_tab;
+        }
+        private void loadFileTab(Dictionary<string, string> dic)
+        {
+            savedFileBytes = Tools.strToByte(dic["savedfilebytes"]);
+            xml_saved_file_lb.Text = savedFileName = dic["xml_saved_file_lb"];
+            xml_last_signed_dynamic_lb.Text = dic["xml_last_signed_dynamic_lb"];
+        }
     }
 }

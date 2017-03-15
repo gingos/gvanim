@@ -45,9 +45,10 @@
             this.tochnit_bt = new System.Windows.Forms.Button();
             this.form_categories_tc = new System.Windows.Forms.TabControl();
             this.cat_personal_tab = new System.Windows.Forms.TabPage();
+            this.open_hitkashrut_bt = new System.Windows.Forms.Button();
             this.cat_report_tab = new System.Windows.Forms.TabPage();
             this.cat_meeting_tab = new System.Windows.Forms.TabPage();
-            this.open_hitkashrut_bt = new System.Windows.Forms.Button();
+            this.confidentiality_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.form_categories_tc.SuspendLayout();
             this.cat_personal_tab.SuspendLayout();
@@ -221,6 +222,7 @@
             // 
             // cat_personal_tab
             // 
+            this.cat_personal_tab.Controls.Add(this.confidentiality_bt);
             this.cat_personal_tab.Controls.Add(this.open_hitkashrut_bt);
             this.cat_personal_tab.Controls.Add(this.info_bt);
             this.cat_personal_tab.Controls.Add(this.tochnit_bt);
@@ -231,6 +233,16 @@
             this.cat_personal_tab.TabIndex = 0;
             this.cat_personal_tab.Text = "פרטים וקליטה";
             this.cat_personal_tab.UseVisualStyleBackColor = true;
+            // 
+            // open_hitkashrut_bt
+            // 
+            this.open_hitkashrut_bt.Location = new System.Drawing.Point(122, 16);
+            this.open_hitkashrut_bt.Name = "open_hitkashrut_bt";
+            this.open_hitkashrut_bt.Size = new System.Drawing.Size(106, 23);
+            this.open_hitkashrut_bt.TabIndex = 15;
+            this.open_hitkashrut_bt.Text = "הסכם התקשרות";
+            this.open_hitkashrut_bt.UseVisualStyleBackColor = true;
+            this.open_hitkashrut_bt.Click += new System.EventHandler(this.open_hitkashrut_bt_Click);
             // 
             // cat_report_tab
             // 
@@ -255,15 +267,15 @@
             this.cat_meeting_tab.Text = "פגישות ומעקבים";
             this.cat_meeting_tab.UseVisualStyleBackColor = true;
             // 
-            // open_hitkashrut_bt
+            // confidentiality_bt
             // 
-            this.open_hitkashrut_bt.Location = new System.Drawing.Point(122, 16);
-            this.open_hitkashrut_bt.Name = "open_hitkashrut_bt";
-            this.open_hitkashrut_bt.Size = new System.Drawing.Size(106, 23);
-            this.open_hitkashrut_bt.TabIndex = 15;
-            this.open_hitkashrut_bt.Text = "הסכם התקשרות";
-            this.open_hitkashrut_bt.UseVisualStyleBackColor = true;
-            this.open_hitkashrut_bt.Click += new System.EventHandler(this.open_hitkashrut_bt_Click);
+            this.confidentiality_bt.Location = new System.Drawing.Point(122, 45);
+            this.confidentiality_bt.Name = "confidentiality_bt";
+            this.confidentiality_bt.Size = new System.Drawing.Size(106, 23);
+            this.confidentiality_bt.TabIndex = 16;
+            this.confidentiality_bt.Text = "ויתור סודיות";
+            this.confidentiality_bt.UseVisualStyleBackColor = true;
+            this.confidentiality_bt.Click += new System.EventHandler(this.confidentiality_bt_Click);
             // 
             // Mitmoded
             // 
@@ -315,5 +327,6 @@
         private System.Windows.Forms.TabPage cat_report_tab;
         private System.Windows.Forms.TabPage cat_meeting_tab;
         private System.Windows.Forms.Button open_hitkashrut_bt;
+        private System.Windows.Forms.Button confidentiality_bt;
     }
 }

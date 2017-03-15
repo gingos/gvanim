@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,15 +14,18 @@ namespace GvanimVS
 {
     public partial class LoginPage : DBform
     {
-        /* TODO
-         * add red\green status button
-         * add "accept on enter" to press enter on keyboard and choose OK
-         * 
-         * 
-         */
-        public LoginPage(SqlConnection con):base(con)
+        string CONNECTION_STRING = "Data Source= gingos.database.windows.net;Initial Catalog=gvanimDB;Persist Security Info=True;User ID=gingos;Password=wolf20Schneid!";
+        volatile bool connected;
+
+        public LoginPage(SqlConnection con) : base(con)
         {
             InitializeComponent();
+        }
+        public LoginPage() : base()
+        {
+            InitializeComponent();
+            con = new SqlConnection(CONNECTION_STRING);
+            connected = false;
         }
 
         private void exit_bt_Click(object sender, EventArgs e)
@@ -29,26 +33,42 @@ namespace GvanimVS
             this.Close();
         }
 
+        /// <summary>
+        /// Occures when "Login" button is clicked.
+        /// If username & password are valid, and connection available, will attempt user login.
+        /// if no connection available, force retry and then attempt user login
+        /// </summary>
         private void login_bt_Click(object sender, EventArgs e)
         {
             if (verifyFields())
             {
-                DataTable dt = SQLmethods.getDataTable(SQLmethods.USERS, user_tb.Text, password_tb.Text,
-                    cmd, da);
-                if (dt.Rows.Count == 0)
-                    MessageBox.Show("שם משתמש או סיסמא אינם נכונים");
+                if (connected)
+                {
+                    attemptLogin();
+                }
                 else
                 {
-                    DataRow dr = dt.Rows[0];
-                    MessageBox.Show("ברוך הבא\n " +
-                        dr["firstName"] + " " + dr["lastName"] + "\n" +
-                        dr["role"].ToString());
-                    this.Hide();
-                    openMatchingUserGui(dr);
-                    this.Show();
+                    login_bt.Enabled = false;
+                    signup_bt.Enabled = false;
+                    MessageBox.Show("קיימת בעיה בחיבור האינטרנט" + "\n" + "התכנית תנסה להתחבר שוב, אנא המתינו");
+                    CheckInternetConnectionSync();
+                    if (connected)
+                    {
+                        connectionSuccess();
+                        attemptLogin();
+                    }
+                    else
+                        MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" + "\n" + "אנא נסו שוב בעוד מספר רגעים");
+                    login_bt.Enabled = true;
+                    signup_bt.Enabled = true;
+
                 }
             }
         }
+
+        /// <summary>
+        /// Verifies that username & password are not empty
+        /// </summary>
         private bool verifyFields()
         {
             if (user_tb.Text.Equals(""))
@@ -65,7 +85,45 @@ namespace GvanimVS
             }
             return true;
         }
-        private void openMatchingUserGui (DataRow dr)
+
+        /// <summary>
+        /// Compare user-specified Credentials to DB, show welcome message if correct
+        /// </summary>
+        private void attemptLogin()
+        {
+            DataTable dt = SQLmethods.getDataTable(SQLmethods.USERS, user_tb.Text, password_tb.Text,
+                        cmd, da);
+            if (dt == null)
+                return;
+            if (dt.Rows.Count == 0)
+                MessageBox.Show("שם משתמש או סיסמא אינם נכונים");
+            else
+            {
+                showWelcomeMessage(dt);
+            }
+        }
+
+        /// <summary>
+        /// Prints user's welcome: full name & position
+        /// </summary>
+        /// <param name="dt">User row from Employees table</param>
+        private void showWelcomeMessage(DataTable dt)
+        {
+            DataRow dr = dt.Rows[0];
+            MessageBox.Show("ברוך הבא\n " +
+                dr["firstName"] + " " + dr["lastName"] + "\n" +
+                dr["role"].ToString());
+            this.Hide();
+            openMatchingUserGui(dr);
+            login_bt.Enabled = true;
+            signup_bt.Enabled = true;
+            this.Show();
+        }
+
+        /// <summary>
+        /// Open GUI according to its role
+        /// </summary>
+        private void openMatchingUserGui(DataRow dr)
         {
             switch (dr["role"].ToString())
             {
@@ -85,6 +143,117 @@ namespace GvanimVS
                     MessageBox.Show("אנא בדקו שוב שם וסיסמא");
                     break;
             }
+        }
+
+        /// <summary>
+        /// Check for SQL Connection with server
+        /// catches no-connection (SQL Exception) and double-attempt (Invalid Operation)
+        /// </summary>
+        private void CheckInternetConnectionSync()
+        {
+            
+            try
+            {
+                con.Open();
+                connected = true;
+
+            }
+            catch (SqlException sqlex)
+            {
+                
+            }
+            catch (InvalidOperationException opex)
+            {
+                
+            }
+
+        }
+        /*
+        private Task<bool> CheckInternetConnectionAsync()
+        {
+            return Task<bool>.Run(() => {
+                if (con.State == ConnectionState.Open)
+                    return true;
+                try
+                {
+                    con.Open();
+                    return true;
+                }
+                catch
+                {
+                    MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" +
+                       "\n" +
+                       "אנא נסי שוב בעוד מספר רגעים");
+                    return false;
+                }
+            });
+        }
+        private async void CheckInternetConnection()
+        {
+            bool hasConnection = await CheckInternetConnectionAsync();
+            if (hasConnection)
+                successLogin();
+        }
+        */
+
+        /// <summary>
+        /// As login page first shows, test SQL connection, if so, init sql-command and data reader
+        /// else, begin busy-wait thread on connection
+        /// </summary>
+        private void LoginPage_Shown(object sender, EventArgs e)
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                CheckInternetConnectionSync();
+                if (connected)
+                    connectionSuccess();
+                else
+                {
+                    beginConnectionThread();
+                    MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" + "\n" + "אנא נסו שוב בעוד מספר רגעים");
+                }
+            }
+        }
+
+        /// <summary>
+        /// If no connection available, begin busy-wait thread
+        /// </summary>
+        private void beginConnectionThread()
+        {
+            var th = new Thread(ExecuteInForeground);
+           
+            th.Start();
+            Console.WriteLine("Connection Thread Start");
+            
+        }
+
+        /// <summary>
+        /// This thread runs in the background: 15-sec intervals to retry sql connection
+        /// </summary>
+        private void ExecuteInForeground()
+        {
+            do
+            {
+                Thread.Sleep(15000);
+                Console.WriteLine("Connection Thread Woke Up");
+                CheckInternetConnectionSync();
+                if (connected)
+                    connectionSuccess();
+                
+            } while (!connected);
+
+        }
+
+        /// <summary>
+        /// Upon success, initialize sql classes and change indicator led to green
+        /// </summary>
+        private void connectionSuccess()
+        {
+            cmd = new SqlCommand();
+            cmd.Connection = con;
+            da = new SqlDataAdapter();
+
+            this.status_pb.Image = global::GvanimVS.Properties.Resources.green;
         }
     }
 }

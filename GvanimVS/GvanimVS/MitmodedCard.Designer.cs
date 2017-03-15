@@ -51,16 +51,49 @@
             this.coordinator_id_tb = new System.Windows.Forms.TextBox();
             this.mitmoded_card_tc = new System.Windows.Forms.TabControl();
             this.mitmoded_personal_tab = new System.Windows.Forms.TabPage();
-            this.rehab_commitee_dtp = new System.Windows.Forms.DateTimePicker();
-            this.rehab_ok_lb = new System.Windows.Forms.Label();
-            this.community_tb = new System.Windows.Forms.TextBox();
-            this.community_lb = new System.Windows.Forms.Label();
-            this.referer_phone_tb = new System.Windows.Forms.TextBox();
-            this.referer_phone_lb = new System.Windows.Forms.Label();
-            this.referer_tb = new System.Windows.Forms.TextBox();
-            this.referer_lb = new System.Windows.Forms.Label();
-            this.intake_date_dtp = new System.Windows.Forms.DateTimePicker();
+            this.xml_family_status_tb = new System.Windows.Forms.TextBox();
+            this.family_status_lb = new System.Windows.Forms.Label();
+            this.sex_lb = new System.Windows.Forms.Label();
+            this.xml_rehab_validity_expires_lb = new System.Windows.Forms.Label();
+            this.validity_expires_lb = new System.Windows.Forms.Label();
+            this.xml_rehab_validity_cb = new System.Windows.Forms.ComboBox();
+            this.rehab_validity_lb = new System.Windows.Forms.Label();
+            this.xml_rehab_committee_dtp = new System.Windows.Forms.DateTimePicker();
+            this.rehab_committee_lb = new System.Windows.Forms.Label();
+            this.xml_intake_date_dtp = new System.Windows.Forms.DateTimePicker();
             this.intake_date_lb = new System.Windows.Forms.Label();
+            this.xml_gender_pnl = new System.Windows.Forms.Panel();
+            this.gender_female_rb = new System.Windows.Forms.RadioButton();
+            this.gender_male_rb = new System.Windows.Forms.RadioButton();
+            this.mitmoded_contacts_tab = new System.Windows.Forms.TabPage();
+            this.xml_psychiatrist_phone_tb = new System.Windows.Forms.TextBox();
+            this.psychiatrist_phone_lb = new System.Windows.Forms.Label();
+            this.xml_psychiatrist_name_tb = new System.Windows.Forms.TextBox();
+            this.psychiatrist_name_lb = new System.Windows.Forms.Label();
+            this.xml_community_phone_tb = new System.Windows.Forms.TextBox();
+            this.community_phone_lb = new System.Windows.Forms.Label();
+            this.emergency_contact3_phone_lb = new System.Windows.Forms.Label();
+            this.emergency_contact2_phone_lb = new System.Windows.Forms.Label();
+            this.xml_emergency_contact3_phone_tb = new System.Windows.Forms.TextBox();
+            this.xml_emergency_contact2_phone_tb = new System.Windows.Forms.TextBox();
+            this.xml_emergency_contact1_phone_tb = new System.Windows.Forms.TextBox();
+            this.emergency_contact1_phone_lb = new System.Windows.Forms.Label();
+            this.xml_family_contact_phone_tb = new System.Windows.Forms.TextBox();
+            this.family_contact_phone_lb = new System.Windows.Forms.Label();
+            this.xml_emergency_contact3_name_tb = new System.Windows.Forms.TextBox();
+            this.emergency_contact3_name_lb = new System.Windows.Forms.Label();
+            this.xml_emergency_contact2_name_tb = new System.Windows.Forms.TextBox();
+            this.emergency_contact2_name_lb = new System.Windows.Forms.Label();
+            this.xml_emergency_contact1_name_tb = new System.Windows.Forms.TextBox();
+            this.emergency_contact1_name_lb = new System.Windows.Forms.Label();
+            this.xml_family_contact_name_tb = new System.Windows.Forms.TextBox();
+            this.family_contact_name_lb = new System.Windows.Forms.Label();
+            this.xml_community_name_tb = new System.Windows.Forms.TextBox();
+            this.community_name_lb = new System.Windows.Forms.Label();
+            this.xml_referer_phone_tb = new System.Windows.Forms.TextBox();
+            this.referer_phone_lb = new System.Windows.Forms.Label();
+            this.xml_referer_tb = new System.Windows.Forms.TextBox();
+            this.referer_lb = new System.Windows.Forms.Label();
             this.mitmoded_personal2_tab = new System.Windows.Forms.TabPage();
             this.xml_meds_tb = new System.Windows.Forms.TextBox();
             this.meds_lb = new System.Windows.Forms.Label();
@@ -96,6 +129,7 @@
             this.employment_place = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employment_roles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mitmoded_job2_tab = new System.Windows.Forms.TabPage();
+            this.xml_job_scope_tb = new System.Windows.Forms.TextBox();
             this.xml_job_free_txt_tb = new System.Windows.Forms.TextBox();
             this.job_free_txt_lb = new System.Windows.Forms.Label();
             this.xml_job_sal_expc_tb = new System.Windows.Forms.TextBox();
@@ -134,10 +168,26 @@
             this.job_important_lb = new System.Windows.Forms.Label();
             this.xml_job_target_tb = new System.Windows.Forms.TextBox();
             this.job_target_lb = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.mitmoded_print_tab = new System.Windows.Forms.TabPage();
+            this.export_bt = new System.Windows.Forms.Button();
+            this.xml_last_signed_dynamic_lb = new System.Windows.Forms.Label();
+            this.last_signed_lb = new System.Windows.Forms.Label();
+            this.xml_saved_file_lb = new System.Windows.Forms.Label();
+            this.chosen_file_lb = new System.Windows.Forms.Label();
+            this.preview_saved_bt = new System.Windows.Forms.Button();
+            this.preview_selected_bt = new System.Windows.Forms.Button();
+            this.upload_file_bt = new System.Windows.Forms.Button();
+            this.choose_file_bt = new System.Windows.Forms.Button();
+            this.show_pdf_bt = new System.Windows.Forms.Button();
+            this.ID_dynamic_lb = new System.Windows.Forms.Label();
+            this.name_dynamic_lb = new System.Windows.Forms.Label();
+            this.ID2_lb = new System.Windows.Forms.Label();
+            this.name_lb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.mitmoded_card_tc.SuspendLayout();
             this.mitmoded_personal_tab.SuspendLayout();
+            this.xml_gender_pnl.SuspendLayout();
+            this.mitmoded_contacts_tab.SuspendLayout();
             this.mitmoded_personal2_tab.SuspendLayout();
             this.mitmoded_ed_army_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.education_dgv)).BeginInit();
@@ -148,6 +198,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.job_preferences_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skills_dgv)).BeginInit();
             this.mitmoded_job4_tab.SuspendLayout();
+            this.mitmoded_print_tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstName_lb
@@ -340,13 +391,14 @@
             // mitmoded_card_tc
             // 
             this.mitmoded_card_tc.Controls.Add(this.mitmoded_personal_tab);
+            this.mitmoded_card_tc.Controls.Add(this.mitmoded_contacts_tab);
             this.mitmoded_card_tc.Controls.Add(this.mitmoded_personal2_tab);
             this.mitmoded_card_tc.Controls.Add(this.mitmoded_ed_army_tab);
             this.mitmoded_card_tc.Controls.Add(this.mitmoded_job_tab);
             this.mitmoded_card_tc.Controls.Add(this.mitmoded_job2_tab);
             this.mitmoded_card_tc.Controls.Add(this.mitmoded_job3_tab);
             this.mitmoded_card_tc.Controls.Add(this.mitmoded_job4_tab);
-            this.mitmoded_card_tc.Controls.Add(this.tabPage1);
+            this.mitmoded_card_tc.Controls.Add(this.mitmoded_print_tab);
             this.mitmoded_card_tc.Dock = System.Windows.Forms.DockStyle.Top;
             this.mitmoded_card_tc.Location = new System.Drawing.Point(0, 0);
             this.mitmoded_card_tc.Name = "mitmoded_card_tc";
@@ -358,15 +410,16 @@
             // 
             // mitmoded_personal_tab
             // 
-            this.mitmoded_personal_tab.Controls.Add(this.rehab_commitee_dtp);
-            this.mitmoded_personal_tab.Controls.Add(this.rehab_ok_lb);
-            this.mitmoded_personal_tab.Controls.Add(this.community_tb);
-            this.mitmoded_personal_tab.Controls.Add(this.community_lb);
-            this.mitmoded_personal_tab.Controls.Add(this.referer_phone_tb);
-            this.mitmoded_personal_tab.Controls.Add(this.referer_phone_lb);
-            this.mitmoded_personal_tab.Controls.Add(this.referer_tb);
-            this.mitmoded_personal_tab.Controls.Add(this.referer_lb);
-            this.mitmoded_personal_tab.Controls.Add(this.intake_date_dtp);
+            this.mitmoded_personal_tab.Controls.Add(this.xml_family_status_tb);
+            this.mitmoded_personal_tab.Controls.Add(this.family_status_lb);
+            this.mitmoded_personal_tab.Controls.Add(this.sex_lb);
+            this.mitmoded_personal_tab.Controls.Add(this.xml_rehab_validity_expires_lb);
+            this.mitmoded_personal_tab.Controls.Add(this.validity_expires_lb);
+            this.mitmoded_personal_tab.Controls.Add(this.xml_rehab_validity_cb);
+            this.mitmoded_personal_tab.Controls.Add(this.rehab_validity_lb);
+            this.mitmoded_personal_tab.Controls.Add(this.xml_rehab_committee_dtp);
+            this.mitmoded_personal_tab.Controls.Add(this.rehab_committee_lb);
+            this.mitmoded_personal_tab.Controls.Add(this.xml_intake_date_dtp);
             this.mitmoded_personal_tab.Controls.Add(this.intake_date_lb);
             this.mitmoded_personal_tab.Controls.Add(this.coordinator_id_tb);
             this.mitmoded_personal_tab.Controls.Add(this.firstName_lb);
@@ -387,6 +440,7 @@
             this.mitmoded_personal_tab.Controls.Add(this.address_tb);
             this.mitmoded_personal_tab.Controls.Add(this.city_tb);
             this.mitmoded_personal_tab.Controls.Add(this.street_lb);
+            this.mitmoded_personal_tab.Controls.Add(this.xml_gender_pnl);
             this.mitmoded_personal_tab.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mitmoded_personal_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_personal_tab.Name = "mitmoded_personal_tab";
@@ -396,92 +450,414 @@
             this.mitmoded_personal_tab.Text = "פרטים אישיים";
             this.mitmoded_personal_tab.UseVisualStyleBackColor = true;
             // 
-            // rehab_commitee_dtp
+            // xml_family_status_tb
             // 
-            this.rehab_commitee_dtp.Checked = false;
-            this.rehab_commitee_dtp.Location = new System.Drawing.Point(285, 248);
-            this.rehab_commitee_dtp.Name = "rehab_commitee_dtp";
-            this.rehab_commitee_dtp.ShowCheckBox = true;
-            this.rehab_commitee_dtp.Size = new System.Drawing.Size(200, 20);
-            this.rehab_commitee_dtp.TabIndex = 31;
+            this.xml_family_status_tb.Location = new System.Drawing.Point(285, 196);
+            this.xml_family_status_tb.Name = "xml_family_status_tb";
+            this.xml_family_status_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_family_status_tb.TabIndex = 41;
             // 
-            // rehab_ok_lb
+            // family_status_lb
             // 
-            this.rehab_ok_lb.Location = new System.Drawing.Point(484, 244);
-            this.rehab_ok_lb.Name = "rehab_ok_lb";
-            this.rehab_ok_lb.Size = new System.Drawing.Size(112, 33);
-            this.rehab_ok_lb.TabIndex = 30;
-            this.rehab_ok_lb.Text = "אישור ועדת סל שיקום מתאריך";
-            this.rehab_ok_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.family_status_lb.AutoSize = true;
+            this.family_status_lb.Location = new System.Drawing.Point(491, 196);
+            this.family_status_lb.Name = "family_status_lb";
+            this.family_status_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.family_status_lb.Size = new System.Drawing.Size(76, 13);
+            this.family_status_lb.TabIndex = 40;
+            this.family_status_lb.Text = "מצב משפחתי:";
             // 
-            // community_tb
+            // sex_lb
             // 
-            this.community_tb.Location = new System.Drawing.Point(617, 243);
-            this.community_tb.Multiline = true;
-            this.community_tb.Name = "community_tb";
-            this.community_tb.Size = new System.Drawing.Size(200, 83);
-            this.community_tb.TabIndex = 29;
+            this.sex_lb.AutoSize = true;
+            this.sex_lb.Location = new System.Drawing.Point(823, 197);
+            this.sex_lb.Name = "sex_lb";
+            this.sex_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.sex_lb.Size = new System.Drawing.Size(27, 13);
+            this.sex_lb.TabIndex = 36;
+            this.sex_lb.Text = "מין:";
             // 
-            // community_lb
+            // xml_rehab_validity_expires_lb
             // 
-            this.community_lb.AutoSize = true;
-            this.community_lb.Location = new System.Drawing.Point(821, 243);
-            this.community_lb.Name = "community_lb";
-            this.community_lb.Size = new System.Drawing.Size(86, 13);
-            this.community_lb.TabIndex = 28;
-            this.community_lb.Text = "גורמים בקהילה";
+            this.xml_rehab_validity_expires_lb.AutoSize = true;
+            this.xml_rehab_validity_expires_lb.Location = new System.Drawing.Point(617, 338);
+            this.xml_rehab_validity_expires_lb.Name = "xml_rehab_validity_expires_lb";
+            this.xml_rehab_validity_expires_lb.Size = new System.Drawing.Size(115, 13);
+            this.xml_rehab_validity_expires_lb.TabIndex = 35;
+            this.xml_rehab_validity_expires_lb.Text = "עדיין לא ניתן אישור";
             // 
-            // referer_phone_tb
+            // validity_expires_lb
             // 
-            this.referer_phone_tb.Location = new System.Drawing.Point(285, 201);
-            this.referer_phone_tb.Name = "referer_phone_tb";
-            this.referer_phone_tb.Size = new System.Drawing.Size(200, 20);
-            this.referer_phone_tb.TabIndex = 27;
+            this.validity_expires_lb.AutoSize = true;
+            this.validity_expires_lb.Location = new System.Drawing.Point(823, 338);
+            this.validity_expires_lb.Name = "validity_expires_lb";
+            this.validity_expires_lb.Size = new System.Drawing.Size(122, 13);
+            this.validity_expires_lb.TabIndex = 34;
+            this.validity_expires_lb.Text = "תאריך פקיעת האישור:";
             // 
-            // referer_phone_lb
+            // xml_rehab_validity_cb
             // 
-            this.referer_phone_lb.AutoSize = true;
-            this.referer_phone_lb.Location = new System.Drawing.Point(491, 201);
-            this.referer_phone_lb.Name = "referer_phone_lb";
-            this.referer_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.referer_phone_lb.Size = new System.Drawing.Size(67, 13);
-            this.referer_phone_lb.TabIndex = 26;
-            this.referer_phone_lb.Text = "טלפון מפנה";
+            this.xml_rehab_validity_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.xml_rehab_validity_cb.Enabled = false;
+            this.xml_rehab_validity_cb.FormattingEnabled = true;
+            this.xml_rehab_validity_cb.Location = new System.Drawing.Point(364, 297);
+            this.xml_rehab_validity_cb.Name = "xml_rehab_validity_cb";
+            this.xml_rehab_validity_cb.Size = new System.Drawing.Size(121, 21);
+            this.xml_rehab_validity_cb.TabIndex = 33;
+            this.xml_rehab_validity_cb.SelectedIndexChanged += new System.EventHandler(this.xml_rehab_validity_cm_SelectedIndexChanged);
             // 
-            // referer_tb
+            // rehab_validity_lb
             // 
-            this.referer_tb.Location = new System.Drawing.Point(617, 201);
-            this.referer_tb.Name = "referer_tb";
-            this.referer_tb.Size = new System.Drawing.Size(200, 20);
-            this.referer_tb.TabIndex = 25;
+            this.rehab_validity_lb.AutoSize = true;
+            this.rehab_validity_lb.Location = new System.Drawing.Point(491, 300);
+            this.rehab_validity_lb.Name = "rehab_validity_lb";
+            this.rehab_validity_lb.Size = new System.Drawing.Size(98, 13);
+            this.rehab_validity_lb.TabIndex = 32;
+            this.rehab_validity_lb.Text = "משך זמן ההחלטה:";
             // 
-            // referer_lb
+            // xml_rehab_committee_dtp
             // 
-            this.referer_lb.AutoSize = true;
-            this.referer_lb.Location = new System.Drawing.Point(823, 201);
-            this.referer_lb.Name = "referer_lb";
-            this.referer_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.referer_lb.Size = new System.Drawing.Size(60, 13);
-            this.referer_lb.TabIndex = 24;
-            this.referer_lb.Text = "גורם מפנה";
+            this.xml_rehab_committee_dtp.Checked = false;
+            this.xml_rehab_committee_dtp.Location = new System.Drawing.Point(617, 294);
+            this.xml_rehab_committee_dtp.Name = "xml_rehab_committee_dtp";
+            this.xml_rehab_committee_dtp.ShowCheckBox = true;
+            this.xml_rehab_committee_dtp.Size = new System.Drawing.Size(200, 20);
+            this.xml_rehab_committee_dtp.TabIndex = 31;
+            this.xml_rehab_committee_dtp.ValueChanged += new System.EventHandler(this.rehab_committee_dtp_ValueChanged);
             // 
-            // intake_date_dtp
+            // rehab_committee_lb
             // 
-            this.intake_date_dtp.Checked = false;
-            this.intake_date_dtp.Location = new System.Drawing.Point(67, 56);
-            this.intake_date_dtp.Name = "intake_date_dtp";
-            this.intake_date_dtp.ShowCheckBox = true;
-            this.intake_date_dtp.Size = new System.Drawing.Size(200, 20);
-            this.intake_date_dtp.TabIndex = 22;
+            this.rehab_committee_lb.Location = new System.Drawing.Point(823, 290);
+            this.rehab_committee_lb.Name = "rehab_committee_lb";
+            this.rehab_committee_lb.Size = new System.Drawing.Size(168, 33);
+            this.rehab_committee_lb.TabIndex = 30;
+            this.rehab_committee_lb.Text = "אישור ועדת סל שיקום מתאריך";
+            this.rehab_committee_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // xml_intake_date_dtp
+            // 
+            this.xml_intake_date_dtp.Checked = false;
+            this.xml_intake_date_dtp.Location = new System.Drawing.Point(617, 248);
+            this.xml_intake_date_dtp.Name = "xml_intake_date_dtp";
+            this.xml_intake_date_dtp.ShowCheckBox = true;
+            this.xml_intake_date_dtp.Size = new System.Drawing.Size(200, 20);
+            this.xml_intake_date_dtp.TabIndex = 22;
             // 
             // intake_date_lb
             // 
             this.intake_date_lb.AutoSize = true;
-            this.intake_date_lb.Location = new System.Drawing.Point(192, 32);
+            this.intake_date_lb.Location = new System.Drawing.Point(823, 248);
             this.intake_date_lb.Name = "intake_date_lb";
             this.intake_date_lb.Size = new System.Drawing.Size(76, 13);
             this.intake_date_lb.TabIndex = 23;
             this.intake_date_lb.Text = "תאריך קליטה";
+            // 
+            // xml_gender_pnl
+            // 
+            this.xml_gender_pnl.Controls.Add(this.gender_female_rb);
+            this.xml_gender_pnl.Controls.Add(this.gender_male_rb);
+            this.xml_gender_pnl.Location = new System.Drawing.Point(616, 191);
+            this.xml_gender_pnl.Name = "xml_gender_pnl";
+            this.xml_gender_pnl.Size = new System.Drawing.Size(200, 25);
+            this.xml_gender_pnl.TabIndex = 39;
+            // 
+            // gender_female_rb
+            // 
+            this.gender_female_rb.AutoSize = true;
+            this.gender_female_rb.Location = new System.Drawing.Point(46, 4);
+            this.gender_female_rb.Name = "gender_female_rb";
+            this.gender_female_rb.Size = new System.Drawing.Size(51, 17);
+            this.gender_female_rb.TabIndex = 38;
+            this.gender_female_rb.TabStop = true;
+            this.gender_female_rb.Text = "נקבה";
+            this.gender_female_rb.UseVisualStyleBackColor = true;
+            // 
+            // gender_male_rb
+            // 
+            this.gender_male_rb.AutoSize = true;
+            this.gender_male_rb.Location = new System.Drawing.Point(143, 4);
+            this.gender_male_rb.Name = "gender_male_rb";
+            this.gender_male_rb.Size = new System.Drawing.Size(43, 17);
+            this.gender_male_rb.TabIndex = 37;
+            this.gender_male_rb.TabStop = true;
+            this.gender_male_rb.Text = "זכר";
+            this.gender_male_rb.UseVisualStyleBackColor = true;
+            // 
+            // mitmoded_contacts_tab
+            // 
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_psychiatrist_phone_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.psychiatrist_phone_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_psychiatrist_name_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.psychiatrist_name_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_community_phone_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.community_phone_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.emergency_contact3_phone_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.emergency_contact2_phone_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_emergency_contact3_phone_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_emergency_contact2_phone_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_emergency_contact1_phone_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.emergency_contact1_phone_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_family_contact_phone_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.family_contact_phone_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_emergency_contact3_name_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.emergency_contact3_name_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_emergency_contact2_name_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.emergency_contact2_name_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_emergency_contact1_name_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.emergency_contact1_name_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_family_contact_name_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.family_contact_name_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_community_name_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.community_name_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_referer_phone_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.referer_phone_lb);
+            this.mitmoded_contacts_tab.Controls.Add(this.xml_referer_tb);
+            this.mitmoded_contacts_tab.Controls.Add(this.referer_lb);
+            this.mitmoded_contacts_tab.Location = new System.Drawing.Point(4, 22);
+            this.mitmoded_contacts_tab.Name = "mitmoded_contacts_tab";
+            this.mitmoded_contacts_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.mitmoded_contacts_tab.Size = new System.Drawing.Size(1011, 594);
+            this.mitmoded_contacts_tab.TabIndex = 8;
+            this.mitmoded_contacts_tab.Text = "אנשי קשר";
+            this.mitmoded_contacts_tab.UseVisualStyleBackColor = true;
+            // 
+            // xml_psychiatrist_phone_tb
+            // 
+            this.xml_psychiatrist_phone_tb.Location = new System.Drawing.Point(328, 335);
+            this.xml_psychiatrist_phone_tb.Name = "xml_psychiatrist_phone_tb";
+            this.xml_psychiatrist_phone_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_psychiatrist_phone_tb.TabIndex = 57;
+            // 
+            // psychiatrist_phone_lb
+            // 
+            this.psychiatrist_phone_lb.AutoSize = true;
+            this.psychiatrist_phone_lb.Location = new System.Drawing.Point(544, 335);
+            this.psychiatrist_phone_lb.Name = "psychiatrist_phone_lb";
+            this.psychiatrist_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.psychiatrist_phone_lb.Size = new System.Drawing.Size(41, 13);
+            this.psychiatrist_phone_lb.TabIndex = 56;
+            this.psychiatrist_phone_lb.Text = "טלפון:";
+            // 
+            // xml_psychiatrist_name_tb
+            // 
+            this.xml_psychiatrist_name_tb.Location = new System.Drawing.Point(635, 335);
+            this.xml_psychiatrist_name_tb.Name = "xml_psychiatrist_name_tb";
+            this.xml_psychiatrist_name_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_psychiatrist_name_tb.TabIndex = 55;
+            // 
+            // psychiatrist_name_lb
+            // 
+            this.psychiatrist_name_lb.AutoSize = true;
+            this.psychiatrist_name_lb.Location = new System.Drawing.Point(851, 335);
+            this.psychiatrist_name_lb.Name = "psychiatrist_name_lb";
+            this.psychiatrist_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.psychiatrist_name_lb.Size = new System.Drawing.Size(91, 13);
+            this.psychiatrist_name_lb.TabIndex = 54;
+            this.psychiatrist_name_lb.Text = "רופא פסיכיאטר:";
+            // 
+            // xml_community_phone_tb
+            // 
+            this.xml_community_phone_tb.Location = new System.Drawing.Point(328, 194);
+            this.xml_community_phone_tb.Multiline = true;
+            this.xml_community_phone_tb.Name = "xml_community_phone_tb";
+            this.xml_community_phone_tb.Size = new System.Drawing.Size(200, 83);
+            this.xml_community_phone_tb.TabIndex = 53;
+            // 
+            // community_phone_lb
+            // 
+            this.community_phone_lb.AutoSize = true;
+            this.community_phone_lb.Location = new System.Drawing.Point(544, 194);
+            this.community_phone_lb.Name = "community_phone_lb";
+            this.community_phone_lb.Size = new System.Drawing.Size(41, 13);
+            this.community_phone_lb.TabIndex = 52;
+            this.community_phone_lb.Text = "טלפון:";
+            // 
+            // emergency_contact3_phone_lb
+            // 
+            this.emergency_contact3_phone_lb.AutoSize = true;
+            this.emergency_contact3_phone_lb.Location = new System.Drawing.Point(544, 164);
+            this.emergency_contact3_phone_lb.Name = "emergency_contact3_phone_lb";
+            this.emergency_contact3_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.emergency_contact3_phone_lb.Size = new System.Drawing.Size(41, 13);
+            this.emergency_contact3_phone_lb.TabIndex = 51;
+            this.emergency_contact3_phone_lb.Text = "טלפון:";
+            // 
+            // emergency_contact2_phone_lb
+            // 
+            this.emergency_contact2_phone_lb.AutoSize = true;
+            this.emergency_contact2_phone_lb.Location = new System.Drawing.Point(544, 129);
+            this.emergency_contact2_phone_lb.Name = "emergency_contact2_phone_lb";
+            this.emergency_contact2_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.emergency_contact2_phone_lb.Size = new System.Drawing.Size(41, 13);
+            this.emergency_contact2_phone_lb.TabIndex = 50;
+            this.emergency_contact2_phone_lb.Text = "טלפון:";
+            // 
+            // xml_emergency_contact3_phone_tb
+            // 
+            this.xml_emergency_contact3_phone_tb.Location = new System.Drawing.Point(328, 161);
+            this.xml_emergency_contact3_phone_tb.Name = "xml_emergency_contact3_phone_tb";
+            this.xml_emergency_contact3_phone_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_emergency_contact3_phone_tb.TabIndex = 49;
+            // 
+            // xml_emergency_contact2_phone_tb
+            // 
+            this.xml_emergency_contact2_phone_tb.Location = new System.Drawing.Point(328, 126);
+            this.xml_emergency_contact2_phone_tb.Name = "xml_emergency_contact2_phone_tb";
+            this.xml_emergency_contact2_phone_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_emergency_contact2_phone_tb.TabIndex = 48;
+            // 
+            // xml_emergency_contact1_phone_tb
+            // 
+            this.xml_emergency_contact1_phone_tb.Location = new System.Drawing.Point(328, 91);
+            this.xml_emergency_contact1_phone_tb.Name = "xml_emergency_contact1_phone_tb";
+            this.xml_emergency_contact1_phone_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_emergency_contact1_phone_tb.TabIndex = 47;
+            // 
+            // emergency_contact1_phone_lb
+            // 
+            this.emergency_contact1_phone_lb.AutoSize = true;
+            this.emergency_contact1_phone_lb.Location = new System.Drawing.Point(544, 91);
+            this.emergency_contact1_phone_lb.Name = "emergency_contact1_phone_lb";
+            this.emergency_contact1_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.emergency_contact1_phone_lb.Size = new System.Drawing.Size(41, 13);
+            this.emergency_contact1_phone_lb.TabIndex = 46;
+            this.emergency_contact1_phone_lb.Text = "טלפון:";
+            // 
+            // xml_family_contact_phone_tb
+            // 
+            this.xml_family_contact_phone_tb.Location = new System.Drawing.Point(328, 54);
+            this.xml_family_contact_phone_tb.Name = "xml_family_contact_phone_tb";
+            this.xml_family_contact_phone_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_family_contact_phone_tb.TabIndex = 45;
+            // 
+            // family_contact_phone_lb
+            // 
+            this.family_contact_phone_lb.AutoSize = true;
+            this.family_contact_phone_lb.Location = new System.Drawing.Point(544, 54);
+            this.family_contact_phone_lb.Name = "family_contact_phone_lb";
+            this.family_contact_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.family_contact_phone_lb.Size = new System.Drawing.Size(41, 13);
+            this.family_contact_phone_lb.TabIndex = 44;
+            this.family_contact_phone_lb.Text = "טלפון:";
+            // 
+            // xml_emergency_contact3_name_tb
+            // 
+            this.xml_emergency_contact3_name_tb.Location = new System.Drawing.Point(635, 161);
+            this.xml_emergency_contact3_name_tb.Name = "xml_emergency_contact3_name_tb";
+            this.xml_emergency_contact3_name_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_emergency_contact3_name_tb.TabIndex = 43;
+            // 
+            // emergency_contact3_name_lb
+            // 
+            this.emergency_contact3_name_lb.AutoSize = true;
+            this.emergency_contact3_name_lb.Location = new System.Drawing.Point(851, 161);
+            this.emergency_contact3_name_lb.Name = "emergency_contact3_name_lb";
+            this.emergency_contact3_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.emergency_contact3_name_lb.Size = new System.Drawing.Size(123, 13);
+            this.emergency_contact3_name_lb.TabIndex = 42;
+            this.emergency_contact3_name_lb.Text = "איש קשר חירום (נוסף):";
+            // 
+            // xml_emergency_contact2_name_tb
+            // 
+            this.xml_emergency_contact2_name_tb.Location = new System.Drawing.Point(635, 126);
+            this.xml_emergency_contact2_name_tb.Name = "xml_emergency_contact2_name_tb";
+            this.xml_emergency_contact2_name_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_emergency_contact2_name_tb.TabIndex = 41;
+            // 
+            // emergency_contact2_name_lb
+            // 
+            this.emergency_contact2_name_lb.AutoSize = true;
+            this.emergency_contact2_name_lb.Location = new System.Drawing.Point(851, 126);
+            this.emergency_contact2_name_lb.Name = "emergency_contact2_name_lb";
+            this.emergency_contact2_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.emergency_contact2_name_lb.Size = new System.Drawing.Size(123, 13);
+            this.emergency_contact2_name_lb.TabIndex = 40;
+            this.emergency_contact2_name_lb.Text = "איש קשר חירום (נוסף):";
+            // 
+            // xml_emergency_contact1_name_tb
+            // 
+            this.xml_emergency_contact1_name_tb.Location = new System.Drawing.Point(635, 91);
+            this.xml_emergency_contact1_name_tb.Name = "xml_emergency_contact1_name_tb";
+            this.xml_emergency_contact1_name_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_emergency_contact1_name_tb.TabIndex = 39;
+            // 
+            // emergency_contact1_name_lb
+            // 
+            this.emergency_contact1_name_lb.AutoSize = true;
+            this.emergency_contact1_name_lb.Location = new System.Drawing.Point(851, 91);
+            this.emergency_contact1_name_lb.Name = "emergency_contact1_name_lb";
+            this.emergency_contact1_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.emergency_contact1_name_lb.Size = new System.Drawing.Size(90, 13);
+            this.emergency_contact1_name_lb.TabIndex = 38;
+            this.emergency_contact1_name_lb.Text = "איש קשר חירום:";
+            // 
+            // xml_family_contact_name_tb
+            // 
+            this.xml_family_contact_name_tb.Location = new System.Drawing.Point(635, 54);
+            this.xml_family_contact_name_tb.Name = "xml_family_contact_name_tb";
+            this.xml_family_contact_name_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_family_contact_name_tb.TabIndex = 37;
+            // 
+            // family_contact_name_lb
+            // 
+            this.family_contact_name_lb.AutoSize = true;
+            this.family_contact_name_lb.Location = new System.Drawing.Point(851, 54);
+            this.family_contact_name_lb.Name = "family_contact_name_lb";
+            this.family_contact_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.family_contact_name_lb.Size = new System.Drawing.Size(104, 13);
+            this.family_contact_name_lb.TabIndex = 36;
+            this.family_contact_name_lb.Text = "איש קשר במשפחה:";
+            // 
+            // xml_community_name_tb
+            // 
+            this.xml_community_name_tb.Location = new System.Drawing.Point(635, 194);
+            this.xml_community_name_tb.Multiline = true;
+            this.xml_community_name_tb.Name = "xml_community_name_tb";
+            this.xml_community_name_tb.Size = new System.Drawing.Size(200, 83);
+            this.xml_community_name_tb.TabIndex = 35;
+            // 
+            // community_name_lb
+            // 
+            this.community_name_lb.AutoSize = true;
+            this.community_name_lb.Location = new System.Drawing.Point(851, 194);
+            this.community_name_lb.Name = "community_name_lb";
+            this.community_name_lb.Size = new System.Drawing.Size(89, 26);
+            this.community_name_lb.TabIndex = 34;
+            this.community_name_lb.Text = "גורמים בקהילה:\r\n(מתאמי טיפול)";
+            // 
+            // xml_referer_phone_tb
+            // 
+            this.xml_referer_phone_tb.Location = new System.Drawing.Point(328, 295);
+            this.xml_referer_phone_tb.Name = "xml_referer_phone_tb";
+            this.xml_referer_phone_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_referer_phone_tb.TabIndex = 33;
+            // 
+            // referer_phone_lb
+            // 
+            this.referer_phone_lb.AutoSize = true;
+            this.referer_phone_lb.Location = new System.Drawing.Point(544, 295);
+            this.referer_phone_lb.Name = "referer_phone_lb";
+            this.referer_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.referer_phone_lb.Size = new System.Drawing.Size(41, 13);
+            this.referer_phone_lb.TabIndex = 32;
+            this.referer_phone_lb.Text = "טלפון:";
+            // 
+            // xml_referer_tb
+            // 
+            this.xml_referer_tb.Location = new System.Drawing.Point(635, 295);
+            this.xml_referer_tb.Name = "xml_referer_tb";
+            this.xml_referer_tb.Size = new System.Drawing.Size(200, 20);
+            this.xml_referer_tb.TabIndex = 31;
+            // 
+            // referer_lb
+            // 
+            this.referer_lb.AutoSize = true;
+            this.referer_lb.Location = new System.Drawing.Point(851, 295);
+            this.referer_lb.Name = "referer_lb";
+            this.referer_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.referer_lb.Size = new System.Drawing.Size(63, 13);
+            this.referer_lb.TabIndex = 30;
+            this.referer_lb.Text = "גורם מפנה:";
             // 
             // mitmoded_personal2_tab
             // 
@@ -809,6 +1185,7 @@
             // 
             // mitmoded_job2_tab
             // 
+            this.mitmoded_job2_tab.Controls.Add(this.xml_job_scope_tb);
             this.mitmoded_job2_tab.Controls.Add(this.xml_job_free_txt_tb);
             this.mitmoded_job2_tab.Controls.Add(this.job_free_txt_lb);
             this.mitmoded_job2_tab.Controls.Add(this.xml_job_sal_expc_tb);
@@ -840,6 +1217,14 @@
             this.mitmoded_job2_tab.Text = "עבודה 2";
             this.mitmoded_job2_tab.UseVisualStyleBackColor = true;
             // 
+            // xml_job_scope_tb
+            // 
+            this.xml_job_scope_tb.Location = new System.Drawing.Point(518, 396);
+            this.xml_job_scope_tb.Name = "xml_job_scope_tb";
+            this.xml_job_scope_tb.Size = new System.Drawing.Size(310, 20);
+            this.xml_job_scope_tb.TabIndex = 26;
+            this.xml_job_scope_tb.Text = "מלאה/ חצי משרה/ משמרות: בוקר/צהריים/ערב/לילה";
+            // 
             // xml_job_free_txt_tb
             // 
             this.xml_job_free_txt_tb.Location = new System.Drawing.Point(186, 544);
@@ -860,10 +1245,10 @@
             // 
             // xml_job_sal_expc_tb
             // 
-            this.xml_job_sal_expc_tb.Location = new System.Drawing.Point(337, 480);
+            this.xml_job_sal_expc_tb.Location = new System.Drawing.Point(187, 480);
             this.xml_job_sal_expc_tb.Multiline = true;
             this.xml_job_sal_expc_tb.Name = "xml_job_sal_expc_tb";
-            this.xml_job_sal_expc_tb.Size = new System.Drawing.Size(185, 30);
+            this.xml_job_sal_expc_tb.Size = new System.Drawing.Size(335, 30);
             this.xml_job_sal_expc_tb.TabIndex = 23;
             // 
             // job_sal_expc_lb
@@ -942,11 +1327,11 @@
             // job_size_lb
             // 
             this.job_size_lb.AutoSize = true;
-            this.job_size_lb.Location = new System.Drawing.Point(590, 406);
+            this.job_size_lb.Location = new System.Drawing.Point(878, 399);
             this.job_size_lb.Name = "job_size_lb";
-            this.job_size_lb.Size = new System.Drawing.Size(337, 13);
+            this.job_size_lb.Size = new System.Drawing.Size(65, 13);
             this.job_size_lb.TabIndex = 13;
-            this.job_size_lb.Text = "היקף משרה: מלאה/ חצי משרה/ משמרות: בוקר/צהריים/ערב/לילה";
+            this.job_size_lb.Text = "היקף משרה";
             // 
             // job_type_lb
             // 
@@ -1150,8 +1535,9 @@
             // xml_additional_job_info
             // 
             this.xml_additional_job_info.Location = new System.Drawing.Point(193, 84);
+            this.xml_additional_job_info.Multiline = true;
             this.xml_additional_job_info.Name = "xml_additional_job_info";
-            this.xml_additional_job_info.Size = new System.Drawing.Size(538, 20);
+            this.xml_additional_job_info.Size = new System.Drawing.Size(538, 38);
             this.xml_additional_job_info.TabIndex = 3;
             // 
             // job_important_lb
@@ -1178,15 +1564,177 @@
             this.job_target_lb.TabIndex = 0;
             this.job_target_lb.Text = "מטרת על לחיפוש עבודה";
             // 
-            // tabPage1
+            // mitmoded_print_tab
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1011, 594);
-            this.tabPage1.TabIndex = 7;
-            this.tabPage1.Text = "חתימה והדפסה";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.mitmoded_print_tab.Controls.Add(this.export_bt);
+            this.mitmoded_print_tab.Controls.Add(this.xml_last_signed_dynamic_lb);
+            this.mitmoded_print_tab.Controls.Add(this.last_signed_lb);
+            this.mitmoded_print_tab.Controls.Add(this.xml_saved_file_lb);
+            this.mitmoded_print_tab.Controls.Add(this.chosen_file_lb);
+            this.mitmoded_print_tab.Controls.Add(this.preview_saved_bt);
+            this.mitmoded_print_tab.Controls.Add(this.preview_selected_bt);
+            this.mitmoded_print_tab.Controls.Add(this.upload_file_bt);
+            this.mitmoded_print_tab.Controls.Add(this.choose_file_bt);
+            this.mitmoded_print_tab.Controls.Add(this.show_pdf_bt);
+            this.mitmoded_print_tab.Controls.Add(this.ID_dynamic_lb);
+            this.mitmoded_print_tab.Controls.Add(this.name_dynamic_lb);
+            this.mitmoded_print_tab.Controls.Add(this.ID2_lb);
+            this.mitmoded_print_tab.Controls.Add(this.name_lb);
+            this.mitmoded_print_tab.Location = new System.Drawing.Point(4, 22);
+            this.mitmoded_print_tab.Name = "mitmoded_print_tab";
+            this.mitmoded_print_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.mitmoded_print_tab.Size = new System.Drawing.Size(1011, 594);
+            this.mitmoded_print_tab.TabIndex = 7;
+            this.mitmoded_print_tab.Text = "חתימה והדפסה";
+            this.mitmoded_print_tab.UseVisualStyleBackColor = true;
+            // 
+            // export_bt
+            // 
+            this.export_bt.Location = new System.Drawing.Point(114, 70);
+            this.export_bt.Name = "export_bt";
+            this.export_bt.Size = new System.Drawing.Size(179, 23);
+            this.export_bt.TabIndex = 40;
+            this.export_bt.Text = "צור קובץ מוכן להדפסה";
+            this.export_bt.UseVisualStyleBackColor = true;
+            // 
+            // xml_last_signed_dynamic_lb
+            // 
+            this.xml_last_signed_dynamic_lb.AutoSize = true;
+            this.xml_last_signed_dynamic_lb.Location = new System.Drawing.Point(402, 70);
+            this.xml_last_signed_dynamic_lb.Name = "xml_last_signed_dynamic_lb";
+            this.xml_last_signed_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.xml_last_signed_dynamic_lb.Size = new System.Drawing.Size(72, 13);
+            this.xml_last_signed_dynamic_lb.TabIndex = 38;
+            this.xml_last_signed_dynamic_lb.Text = "<last_signed>";
+            // 
+            // last_signed_lb
+            // 
+            this.last_signed_lb.AutoSize = true;
+            this.last_signed_lb.Location = new System.Drawing.Point(402, 41);
+            this.last_signed_lb.Name = "last_signed_lb";
+            this.last_signed_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.last_signed_lb.Size = new System.Drawing.Size(116, 13);
+            this.last_signed_lb.TabIndex = 37;
+            this.last_signed_lb.Text = "תאריך חתימה אחרון: ";
+            // 
+            // xml_saved_file_lb
+            // 
+            this.xml_saved_file_lb.AutoEllipsis = true;
+            this.xml_saved_file_lb.AutoSize = true;
+            this.xml_saved_file_lb.Location = new System.Drawing.Point(838, 304);
+            this.xml_saved_file_lb.Name = "xml_saved_file_lb";
+            this.xml_saved_file_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.xml_saved_file_lb.Size = new System.Drawing.Size(129, 13);
+            this.xml_saved_file_lb.TabIndex = 36;
+            this.xml_saved_file_lb.Text = "אין קובץ שמור במערכת";
+            this.xml_saved_file_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chosen_file_lb
+            // 
+            this.chosen_file_lb.AutoEllipsis = true;
+            this.chosen_file_lb.AutoSize = true;
+            this.chosen_file_lb.Enabled = false;
+            this.chosen_file_lb.Location = new System.Drawing.Point(838, 177);
+            this.chosen_file_lb.Name = "chosen_file_lb";
+            this.chosen_file_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chosen_file_lb.Size = new System.Drawing.Size(106, 13);
+            this.chosen_file_lb.TabIndex = 35;
+            this.chosen_file_lb.Text = "בחרו קובץ לשמירה";
+            this.chosen_file_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // preview_saved_bt
+            // 
+            this.preview_saved_bt.Location = new System.Drawing.Point(869, 261);
+            this.preview_saved_bt.Name = "preview_saved_bt";
+            this.preview_saved_bt.Size = new System.Drawing.Size(109, 23);
+            this.preview_saved_bt.TabIndex = 34;
+            this.preview_saved_bt.Text = "הצג קובץ שמור";
+            this.preview_saved_bt.UseVisualStyleBackColor = true;
+            this.preview_saved_bt.Click += new System.EventHandler(this.preview_saved_bt_Click);
+            // 
+            // preview_selected_bt
+            // 
+            this.preview_selected_bt.Location = new System.Drawing.Point(869, 138);
+            this.preview_selected_bt.Name = "preview_selected_bt";
+            this.preview_selected_bt.Size = new System.Drawing.Size(109, 23);
+            this.preview_selected_bt.TabIndex = 33;
+            this.preview_selected_bt.Text = "הצג קובץ נבחר";
+            this.preview_selected_bt.UseVisualStyleBackColor = true;
+            this.preview_selected_bt.Click += new System.EventHandler(this.preview_selected_bt_Click);
+            // 
+            // upload_file_bt
+            // 
+            this.upload_file_bt.Location = new System.Drawing.Point(869, 232);
+            this.upload_file_bt.Name = "upload_file_bt";
+            this.upload_file_bt.Size = new System.Drawing.Size(109, 23);
+            this.upload_file_bt.TabIndex = 32;
+            this.upload_file_bt.Text = "שמור";
+            this.upload_file_bt.UseVisualStyleBackColor = true;
+            this.upload_file_bt.Click += new System.EventHandler(this.upload_file_bt_Click);
+            // 
+            // choose_file_bt
+            // 
+            this.choose_file_bt.Location = new System.Drawing.Point(869, 109);
+            this.choose_file_bt.Name = "choose_file_bt";
+            this.choose_file_bt.Size = new System.Drawing.Size(109, 23);
+            this.choose_file_bt.TabIndex = 31;
+            this.choose_file_bt.Text = "בחר קובץ";
+            this.choose_file_bt.UseVisualStyleBackColor = true;
+            this.choose_file_bt.Click += new System.EventHandler(this.choose_file_bt_Click);
+            // 
+            // show_pdf_bt
+            // 
+            this.show_pdf_bt.Location = new System.Drawing.Point(114, 36);
+            this.show_pdf_bt.Name = "show_pdf_bt";
+            this.show_pdf_bt.Size = new System.Drawing.Size(179, 23);
+            this.show_pdf_bt.TabIndex = 30;
+            this.show_pdf_bt.Text = "הצג תבנית מסמך פרטים אישיים";
+            this.show_pdf_bt.UseVisualStyleBackColor = true;
+            this.show_pdf_bt.Click += new System.EventHandler(this.show_pdf_bt_Click);
+            // 
+            // ID_dynamic_lb
+            // 
+            this.ID_dynamic_lb.AutoEllipsis = true;
+            this.ID_dynamic_lb.AutoSize = true;
+            this.ID_dynamic_lb.Location = new System.Drawing.Point(649, 70);
+            this.ID_dynamic_lb.Name = "ID_dynamic_lb";
+            this.ID_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ID_dynamic_lb.Size = new System.Drawing.Size(30, 13);
+            this.ID_dynamic_lb.TabIndex = 29;
+            this.ID_dynamic_lb.Text = "<ID>";
+            this.ID_dynamic_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // name_dynamic_lb
+            // 
+            this.name_dynamic_lb.AutoEllipsis = true;
+            this.name_dynamic_lb.AutoSize = true;
+            this.name_dynamic_lb.Location = new System.Drawing.Point(904, 70);
+            this.name_dynamic_lb.Name = "name_dynamic_lb";
+            this.name_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.name_dynamic_lb.Size = new System.Drawing.Size(45, 13);
+            this.name_dynamic_lb.TabIndex = 28;
+            this.name_dynamic_lb.Text = "<name>";
+            this.name_dynamic_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ID2_lb
+            // 
+            this.ID2_lb.AutoSize = true;
+            this.ID2_lb.Location = new System.Drawing.Point(666, 41);
+            this.ID2_lb.Name = "ID2_lb";
+            this.ID2_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ID2_lb.Size = new System.Drawing.Size(28, 13);
+            this.ID2_lb.TabIndex = 27;
+            this.ID2_lb.Text = "ת.ז.:";
+            // 
+            // name_lb
+            // 
+            this.name_lb.AutoSize = true;
+            this.name_lb.Location = new System.Drawing.Point(904, 41);
+            this.name_lb.Name = "name_lb";
+            this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.name_lb.Size = new System.Drawing.Size(76, 13);
+            this.name_lb.TabIndex = 26;
+            this.name_lb.Text = "שם המתמודד:";
             // 
             // MitmodedCard
             // 
@@ -1203,6 +1751,10 @@
             this.mitmoded_card_tc.ResumeLayout(false);
             this.mitmoded_personal_tab.ResumeLayout(false);
             this.mitmoded_personal_tab.PerformLayout();
+            this.xml_gender_pnl.ResumeLayout(false);
+            this.xml_gender_pnl.PerformLayout();
+            this.mitmoded_contacts_tab.ResumeLayout(false);
+            this.mitmoded_contacts_tab.PerformLayout();
             this.mitmoded_personal2_tab.ResumeLayout(false);
             this.mitmoded_personal2_tab.PerformLayout();
             this.mitmoded_ed_army_tab.ResumeLayout(false);
@@ -1218,6 +1770,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.skills_dgv)).EndInit();
             this.mitmoded_job4_tab.ResumeLayout(false);
             this.mitmoded_job4_tab.PerformLayout();
+            this.mitmoded_print_tab.ResumeLayout(false);
+            this.mitmoded_print_tab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1249,16 +1803,10 @@
         private System.Windows.Forms.TabPage mitmoded_personal_tab;
         private System.Windows.Forms.TabPage mitmoded_personal2_tab;
         private System.Windows.Forms.TabPage mitmoded_ed_army_tab;
-        private System.Windows.Forms.DateTimePicker intake_date_dtp;
+        private System.Windows.Forms.DateTimePicker xml_intake_date_dtp;
         private System.Windows.Forms.Label intake_date_lb;
-        private System.Windows.Forms.TextBox community_tb;
-        private System.Windows.Forms.Label community_lb;
-        private System.Windows.Forms.TextBox referer_phone_tb;
-        private System.Windows.Forms.Label referer_phone_lb;
-        private System.Windows.Forms.TextBox referer_tb;
-        private System.Windows.Forms.Label referer_lb;
-        private System.Windows.Forms.DateTimePicker rehab_commitee_dtp;
-        private System.Windows.Forms.Label rehab_ok_lb;
+        private System.Windows.Forms.DateTimePicker xml_rehab_committee_dtp;
+        private System.Windows.Forms.Label rehab_committee_lb;
         private System.Windows.Forms.Label addictions_lb;
         private System.Windows.Forms.TextBox xml_general_info_tb;
         private System.Windows.Forms.TextBox xml_homicidal_tb;
@@ -1322,7 +1870,7 @@
         private System.Windows.Forms.Label job_important_lb;
         private System.Windows.Forms.TextBox xml_job_target_tb;
         private System.Windows.Forms.Label job_target_lb;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage mitmoded_print_tab;
         private System.Windows.Forms.DataGridViewTextBoxColumn employment_year;
         private System.Windows.Forms.DataGridViewTextBoxColumn employment_place;
         private System.Windows.Forms.DataGridViewTextBoxColumn employment_roles;
@@ -1331,5 +1879,59 @@
         private System.Windows.Forms.DataGridView education_dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn skills_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn notes_col;
+        private System.Windows.Forms.TabPage mitmoded_contacts_tab;
+        private System.Windows.Forms.TextBox xml_community_name_tb;
+        private System.Windows.Forms.Label community_name_lb;
+        private System.Windows.Forms.TextBox xml_referer_phone_tb;
+        private System.Windows.Forms.Label referer_phone_lb;
+        private System.Windows.Forms.TextBox xml_referer_tb;
+        private System.Windows.Forms.Label referer_lb;
+        private System.Windows.Forms.TextBox xml_family_contact_name_tb;
+        private System.Windows.Forms.Label family_contact_name_lb;
+        private System.Windows.Forms.TextBox xml_emergency_contact3_name_tb;
+        private System.Windows.Forms.Label emergency_contact3_name_lb;
+        private System.Windows.Forms.TextBox xml_emergency_contact2_name_tb;
+        private System.Windows.Forms.Label emergency_contact2_name_lb;
+        private System.Windows.Forms.TextBox xml_emergency_contact1_name_tb;
+        private System.Windows.Forms.Label emergency_contact1_name_lb;
+        private System.Windows.Forms.TextBox xml_family_contact_phone_tb;
+        private System.Windows.Forms.Label family_contact_phone_lb;
+        private System.Windows.Forms.TextBox xml_emergency_contact1_phone_tb;
+        private System.Windows.Forms.Label emergency_contact1_phone_lb;
+        private System.Windows.Forms.TextBox xml_emergency_contact3_phone_tb;
+        private System.Windows.Forms.TextBox xml_emergency_contact2_phone_tb;
+        private System.Windows.Forms.Label emergency_contact3_phone_lb;
+        private System.Windows.Forms.Label emergency_contact2_phone_lb;
+        private System.Windows.Forms.TextBox xml_community_phone_tb;
+        private System.Windows.Forms.Label community_phone_lb;
+        private System.Windows.Forms.TextBox xml_psychiatrist_phone_tb;
+        private System.Windows.Forms.Label psychiatrist_phone_lb;
+        private System.Windows.Forms.TextBox xml_psychiatrist_name_tb;
+        private System.Windows.Forms.Label psychiatrist_name_lb;
+        private System.Windows.Forms.Label rehab_validity_lb;
+        private System.Windows.Forms.ComboBox xml_rehab_validity_cb;
+        private System.Windows.Forms.Label xml_rehab_validity_expires_lb;
+        private System.Windows.Forms.Label validity_expires_lb;
+        private System.Windows.Forms.RadioButton gender_female_rb;
+        private System.Windows.Forms.RadioButton gender_male_rb;
+        private System.Windows.Forms.Label sex_lb;
+        private System.Windows.Forms.Panel xml_gender_pnl;
+        private System.Windows.Forms.TextBox xml_family_status_tb;
+        private System.Windows.Forms.Label family_status_lb;
+        private System.Windows.Forms.TextBox xml_job_scope_tb;
+        private System.Windows.Forms.Button export_bt;
+        private System.Windows.Forms.Label xml_last_signed_dynamic_lb;
+        private System.Windows.Forms.Label last_signed_lb;
+        private System.Windows.Forms.Label xml_saved_file_lb;
+        private System.Windows.Forms.Label chosen_file_lb;
+        private System.Windows.Forms.Button preview_saved_bt;
+        private System.Windows.Forms.Button preview_selected_bt;
+        private System.Windows.Forms.Button upload_file_bt;
+        private System.Windows.Forms.Button choose_file_bt;
+        private System.Windows.Forms.Button show_pdf_bt;
+        private System.Windows.Forms.Label ID_dynamic_lb;
+        private System.Windows.Forms.Label name_dynamic_lb;
+        private System.Windows.Forms.Label ID2_lb;
+        private System.Windows.Forms.Label name_lb;
     }
 }

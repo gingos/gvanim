@@ -36,14 +36,16 @@
             this.login_bt = new System.Windows.Forms.Button();
             this.signup_bt = new System.Windows.Forms.Button();
             this.exit_bt = new System.Windows.Forms.Button();
+            this.status_pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status_pb)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::GvanimVS.Properties.Resources.backgroundGvanim;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(41, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(507, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -113,11 +115,24 @@
             this.exit_bt.UseVisualStyleBackColor = true;
             this.exit_bt.Click += new System.EventHandler(this.exit_bt_Click);
             // 
+            // status_pb
+            // 
+            this.status_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.status_pb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.status_pb.Image = global::GvanimVS.Properties.Resources.red;
+            this.status_pb.Location = new System.Drawing.Point(4, 6);
+            this.status_pb.Name = "status_pb";
+            this.status_pb.Size = new System.Drawing.Size(38, 34);
+            this.status_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.status_pb.TabIndex = 9;
+            this.status_pb.TabStop = false;
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 360);
+            this.Controls.Add(this.status_pb);
             this.Controls.Add(this.exit_bt);
             this.Controls.Add(this.signup_bt);
             this.Controls.Add(this.login_bt);
@@ -128,7 +143,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "LoginPage";
             this.Text = "LoginPage";
+            this.Shown += new System.EventHandler(this.LoginPage_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +161,6 @@
         private System.Windows.Forms.Button login_bt;
         private System.Windows.Forms.Button signup_bt;
         private System.Windows.Forms.Button exit_bt;
+        private System.Windows.Forms.PictureBox status_pb;
     }
 }

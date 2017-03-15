@@ -22,13 +22,16 @@ namespace GvanimVS
         {
             InitializeComponent();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "ID, firstName, lastName, city", cmd, da);
-            mitmoded_dgv.DataSource = dt;
+            if (dt!=null)
+                mitmoded_dgv.DataSource = dt;
             changeDataHeadersToHebrew();
         }
         public SelectMimoded(SqlConnection con, string coordinatorID) : base(con)
         {
             InitializeComponent();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "ID, firstName, lastName, city", "coordinatorID", coordinatorID , cmd, da);
+            if (dt == null)
+                return;
             mitmoded_dgv.DataSource = dt;
             mitmoded_dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             changeDataHeadersToHebrew();
@@ -44,8 +47,11 @@ namespace GvanimVS
         
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //TOOD:
-            // weird bug, this function fails when sorting
+            // column header cell is also a cell, with index -1
+            // sorting with double click caused an IndexOutOfBounds error
+            // first condition cancels the double-click-sorting bug
+            if (e.RowIndex == -1)
+                return;
             string first = mitmoded_dgv["firstName", e.RowIndex].Value.ToString();
             string last = mitmoded_dgv["lastName", e.RowIndex].Value.ToString();
             DialogResult dialogResult = MessageBox.Show("האם ברצונך לערוך את" + "\n" +first +" " + last, "אישור בחירת מתמודד", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
@@ -85,6 +91,8 @@ namespace GvanimVS
             {
                 DataTable dt = (SQLmethods.searchUsersInTable(SQLmethods.MITMODED, ID_tb.Text, firstName_tb.Text,
                     lastName_tb.Text, city_tb.Text, cmd, da));
+                if (dt == null)
+                    return;
                 mitmoded_dgv.DataSource = dt;
             }
         }

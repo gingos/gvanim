@@ -28,7 +28,8 @@ namespace GvanimVS
             InitializeComponent();
             this.ID = ID;
             DataTable dt = SQLmethods.getDataTable(SQLmethods.USERS, ID, cmd, da);
-            initFieldsFromDT(dt);
+            if (dt!= null)
+                initFieldsFromDT(dt);
         }
         private void getDataTable(string iD)
         {

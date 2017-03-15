@@ -30,9 +30,13 @@ namespace GvanimVS
             this.con = con;
             ID_tb.Text = text;
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "ID", text, cmd, da);
+            if (dt == null)
+                return;
             firstName_tb.Text = dt.Rows[0]["firstName"].ToString();
             lastName_tb.Text = dt.Rows[0]["lastName"].ToString();
             DataTable dt1 = SQLmethods.getColsFromTable(SQLmethods.USERS, "*", "ID", dt.Rows[0]["coordinatorID"].ToString(), cmd, da);
+            if (dt1 == null)
+                return;
             coord_tb.Text = dt1.Rows[0]["firstName"].ToString() + " " + dt1.Rows[0]["lastName"].ToString();
             updateFieldsFromDB();
         }
@@ -57,8 +61,8 @@ namespace GvanimVS
                     if (control is DataGridView)
                         if(control.Name.StartsWith("xmlg"))
                     {
-                        dat = Tools.GetContentAsDataTable(xmlg_dataGridView1, false);
-                        string dataGrid = Tools.SerializeXML(dat);
+                        dat = Tools.GetContentAsDataTable((DataGridView)xmlg_dataGridView1, false);
+                        string dataGrid = Tools.SerializeXML<DataTable>(dat);
                         xml_tab.Add(control.Name, dataGrid);
                     }
 
@@ -112,7 +116,8 @@ namespace GvanimVS
         /// Get XML file from the DataBase, DeSerialize the XML file and update every fiels in the form by its name.
         /// </summary>
         /// <param name=""></param>
-        private void updateFieldsFromDB()
+
+        /* private void updateFieldsFromDB()
         {
             //get XML file from DB
 
@@ -152,7 +157,7 @@ namespace GvanimVS
                 }
             }
         }
-
+        */
         private void quit_page_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -169,11 +174,6 @@ namespace GvanimVS
         }
 
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
