@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.personal_plan_tc = new System.Windows.Forms.TabControl();
+            this.personal_tab = new System.Windows.Forms.TabPage();
             this.ID_lb = new System.Windows.Forms.Label();
             this.ID_tb = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.xml_klita_dtp = new System.Windows.Forms.DateTimePicker();
+            this.klita_lb = new System.Windows.Forms.Label();
             this.xml_hachalom = new System.Windows.Forms.TextBox();
             this.xml_hasamim = new System.Windows.Forms.TextBox();
             this.xml_hatzlachot = new System.Windows.Forms.TextBox();
             this.coord_tb = new System.Windows.Forms.TextBox();
             this.firstName_tb = new System.Windows.Forms.TextBox();
-            this.xml_sachar = new System.Windows.Forms.TextBox();
-            this.xml_ktovet = new System.Windows.Forms.TextBox();
-            this.xml_shemHaEsek = new System.Windows.Forms.TextBox();
-            this.xml_sugHaavoda = new System.Windows.Forms.TextBox();
+            this.xml_salary_tb = new System.Windows.Forms.TextBox();
+            this.xml_ktovet_tb = new System.Windows.Forms.TextBox();
+            this.xml_company_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_type_tb = new System.Windows.Forms.TextBox();
             this.lastName_tb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,52 +58,52 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.xml_groupBox32_gb = new System.Windows.Forms.GroupBox();
+            this.mazav_tab = new System.Windows.Forms.TabPage();
+            this.mazav_tc = new System.Windows.Forms.TabControl();
+            this.job_functionality_tab = new System.Windows.Forms.TabPage();
+            this.xmlgr_groupBox32 = new System.Windows.Forms.GroupBox();
             this.radioButton156 = new System.Windows.Forms.RadioButton();
             this.radioButton157 = new System.Windows.Forms.RadioButton();
             this.radioButton158 = new System.Windows.Forms.RadioButton();
             this.radioButton159 = new System.Windows.Forms.RadioButton();
             this.radioButton160 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox25_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox25 = new System.Windows.Forms.GroupBox();
             this.radioButton121 = new System.Windows.Forms.RadioButton();
             this.radioButton122 = new System.Windows.Forms.RadioButton();
             this.radioButton123 = new System.Windows.Forms.RadioButton();
             this.radioButton124 = new System.Windows.Forms.RadioButton();
             this.radioButton125 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox26_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox26 = new System.Windows.Forms.GroupBox();
             this.radioButton126 = new System.Windows.Forms.RadioButton();
             this.radioButton127 = new System.Windows.Forms.RadioButton();
             this.radioButton128 = new System.Windows.Forms.RadioButton();
             this.radioButton129 = new System.Windows.Forms.RadioButton();
             this.radioButton130 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox31_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox31 = new System.Windows.Forms.GroupBox();
             this.radioButton151 = new System.Windows.Forms.RadioButton();
             this.radioButton152 = new System.Windows.Forms.RadioButton();
             this.radioButton153 = new System.Windows.Forms.RadioButton();
             this.radioButton154 = new System.Windows.Forms.RadioButton();
             this.radioButton155 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox27_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox27 = new System.Windows.Forms.GroupBox();
             this.radioButton131 = new System.Windows.Forms.RadioButton();
             this.radioButton132 = new System.Windows.Forms.RadioButton();
             this.radioButton133 = new System.Windows.Forms.RadioButton();
             this.radioButton134 = new System.Windows.Forms.RadioButton();
             this.radioButton135 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox28_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox28 = new System.Windows.Forms.GroupBox();
             this.radioButton136 = new System.Windows.Forms.RadioButton();
             this.radioButton137 = new System.Windows.Forms.RadioButton();
             this.radioButton138 = new System.Windows.Forms.RadioButton();
             this.radioButton139 = new System.Windows.Forms.RadioButton();
             this.radioButton140 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox29_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox29 = new System.Windows.Forms.GroupBox();
             this.radioButton141 = new System.Windows.Forms.RadioButton();
             this.radioButton142 = new System.Windows.Forms.RadioButton();
             this.radioButton143 = new System.Windows.Forms.RadioButton();
             this.radioButton144 = new System.Windows.Forms.RadioButton();
             this.radioButton145 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox30_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox30 = new System.Windows.Forms.GroupBox();
             this.radioButton146 = new System.Windows.Forms.RadioButton();
             this.radioButton147 = new System.Windows.Forms.RadioButton();
             this.radioButton148 = new System.Windows.Forms.RadioButton();
@@ -112,47 +112,47 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.xml_hearotSeder = new System.Windows.Forms.TextBox();
+            this.xml_comments_organization_tb = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.xml_hearotKatzev = new System.Windows.Forms.TextBox();
+            this.xml_comments_rate_tb = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.xml_hearotEichut = new System.Windows.Forms.TextBox();
+            this.xml_comments_job_quality_tb = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.xml_hearotHatmada = new System.Windows.Forms.TextBox();
+            this.xml_comments_hatmada_tb = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.xml_groupBox19_gb = new System.Windows.Forms.GroupBox();
+            this.norms_tab = new System.Windows.Forms.TabPage();
+            this.xmlgr_groupBox19 = new System.Windows.Forms.GroupBox();
             this.radioButton91 = new System.Windows.Forms.RadioButton();
             this.radioButton92 = new System.Windows.Forms.RadioButton();
             this.radioButton93 = new System.Windows.Forms.RadioButton();
             this.radioButton94 = new System.Windows.Forms.RadioButton();
             this.radioButton95 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox20_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox20 = new System.Windows.Forms.GroupBox();
             this.radioButton96 = new System.Windows.Forms.RadioButton();
             this.radioButton97 = new System.Windows.Forms.RadioButton();
             this.radioButton98 = new System.Windows.Forms.RadioButton();
             this.radioButton99 = new System.Windows.Forms.RadioButton();
             this.radioButton100 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox21_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox21 = new System.Windows.Forms.GroupBox();
             this.radioButton101 = new System.Windows.Forms.RadioButton();
             this.radioButton102 = new System.Windows.Forms.RadioButton();
             this.radioButton103 = new System.Windows.Forms.RadioButton();
             this.radioButton104 = new System.Windows.Forms.RadioButton();
             this.radioButton105 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox22_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox22 = new System.Windows.Forms.GroupBox();
             this.radioButton106 = new System.Windows.Forms.RadioButton();
             this.radioButton107 = new System.Windows.Forms.RadioButton();
             this.radioButton108 = new System.Windows.Forms.RadioButton();
             this.radioButton109 = new System.Windows.Forms.RadioButton();
             this.radioButton110 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox23_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox23 = new System.Windows.Forms.GroupBox();
             this.radioButton111 = new System.Windows.Forms.RadioButton();
             this.radioButton112 = new System.Windows.Forms.RadioButton();
             this.radioButton113 = new System.Windows.Forms.RadioButton();
             this.radioButton114 = new System.Windows.Forms.RadioButton();
             this.radioButton115 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox24_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox24 = new System.Windows.Forms.GroupBox();
             this.radioButton116 = new System.Windows.Forms.RadioButton();
             this.radioButton117 = new System.Windows.Forms.RadioButton();
             this.radioButton118 = new System.Windows.Forms.RadioButton();
@@ -161,45 +161,45 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.xml_hearotKlalim = new System.Windows.Forms.TextBox();
+            this.xml_comments_Klalim_tb = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.xml_hearotHofaa = new System.Windows.Forms.TextBox();
+            this.xml_comments_Hofaa_tb = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.xml_hearotZmanim = new System.Windows.Forms.TextBox();
+            this.xml_comments_Zmanim_tb = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.xml_groupBox7_gb = new System.Windows.Forms.GroupBox();
+            this.social_skills_tab = new System.Windows.Forms.TabPage();
+            this.xmlgr_groupBox7 = new System.Windows.Forms.GroupBox();
             this.radioButton31 = new System.Windows.Forms.RadioButton();
             this.radioButton32 = new System.Windows.Forms.RadioButton();
             this.radioButton33 = new System.Windows.Forms.RadioButton();
             this.radioButton34 = new System.Windows.Forms.RadioButton();
             this.radioButton35 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox8_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox8 = new System.Windows.Forms.GroupBox();
             this.radioButton36 = new System.Windows.Forms.RadioButton();
             this.radioButton37 = new System.Windows.Forms.RadioButton();
             this.radioButton38 = new System.Windows.Forms.RadioButton();
             this.radioButton39 = new System.Windows.Forms.RadioButton();
             this.radioButton40 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox9_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox9 = new System.Windows.Forms.GroupBox();
             this.radioButton41 = new System.Windows.Forms.RadioButton();
             this.radioButton42 = new System.Windows.Forms.RadioButton();
             this.radioButton43 = new System.Windows.Forms.RadioButton();
             this.radioButton44 = new System.Windows.Forms.RadioButton();
             this.radioButton45 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox10_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox10 = new System.Windows.Forms.GroupBox();
             this.radioButton46 = new System.Windows.Forms.RadioButton();
             this.radioButton47 = new System.Windows.Forms.RadioButton();
             this.radioButton48 = new System.Windows.Forms.RadioButton();
             this.radioButton49 = new System.Windows.Forms.RadioButton();
             this.radioButton50 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox11_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox11 = new System.Windows.Forms.GroupBox();
             this.radioButton51 = new System.Windows.Forms.RadioButton();
             this.radioButton52 = new System.Windows.Forms.RadioButton();
             this.radioButton53 = new System.Windows.Forms.RadioButton();
             this.radioButton54 = new System.Windows.Forms.RadioButton();
             this.radioButton55 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox12_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox12 = new System.Windows.Forms.GroupBox();
             this.radioButton56 = new System.Windows.Forms.RadioButton();
             this.radioButton57 = new System.Windows.Forms.RadioButton();
             this.radioButton58 = new System.Windows.Forms.RadioButton();
@@ -208,45 +208,45 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.xml_hearotSamchut = new System.Windows.Forms.TextBox();
+            this.xml_comments_Samchut_tb = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.xml_hearotTzevet = new System.Windows.Forms.TextBox();
+            this.xml_comments__Tzevet_tb = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.xml_hearotAmitim = new System.Windows.Forms.TextBox();
+            this.xml_comments_Amitim_tb = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.xml_groupBox18_gb = new System.Windows.Forms.GroupBox();
+            this.activte_assertive_tab = new System.Windows.Forms.TabPage();
+            this.xmlgr_groupBox18 = new System.Windows.Forms.GroupBox();
             this.radioButton86 = new System.Windows.Forms.RadioButton();
             this.radioButton87 = new System.Windows.Forms.RadioButton();
             this.radioButton88 = new System.Windows.Forms.RadioButton();
             this.radioButton89 = new System.Windows.Forms.RadioButton();
             this.radioButton90 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox17_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox17 = new System.Windows.Forms.GroupBox();
             this.radioButton81 = new System.Windows.Forms.RadioButton();
             this.radioButton82 = new System.Windows.Forms.RadioButton();
             this.radioButton83 = new System.Windows.Forms.RadioButton();
             this.radioButton84 = new System.Windows.Forms.RadioButton();
             this.radioButton85 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox16_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox16 = new System.Windows.Forms.GroupBox();
             this.radioButton76 = new System.Windows.Forms.RadioButton();
             this.radioButton77 = new System.Windows.Forms.RadioButton();
             this.radioButton78 = new System.Windows.Forms.RadioButton();
             this.radioButton79 = new System.Windows.Forms.RadioButton();
             this.radioButton80 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox15_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox15 = new System.Windows.Forms.GroupBox();
             this.radioButton71 = new System.Windows.Forms.RadioButton();
             this.radioButton72 = new System.Windows.Forms.RadioButton();
             this.radioButton73 = new System.Windows.Forms.RadioButton();
             this.radioButton74 = new System.Windows.Forms.RadioButton();
             this.radioButton75 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox14_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox14 = new System.Windows.Forms.GroupBox();
             this.radioButton66 = new System.Windows.Forms.RadioButton();
             this.radioButton67 = new System.Windows.Forms.RadioButton();
             this.radioButton68 = new System.Windows.Forms.RadioButton();
             this.radioButton69 = new System.Windows.Forms.RadioButton();
             this.radioButton70 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox13_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox13 = new System.Windows.Forms.GroupBox();
             this.radioButton61 = new System.Windows.Forms.RadioButton();
             this.radioButton62 = new System.Windows.Forms.RadioButton();
             this.radioButton63 = new System.Windows.Forms.RadioButton();
@@ -255,45 +255,45 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.xml_hearotAchrayut = new System.Windows.Forms.TextBox();
+            this.xml_comments_Achrayut_tb = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.xml_hearotAtzmaut = new System.Windows.Forms.TextBox();
+            this.xml_comments_Atzmaut_tb = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.xml_hearotYozma = new System.Windows.Forms.TextBox();
+            this.xml_comments_Yozma_tb = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.xml_groupBox6_gb = new System.Windows.Forms.GroupBox();
+            this.satisfactory_tab = new System.Windows.Forms.TabPage();
+            this.xmlgr_groupBox6 = new System.Windows.Forms.GroupBox();
             this.radioButton26 = new System.Windows.Forms.RadioButton();
             this.radioButton27 = new System.Windows.Forms.RadioButton();
             this.radioButton28 = new System.Windows.Forms.RadioButton();
             this.radioButton29 = new System.Windows.Forms.RadioButton();
             this.radioButton30 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox4_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox4 = new System.Windows.Forms.GroupBox();
             this.radioButton16 = new System.Windows.Forms.RadioButton();
             this.radioButton17 = new System.Windows.Forms.RadioButton();
             this.radioButton18 = new System.Windows.Forms.RadioButton();
             this.radioButton19 = new System.Windows.Forms.RadioButton();
             this.radioButton20 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox2_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox5_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox5 = new System.Windows.Forms.GroupBox();
             this.radioButton21 = new System.Windows.Forms.RadioButton();
             this.radioButton22 = new System.Windows.Forms.RadioButton();
             this.radioButton23 = new System.Windows.Forms.RadioButton();
             this.radioButton24 = new System.Windows.Forms.RadioButton();
             this.radioButton25 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox3_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.xml_groupBox1_gb = new System.Windows.Forms.GroupBox();
+            this.xmlgr_groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -302,24 +302,24 @@
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.xml_hearotHitkadmut = new System.Windows.Forms.TextBox();
+            this.xml_comments_progress_tb = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.xml_hearotInyan = new System.Windows.Forms.TextBox();
+            this.xml_comments_value_tb = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.xml_hearotSachar = new System.Windows.Forms.TextBox();
+            this.xml_fee_comments_tb = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.xmlg_dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rehab_tab = new System.Windows.Forms.TabPage();
+            this.xml_rehab_dgv = new System.Windows.Forms.DataGridView();
             this.number_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yaad_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bitzua_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.criterion_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.xml_kshayim = new System.Windows.Forms.TextBox();
-            this.xml_mekorotTmicha = new System.Windows.Forms.TextBox();
-            this.xml_nekudotHozek = new System.Windows.Forms.TextBox();
+            this.resources_tab = new System.Windows.Forms.TabPage();
+            this.xml_kshayim_tb = new System.Windows.Forms.TextBox();
+            this.xml_mekorotTmicha_tb = new System.Windows.Forms.TextBox();
+            this.xml_strengths_tb = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
@@ -327,106 +327,106 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.test_upload = new System.Windows.Forms.Button();
             this.test_download = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.xml_groupBox32_gb.SuspendLayout();
-            this.xml_groupBox25_gb.SuspendLayout();
-            this.xml_groupBox26_gb.SuspendLayout();
-            this.xml_groupBox31_gb.SuspendLayout();
-            this.xml_groupBox27_gb.SuspendLayout();
-            this.xml_groupBox28_gb.SuspendLayout();
-            this.xml_groupBox29_gb.SuspendLayout();
-            this.xml_groupBox30_gb.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.xml_groupBox19_gb.SuspendLayout();
-            this.xml_groupBox20_gb.SuspendLayout();
-            this.xml_groupBox21_gb.SuspendLayout();
-            this.xml_groupBox22_gb.SuspendLayout();
-            this.xml_groupBox23_gb.SuspendLayout();
-            this.xml_groupBox24_gb.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.xml_groupBox7_gb.SuspendLayout();
-            this.xml_groupBox8_gb.SuspendLayout();
-            this.xml_groupBox9_gb.SuspendLayout();
-            this.xml_groupBox10_gb.SuspendLayout();
-            this.xml_groupBox11_gb.SuspendLayout();
-            this.xml_groupBox12_gb.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.xml_groupBox18_gb.SuspendLayout();
-            this.xml_groupBox17_gb.SuspendLayout();
-            this.xml_groupBox16_gb.SuspendLayout();
-            this.xml_groupBox15_gb.SuspendLayout();
-            this.xml_groupBox14_gb.SuspendLayout();
-            this.xml_groupBox13_gb.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.xml_groupBox6_gb.SuspendLayout();
-            this.xml_groupBox4_gb.SuspendLayout();
-            this.xml_groupBox2_gb.SuspendLayout();
-            this.xml_groupBox5_gb.SuspendLayout();
-            this.xml_groupBox3_gb.SuspendLayout();
-            this.xml_groupBox1_gb.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xmlg_dataGridView1)).BeginInit();
-            this.tabPage9.SuspendLayout();
+            this.personal_plan_tc.SuspendLayout();
+            this.personal_tab.SuspendLayout();
+            this.mazav_tab.SuspendLayout();
+            this.mazav_tc.SuspendLayout();
+            this.job_functionality_tab.SuspendLayout();
+            this.xmlgr_groupBox32.SuspendLayout();
+            this.xmlgr_groupBox25.SuspendLayout();
+            this.xmlgr_groupBox26.SuspendLayout();
+            this.xmlgr_groupBox31.SuspendLayout();
+            this.xmlgr_groupBox27.SuspendLayout();
+            this.xmlgr_groupBox28.SuspendLayout();
+            this.xmlgr_groupBox29.SuspendLayout();
+            this.xmlgr_groupBox30.SuspendLayout();
+            this.norms_tab.SuspendLayout();
+            this.xmlgr_groupBox19.SuspendLayout();
+            this.xmlgr_groupBox20.SuspendLayout();
+            this.xmlgr_groupBox21.SuspendLayout();
+            this.xmlgr_groupBox22.SuspendLayout();
+            this.xmlgr_groupBox23.SuspendLayout();
+            this.xmlgr_groupBox24.SuspendLayout();
+            this.social_skills_tab.SuspendLayout();
+            this.xmlgr_groupBox7.SuspendLayout();
+            this.xmlgr_groupBox8.SuspendLayout();
+            this.xmlgr_groupBox9.SuspendLayout();
+            this.xmlgr_groupBox10.SuspendLayout();
+            this.xmlgr_groupBox11.SuspendLayout();
+            this.xmlgr_groupBox12.SuspendLayout();
+            this.activte_assertive_tab.SuspendLayout();
+            this.xmlgr_groupBox18.SuspendLayout();
+            this.xmlgr_groupBox17.SuspendLayout();
+            this.xmlgr_groupBox16.SuspendLayout();
+            this.xmlgr_groupBox15.SuspendLayout();
+            this.xmlgr_groupBox14.SuspendLayout();
+            this.xmlgr_groupBox13.SuspendLayout();
+            this.satisfactory_tab.SuspendLayout();
+            this.xmlgr_groupBox6.SuspendLayout();
+            this.xmlgr_groupBox4.SuspendLayout();
+            this.xmlgr_groupBox2.SuspendLayout();
+            this.xmlgr_groupBox5.SuspendLayout();
+            this.xmlgr_groupBox3.SuspendLayout();
+            this.xmlgr_groupBox1.SuspendLayout();
+            this.rehab_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xml_rehab_dgv)).BeginInit();
+            this.resources_tab.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // personal_plan_tc
             // 
-            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.HotTrack = true;
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabControl1.RightToLeftLayout = true;
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(970, 392);
-            this.tabControl1.TabIndex = 0;
+            this.personal_plan_tc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.personal_plan_tc.Controls.Add(this.personal_tab);
+            this.personal_plan_tc.Controls.Add(this.mazav_tab);
+            this.personal_plan_tc.Controls.Add(this.rehab_tab);
+            this.personal_plan_tc.Controls.Add(this.resources_tab);
+            this.personal_plan_tc.HotTrack = true;
+            this.personal_plan_tc.Location = new System.Drawing.Point(12, 12);
+            this.personal_plan_tc.Multiline = true;
+            this.personal_plan_tc.Name = "personal_plan_tc";
+            this.personal_plan_tc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.personal_plan_tc.RightToLeftLayout = true;
+            this.personal_plan_tc.SelectedIndex = 0;
+            this.personal_plan_tc.Size = new System.Drawing.Size(970, 392);
+            this.personal_plan_tc.TabIndex = 0;
             // 
-            // tabPage1
+            // personal_tab
             // 
-            this.tabPage1.Controls.Add(this.ID_lb);
-            this.tabPage1.Controls.Add(this.ID_tb);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.xml_hachalom);
-            this.tabPage1.Controls.Add(this.xml_hasamim);
-            this.tabPage1.Controls.Add(this.xml_hatzlachot);
-            this.tabPage1.Controls.Add(this.coord_tb);
-            this.tabPage1.Controls.Add(this.firstName_tb);
-            this.tabPage1.Controls.Add(this.xml_sachar);
-            this.tabPage1.Controls.Add(this.xml_ktovet);
-            this.tabPage1.Controls.Add(this.xml_shemHaEsek);
-            this.tabPage1.Controls.Add(this.xml_sugHaavoda);
-            this.tabPage1.Controls.Add(this.lastName_tb);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(962, 366);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "פרטים אישיים";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.personal_tab.Controls.Add(this.ID_lb);
+            this.personal_tab.Controls.Add(this.ID_tb);
+            this.personal_tab.Controls.Add(this.xml_klita_dtp);
+            this.personal_tab.Controls.Add(this.klita_lb);
+            this.personal_tab.Controls.Add(this.xml_hachalom);
+            this.personal_tab.Controls.Add(this.xml_hasamim);
+            this.personal_tab.Controls.Add(this.xml_hatzlachot);
+            this.personal_tab.Controls.Add(this.coord_tb);
+            this.personal_tab.Controls.Add(this.firstName_tb);
+            this.personal_tab.Controls.Add(this.xml_salary_tb);
+            this.personal_tab.Controls.Add(this.xml_ktovet_tb);
+            this.personal_tab.Controls.Add(this.xml_company_tb);
+            this.personal_tab.Controls.Add(this.xml_job_type_tb);
+            this.personal_tab.Controls.Add(this.lastName_tb);
+            this.personal_tab.Controls.Add(this.label6);
+            this.personal_tab.Controls.Add(this.label5);
+            this.personal_tab.Controls.Add(this.label7);
+            this.personal_tab.Controls.Add(this.label4);
+            this.personal_tab.Controls.Add(this.label2);
+            this.personal_tab.Controls.Add(this.label13);
+            this.personal_tab.Controls.Add(this.label12);
+            this.personal_tab.Controls.Add(this.label15);
+            this.personal_tab.Controls.Add(this.label10);
+            this.personal_tab.Controls.Add(this.label9);
+            this.personal_tab.Controls.Add(this.label14);
+            this.personal_tab.Controls.Add(this.label11);
+            this.personal_tab.Controls.Add(this.label8);
+            this.personal_tab.Controls.Add(this.label1);
+            this.personal_tab.Location = new System.Drawing.Point(4, 22);
+            this.personal_tab.Name = "personal_tab";
+            this.personal_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.personal_tab.Size = new System.Drawing.Size(962, 366);
+            this.personal_tab.TabIndex = 0;
+            this.personal_tab.Text = "פרטים אישיים";
+            this.personal_tab.UseVisualStyleBackColor = true;
             // 
             // ID_lb
             // 
@@ -446,23 +446,23 @@
             this.ID_tb.Size = new System.Drawing.Size(136, 20);
             this.ID_tb.TabIndex = 27;
             // 
-            // dateTimePicker1
+            // xml_klita_dtp
             // 
-            this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(516, 243);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 24;
+            this.xml_klita_dtp.Checked = false;
+            this.xml_klita_dtp.Location = new System.Drawing.Point(516, 243);
+            this.xml_klita_dtp.Name = "xml_klita_dtp";
+            this.xml_klita_dtp.ShowCheckBox = true;
+            this.xml_klita_dtp.Size = new System.Drawing.Size(200, 20);
+            this.xml_klita_dtp.TabIndex = 24;
             // 
-            // label3
+            // klita_lb
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(641, 219);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "תאריך קליטה";
+            this.klita_lb.AutoSize = true;
+            this.klita_lb.Location = new System.Drawing.Point(641, 219);
+            this.klita_lb.Name = "klita_lb";
+            this.klita_lb.Size = new System.Drawing.Size(76, 13);
+            this.klita_lb.TabIndex = 25;
+            this.klita_lb.Text = "תאריך קליטה";
             // 
             // xml_hachalom
             // 
@@ -502,33 +502,33 @@
             this.firstName_tb.Size = new System.Drawing.Size(126, 20);
             this.firstName_tb.TabIndex = 1;
             // 
-            // xml_sachar
+            // xml_salary_tb
             // 
-            this.xml_sachar.Location = new System.Drawing.Point(745, 324);
-            this.xml_sachar.Name = "xml_sachar";
-            this.xml_sachar.Size = new System.Drawing.Size(128, 20);
-            this.xml_sachar.TabIndex = 1;
+            this.xml_salary_tb.Location = new System.Drawing.Point(745, 324);
+            this.xml_salary_tb.Name = "xml_salary_tb";
+            this.xml_salary_tb.Size = new System.Drawing.Size(128, 20);
+            this.xml_salary_tb.TabIndex = 1;
             // 
-            // xml_ktovet
+            // xml_ktovet_tb
             // 
-            this.xml_ktovet.Location = new System.Drawing.Point(745, 286);
-            this.xml_ktovet.Name = "xml_ktovet";
-            this.xml_ktovet.Size = new System.Drawing.Size(128, 20);
-            this.xml_ktovet.TabIndex = 1;
+            this.xml_ktovet_tb.Location = new System.Drawing.Point(745, 286);
+            this.xml_ktovet_tb.Name = "xml_ktovet_tb";
+            this.xml_ktovet_tb.Size = new System.Drawing.Size(128, 20);
+            this.xml_ktovet_tb.TabIndex = 1;
             // 
-            // xml_shemHaEsek
+            // xml_company_tb
             // 
-            this.xml_shemHaEsek.Location = new System.Drawing.Point(745, 216);
-            this.xml_shemHaEsek.Name = "xml_shemHaEsek";
-            this.xml_shemHaEsek.Size = new System.Drawing.Size(128, 20);
-            this.xml_shemHaEsek.TabIndex = 1;
+            this.xml_company_tb.Location = new System.Drawing.Point(745, 216);
+            this.xml_company_tb.Name = "xml_company_tb";
+            this.xml_company_tb.Size = new System.Drawing.Size(128, 20);
+            this.xml_company_tb.TabIndex = 1;
             // 
-            // xml_sugHaavoda
+            // xml_job_type_tb
             // 
-            this.xml_sugHaavoda.Location = new System.Drawing.Point(745, 250);
-            this.xml_sugHaavoda.Name = "xml_sugHaavoda";
-            this.xml_sugHaavoda.Size = new System.Drawing.Size(128, 20);
-            this.xml_sugHaavoda.TabIndex = 1;
+            this.xml_job_type_tb.Location = new System.Drawing.Point(745, 250);
+            this.xml_job_type_tb.Name = "xml_job_type_tb";
+            this.xml_job_type_tb.Size = new System.Drawing.Size(128, 20);
+            this.xml_job_type_tb.TabIndex = 1;
             // 
             // lastName_tb
             // 
@@ -674,75 +674,75 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "שם פרטי:";
             // 
-            // tabPage2
+            // mazav_tab
             // 
-            this.tabPage2.Controls.Add(this.tabControl2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage2.Size = new System.Drawing.Size(962, 366);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "תמונת מצב";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.mazav_tab.Controls.Add(this.mazav_tc);
+            this.mazav_tab.Location = new System.Drawing.Point(4, 22);
+            this.mazav_tab.Name = "mazav_tab";
+            this.mazav_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.mazav_tab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.mazav_tab.Size = new System.Drawing.Size(962, 366);
+            this.mazav_tab.TabIndex = 1;
+            this.mazav_tab.Text = "תמונת מצב";
+            this.mazav_tab.UseVisualStyleBackColor = true;
             // 
-            // tabControl2
+            // mazav_tc
             // 
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage7);
-            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(3, 3);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.RightToLeftLayout = true;
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(956, 360);
-            this.tabControl2.TabIndex = 0;
+            this.mazav_tc.Controls.Add(this.job_functionality_tab);
+            this.mazav_tc.Controls.Add(this.norms_tab);
+            this.mazav_tc.Controls.Add(this.social_skills_tab);
+            this.mazav_tc.Controls.Add(this.activte_assertive_tab);
+            this.mazav_tc.Controls.Add(this.satisfactory_tab);
+            this.mazav_tc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mazav_tc.Location = new System.Drawing.Point(3, 3);
+            this.mazav_tc.Name = "mazav_tc";
+            this.mazav_tc.RightToLeftLayout = true;
+            this.mazav_tc.SelectedIndex = 0;
+            this.mazav_tc.Size = new System.Drawing.Size(956, 360);
+            this.mazav_tc.TabIndex = 0;
             // 
-            // tabPage3
+            // job_functionality_tab
             // 
-            this.tabPage3.Controls.Add(this.xml_groupBox32_gb);
-            this.tabPage3.Controls.Add(this.xml_groupBox25_gb);
-            this.tabPage3.Controls.Add(this.xml_groupBox26_gb);
-            this.tabPage3.Controls.Add(this.xml_groupBox31_gb);
-            this.tabPage3.Controls.Add(this.xml_groupBox27_gb);
-            this.tabPage3.Controls.Add(this.xml_groupBox28_gb);
-            this.tabPage3.Controls.Add(this.xml_groupBox29_gb);
-            this.tabPage3.Controls.Add(this.xml_groupBox30_gb);
-            this.tabPage3.Controls.Add(this.label23);
-            this.tabPage3.Controls.Add(this.label22);
-            this.tabPage3.Controls.Add(this.label21);
-            this.tabPage3.Controls.Add(this.xml_hearotSeder);
-            this.tabPage3.Controls.Add(this.label20);
-            this.tabPage3.Controls.Add(this.xml_hearotKatzev);
-            this.tabPage3.Controls.Add(this.label19);
-            this.tabPage3.Controls.Add(this.xml_hearotEichut);
-            this.tabPage3.Controls.Add(this.label18);
-            this.tabPage3.Controls.Add(this.xml_hearotHatmada);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(948, 334);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "תפקוד בעבודה";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox32);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox25);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox26);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox31);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox27);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox28);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox29);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox30);
+            this.job_functionality_tab.Controls.Add(this.label23);
+            this.job_functionality_tab.Controls.Add(this.label22);
+            this.job_functionality_tab.Controls.Add(this.label21);
+            this.job_functionality_tab.Controls.Add(this.xml_comments_organization_tb);
+            this.job_functionality_tab.Controls.Add(this.label20);
+            this.job_functionality_tab.Controls.Add(this.xml_comments_rate_tb);
+            this.job_functionality_tab.Controls.Add(this.label19);
+            this.job_functionality_tab.Controls.Add(this.xml_comments_job_quality_tb);
+            this.job_functionality_tab.Controls.Add(this.label18);
+            this.job_functionality_tab.Controls.Add(this.xml_comments_hatmada_tb);
+            this.job_functionality_tab.Controls.Add(this.label17);
+            this.job_functionality_tab.Controls.Add(this.label16);
+            this.job_functionality_tab.Location = new System.Drawing.Point(4, 22);
+            this.job_functionality_tab.Name = "job_functionality_tab";
+            this.job_functionality_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.job_functionality_tab.Size = new System.Drawing.Size(948, 334);
+            this.job_functionality_tab.TabIndex = 0;
+            this.job_functionality_tab.Text = "תפקוד בעבודה";
+            this.job_functionality_tab.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox32_gb
+            // xmlgr_groupBox32
             // 
-            this.xml_groupBox32_gb.Controls.Add(this.radioButton156);
-            this.xml_groupBox32_gb.Controls.Add(this.radioButton157);
-            this.xml_groupBox32_gb.Controls.Add(this.radioButton158);
-            this.xml_groupBox32_gb.Controls.Add(this.radioButton159);
-            this.xml_groupBox32_gb.Controls.Add(this.radioButton160);
-            this.xml_groupBox32_gb.Location = new System.Drawing.Point(308, 221);
-            this.xml_groupBox32_gb.Name = "xml_groupBox32_gb";
-            this.xml_groupBox32_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox32_gb.TabIndex = 76;
-            this.xml_groupBox32_gb.TabStop = false;
+            this.xmlgr_groupBox32.Controls.Add(this.radioButton156);
+            this.xmlgr_groupBox32.Controls.Add(this.radioButton157);
+            this.xmlgr_groupBox32.Controls.Add(this.radioButton158);
+            this.xmlgr_groupBox32.Controls.Add(this.radioButton159);
+            this.xmlgr_groupBox32.Controls.Add(this.radioButton160);
+            this.xmlgr_groupBox32.Location = new System.Drawing.Point(308, 221);
+            this.xmlgr_groupBox32.Name = "xmlgr_groupBox32";
+            this.xmlgr_groupBox32.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox32.TabIndex = 76;
+            this.xmlgr_groupBox32.TabStop = false;
             // 
             // radioButton156
             // 
@@ -799,18 +799,18 @@
             this.radioButton160.Text = "2";
             this.radioButton160.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox25_gb
+            // xmlgr_groupBox25
             // 
-            this.xml_groupBox25_gb.Controls.Add(this.radioButton121);
-            this.xml_groupBox25_gb.Controls.Add(this.radioButton122);
-            this.xml_groupBox25_gb.Controls.Add(this.radioButton123);
-            this.xml_groupBox25_gb.Controls.Add(this.radioButton124);
-            this.xml_groupBox25_gb.Controls.Add(this.radioButton125);
-            this.xml_groupBox25_gb.Location = new System.Drawing.Point(308, 173);
-            this.xml_groupBox25_gb.Name = "xml_groupBox25_gb";
-            this.xml_groupBox25_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox25_gb.TabIndex = 76;
-            this.xml_groupBox25_gb.TabStop = false;
+            this.xmlgr_groupBox25.Controls.Add(this.radioButton121);
+            this.xmlgr_groupBox25.Controls.Add(this.radioButton122);
+            this.xmlgr_groupBox25.Controls.Add(this.radioButton123);
+            this.xmlgr_groupBox25.Controls.Add(this.radioButton124);
+            this.xmlgr_groupBox25.Controls.Add(this.radioButton125);
+            this.xmlgr_groupBox25.Location = new System.Drawing.Point(308, 173);
+            this.xmlgr_groupBox25.Name = "xmlgr_groupBox25";
+            this.xmlgr_groupBox25.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox25.TabIndex = 76;
+            this.xmlgr_groupBox25.TabStop = false;
             // 
             // radioButton121
             // 
@@ -867,18 +867,18 @@
             this.radioButton125.Text = "2";
             this.radioButton125.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox26_gb
+            // xmlgr_groupBox26
             // 
-            this.xml_groupBox26_gb.Controls.Add(this.radioButton126);
-            this.xml_groupBox26_gb.Controls.Add(this.radioButton127);
-            this.xml_groupBox26_gb.Controls.Add(this.radioButton128);
-            this.xml_groupBox26_gb.Controls.Add(this.radioButton129);
-            this.xml_groupBox26_gb.Controls.Add(this.radioButton130);
-            this.xml_groupBox26_gb.Location = new System.Drawing.Point(308, 125);
-            this.xml_groupBox26_gb.Name = "xml_groupBox26_gb";
-            this.xml_groupBox26_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox26_gb.TabIndex = 77;
-            this.xml_groupBox26_gb.TabStop = false;
+            this.xmlgr_groupBox26.Controls.Add(this.radioButton126);
+            this.xmlgr_groupBox26.Controls.Add(this.radioButton127);
+            this.xmlgr_groupBox26.Controls.Add(this.radioButton128);
+            this.xmlgr_groupBox26.Controls.Add(this.radioButton129);
+            this.xmlgr_groupBox26.Controls.Add(this.radioButton130);
+            this.xmlgr_groupBox26.Location = new System.Drawing.Point(308, 125);
+            this.xmlgr_groupBox26.Name = "xmlgr_groupBox26";
+            this.xmlgr_groupBox26.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox26.TabIndex = 77;
+            this.xmlgr_groupBox26.TabStop = false;
             // 
             // radioButton126
             // 
@@ -935,18 +935,18 @@
             this.radioButton130.Text = "2";
             this.radioButton130.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox31_gb
+            // xmlgr_groupBox31
             // 
-            this.xml_groupBox31_gb.Controls.Add(this.radioButton151);
-            this.xml_groupBox31_gb.Controls.Add(this.radioButton152);
-            this.xml_groupBox31_gb.Controls.Add(this.radioButton153);
-            this.xml_groupBox31_gb.Controls.Add(this.radioButton154);
-            this.xml_groupBox31_gb.Controls.Add(this.radioButton155);
-            this.xml_groupBox31_gb.Location = new System.Drawing.Point(570, 221);
-            this.xml_groupBox31_gb.Name = "xml_groupBox31_gb";
-            this.xml_groupBox31_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox31_gb.TabIndex = 79;
-            this.xml_groupBox31_gb.TabStop = false;
+            this.xmlgr_groupBox31.Controls.Add(this.radioButton151);
+            this.xmlgr_groupBox31.Controls.Add(this.radioButton152);
+            this.xmlgr_groupBox31.Controls.Add(this.radioButton153);
+            this.xmlgr_groupBox31.Controls.Add(this.radioButton154);
+            this.xmlgr_groupBox31.Controls.Add(this.radioButton155);
+            this.xmlgr_groupBox31.Location = new System.Drawing.Point(570, 221);
+            this.xmlgr_groupBox31.Name = "xmlgr_groupBox31";
+            this.xmlgr_groupBox31.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox31.TabIndex = 79;
+            this.xmlgr_groupBox31.TabStop = false;
             // 
             // radioButton151
             // 
@@ -1003,18 +1003,18 @@
             this.radioButton155.Text = "2";
             this.radioButton155.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox27_gb
+            // xmlgr_groupBox27
             // 
-            this.xml_groupBox27_gb.Controls.Add(this.radioButton131);
-            this.xml_groupBox27_gb.Controls.Add(this.radioButton132);
-            this.xml_groupBox27_gb.Controls.Add(this.radioButton133);
-            this.xml_groupBox27_gb.Controls.Add(this.radioButton134);
-            this.xml_groupBox27_gb.Controls.Add(this.radioButton135);
-            this.xml_groupBox27_gb.Location = new System.Drawing.Point(308, 75);
-            this.xml_groupBox27_gb.Name = "xml_groupBox27_gb";
-            this.xml_groupBox27_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox27_gb.TabIndex = 78;
-            this.xml_groupBox27_gb.TabStop = false;
+            this.xmlgr_groupBox27.Controls.Add(this.radioButton131);
+            this.xmlgr_groupBox27.Controls.Add(this.radioButton132);
+            this.xmlgr_groupBox27.Controls.Add(this.radioButton133);
+            this.xmlgr_groupBox27.Controls.Add(this.radioButton134);
+            this.xmlgr_groupBox27.Controls.Add(this.radioButton135);
+            this.xmlgr_groupBox27.Location = new System.Drawing.Point(308, 75);
+            this.xmlgr_groupBox27.Name = "xmlgr_groupBox27";
+            this.xmlgr_groupBox27.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox27.TabIndex = 78;
+            this.xmlgr_groupBox27.TabStop = false;
             // 
             // radioButton131
             // 
@@ -1071,18 +1071,18 @@
             this.radioButton135.Text = "2";
             this.radioButton135.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox28_gb
+            // xmlgr_groupBox28
             // 
-            this.xml_groupBox28_gb.Controls.Add(this.radioButton136);
-            this.xml_groupBox28_gb.Controls.Add(this.radioButton137);
-            this.xml_groupBox28_gb.Controls.Add(this.radioButton138);
-            this.xml_groupBox28_gb.Controls.Add(this.radioButton139);
-            this.xml_groupBox28_gb.Controls.Add(this.radioButton140);
-            this.xml_groupBox28_gb.Location = new System.Drawing.Point(570, 173);
-            this.xml_groupBox28_gb.Name = "xml_groupBox28_gb";
-            this.xml_groupBox28_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox28_gb.TabIndex = 79;
-            this.xml_groupBox28_gb.TabStop = false;
+            this.xmlgr_groupBox28.Controls.Add(this.radioButton136);
+            this.xmlgr_groupBox28.Controls.Add(this.radioButton137);
+            this.xmlgr_groupBox28.Controls.Add(this.radioButton138);
+            this.xmlgr_groupBox28.Controls.Add(this.radioButton139);
+            this.xmlgr_groupBox28.Controls.Add(this.radioButton140);
+            this.xmlgr_groupBox28.Location = new System.Drawing.Point(570, 173);
+            this.xmlgr_groupBox28.Name = "xmlgr_groupBox28";
+            this.xmlgr_groupBox28.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox28.TabIndex = 79;
+            this.xmlgr_groupBox28.TabStop = false;
             // 
             // radioButton136
             // 
@@ -1139,18 +1139,18 @@
             this.radioButton140.Text = "2";
             this.radioButton140.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox29_gb
+            // xmlgr_groupBox29
             // 
-            this.xml_groupBox29_gb.Controls.Add(this.radioButton141);
-            this.xml_groupBox29_gb.Controls.Add(this.radioButton142);
-            this.xml_groupBox29_gb.Controls.Add(this.radioButton143);
-            this.xml_groupBox29_gb.Controls.Add(this.radioButton144);
-            this.xml_groupBox29_gb.Controls.Add(this.radioButton145);
-            this.xml_groupBox29_gb.Location = new System.Drawing.Point(570, 125);
-            this.xml_groupBox29_gb.Name = "xml_groupBox29_gb";
-            this.xml_groupBox29_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox29_gb.TabIndex = 80;
-            this.xml_groupBox29_gb.TabStop = false;
+            this.xmlgr_groupBox29.Controls.Add(this.radioButton141);
+            this.xmlgr_groupBox29.Controls.Add(this.radioButton142);
+            this.xmlgr_groupBox29.Controls.Add(this.radioButton143);
+            this.xmlgr_groupBox29.Controls.Add(this.radioButton144);
+            this.xmlgr_groupBox29.Controls.Add(this.radioButton145);
+            this.xmlgr_groupBox29.Location = new System.Drawing.Point(570, 125);
+            this.xmlgr_groupBox29.Name = "xmlgr_groupBox29";
+            this.xmlgr_groupBox29.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox29.TabIndex = 80;
+            this.xmlgr_groupBox29.TabStop = false;
             // 
             // radioButton141
             // 
@@ -1207,18 +1207,18 @@
             this.radioButton145.Text = "2";
             this.radioButton145.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox30_gb
+            // xmlgr_groupBox30
             // 
-            this.xml_groupBox30_gb.Controls.Add(this.radioButton146);
-            this.xml_groupBox30_gb.Controls.Add(this.radioButton147);
-            this.xml_groupBox30_gb.Controls.Add(this.radioButton148);
-            this.xml_groupBox30_gb.Controls.Add(this.radioButton149);
-            this.xml_groupBox30_gb.Controls.Add(this.radioButton150);
-            this.xml_groupBox30_gb.Location = new System.Drawing.Point(570, 75);
-            this.xml_groupBox30_gb.Name = "xml_groupBox30_gb";
-            this.xml_groupBox30_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox30_gb.TabIndex = 81;
-            this.xml_groupBox30_gb.TabStop = false;
+            this.xmlgr_groupBox30.Controls.Add(this.radioButton146);
+            this.xmlgr_groupBox30.Controls.Add(this.radioButton147);
+            this.xmlgr_groupBox30.Controls.Add(this.radioButton148);
+            this.xmlgr_groupBox30.Controls.Add(this.radioButton149);
+            this.xmlgr_groupBox30.Controls.Add(this.radioButton150);
+            this.xmlgr_groupBox30.Location = new System.Drawing.Point(570, 75);
+            this.xmlgr_groupBox30.Name = "xmlgr_groupBox30";
+            this.xmlgr_groupBox30.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox30.TabIndex = 81;
+            this.xmlgr_groupBox30.TabStop = false;
             // 
             // radioButton146
             // 
@@ -1305,12 +1305,12 @@
             this.label21.TabIndex = 21;
             this.label21.Text = "הערכת העובד";
             // 
-            // xml_hearotSeder
+            // xml_comments_organization_tb
             // 
-            this.xml_hearotSeder.Location = new System.Drawing.Point(57, 234);
-            this.xml_hearotSeder.Name = "xml_hearotSeder";
-            this.xml_hearotSeder.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotSeder.TabIndex = 20;
+            this.xml_comments_organization_tb.Location = new System.Drawing.Point(57, 234);
+            this.xml_comments_organization_tb.Name = "xml_comments_organization_tb";
+            this.xml_comments_organization_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_organization_tb.TabIndex = 20;
             // 
             // label20
             // 
@@ -1321,12 +1321,12 @@
             this.label20.TabIndex = 13;
             this.label20.Text = "שמירה על סדר וארגון";
             // 
-            // xml_hearotKatzev
+            // xml_comments_rate_tb
             // 
-            this.xml_hearotKatzev.Location = new System.Drawing.Point(57, 189);
-            this.xml_hearotKatzev.Name = "xml_hearotKatzev";
-            this.xml_hearotKatzev.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotKatzev.TabIndex = 18;
+            this.xml_comments_rate_tb.Location = new System.Drawing.Point(57, 189);
+            this.xml_comments_rate_tb.Name = "xml_comments_rate_tb";
+            this.xml_comments_rate_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_rate_tb.TabIndex = 18;
             // 
             // label19
             // 
@@ -1337,12 +1337,12 @@
             this.label19.TabIndex = 14;
             this.label19.Text = "קצב והספק העבודה";
             // 
-            // xml_hearotEichut
+            // xml_comments_job_quality_tb
             // 
-            this.xml_hearotEichut.Location = new System.Drawing.Point(57, 141);
-            this.xml_hearotEichut.Name = "xml_hearotEichut";
-            this.xml_hearotEichut.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotEichut.TabIndex = 19;
+            this.xml_comments_job_quality_tb.Location = new System.Drawing.Point(57, 141);
+            this.xml_comments_job_quality_tb.Name = "xml_comments_job_quality_tb";
+            this.xml_comments_job_quality_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_job_quality_tb.TabIndex = 19;
             // 
             // label18
             // 
@@ -1353,12 +1353,12 @@
             this.label18.TabIndex = 15;
             this.label18.Text = "איכות ביצוע המשימות";
             // 
-            // xml_hearotHatmada
+            // xml_comments_hatmada_tb
             // 
-            this.xml_hearotHatmada.Location = new System.Drawing.Point(57, 91);
-            this.xml_hearotHatmada.Name = "xml_hearotHatmada";
-            this.xml_hearotHatmada.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotHatmada.TabIndex = 17;
+            this.xml_comments_hatmada_tb.Location = new System.Drawing.Point(57, 91);
+            this.xml_comments_hatmada_tb.Name = "xml_comments_hatmada_tb";
+            this.xml_comments_hatmada_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_hatmada_tb.TabIndex = 17;
             // 
             // label17
             // 
@@ -1380,45 +1380,44 @@
             this.label16.Text = "תמונת מצב – הערכת העובד את עצמו     דירוג: 1 - זקוק לשיפור /  2 - סביר /  3 - טוב" +
     " /  4 – טוב מאוד / 5 – מצוין";
             // 
-            // tabPage4
+            // norms_tab
             // 
-            this.tabPage4.Controls.Add(this.xml_groupBox19_gb);
-            this.tabPage4.Controls.Add(this.xml_groupBox20_gb);
-            this.tabPage4.Controls.Add(this.xml_groupBox21_gb);
-            this.tabPage4.Controls.Add(this.xml_groupBox22_gb);
-            this.tabPage4.Controls.Add(this.xml_groupBox23_gb);
-            this.tabPage4.Controls.Add(this.xml_groupBox24_gb);
-            this.tabPage4.Controls.Add(this.label24);
-            this.tabPage4.Controls.Add(this.label25);
-            this.tabPage4.Controls.Add(this.label26);
-            this.tabPage4.Controls.Add(this.xml_hearotKlalim);
-            this.tabPage4.Controls.Add(this.label28);
-            this.tabPage4.Controls.Add(this.xml_hearotHofaa);
-            this.tabPage4.Controls.Add(this.label29);
-            this.tabPage4.Controls.Add(this.xml_hearotZmanim);
-            this.tabPage4.Controls.Add(this.label30);
-            this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(948, 334);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "עמידה בנורמות";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox19);
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox20);
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox21);
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox22);
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox23);
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox24);
+            this.norms_tab.Controls.Add(this.label24);
+            this.norms_tab.Controls.Add(this.label25);
+            this.norms_tab.Controls.Add(this.label26);
+            this.norms_tab.Controls.Add(this.xml_comments_Klalim_tb);
+            this.norms_tab.Controls.Add(this.label28);
+            this.norms_tab.Controls.Add(this.xml_comments_Hofaa_tb);
+            this.norms_tab.Controls.Add(this.label29);
+            this.norms_tab.Controls.Add(this.xml_comments_Zmanim_tb);
+            this.norms_tab.Controls.Add(this.label30);
+            this.norms_tab.Controls.Add(this.label31);
+            this.norms_tab.Location = new System.Drawing.Point(4, 22);
+            this.norms_tab.Name = "norms_tab";
+            this.norms_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.norms_tab.Size = new System.Drawing.Size(948, 334);
+            this.norms_tab.TabIndex = 1;
+            this.norms_tab.Text = "עמידה בנורמות";
+            this.norms_tab.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox19_gb
+            // xmlgr_groupBox19
             // 
-            this.xml_groupBox19_gb.Controls.Add(this.radioButton91);
-            this.xml_groupBox19_gb.Controls.Add(this.radioButton92);
-            this.xml_groupBox19_gb.Controls.Add(this.radioButton93);
-            this.xml_groupBox19_gb.Controls.Add(this.radioButton94);
-            this.xml_groupBox19_gb.Controls.Add(this.radioButton95);
-            this.xml_groupBox19_gb.Location = new System.Drawing.Point(275, 199);
-            this.xml_groupBox19_gb.Name = "xml_groupBox19_gb";
-            this.xml_groupBox19_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox19_gb.TabIndex = 76;
-            this.xml_groupBox19_gb.TabStop = false;
-            this.xml_groupBox19_gb.Enter += new System.EventHandler(this.xmlgr_groupBox19_Enter);
+            this.xmlgr_groupBox19.Controls.Add(this.radioButton91);
+            this.xmlgr_groupBox19.Controls.Add(this.radioButton92);
+            this.xmlgr_groupBox19.Controls.Add(this.radioButton93);
+            this.xmlgr_groupBox19.Controls.Add(this.radioButton94);
+            this.xmlgr_groupBox19.Controls.Add(this.radioButton95);
+            this.xmlgr_groupBox19.Location = new System.Drawing.Point(275, 199);
+            this.xmlgr_groupBox19.Name = "xmlgr_groupBox19";
+            this.xmlgr_groupBox19.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox19.TabIndex = 76;
+            this.xmlgr_groupBox19.TabStop = false;
             // 
             // radioButton91
             // 
@@ -1475,18 +1474,18 @@
             this.radioButton95.Text = "2";
             this.radioButton95.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox20_gb
+            // xmlgr_groupBox20
             // 
-            this.xml_groupBox20_gb.Controls.Add(this.radioButton96);
-            this.xml_groupBox20_gb.Controls.Add(this.radioButton97);
-            this.xml_groupBox20_gb.Controls.Add(this.radioButton98);
-            this.xml_groupBox20_gb.Controls.Add(this.radioButton99);
-            this.xml_groupBox20_gb.Controls.Add(this.radioButton100);
-            this.xml_groupBox20_gb.Location = new System.Drawing.Point(275, 151);
-            this.xml_groupBox20_gb.Name = "xml_groupBox20_gb";
-            this.xml_groupBox20_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox20_gb.TabIndex = 77;
-            this.xml_groupBox20_gb.TabStop = false;
+            this.xmlgr_groupBox20.Controls.Add(this.radioButton96);
+            this.xmlgr_groupBox20.Controls.Add(this.radioButton97);
+            this.xmlgr_groupBox20.Controls.Add(this.radioButton98);
+            this.xmlgr_groupBox20.Controls.Add(this.radioButton99);
+            this.xmlgr_groupBox20.Controls.Add(this.radioButton100);
+            this.xmlgr_groupBox20.Location = new System.Drawing.Point(275, 151);
+            this.xmlgr_groupBox20.Name = "xmlgr_groupBox20";
+            this.xmlgr_groupBox20.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox20.TabIndex = 77;
+            this.xmlgr_groupBox20.TabStop = false;
             // 
             // radioButton96
             // 
@@ -1543,18 +1542,18 @@
             this.radioButton100.Text = "2";
             this.radioButton100.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox21_gb
+            // xmlgr_groupBox21
             // 
-            this.xml_groupBox21_gb.Controls.Add(this.radioButton101);
-            this.xml_groupBox21_gb.Controls.Add(this.radioButton102);
-            this.xml_groupBox21_gb.Controls.Add(this.radioButton103);
-            this.xml_groupBox21_gb.Controls.Add(this.radioButton104);
-            this.xml_groupBox21_gb.Controls.Add(this.radioButton105);
-            this.xml_groupBox21_gb.Location = new System.Drawing.Point(275, 101);
-            this.xml_groupBox21_gb.Name = "xml_groupBox21_gb";
-            this.xml_groupBox21_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox21_gb.TabIndex = 78;
-            this.xml_groupBox21_gb.TabStop = false;
+            this.xmlgr_groupBox21.Controls.Add(this.radioButton101);
+            this.xmlgr_groupBox21.Controls.Add(this.radioButton102);
+            this.xmlgr_groupBox21.Controls.Add(this.radioButton103);
+            this.xmlgr_groupBox21.Controls.Add(this.radioButton104);
+            this.xmlgr_groupBox21.Controls.Add(this.radioButton105);
+            this.xmlgr_groupBox21.Location = new System.Drawing.Point(275, 101);
+            this.xmlgr_groupBox21.Name = "xmlgr_groupBox21";
+            this.xmlgr_groupBox21.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox21.TabIndex = 78;
+            this.xmlgr_groupBox21.TabStop = false;
             // 
             // radioButton101
             // 
@@ -1611,18 +1610,18 @@
             this.radioButton105.Text = "2";
             this.radioButton105.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox22_gb
+            // xmlgr_groupBox22
             // 
-            this.xml_groupBox22_gb.Controls.Add(this.radioButton106);
-            this.xml_groupBox22_gb.Controls.Add(this.radioButton107);
-            this.xml_groupBox22_gb.Controls.Add(this.radioButton108);
-            this.xml_groupBox22_gb.Controls.Add(this.radioButton109);
-            this.xml_groupBox22_gb.Controls.Add(this.radioButton110);
-            this.xml_groupBox22_gb.Location = new System.Drawing.Point(537, 199);
-            this.xml_groupBox22_gb.Name = "xml_groupBox22_gb";
-            this.xml_groupBox22_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox22_gb.TabIndex = 79;
-            this.xml_groupBox22_gb.TabStop = false;
+            this.xmlgr_groupBox22.Controls.Add(this.radioButton106);
+            this.xmlgr_groupBox22.Controls.Add(this.radioButton107);
+            this.xmlgr_groupBox22.Controls.Add(this.radioButton108);
+            this.xmlgr_groupBox22.Controls.Add(this.radioButton109);
+            this.xmlgr_groupBox22.Controls.Add(this.radioButton110);
+            this.xmlgr_groupBox22.Location = new System.Drawing.Point(537, 199);
+            this.xmlgr_groupBox22.Name = "xmlgr_groupBox22";
+            this.xmlgr_groupBox22.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox22.TabIndex = 79;
+            this.xmlgr_groupBox22.TabStop = false;
             // 
             // radioButton106
             // 
@@ -1679,18 +1678,18 @@
             this.radioButton110.Text = "2";
             this.radioButton110.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox23_gb
+            // xmlgr_groupBox23
             // 
-            this.xml_groupBox23_gb.Controls.Add(this.radioButton111);
-            this.xml_groupBox23_gb.Controls.Add(this.radioButton112);
-            this.xml_groupBox23_gb.Controls.Add(this.radioButton113);
-            this.xml_groupBox23_gb.Controls.Add(this.radioButton114);
-            this.xml_groupBox23_gb.Controls.Add(this.radioButton115);
-            this.xml_groupBox23_gb.Location = new System.Drawing.Point(537, 151);
-            this.xml_groupBox23_gb.Name = "xml_groupBox23_gb";
-            this.xml_groupBox23_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox23_gb.TabIndex = 80;
-            this.xml_groupBox23_gb.TabStop = false;
+            this.xmlgr_groupBox23.Controls.Add(this.radioButton111);
+            this.xmlgr_groupBox23.Controls.Add(this.radioButton112);
+            this.xmlgr_groupBox23.Controls.Add(this.radioButton113);
+            this.xmlgr_groupBox23.Controls.Add(this.radioButton114);
+            this.xmlgr_groupBox23.Controls.Add(this.radioButton115);
+            this.xmlgr_groupBox23.Location = new System.Drawing.Point(537, 151);
+            this.xmlgr_groupBox23.Name = "xmlgr_groupBox23";
+            this.xmlgr_groupBox23.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox23.TabIndex = 80;
+            this.xmlgr_groupBox23.TabStop = false;
             // 
             // radioButton111
             // 
@@ -1747,18 +1746,18 @@
             this.radioButton115.Text = "2";
             this.radioButton115.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox24_gb
+            // xmlgr_groupBox24
             // 
-            this.xml_groupBox24_gb.Controls.Add(this.radioButton116);
-            this.xml_groupBox24_gb.Controls.Add(this.radioButton117);
-            this.xml_groupBox24_gb.Controls.Add(this.radioButton118);
-            this.xml_groupBox24_gb.Controls.Add(this.radioButton119);
-            this.xml_groupBox24_gb.Controls.Add(this.radioButton120);
-            this.xml_groupBox24_gb.Location = new System.Drawing.Point(537, 101);
-            this.xml_groupBox24_gb.Name = "xml_groupBox24_gb";
-            this.xml_groupBox24_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox24_gb.TabIndex = 81;
-            this.xml_groupBox24_gb.TabStop = false;
+            this.xmlgr_groupBox24.Controls.Add(this.radioButton116);
+            this.xmlgr_groupBox24.Controls.Add(this.radioButton117);
+            this.xmlgr_groupBox24.Controls.Add(this.radioButton118);
+            this.xmlgr_groupBox24.Controls.Add(this.radioButton119);
+            this.xmlgr_groupBox24.Controls.Add(this.radioButton120);
+            this.xmlgr_groupBox24.Location = new System.Drawing.Point(537, 101);
+            this.xmlgr_groupBox24.Name = "xmlgr_groupBox24";
+            this.xmlgr_groupBox24.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox24.TabIndex = 81;
+            this.xmlgr_groupBox24.TabStop = false;
             // 
             // radioButton116
             // 
@@ -1845,12 +1844,12 @@
             this.label26.TabIndex = 39;
             this.label26.Text = "הערכת העובד";
             // 
-            // xml_hearotKlalim
+            // xml_comments_Klalim_tb
             // 
-            this.xml_hearotKlalim.Location = new System.Drawing.Point(38, 216);
-            this.xml_hearotKlalim.Name = "xml_hearotKlalim";
-            this.xml_hearotKlalim.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotKlalim.TabIndex = 36;
+            this.xml_comments_Klalim_tb.Location = new System.Drawing.Point(38, 216);
+            this.xml_comments_Klalim_tb.Name = "xml_comments_Klalim_tb";
+            this.xml_comments_Klalim_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Klalim_tb.TabIndex = 36;
             // 
             // label28
             // 
@@ -1861,12 +1860,12 @@
             this.label28.TabIndex = 32;
             this.label28.Text = "עמידה בנהלים ובכללים הנדרשים ";
             // 
-            // xml_hearotHofaa
+            // xml_comments_Hofaa_tb
             // 
-            this.xml_hearotHofaa.Location = new System.Drawing.Point(38, 168);
-            this.xml_hearotHofaa.Name = "xml_hearotHofaa";
-            this.xml_hearotHofaa.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotHofaa.TabIndex = 37;
+            this.xml_comments_Hofaa_tb.Location = new System.Drawing.Point(38, 168);
+            this.xml_comments_Hofaa_tb.Name = "xml_comments_Hofaa_tb";
+            this.xml_comments_Hofaa_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Hofaa_tb.TabIndex = 37;
             // 
             // label29
             // 
@@ -1877,12 +1876,12 @@
             this.label29.TabIndex = 33;
             this.label29.Text = "הופעה מכובדת ומותאמת";
             // 
-            // xml_hearotZmanim
+            // xml_comments_Zmanim_tb
             // 
-            this.xml_hearotZmanim.Location = new System.Drawing.Point(38, 118);
-            this.xml_hearotZmanim.Name = "xml_hearotZmanim";
-            this.xml_hearotZmanim.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotZmanim.TabIndex = 35;
+            this.xml_comments_Zmanim_tb.Location = new System.Drawing.Point(38, 118);
+            this.xml_comments_Zmanim_tb.Name = "xml_comments_Zmanim_tb";
+            this.xml_comments_Zmanim_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Zmanim_tb.TabIndex = 35;
             // 
             // label30
             // 
@@ -1904,44 +1903,44 @@
             this.label31.Text = "תמונת מצב – הערכת העובד את עצמו     דירוג: 1 - זקוק לשיפור /  2 - סביר /  3 - טוב" +
     " /  4 – טוב מאוד / 5 – מצוין";
             // 
-            // tabPage5
+            // social_skills_tab
             // 
-            this.tabPage5.Controls.Add(this.xml_groupBox7_gb);
-            this.tabPage5.Controls.Add(this.xml_groupBox8_gb);
-            this.tabPage5.Controls.Add(this.xml_groupBox9_gb);
-            this.tabPage5.Controls.Add(this.xml_groupBox10_gb);
-            this.tabPage5.Controls.Add(this.xml_groupBox11_gb);
-            this.tabPage5.Controls.Add(this.xml_groupBox12_gb);
-            this.tabPage5.Controls.Add(this.label27);
-            this.tabPage5.Controls.Add(this.label32);
-            this.tabPage5.Controls.Add(this.label33);
-            this.tabPage5.Controls.Add(this.xml_hearotSamchut);
-            this.tabPage5.Controls.Add(this.label35);
-            this.tabPage5.Controls.Add(this.xml_hearotTzevet);
-            this.tabPage5.Controls.Add(this.label36);
-            this.tabPage5.Controls.Add(this.xml_hearotAmitim);
-            this.tabPage5.Controls.Add(this.label37);
-            this.tabPage5.Controls.Add(this.label38);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(948, 334);
-            this.tabPage5.TabIndex = 2;
-            this.tabPage5.Text = "קשרים בין אישיים ";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox7);
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox8);
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox9);
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox10);
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox11);
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox12);
+            this.social_skills_tab.Controls.Add(this.label27);
+            this.social_skills_tab.Controls.Add(this.label32);
+            this.social_skills_tab.Controls.Add(this.label33);
+            this.social_skills_tab.Controls.Add(this.xml_comments_Samchut_tb);
+            this.social_skills_tab.Controls.Add(this.label35);
+            this.social_skills_tab.Controls.Add(this.xml_comments__Tzevet_tb);
+            this.social_skills_tab.Controls.Add(this.label36);
+            this.social_skills_tab.Controls.Add(this.xml_comments_Amitim_tb);
+            this.social_skills_tab.Controls.Add(this.label37);
+            this.social_skills_tab.Controls.Add(this.label38);
+            this.social_skills_tab.Location = new System.Drawing.Point(4, 22);
+            this.social_skills_tab.Name = "social_skills_tab";
+            this.social_skills_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.social_skills_tab.Size = new System.Drawing.Size(948, 334);
+            this.social_skills_tab.TabIndex = 2;
+            this.social_skills_tab.Text = "קשרים בין אישיים ";
+            this.social_skills_tab.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox7_gb
+            // xmlgr_groupBox7
             // 
-            this.xml_groupBox7_gb.Controls.Add(this.radioButton31);
-            this.xml_groupBox7_gb.Controls.Add(this.radioButton32);
-            this.xml_groupBox7_gb.Controls.Add(this.radioButton33);
-            this.xml_groupBox7_gb.Controls.Add(this.radioButton34);
-            this.xml_groupBox7_gb.Controls.Add(this.radioButton35);
-            this.xml_groupBox7_gb.Location = new System.Drawing.Point(278, 200);
-            this.xml_groupBox7_gb.Name = "xml_groupBox7_gb";
-            this.xml_groupBox7_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox7_gb.TabIndex = 76;
-            this.xml_groupBox7_gb.TabStop = false;
+            this.xmlgr_groupBox7.Controls.Add(this.radioButton31);
+            this.xmlgr_groupBox7.Controls.Add(this.radioButton32);
+            this.xmlgr_groupBox7.Controls.Add(this.radioButton33);
+            this.xmlgr_groupBox7.Controls.Add(this.radioButton34);
+            this.xmlgr_groupBox7.Controls.Add(this.radioButton35);
+            this.xmlgr_groupBox7.Location = new System.Drawing.Point(278, 200);
+            this.xmlgr_groupBox7.Name = "xmlgr_groupBox7";
+            this.xmlgr_groupBox7.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox7.TabIndex = 76;
+            this.xmlgr_groupBox7.TabStop = false;
             // 
             // radioButton31
             // 
@@ -1998,18 +1997,18 @@
             this.radioButton35.Text = "2";
             this.radioButton35.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox8_gb
+            // xmlgr_groupBox8
             // 
-            this.xml_groupBox8_gb.Controls.Add(this.radioButton36);
-            this.xml_groupBox8_gb.Controls.Add(this.radioButton37);
-            this.xml_groupBox8_gb.Controls.Add(this.radioButton38);
-            this.xml_groupBox8_gb.Controls.Add(this.radioButton39);
-            this.xml_groupBox8_gb.Controls.Add(this.radioButton40);
-            this.xml_groupBox8_gb.Location = new System.Drawing.Point(278, 152);
-            this.xml_groupBox8_gb.Name = "xml_groupBox8_gb";
-            this.xml_groupBox8_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox8_gb.TabIndex = 77;
-            this.xml_groupBox8_gb.TabStop = false;
+            this.xmlgr_groupBox8.Controls.Add(this.radioButton36);
+            this.xmlgr_groupBox8.Controls.Add(this.radioButton37);
+            this.xmlgr_groupBox8.Controls.Add(this.radioButton38);
+            this.xmlgr_groupBox8.Controls.Add(this.radioButton39);
+            this.xmlgr_groupBox8.Controls.Add(this.radioButton40);
+            this.xmlgr_groupBox8.Location = new System.Drawing.Point(278, 152);
+            this.xmlgr_groupBox8.Name = "xmlgr_groupBox8";
+            this.xmlgr_groupBox8.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox8.TabIndex = 77;
+            this.xmlgr_groupBox8.TabStop = false;
             // 
             // radioButton36
             // 
@@ -2066,18 +2065,18 @@
             this.radioButton40.Text = "2";
             this.radioButton40.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox9_gb
+            // xmlgr_groupBox9
             // 
-            this.xml_groupBox9_gb.Controls.Add(this.radioButton41);
-            this.xml_groupBox9_gb.Controls.Add(this.radioButton42);
-            this.xml_groupBox9_gb.Controls.Add(this.radioButton43);
-            this.xml_groupBox9_gb.Controls.Add(this.radioButton44);
-            this.xml_groupBox9_gb.Controls.Add(this.radioButton45);
-            this.xml_groupBox9_gb.Location = new System.Drawing.Point(278, 102);
-            this.xml_groupBox9_gb.Name = "xml_groupBox9_gb";
-            this.xml_groupBox9_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox9_gb.TabIndex = 78;
-            this.xml_groupBox9_gb.TabStop = false;
+            this.xmlgr_groupBox9.Controls.Add(this.radioButton41);
+            this.xmlgr_groupBox9.Controls.Add(this.radioButton42);
+            this.xmlgr_groupBox9.Controls.Add(this.radioButton43);
+            this.xmlgr_groupBox9.Controls.Add(this.radioButton44);
+            this.xmlgr_groupBox9.Controls.Add(this.radioButton45);
+            this.xmlgr_groupBox9.Location = new System.Drawing.Point(278, 102);
+            this.xmlgr_groupBox9.Name = "xmlgr_groupBox9";
+            this.xmlgr_groupBox9.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox9.TabIndex = 78;
+            this.xmlgr_groupBox9.TabStop = false;
             // 
             // radioButton41
             // 
@@ -2134,18 +2133,18 @@
             this.radioButton45.Text = "2";
             this.radioButton45.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox10_gb
+            // xmlgr_groupBox10
             // 
-            this.xml_groupBox10_gb.Controls.Add(this.radioButton46);
-            this.xml_groupBox10_gb.Controls.Add(this.radioButton47);
-            this.xml_groupBox10_gb.Controls.Add(this.radioButton48);
-            this.xml_groupBox10_gb.Controls.Add(this.radioButton49);
-            this.xml_groupBox10_gb.Controls.Add(this.radioButton50);
-            this.xml_groupBox10_gb.Location = new System.Drawing.Point(540, 200);
-            this.xml_groupBox10_gb.Name = "xml_groupBox10_gb";
-            this.xml_groupBox10_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox10_gb.TabIndex = 79;
-            this.xml_groupBox10_gb.TabStop = false;
+            this.xmlgr_groupBox10.Controls.Add(this.radioButton46);
+            this.xmlgr_groupBox10.Controls.Add(this.radioButton47);
+            this.xmlgr_groupBox10.Controls.Add(this.radioButton48);
+            this.xmlgr_groupBox10.Controls.Add(this.radioButton49);
+            this.xmlgr_groupBox10.Controls.Add(this.radioButton50);
+            this.xmlgr_groupBox10.Location = new System.Drawing.Point(540, 200);
+            this.xmlgr_groupBox10.Name = "xmlgr_groupBox10";
+            this.xmlgr_groupBox10.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox10.TabIndex = 79;
+            this.xmlgr_groupBox10.TabStop = false;
             // 
             // radioButton46
             // 
@@ -2202,18 +2201,18 @@
             this.radioButton50.Text = "2";
             this.radioButton50.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox11_gb
+            // xmlgr_groupBox11
             // 
-            this.xml_groupBox11_gb.Controls.Add(this.radioButton51);
-            this.xml_groupBox11_gb.Controls.Add(this.radioButton52);
-            this.xml_groupBox11_gb.Controls.Add(this.radioButton53);
-            this.xml_groupBox11_gb.Controls.Add(this.radioButton54);
-            this.xml_groupBox11_gb.Controls.Add(this.radioButton55);
-            this.xml_groupBox11_gb.Location = new System.Drawing.Point(540, 152);
-            this.xml_groupBox11_gb.Name = "xml_groupBox11_gb";
-            this.xml_groupBox11_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox11_gb.TabIndex = 80;
-            this.xml_groupBox11_gb.TabStop = false;
+            this.xmlgr_groupBox11.Controls.Add(this.radioButton51);
+            this.xmlgr_groupBox11.Controls.Add(this.radioButton52);
+            this.xmlgr_groupBox11.Controls.Add(this.radioButton53);
+            this.xmlgr_groupBox11.Controls.Add(this.radioButton54);
+            this.xmlgr_groupBox11.Controls.Add(this.radioButton55);
+            this.xmlgr_groupBox11.Location = new System.Drawing.Point(540, 152);
+            this.xmlgr_groupBox11.Name = "xmlgr_groupBox11";
+            this.xmlgr_groupBox11.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox11.TabIndex = 80;
+            this.xmlgr_groupBox11.TabStop = false;
             // 
             // radioButton51
             // 
@@ -2270,18 +2269,18 @@
             this.radioButton55.Text = "2";
             this.radioButton55.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox12_gb
+            // xmlgr_groupBox12
             // 
-            this.xml_groupBox12_gb.Controls.Add(this.radioButton56);
-            this.xml_groupBox12_gb.Controls.Add(this.radioButton57);
-            this.xml_groupBox12_gb.Controls.Add(this.radioButton58);
-            this.xml_groupBox12_gb.Controls.Add(this.radioButton59);
-            this.xml_groupBox12_gb.Controls.Add(this.radioButton60);
-            this.xml_groupBox12_gb.Location = new System.Drawing.Point(540, 102);
-            this.xml_groupBox12_gb.Name = "xml_groupBox12_gb";
-            this.xml_groupBox12_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox12_gb.TabIndex = 81;
-            this.xml_groupBox12_gb.TabStop = false;
+            this.xmlgr_groupBox12.Controls.Add(this.radioButton56);
+            this.xmlgr_groupBox12.Controls.Add(this.radioButton57);
+            this.xmlgr_groupBox12.Controls.Add(this.radioButton58);
+            this.xmlgr_groupBox12.Controls.Add(this.radioButton59);
+            this.xmlgr_groupBox12.Controls.Add(this.radioButton60);
+            this.xmlgr_groupBox12.Location = new System.Drawing.Point(540, 102);
+            this.xmlgr_groupBox12.Name = "xmlgr_groupBox12";
+            this.xmlgr_groupBox12.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox12.TabIndex = 81;
+            this.xmlgr_groupBox12.TabStop = false;
             // 
             // radioButton56
             // 
@@ -2368,12 +2367,12 @@
             this.label33.TabIndex = 39;
             this.label33.Text = "הערכת העובד";
             // 
-            // xml_hearotSamchut
+            // xml_comments_Samchut_tb
             // 
-            this.xml_hearotSamchut.Location = new System.Drawing.Point(38, 216);
-            this.xml_hearotSamchut.Name = "xml_hearotSamchut";
-            this.xml_hearotSamchut.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotSamchut.TabIndex = 36;
+            this.xml_comments_Samchut_tb.Location = new System.Drawing.Point(38, 216);
+            this.xml_comments_Samchut_tb.Name = "xml_comments_Samchut_tb";
+            this.xml_comments_Samchut_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Samchut_tb.TabIndex = 36;
             // 
             // label35
             // 
@@ -2384,12 +2383,12 @@
             this.label35.TabIndex = 32;
             this.label35.Text = "יכולת לקבל סמכות";
             // 
-            // xml_hearotTzevet
+            // xml_comments__Tzevet_tb
             // 
-            this.xml_hearotTzevet.Location = new System.Drawing.Point(38, 168);
-            this.xml_hearotTzevet.Name = "xml_hearotTzevet";
-            this.xml_hearotTzevet.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotTzevet.TabIndex = 37;
+            this.xml_comments__Tzevet_tb.Location = new System.Drawing.Point(38, 168);
+            this.xml_comments__Tzevet_tb.Name = "xml_comments__Tzevet_tb";
+            this.xml_comments__Tzevet_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments__Tzevet_tb.TabIndex = 37;
             // 
             // label36
             // 
@@ -2400,12 +2399,12 @@
             this.label36.TabIndex = 33;
             this.label36.Text = "יכולת לעבוד בעבודת צוות ";
             // 
-            // xml_hearotAmitim
+            // xml_comments_Amitim_tb
             // 
-            this.xml_hearotAmitim.Location = new System.Drawing.Point(38, 118);
-            this.xml_hearotAmitim.Name = "xml_hearotAmitim";
-            this.xml_hearotAmitim.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotAmitim.TabIndex = 35;
+            this.xml_comments_Amitim_tb.Location = new System.Drawing.Point(38, 118);
+            this.xml_comments_Amitim_tb.Name = "xml_comments_Amitim_tb";
+            this.xml_comments_Amitim_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Amitim_tb.TabIndex = 35;
             // 
             // label37
             // 
@@ -2427,44 +2426,44 @@
             this.label38.Text = "תמונת מצב – הערכת העובד את עצמו     דירוג: 1 - זקוק לשיפור /  2 - סביר /  3 - טוב" +
     " /  4 – טוב מאוד / 5 – מצוין";
             // 
-            // tabPage6
+            // activte_assertive_tab
             // 
-            this.tabPage6.Controls.Add(this.xml_groupBox18_gb);
-            this.tabPage6.Controls.Add(this.xml_groupBox17_gb);
-            this.tabPage6.Controls.Add(this.xml_groupBox16_gb);
-            this.tabPage6.Controls.Add(this.xml_groupBox15_gb);
-            this.tabPage6.Controls.Add(this.xml_groupBox14_gb);
-            this.tabPage6.Controls.Add(this.xml_groupBox13_gb);
-            this.tabPage6.Controls.Add(this.label34);
-            this.tabPage6.Controls.Add(this.label39);
-            this.tabPage6.Controls.Add(this.label40);
-            this.tabPage6.Controls.Add(this.xml_hearotAchrayut);
-            this.tabPage6.Controls.Add(this.label41);
-            this.tabPage6.Controls.Add(this.xml_hearotAtzmaut);
-            this.tabPage6.Controls.Add(this.label42);
-            this.tabPage6.Controls.Add(this.xml_hearotYozma);
-            this.tabPage6.Controls.Add(this.label43);
-            this.tabPage6.Controls.Add(this.label44);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(948, 334);
-            this.tabPage6.TabIndex = 3;
-            this.tabPage6.Text = "פרו אקטיביות ואסרטיביות ";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox18);
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox17);
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox16);
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox15);
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox14);
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox13);
+            this.activte_assertive_tab.Controls.Add(this.label34);
+            this.activte_assertive_tab.Controls.Add(this.label39);
+            this.activte_assertive_tab.Controls.Add(this.label40);
+            this.activte_assertive_tab.Controls.Add(this.xml_comments_Achrayut_tb);
+            this.activte_assertive_tab.Controls.Add(this.label41);
+            this.activte_assertive_tab.Controls.Add(this.xml_comments_Atzmaut_tb);
+            this.activte_assertive_tab.Controls.Add(this.label42);
+            this.activte_assertive_tab.Controls.Add(this.xml_comments_Yozma_tb);
+            this.activte_assertive_tab.Controls.Add(this.label43);
+            this.activte_assertive_tab.Controls.Add(this.label44);
+            this.activte_assertive_tab.Location = new System.Drawing.Point(4, 22);
+            this.activte_assertive_tab.Name = "activte_assertive_tab";
+            this.activte_assertive_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.activte_assertive_tab.Size = new System.Drawing.Size(948, 334);
+            this.activte_assertive_tab.TabIndex = 3;
+            this.activte_assertive_tab.Text = "פרו אקטיביות ואסרטיביות ";
+            this.activte_assertive_tab.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox18_gb
+            // xmlgr_groupBox18
             // 
-            this.xml_groupBox18_gb.Controls.Add(this.radioButton86);
-            this.xml_groupBox18_gb.Controls.Add(this.radioButton87);
-            this.xml_groupBox18_gb.Controls.Add(this.radioButton88);
-            this.xml_groupBox18_gb.Controls.Add(this.radioButton89);
-            this.xml_groupBox18_gb.Controls.Add(this.radioButton90);
-            this.xml_groupBox18_gb.Location = new System.Drawing.Point(251, 234);
-            this.xml_groupBox18_gb.Name = "xml_groupBox18_gb";
-            this.xml_groupBox18_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox18_gb.TabIndex = 76;
-            this.xml_groupBox18_gb.TabStop = false;
+            this.xmlgr_groupBox18.Controls.Add(this.radioButton86);
+            this.xmlgr_groupBox18.Controls.Add(this.radioButton87);
+            this.xmlgr_groupBox18.Controls.Add(this.radioButton88);
+            this.xmlgr_groupBox18.Controls.Add(this.radioButton89);
+            this.xmlgr_groupBox18.Controls.Add(this.radioButton90);
+            this.xmlgr_groupBox18.Location = new System.Drawing.Point(251, 234);
+            this.xmlgr_groupBox18.Name = "xmlgr_groupBox18";
+            this.xmlgr_groupBox18.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox18.TabIndex = 76;
+            this.xmlgr_groupBox18.TabStop = false;
             // 
             // radioButton86
             // 
@@ -2521,18 +2520,18 @@
             this.radioButton90.Text = "2";
             this.radioButton90.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox17_gb
+            // xmlgr_groupBox17
             // 
-            this.xml_groupBox17_gb.Controls.Add(this.radioButton81);
-            this.xml_groupBox17_gb.Controls.Add(this.radioButton82);
-            this.xml_groupBox17_gb.Controls.Add(this.radioButton83);
-            this.xml_groupBox17_gb.Controls.Add(this.radioButton84);
-            this.xml_groupBox17_gb.Controls.Add(this.radioButton85);
-            this.xml_groupBox17_gb.Location = new System.Drawing.Point(251, 186);
-            this.xml_groupBox17_gb.Name = "xml_groupBox17_gb";
-            this.xml_groupBox17_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox17_gb.TabIndex = 77;
-            this.xml_groupBox17_gb.TabStop = false;
+            this.xmlgr_groupBox17.Controls.Add(this.radioButton81);
+            this.xmlgr_groupBox17.Controls.Add(this.radioButton82);
+            this.xmlgr_groupBox17.Controls.Add(this.radioButton83);
+            this.xmlgr_groupBox17.Controls.Add(this.radioButton84);
+            this.xmlgr_groupBox17.Controls.Add(this.radioButton85);
+            this.xmlgr_groupBox17.Location = new System.Drawing.Point(251, 186);
+            this.xmlgr_groupBox17.Name = "xmlgr_groupBox17";
+            this.xmlgr_groupBox17.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox17.TabIndex = 77;
+            this.xmlgr_groupBox17.TabStop = false;
             // 
             // radioButton81
             // 
@@ -2589,18 +2588,18 @@
             this.radioButton85.Text = "2";
             this.radioButton85.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox16_gb
+            // xmlgr_groupBox16
             // 
-            this.xml_groupBox16_gb.Controls.Add(this.radioButton76);
-            this.xml_groupBox16_gb.Controls.Add(this.radioButton77);
-            this.xml_groupBox16_gb.Controls.Add(this.radioButton78);
-            this.xml_groupBox16_gb.Controls.Add(this.radioButton79);
-            this.xml_groupBox16_gb.Controls.Add(this.radioButton80);
-            this.xml_groupBox16_gb.Location = new System.Drawing.Point(251, 136);
-            this.xml_groupBox16_gb.Name = "xml_groupBox16_gb";
-            this.xml_groupBox16_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox16_gb.TabIndex = 78;
-            this.xml_groupBox16_gb.TabStop = false;
+            this.xmlgr_groupBox16.Controls.Add(this.radioButton76);
+            this.xmlgr_groupBox16.Controls.Add(this.radioButton77);
+            this.xmlgr_groupBox16.Controls.Add(this.radioButton78);
+            this.xmlgr_groupBox16.Controls.Add(this.radioButton79);
+            this.xmlgr_groupBox16.Controls.Add(this.radioButton80);
+            this.xmlgr_groupBox16.Location = new System.Drawing.Point(251, 136);
+            this.xmlgr_groupBox16.Name = "xmlgr_groupBox16";
+            this.xmlgr_groupBox16.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox16.TabIndex = 78;
+            this.xmlgr_groupBox16.TabStop = false;
             // 
             // radioButton76
             // 
@@ -2657,18 +2656,18 @@
             this.radioButton80.Text = "2";
             this.radioButton80.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox15_gb
+            // xmlgr_groupBox15
             // 
-            this.xml_groupBox15_gb.Controls.Add(this.radioButton71);
-            this.xml_groupBox15_gb.Controls.Add(this.radioButton72);
-            this.xml_groupBox15_gb.Controls.Add(this.radioButton73);
-            this.xml_groupBox15_gb.Controls.Add(this.radioButton74);
-            this.xml_groupBox15_gb.Controls.Add(this.radioButton75);
-            this.xml_groupBox15_gb.Location = new System.Drawing.Point(513, 234);
-            this.xml_groupBox15_gb.Name = "xml_groupBox15_gb";
-            this.xml_groupBox15_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox15_gb.TabIndex = 79;
-            this.xml_groupBox15_gb.TabStop = false;
+            this.xmlgr_groupBox15.Controls.Add(this.radioButton71);
+            this.xmlgr_groupBox15.Controls.Add(this.radioButton72);
+            this.xmlgr_groupBox15.Controls.Add(this.radioButton73);
+            this.xmlgr_groupBox15.Controls.Add(this.radioButton74);
+            this.xmlgr_groupBox15.Controls.Add(this.radioButton75);
+            this.xmlgr_groupBox15.Location = new System.Drawing.Point(513, 234);
+            this.xmlgr_groupBox15.Name = "xmlgr_groupBox15";
+            this.xmlgr_groupBox15.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox15.TabIndex = 79;
+            this.xmlgr_groupBox15.TabStop = false;
             // 
             // radioButton71
             // 
@@ -2725,18 +2724,18 @@
             this.radioButton75.Text = "2";
             this.radioButton75.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox14_gb
+            // xmlgr_groupBox14
             // 
-            this.xml_groupBox14_gb.Controls.Add(this.radioButton66);
-            this.xml_groupBox14_gb.Controls.Add(this.radioButton67);
-            this.xml_groupBox14_gb.Controls.Add(this.radioButton68);
-            this.xml_groupBox14_gb.Controls.Add(this.radioButton69);
-            this.xml_groupBox14_gb.Controls.Add(this.radioButton70);
-            this.xml_groupBox14_gb.Location = new System.Drawing.Point(513, 186);
-            this.xml_groupBox14_gb.Name = "xml_groupBox14_gb";
-            this.xml_groupBox14_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox14_gb.TabIndex = 80;
-            this.xml_groupBox14_gb.TabStop = false;
+            this.xmlgr_groupBox14.Controls.Add(this.radioButton66);
+            this.xmlgr_groupBox14.Controls.Add(this.radioButton67);
+            this.xmlgr_groupBox14.Controls.Add(this.radioButton68);
+            this.xmlgr_groupBox14.Controls.Add(this.radioButton69);
+            this.xmlgr_groupBox14.Controls.Add(this.radioButton70);
+            this.xmlgr_groupBox14.Location = new System.Drawing.Point(513, 186);
+            this.xmlgr_groupBox14.Name = "xmlgr_groupBox14";
+            this.xmlgr_groupBox14.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox14.TabIndex = 80;
+            this.xmlgr_groupBox14.TabStop = false;
             // 
             // radioButton66
             // 
@@ -2793,18 +2792,18 @@
             this.radioButton70.Text = "2";
             this.radioButton70.UseVisualStyleBackColor = true;
             // 
-            // xml_groupBox13_gb
+            // xmlgr_groupBox13
             // 
-            this.xml_groupBox13_gb.Controls.Add(this.radioButton61);
-            this.xml_groupBox13_gb.Controls.Add(this.radioButton62);
-            this.xml_groupBox13_gb.Controls.Add(this.radioButton63);
-            this.xml_groupBox13_gb.Controls.Add(this.radioButton64);
-            this.xml_groupBox13_gb.Controls.Add(this.radioButton65);
-            this.xml_groupBox13_gb.Location = new System.Drawing.Point(513, 136);
-            this.xml_groupBox13_gb.Name = "xml_groupBox13_gb";
-            this.xml_groupBox13_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox13_gb.TabIndex = 81;
-            this.xml_groupBox13_gb.TabStop = false;
+            this.xmlgr_groupBox13.Controls.Add(this.radioButton61);
+            this.xmlgr_groupBox13.Controls.Add(this.radioButton62);
+            this.xmlgr_groupBox13.Controls.Add(this.radioButton63);
+            this.xmlgr_groupBox13.Controls.Add(this.radioButton64);
+            this.xmlgr_groupBox13.Controls.Add(this.radioButton65);
+            this.xmlgr_groupBox13.Location = new System.Drawing.Point(513, 136);
+            this.xmlgr_groupBox13.Name = "xmlgr_groupBox13";
+            this.xmlgr_groupBox13.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox13.TabIndex = 81;
+            this.xmlgr_groupBox13.TabStop = false;
             // 
             // radioButton61
             // 
@@ -2891,12 +2890,12 @@
             this.label40.TabIndex = 55;
             this.label40.Text = "הערכת העובד";
             // 
-            // xml_hearotAchrayut
+            // xml_comments_Achrayut_tb
             // 
-            this.xml_hearotAchrayut.Location = new System.Drawing.Point(29, 241);
-            this.xml_hearotAchrayut.Name = "xml_hearotAchrayut";
-            this.xml_hearotAchrayut.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotAchrayut.TabIndex = 53;
+            this.xml_comments_Achrayut_tb.Location = new System.Drawing.Point(29, 241);
+            this.xml_comments_Achrayut_tb.Name = "xml_comments_Achrayut_tb";
+            this.xml_comments_Achrayut_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Achrayut_tb.TabIndex = 53;
             // 
             // label41
             // 
@@ -2907,12 +2906,12 @@
             this.label41.TabIndex = 49;
             this.label41.Text = "גילוי אחריות כלפי העבודה ";
             // 
-            // xml_hearotAtzmaut
+            // xml_comments_Atzmaut_tb
             // 
-            this.xml_hearotAtzmaut.Location = new System.Drawing.Point(29, 193);
-            this.xml_hearotAtzmaut.Name = "xml_hearotAtzmaut";
-            this.xml_hearotAtzmaut.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotAtzmaut.TabIndex = 54;
+            this.xml_comments_Atzmaut_tb.Location = new System.Drawing.Point(29, 193);
+            this.xml_comments_Atzmaut_tb.Name = "xml_comments_Atzmaut_tb";
+            this.xml_comments_Atzmaut_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Atzmaut_tb.TabIndex = 54;
             // 
             // label42
             // 
@@ -2923,12 +2922,12 @@
             this.label42.TabIndex = 50;
             this.label42.Text = "יכולת לעצמאות בעבודה";
             // 
-            // xml_hearotYozma
+            // xml_comments_Yozma_tb
             // 
-            this.xml_hearotYozma.Location = new System.Drawing.Point(29, 143);
-            this.xml_hearotYozma.Name = "xml_hearotYozma";
-            this.xml_hearotYozma.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotYozma.TabIndex = 52;
+            this.xml_comments_Yozma_tb.Location = new System.Drawing.Point(29, 143);
+            this.xml_comments_Yozma_tb.Name = "xml_comments_Yozma_tb";
+            this.xml_comments_Yozma_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Yozma_tb.TabIndex = 52;
             // 
             // label43
             // 
@@ -2950,45 +2949,45 @@
             this.label44.Text = "תמונת מצב – הערכת העובד את עצמו     דירוג: 1 - זקוק לשיפור /  2 - סביר /  3 - טוב" +
     " /  4 – טוב מאוד / 5 – מצוין";
             // 
-            // tabPage7
+            // satisfactory_tab
             // 
-            this.tabPage7.Controls.Add(this.xml_groupBox6_gb);
-            this.tabPage7.Controls.Add(this.xml_groupBox4_gb);
-            this.tabPage7.Controls.Add(this.xml_groupBox2_gb);
-            this.tabPage7.Controls.Add(this.xml_groupBox5_gb);
-            this.tabPage7.Controls.Add(this.xml_groupBox3_gb);
-            this.tabPage7.Controls.Add(this.xml_groupBox1_gb);
-            this.tabPage7.Controls.Add(this.label45);
-            this.tabPage7.Controls.Add(this.label46);
-            this.tabPage7.Controls.Add(this.label47);
-            this.tabPage7.Controls.Add(this.xml_hearotHitkadmut);
-            this.tabPage7.Controls.Add(this.label48);
-            this.tabPage7.Controls.Add(this.xml_hearotInyan);
-            this.tabPage7.Controls.Add(this.label49);
-            this.tabPage7.Controls.Add(this.xml_hearotSachar);
-            this.tabPage7.Controls.Add(this.label50);
-            this.tabPage7.Controls.Add(this.label51);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(948, 334);
-            this.tabPage7.TabIndex = 4;
-            this.tabPage7.Text = "שביעות רצון כללית מהעבודה";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            this.tabPage7.Click += new System.EventHandler(this.tabPage7_Click);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox6);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox4);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox2);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox5);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox3);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox1);
+            this.satisfactory_tab.Controls.Add(this.label45);
+            this.satisfactory_tab.Controls.Add(this.label46);
+            this.satisfactory_tab.Controls.Add(this.label47);
+            this.satisfactory_tab.Controls.Add(this.xml_comments_progress_tb);
+            this.satisfactory_tab.Controls.Add(this.label48);
+            this.satisfactory_tab.Controls.Add(this.xml_comments_value_tb);
+            this.satisfactory_tab.Controls.Add(this.label49);
+            this.satisfactory_tab.Controls.Add(this.xml_fee_comments_tb);
+            this.satisfactory_tab.Controls.Add(this.label50);
+            this.satisfactory_tab.Controls.Add(this.label51);
+            this.satisfactory_tab.Location = new System.Drawing.Point(4, 22);
+            this.satisfactory_tab.Name = "satisfactory_tab";
+            this.satisfactory_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.satisfactory_tab.Size = new System.Drawing.Size(948, 334);
+            this.satisfactory_tab.TabIndex = 4;
+            this.satisfactory_tab.Text = "שביעות רצון כללית מהעבודה";
+            this.satisfactory_tab.UseVisualStyleBackColor = true;
+            this.satisfactory_tab.Click += new System.EventHandler(this.tabPage7_Click);
             // 
-            // xml_groupBox6_gb
+            // xmlgr_groupBox6
             // 
-            this.xml_groupBox6_gb.Controls.Add(this.radioButton26);
-            this.xml_groupBox6_gb.Controls.Add(this.radioButton27);
-            this.xml_groupBox6_gb.Controls.Add(this.radioButton28);
-            this.xml_groupBox6_gb.Controls.Add(this.radioButton29);
-            this.xml_groupBox6_gb.Controls.Add(this.radioButton30);
-            this.xml_groupBox6_gb.Location = new System.Drawing.Point(258, 225);
-            this.xml_groupBox6_gb.Name = "xml_groupBox6_gb";
-            this.xml_groupBox6_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox6_gb.TabIndex = 75;
-            this.xml_groupBox6_gb.TabStop = false;
+            this.xmlgr_groupBox6.Controls.Add(this.radioButton26);
+            this.xmlgr_groupBox6.Controls.Add(this.radioButton27);
+            this.xmlgr_groupBox6.Controls.Add(this.radioButton28);
+            this.xmlgr_groupBox6.Controls.Add(this.radioButton29);
+            this.xmlgr_groupBox6.Controls.Add(this.radioButton30);
+            this.xmlgr_groupBox6.Location = new System.Drawing.Point(258, 225);
+            this.xmlgr_groupBox6.Name = "xmlgr_groupBox6";
+            this.xmlgr_groupBox6.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox6.TabIndex = 75;
+            this.xmlgr_groupBox6.TabStop = false;
             // 
             // radioButton26
             // 
@@ -3050,18 +3049,18 @@
             this.radioButton30.UseVisualStyleBackColor = true;
             this.radioButton30.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // xml_groupBox4_gb
+            // xmlgr_groupBox4
             // 
-            this.xml_groupBox4_gb.Controls.Add(this.radioButton16);
-            this.xml_groupBox4_gb.Controls.Add(this.radioButton17);
-            this.xml_groupBox4_gb.Controls.Add(this.radioButton18);
-            this.xml_groupBox4_gb.Controls.Add(this.radioButton19);
-            this.xml_groupBox4_gb.Controls.Add(this.radioButton20);
-            this.xml_groupBox4_gb.Location = new System.Drawing.Point(258, 177);
-            this.xml_groupBox4_gb.Name = "xml_groupBox4_gb";
-            this.xml_groupBox4_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox4_gb.TabIndex = 75;
-            this.xml_groupBox4_gb.TabStop = false;
+            this.xmlgr_groupBox4.Controls.Add(this.radioButton16);
+            this.xmlgr_groupBox4.Controls.Add(this.radioButton17);
+            this.xmlgr_groupBox4.Controls.Add(this.radioButton18);
+            this.xmlgr_groupBox4.Controls.Add(this.radioButton19);
+            this.xmlgr_groupBox4.Controls.Add(this.radioButton20);
+            this.xmlgr_groupBox4.Location = new System.Drawing.Point(258, 177);
+            this.xmlgr_groupBox4.Name = "xmlgr_groupBox4";
+            this.xmlgr_groupBox4.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox4.TabIndex = 75;
+            this.xmlgr_groupBox4.TabStop = false;
             // 
             // radioButton16
             // 
@@ -3123,18 +3122,18 @@
             this.radioButton20.UseVisualStyleBackColor = true;
             this.radioButton20.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // xml_groupBox2_gb
+            // xmlgr_groupBox2
             // 
-            this.xml_groupBox2_gb.Controls.Add(this.radioButton6);
-            this.xml_groupBox2_gb.Controls.Add(this.radioButton7);
-            this.xml_groupBox2_gb.Controls.Add(this.radioButton8);
-            this.xml_groupBox2_gb.Controls.Add(this.radioButton9);
-            this.xml_groupBox2_gb.Controls.Add(this.radioButton10);
-            this.xml_groupBox2_gb.Location = new System.Drawing.Point(258, 127);
-            this.xml_groupBox2_gb.Name = "xml_groupBox2_gb";
-            this.xml_groupBox2_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox2_gb.TabIndex = 75;
-            this.xml_groupBox2_gb.TabStop = false;
+            this.xmlgr_groupBox2.Controls.Add(this.radioButton6);
+            this.xmlgr_groupBox2.Controls.Add(this.radioButton7);
+            this.xmlgr_groupBox2.Controls.Add(this.radioButton8);
+            this.xmlgr_groupBox2.Controls.Add(this.radioButton9);
+            this.xmlgr_groupBox2.Controls.Add(this.radioButton10);
+            this.xmlgr_groupBox2.Location = new System.Drawing.Point(258, 127);
+            this.xmlgr_groupBox2.Name = "xmlgr_groupBox2";
+            this.xmlgr_groupBox2.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox2.TabIndex = 75;
+            this.xmlgr_groupBox2.TabStop = false;
             // 
             // radioButton6
             // 
@@ -3196,18 +3195,18 @@
             this.radioButton10.UseVisualStyleBackColor = true;
             this.radioButton10.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // xml_groupBox5_gb
+            // xmlgr_groupBox5
             // 
-            this.xml_groupBox5_gb.Controls.Add(this.radioButton21);
-            this.xml_groupBox5_gb.Controls.Add(this.radioButton22);
-            this.xml_groupBox5_gb.Controls.Add(this.radioButton23);
-            this.xml_groupBox5_gb.Controls.Add(this.radioButton24);
-            this.xml_groupBox5_gb.Controls.Add(this.radioButton25);
-            this.xml_groupBox5_gb.Location = new System.Drawing.Point(520, 225);
-            this.xml_groupBox5_gb.Name = "xml_groupBox5_gb";
-            this.xml_groupBox5_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox5_gb.TabIndex = 75;
-            this.xml_groupBox5_gb.TabStop = false;
+            this.xmlgr_groupBox5.Controls.Add(this.radioButton21);
+            this.xmlgr_groupBox5.Controls.Add(this.radioButton22);
+            this.xmlgr_groupBox5.Controls.Add(this.radioButton23);
+            this.xmlgr_groupBox5.Controls.Add(this.radioButton24);
+            this.xmlgr_groupBox5.Controls.Add(this.radioButton25);
+            this.xmlgr_groupBox5.Location = new System.Drawing.Point(520, 225);
+            this.xmlgr_groupBox5.Name = "xmlgr_groupBox5";
+            this.xmlgr_groupBox5.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox5.TabIndex = 75;
+            this.xmlgr_groupBox5.TabStop = false;
             // 
             // radioButton21
             // 
@@ -3269,18 +3268,18 @@
             this.radioButton25.UseVisualStyleBackColor = true;
             this.radioButton25.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // xml_groupBox3_gb
+            // xmlgr_groupBox3
             // 
-            this.xml_groupBox3_gb.Controls.Add(this.radioButton11);
-            this.xml_groupBox3_gb.Controls.Add(this.radioButton12);
-            this.xml_groupBox3_gb.Controls.Add(this.radioButton13);
-            this.xml_groupBox3_gb.Controls.Add(this.radioButton14);
-            this.xml_groupBox3_gb.Controls.Add(this.radioButton15);
-            this.xml_groupBox3_gb.Location = new System.Drawing.Point(520, 177);
-            this.xml_groupBox3_gb.Name = "xml_groupBox3_gb";
-            this.xml_groupBox3_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox3_gb.TabIndex = 75;
-            this.xml_groupBox3_gb.TabStop = false;
+            this.xmlgr_groupBox3.Controls.Add(this.radioButton11);
+            this.xmlgr_groupBox3.Controls.Add(this.radioButton12);
+            this.xmlgr_groupBox3.Controls.Add(this.radioButton13);
+            this.xmlgr_groupBox3.Controls.Add(this.radioButton14);
+            this.xmlgr_groupBox3.Controls.Add(this.radioButton15);
+            this.xmlgr_groupBox3.Location = new System.Drawing.Point(520, 177);
+            this.xmlgr_groupBox3.Name = "xmlgr_groupBox3";
+            this.xmlgr_groupBox3.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox3.TabIndex = 75;
+            this.xmlgr_groupBox3.TabStop = false;
             // 
             // radioButton11
             // 
@@ -3342,19 +3341,19 @@
             this.radioButton15.UseVisualStyleBackColor = true;
             this.radioButton15.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // xml_groupBox1_gb
+            // xmlgr_groupBox1
             // 
-            this.xml_groupBox1_gb.Controls.Add(this.radioButton2);
-            this.xml_groupBox1_gb.Controls.Add(this.radioButton5);
-            this.xml_groupBox1_gb.Controls.Add(this.radioButton4);
-            this.xml_groupBox1_gb.Controls.Add(this.radioButton3);
-            this.xml_groupBox1_gb.Controls.Add(this.radioButton1);
-            this.xml_groupBox1_gb.Location = new System.Drawing.Point(520, 127);
-            this.xml_groupBox1_gb.Name = "xml_groupBox1_gb";
-            this.xml_groupBox1_gb.Size = new System.Drawing.Size(210, 36);
-            this.xml_groupBox1_gb.TabIndex = 75;
-            this.xml_groupBox1_gb.TabStop = false;
-            this.xml_groupBox1_gb.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.xmlgr_groupBox1.Controls.Add(this.radioButton2);
+            this.xmlgr_groupBox1.Controls.Add(this.radioButton5);
+            this.xmlgr_groupBox1.Controls.Add(this.radioButton4);
+            this.xmlgr_groupBox1.Controls.Add(this.radioButton3);
+            this.xmlgr_groupBox1.Controls.Add(this.radioButton1);
+            this.xmlgr_groupBox1.Location = new System.Drawing.Point(520, 127);
+            this.xmlgr_groupBox1.Name = "xmlgr_groupBox1";
+            this.xmlgr_groupBox1.Size = new System.Drawing.Size(210, 36);
+            this.xmlgr_groupBox1.TabIndex = 75;
+            this.xmlgr_groupBox1.TabStop = false;
+            this.xmlgr_groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButton2
             // 
@@ -3446,12 +3445,12 @@
             this.label47.TabIndex = 71;
             this.label47.Text = "הערכת העובד";
             // 
-            // xml_hearotHitkadmut
+            // xml_comments_progress_tb
             // 
-            this.xml_hearotHitkadmut.Location = new System.Drawing.Point(23, 241);
-            this.xml_hearotHitkadmut.Name = "xml_hearotHitkadmut";
-            this.xml_hearotHitkadmut.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotHitkadmut.TabIndex = 69;
+            this.xml_comments_progress_tb.Location = new System.Drawing.Point(23, 241);
+            this.xml_comments_progress_tb.Name = "xml_comments_progress_tb";
+            this.xml_comments_progress_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_progress_tb.TabIndex = 69;
             // 
             // label48
             // 
@@ -3462,12 +3461,12 @@
             this.label48.TabIndex = 65;
             this.label48.Text = "ההתקדמות שלי בתפקיד ";
             // 
-            // xml_hearotInyan
+            // xml_comments_value_tb
             // 
-            this.xml_hearotInyan.Location = new System.Drawing.Point(23, 193);
-            this.xml_hearotInyan.Name = "xml_hearotInyan";
-            this.xml_hearotInyan.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotInyan.TabIndex = 70;
+            this.xml_comments_value_tb.Location = new System.Drawing.Point(23, 193);
+            this.xml_comments_value_tb.Name = "xml_comments_value_tb";
+            this.xml_comments_value_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_value_tb.TabIndex = 70;
             // 
             // label49
             // 
@@ -3478,12 +3477,12 @@
             this.label49.TabIndex = 66;
             this.label49.Text = "העניין שיש לי בעבודה ובתפקיד ";
             // 
-            // xml_hearotSachar
+            // xml_fee_comments_tb
             // 
-            this.xml_hearotSachar.Location = new System.Drawing.Point(23, 143);
-            this.xml_hearotSachar.Name = "xml_hearotSachar";
-            this.xml_hearotSachar.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotSachar.TabIndex = 68;
+            this.xml_fee_comments_tb.Location = new System.Drawing.Point(23, 143);
+            this.xml_fee_comments_tb.Name = "xml_fee_comments_tb";
+            this.xml_fee_comments_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_fee_comments_tb.TabIndex = 68;
             // 
             // label50
             // 
@@ -3505,32 +3504,32 @@
             this.label51.Text = "תמונת מצב – הערכת העובד את עצמו     דירוג: 1 - זקוק לשיפור /  2 - סביר /  3 - טוב" +
     " /  4 – טוב מאוד / 5 – מצוין";
             // 
-            // tabPage8
+            // rehab_tab
             // 
-            this.tabPage8.Controls.Add(this.xmlg_dataGridView1);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(962, 366);
-            this.tabPage8.TabIndex = 2;
-            this.tabPage8.Text = "תכנית שיקום";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.rehab_tab.Controls.Add(this.xml_rehab_dgv);
+            this.rehab_tab.Location = new System.Drawing.Point(4, 22);
+            this.rehab_tab.Name = "rehab_tab";
+            this.rehab_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.rehab_tab.Size = new System.Drawing.Size(962, 366);
+            this.rehab_tab.TabIndex = 2;
+            this.rehab_tab.Text = "תכנית שיקום";
+            this.rehab_tab.UseVisualStyleBackColor = true;
             // 
-            // xmlg_dataGridView1
+            // xml_rehab_dgv
             // 
-            this.xmlg_dataGridView1.AllowUserToAddRows = false;
-            this.xmlg_dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.xmlg_dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.xml_rehab_dgv.AllowUserToAddRows = false;
+            this.xml_rehab_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.xml_rehab_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.number_col,
             this.yaad_col,
             this.bitzua_col,
             this.criterion_col,
             this.date_col});
-            this.xmlg_dataGridView1.Location = new System.Drawing.Point(63, 3);
-            this.xmlg_dataGridView1.Name = "xmlg_dataGridView1";
-            this.xmlg_dataGridView1.Size = new System.Drawing.Size(846, 354);
-            this.xmlg_dataGridView1.TabIndex = 0;
-            this.xmlg_dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.xml_rehab_dgv.Location = new System.Drawing.Point(63, 3);
+            this.xml_rehab_dgv.Name = "xml_rehab_dgv";
+            this.xml_rehab_dgv.Size = new System.Drawing.Size(846, 354);
+            this.xml_rehab_dgv.TabIndex = 0;
+            this.xml_rehab_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // number_col
             // 
@@ -3562,47 +3561,47 @@
             this.date_col.Name = "date_col";
             this.date_col.Width = 200;
             // 
-            // tabPage9
+            // resources_tab
             // 
-            this.tabPage9.Controls.Add(this.xml_kshayim);
-            this.tabPage9.Controls.Add(this.xml_mekorotTmicha);
-            this.tabPage9.Controls.Add(this.xml_nekudotHozek);
-            this.tabPage9.Controls.Add(this.label54);
-            this.tabPage9.Controls.Add(this.label53);
-            this.tabPage9.Controls.Add(this.label52);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(962, 366);
-            this.tabPage9.TabIndex = 3;
-            this.tabPage9.Text = "משאבים להשגת יעדים";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.resources_tab.Controls.Add(this.xml_kshayim_tb);
+            this.resources_tab.Controls.Add(this.xml_mekorotTmicha_tb);
+            this.resources_tab.Controls.Add(this.xml_strengths_tb);
+            this.resources_tab.Controls.Add(this.label54);
+            this.resources_tab.Controls.Add(this.label53);
+            this.resources_tab.Controls.Add(this.label52);
+            this.resources_tab.Location = new System.Drawing.Point(4, 22);
+            this.resources_tab.Name = "resources_tab";
+            this.resources_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.resources_tab.Size = new System.Drawing.Size(962, 366);
+            this.resources_tab.TabIndex = 3;
+            this.resources_tab.Text = "משאבים להשגת יעדים";
+            this.resources_tab.UseVisualStyleBackColor = true;
             // 
-            // xml_kshayim
+            // xml_kshayim_tb
             // 
-            this.xml_kshayim.Location = new System.Drawing.Point(300, 279);
-            this.xml_kshayim.Multiline = true;
-            this.xml_kshayim.Name = "xml_kshayim";
-            this.xml_kshayim.Size = new System.Drawing.Size(636, 66);
-            this.xml_kshayim.TabIndex = 1;
-            this.xml_kshayim.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
+            this.xml_kshayim_tb.Location = new System.Drawing.Point(300, 279);
+            this.xml_kshayim_tb.Multiline = true;
+            this.xml_kshayim_tb.Name = "xml_kshayim_tb";
+            this.xml_kshayim_tb.Size = new System.Drawing.Size(636, 66);
+            this.xml_kshayim_tb.TabIndex = 1;
+            this.xml_kshayim_tb.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
             // 
-            // xml_mekorotTmicha
+            // xml_mekorotTmicha_tb
             // 
-            this.xml_mekorotTmicha.Location = new System.Drawing.Point(300, 168);
-            this.xml_mekorotTmicha.Multiline = true;
-            this.xml_mekorotTmicha.Name = "xml_mekorotTmicha";
-            this.xml_mekorotTmicha.Size = new System.Drawing.Size(636, 66);
-            this.xml_mekorotTmicha.TabIndex = 1;
-            this.xml_mekorotTmicha.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
+            this.xml_mekorotTmicha_tb.Location = new System.Drawing.Point(300, 168);
+            this.xml_mekorotTmicha_tb.Multiline = true;
+            this.xml_mekorotTmicha_tb.Name = "xml_mekorotTmicha_tb";
+            this.xml_mekorotTmicha_tb.Size = new System.Drawing.Size(636, 66);
+            this.xml_mekorotTmicha_tb.TabIndex = 1;
+            this.xml_mekorotTmicha_tb.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
             // 
-            // xml_nekudotHozek
+            // xml_strengths_tb
             // 
-            this.xml_nekudotHozek.Location = new System.Drawing.Point(300, 50);
-            this.xml_nekudotHozek.Multiline = true;
-            this.xml_nekudotHozek.Name = "xml_nekudotHozek";
-            this.xml_nekudotHozek.Size = new System.Drawing.Size(636, 66);
-            this.xml_nekudotHozek.TabIndex = 1;
+            this.xml_strengths_tb.Location = new System.Drawing.Point(300, 50);
+            this.xml_strengths_tb.Multiline = true;
+            this.xml_strengths_tb.Name = "xml_strengths_tb";
+            this.xml_strengths_tb.Size = new System.Drawing.Size(636, 66);
+            this.xml_strengths_tb.TabIndex = 1;
             // 
             // label54
             // 
@@ -3680,115 +3679,115 @@
             this.Controls.Add(this.test_upload);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.quit_page);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.personal_plan_tc);
             this.Name = "PersonalPlan";
             this.Text = "PersonalPlan";
             this.Load += new System.EventHandler(this.PersonalPlan_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.xml_groupBox32_gb.ResumeLayout(false);
-            this.xml_groupBox32_gb.PerformLayout();
-            this.xml_groupBox25_gb.ResumeLayout(false);
-            this.xml_groupBox25_gb.PerformLayout();
-            this.xml_groupBox26_gb.ResumeLayout(false);
-            this.xml_groupBox26_gb.PerformLayout();
-            this.xml_groupBox31_gb.ResumeLayout(false);
-            this.xml_groupBox31_gb.PerformLayout();
-            this.xml_groupBox27_gb.ResumeLayout(false);
-            this.xml_groupBox27_gb.PerformLayout();
-            this.xml_groupBox28_gb.ResumeLayout(false);
-            this.xml_groupBox28_gb.PerformLayout();
-            this.xml_groupBox29_gb.ResumeLayout(false);
-            this.xml_groupBox29_gb.PerformLayout();
-            this.xml_groupBox30_gb.ResumeLayout(false);
-            this.xml_groupBox30_gb.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.xml_groupBox19_gb.ResumeLayout(false);
-            this.xml_groupBox19_gb.PerformLayout();
-            this.xml_groupBox20_gb.ResumeLayout(false);
-            this.xml_groupBox20_gb.PerformLayout();
-            this.xml_groupBox21_gb.ResumeLayout(false);
-            this.xml_groupBox21_gb.PerformLayout();
-            this.xml_groupBox22_gb.ResumeLayout(false);
-            this.xml_groupBox22_gb.PerformLayout();
-            this.xml_groupBox23_gb.ResumeLayout(false);
-            this.xml_groupBox23_gb.PerformLayout();
-            this.xml_groupBox24_gb.ResumeLayout(false);
-            this.xml_groupBox24_gb.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            this.xml_groupBox7_gb.ResumeLayout(false);
-            this.xml_groupBox7_gb.PerformLayout();
-            this.xml_groupBox8_gb.ResumeLayout(false);
-            this.xml_groupBox8_gb.PerformLayout();
-            this.xml_groupBox9_gb.ResumeLayout(false);
-            this.xml_groupBox9_gb.PerformLayout();
-            this.xml_groupBox10_gb.ResumeLayout(false);
-            this.xml_groupBox10_gb.PerformLayout();
-            this.xml_groupBox11_gb.ResumeLayout(false);
-            this.xml_groupBox11_gb.PerformLayout();
-            this.xml_groupBox12_gb.ResumeLayout(false);
-            this.xml_groupBox12_gb.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
-            this.xml_groupBox18_gb.ResumeLayout(false);
-            this.xml_groupBox18_gb.PerformLayout();
-            this.xml_groupBox17_gb.ResumeLayout(false);
-            this.xml_groupBox17_gb.PerformLayout();
-            this.xml_groupBox16_gb.ResumeLayout(false);
-            this.xml_groupBox16_gb.PerformLayout();
-            this.xml_groupBox15_gb.ResumeLayout(false);
-            this.xml_groupBox15_gb.PerformLayout();
-            this.xml_groupBox14_gb.ResumeLayout(false);
-            this.xml_groupBox14_gb.PerformLayout();
-            this.xml_groupBox13_gb.ResumeLayout(false);
-            this.xml_groupBox13_gb.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
-            this.xml_groupBox6_gb.ResumeLayout(false);
-            this.xml_groupBox6_gb.PerformLayout();
-            this.xml_groupBox4_gb.ResumeLayout(false);
-            this.xml_groupBox4_gb.PerformLayout();
-            this.xml_groupBox2_gb.ResumeLayout(false);
-            this.xml_groupBox2_gb.PerformLayout();
-            this.xml_groupBox5_gb.ResumeLayout(false);
-            this.xml_groupBox5_gb.PerformLayout();
-            this.xml_groupBox3_gb.ResumeLayout(false);
-            this.xml_groupBox3_gb.PerformLayout();
-            this.xml_groupBox1_gb.ResumeLayout(false);
-            this.xml_groupBox1_gb.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xmlg_dataGridView1)).EndInit();
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage9.PerformLayout();
+            this.personal_plan_tc.ResumeLayout(false);
+            this.personal_tab.ResumeLayout(false);
+            this.personal_tab.PerformLayout();
+            this.mazav_tab.ResumeLayout(false);
+            this.mazav_tc.ResumeLayout(false);
+            this.job_functionality_tab.ResumeLayout(false);
+            this.job_functionality_tab.PerformLayout();
+            this.xmlgr_groupBox32.ResumeLayout(false);
+            this.xmlgr_groupBox32.PerformLayout();
+            this.xmlgr_groupBox25.ResumeLayout(false);
+            this.xmlgr_groupBox25.PerformLayout();
+            this.xmlgr_groupBox26.ResumeLayout(false);
+            this.xmlgr_groupBox26.PerformLayout();
+            this.xmlgr_groupBox31.ResumeLayout(false);
+            this.xmlgr_groupBox31.PerformLayout();
+            this.xmlgr_groupBox27.ResumeLayout(false);
+            this.xmlgr_groupBox27.PerformLayout();
+            this.xmlgr_groupBox28.ResumeLayout(false);
+            this.xmlgr_groupBox28.PerformLayout();
+            this.xmlgr_groupBox29.ResumeLayout(false);
+            this.xmlgr_groupBox29.PerformLayout();
+            this.xmlgr_groupBox30.ResumeLayout(false);
+            this.xmlgr_groupBox30.PerformLayout();
+            this.norms_tab.ResumeLayout(false);
+            this.norms_tab.PerformLayout();
+            this.xmlgr_groupBox19.ResumeLayout(false);
+            this.xmlgr_groupBox19.PerformLayout();
+            this.xmlgr_groupBox20.ResumeLayout(false);
+            this.xmlgr_groupBox20.PerformLayout();
+            this.xmlgr_groupBox21.ResumeLayout(false);
+            this.xmlgr_groupBox21.PerformLayout();
+            this.xmlgr_groupBox22.ResumeLayout(false);
+            this.xmlgr_groupBox22.PerformLayout();
+            this.xmlgr_groupBox23.ResumeLayout(false);
+            this.xmlgr_groupBox23.PerformLayout();
+            this.xmlgr_groupBox24.ResumeLayout(false);
+            this.xmlgr_groupBox24.PerformLayout();
+            this.social_skills_tab.ResumeLayout(false);
+            this.social_skills_tab.PerformLayout();
+            this.xmlgr_groupBox7.ResumeLayout(false);
+            this.xmlgr_groupBox7.PerformLayout();
+            this.xmlgr_groupBox8.ResumeLayout(false);
+            this.xmlgr_groupBox8.PerformLayout();
+            this.xmlgr_groupBox9.ResumeLayout(false);
+            this.xmlgr_groupBox9.PerformLayout();
+            this.xmlgr_groupBox10.ResumeLayout(false);
+            this.xmlgr_groupBox10.PerformLayout();
+            this.xmlgr_groupBox11.ResumeLayout(false);
+            this.xmlgr_groupBox11.PerformLayout();
+            this.xmlgr_groupBox12.ResumeLayout(false);
+            this.xmlgr_groupBox12.PerformLayout();
+            this.activte_assertive_tab.ResumeLayout(false);
+            this.activte_assertive_tab.PerformLayout();
+            this.xmlgr_groupBox18.ResumeLayout(false);
+            this.xmlgr_groupBox18.PerformLayout();
+            this.xmlgr_groupBox17.ResumeLayout(false);
+            this.xmlgr_groupBox17.PerformLayout();
+            this.xmlgr_groupBox16.ResumeLayout(false);
+            this.xmlgr_groupBox16.PerformLayout();
+            this.xmlgr_groupBox15.ResumeLayout(false);
+            this.xmlgr_groupBox15.PerformLayout();
+            this.xmlgr_groupBox14.ResumeLayout(false);
+            this.xmlgr_groupBox14.PerformLayout();
+            this.xmlgr_groupBox13.ResumeLayout(false);
+            this.xmlgr_groupBox13.PerformLayout();
+            this.satisfactory_tab.ResumeLayout(false);
+            this.satisfactory_tab.PerformLayout();
+            this.xmlgr_groupBox6.ResumeLayout(false);
+            this.xmlgr_groupBox6.PerformLayout();
+            this.xmlgr_groupBox4.ResumeLayout(false);
+            this.xmlgr_groupBox4.PerformLayout();
+            this.xmlgr_groupBox2.ResumeLayout(false);
+            this.xmlgr_groupBox2.PerformLayout();
+            this.xmlgr_groupBox5.ResumeLayout(false);
+            this.xmlgr_groupBox5.PerformLayout();
+            this.xmlgr_groupBox3.ResumeLayout(false);
+            this.xmlgr_groupBox3.PerformLayout();
+            this.xmlgr_groupBox1.ResumeLayout(false);
+            this.xmlgr_groupBox1.PerformLayout();
+            this.rehab_tab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xml_rehab_dgv)).EndInit();
+            this.resources_tab.ResumeLayout(false);
+            this.resources_tab.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl personal_plan_tc;
+        private System.Windows.Forms.TabPage personal_tab;
         private System.Windows.Forms.TextBox lastName_tb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage mazav_tab;
         private System.Windows.Forms.TextBox firstName_tb;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker xml_klita_dtp;
+        private System.Windows.Forms.Label klita_lb;
         private System.Windows.Forms.TextBox xml_hasamim;
         private System.Windows.Forms.TextBox xml_hatzlachot;
         private System.Windows.Forms.TextBox coord_tb;
-        private System.Windows.Forms.TextBox xml_sachar;
-        private System.Windows.Forms.TextBox xml_ktovet;
-        private System.Windows.Forms.TextBox xml_shemHaEsek;
-        private System.Windows.Forms.TextBox xml_sugHaavoda;
+        private System.Windows.Forms.TextBox xml_salary_tb;
+        private System.Windows.Forms.TextBox xml_ktovet_tb;
+        private System.Windows.Forms.TextBox xml_company_tb;
+        private System.Windows.Forms.TextBox xml_job_type_tb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
@@ -3804,278 +3803,278 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label ID_lb;
         private System.Windows.Forms.TextBox ID_tb;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabControl mazav_tc;
+        private System.Windows.Forms.TabPage job_functionality_tab;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox xml_hearotSeder;
+        private System.Windows.Forms.TextBox xml_comments_organization_tb;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox xml_hearotKatzev;
+        private System.Windows.Forms.TextBox xml_comments_rate_tb;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox xml_hearotEichut;
+        private System.Windows.Forms.TextBox xml_comments_job_quality_tb;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox xml_hearotHatmada;
+        private System.Windows.Forms.TextBox xml_comments_hatmada_tb;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage norms_tab;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox xml_hearotKlalim;
+        private System.Windows.Forms.TextBox xml_comments_Klalim_tb;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox xml_hearotHofaa;
+        private System.Windows.Forms.TextBox xml_comments_Hofaa_tb;
         private System.Windows.Forms.Label label29;
 
-        private System.Windows.Forms.TextBox xml_hearotZmanim;
+        private System.Windows.Forms.TextBox xml_comments_Zmanim_tb;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage social_skills_tab;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox xml_hearotSamchut;
+        private System.Windows.Forms.TextBox xml_comments_Samchut_tb;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox xml_hearotTzevet;
+        private System.Windows.Forms.TextBox xml_comments__Tzevet_tb;
         private System.Windows.Forms.Label label36;
 
-        private System.Windows.Forms.TextBox xml_hearotAmitim;
+        private System.Windows.Forms.TextBox xml_comments_Amitim_tb;
         
         private System.Windows.Forms.Label label37;
         
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage activte_assertive_tab;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox xml_hearotAchrayut;
+        private System.Windows.Forms.TextBox xml_comments_Achrayut_tb;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox xml_hearotAtzmaut;
+        private System.Windows.Forms.TextBox xml_comments_Atzmaut_tb;
         private System.Windows.Forms.Label label42;
 
-        private System.Windows.Forms.TextBox xml_hearotYozma;
+        private System.Windows.Forms.TextBox xml_comments_Yozma_tb;
 
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage satisfactory_tab;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox xml_hearotHitkadmut;
+        private System.Windows.Forms.TextBox xml_comments_progress_tb;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox xml_hearotInyan;
+        private System.Windows.Forms.TextBox xml_comments_value_tb;
         private System.Windows.Forms.Label label49;
 
-        private System.Windows.Forms.TextBox xml_hearotSachar;
+        private System.Windows.Forms.TextBox xml_fee_comments_tb;
 
         private System.Windows.Forms.Label label50;
 
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.DataGridView xmlg_dataGridView1;
+        private System.Windows.Forms.TabPage rehab_tab;
+        private System.Windows.Forms.DataGridView xml_rehab_dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn number_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn yaad_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn bitzua_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn criterion_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn date_col;
-        private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.TextBox xml_mekorotTmicha;
-        private System.Windows.Forms.TextBox xml_nekudotHozek;
+        private System.Windows.Forms.TabPage resources_tab;
+        private System.Windows.Forms.TextBox xml_mekorotTmicha_tb;
+        private System.Windows.Forms.TextBox xml_strengths_tb;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.TextBox xml_kshayim;
+        private System.Windows.Forms.TextBox xml_kshayim_tb;
         private System.Windows.Forms.Button quit_page;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button test_upload;
         private System.Windows.Forms.Button test_download;
-        private System.Windows.Forms.GroupBox xml_groupBox1_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.GroupBox xml_groupBox2_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox2;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.GroupBox xml_groupBox32_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox32;
         private System.Windows.Forms.RadioButton radioButton156;
         private System.Windows.Forms.RadioButton radioButton157;
         private System.Windows.Forms.RadioButton radioButton158;
         private System.Windows.Forms.RadioButton radioButton159;
         private System.Windows.Forms.RadioButton radioButton160;
-        private System.Windows.Forms.GroupBox xml_groupBox25_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox25;
         private System.Windows.Forms.RadioButton radioButton121;
         private System.Windows.Forms.RadioButton radioButton122;
         private System.Windows.Forms.RadioButton radioButton123;
         private System.Windows.Forms.RadioButton radioButton124;
         private System.Windows.Forms.RadioButton radioButton125;
-        private System.Windows.Forms.GroupBox xml_groupBox26_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox26;
         private System.Windows.Forms.RadioButton radioButton126;
         private System.Windows.Forms.RadioButton radioButton127;
         private System.Windows.Forms.RadioButton radioButton128;
         private System.Windows.Forms.RadioButton radioButton129;
         private System.Windows.Forms.RadioButton radioButton130;
-        private System.Windows.Forms.GroupBox xml_groupBox31_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox31;
         private System.Windows.Forms.RadioButton radioButton151;
         private System.Windows.Forms.RadioButton radioButton152;
         private System.Windows.Forms.RadioButton radioButton153;
         private System.Windows.Forms.RadioButton radioButton154;
         private System.Windows.Forms.RadioButton radioButton155;
-        private System.Windows.Forms.GroupBox xml_groupBox27_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox27;
         private System.Windows.Forms.RadioButton radioButton131;
         private System.Windows.Forms.RadioButton radioButton132;
         private System.Windows.Forms.RadioButton radioButton133;
         private System.Windows.Forms.RadioButton radioButton134;
         private System.Windows.Forms.RadioButton radioButton135;
-        private System.Windows.Forms.GroupBox xml_groupBox28_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox28;
         private System.Windows.Forms.RadioButton radioButton136;
         private System.Windows.Forms.RadioButton radioButton137;
         private System.Windows.Forms.RadioButton radioButton138;
         private System.Windows.Forms.RadioButton radioButton139;
         private System.Windows.Forms.RadioButton radioButton140;
-        private System.Windows.Forms.GroupBox xml_groupBox29_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox29;
         private System.Windows.Forms.RadioButton radioButton141;
         private System.Windows.Forms.RadioButton radioButton142;
         private System.Windows.Forms.RadioButton radioButton143;
         private System.Windows.Forms.RadioButton radioButton144;
         private System.Windows.Forms.RadioButton radioButton145;
-        private System.Windows.Forms.GroupBox xml_groupBox30_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox30;
         private System.Windows.Forms.RadioButton radioButton146;
         private System.Windows.Forms.RadioButton radioButton147;
         private System.Windows.Forms.RadioButton radioButton148;
         private System.Windows.Forms.RadioButton radioButton149;
         private System.Windows.Forms.RadioButton radioButton150;
-        private System.Windows.Forms.GroupBox xml_groupBox19_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox19;
         private System.Windows.Forms.RadioButton radioButton91;
         private System.Windows.Forms.RadioButton radioButton92;
         private System.Windows.Forms.RadioButton radioButton93;
         private System.Windows.Forms.RadioButton radioButton94;
         private System.Windows.Forms.RadioButton radioButton95;
-        private System.Windows.Forms.GroupBox xml_groupBox20_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox20;
         private System.Windows.Forms.RadioButton radioButton96;
         private System.Windows.Forms.RadioButton radioButton97;
         private System.Windows.Forms.RadioButton radioButton98;
         private System.Windows.Forms.RadioButton radioButton99;
         private System.Windows.Forms.RadioButton radioButton100;
-        private System.Windows.Forms.GroupBox xml_groupBox21_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox21;
         private System.Windows.Forms.RadioButton radioButton101;
         private System.Windows.Forms.RadioButton radioButton102;
         private System.Windows.Forms.RadioButton radioButton103;
         private System.Windows.Forms.RadioButton radioButton104;
         private System.Windows.Forms.RadioButton radioButton105;
-        private System.Windows.Forms.GroupBox xml_groupBox22_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox22;
         private System.Windows.Forms.RadioButton radioButton106;
         private System.Windows.Forms.RadioButton radioButton107;
         private System.Windows.Forms.RadioButton radioButton108;
         private System.Windows.Forms.RadioButton radioButton109;
         private System.Windows.Forms.RadioButton radioButton110;
-        private System.Windows.Forms.GroupBox xml_groupBox23_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox23;
         private System.Windows.Forms.RadioButton radioButton111;
         private System.Windows.Forms.RadioButton radioButton112;
         private System.Windows.Forms.RadioButton radioButton113;
         private System.Windows.Forms.RadioButton radioButton114;
         private System.Windows.Forms.RadioButton radioButton115;
-        private System.Windows.Forms.GroupBox xml_groupBox24_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox24;
         private System.Windows.Forms.RadioButton radioButton116;
         private System.Windows.Forms.RadioButton radioButton117;
         private System.Windows.Forms.RadioButton radioButton118;
         private System.Windows.Forms.RadioButton radioButton119;
         private System.Windows.Forms.RadioButton radioButton120;
-        private System.Windows.Forms.GroupBox xml_groupBox7_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox7;
         private System.Windows.Forms.RadioButton radioButton31;
         private System.Windows.Forms.RadioButton radioButton32;
         private System.Windows.Forms.RadioButton radioButton33;
         private System.Windows.Forms.RadioButton radioButton34;
         private System.Windows.Forms.RadioButton radioButton35;
-        private System.Windows.Forms.GroupBox xml_groupBox8_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox8;
         private System.Windows.Forms.RadioButton radioButton36;
         private System.Windows.Forms.RadioButton radioButton37;
         private System.Windows.Forms.RadioButton radioButton38;
         private System.Windows.Forms.RadioButton radioButton39;
         private System.Windows.Forms.RadioButton radioButton40;
-        private System.Windows.Forms.GroupBox xml_groupBox9_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox9;
         private System.Windows.Forms.RadioButton radioButton41;
         private System.Windows.Forms.RadioButton radioButton42;
         private System.Windows.Forms.RadioButton radioButton43;
         private System.Windows.Forms.RadioButton radioButton44;
         private System.Windows.Forms.RadioButton radioButton45;
-        private System.Windows.Forms.GroupBox xml_groupBox10_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox10;
         private System.Windows.Forms.RadioButton radioButton46;
         private System.Windows.Forms.RadioButton radioButton47;
         private System.Windows.Forms.RadioButton radioButton48;
         private System.Windows.Forms.RadioButton radioButton49;
         private System.Windows.Forms.RadioButton radioButton50;
-        private System.Windows.Forms.GroupBox xml_groupBox11_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox11;
         private System.Windows.Forms.RadioButton radioButton51;
         private System.Windows.Forms.RadioButton radioButton52;
         private System.Windows.Forms.RadioButton radioButton53;
         private System.Windows.Forms.RadioButton radioButton54;
         private System.Windows.Forms.RadioButton radioButton55;
-        private System.Windows.Forms.GroupBox xml_groupBox12_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox12;
         private System.Windows.Forms.RadioButton radioButton56;
         private System.Windows.Forms.RadioButton radioButton57;
         private System.Windows.Forms.RadioButton radioButton58;
         private System.Windows.Forms.RadioButton radioButton59;
         private System.Windows.Forms.RadioButton radioButton60;
-        private System.Windows.Forms.GroupBox xml_groupBox18_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox18;
         private System.Windows.Forms.RadioButton radioButton86;
         private System.Windows.Forms.RadioButton radioButton87;
         private System.Windows.Forms.RadioButton radioButton88;
         private System.Windows.Forms.RadioButton radioButton89;
         private System.Windows.Forms.RadioButton radioButton90;
-        private System.Windows.Forms.GroupBox xml_groupBox17_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox17;
         private System.Windows.Forms.RadioButton radioButton81;
         private System.Windows.Forms.RadioButton radioButton82;
         private System.Windows.Forms.RadioButton radioButton83;
         private System.Windows.Forms.RadioButton radioButton84;
         private System.Windows.Forms.RadioButton radioButton85;
-        private System.Windows.Forms.GroupBox xml_groupBox16_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox16;
         private System.Windows.Forms.RadioButton radioButton76;
         private System.Windows.Forms.RadioButton radioButton77;
         private System.Windows.Forms.RadioButton radioButton78;
         private System.Windows.Forms.RadioButton radioButton79;
         private System.Windows.Forms.RadioButton radioButton80;
-        private System.Windows.Forms.GroupBox xml_groupBox15_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox15;
         private System.Windows.Forms.RadioButton radioButton71;
         private System.Windows.Forms.RadioButton radioButton72;
         private System.Windows.Forms.RadioButton radioButton73;
         private System.Windows.Forms.RadioButton radioButton74;
         private System.Windows.Forms.RadioButton radioButton75;
-        private System.Windows.Forms.GroupBox xml_groupBox14_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox14;
         private System.Windows.Forms.RadioButton radioButton66;
         private System.Windows.Forms.RadioButton radioButton67;
         private System.Windows.Forms.RadioButton radioButton68;
         private System.Windows.Forms.RadioButton radioButton69;
         private System.Windows.Forms.RadioButton radioButton70;
-        private System.Windows.Forms.GroupBox xml_groupBox13_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox13;
         private System.Windows.Forms.RadioButton radioButton61;
         private System.Windows.Forms.RadioButton radioButton62;
         private System.Windows.Forms.RadioButton radioButton63;
         private System.Windows.Forms.RadioButton radioButton64;
         private System.Windows.Forms.RadioButton radioButton65;
-        private System.Windows.Forms.GroupBox xml_groupBox6_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox6;
         private System.Windows.Forms.RadioButton radioButton26;
         private System.Windows.Forms.RadioButton radioButton27;
         private System.Windows.Forms.RadioButton radioButton28;
         private System.Windows.Forms.RadioButton radioButton29;
         private System.Windows.Forms.RadioButton radioButton30;
-        private System.Windows.Forms.GroupBox xml_groupBox4_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox4;
         private System.Windows.Forms.RadioButton radioButton16;
         private System.Windows.Forms.RadioButton radioButton17;
         private System.Windows.Forms.RadioButton radioButton18;
         private System.Windows.Forms.RadioButton radioButton19;
         private System.Windows.Forms.RadioButton radioButton20;
-        private System.Windows.Forms.GroupBox xml_groupBox5_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox5;
         private System.Windows.Forms.RadioButton radioButton21;
         private System.Windows.Forms.RadioButton radioButton22;
         private System.Windows.Forms.RadioButton radioButton23;
         private System.Windows.Forms.RadioButton radioButton24;
         private System.Windows.Forms.RadioButton radioButton25;
-        private System.Windows.Forms.GroupBox xml_groupBox3_gb;
+        private System.Windows.Forms.GroupBox xmlgr_groupBox3;
         private System.Windows.Forms.RadioButton radioButton11;
         private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.RadioButton radioButton13;
