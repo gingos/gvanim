@@ -88,9 +88,6 @@ namespace GvanimVS
                         {
                             if (control.Controls.OfType<RadioButton>().Any(r => r.Checked))
                                 xml_tab.Add(control.Name, (control.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Name));
-                            /* foreach (RadioButton r in control.Controls.OfType<RadioButton>())
-                                if (r.Checked)
-                                    xml_tab.Add(control.Name, r.Text);*/
                         }
                     }
                 }
