@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.personal_plan_tc = new System.Windows.Forms.TabControl();
+            this.personal_tab = new System.Windows.Forms.TabPage();
             this.ID_lb = new System.Windows.Forms.Label();
             this.ID_tb = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.xml_klita_dtp = new System.Windows.Forms.DateTimePicker();
+            this.klita_lb = new System.Windows.Forms.Label();
             this.xml_hachalom = new System.Windows.Forms.TextBox();
             this.xml_hasamim = new System.Windows.Forms.TextBox();
             this.xml_hatzlachot = new System.Windows.Forms.TextBox();
             this.coord_tb = new System.Windows.Forms.TextBox();
             this.firstName_tb = new System.Windows.Forms.TextBox();
-            this.xml_sachar = new System.Windows.Forms.TextBox();
-            this.xml_ktovet = new System.Windows.Forms.TextBox();
-            this.xml_shemHaEsek = new System.Windows.Forms.TextBox();
-            this.xml_sugHaavoda = new System.Windows.Forms.TextBox();
+            this.xml_salary_tb = new System.Windows.Forms.TextBox();
+            this.xml_ktovet_tb = new System.Windows.Forms.TextBox();
+            this.xml_company_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_type_tb = new System.Windows.Forms.TextBox();
             this.lastName_tb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,9 +58,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.mazav_tab = new System.Windows.Forms.TabPage();
+            this.mazav_tc = new System.Windows.Forms.TabControl();
+            this.job_functionality_tab = new System.Windows.Forms.TabPage();
             this.xmlgr_groupBox32 = new System.Windows.Forms.GroupBox();
             this.radioButton156 = new System.Windows.Forms.RadioButton();
             this.radioButton157 = new System.Windows.Forms.RadioButton();
@@ -112,16 +112,16 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.xml_hearotSeder = new System.Windows.Forms.TextBox();
+            this.xml_comments_organization_tb = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.xml_hearotKatzev = new System.Windows.Forms.TextBox();
+            this.xml_comments_rate_tb = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.xml_hearotEichut = new System.Windows.Forms.TextBox();
+            this.xml_comments_job_quality_tb = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.xml_hearotHatmada = new System.Windows.Forms.TextBox();
+            this.xml_comments_hatmada_tb = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.norms_tab = new System.Windows.Forms.TabPage();
             this.xmlgr_groupBox19 = new System.Windows.Forms.GroupBox();
             this.radioButton91 = new System.Windows.Forms.RadioButton();
             this.radioButton92 = new System.Windows.Forms.RadioButton();
@@ -161,14 +161,14 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.xml_hearotKlalim = new System.Windows.Forms.TextBox();
+            this.xml_comments_Klalim_tb = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.xml_hearotHofaa = new System.Windows.Forms.TextBox();
+            this.xml_comments_Hofaa_tb = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.xml_hearotZmanim = new System.Windows.Forms.TextBox();
+            this.xml_comments_Zmanim_tb = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.social_skills_tab = new System.Windows.Forms.TabPage();
             this.xmlgr_groupBox7 = new System.Windows.Forms.GroupBox();
             this.radioButton31 = new System.Windows.Forms.RadioButton();
             this.radioButton32 = new System.Windows.Forms.RadioButton();
@@ -208,14 +208,14 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.xml_hearotSamchut = new System.Windows.Forms.TextBox();
+            this.xml_comments_Samchut_tb = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.xml_hearotTzevet = new System.Windows.Forms.TextBox();
+            this.xml_comments__Tzevet_tb = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.xml_hearotAmitim = new System.Windows.Forms.TextBox();
+            this.xml_comments_Amitim_tb = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.activte_assertive_tab = new System.Windows.Forms.TabPage();
             this.xmlgr_groupBox18 = new System.Windows.Forms.GroupBox();
             this.radioButton86 = new System.Windows.Forms.RadioButton();
             this.radioButton87 = new System.Windows.Forms.RadioButton();
@@ -255,14 +255,14 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.xml_hearotAchrayut = new System.Windows.Forms.TextBox();
+            this.xml_comments_Achrayut_tb = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.xml_hearotAtzmaut = new System.Windows.Forms.TextBox();
+            this.xml_comments_Atzmaut_tb = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.xml_hearotYozma = new System.Windows.Forms.TextBox();
+            this.xml_comments_Yozma_tb = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.satisfactory_tab = new System.Windows.Forms.TabPage();
             this.xmlgr_groupBox6 = new System.Windows.Forms.GroupBox();
             this.radioButton26 = new System.Windows.Forms.RadioButton();
             this.radioButton27 = new System.Windows.Forms.RadioButton();
@@ -302,24 +302,24 @@
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.xml_hearotHitkadmut = new System.Windows.Forms.TextBox();
+            this.xml_comments_progress_tb = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.xml_hearotInyan = new System.Windows.Forms.TextBox();
+            this.xml_comments_value_tb = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.xml_hearotSachar = new System.Windows.Forms.TextBox();
+            this.xml_fee_comments_tb = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.xmlg_dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rehab_tab = new System.Windows.Forms.TabPage();
+            this.xml_rehab_dgv = new System.Windows.Forms.DataGridView();
             this.number_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yaad_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bitzua_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.criterion_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.xml_kshayim = new System.Windows.Forms.TextBox();
-            this.xml_mekorotTmicha = new System.Windows.Forms.TextBox();
-            this.xml_nekudotHozek = new System.Windows.Forms.TextBox();
+            this.resources_tab = new System.Windows.Forms.TabPage();
+            this.xml_kshayim_tb = new System.Windows.Forms.TextBox();
+            this.xml_mekorotTmicha_tb = new System.Windows.Forms.TextBox();
+            this.xml_strengths_tb = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
@@ -327,11 +327,11 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.test_upload = new System.Windows.Forms.Button();
             this.test_download = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.personal_plan_tc.SuspendLayout();
+            this.personal_tab.SuspendLayout();
+            this.mazav_tab.SuspendLayout();
+            this.mazav_tc.SuspendLayout();
+            this.job_functionality_tab.SuspendLayout();
             this.xmlgr_groupBox32.SuspendLayout();
             this.xmlgr_groupBox25.SuspendLayout();
             this.xmlgr_groupBox26.SuspendLayout();
@@ -340,93 +340,93 @@
             this.xmlgr_groupBox28.SuspendLayout();
             this.xmlgr_groupBox29.SuspendLayout();
             this.xmlgr_groupBox30.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.norms_tab.SuspendLayout();
             this.xmlgr_groupBox19.SuspendLayout();
             this.xmlgr_groupBox20.SuspendLayout();
             this.xmlgr_groupBox21.SuspendLayout();
             this.xmlgr_groupBox22.SuspendLayout();
             this.xmlgr_groupBox23.SuspendLayout();
             this.xmlgr_groupBox24.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.social_skills_tab.SuspendLayout();
             this.xmlgr_groupBox7.SuspendLayout();
             this.xmlgr_groupBox8.SuspendLayout();
             this.xmlgr_groupBox9.SuspendLayout();
             this.xmlgr_groupBox10.SuspendLayout();
             this.xmlgr_groupBox11.SuspendLayout();
             this.xmlgr_groupBox12.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.activte_assertive_tab.SuspendLayout();
             this.xmlgr_groupBox18.SuspendLayout();
             this.xmlgr_groupBox17.SuspendLayout();
             this.xmlgr_groupBox16.SuspendLayout();
             this.xmlgr_groupBox15.SuspendLayout();
             this.xmlgr_groupBox14.SuspendLayout();
             this.xmlgr_groupBox13.SuspendLayout();
-            this.tabPage7.SuspendLayout();
+            this.satisfactory_tab.SuspendLayout();
             this.xmlgr_groupBox6.SuspendLayout();
             this.xmlgr_groupBox4.SuspendLayout();
             this.xmlgr_groupBox2.SuspendLayout();
             this.xmlgr_groupBox5.SuspendLayout();
             this.xmlgr_groupBox3.SuspendLayout();
             this.xmlgr_groupBox1.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xmlg_dataGridView1)).BeginInit();
-            this.tabPage9.SuspendLayout();
+            this.rehab_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xml_rehab_dgv)).BeginInit();
+            this.resources_tab.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // personal_plan_tc
             // 
-            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.HotTrack = true;
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabControl1.RightToLeftLayout = true;
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(970, 392);
-            this.tabControl1.TabIndex = 0;
+            this.personal_plan_tc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.personal_plan_tc.Controls.Add(this.personal_tab);
+            this.personal_plan_tc.Controls.Add(this.mazav_tab);
+            this.personal_plan_tc.Controls.Add(this.rehab_tab);
+            this.personal_plan_tc.Controls.Add(this.resources_tab);
+            this.personal_plan_tc.HotTrack = true;
+            this.personal_plan_tc.Location = new System.Drawing.Point(12, 12);
+            this.personal_plan_tc.Multiline = true;
+            this.personal_plan_tc.Name = "personal_plan_tc";
+            this.personal_plan_tc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.personal_plan_tc.RightToLeftLayout = true;
+            this.personal_plan_tc.SelectedIndex = 0;
+            this.personal_plan_tc.Size = new System.Drawing.Size(970, 392);
+            this.personal_plan_tc.TabIndex = 0;
             // 
-            // tabPage1
+            // personal_tab
             // 
-            this.tabPage1.Controls.Add(this.ID_lb);
-            this.tabPage1.Controls.Add(this.ID_tb);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.xml_hachalom);
-            this.tabPage1.Controls.Add(this.xml_hasamim);
-            this.tabPage1.Controls.Add(this.xml_hatzlachot);
-            this.tabPage1.Controls.Add(this.coord_tb);
-            this.tabPage1.Controls.Add(this.firstName_tb);
-            this.tabPage1.Controls.Add(this.xml_sachar);
-            this.tabPage1.Controls.Add(this.xml_ktovet);
-            this.tabPage1.Controls.Add(this.xml_shemHaEsek);
-            this.tabPage1.Controls.Add(this.xml_sugHaavoda);
-            this.tabPage1.Controls.Add(this.lastName_tb);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(962, 366);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "פרטים אישיים";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.personal_tab.Controls.Add(this.ID_lb);
+            this.personal_tab.Controls.Add(this.ID_tb);
+            this.personal_tab.Controls.Add(this.xml_klita_dtp);
+            this.personal_tab.Controls.Add(this.klita_lb);
+            this.personal_tab.Controls.Add(this.xml_hachalom);
+            this.personal_tab.Controls.Add(this.xml_hasamim);
+            this.personal_tab.Controls.Add(this.xml_hatzlachot);
+            this.personal_tab.Controls.Add(this.coord_tb);
+            this.personal_tab.Controls.Add(this.firstName_tb);
+            this.personal_tab.Controls.Add(this.xml_salary_tb);
+            this.personal_tab.Controls.Add(this.xml_ktovet_tb);
+            this.personal_tab.Controls.Add(this.xml_company_tb);
+            this.personal_tab.Controls.Add(this.xml_job_type_tb);
+            this.personal_tab.Controls.Add(this.lastName_tb);
+            this.personal_tab.Controls.Add(this.label6);
+            this.personal_tab.Controls.Add(this.label5);
+            this.personal_tab.Controls.Add(this.label7);
+            this.personal_tab.Controls.Add(this.label4);
+            this.personal_tab.Controls.Add(this.label2);
+            this.personal_tab.Controls.Add(this.label13);
+            this.personal_tab.Controls.Add(this.label12);
+            this.personal_tab.Controls.Add(this.label15);
+            this.personal_tab.Controls.Add(this.label10);
+            this.personal_tab.Controls.Add(this.label9);
+            this.personal_tab.Controls.Add(this.label14);
+            this.personal_tab.Controls.Add(this.label11);
+            this.personal_tab.Controls.Add(this.label8);
+            this.personal_tab.Controls.Add(this.label1);
+            this.personal_tab.Location = new System.Drawing.Point(4, 22);
+            this.personal_tab.Name = "personal_tab";
+            this.personal_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.personal_tab.Size = new System.Drawing.Size(962, 366);
+            this.personal_tab.TabIndex = 0;
+            this.personal_tab.Text = "פרטים אישיים";
+            this.personal_tab.UseVisualStyleBackColor = true;
             // 
             // ID_lb
             // 
@@ -446,23 +446,23 @@
             this.ID_tb.Size = new System.Drawing.Size(136, 20);
             this.ID_tb.TabIndex = 27;
             // 
-            // dateTimePicker1
+            // xml_klita_dtp
             // 
-            this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(516, 243);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 24;
+            this.xml_klita_dtp.Checked = false;
+            this.xml_klita_dtp.Location = new System.Drawing.Point(516, 243);
+            this.xml_klita_dtp.Name = "xml_klita_dtp";
+            this.xml_klita_dtp.ShowCheckBox = true;
+            this.xml_klita_dtp.Size = new System.Drawing.Size(200, 20);
+            this.xml_klita_dtp.TabIndex = 24;
             // 
-            // label3
+            // klita_lb
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(641, 219);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "תאריך קליטה";
+            this.klita_lb.AutoSize = true;
+            this.klita_lb.Location = new System.Drawing.Point(641, 219);
+            this.klita_lb.Name = "klita_lb";
+            this.klita_lb.Size = new System.Drawing.Size(76, 13);
+            this.klita_lb.TabIndex = 25;
+            this.klita_lb.Text = "תאריך קליטה";
             // 
             // xml_hachalom
             // 
@@ -502,33 +502,33 @@
             this.firstName_tb.Size = new System.Drawing.Size(126, 20);
             this.firstName_tb.TabIndex = 1;
             // 
-            // xml_sachar
+            // xml_salary_tb
             // 
-            this.xml_sachar.Location = new System.Drawing.Point(745, 324);
-            this.xml_sachar.Name = "xml_sachar";
-            this.xml_sachar.Size = new System.Drawing.Size(128, 20);
-            this.xml_sachar.TabIndex = 1;
+            this.xml_salary_tb.Location = new System.Drawing.Point(745, 324);
+            this.xml_salary_tb.Name = "xml_salary_tb";
+            this.xml_salary_tb.Size = new System.Drawing.Size(128, 20);
+            this.xml_salary_tb.TabIndex = 1;
             // 
-            // xml_ktovet
+            // xml_ktovet_tb
             // 
-            this.xml_ktovet.Location = new System.Drawing.Point(745, 286);
-            this.xml_ktovet.Name = "xml_ktovet";
-            this.xml_ktovet.Size = new System.Drawing.Size(128, 20);
-            this.xml_ktovet.TabIndex = 1;
+            this.xml_ktovet_tb.Location = new System.Drawing.Point(745, 286);
+            this.xml_ktovet_tb.Name = "xml_ktovet_tb";
+            this.xml_ktovet_tb.Size = new System.Drawing.Size(128, 20);
+            this.xml_ktovet_tb.TabIndex = 1;
             // 
-            // xml_shemHaEsek
+            // xml_company_tb
             // 
-            this.xml_shemHaEsek.Location = new System.Drawing.Point(745, 216);
-            this.xml_shemHaEsek.Name = "xml_shemHaEsek";
-            this.xml_shemHaEsek.Size = new System.Drawing.Size(128, 20);
-            this.xml_shemHaEsek.TabIndex = 1;
+            this.xml_company_tb.Location = new System.Drawing.Point(745, 216);
+            this.xml_company_tb.Name = "xml_company_tb";
+            this.xml_company_tb.Size = new System.Drawing.Size(128, 20);
+            this.xml_company_tb.TabIndex = 1;
             // 
-            // xml_sugHaavoda
+            // xml_job_type_tb
             // 
-            this.xml_sugHaavoda.Location = new System.Drawing.Point(745, 250);
-            this.xml_sugHaavoda.Name = "xml_sugHaavoda";
-            this.xml_sugHaavoda.Size = new System.Drawing.Size(128, 20);
-            this.xml_sugHaavoda.TabIndex = 1;
+            this.xml_job_type_tb.Location = new System.Drawing.Point(745, 250);
+            this.xml_job_type_tb.Name = "xml_job_type_tb";
+            this.xml_job_type_tb.Size = new System.Drawing.Size(128, 20);
+            this.xml_job_type_tb.TabIndex = 1;
             // 
             // lastName_tb
             // 
@@ -674,62 +674,62 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "שם פרטי:";
             // 
-            // tabPage2
+            // mazav_tab
             // 
-            this.tabPage2.Controls.Add(this.tabControl2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage2.Size = new System.Drawing.Size(962, 366);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "תמונת מצב";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.mazav_tab.Controls.Add(this.mazav_tc);
+            this.mazav_tab.Location = new System.Drawing.Point(4, 22);
+            this.mazav_tab.Name = "mazav_tab";
+            this.mazav_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.mazav_tab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.mazav_tab.Size = new System.Drawing.Size(962, 366);
+            this.mazav_tab.TabIndex = 1;
+            this.mazav_tab.Text = "תמונת מצב";
+            this.mazav_tab.UseVisualStyleBackColor = true;
             // 
-            // tabControl2
+            // mazav_tc
             // 
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage7);
-            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(3, 3);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.RightToLeftLayout = true;
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(956, 360);
-            this.tabControl2.TabIndex = 0;
+            this.mazav_tc.Controls.Add(this.job_functionality_tab);
+            this.mazav_tc.Controls.Add(this.norms_tab);
+            this.mazav_tc.Controls.Add(this.social_skills_tab);
+            this.mazav_tc.Controls.Add(this.activte_assertive_tab);
+            this.mazav_tc.Controls.Add(this.satisfactory_tab);
+            this.mazav_tc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mazav_tc.Location = new System.Drawing.Point(3, 3);
+            this.mazav_tc.Name = "mazav_tc";
+            this.mazav_tc.RightToLeftLayout = true;
+            this.mazav_tc.SelectedIndex = 0;
+            this.mazav_tc.Size = new System.Drawing.Size(956, 360);
+            this.mazav_tc.TabIndex = 0;
             // 
-            // tabPage3
+            // job_functionality_tab
             // 
-            this.tabPage3.Controls.Add(this.xmlgr_groupBox32);
-            this.tabPage3.Controls.Add(this.xmlgr_groupBox25);
-            this.tabPage3.Controls.Add(this.xmlgr_groupBox26);
-            this.tabPage3.Controls.Add(this.xmlgr_groupBox31);
-            this.tabPage3.Controls.Add(this.xmlgr_groupBox27);
-            this.tabPage3.Controls.Add(this.xmlgr_groupBox28);
-            this.tabPage3.Controls.Add(this.xmlgr_groupBox29);
-            this.tabPage3.Controls.Add(this.xmlgr_groupBox30);
-            this.tabPage3.Controls.Add(this.label23);
-            this.tabPage3.Controls.Add(this.label22);
-            this.tabPage3.Controls.Add(this.label21);
-            this.tabPage3.Controls.Add(this.xml_hearotSeder);
-            this.tabPage3.Controls.Add(this.label20);
-            this.tabPage3.Controls.Add(this.xml_hearotKatzev);
-            this.tabPage3.Controls.Add(this.label19);
-            this.tabPage3.Controls.Add(this.xml_hearotEichut);
-            this.tabPage3.Controls.Add(this.label18);
-            this.tabPage3.Controls.Add(this.xml_hearotHatmada);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(948, 334);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "תפקוד בעבודה";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox32);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox25);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox26);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox31);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox27);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox28);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox29);
+            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox30);
+            this.job_functionality_tab.Controls.Add(this.label23);
+            this.job_functionality_tab.Controls.Add(this.label22);
+            this.job_functionality_tab.Controls.Add(this.label21);
+            this.job_functionality_tab.Controls.Add(this.xml_comments_organization_tb);
+            this.job_functionality_tab.Controls.Add(this.label20);
+            this.job_functionality_tab.Controls.Add(this.xml_comments_rate_tb);
+            this.job_functionality_tab.Controls.Add(this.label19);
+            this.job_functionality_tab.Controls.Add(this.xml_comments_job_quality_tb);
+            this.job_functionality_tab.Controls.Add(this.label18);
+            this.job_functionality_tab.Controls.Add(this.xml_comments_hatmada_tb);
+            this.job_functionality_tab.Controls.Add(this.label17);
+            this.job_functionality_tab.Controls.Add(this.label16);
+            this.job_functionality_tab.Location = new System.Drawing.Point(4, 22);
+            this.job_functionality_tab.Name = "job_functionality_tab";
+            this.job_functionality_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.job_functionality_tab.Size = new System.Drawing.Size(948, 334);
+            this.job_functionality_tab.TabIndex = 0;
+            this.job_functionality_tab.Text = "תפקוד בעבודה";
+            this.job_functionality_tab.UseVisualStyleBackColor = true;
             // 
             // xmlgr_groupBox32
             // 
@@ -1305,12 +1305,12 @@
             this.label21.TabIndex = 21;
             this.label21.Text = "הערכת העובד";
             // 
-            // xml_hearotSeder
+            // xml_comments_organization_tb
             // 
-            this.xml_hearotSeder.Location = new System.Drawing.Point(57, 234);
-            this.xml_hearotSeder.Name = "xml_hearotSeder";
-            this.xml_hearotSeder.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotSeder.TabIndex = 20;
+            this.xml_comments_organization_tb.Location = new System.Drawing.Point(57, 234);
+            this.xml_comments_organization_tb.Name = "xml_comments_organization_tb";
+            this.xml_comments_organization_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_organization_tb.TabIndex = 20;
             // 
             // label20
             // 
@@ -1321,12 +1321,12 @@
             this.label20.TabIndex = 13;
             this.label20.Text = "שמירה על סדר וארגון";
             // 
-            // xml_hearotKatzev
+            // xml_comments_rate_tb
             // 
-            this.xml_hearotKatzev.Location = new System.Drawing.Point(57, 189);
-            this.xml_hearotKatzev.Name = "xml_hearotKatzev";
-            this.xml_hearotKatzev.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotKatzev.TabIndex = 18;
+            this.xml_comments_rate_tb.Location = new System.Drawing.Point(57, 189);
+            this.xml_comments_rate_tb.Name = "xml_comments_rate_tb";
+            this.xml_comments_rate_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_rate_tb.TabIndex = 18;
             // 
             // label19
             // 
@@ -1337,12 +1337,12 @@
             this.label19.TabIndex = 14;
             this.label19.Text = "קצב והספק העבודה";
             // 
-            // xml_hearotEichut
+            // xml_comments_job_quality_tb
             // 
-            this.xml_hearotEichut.Location = new System.Drawing.Point(57, 141);
-            this.xml_hearotEichut.Name = "xml_hearotEichut";
-            this.xml_hearotEichut.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotEichut.TabIndex = 19;
+            this.xml_comments_job_quality_tb.Location = new System.Drawing.Point(57, 141);
+            this.xml_comments_job_quality_tb.Name = "xml_comments_job_quality_tb";
+            this.xml_comments_job_quality_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_job_quality_tb.TabIndex = 19;
             // 
             // label18
             // 
@@ -1353,12 +1353,12 @@
             this.label18.TabIndex = 15;
             this.label18.Text = "איכות ביצוע המשימות";
             // 
-            // xml_hearotHatmada
+            // xml_comments_hatmada_tb
             // 
-            this.xml_hearotHatmada.Location = new System.Drawing.Point(57, 91);
-            this.xml_hearotHatmada.Name = "xml_hearotHatmada";
-            this.xml_hearotHatmada.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotHatmada.TabIndex = 17;
+            this.xml_comments_hatmada_tb.Location = new System.Drawing.Point(57, 91);
+            this.xml_comments_hatmada_tb.Name = "xml_comments_hatmada_tb";
+            this.xml_comments_hatmada_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_hatmada_tb.TabIndex = 17;
             // 
             // label17
             // 
@@ -1380,31 +1380,31 @@
             this.label16.Text = "תמונת מצב – הערכת העובד את עצמו     דירוג: 1 - זקוק לשיפור /  2 - סביר /  3 - טוב" +
     " /  4 – טוב מאוד / 5 – מצוין";
             // 
-            // tabPage4
+            // norms_tab
             // 
-            this.tabPage4.Controls.Add(this.xmlgr_groupBox19);
-            this.tabPage4.Controls.Add(this.xmlgr_groupBox20);
-            this.tabPage4.Controls.Add(this.xmlgr_groupBox21);
-            this.tabPage4.Controls.Add(this.xmlgr_groupBox22);
-            this.tabPage4.Controls.Add(this.xmlgr_groupBox23);
-            this.tabPage4.Controls.Add(this.xmlgr_groupBox24);
-            this.tabPage4.Controls.Add(this.label24);
-            this.tabPage4.Controls.Add(this.label25);
-            this.tabPage4.Controls.Add(this.label26);
-            this.tabPage4.Controls.Add(this.xml_hearotKlalim);
-            this.tabPage4.Controls.Add(this.label28);
-            this.tabPage4.Controls.Add(this.xml_hearotHofaa);
-            this.tabPage4.Controls.Add(this.label29);
-            this.tabPage4.Controls.Add(this.xml_hearotZmanim);
-            this.tabPage4.Controls.Add(this.label30);
-            this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(948, 334);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "עמידה בנורמות";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox19);
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox20);
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox21);
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox22);
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox23);
+            this.norms_tab.Controls.Add(this.xmlgr_groupBox24);
+            this.norms_tab.Controls.Add(this.label24);
+            this.norms_tab.Controls.Add(this.label25);
+            this.norms_tab.Controls.Add(this.label26);
+            this.norms_tab.Controls.Add(this.xml_comments_Klalim_tb);
+            this.norms_tab.Controls.Add(this.label28);
+            this.norms_tab.Controls.Add(this.xml_comments_Hofaa_tb);
+            this.norms_tab.Controls.Add(this.label29);
+            this.norms_tab.Controls.Add(this.xml_comments_Zmanim_tb);
+            this.norms_tab.Controls.Add(this.label30);
+            this.norms_tab.Controls.Add(this.label31);
+            this.norms_tab.Location = new System.Drawing.Point(4, 22);
+            this.norms_tab.Name = "norms_tab";
+            this.norms_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.norms_tab.Size = new System.Drawing.Size(948, 334);
+            this.norms_tab.TabIndex = 1;
+            this.norms_tab.Text = "עמידה בנורמות";
+            this.norms_tab.UseVisualStyleBackColor = true;
             // 
             // xmlgr_groupBox19
             // 
@@ -1844,12 +1844,12 @@
             this.label26.TabIndex = 39;
             this.label26.Text = "הערכת העובד";
             // 
-            // xml_hearotKlalim
+            // xml_comments_Klalim_tb
             // 
-            this.xml_hearotKlalim.Location = new System.Drawing.Point(38, 216);
-            this.xml_hearotKlalim.Name = "xml_hearotKlalim";
-            this.xml_hearotKlalim.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotKlalim.TabIndex = 36;
+            this.xml_comments_Klalim_tb.Location = new System.Drawing.Point(38, 216);
+            this.xml_comments_Klalim_tb.Name = "xml_comments_Klalim_tb";
+            this.xml_comments_Klalim_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Klalim_tb.TabIndex = 36;
             // 
             // label28
             // 
@@ -1860,12 +1860,12 @@
             this.label28.TabIndex = 32;
             this.label28.Text = "עמידה בנהלים ובכללים הנדרשים ";
             // 
-            // xml_hearotHofaa
+            // xml_comments_Hofaa_tb
             // 
-            this.xml_hearotHofaa.Location = new System.Drawing.Point(38, 168);
-            this.xml_hearotHofaa.Name = "xml_hearotHofaa";
-            this.xml_hearotHofaa.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotHofaa.TabIndex = 37;
+            this.xml_comments_Hofaa_tb.Location = new System.Drawing.Point(38, 168);
+            this.xml_comments_Hofaa_tb.Name = "xml_comments_Hofaa_tb";
+            this.xml_comments_Hofaa_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Hofaa_tb.TabIndex = 37;
             // 
             // label29
             // 
@@ -1876,12 +1876,12 @@
             this.label29.TabIndex = 33;
             this.label29.Text = "הופעה מכובדת ומותאמת";
             // 
-            // xml_hearotZmanim
+            // xml_comments_Zmanim_tb
             // 
-            this.xml_hearotZmanim.Location = new System.Drawing.Point(38, 118);
-            this.xml_hearotZmanim.Name = "xml_hearotZmanim";
-            this.xml_hearotZmanim.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotZmanim.TabIndex = 35;
+            this.xml_comments_Zmanim_tb.Location = new System.Drawing.Point(38, 118);
+            this.xml_comments_Zmanim_tb.Name = "xml_comments_Zmanim_tb";
+            this.xml_comments_Zmanim_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Zmanim_tb.TabIndex = 35;
             // 
             // label30
             // 
@@ -1903,31 +1903,31 @@
             this.label31.Text = "תמונת מצב – הערכת העובד את עצמו     דירוג: 1 - זקוק לשיפור /  2 - סביר /  3 - טוב" +
     " /  4 – טוב מאוד / 5 – מצוין";
             // 
-            // tabPage5
+            // social_skills_tab
             // 
-            this.tabPage5.Controls.Add(this.xmlgr_groupBox7);
-            this.tabPage5.Controls.Add(this.xmlgr_groupBox8);
-            this.tabPage5.Controls.Add(this.xmlgr_groupBox9);
-            this.tabPage5.Controls.Add(this.xmlgr_groupBox10);
-            this.tabPage5.Controls.Add(this.xmlgr_groupBox11);
-            this.tabPage5.Controls.Add(this.xmlgr_groupBox12);
-            this.tabPage5.Controls.Add(this.label27);
-            this.tabPage5.Controls.Add(this.label32);
-            this.tabPage5.Controls.Add(this.label33);
-            this.tabPage5.Controls.Add(this.xml_hearotSamchut);
-            this.tabPage5.Controls.Add(this.label35);
-            this.tabPage5.Controls.Add(this.xml_hearotTzevet);
-            this.tabPage5.Controls.Add(this.label36);
-            this.tabPage5.Controls.Add(this.xml_hearotAmitim);
-            this.tabPage5.Controls.Add(this.label37);
-            this.tabPage5.Controls.Add(this.label38);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(948, 334);
-            this.tabPage5.TabIndex = 2;
-            this.tabPage5.Text = "קשרים בין אישיים ";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox7);
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox8);
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox9);
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox10);
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox11);
+            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox12);
+            this.social_skills_tab.Controls.Add(this.label27);
+            this.social_skills_tab.Controls.Add(this.label32);
+            this.social_skills_tab.Controls.Add(this.label33);
+            this.social_skills_tab.Controls.Add(this.xml_comments_Samchut_tb);
+            this.social_skills_tab.Controls.Add(this.label35);
+            this.social_skills_tab.Controls.Add(this.xml_comments__Tzevet_tb);
+            this.social_skills_tab.Controls.Add(this.label36);
+            this.social_skills_tab.Controls.Add(this.xml_comments_Amitim_tb);
+            this.social_skills_tab.Controls.Add(this.label37);
+            this.social_skills_tab.Controls.Add(this.label38);
+            this.social_skills_tab.Location = new System.Drawing.Point(4, 22);
+            this.social_skills_tab.Name = "social_skills_tab";
+            this.social_skills_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.social_skills_tab.Size = new System.Drawing.Size(948, 334);
+            this.social_skills_tab.TabIndex = 2;
+            this.social_skills_tab.Text = "קשרים בין אישיים ";
+            this.social_skills_tab.UseVisualStyleBackColor = true;
             // 
             // xmlgr_groupBox7
             // 
@@ -2367,12 +2367,12 @@
             this.label33.TabIndex = 39;
             this.label33.Text = "הערכת העובד";
             // 
-            // xml_hearotSamchut
+            // xml_comments_Samchut_tb
             // 
-            this.xml_hearotSamchut.Location = new System.Drawing.Point(38, 216);
-            this.xml_hearotSamchut.Name = "xml_hearotSamchut";
-            this.xml_hearotSamchut.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotSamchut.TabIndex = 36;
+            this.xml_comments_Samchut_tb.Location = new System.Drawing.Point(38, 216);
+            this.xml_comments_Samchut_tb.Name = "xml_comments_Samchut_tb";
+            this.xml_comments_Samchut_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Samchut_tb.TabIndex = 36;
             // 
             // label35
             // 
@@ -2383,12 +2383,12 @@
             this.label35.TabIndex = 32;
             this.label35.Text = "יכולת לקבל סמכות";
             // 
-            // xml_hearotTzevet
+            // xml_comments__Tzevet_tb
             // 
-            this.xml_hearotTzevet.Location = new System.Drawing.Point(38, 168);
-            this.xml_hearotTzevet.Name = "xml_hearotTzevet";
-            this.xml_hearotTzevet.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotTzevet.TabIndex = 37;
+            this.xml_comments__Tzevet_tb.Location = new System.Drawing.Point(38, 168);
+            this.xml_comments__Tzevet_tb.Name = "xml_comments__Tzevet_tb";
+            this.xml_comments__Tzevet_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments__Tzevet_tb.TabIndex = 37;
             // 
             // label36
             // 
@@ -2399,12 +2399,12 @@
             this.label36.TabIndex = 33;
             this.label36.Text = "יכולת לעבוד בעבודת צוות ";
             // 
-            // xml_hearotAmitim
+            // xml_comments_Amitim_tb
             // 
-            this.xml_hearotAmitim.Location = new System.Drawing.Point(38, 118);
-            this.xml_hearotAmitim.Name = "xml_hearotAmitim";
-            this.xml_hearotAmitim.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotAmitim.TabIndex = 35;
+            this.xml_comments_Amitim_tb.Location = new System.Drawing.Point(38, 118);
+            this.xml_comments_Amitim_tb.Name = "xml_comments_Amitim_tb";
+            this.xml_comments_Amitim_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Amitim_tb.TabIndex = 35;
             // 
             // label37
             // 
@@ -2426,31 +2426,31 @@
             this.label38.Text = "תמונת מצב – הערכת העובד את עצמו     דירוג: 1 - זקוק לשיפור /  2 - סביר /  3 - טוב" +
     " /  4 – טוב מאוד / 5 – מצוין";
             // 
-            // tabPage6
+            // activte_assertive_tab
             // 
-            this.tabPage6.Controls.Add(this.xmlgr_groupBox18);
-            this.tabPage6.Controls.Add(this.xmlgr_groupBox17);
-            this.tabPage6.Controls.Add(this.xmlgr_groupBox16);
-            this.tabPage6.Controls.Add(this.xmlgr_groupBox15);
-            this.tabPage6.Controls.Add(this.xmlgr_groupBox14);
-            this.tabPage6.Controls.Add(this.xmlgr_groupBox13);
-            this.tabPage6.Controls.Add(this.label34);
-            this.tabPage6.Controls.Add(this.label39);
-            this.tabPage6.Controls.Add(this.label40);
-            this.tabPage6.Controls.Add(this.xml_hearotAchrayut);
-            this.tabPage6.Controls.Add(this.label41);
-            this.tabPage6.Controls.Add(this.xml_hearotAtzmaut);
-            this.tabPage6.Controls.Add(this.label42);
-            this.tabPage6.Controls.Add(this.xml_hearotYozma);
-            this.tabPage6.Controls.Add(this.label43);
-            this.tabPage6.Controls.Add(this.label44);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(948, 334);
-            this.tabPage6.TabIndex = 3;
-            this.tabPage6.Text = "פרו אקטיביות ואסרטיביות ";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox18);
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox17);
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox16);
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox15);
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox14);
+            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox13);
+            this.activte_assertive_tab.Controls.Add(this.label34);
+            this.activte_assertive_tab.Controls.Add(this.label39);
+            this.activte_assertive_tab.Controls.Add(this.label40);
+            this.activte_assertive_tab.Controls.Add(this.xml_comments_Achrayut_tb);
+            this.activte_assertive_tab.Controls.Add(this.label41);
+            this.activte_assertive_tab.Controls.Add(this.xml_comments_Atzmaut_tb);
+            this.activte_assertive_tab.Controls.Add(this.label42);
+            this.activte_assertive_tab.Controls.Add(this.xml_comments_Yozma_tb);
+            this.activte_assertive_tab.Controls.Add(this.label43);
+            this.activte_assertive_tab.Controls.Add(this.label44);
+            this.activte_assertive_tab.Location = new System.Drawing.Point(4, 22);
+            this.activte_assertive_tab.Name = "activte_assertive_tab";
+            this.activte_assertive_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.activte_assertive_tab.Size = new System.Drawing.Size(948, 334);
+            this.activte_assertive_tab.TabIndex = 3;
+            this.activte_assertive_tab.Text = "פרו אקטיביות ואסרטיביות ";
+            this.activte_assertive_tab.UseVisualStyleBackColor = true;
             // 
             // xmlgr_groupBox18
             // 
@@ -2890,12 +2890,12 @@
             this.label40.TabIndex = 55;
             this.label40.Text = "הערכת העובד";
             // 
-            // xml_hearotAchrayut
+            // xml_comments_Achrayut_tb
             // 
-            this.xml_hearotAchrayut.Location = new System.Drawing.Point(29, 241);
-            this.xml_hearotAchrayut.Name = "xml_hearotAchrayut";
-            this.xml_hearotAchrayut.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotAchrayut.TabIndex = 53;
+            this.xml_comments_Achrayut_tb.Location = new System.Drawing.Point(29, 241);
+            this.xml_comments_Achrayut_tb.Name = "xml_comments_Achrayut_tb";
+            this.xml_comments_Achrayut_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Achrayut_tb.TabIndex = 53;
             // 
             // label41
             // 
@@ -2906,12 +2906,12 @@
             this.label41.TabIndex = 49;
             this.label41.Text = "גילוי אחריות כלפי העבודה ";
             // 
-            // xml_hearotAtzmaut
+            // xml_comments_Atzmaut_tb
             // 
-            this.xml_hearotAtzmaut.Location = new System.Drawing.Point(29, 193);
-            this.xml_hearotAtzmaut.Name = "xml_hearotAtzmaut";
-            this.xml_hearotAtzmaut.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotAtzmaut.TabIndex = 54;
+            this.xml_comments_Atzmaut_tb.Location = new System.Drawing.Point(29, 193);
+            this.xml_comments_Atzmaut_tb.Name = "xml_comments_Atzmaut_tb";
+            this.xml_comments_Atzmaut_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Atzmaut_tb.TabIndex = 54;
             // 
             // label42
             // 
@@ -2922,12 +2922,12 @@
             this.label42.TabIndex = 50;
             this.label42.Text = "יכולת לעצמאות בעבודה";
             // 
-            // xml_hearotYozma
+            // xml_comments_Yozma_tb
             // 
-            this.xml_hearotYozma.Location = new System.Drawing.Point(29, 143);
-            this.xml_hearotYozma.Name = "xml_hearotYozma";
-            this.xml_hearotYozma.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotYozma.TabIndex = 52;
+            this.xml_comments_Yozma_tb.Location = new System.Drawing.Point(29, 143);
+            this.xml_comments_Yozma_tb.Name = "xml_comments_Yozma_tb";
+            this.xml_comments_Yozma_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_Yozma_tb.TabIndex = 52;
             // 
             // label43
             // 
@@ -2949,32 +2949,32 @@
             this.label44.Text = "תמונת מצב – הערכת העובד את עצמו     דירוג: 1 - זקוק לשיפור /  2 - סביר /  3 - טוב" +
     " /  4 – טוב מאוד / 5 – מצוין";
             // 
-            // tabPage7
+            // satisfactory_tab
             // 
-            this.tabPage7.Controls.Add(this.xmlgr_groupBox6);
-            this.tabPage7.Controls.Add(this.xmlgr_groupBox4);
-            this.tabPage7.Controls.Add(this.xmlgr_groupBox2);
-            this.tabPage7.Controls.Add(this.xmlgr_groupBox5);
-            this.tabPage7.Controls.Add(this.xmlgr_groupBox3);
-            this.tabPage7.Controls.Add(this.xmlgr_groupBox1);
-            this.tabPage7.Controls.Add(this.label45);
-            this.tabPage7.Controls.Add(this.label46);
-            this.tabPage7.Controls.Add(this.label47);
-            this.tabPage7.Controls.Add(this.xml_hearotHitkadmut);
-            this.tabPage7.Controls.Add(this.label48);
-            this.tabPage7.Controls.Add(this.xml_hearotInyan);
-            this.tabPage7.Controls.Add(this.label49);
-            this.tabPage7.Controls.Add(this.xml_hearotSachar);
-            this.tabPage7.Controls.Add(this.label50);
-            this.tabPage7.Controls.Add(this.label51);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(948, 334);
-            this.tabPage7.TabIndex = 4;
-            this.tabPage7.Text = "שביעות רצון כללית מהעבודה";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            this.tabPage7.Click += new System.EventHandler(this.tabPage7_Click);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox6);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox4);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox2);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox5);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox3);
+            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox1);
+            this.satisfactory_tab.Controls.Add(this.label45);
+            this.satisfactory_tab.Controls.Add(this.label46);
+            this.satisfactory_tab.Controls.Add(this.label47);
+            this.satisfactory_tab.Controls.Add(this.xml_comments_progress_tb);
+            this.satisfactory_tab.Controls.Add(this.label48);
+            this.satisfactory_tab.Controls.Add(this.xml_comments_value_tb);
+            this.satisfactory_tab.Controls.Add(this.label49);
+            this.satisfactory_tab.Controls.Add(this.xml_fee_comments_tb);
+            this.satisfactory_tab.Controls.Add(this.label50);
+            this.satisfactory_tab.Controls.Add(this.label51);
+            this.satisfactory_tab.Location = new System.Drawing.Point(4, 22);
+            this.satisfactory_tab.Name = "satisfactory_tab";
+            this.satisfactory_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.satisfactory_tab.Size = new System.Drawing.Size(948, 334);
+            this.satisfactory_tab.TabIndex = 4;
+            this.satisfactory_tab.Text = "שביעות רצון כללית מהעבודה";
+            this.satisfactory_tab.UseVisualStyleBackColor = true;
+            this.satisfactory_tab.Click += new System.EventHandler(this.tabPage7_Click);
             // 
             // xmlgr_groupBox6
             // 
@@ -3445,12 +3445,12 @@
             this.label47.TabIndex = 71;
             this.label47.Text = "הערכת העובד";
             // 
-            // xml_hearotHitkadmut
+            // xml_comments_progress_tb
             // 
-            this.xml_hearotHitkadmut.Location = new System.Drawing.Point(23, 241);
-            this.xml_hearotHitkadmut.Name = "xml_hearotHitkadmut";
-            this.xml_hearotHitkadmut.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotHitkadmut.TabIndex = 69;
+            this.xml_comments_progress_tb.Location = new System.Drawing.Point(23, 241);
+            this.xml_comments_progress_tb.Name = "xml_comments_progress_tb";
+            this.xml_comments_progress_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_progress_tb.TabIndex = 69;
             // 
             // label48
             // 
@@ -3461,12 +3461,12 @@
             this.label48.TabIndex = 65;
             this.label48.Text = "ההתקדמות שלי בתפקיד ";
             // 
-            // xml_hearotInyan
+            // xml_comments_value_tb
             // 
-            this.xml_hearotInyan.Location = new System.Drawing.Point(23, 193);
-            this.xml_hearotInyan.Name = "xml_hearotInyan";
-            this.xml_hearotInyan.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotInyan.TabIndex = 70;
+            this.xml_comments_value_tb.Location = new System.Drawing.Point(23, 193);
+            this.xml_comments_value_tb.Name = "xml_comments_value_tb";
+            this.xml_comments_value_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_comments_value_tb.TabIndex = 70;
             // 
             // label49
             // 
@@ -3477,12 +3477,12 @@
             this.label49.TabIndex = 66;
             this.label49.Text = "העניין שיש לי בעבודה ובתפקיד ";
             // 
-            // xml_hearotSachar
+            // xml_fee_comments_tb
             // 
-            this.xml_hearotSachar.Location = new System.Drawing.Point(23, 143);
-            this.xml_hearotSachar.Name = "xml_hearotSachar";
-            this.xml_hearotSachar.Size = new System.Drawing.Size(199, 20);
-            this.xml_hearotSachar.TabIndex = 68;
+            this.xml_fee_comments_tb.Location = new System.Drawing.Point(23, 143);
+            this.xml_fee_comments_tb.Name = "xml_fee_comments_tb";
+            this.xml_fee_comments_tb.Size = new System.Drawing.Size(199, 20);
+            this.xml_fee_comments_tb.TabIndex = 68;
             // 
             // label50
             // 
@@ -3504,32 +3504,32 @@
             this.label51.Text = "תמונת מצב – הערכת העובד את עצמו     דירוג: 1 - זקוק לשיפור /  2 - סביר /  3 - טוב" +
     " /  4 – טוב מאוד / 5 – מצוין";
             // 
-            // tabPage8
+            // rehab_tab
             // 
-            this.tabPage8.Controls.Add(this.xmlg_dataGridView1);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(962, 366);
-            this.tabPage8.TabIndex = 2;
-            this.tabPage8.Text = "תכנית שיקום";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.rehab_tab.Controls.Add(this.xml_rehab_dgv);
+            this.rehab_tab.Location = new System.Drawing.Point(4, 22);
+            this.rehab_tab.Name = "rehab_tab";
+            this.rehab_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.rehab_tab.Size = new System.Drawing.Size(962, 366);
+            this.rehab_tab.TabIndex = 2;
+            this.rehab_tab.Text = "תכנית שיקום";
+            this.rehab_tab.UseVisualStyleBackColor = true;
             // 
-            // xmlg_dataGridView1
+            // xml_rehab_dgv
             // 
-            this.xmlg_dataGridView1.AllowUserToAddRows = false;
-            this.xmlg_dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.xmlg_dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.xml_rehab_dgv.AllowUserToAddRows = false;
+            this.xml_rehab_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.xml_rehab_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.number_col,
             this.yaad_col,
             this.bitzua_col,
             this.criterion_col,
             this.date_col});
-            this.xmlg_dataGridView1.Location = new System.Drawing.Point(63, 3);
-            this.xmlg_dataGridView1.Name = "xmlg_dataGridView1";
-            this.xmlg_dataGridView1.Size = new System.Drawing.Size(846, 354);
-            this.xmlg_dataGridView1.TabIndex = 0;
-            this.xmlg_dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.xml_rehab_dgv.Location = new System.Drawing.Point(63, 3);
+            this.xml_rehab_dgv.Name = "xml_rehab_dgv";
+            this.xml_rehab_dgv.Size = new System.Drawing.Size(846, 354);
+            this.xml_rehab_dgv.TabIndex = 0;
+            this.xml_rehab_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // number_col
             // 
@@ -3561,47 +3561,47 @@
             this.date_col.Name = "date_col";
             this.date_col.Width = 200;
             // 
-            // tabPage9
+            // resources_tab
             // 
-            this.tabPage9.Controls.Add(this.xml_kshayim);
-            this.tabPage9.Controls.Add(this.xml_mekorotTmicha);
-            this.tabPage9.Controls.Add(this.xml_nekudotHozek);
-            this.tabPage9.Controls.Add(this.label54);
-            this.tabPage9.Controls.Add(this.label53);
-            this.tabPage9.Controls.Add(this.label52);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(962, 366);
-            this.tabPage9.TabIndex = 3;
-            this.tabPage9.Text = "משאבים להשגת יעדים";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.resources_tab.Controls.Add(this.xml_kshayim_tb);
+            this.resources_tab.Controls.Add(this.xml_mekorotTmicha_tb);
+            this.resources_tab.Controls.Add(this.xml_strengths_tb);
+            this.resources_tab.Controls.Add(this.label54);
+            this.resources_tab.Controls.Add(this.label53);
+            this.resources_tab.Controls.Add(this.label52);
+            this.resources_tab.Location = new System.Drawing.Point(4, 22);
+            this.resources_tab.Name = "resources_tab";
+            this.resources_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.resources_tab.Size = new System.Drawing.Size(962, 366);
+            this.resources_tab.TabIndex = 3;
+            this.resources_tab.Text = "משאבים להשגת יעדים";
+            this.resources_tab.UseVisualStyleBackColor = true;
             // 
-            // xml_kshayim
+            // xml_kshayim_tb
             // 
-            this.xml_kshayim.Location = new System.Drawing.Point(300, 279);
-            this.xml_kshayim.Multiline = true;
-            this.xml_kshayim.Name = "xml_kshayim";
-            this.xml_kshayim.Size = new System.Drawing.Size(636, 66);
-            this.xml_kshayim.TabIndex = 1;
-            this.xml_kshayim.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
+            this.xml_kshayim_tb.Location = new System.Drawing.Point(300, 279);
+            this.xml_kshayim_tb.Multiline = true;
+            this.xml_kshayim_tb.Name = "xml_kshayim_tb";
+            this.xml_kshayim_tb.Size = new System.Drawing.Size(636, 66);
+            this.xml_kshayim_tb.TabIndex = 1;
+            this.xml_kshayim_tb.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
             // 
-            // xml_mekorotTmicha
+            // xml_mekorotTmicha_tb
             // 
-            this.xml_mekorotTmicha.Location = new System.Drawing.Point(300, 168);
-            this.xml_mekorotTmicha.Multiline = true;
-            this.xml_mekorotTmicha.Name = "xml_mekorotTmicha";
-            this.xml_mekorotTmicha.Size = new System.Drawing.Size(636, 66);
-            this.xml_mekorotTmicha.TabIndex = 1;
-            this.xml_mekorotTmicha.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
+            this.xml_mekorotTmicha_tb.Location = new System.Drawing.Point(300, 168);
+            this.xml_mekorotTmicha_tb.Multiline = true;
+            this.xml_mekorotTmicha_tb.Name = "xml_mekorotTmicha_tb";
+            this.xml_mekorotTmicha_tb.Size = new System.Drawing.Size(636, 66);
+            this.xml_mekorotTmicha_tb.TabIndex = 1;
+            this.xml_mekorotTmicha_tb.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
             // 
-            // xml_nekudotHozek
+            // xml_strengths_tb
             // 
-            this.xml_nekudotHozek.Location = new System.Drawing.Point(300, 50);
-            this.xml_nekudotHozek.Multiline = true;
-            this.xml_nekudotHozek.Name = "xml_nekudotHozek";
-            this.xml_nekudotHozek.Size = new System.Drawing.Size(636, 66);
-            this.xml_nekudotHozek.TabIndex = 1;
+            this.xml_strengths_tb.Location = new System.Drawing.Point(300, 50);
+            this.xml_strengths_tb.Multiline = true;
+            this.xml_strengths_tb.Name = "xml_strengths_tb";
+            this.xml_strengths_tb.Size = new System.Drawing.Size(636, 66);
+            this.xml_strengths_tb.TabIndex = 1;
             // 
             // label54
             // 
@@ -3679,17 +3679,17 @@
             this.Controls.Add(this.test_upload);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.quit_page);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.personal_plan_tc);
             this.Name = "PersonalPlan";
             this.Text = "PersonalPlan";
             this.Load += new System.EventHandler(this.PersonalPlan_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.personal_plan_tc.ResumeLayout(false);
+            this.personal_tab.ResumeLayout(false);
+            this.personal_tab.PerformLayout();
+            this.mazav_tab.ResumeLayout(false);
+            this.mazav_tc.ResumeLayout(false);
+            this.job_functionality_tab.ResumeLayout(false);
+            this.job_functionality_tab.PerformLayout();
             this.xmlgr_groupBox32.ResumeLayout(false);
             this.xmlgr_groupBox32.PerformLayout();
             this.xmlgr_groupBox25.ResumeLayout(false);
@@ -3706,8 +3706,8 @@
             this.xmlgr_groupBox29.PerformLayout();
             this.xmlgr_groupBox30.ResumeLayout(false);
             this.xmlgr_groupBox30.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.norms_tab.ResumeLayout(false);
+            this.norms_tab.PerformLayout();
             this.xmlgr_groupBox19.ResumeLayout(false);
             this.xmlgr_groupBox19.PerformLayout();
             this.xmlgr_groupBox20.ResumeLayout(false);
@@ -3720,8 +3720,8 @@
             this.xmlgr_groupBox23.PerformLayout();
             this.xmlgr_groupBox24.ResumeLayout(false);
             this.xmlgr_groupBox24.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.social_skills_tab.ResumeLayout(false);
+            this.social_skills_tab.PerformLayout();
             this.xmlgr_groupBox7.ResumeLayout(false);
             this.xmlgr_groupBox7.PerformLayout();
             this.xmlgr_groupBox8.ResumeLayout(false);
@@ -3734,8 +3734,8 @@
             this.xmlgr_groupBox11.PerformLayout();
             this.xmlgr_groupBox12.ResumeLayout(false);
             this.xmlgr_groupBox12.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
+            this.activte_assertive_tab.ResumeLayout(false);
+            this.activte_assertive_tab.PerformLayout();
             this.xmlgr_groupBox18.ResumeLayout(false);
             this.xmlgr_groupBox18.PerformLayout();
             this.xmlgr_groupBox17.ResumeLayout(false);
@@ -3748,8 +3748,8 @@
             this.xmlgr_groupBox14.PerformLayout();
             this.xmlgr_groupBox13.ResumeLayout(false);
             this.xmlgr_groupBox13.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
+            this.satisfactory_tab.ResumeLayout(false);
+            this.satisfactory_tab.PerformLayout();
             this.xmlgr_groupBox6.ResumeLayout(false);
             this.xmlgr_groupBox6.PerformLayout();
             this.xmlgr_groupBox4.ResumeLayout(false);
@@ -3762,32 +3762,32 @@
             this.xmlgr_groupBox3.PerformLayout();
             this.xmlgr_groupBox1.ResumeLayout(false);
             this.xmlgr_groupBox1.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xmlg_dataGridView1)).EndInit();
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage9.PerformLayout();
+            this.rehab_tab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xml_rehab_dgv)).EndInit();
+            this.resources_tab.ResumeLayout(false);
+            this.resources_tab.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl personal_plan_tc;
+        private System.Windows.Forms.TabPage personal_tab;
         private System.Windows.Forms.TextBox lastName_tb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage mazav_tab;
         private System.Windows.Forms.TextBox firstName_tb;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker xml_klita_dtp;
+        private System.Windows.Forms.Label klita_lb;
         private System.Windows.Forms.TextBox xml_hasamim;
         private System.Windows.Forms.TextBox xml_hatzlachot;
         private System.Windows.Forms.TextBox coord_tb;
-        private System.Windows.Forms.TextBox xml_sachar;
-        private System.Windows.Forms.TextBox xml_ktovet;
-        private System.Windows.Forms.TextBox xml_shemHaEsek;
-        private System.Windows.Forms.TextBox xml_sugHaavoda;
+        private System.Windows.Forms.TextBox xml_salary_tb;
+        private System.Windows.Forms.TextBox xml_ktovet_tb;
+        private System.Windows.Forms.TextBox xml_company_tb;
+        private System.Windows.Forms.TextBox xml_job_type_tb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
@@ -3803,87 +3803,87 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label ID_lb;
         private System.Windows.Forms.TextBox ID_tb;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabControl mazav_tc;
+        private System.Windows.Forms.TabPage job_functionality_tab;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox xml_hearotSeder;
+        private System.Windows.Forms.TextBox xml_comments_organization_tb;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox xml_hearotKatzev;
+        private System.Windows.Forms.TextBox xml_comments_rate_tb;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox xml_hearotEichut;
+        private System.Windows.Forms.TextBox xml_comments_job_quality_tb;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox xml_hearotHatmada;
+        private System.Windows.Forms.TextBox xml_comments_hatmada_tb;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage norms_tab;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox xml_hearotKlalim;
+        private System.Windows.Forms.TextBox xml_comments_Klalim_tb;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox xml_hearotHofaa;
+        private System.Windows.Forms.TextBox xml_comments_Hofaa_tb;
         private System.Windows.Forms.Label label29;
 
-        private System.Windows.Forms.TextBox xml_hearotZmanim;
+        private System.Windows.Forms.TextBox xml_comments_Zmanim_tb;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage social_skills_tab;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox xml_hearotSamchut;
+        private System.Windows.Forms.TextBox xml_comments_Samchut_tb;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox xml_hearotTzevet;
+        private System.Windows.Forms.TextBox xml_comments__Tzevet_tb;
         private System.Windows.Forms.Label label36;
 
-        private System.Windows.Forms.TextBox xml_hearotAmitim;
+        private System.Windows.Forms.TextBox xml_comments_Amitim_tb;
         
         private System.Windows.Forms.Label label37;
         
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage activte_assertive_tab;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox xml_hearotAchrayut;
+        private System.Windows.Forms.TextBox xml_comments_Achrayut_tb;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox xml_hearotAtzmaut;
+        private System.Windows.Forms.TextBox xml_comments_Atzmaut_tb;
         private System.Windows.Forms.Label label42;
 
-        private System.Windows.Forms.TextBox xml_hearotYozma;
+        private System.Windows.Forms.TextBox xml_comments_Yozma_tb;
 
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage satisfactory_tab;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox xml_hearotHitkadmut;
+        private System.Windows.Forms.TextBox xml_comments_progress_tb;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox xml_hearotInyan;
+        private System.Windows.Forms.TextBox xml_comments_value_tb;
         private System.Windows.Forms.Label label49;
 
-        private System.Windows.Forms.TextBox xml_hearotSachar;
+        private System.Windows.Forms.TextBox xml_fee_comments_tb;
 
         private System.Windows.Forms.Label label50;
 
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.DataGridView xmlg_dataGridView1;
+        private System.Windows.Forms.TabPage rehab_tab;
+        private System.Windows.Forms.DataGridView xml_rehab_dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn number_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn yaad_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn bitzua_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn criterion_col;
         private System.Windows.Forms.DataGridViewTextBoxColumn date_col;
-        private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.TextBox xml_mekorotTmicha;
-        private System.Windows.Forms.TextBox xml_nekudotHozek;
+        private System.Windows.Forms.TabPage resources_tab;
+        private System.Windows.Forms.TextBox xml_mekorotTmicha_tb;
+        private System.Windows.Forms.TextBox xml_strengths_tb;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.TextBox xml_kshayim;
+        private System.Windows.Forms.TextBox xml_kshayim_tb;
         private System.Windows.Forms.Button quit_page;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button test_upload;

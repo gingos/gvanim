@@ -38,7 +38,7 @@ namespace GvanimVS
             if (dt1 == null)
                 return;
             coord_tb.Text = dt1.Rows[0]["firstName"].ToString() + " " + dt1.Rows[0]["lastName"].ToString();
-            updateFieldsFromDB();
+            //updateFieldsFromDB();
         }
 
         private string textBoxesToDictionary()
@@ -47,7 +47,7 @@ namespace GvanimVS
             //using custom class - serializable dictionary 
             //returns the serialization xml as string
             xml_organizer = new SerializableDictionary<string, SerializableDictionary<string, string>>();
-            foreach (TabPage page in this.tabControl1.TabPages)
+            foreach (TabPage page in this.personal_plan_tc.TabPages)
             {
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
@@ -61,7 +61,7 @@ namespace GvanimVS
                     if (control is DataGridView)
                         if(control.Name.StartsWith("xmlg"))
                     {
-                        dat = Tools.GetContentAsDataTable((DataGridView)xmlg_dataGridView1, false);
+                        dat = Tools.GetContentAsDataTable((DataGridView)xml_rehab_dgv, false);
                         string dataGrid = Tools.SerializeXML<DataTable>(dat);
                         xml_tab.Add(control.Name, dataGrid);
                     }
@@ -71,7 +71,7 @@ namespace GvanimVS
 
                 
             }
-            foreach (TabPage page in this.tabControl2.TabPages)
+            foreach (TabPage page in this.mazav_tc.TabPages)
             {
                 SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
@@ -94,10 +94,10 @@ namespace GvanimVS
 
         private void PersonalPlan_Load(object sender, EventArgs e)
         {
-            xmlg_dataGridView1.Rows.Add(new string[] { "1", "", "", "", "" });
-            xmlg_dataGridView1.Rows.Add(new string[] { "2", "", "", "", "" });
-            xmlg_dataGridView1.Rows.Add(new string[] { "3", "", "", "", "" });
-            xmlg_dataGridView1.Rows.Add(new string[] { "4", "", "", "", "" });
+            xml_rehab_dgv.Rows.Add(new string[] { "1", "", "", "", "" });
+            xml_rehab_dgv.Rows.Add(new string[] { "2", "", "", "", "" });
+            xml_rehab_dgv.Rows.Add(new string[] { "3", "", "", "", "" });
+            xml_rehab_dgv.Rows.Add(new string[] { "4", "", "", "", "" });
         }
                 
         private void btn_update_Click(object sender, EventArgs e)
