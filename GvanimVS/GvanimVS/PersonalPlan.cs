@@ -38,7 +38,7 @@ namespace GvanimVS
             if (dt1 == null)
                 return;
             coord_tb.Text = dt1.Rows[0]["firstName"].ToString() + " " + dt1.Rows[0]["lastName"].ToString();
-            updateFieldsFromDB();
+            //updateFieldsFromDB();
         }
 
         private string textBoxesToDictionary()
@@ -59,7 +59,7 @@ namespace GvanimVS
                     if (control is DateTimePicker)
                         xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
                     if (control is DataGridView)
-                        if(control.Name.StartsWith("xmlg"))
+                        if(control.Name.StartsWith("xml"))
                     {
                         dat = Tools.GetContentAsDataTable((DataGridView)xmlg_dataGridView1, false);
                         string dataGrid = Tools.SerializeXML<DataTable>(dat);
@@ -67,9 +67,7 @@ namespace GvanimVS
                     }
 
                 }
-                xml_organizer.Add(page.Name, xml_tab);
-
-                
+                xml_organizer.Add(page.Name, xml_tab);              
             }
             foreach (TabPage page in this.tabControl2.TabPages)
             {
@@ -78,7 +76,7 @@ namespace GvanimVS
                 {
                     if (control is GroupBox)
                     {
-                        if (control.Name.StartsWith("xmlgr"))
+                        if (control.Name.StartsWith("xml"))
                         {
                             foreach (RadioButton r in control.Controls.OfType<RadioButton>())
                                 if (r.Checked)
