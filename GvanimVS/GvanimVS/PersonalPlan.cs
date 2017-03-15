@@ -74,7 +74,7 @@ namespace GvanimVS
                 }
                 xml_organizer.Add(page.Name, xml_tab);              
             }
-            foreach (TabPage page in this.mazav_tc.TabPages)
+           /* foreach (TabPage page in this.mazav_tc.TabPages)
             {
                 xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
@@ -88,14 +88,12 @@ namespace GvanimVS
                         {
                             if (control.Controls.OfType<RadioButton>().Any(r => r.Checked))
                                 xml_tab.Add(control.Name, (control.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Name));
-                            /* foreach (RadioButton r in control.Controls.OfType<RadioButton>())
-                                if (r.Checked)
-                                    xml_tab.Add(control.Name, r.Text);*/
+                           
                         }
                     }
                 }
                 xml_organizer.Add(page.Name, xml_tab);
-            }
+            } */
             string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
             return serializedOrganizer;
         }    
@@ -161,7 +159,7 @@ namespace GvanimVS
                         RadioButton rb = (RadioButton)((GroupBox)page1.Controls[controlKVP.Key]).Controls[controlKVP.Value];
                         rb.Checked = true;
                     }
-
+                    
 
 
                 }
