@@ -21,7 +21,7 @@ namespace GvanimVS
         {
             InitializeComponent();
             this.con = con;
-           
+
         }
 
         public PersonalPlan(SqlConnection con, string text) : base(con)
@@ -38,7 +38,7 @@ namespace GvanimVS
             if (dt1 == null)
                 return;
             coord_tb.Text = dt1.Rows[0]["firstName"].ToString() + " " + dt1.Rows[0]["lastName"].ToString();
-            updateFieldsFromDB();
+            updateFieldsFromDB(dt.Rows[0]["personalPlanXML"].ToString());
         }
 
         private string textBoxesToDictionary()
@@ -53,27 +53,28 @@ namespace GvanimVS
                 xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
-                        if (control.Name.StartsWith("xml"))
+                    if (control.Name.StartsWith("xml"))
                     {
                         if (control is TextBox)
                             xml_tab.Add(control.Name, control.Text);
                         else if (control is DateTimePicker)
-                        xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
+                            xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
                         else if (control is DataGridView)
-                    {
-                        dat = Tools.GetContentAsDataTable((DataGridView)xml_rehab_dgv, false);
-                        string dataGrid = Tools.SerializeXML<DataTable>(dat);
-                        xml_tab.Add(control.Name, dataGrid);
-                    }
+                        {
+                            dat = Tools.GetContentAsDataTable((DataGridView)xml_rehab_dgv, false);
+                            string dataGrid = Tools.SerializeXML<DataTable>(dat);
+                            xml_tab.Add(control.Name, dataGrid);
+                        }
                         else if (control is TabControl)
                         {
                             string test = Tools.SerializeXML(control.Controls);
-                            xml_tab.Add(control.Name,test );
-                }
+                            xml_tab.Add(control.Name, test);
+                        }
                     }
                 }
-                xml_organizer.Add(page.Name, xml_tab);              
+                xml_organizer.Add(page.Name, xml_tab);
             }
+            
             foreach (TabPage page in this.mazav_tc.TabPages)
             {
                 xml_tab = new SerializableDictionary<string, string>();
@@ -95,7 +96,7 @@ namespace GvanimVS
             }
             string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
             return serializedOrganizer;
-        }    
+        }
 
         private void PersonalPlan_Load(object sender, EventArgs e)
         {
@@ -104,11 +105,11 @@ namespace GvanimVS
             xml_rehab_dgv.Rows.Add(new string[] { "3", "", "", "", "" });
             xml_rehab_dgv.Rows.Add(new string[] { "4", "", "", "", "" });
         }
-                
+
         private void btn_update_Click(object sender, EventArgs e)
         {
-           string information = textBoxesToDictionary();
-            
+            string information = textBoxesToDictionary();
+
             //insert data into SQL server
             if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "personalPlanXML", "ID", ID_tb.Text, information, cmd))
                 MessageBox.Show("המידע נשמר בהצלחה");
@@ -122,7 +123,7 @@ namespace GvanimVS
         /// </summary>
         /// <param name=""></param>
 
-        private void updateFieldsFromDB()
+        private void updateFieldsFromDB(string OrganzierToDeserialize)
         {
             //get XML file from DB
 
@@ -164,7 +165,7 @@ namespace GvanimVS
                 }
             }
         }
-        
+
         private void quit_page_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -177,7 +178,7 @@ namespace GvanimVS
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label2_Click(object sender, EventArgs e)
