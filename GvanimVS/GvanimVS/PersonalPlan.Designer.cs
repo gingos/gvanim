@@ -61,43 +61,43 @@
             this.mazav_tab = new System.Windows.Forms.TabPage();
             this.mazav_tc = new System.Windows.Forms.TabControl();
             this.job_functionality_tab = new System.Windows.Forms.TabPage();
-            this.xmlgr_groupBox32 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox32_gb = new System.Windows.Forms.GroupBox();
             this.radioButton156 = new System.Windows.Forms.RadioButton();
             this.radioButton157 = new System.Windows.Forms.RadioButton();
             this.radioButton158 = new System.Windows.Forms.RadioButton();
             this.radioButton159 = new System.Windows.Forms.RadioButton();
             this.radioButton160 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox25 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox25_gb = new System.Windows.Forms.GroupBox();
             this.radioButton121 = new System.Windows.Forms.RadioButton();
             this.radioButton122 = new System.Windows.Forms.RadioButton();
             this.radioButton123 = new System.Windows.Forms.RadioButton();
             this.radioButton124 = new System.Windows.Forms.RadioButton();
             this.radioButton125 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox26 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox26_gb = new System.Windows.Forms.GroupBox();
             this.radioButton126 = new System.Windows.Forms.RadioButton();
             this.radioButton127 = new System.Windows.Forms.RadioButton();
             this.radioButton128 = new System.Windows.Forms.RadioButton();
             this.radioButton129 = new System.Windows.Forms.RadioButton();
             this.radioButton130 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox31 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox31_gb = new System.Windows.Forms.GroupBox();
             this.radioButton151 = new System.Windows.Forms.RadioButton();
             this.radioButton152 = new System.Windows.Forms.RadioButton();
             this.radioButton153 = new System.Windows.Forms.RadioButton();
             this.radioButton154 = new System.Windows.Forms.RadioButton();
             this.radioButton155 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox27 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox27_gb = new System.Windows.Forms.GroupBox();
             this.radioButton131 = new System.Windows.Forms.RadioButton();
             this.radioButton132 = new System.Windows.Forms.RadioButton();
             this.radioButton133 = new System.Windows.Forms.RadioButton();
             this.radioButton134 = new System.Windows.Forms.RadioButton();
             this.radioButton135 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox28 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox28_gb = new System.Windows.Forms.GroupBox();
             this.radioButton136 = new System.Windows.Forms.RadioButton();
             this.radioButton137 = new System.Windows.Forms.RadioButton();
             this.radioButton138 = new System.Windows.Forms.RadioButton();
             this.radioButton139 = new System.Windows.Forms.RadioButton();
             this.radioButton140 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox29 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox29_gb = new System.Windows.Forms.GroupBox();
             this.radioButton141 = new System.Windows.Forms.RadioButton();
             this.radioButton142 = new System.Windows.Forms.RadioButton();
             this.radioButton143 = new System.Windows.Forms.RadioButton();
@@ -122,37 +122,37 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.norms_tab = new System.Windows.Forms.TabPage();
-            this.xmlgr_groupBox19 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox19_gb = new System.Windows.Forms.GroupBox();
             this.radioButton91 = new System.Windows.Forms.RadioButton();
             this.radioButton92 = new System.Windows.Forms.RadioButton();
             this.radioButton93 = new System.Windows.Forms.RadioButton();
             this.radioButton94 = new System.Windows.Forms.RadioButton();
             this.radioButton95 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox20 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox20_gb = new System.Windows.Forms.GroupBox();
             this.radioButton96 = new System.Windows.Forms.RadioButton();
             this.radioButton97 = new System.Windows.Forms.RadioButton();
             this.radioButton98 = new System.Windows.Forms.RadioButton();
             this.radioButton99 = new System.Windows.Forms.RadioButton();
             this.radioButton100 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox21 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox21_gb = new System.Windows.Forms.GroupBox();
             this.radioButton101 = new System.Windows.Forms.RadioButton();
             this.radioButton102 = new System.Windows.Forms.RadioButton();
             this.radioButton103 = new System.Windows.Forms.RadioButton();
             this.radioButton104 = new System.Windows.Forms.RadioButton();
             this.radioButton105 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox22 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox22_gb = new System.Windows.Forms.GroupBox();
             this.radioButton106 = new System.Windows.Forms.RadioButton();
             this.radioButton107 = new System.Windows.Forms.RadioButton();
             this.radioButton108 = new System.Windows.Forms.RadioButton();
             this.radioButton109 = new System.Windows.Forms.RadioButton();
             this.radioButton110 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox23 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox23_gb = new System.Windows.Forms.GroupBox();
             this.radioButton111 = new System.Windows.Forms.RadioButton();
             this.radioButton112 = new System.Windows.Forms.RadioButton();
             this.radioButton113 = new System.Windows.Forms.RadioButton();
             this.radioButton114 = new System.Windows.Forms.RadioButton();
             this.radioButton115 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox24 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox24_gb = new System.Windows.Forms.GroupBox();
             this.radioButton116 = new System.Windows.Forms.RadioButton();
             this.radioButton117 = new System.Windows.Forms.RadioButton();
             this.radioButton118 = new System.Windows.Forms.RadioButton();
@@ -169,37 +169,37 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.social_skills_tab = new System.Windows.Forms.TabPage();
-            this.xmlgr_groupBox7 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox7_gb = new System.Windows.Forms.GroupBox();
             this.radioButton31 = new System.Windows.Forms.RadioButton();
             this.radioButton32 = new System.Windows.Forms.RadioButton();
             this.radioButton33 = new System.Windows.Forms.RadioButton();
             this.radioButton34 = new System.Windows.Forms.RadioButton();
             this.radioButton35 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox8 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox8_gb = new System.Windows.Forms.GroupBox();
             this.radioButton36 = new System.Windows.Forms.RadioButton();
             this.radioButton37 = new System.Windows.Forms.RadioButton();
             this.radioButton38 = new System.Windows.Forms.RadioButton();
             this.radioButton39 = new System.Windows.Forms.RadioButton();
             this.radioButton40 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox9 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox9_gb = new System.Windows.Forms.GroupBox();
             this.radioButton41 = new System.Windows.Forms.RadioButton();
             this.radioButton42 = new System.Windows.Forms.RadioButton();
             this.radioButton43 = new System.Windows.Forms.RadioButton();
             this.radioButton44 = new System.Windows.Forms.RadioButton();
             this.radioButton45 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox10 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox10_gb = new System.Windows.Forms.GroupBox();
             this.radioButton46 = new System.Windows.Forms.RadioButton();
             this.radioButton47 = new System.Windows.Forms.RadioButton();
             this.radioButton48 = new System.Windows.Forms.RadioButton();
             this.radioButton49 = new System.Windows.Forms.RadioButton();
             this.radioButton50 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox11 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox11_gb = new System.Windows.Forms.GroupBox();
             this.radioButton51 = new System.Windows.Forms.RadioButton();
             this.radioButton52 = new System.Windows.Forms.RadioButton();
             this.radioButton53 = new System.Windows.Forms.RadioButton();
             this.radioButton54 = new System.Windows.Forms.RadioButton();
             this.radioButton55 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox12 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox12_gb = new System.Windows.Forms.GroupBox();
             this.radioButton56 = new System.Windows.Forms.RadioButton();
             this.radioButton57 = new System.Windows.Forms.RadioButton();
             this.radioButton58 = new System.Windows.Forms.RadioButton();
@@ -216,37 +216,37 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.activte_assertive_tab = new System.Windows.Forms.TabPage();
-            this.xmlgr_groupBox18 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox18_gb = new System.Windows.Forms.GroupBox();
             this.radioButton86 = new System.Windows.Forms.RadioButton();
             this.radioButton87 = new System.Windows.Forms.RadioButton();
             this.radioButton88 = new System.Windows.Forms.RadioButton();
             this.radioButton89 = new System.Windows.Forms.RadioButton();
             this.radioButton90 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox17 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox17_gb = new System.Windows.Forms.GroupBox();
             this.radioButton81 = new System.Windows.Forms.RadioButton();
             this.radioButton82 = new System.Windows.Forms.RadioButton();
             this.radioButton83 = new System.Windows.Forms.RadioButton();
             this.radioButton84 = new System.Windows.Forms.RadioButton();
             this.radioButton85 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox16 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox16_gb = new System.Windows.Forms.GroupBox();
             this.radioButton76 = new System.Windows.Forms.RadioButton();
             this.radioButton77 = new System.Windows.Forms.RadioButton();
             this.radioButton78 = new System.Windows.Forms.RadioButton();
             this.radioButton79 = new System.Windows.Forms.RadioButton();
             this.radioButton80 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox15 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox15_gb = new System.Windows.Forms.GroupBox();
             this.radioButton71 = new System.Windows.Forms.RadioButton();
             this.radioButton72 = new System.Windows.Forms.RadioButton();
             this.radioButton73 = new System.Windows.Forms.RadioButton();
             this.radioButton74 = new System.Windows.Forms.RadioButton();
             this.radioButton75 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox14 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox14_gb = new System.Windows.Forms.GroupBox();
             this.radioButton66 = new System.Windows.Forms.RadioButton();
             this.radioButton67 = new System.Windows.Forms.RadioButton();
             this.radioButton68 = new System.Windows.Forms.RadioButton();
             this.radioButton69 = new System.Windows.Forms.RadioButton();
             this.radioButton70 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox13 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox13_gb = new System.Windows.Forms.GroupBox();
             this.radioButton61 = new System.Windows.Forms.RadioButton();
             this.radioButton62 = new System.Windows.Forms.RadioButton();
             this.radioButton63 = new System.Windows.Forms.RadioButton();
@@ -263,37 +263,37 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.satisfactory_tab = new System.Windows.Forms.TabPage();
-            this.xmlgr_groupBox6 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox6_gb = new System.Windows.Forms.GroupBox();
             this.radioButton26 = new System.Windows.Forms.RadioButton();
             this.radioButton27 = new System.Windows.Forms.RadioButton();
             this.radioButton28 = new System.Windows.Forms.RadioButton();
             this.radioButton29 = new System.Windows.Forms.RadioButton();
             this.radioButton30 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox4 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox4_gb = new System.Windows.Forms.GroupBox();
             this.radioButton16 = new System.Windows.Forms.RadioButton();
             this.radioButton17 = new System.Windows.Forms.RadioButton();
             this.radioButton18 = new System.Windows.Forms.RadioButton();
             this.radioButton19 = new System.Windows.Forms.RadioButton();
             this.radioButton20 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox2 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox2_gb = new System.Windows.Forms.GroupBox();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox5 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox5_gb = new System.Windows.Forms.GroupBox();
             this.radioButton21 = new System.Windows.Forms.RadioButton();
             this.radioButton22 = new System.Windows.Forms.RadioButton();
             this.radioButton23 = new System.Windows.Forms.RadioButton();
             this.radioButton24 = new System.Windows.Forms.RadioButton();
             this.radioButton25 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox3 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox3_gb = new System.Windows.Forms.GroupBox();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox1 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox1_gb = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -332,42 +332,42 @@
             this.mazav_tab.SuspendLayout();
             this.mazav_tc.SuspendLayout();
             this.job_functionality_tab.SuspendLayout();
-            this.xmlgr_groupBox32.SuspendLayout();
-            this.xmlgr_groupBox25.SuspendLayout();
-            this.xmlgr_groupBox26.SuspendLayout();
-            this.xmlgr_groupBox31.SuspendLayout();
-            this.xmlgr_groupBox27.SuspendLayout();
-            this.xmlgr_groupBox28.SuspendLayout();
-            this.xmlgr_groupBox29.SuspendLayout();
+            this.xml_groupBox32_gb.SuspendLayout();
+            this.xml_groupBox25_gb.SuspendLayout();
+            this.xml_groupBox26_gb.SuspendLayout();
+            this.xml_groupBox31_gb.SuspendLayout();
+            this.xml_groupBox27_gb.SuspendLayout();
+            this.xml_groupBox28_gb.SuspendLayout();
+            this.xml_groupBox29_gb.SuspendLayout();
             this.xml_groupBox30_gb.SuspendLayout();
             this.norms_tab.SuspendLayout();
-            this.xmlgr_groupBox19.SuspendLayout();
-            this.xmlgr_groupBox20.SuspendLayout();
-            this.xmlgr_groupBox21.SuspendLayout();
-            this.xmlgr_groupBox22.SuspendLayout();
-            this.xmlgr_groupBox23.SuspendLayout();
-            this.xmlgr_groupBox24.SuspendLayout();
+            this.xml_groupBox19_gb.SuspendLayout();
+            this.xml_groupBox20_gb.SuspendLayout();
+            this.xml_groupBox21_gb.SuspendLayout();
+            this.xml_groupBox22_gb.SuspendLayout();
+            this.xml_groupBox23_gb.SuspendLayout();
+            this.xml_groupBox24_gb.SuspendLayout();
             this.social_skills_tab.SuspendLayout();
-            this.xmlgr_groupBox7.SuspendLayout();
-            this.xmlgr_groupBox8.SuspendLayout();
-            this.xmlgr_groupBox9.SuspendLayout();
-            this.xmlgr_groupBox10.SuspendLayout();
-            this.xmlgr_groupBox11.SuspendLayout();
-            this.xmlgr_groupBox12.SuspendLayout();
+            this.xml_groupBox7_gb.SuspendLayout();
+            this.xml_groupBox8_gb.SuspendLayout();
+            this.xml_groupBox9_gb.SuspendLayout();
+            this.xml_groupBox10_gb.SuspendLayout();
+            this.xml_groupBox11_gb.SuspendLayout();
+            this.xml_groupBox12_gb.SuspendLayout();
             this.activte_assertive_tab.SuspendLayout();
-            this.xmlgr_groupBox18.SuspendLayout();
-            this.xmlgr_groupBox17.SuspendLayout();
-            this.xmlgr_groupBox16.SuspendLayout();
-            this.xmlgr_groupBox15.SuspendLayout();
-            this.xmlgr_groupBox14.SuspendLayout();
-            this.xmlgr_groupBox13.SuspendLayout();
+            this.xml_groupBox18_gb.SuspendLayout();
+            this.xml_groupBox17_gb.SuspendLayout();
+            this.xml_groupBox16_gb.SuspendLayout();
+            this.xml_groupBox15_gb.SuspendLayout();
+            this.xml_groupBox14_gb.SuspendLayout();
+            this.xml_groupBox13_gb.SuspendLayout();
             this.satisfactory_tab.SuspendLayout();
-            this.xmlgr_groupBox6.SuspendLayout();
-            this.xmlgr_groupBox4.SuspendLayout();
-            this.xmlgr_groupBox2.SuspendLayout();
-            this.xmlgr_groupBox5.SuspendLayout();
-            this.xmlgr_groupBox3.SuspendLayout();
-            this.xmlgr_groupBox1.SuspendLayout();
+            this.xml_groupBox6_gb.SuspendLayout();
+            this.xml_groupBox4_gb.SuspendLayout();
+            this.xml_groupBox2_gb.SuspendLayout();
+            this.xml_groupBox5_gb.SuspendLayout();
+            this.xml_groupBox3_gb.SuspendLayout();
+            this.xml_groupBox1_gb.SuspendLayout();
             this.rehab_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xml_rehab_dgv)).BeginInit();
             this.resources_tab.SuspendLayout();
@@ -703,13 +703,13 @@
             // 
             // job_functionality_tab
             // 
-            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox32);
-            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox25);
-            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox26);
-            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox31);
-            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox27);
-            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox28);
-            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox29);
+            this.job_functionality_tab.Controls.Add(this.xml_groupBox32_gb);
+            this.job_functionality_tab.Controls.Add(this.xml_groupBox25_gb);
+            this.job_functionality_tab.Controls.Add(this.xml_groupBox26_gb);
+            this.job_functionality_tab.Controls.Add(this.xml_groupBox31_gb);
+            this.job_functionality_tab.Controls.Add(this.xml_groupBox27_gb);
+            this.job_functionality_tab.Controls.Add(this.xml_groupBox28_gb);
+            this.job_functionality_tab.Controls.Add(this.xml_groupBox29_gb);
             this.job_functionality_tab.Controls.Add(this.xml_groupBox30_gb);
             this.job_functionality_tab.Controls.Add(this.label23);
             this.job_functionality_tab.Controls.Add(this.label22);
@@ -731,18 +731,18 @@
             this.job_functionality_tab.Text = "תפקוד בעבודה";
             this.job_functionality_tab.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox32
+            // xml_groupBox32_gb
             // 
-            this.xmlgr_groupBox32.Controls.Add(this.radioButton156);
-            this.xmlgr_groupBox32.Controls.Add(this.radioButton157);
-            this.xmlgr_groupBox32.Controls.Add(this.radioButton158);
-            this.xmlgr_groupBox32.Controls.Add(this.radioButton159);
-            this.xmlgr_groupBox32.Controls.Add(this.radioButton160);
-            this.xmlgr_groupBox32.Location = new System.Drawing.Point(308, 221);
-            this.xmlgr_groupBox32.Name = "xmlgr_groupBox32";
-            this.xmlgr_groupBox32.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox32.TabIndex = 76;
-            this.xmlgr_groupBox32.TabStop = false;
+            this.xml_groupBox32_gb.Controls.Add(this.radioButton156);
+            this.xml_groupBox32_gb.Controls.Add(this.radioButton157);
+            this.xml_groupBox32_gb.Controls.Add(this.radioButton158);
+            this.xml_groupBox32_gb.Controls.Add(this.radioButton159);
+            this.xml_groupBox32_gb.Controls.Add(this.radioButton160);
+            this.xml_groupBox32_gb.Location = new System.Drawing.Point(308, 221);
+            this.xml_groupBox32_gb.Name = "xml_groupBox32_gb";
+            this.xml_groupBox32_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox32_gb.TabIndex = 76;
+            this.xml_groupBox32_gb.TabStop = false;
             // 
             // radioButton156
             // 
@@ -799,18 +799,18 @@
             this.radioButton160.Text = "2";
             this.radioButton160.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox25
+            // xml_groupBox25_gb
             // 
-            this.xmlgr_groupBox25.Controls.Add(this.radioButton121);
-            this.xmlgr_groupBox25.Controls.Add(this.radioButton122);
-            this.xmlgr_groupBox25.Controls.Add(this.radioButton123);
-            this.xmlgr_groupBox25.Controls.Add(this.radioButton124);
-            this.xmlgr_groupBox25.Controls.Add(this.radioButton125);
-            this.xmlgr_groupBox25.Location = new System.Drawing.Point(308, 173);
-            this.xmlgr_groupBox25.Name = "xmlgr_groupBox25";
-            this.xmlgr_groupBox25.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox25.TabIndex = 76;
-            this.xmlgr_groupBox25.TabStop = false;
+            this.xml_groupBox25_gb.Controls.Add(this.radioButton121);
+            this.xml_groupBox25_gb.Controls.Add(this.radioButton122);
+            this.xml_groupBox25_gb.Controls.Add(this.radioButton123);
+            this.xml_groupBox25_gb.Controls.Add(this.radioButton124);
+            this.xml_groupBox25_gb.Controls.Add(this.radioButton125);
+            this.xml_groupBox25_gb.Location = new System.Drawing.Point(308, 173);
+            this.xml_groupBox25_gb.Name = "xml_groupBox25_gb";
+            this.xml_groupBox25_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox25_gb.TabIndex = 76;
+            this.xml_groupBox25_gb.TabStop = false;
             // 
             // radioButton121
             // 
@@ -867,18 +867,18 @@
             this.radioButton125.Text = "2";
             this.radioButton125.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox26
+            // xml_groupBox26_gb
             // 
-            this.xmlgr_groupBox26.Controls.Add(this.radioButton126);
-            this.xmlgr_groupBox26.Controls.Add(this.radioButton127);
-            this.xmlgr_groupBox26.Controls.Add(this.radioButton128);
-            this.xmlgr_groupBox26.Controls.Add(this.radioButton129);
-            this.xmlgr_groupBox26.Controls.Add(this.radioButton130);
-            this.xmlgr_groupBox26.Location = new System.Drawing.Point(308, 125);
-            this.xmlgr_groupBox26.Name = "xmlgr_groupBox26";
-            this.xmlgr_groupBox26.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox26.TabIndex = 77;
-            this.xmlgr_groupBox26.TabStop = false;
+            this.xml_groupBox26_gb.Controls.Add(this.radioButton126);
+            this.xml_groupBox26_gb.Controls.Add(this.radioButton127);
+            this.xml_groupBox26_gb.Controls.Add(this.radioButton128);
+            this.xml_groupBox26_gb.Controls.Add(this.radioButton129);
+            this.xml_groupBox26_gb.Controls.Add(this.radioButton130);
+            this.xml_groupBox26_gb.Location = new System.Drawing.Point(308, 125);
+            this.xml_groupBox26_gb.Name = "xml_groupBox26_gb";
+            this.xml_groupBox26_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox26_gb.TabIndex = 77;
+            this.xml_groupBox26_gb.TabStop = false;
             // 
             // radioButton126
             // 
@@ -935,18 +935,18 @@
             this.radioButton130.Text = "2";
             this.radioButton130.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox31
+            // xml_groupBox31_gb
             // 
-            this.xmlgr_groupBox31.Controls.Add(this.radioButton151);
-            this.xmlgr_groupBox31.Controls.Add(this.radioButton152);
-            this.xmlgr_groupBox31.Controls.Add(this.radioButton153);
-            this.xmlgr_groupBox31.Controls.Add(this.radioButton154);
-            this.xmlgr_groupBox31.Controls.Add(this.radioButton155);
-            this.xmlgr_groupBox31.Location = new System.Drawing.Point(570, 221);
-            this.xmlgr_groupBox31.Name = "xmlgr_groupBox31";
-            this.xmlgr_groupBox31.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox31.TabIndex = 79;
-            this.xmlgr_groupBox31.TabStop = false;
+            this.xml_groupBox31_gb.Controls.Add(this.radioButton151);
+            this.xml_groupBox31_gb.Controls.Add(this.radioButton152);
+            this.xml_groupBox31_gb.Controls.Add(this.radioButton153);
+            this.xml_groupBox31_gb.Controls.Add(this.radioButton154);
+            this.xml_groupBox31_gb.Controls.Add(this.radioButton155);
+            this.xml_groupBox31_gb.Location = new System.Drawing.Point(570, 221);
+            this.xml_groupBox31_gb.Name = "xml_groupBox31_gb";
+            this.xml_groupBox31_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox31_gb.TabIndex = 79;
+            this.xml_groupBox31_gb.TabStop = false;
             // 
             // radioButton151
             // 
@@ -1003,18 +1003,18 @@
             this.radioButton155.Text = "2";
             this.radioButton155.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox27
+            // xml_groupBox27_gb
             // 
-            this.xmlgr_groupBox27.Controls.Add(this.radioButton131);
-            this.xmlgr_groupBox27.Controls.Add(this.radioButton132);
-            this.xmlgr_groupBox27.Controls.Add(this.radioButton133);
-            this.xmlgr_groupBox27.Controls.Add(this.radioButton134);
-            this.xmlgr_groupBox27.Controls.Add(this.radioButton135);
-            this.xmlgr_groupBox27.Location = new System.Drawing.Point(308, 75);
-            this.xmlgr_groupBox27.Name = "xmlgr_groupBox27";
-            this.xmlgr_groupBox27.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox27.TabIndex = 78;
-            this.xmlgr_groupBox27.TabStop = false;
+            this.xml_groupBox27_gb.Controls.Add(this.radioButton131);
+            this.xml_groupBox27_gb.Controls.Add(this.radioButton132);
+            this.xml_groupBox27_gb.Controls.Add(this.radioButton133);
+            this.xml_groupBox27_gb.Controls.Add(this.radioButton134);
+            this.xml_groupBox27_gb.Controls.Add(this.radioButton135);
+            this.xml_groupBox27_gb.Location = new System.Drawing.Point(308, 75);
+            this.xml_groupBox27_gb.Name = "xml_groupBox27_gb";
+            this.xml_groupBox27_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox27_gb.TabIndex = 78;
+            this.xml_groupBox27_gb.TabStop = false;
             // 
             // radioButton131
             // 
@@ -1071,18 +1071,18 @@
             this.radioButton135.Text = "2";
             this.radioButton135.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox28
+            // xml_groupBox28_gb
             // 
-            this.xmlgr_groupBox28.Controls.Add(this.radioButton136);
-            this.xmlgr_groupBox28.Controls.Add(this.radioButton137);
-            this.xmlgr_groupBox28.Controls.Add(this.radioButton138);
-            this.xmlgr_groupBox28.Controls.Add(this.radioButton139);
-            this.xmlgr_groupBox28.Controls.Add(this.radioButton140);
-            this.xmlgr_groupBox28.Location = new System.Drawing.Point(570, 173);
-            this.xmlgr_groupBox28.Name = "xmlgr_groupBox28";
-            this.xmlgr_groupBox28.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox28.TabIndex = 79;
-            this.xmlgr_groupBox28.TabStop = false;
+            this.xml_groupBox28_gb.Controls.Add(this.radioButton136);
+            this.xml_groupBox28_gb.Controls.Add(this.radioButton137);
+            this.xml_groupBox28_gb.Controls.Add(this.radioButton138);
+            this.xml_groupBox28_gb.Controls.Add(this.radioButton139);
+            this.xml_groupBox28_gb.Controls.Add(this.radioButton140);
+            this.xml_groupBox28_gb.Location = new System.Drawing.Point(570, 173);
+            this.xml_groupBox28_gb.Name = "xml_groupBox28_gb";
+            this.xml_groupBox28_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox28_gb.TabIndex = 79;
+            this.xml_groupBox28_gb.TabStop = false;
             // 
             // radioButton136
             // 
@@ -1139,18 +1139,18 @@
             this.radioButton140.Text = "2";
             this.radioButton140.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox29
+            // xml_groupBox29_gb
             // 
-            this.xmlgr_groupBox29.Controls.Add(this.radioButton141);
-            this.xmlgr_groupBox29.Controls.Add(this.radioButton142);
-            this.xmlgr_groupBox29.Controls.Add(this.radioButton143);
-            this.xmlgr_groupBox29.Controls.Add(this.radioButton144);
-            this.xmlgr_groupBox29.Controls.Add(this.radioButton145);
-            this.xmlgr_groupBox29.Location = new System.Drawing.Point(570, 125);
-            this.xmlgr_groupBox29.Name = "xmlgr_groupBox29";
-            this.xmlgr_groupBox29.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox29.TabIndex = 80;
-            this.xmlgr_groupBox29.TabStop = false;
+            this.xml_groupBox29_gb.Controls.Add(this.radioButton141);
+            this.xml_groupBox29_gb.Controls.Add(this.radioButton142);
+            this.xml_groupBox29_gb.Controls.Add(this.radioButton143);
+            this.xml_groupBox29_gb.Controls.Add(this.radioButton144);
+            this.xml_groupBox29_gb.Controls.Add(this.radioButton145);
+            this.xml_groupBox29_gb.Location = new System.Drawing.Point(570, 125);
+            this.xml_groupBox29_gb.Name = "xml_groupBox29_gb";
+            this.xml_groupBox29_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox29_gb.TabIndex = 80;
+            this.xml_groupBox29_gb.TabStop = false;
             // 
             // radioButton141
             // 
@@ -1382,12 +1382,12 @@
             // 
             // norms_tab
             // 
-            this.norms_tab.Controls.Add(this.xmlgr_groupBox19);
-            this.norms_tab.Controls.Add(this.xmlgr_groupBox20);
-            this.norms_tab.Controls.Add(this.xmlgr_groupBox21);
-            this.norms_tab.Controls.Add(this.xmlgr_groupBox22);
-            this.norms_tab.Controls.Add(this.xmlgr_groupBox23);
-            this.norms_tab.Controls.Add(this.xmlgr_groupBox24);
+            this.norms_tab.Controls.Add(this.xml_groupBox19_gb);
+            this.norms_tab.Controls.Add(this.xml_groupBox20_gb);
+            this.norms_tab.Controls.Add(this.xml_groupBox21_gb);
+            this.norms_tab.Controls.Add(this.xml_groupBox22_gb);
+            this.norms_tab.Controls.Add(this.xml_groupBox23_gb);
+            this.norms_tab.Controls.Add(this.xml_groupBox24_gb);
             this.norms_tab.Controls.Add(this.label24);
             this.norms_tab.Controls.Add(this.label25);
             this.norms_tab.Controls.Add(this.label26);
@@ -1406,18 +1406,18 @@
             this.norms_tab.Text = "עמידה בנורמות";
             this.norms_tab.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox19
+            // xml_groupBox19_gb
             // 
-            this.xmlgr_groupBox19.Controls.Add(this.radioButton91);
-            this.xmlgr_groupBox19.Controls.Add(this.radioButton92);
-            this.xmlgr_groupBox19.Controls.Add(this.radioButton93);
-            this.xmlgr_groupBox19.Controls.Add(this.radioButton94);
-            this.xmlgr_groupBox19.Controls.Add(this.radioButton95);
-            this.xmlgr_groupBox19.Location = new System.Drawing.Point(275, 199);
-            this.xmlgr_groupBox19.Name = "xmlgr_groupBox19";
-            this.xmlgr_groupBox19.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox19.TabIndex = 76;
-            this.xmlgr_groupBox19.TabStop = false;
+            this.xml_groupBox19_gb.Controls.Add(this.radioButton91);
+            this.xml_groupBox19_gb.Controls.Add(this.radioButton92);
+            this.xml_groupBox19_gb.Controls.Add(this.radioButton93);
+            this.xml_groupBox19_gb.Controls.Add(this.radioButton94);
+            this.xml_groupBox19_gb.Controls.Add(this.radioButton95);
+            this.xml_groupBox19_gb.Location = new System.Drawing.Point(275, 199);
+            this.xml_groupBox19_gb.Name = "xml_groupBox19_gb";
+            this.xml_groupBox19_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox19_gb.TabIndex = 76;
+            this.xml_groupBox19_gb.TabStop = false;
             // 
             // radioButton91
             // 
@@ -1474,18 +1474,18 @@
             this.radioButton95.Text = "2";
             this.radioButton95.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox20
+            // xml_groupBox20_gb
             // 
-            this.xmlgr_groupBox20.Controls.Add(this.radioButton96);
-            this.xmlgr_groupBox20.Controls.Add(this.radioButton97);
-            this.xmlgr_groupBox20.Controls.Add(this.radioButton98);
-            this.xmlgr_groupBox20.Controls.Add(this.radioButton99);
-            this.xmlgr_groupBox20.Controls.Add(this.radioButton100);
-            this.xmlgr_groupBox20.Location = new System.Drawing.Point(275, 151);
-            this.xmlgr_groupBox20.Name = "xmlgr_groupBox20";
-            this.xmlgr_groupBox20.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox20.TabIndex = 77;
-            this.xmlgr_groupBox20.TabStop = false;
+            this.xml_groupBox20_gb.Controls.Add(this.radioButton96);
+            this.xml_groupBox20_gb.Controls.Add(this.radioButton97);
+            this.xml_groupBox20_gb.Controls.Add(this.radioButton98);
+            this.xml_groupBox20_gb.Controls.Add(this.radioButton99);
+            this.xml_groupBox20_gb.Controls.Add(this.radioButton100);
+            this.xml_groupBox20_gb.Location = new System.Drawing.Point(275, 151);
+            this.xml_groupBox20_gb.Name = "xml_groupBox20_gb";
+            this.xml_groupBox20_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox20_gb.TabIndex = 77;
+            this.xml_groupBox20_gb.TabStop = false;
             // 
             // radioButton96
             // 
@@ -1542,18 +1542,18 @@
             this.radioButton100.Text = "2";
             this.radioButton100.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox21
+            // xml_groupBox21_gb
             // 
-            this.xmlgr_groupBox21.Controls.Add(this.radioButton101);
-            this.xmlgr_groupBox21.Controls.Add(this.radioButton102);
-            this.xmlgr_groupBox21.Controls.Add(this.radioButton103);
-            this.xmlgr_groupBox21.Controls.Add(this.radioButton104);
-            this.xmlgr_groupBox21.Controls.Add(this.radioButton105);
-            this.xmlgr_groupBox21.Location = new System.Drawing.Point(275, 101);
-            this.xmlgr_groupBox21.Name = "xmlgr_groupBox21";
-            this.xmlgr_groupBox21.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox21.TabIndex = 78;
-            this.xmlgr_groupBox21.TabStop = false;
+            this.xml_groupBox21_gb.Controls.Add(this.radioButton101);
+            this.xml_groupBox21_gb.Controls.Add(this.radioButton102);
+            this.xml_groupBox21_gb.Controls.Add(this.radioButton103);
+            this.xml_groupBox21_gb.Controls.Add(this.radioButton104);
+            this.xml_groupBox21_gb.Controls.Add(this.radioButton105);
+            this.xml_groupBox21_gb.Location = new System.Drawing.Point(275, 101);
+            this.xml_groupBox21_gb.Name = "xml_groupBox21_gb";
+            this.xml_groupBox21_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox21_gb.TabIndex = 78;
+            this.xml_groupBox21_gb.TabStop = false;
             // 
             // radioButton101
             // 
@@ -1610,18 +1610,18 @@
             this.radioButton105.Text = "2";
             this.radioButton105.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox22
+            // xml_groupBox22_gb
             // 
-            this.xmlgr_groupBox22.Controls.Add(this.radioButton106);
-            this.xmlgr_groupBox22.Controls.Add(this.radioButton107);
-            this.xmlgr_groupBox22.Controls.Add(this.radioButton108);
-            this.xmlgr_groupBox22.Controls.Add(this.radioButton109);
-            this.xmlgr_groupBox22.Controls.Add(this.radioButton110);
-            this.xmlgr_groupBox22.Location = new System.Drawing.Point(537, 199);
-            this.xmlgr_groupBox22.Name = "xmlgr_groupBox22";
-            this.xmlgr_groupBox22.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox22.TabIndex = 79;
-            this.xmlgr_groupBox22.TabStop = false;
+            this.xml_groupBox22_gb.Controls.Add(this.radioButton106);
+            this.xml_groupBox22_gb.Controls.Add(this.radioButton107);
+            this.xml_groupBox22_gb.Controls.Add(this.radioButton108);
+            this.xml_groupBox22_gb.Controls.Add(this.radioButton109);
+            this.xml_groupBox22_gb.Controls.Add(this.radioButton110);
+            this.xml_groupBox22_gb.Location = new System.Drawing.Point(537, 199);
+            this.xml_groupBox22_gb.Name = "xml_groupBox22_gb";
+            this.xml_groupBox22_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox22_gb.TabIndex = 79;
+            this.xml_groupBox22_gb.TabStop = false;
             // 
             // radioButton106
             // 
@@ -1678,18 +1678,18 @@
             this.radioButton110.Text = "2";
             this.radioButton110.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox23
+            // xml_groupBox23_gb
             // 
-            this.xmlgr_groupBox23.Controls.Add(this.radioButton111);
-            this.xmlgr_groupBox23.Controls.Add(this.radioButton112);
-            this.xmlgr_groupBox23.Controls.Add(this.radioButton113);
-            this.xmlgr_groupBox23.Controls.Add(this.radioButton114);
-            this.xmlgr_groupBox23.Controls.Add(this.radioButton115);
-            this.xmlgr_groupBox23.Location = new System.Drawing.Point(537, 151);
-            this.xmlgr_groupBox23.Name = "xmlgr_groupBox23";
-            this.xmlgr_groupBox23.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox23.TabIndex = 80;
-            this.xmlgr_groupBox23.TabStop = false;
+            this.xml_groupBox23_gb.Controls.Add(this.radioButton111);
+            this.xml_groupBox23_gb.Controls.Add(this.radioButton112);
+            this.xml_groupBox23_gb.Controls.Add(this.radioButton113);
+            this.xml_groupBox23_gb.Controls.Add(this.radioButton114);
+            this.xml_groupBox23_gb.Controls.Add(this.radioButton115);
+            this.xml_groupBox23_gb.Location = new System.Drawing.Point(537, 151);
+            this.xml_groupBox23_gb.Name = "xml_groupBox23_gb";
+            this.xml_groupBox23_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox23_gb.TabIndex = 80;
+            this.xml_groupBox23_gb.TabStop = false;
             // 
             // radioButton111
             // 
@@ -1746,18 +1746,18 @@
             this.radioButton115.Text = "2";
             this.radioButton115.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox24
+            // xml_groupBox24_gb
             // 
-            this.xmlgr_groupBox24.Controls.Add(this.radioButton116);
-            this.xmlgr_groupBox24.Controls.Add(this.radioButton117);
-            this.xmlgr_groupBox24.Controls.Add(this.radioButton118);
-            this.xmlgr_groupBox24.Controls.Add(this.radioButton119);
-            this.xmlgr_groupBox24.Controls.Add(this.radioButton120);
-            this.xmlgr_groupBox24.Location = new System.Drawing.Point(537, 101);
-            this.xmlgr_groupBox24.Name = "xmlgr_groupBox24";
-            this.xmlgr_groupBox24.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox24.TabIndex = 81;
-            this.xmlgr_groupBox24.TabStop = false;
+            this.xml_groupBox24_gb.Controls.Add(this.radioButton116);
+            this.xml_groupBox24_gb.Controls.Add(this.radioButton117);
+            this.xml_groupBox24_gb.Controls.Add(this.radioButton118);
+            this.xml_groupBox24_gb.Controls.Add(this.radioButton119);
+            this.xml_groupBox24_gb.Controls.Add(this.radioButton120);
+            this.xml_groupBox24_gb.Location = new System.Drawing.Point(537, 101);
+            this.xml_groupBox24_gb.Name = "xml_groupBox24_gb";
+            this.xml_groupBox24_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox24_gb.TabIndex = 81;
+            this.xml_groupBox24_gb.TabStop = false;
             // 
             // radioButton116
             // 
@@ -1905,12 +1905,12 @@
             // 
             // social_skills_tab
             // 
-            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox7);
-            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox8);
-            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox9);
-            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox10);
-            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox11);
-            this.social_skills_tab.Controls.Add(this.xmlgr_groupBox12);
+            this.social_skills_tab.Controls.Add(this.xml_groupBox7_gb);
+            this.social_skills_tab.Controls.Add(this.xml_groupBox8_gb);
+            this.social_skills_tab.Controls.Add(this.xml_groupBox9_gb);
+            this.social_skills_tab.Controls.Add(this.xml_groupBox10_gb);
+            this.social_skills_tab.Controls.Add(this.xml_groupBox11_gb);
+            this.social_skills_tab.Controls.Add(this.xml_groupBox12_gb);
             this.social_skills_tab.Controls.Add(this.label27);
             this.social_skills_tab.Controls.Add(this.label32);
             this.social_skills_tab.Controls.Add(this.label33);
@@ -1929,18 +1929,18 @@
             this.social_skills_tab.Text = "קשרים בין אישיים ";
             this.social_skills_tab.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox7
+            // xml_groupBox7_gb
             // 
-            this.xmlgr_groupBox7.Controls.Add(this.radioButton31);
-            this.xmlgr_groupBox7.Controls.Add(this.radioButton32);
-            this.xmlgr_groupBox7.Controls.Add(this.radioButton33);
-            this.xmlgr_groupBox7.Controls.Add(this.radioButton34);
-            this.xmlgr_groupBox7.Controls.Add(this.radioButton35);
-            this.xmlgr_groupBox7.Location = new System.Drawing.Point(278, 200);
-            this.xmlgr_groupBox7.Name = "xmlgr_groupBox7";
-            this.xmlgr_groupBox7.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox7.TabIndex = 76;
-            this.xmlgr_groupBox7.TabStop = false;
+            this.xml_groupBox7_gb.Controls.Add(this.radioButton31);
+            this.xml_groupBox7_gb.Controls.Add(this.radioButton32);
+            this.xml_groupBox7_gb.Controls.Add(this.radioButton33);
+            this.xml_groupBox7_gb.Controls.Add(this.radioButton34);
+            this.xml_groupBox7_gb.Controls.Add(this.radioButton35);
+            this.xml_groupBox7_gb.Location = new System.Drawing.Point(278, 200);
+            this.xml_groupBox7_gb.Name = "xml_groupBox7_gb";
+            this.xml_groupBox7_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox7_gb.TabIndex = 76;
+            this.xml_groupBox7_gb.TabStop = false;
             // 
             // radioButton31
             // 
@@ -1997,18 +1997,18 @@
             this.radioButton35.Text = "2";
             this.radioButton35.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox8
+            // xml_groupBox8_gb
             // 
-            this.xmlgr_groupBox8.Controls.Add(this.radioButton36);
-            this.xmlgr_groupBox8.Controls.Add(this.radioButton37);
-            this.xmlgr_groupBox8.Controls.Add(this.radioButton38);
-            this.xmlgr_groupBox8.Controls.Add(this.radioButton39);
-            this.xmlgr_groupBox8.Controls.Add(this.radioButton40);
-            this.xmlgr_groupBox8.Location = new System.Drawing.Point(278, 152);
-            this.xmlgr_groupBox8.Name = "xmlgr_groupBox8";
-            this.xmlgr_groupBox8.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox8.TabIndex = 77;
-            this.xmlgr_groupBox8.TabStop = false;
+            this.xml_groupBox8_gb.Controls.Add(this.radioButton36);
+            this.xml_groupBox8_gb.Controls.Add(this.radioButton37);
+            this.xml_groupBox8_gb.Controls.Add(this.radioButton38);
+            this.xml_groupBox8_gb.Controls.Add(this.radioButton39);
+            this.xml_groupBox8_gb.Controls.Add(this.radioButton40);
+            this.xml_groupBox8_gb.Location = new System.Drawing.Point(278, 152);
+            this.xml_groupBox8_gb.Name = "xml_groupBox8_gb";
+            this.xml_groupBox8_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox8_gb.TabIndex = 77;
+            this.xml_groupBox8_gb.TabStop = false;
             // 
             // radioButton36
             // 
@@ -2065,18 +2065,18 @@
             this.radioButton40.Text = "2";
             this.radioButton40.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox9
+            // xml_groupBox9_gb
             // 
-            this.xmlgr_groupBox9.Controls.Add(this.radioButton41);
-            this.xmlgr_groupBox9.Controls.Add(this.radioButton42);
-            this.xmlgr_groupBox9.Controls.Add(this.radioButton43);
-            this.xmlgr_groupBox9.Controls.Add(this.radioButton44);
-            this.xmlgr_groupBox9.Controls.Add(this.radioButton45);
-            this.xmlgr_groupBox9.Location = new System.Drawing.Point(278, 102);
-            this.xmlgr_groupBox9.Name = "xmlgr_groupBox9";
-            this.xmlgr_groupBox9.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox9.TabIndex = 78;
-            this.xmlgr_groupBox9.TabStop = false;
+            this.xml_groupBox9_gb.Controls.Add(this.radioButton41);
+            this.xml_groupBox9_gb.Controls.Add(this.radioButton42);
+            this.xml_groupBox9_gb.Controls.Add(this.radioButton43);
+            this.xml_groupBox9_gb.Controls.Add(this.radioButton44);
+            this.xml_groupBox9_gb.Controls.Add(this.radioButton45);
+            this.xml_groupBox9_gb.Location = new System.Drawing.Point(278, 102);
+            this.xml_groupBox9_gb.Name = "xml_groupBox9_gb";
+            this.xml_groupBox9_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox9_gb.TabIndex = 78;
+            this.xml_groupBox9_gb.TabStop = false;
             // 
             // radioButton41
             // 
@@ -2133,18 +2133,18 @@
             this.radioButton45.Text = "2";
             this.radioButton45.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox10
+            // xml_groupBox10_gb
             // 
-            this.xmlgr_groupBox10.Controls.Add(this.radioButton46);
-            this.xmlgr_groupBox10.Controls.Add(this.radioButton47);
-            this.xmlgr_groupBox10.Controls.Add(this.radioButton48);
-            this.xmlgr_groupBox10.Controls.Add(this.radioButton49);
-            this.xmlgr_groupBox10.Controls.Add(this.radioButton50);
-            this.xmlgr_groupBox10.Location = new System.Drawing.Point(540, 200);
-            this.xmlgr_groupBox10.Name = "xmlgr_groupBox10";
-            this.xmlgr_groupBox10.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox10.TabIndex = 79;
-            this.xmlgr_groupBox10.TabStop = false;
+            this.xml_groupBox10_gb.Controls.Add(this.radioButton46);
+            this.xml_groupBox10_gb.Controls.Add(this.radioButton47);
+            this.xml_groupBox10_gb.Controls.Add(this.radioButton48);
+            this.xml_groupBox10_gb.Controls.Add(this.radioButton49);
+            this.xml_groupBox10_gb.Controls.Add(this.radioButton50);
+            this.xml_groupBox10_gb.Location = new System.Drawing.Point(540, 200);
+            this.xml_groupBox10_gb.Name = "xml_groupBox10_gb";
+            this.xml_groupBox10_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox10_gb.TabIndex = 79;
+            this.xml_groupBox10_gb.TabStop = false;
             // 
             // radioButton46
             // 
@@ -2201,18 +2201,18 @@
             this.radioButton50.Text = "2";
             this.radioButton50.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox11
+            // xml_groupBox11_gb
             // 
-            this.xmlgr_groupBox11.Controls.Add(this.radioButton51);
-            this.xmlgr_groupBox11.Controls.Add(this.radioButton52);
-            this.xmlgr_groupBox11.Controls.Add(this.radioButton53);
-            this.xmlgr_groupBox11.Controls.Add(this.radioButton54);
-            this.xmlgr_groupBox11.Controls.Add(this.radioButton55);
-            this.xmlgr_groupBox11.Location = new System.Drawing.Point(540, 152);
-            this.xmlgr_groupBox11.Name = "xmlgr_groupBox11";
-            this.xmlgr_groupBox11.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox11.TabIndex = 80;
-            this.xmlgr_groupBox11.TabStop = false;
+            this.xml_groupBox11_gb.Controls.Add(this.radioButton51);
+            this.xml_groupBox11_gb.Controls.Add(this.radioButton52);
+            this.xml_groupBox11_gb.Controls.Add(this.radioButton53);
+            this.xml_groupBox11_gb.Controls.Add(this.radioButton54);
+            this.xml_groupBox11_gb.Controls.Add(this.radioButton55);
+            this.xml_groupBox11_gb.Location = new System.Drawing.Point(540, 152);
+            this.xml_groupBox11_gb.Name = "xml_groupBox11_gb";
+            this.xml_groupBox11_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox11_gb.TabIndex = 80;
+            this.xml_groupBox11_gb.TabStop = false;
             // 
             // radioButton51
             // 
@@ -2269,18 +2269,18 @@
             this.radioButton55.Text = "2";
             this.radioButton55.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox12
+            // xml_groupBox12_gb
             // 
-            this.xmlgr_groupBox12.Controls.Add(this.radioButton56);
-            this.xmlgr_groupBox12.Controls.Add(this.radioButton57);
-            this.xmlgr_groupBox12.Controls.Add(this.radioButton58);
-            this.xmlgr_groupBox12.Controls.Add(this.radioButton59);
-            this.xmlgr_groupBox12.Controls.Add(this.radioButton60);
-            this.xmlgr_groupBox12.Location = new System.Drawing.Point(540, 102);
-            this.xmlgr_groupBox12.Name = "xmlgr_groupBox12";
-            this.xmlgr_groupBox12.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox12.TabIndex = 81;
-            this.xmlgr_groupBox12.TabStop = false;
+            this.xml_groupBox12_gb.Controls.Add(this.radioButton56);
+            this.xml_groupBox12_gb.Controls.Add(this.radioButton57);
+            this.xml_groupBox12_gb.Controls.Add(this.radioButton58);
+            this.xml_groupBox12_gb.Controls.Add(this.radioButton59);
+            this.xml_groupBox12_gb.Controls.Add(this.radioButton60);
+            this.xml_groupBox12_gb.Location = new System.Drawing.Point(540, 102);
+            this.xml_groupBox12_gb.Name = "xml_groupBox12_gb";
+            this.xml_groupBox12_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox12_gb.TabIndex = 81;
+            this.xml_groupBox12_gb.TabStop = false;
             // 
             // radioButton56
             // 
@@ -2428,12 +2428,12 @@
             // 
             // activte_assertive_tab
             // 
-            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox18);
-            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox17);
-            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox16);
-            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox15);
-            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox14);
-            this.activte_assertive_tab.Controls.Add(this.xmlgr_groupBox13);
+            this.activte_assertive_tab.Controls.Add(this.xml_groupBox18_gb);
+            this.activte_assertive_tab.Controls.Add(this.xml_groupBox17_gb);
+            this.activte_assertive_tab.Controls.Add(this.xml_groupBox16_gb);
+            this.activte_assertive_tab.Controls.Add(this.xml_groupBox15_gb);
+            this.activte_assertive_tab.Controls.Add(this.xml_groupBox14_gb);
+            this.activte_assertive_tab.Controls.Add(this.xml_groupBox13_gb);
             this.activte_assertive_tab.Controls.Add(this.label34);
             this.activte_assertive_tab.Controls.Add(this.label39);
             this.activte_assertive_tab.Controls.Add(this.label40);
@@ -2452,18 +2452,18 @@
             this.activte_assertive_tab.Text = "פרו אקטיביות ואסרטיביות ";
             this.activte_assertive_tab.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox18
+            // xml_groupBox18_gb
             // 
-            this.xmlgr_groupBox18.Controls.Add(this.radioButton86);
-            this.xmlgr_groupBox18.Controls.Add(this.radioButton87);
-            this.xmlgr_groupBox18.Controls.Add(this.radioButton88);
-            this.xmlgr_groupBox18.Controls.Add(this.radioButton89);
-            this.xmlgr_groupBox18.Controls.Add(this.radioButton90);
-            this.xmlgr_groupBox18.Location = new System.Drawing.Point(251, 234);
-            this.xmlgr_groupBox18.Name = "xmlgr_groupBox18";
-            this.xmlgr_groupBox18.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox18.TabIndex = 76;
-            this.xmlgr_groupBox18.TabStop = false;
+            this.xml_groupBox18_gb.Controls.Add(this.radioButton86);
+            this.xml_groupBox18_gb.Controls.Add(this.radioButton87);
+            this.xml_groupBox18_gb.Controls.Add(this.radioButton88);
+            this.xml_groupBox18_gb.Controls.Add(this.radioButton89);
+            this.xml_groupBox18_gb.Controls.Add(this.radioButton90);
+            this.xml_groupBox18_gb.Location = new System.Drawing.Point(251, 234);
+            this.xml_groupBox18_gb.Name = "xml_groupBox18_gb";
+            this.xml_groupBox18_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox18_gb.TabIndex = 76;
+            this.xml_groupBox18_gb.TabStop = false;
             // 
             // radioButton86
             // 
@@ -2520,18 +2520,18 @@
             this.radioButton90.Text = "2";
             this.radioButton90.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox17
+            // xml_groupBox17_gb
             // 
-            this.xmlgr_groupBox17.Controls.Add(this.radioButton81);
-            this.xmlgr_groupBox17.Controls.Add(this.radioButton82);
-            this.xmlgr_groupBox17.Controls.Add(this.radioButton83);
-            this.xmlgr_groupBox17.Controls.Add(this.radioButton84);
-            this.xmlgr_groupBox17.Controls.Add(this.radioButton85);
-            this.xmlgr_groupBox17.Location = new System.Drawing.Point(251, 186);
-            this.xmlgr_groupBox17.Name = "xmlgr_groupBox17";
-            this.xmlgr_groupBox17.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox17.TabIndex = 77;
-            this.xmlgr_groupBox17.TabStop = false;
+            this.xml_groupBox17_gb.Controls.Add(this.radioButton81);
+            this.xml_groupBox17_gb.Controls.Add(this.radioButton82);
+            this.xml_groupBox17_gb.Controls.Add(this.radioButton83);
+            this.xml_groupBox17_gb.Controls.Add(this.radioButton84);
+            this.xml_groupBox17_gb.Controls.Add(this.radioButton85);
+            this.xml_groupBox17_gb.Location = new System.Drawing.Point(251, 186);
+            this.xml_groupBox17_gb.Name = "xml_groupBox17_gb";
+            this.xml_groupBox17_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox17_gb.TabIndex = 77;
+            this.xml_groupBox17_gb.TabStop = false;
             // 
             // radioButton81
             // 
@@ -2588,18 +2588,18 @@
             this.radioButton85.Text = "2";
             this.radioButton85.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox16
+            // xml_groupBox16_gb
             // 
-            this.xmlgr_groupBox16.Controls.Add(this.radioButton76);
-            this.xmlgr_groupBox16.Controls.Add(this.radioButton77);
-            this.xmlgr_groupBox16.Controls.Add(this.radioButton78);
-            this.xmlgr_groupBox16.Controls.Add(this.radioButton79);
-            this.xmlgr_groupBox16.Controls.Add(this.radioButton80);
-            this.xmlgr_groupBox16.Location = new System.Drawing.Point(251, 136);
-            this.xmlgr_groupBox16.Name = "xmlgr_groupBox16";
-            this.xmlgr_groupBox16.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox16.TabIndex = 78;
-            this.xmlgr_groupBox16.TabStop = false;
+            this.xml_groupBox16_gb.Controls.Add(this.radioButton76);
+            this.xml_groupBox16_gb.Controls.Add(this.radioButton77);
+            this.xml_groupBox16_gb.Controls.Add(this.radioButton78);
+            this.xml_groupBox16_gb.Controls.Add(this.radioButton79);
+            this.xml_groupBox16_gb.Controls.Add(this.radioButton80);
+            this.xml_groupBox16_gb.Location = new System.Drawing.Point(251, 136);
+            this.xml_groupBox16_gb.Name = "xml_groupBox16_gb";
+            this.xml_groupBox16_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox16_gb.TabIndex = 78;
+            this.xml_groupBox16_gb.TabStop = false;
             // 
             // radioButton76
             // 
@@ -2656,18 +2656,18 @@
             this.radioButton80.Text = "2";
             this.radioButton80.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox15
+            // xml_groupBox15_gb
             // 
-            this.xmlgr_groupBox15.Controls.Add(this.radioButton71);
-            this.xmlgr_groupBox15.Controls.Add(this.radioButton72);
-            this.xmlgr_groupBox15.Controls.Add(this.radioButton73);
-            this.xmlgr_groupBox15.Controls.Add(this.radioButton74);
-            this.xmlgr_groupBox15.Controls.Add(this.radioButton75);
-            this.xmlgr_groupBox15.Location = new System.Drawing.Point(513, 234);
-            this.xmlgr_groupBox15.Name = "xmlgr_groupBox15";
-            this.xmlgr_groupBox15.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox15.TabIndex = 79;
-            this.xmlgr_groupBox15.TabStop = false;
+            this.xml_groupBox15_gb.Controls.Add(this.radioButton71);
+            this.xml_groupBox15_gb.Controls.Add(this.radioButton72);
+            this.xml_groupBox15_gb.Controls.Add(this.radioButton73);
+            this.xml_groupBox15_gb.Controls.Add(this.radioButton74);
+            this.xml_groupBox15_gb.Controls.Add(this.radioButton75);
+            this.xml_groupBox15_gb.Location = new System.Drawing.Point(513, 234);
+            this.xml_groupBox15_gb.Name = "xml_groupBox15_gb";
+            this.xml_groupBox15_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox15_gb.TabIndex = 79;
+            this.xml_groupBox15_gb.TabStop = false;
             // 
             // radioButton71
             // 
@@ -2724,18 +2724,18 @@
             this.radioButton75.Text = "2";
             this.radioButton75.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox14
+            // xml_groupBox14_gb
             // 
-            this.xmlgr_groupBox14.Controls.Add(this.radioButton66);
-            this.xmlgr_groupBox14.Controls.Add(this.radioButton67);
-            this.xmlgr_groupBox14.Controls.Add(this.radioButton68);
-            this.xmlgr_groupBox14.Controls.Add(this.radioButton69);
-            this.xmlgr_groupBox14.Controls.Add(this.radioButton70);
-            this.xmlgr_groupBox14.Location = new System.Drawing.Point(513, 186);
-            this.xmlgr_groupBox14.Name = "xmlgr_groupBox14";
-            this.xmlgr_groupBox14.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox14.TabIndex = 80;
-            this.xmlgr_groupBox14.TabStop = false;
+            this.xml_groupBox14_gb.Controls.Add(this.radioButton66);
+            this.xml_groupBox14_gb.Controls.Add(this.radioButton67);
+            this.xml_groupBox14_gb.Controls.Add(this.radioButton68);
+            this.xml_groupBox14_gb.Controls.Add(this.radioButton69);
+            this.xml_groupBox14_gb.Controls.Add(this.radioButton70);
+            this.xml_groupBox14_gb.Location = new System.Drawing.Point(513, 186);
+            this.xml_groupBox14_gb.Name = "xml_groupBox14_gb";
+            this.xml_groupBox14_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox14_gb.TabIndex = 80;
+            this.xml_groupBox14_gb.TabStop = false;
             // 
             // radioButton66
             // 
@@ -2792,18 +2792,18 @@
             this.radioButton70.Text = "2";
             this.radioButton70.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox13
+            // xml_groupBox13_gb
             // 
-            this.xmlgr_groupBox13.Controls.Add(this.radioButton61);
-            this.xmlgr_groupBox13.Controls.Add(this.radioButton62);
-            this.xmlgr_groupBox13.Controls.Add(this.radioButton63);
-            this.xmlgr_groupBox13.Controls.Add(this.radioButton64);
-            this.xmlgr_groupBox13.Controls.Add(this.radioButton65);
-            this.xmlgr_groupBox13.Location = new System.Drawing.Point(513, 136);
-            this.xmlgr_groupBox13.Name = "xmlgr_groupBox13";
-            this.xmlgr_groupBox13.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox13.TabIndex = 81;
-            this.xmlgr_groupBox13.TabStop = false;
+            this.xml_groupBox13_gb.Controls.Add(this.radioButton61);
+            this.xml_groupBox13_gb.Controls.Add(this.radioButton62);
+            this.xml_groupBox13_gb.Controls.Add(this.radioButton63);
+            this.xml_groupBox13_gb.Controls.Add(this.radioButton64);
+            this.xml_groupBox13_gb.Controls.Add(this.radioButton65);
+            this.xml_groupBox13_gb.Location = new System.Drawing.Point(513, 136);
+            this.xml_groupBox13_gb.Name = "xml_groupBox13_gb";
+            this.xml_groupBox13_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox13_gb.TabIndex = 81;
+            this.xml_groupBox13_gb.TabStop = false;
             // 
             // radioButton61
             // 
@@ -2951,12 +2951,12 @@
             // 
             // satisfactory_tab
             // 
-            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox6);
-            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox4);
-            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox2);
-            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox5);
-            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox3);
-            this.satisfactory_tab.Controls.Add(this.xmlgr_groupBox1);
+            this.satisfactory_tab.Controls.Add(this.xml_groupBox6_gb);
+            this.satisfactory_tab.Controls.Add(this.xml_groupBox4_gb);
+            this.satisfactory_tab.Controls.Add(this.xml_groupBox2_gb);
+            this.satisfactory_tab.Controls.Add(this.xml_groupBox5_gb);
+            this.satisfactory_tab.Controls.Add(this.xml_groupBox3_gb);
+            this.satisfactory_tab.Controls.Add(this.xml_groupBox1_gb);
             this.satisfactory_tab.Controls.Add(this.label45);
             this.satisfactory_tab.Controls.Add(this.label46);
             this.satisfactory_tab.Controls.Add(this.label47);
@@ -2976,18 +2976,18 @@
             this.satisfactory_tab.UseVisualStyleBackColor = true;
             this.satisfactory_tab.Click += new System.EventHandler(this.tabPage7_Click);
             // 
-            // xmlgr_groupBox6
+            // xml_groupBox6_gb
             // 
-            this.xmlgr_groupBox6.Controls.Add(this.radioButton26);
-            this.xmlgr_groupBox6.Controls.Add(this.radioButton27);
-            this.xmlgr_groupBox6.Controls.Add(this.radioButton28);
-            this.xmlgr_groupBox6.Controls.Add(this.radioButton29);
-            this.xmlgr_groupBox6.Controls.Add(this.radioButton30);
-            this.xmlgr_groupBox6.Location = new System.Drawing.Point(258, 225);
-            this.xmlgr_groupBox6.Name = "xmlgr_groupBox6";
-            this.xmlgr_groupBox6.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox6.TabIndex = 75;
-            this.xmlgr_groupBox6.TabStop = false;
+            this.xml_groupBox6_gb.Controls.Add(this.radioButton26);
+            this.xml_groupBox6_gb.Controls.Add(this.radioButton27);
+            this.xml_groupBox6_gb.Controls.Add(this.radioButton28);
+            this.xml_groupBox6_gb.Controls.Add(this.radioButton29);
+            this.xml_groupBox6_gb.Controls.Add(this.radioButton30);
+            this.xml_groupBox6_gb.Location = new System.Drawing.Point(258, 225);
+            this.xml_groupBox6_gb.Name = "xml_groupBox6_gb";
+            this.xml_groupBox6_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox6_gb.TabIndex = 75;
+            this.xml_groupBox6_gb.TabStop = false;
             // 
             // radioButton26
             // 
@@ -3049,18 +3049,18 @@
             this.radioButton30.UseVisualStyleBackColor = true;
             this.radioButton30.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // xmlgr_groupBox4
+            // xml_groupBox4_gb
             // 
-            this.xmlgr_groupBox4.Controls.Add(this.radioButton16);
-            this.xmlgr_groupBox4.Controls.Add(this.radioButton17);
-            this.xmlgr_groupBox4.Controls.Add(this.radioButton18);
-            this.xmlgr_groupBox4.Controls.Add(this.radioButton19);
-            this.xmlgr_groupBox4.Controls.Add(this.radioButton20);
-            this.xmlgr_groupBox4.Location = new System.Drawing.Point(258, 177);
-            this.xmlgr_groupBox4.Name = "xmlgr_groupBox4";
-            this.xmlgr_groupBox4.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox4.TabIndex = 75;
-            this.xmlgr_groupBox4.TabStop = false;
+            this.xml_groupBox4_gb.Controls.Add(this.radioButton16);
+            this.xml_groupBox4_gb.Controls.Add(this.radioButton17);
+            this.xml_groupBox4_gb.Controls.Add(this.radioButton18);
+            this.xml_groupBox4_gb.Controls.Add(this.radioButton19);
+            this.xml_groupBox4_gb.Controls.Add(this.radioButton20);
+            this.xml_groupBox4_gb.Location = new System.Drawing.Point(258, 177);
+            this.xml_groupBox4_gb.Name = "xml_groupBox4_gb";
+            this.xml_groupBox4_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox4_gb.TabIndex = 75;
+            this.xml_groupBox4_gb.TabStop = false;
             // 
             // radioButton16
             // 
@@ -3122,18 +3122,18 @@
             this.radioButton20.UseVisualStyleBackColor = true;
             this.radioButton20.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // xmlgr_groupBox2
+            // xml_groupBox2_gb
             // 
-            this.xmlgr_groupBox2.Controls.Add(this.radioButton6);
-            this.xmlgr_groupBox2.Controls.Add(this.radioButton7);
-            this.xmlgr_groupBox2.Controls.Add(this.radioButton8);
-            this.xmlgr_groupBox2.Controls.Add(this.radioButton9);
-            this.xmlgr_groupBox2.Controls.Add(this.radioButton10);
-            this.xmlgr_groupBox2.Location = new System.Drawing.Point(258, 127);
-            this.xmlgr_groupBox2.Name = "xmlgr_groupBox2";
-            this.xmlgr_groupBox2.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox2.TabIndex = 75;
-            this.xmlgr_groupBox2.TabStop = false;
+            this.xml_groupBox2_gb.Controls.Add(this.radioButton6);
+            this.xml_groupBox2_gb.Controls.Add(this.radioButton7);
+            this.xml_groupBox2_gb.Controls.Add(this.radioButton8);
+            this.xml_groupBox2_gb.Controls.Add(this.radioButton9);
+            this.xml_groupBox2_gb.Controls.Add(this.radioButton10);
+            this.xml_groupBox2_gb.Location = new System.Drawing.Point(258, 127);
+            this.xml_groupBox2_gb.Name = "xml_groupBox2_gb";
+            this.xml_groupBox2_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox2_gb.TabIndex = 75;
+            this.xml_groupBox2_gb.TabStop = false;
             // 
             // radioButton6
             // 
@@ -3195,18 +3195,18 @@
             this.radioButton10.UseVisualStyleBackColor = true;
             this.radioButton10.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // xmlgr_groupBox5
+            // xml_groupBox5_gb
             // 
-            this.xmlgr_groupBox5.Controls.Add(this.radioButton21);
-            this.xmlgr_groupBox5.Controls.Add(this.radioButton22);
-            this.xmlgr_groupBox5.Controls.Add(this.radioButton23);
-            this.xmlgr_groupBox5.Controls.Add(this.radioButton24);
-            this.xmlgr_groupBox5.Controls.Add(this.radioButton25);
-            this.xmlgr_groupBox5.Location = new System.Drawing.Point(520, 225);
-            this.xmlgr_groupBox5.Name = "xmlgr_groupBox5";
-            this.xmlgr_groupBox5.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox5.TabIndex = 75;
-            this.xmlgr_groupBox5.TabStop = false;
+            this.xml_groupBox5_gb.Controls.Add(this.radioButton21);
+            this.xml_groupBox5_gb.Controls.Add(this.radioButton22);
+            this.xml_groupBox5_gb.Controls.Add(this.radioButton23);
+            this.xml_groupBox5_gb.Controls.Add(this.radioButton24);
+            this.xml_groupBox5_gb.Controls.Add(this.radioButton25);
+            this.xml_groupBox5_gb.Location = new System.Drawing.Point(520, 225);
+            this.xml_groupBox5_gb.Name = "xml_groupBox5_gb";
+            this.xml_groupBox5_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox5_gb.TabIndex = 75;
+            this.xml_groupBox5_gb.TabStop = false;
             // 
             // radioButton21
             // 
@@ -3268,18 +3268,18 @@
             this.radioButton25.UseVisualStyleBackColor = true;
             this.radioButton25.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // xmlgr_groupBox3
+            // xml_groupBox3_gb
             // 
-            this.xmlgr_groupBox3.Controls.Add(this.radioButton11);
-            this.xmlgr_groupBox3.Controls.Add(this.radioButton12);
-            this.xmlgr_groupBox3.Controls.Add(this.radioButton13);
-            this.xmlgr_groupBox3.Controls.Add(this.radioButton14);
-            this.xmlgr_groupBox3.Controls.Add(this.radioButton15);
-            this.xmlgr_groupBox3.Location = new System.Drawing.Point(520, 177);
-            this.xmlgr_groupBox3.Name = "xmlgr_groupBox3";
-            this.xmlgr_groupBox3.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox3.TabIndex = 75;
-            this.xmlgr_groupBox3.TabStop = false;
+            this.xml_groupBox3_gb.Controls.Add(this.radioButton11);
+            this.xml_groupBox3_gb.Controls.Add(this.radioButton12);
+            this.xml_groupBox3_gb.Controls.Add(this.radioButton13);
+            this.xml_groupBox3_gb.Controls.Add(this.radioButton14);
+            this.xml_groupBox3_gb.Controls.Add(this.radioButton15);
+            this.xml_groupBox3_gb.Location = new System.Drawing.Point(520, 177);
+            this.xml_groupBox3_gb.Name = "xml_groupBox3_gb";
+            this.xml_groupBox3_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox3_gb.TabIndex = 75;
+            this.xml_groupBox3_gb.TabStop = false;
             // 
             // radioButton11
             // 
@@ -3341,19 +3341,19 @@
             this.radioButton15.UseVisualStyleBackColor = true;
             this.radioButton15.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // xmlgr_groupBox1
+            // xml_groupBox1_gb
             // 
-            this.xmlgr_groupBox1.Controls.Add(this.radioButton2);
-            this.xmlgr_groupBox1.Controls.Add(this.radioButton5);
-            this.xmlgr_groupBox1.Controls.Add(this.radioButton4);
-            this.xmlgr_groupBox1.Controls.Add(this.radioButton3);
-            this.xmlgr_groupBox1.Controls.Add(this.radioButton1);
-            this.xmlgr_groupBox1.Location = new System.Drawing.Point(520, 127);
-            this.xmlgr_groupBox1.Name = "xmlgr_groupBox1";
-            this.xmlgr_groupBox1.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox1.TabIndex = 75;
-            this.xmlgr_groupBox1.TabStop = false;
-            this.xmlgr_groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.xml_groupBox1_gb.Controls.Add(this.radioButton2);
+            this.xml_groupBox1_gb.Controls.Add(this.radioButton5);
+            this.xml_groupBox1_gb.Controls.Add(this.radioButton4);
+            this.xml_groupBox1_gb.Controls.Add(this.radioButton3);
+            this.xml_groupBox1_gb.Controls.Add(this.radioButton1);
+            this.xml_groupBox1_gb.Location = new System.Drawing.Point(520, 127);
+            this.xml_groupBox1_gb.Name = "xml_groupBox1_gb";
+            this.xml_groupBox1_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox1_gb.TabIndex = 75;
+            this.xml_groupBox1_gb.TabStop = false;
+            this.xml_groupBox1_gb.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButton2
             // 
@@ -3690,78 +3690,78 @@
             this.mazav_tc.ResumeLayout(false);
             this.job_functionality_tab.ResumeLayout(false);
             this.job_functionality_tab.PerformLayout();
-            this.xmlgr_groupBox32.ResumeLayout(false);
-            this.xmlgr_groupBox32.PerformLayout();
-            this.xmlgr_groupBox25.ResumeLayout(false);
-            this.xmlgr_groupBox25.PerformLayout();
-            this.xmlgr_groupBox26.ResumeLayout(false);
-            this.xmlgr_groupBox26.PerformLayout();
-            this.xmlgr_groupBox31.ResumeLayout(false);
-            this.xmlgr_groupBox31.PerformLayout();
-            this.xmlgr_groupBox27.ResumeLayout(false);
-            this.xmlgr_groupBox27.PerformLayout();
-            this.xmlgr_groupBox28.ResumeLayout(false);
-            this.xmlgr_groupBox28.PerformLayout();
-            this.xmlgr_groupBox29.ResumeLayout(false);
-            this.xmlgr_groupBox29.PerformLayout();
+            this.xml_groupBox32_gb.ResumeLayout(false);
+            this.xml_groupBox32_gb.PerformLayout();
+            this.xml_groupBox25_gb.ResumeLayout(false);
+            this.xml_groupBox25_gb.PerformLayout();
+            this.xml_groupBox26_gb.ResumeLayout(false);
+            this.xml_groupBox26_gb.PerformLayout();
+            this.xml_groupBox31_gb.ResumeLayout(false);
+            this.xml_groupBox31_gb.PerformLayout();
+            this.xml_groupBox27_gb.ResumeLayout(false);
+            this.xml_groupBox27_gb.PerformLayout();
+            this.xml_groupBox28_gb.ResumeLayout(false);
+            this.xml_groupBox28_gb.PerformLayout();
+            this.xml_groupBox29_gb.ResumeLayout(false);
+            this.xml_groupBox29_gb.PerformLayout();
             this.xml_groupBox30_gb.ResumeLayout(false);
             this.xml_groupBox30_gb.PerformLayout();
             this.norms_tab.ResumeLayout(false);
             this.norms_tab.PerformLayout();
-            this.xmlgr_groupBox19.ResumeLayout(false);
-            this.xmlgr_groupBox19.PerformLayout();
-            this.xmlgr_groupBox20.ResumeLayout(false);
-            this.xmlgr_groupBox20.PerformLayout();
-            this.xmlgr_groupBox21.ResumeLayout(false);
-            this.xmlgr_groupBox21.PerformLayout();
-            this.xmlgr_groupBox22.ResumeLayout(false);
-            this.xmlgr_groupBox22.PerformLayout();
-            this.xmlgr_groupBox23.ResumeLayout(false);
-            this.xmlgr_groupBox23.PerformLayout();
-            this.xmlgr_groupBox24.ResumeLayout(false);
-            this.xmlgr_groupBox24.PerformLayout();
+            this.xml_groupBox19_gb.ResumeLayout(false);
+            this.xml_groupBox19_gb.PerformLayout();
+            this.xml_groupBox20_gb.ResumeLayout(false);
+            this.xml_groupBox20_gb.PerformLayout();
+            this.xml_groupBox21_gb.ResumeLayout(false);
+            this.xml_groupBox21_gb.PerformLayout();
+            this.xml_groupBox22_gb.ResumeLayout(false);
+            this.xml_groupBox22_gb.PerformLayout();
+            this.xml_groupBox23_gb.ResumeLayout(false);
+            this.xml_groupBox23_gb.PerformLayout();
+            this.xml_groupBox24_gb.ResumeLayout(false);
+            this.xml_groupBox24_gb.PerformLayout();
             this.social_skills_tab.ResumeLayout(false);
             this.social_skills_tab.PerformLayout();
-            this.xmlgr_groupBox7.ResumeLayout(false);
-            this.xmlgr_groupBox7.PerformLayout();
-            this.xmlgr_groupBox8.ResumeLayout(false);
-            this.xmlgr_groupBox8.PerformLayout();
-            this.xmlgr_groupBox9.ResumeLayout(false);
-            this.xmlgr_groupBox9.PerformLayout();
-            this.xmlgr_groupBox10.ResumeLayout(false);
-            this.xmlgr_groupBox10.PerformLayout();
-            this.xmlgr_groupBox11.ResumeLayout(false);
-            this.xmlgr_groupBox11.PerformLayout();
-            this.xmlgr_groupBox12.ResumeLayout(false);
-            this.xmlgr_groupBox12.PerformLayout();
+            this.xml_groupBox7_gb.ResumeLayout(false);
+            this.xml_groupBox7_gb.PerformLayout();
+            this.xml_groupBox8_gb.ResumeLayout(false);
+            this.xml_groupBox8_gb.PerformLayout();
+            this.xml_groupBox9_gb.ResumeLayout(false);
+            this.xml_groupBox9_gb.PerformLayout();
+            this.xml_groupBox10_gb.ResumeLayout(false);
+            this.xml_groupBox10_gb.PerformLayout();
+            this.xml_groupBox11_gb.ResumeLayout(false);
+            this.xml_groupBox11_gb.PerformLayout();
+            this.xml_groupBox12_gb.ResumeLayout(false);
+            this.xml_groupBox12_gb.PerformLayout();
             this.activte_assertive_tab.ResumeLayout(false);
             this.activte_assertive_tab.PerformLayout();
-            this.xmlgr_groupBox18.ResumeLayout(false);
-            this.xmlgr_groupBox18.PerformLayout();
-            this.xmlgr_groupBox17.ResumeLayout(false);
-            this.xmlgr_groupBox17.PerformLayout();
-            this.xmlgr_groupBox16.ResumeLayout(false);
-            this.xmlgr_groupBox16.PerformLayout();
-            this.xmlgr_groupBox15.ResumeLayout(false);
-            this.xmlgr_groupBox15.PerformLayout();
-            this.xmlgr_groupBox14.ResumeLayout(false);
-            this.xmlgr_groupBox14.PerformLayout();
-            this.xmlgr_groupBox13.ResumeLayout(false);
-            this.xmlgr_groupBox13.PerformLayout();
+            this.xml_groupBox18_gb.ResumeLayout(false);
+            this.xml_groupBox18_gb.PerformLayout();
+            this.xml_groupBox17_gb.ResumeLayout(false);
+            this.xml_groupBox17_gb.PerformLayout();
+            this.xml_groupBox16_gb.ResumeLayout(false);
+            this.xml_groupBox16_gb.PerformLayout();
+            this.xml_groupBox15_gb.ResumeLayout(false);
+            this.xml_groupBox15_gb.PerformLayout();
+            this.xml_groupBox14_gb.ResumeLayout(false);
+            this.xml_groupBox14_gb.PerformLayout();
+            this.xml_groupBox13_gb.ResumeLayout(false);
+            this.xml_groupBox13_gb.PerformLayout();
             this.satisfactory_tab.ResumeLayout(false);
             this.satisfactory_tab.PerformLayout();
-            this.xmlgr_groupBox6.ResumeLayout(false);
-            this.xmlgr_groupBox6.PerformLayout();
-            this.xmlgr_groupBox4.ResumeLayout(false);
-            this.xmlgr_groupBox4.PerformLayout();
-            this.xmlgr_groupBox2.ResumeLayout(false);
-            this.xmlgr_groupBox2.PerformLayout();
-            this.xmlgr_groupBox5.ResumeLayout(false);
-            this.xmlgr_groupBox5.PerformLayout();
-            this.xmlgr_groupBox3.ResumeLayout(false);
-            this.xmlgr_groupBox3.PerformLayout();
-            this.xmlgr_groupBox1.ResumeLayout(false);
-            this.xmlgr_groupBox1.PerformLayout();
+            this.xml_groupBox6_gb.ResumeLayout(false);
+            this.xml_groupBox6_gb.PerformLayout();
+            this.xml_groupBox4_gb.ResumeLayout(false);
+            this.xml_groupBox4_gb.PerformLayout();
+            this.xml_groupBox2_gb.ResumeLayout(false);
+            this.xml_groupBox2_gb.PerformLayout();
+            this.xml_groupBox5_gb.ResumeLayout(false);
+            this.xml_groupBox5_gb.PerformLayout();
+            this.xml_groupBox3_gb.ResumeLayout(false);
+            this.xml_groupBox3_gb.PerformLayout();
+            this.xml_groupBox1_gb.ResumeLayout(false);
+            this.xml_groupBox1_gb.PerformLayout();
             this.rehab_tab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xml_rehab_dgv)).EndInit();
             this.resources_tab.ResumeLayout(false);
@@ -3888,55 +3888,55 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button test_upload;
         private System.Windows.Forms.Button test_download;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox1;
+        private System.Windows.Forms.GroupBox xml_groupBox1_gb;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox2;
+        private System.Windows.Forms.GroupBox xml_groupBox2_gb;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox32;
+        private System.Windows.Forms.GroupBox xml_groupBox32_gb;
         private System.Windows.Forms.RadioButton radioButton156;
         private System.Windows.Forms.RadioButton radioButton157;
         private System.Windows.Forms.RadioButton radioButton158;
         private System.Windows.Forms.RadioButton radioButton159;
         private System.Windows.Forms.RadioButton radioButton160;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox25;
+        private System.Windows.Forms.GroupBox xml_groupBox25_gb;
         private System.Windows.Forms.RadioButton radioButton121;
         private System.Windows.Forms.RadioButton radioButton122;
         private System.Windows.Forms.RadioButton radioButton123;
         private System.Windows.Forms.RadioButton radioButton124;
         private System.Windows.Forms.RadioButton radioButton125;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox26;
+        private System.Windows.Forms.GroupBox xml_groupBox26_gb;
         private System.Windows.Forms.RadioButton radioButton126;
         private System.Windows.Forms.RadioButton radioButton127;
         private System.Windows.Forms.RadioButton radioButton128;
         private System.Windows.Forms.RadioButton radioButton129;
         private System.Windows.Forms.RadioButton radioButton130;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox31;
+        private System.Windows.Forms.GroupBox xml_groupBox31_gb;
         private System.Windows.Forms.RadioButton radioButton151;
         private System.Windows.Forms.RadioButton radioButton152;
         private System.Windows.Forms.RadioButton radioButton153;
         private System.Windows.Forms.RadioButton radioButton154;
         private System.Windows.Forms.RadioButton radioButton155;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox27;
+        private System.Windows.Forms.GroupBox xml_groupBox27_gb;
         private System.Windows.Forms.RadioButton radioButton131;
         private System.Windows.Forms.RadioButton radioButton132;
         private System.Windows.Forms.RadioButton radioButton133;
         private System.Windows.Forms.RadioButton radioButton134;
         private System.Windows.Forms.RadioButton radioButton135;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox28;
+        private System.Windows.Forms.GroupBox xml_groupBox28_gb;
         private System.Windows.Forms.RadioButton radioButton136;
         private System.Windows.Forms.RadioButton radioButton137;
         private System.Windows.Forms.RadioButton radioButton138;
         private System.Windows.Forms.RadioButton radioButton139;
         private System.Windows.Forms.RadioButton radioButton140;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox29;
+        private System.Windows.Forms.GroupBox xml_groupBox29_gb;
         private System.Windows.Forms.RadioButton radioButton141;
         private System.Windows.Forms.RadioButton radioButton142;
         private System.Windows.Forms.RadioButton radioButton143;
@@ -3948,133 +3948,133 @@
         private System.Windows.Forms.RadioButton radioButton148;
         private System.Windows.Forms.RadioButton radioButton149;
         private System.Windows.Forms.RadioButton radioButton150;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox19;
+        private System.Windows.Forms.GroupBox xml_groupBox19_gb;
         private System.Windows.Forms.RadioButton radioButton91;
         private System.Windows.Forms.RadioButton radioButton92;
         private System.Windows.Forms.RadioButton radioButton93;
         private System.Windows.Forms.RadioButton radioButton94;
         private System.Windows.Forms.RadioButton radioButton95;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox20;
+        private System.Windows.Forms.GroupBox xml_groupBox20_gb;
         private System.Windows.Forms.RadioButton radioButton96;
         private System.Windows.Forms.RadioButton radioButton97;
         private System.Windows.Forms.RadioButton radioButton98;
         private System.Windows.Forms.RadioButton radioButton99;
         private System.Windows.Forms.RadioButton radioButton100;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox21;
+        private System.Windows.Forms.GroupBox xml_groupBox21_gb;
         private System.Windows.Forms.RadioButton radioButton101;
         private System.Windows.Forms.RadioButton radioButton102;
         private System.Windows.Forms.RadioButton radioButton103;
         private System.Windows.Forms.RadioButton radioButton104;
         private System.Windows.Forms.RadioButton radioButton105;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox22;
+        private System.Windows.Forms.GroupBox xml_groupBox22_gb;
         private System.Windows.Forms.RadioButton radioButton106;
         private System.Windows.Forms.RadioButton radioButton107;
         private System.Windows.Forms.RadioButton radioButton108;
         private System.Windows.Forms.RadioButton radioButton109;
         private System.Windows.Forms.RadioButton radioButton110;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox23;
+        private System.Windows.Forms.GroupBox xml_groupBox23_gb;
         private System.Windows.Forms.RadioButton radioButton111;
         private System.Windows.Forms.RadioButton radioButton112;
         private System.Windows.Forms.RadioButton radioButton113;
         private System.Windows.Forms.RadioButton radioButton114;
         private System.Windows.Forms.RadioButton radioButton115;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox24;
+        private System.Windows.Forms.GroupBox xml_groupBox24_gb;
         private System.Windows.Forms.RadioButton radioButton116;
         private System.Windows.Forms.RadioButton radioButton117;
         private System.Windows.Forms.RadioButton radioButton118;
         private System.Windows.Forms.RadioButton radioButton119;
         private System.Windows.Forms.RadioButton radioButton120;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox7;
+        private System.Windows.Forms.GroupBox xml_groupBox7_gb;
         private System.Windows.Forms.RadioButton radioButton31;
         private System.Windows.Forms.RadioButton radioButton32;
         private System.Windows.Forms.RadioButton radioButton33;
         private System.Windows.Forms.RadioButton radioButton34;
         private System.Windows.Forms.RadioButton radioButton35;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox8;
+        private System.Windows.Forms.GroupBox xml_groupBox8_gb;
         private System.Windows.Forms.RadioButton radioButton36;
         private System.Windows.Forms.RadioButton radioButton37;
         private System.Windows.Forms.RadioButton radioButton38;
         private System.Windows.Forms.RadioButton radioButton39;
         private System.Windows.Forms.RadioButton radioButton40;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox9;
+        private System.Windows.Forms.GroupBox xml_groupBox9_gb;
         private System.Windows.Forms.RadioButton radioButton41;
         private System.Windows.Forms.RadioButton radioButton42;
         private System.Windows.Forms.RadioButton radioButton43;
         private System.Windows.Forms.RadioButton radioButton44;
         private System.Windows.Forms.RadioButton radioButton45;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox10;
+        private System.Windows.Forms.GroupBox xml_groupBox10_gb;
         private System.Windows.Forms.RadioButton radioButton46;
         private System.Windows.Forms.RadioButton radioButton47;
         private System.Windows.Forms.RadioButton radioButton48;
         private System.Windows.Forms.RadioButton radioButton49;
         private System.Windows.Forms.RadioButton radioButton50;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox11;
+        private System.Windows.Forms.GroupBox xml_groupBox11_gb;
         private System.Windows.Forms.RadioButton radioButton51;
         private System.Windows.Forms.RadioButton radioButton52;
         private System.Windows.Forms.RadioButton radioButton53;
         private System.Windows.Forms.RadioButton radioButton54;
         private System.Windows.Forms.RadioButton radioButton55;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox12;
+        private System.Windows.Forms.GroupBox xml_groupBox12_gb;
         private System.Windows.Forms.RadioButton radioButton56;
         private System.Windows.Forms.RadioButton radioButton57;
         private System.Windows.Forms.RadioButton radioButton58;
         private System.Windows.Forms.RadioButton radioButton59;
         private System.Windows.Forms.RadioButton radioButton60;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox18;
+        private System.Windows.Forms.GroupBox xml_groupBox18_gb;
         private System.Windows.Forms.RadioButton radioButton86;
         private System.Windows.Forms.RadioButton radioButton87;
         private System.Windows.Forms.RadioButton radioButton88;
         private System.Windows.Forms.RadioButton radioButton89;
         private System.Windows.Forms.RadioButton radioButton90;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox17;
+        private System.Windows.Forms.GroupBox xml_groupBox17_gb;
         private System.Windows.Forms.RadioButton radioButton81;
         private System.Windows.Forms.RadioButton radioButton82;
         private System.Windows.Forms.RadioButton radioButton83;
         private System.Windows.Forms.RadioButton radioButton84;
         private System.Windows.Forms.RadioButton radioButton85;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox16;
+        private System.Windows.Forms.GroupBox xml_groupBox16_gb;
         private System.Windows.Forms.RadioButton radioButton76;
         private System.Windows.Forms.RadioButton radioButton77;
         private System.Windows.Forms.RadioButton radioButton78;
         private System.Windows.Forms.RadioButton radioButton79;
         private System.Windows.Forms.RadioButton radioButton80;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox15;
+        private System.Windows.Forms.GroupBox xml_groupBox15_gb;
         private System.Windows.Forms.RadioButton radioButton71;
         private System.Windows.Forms.RadioButton radioButton72;
         private System.Windows.Forms.RadioButton radioButton73;
         private System.Windows.Forms.RadioButton radioButton74;
         private System.Windows.Forms.RadioButton radioButton75;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox14;
+        private System.Windows.Forms.GroupBox xml_groupBox14_gb;
         private System.Windows.Forms.RadioButton radioButton66;
         private System.Windows.Forms.RadioButton radioButton67;
         private System.Windows.Forms.RadioButton radioButton68;
         private System.Windows.Forms.RadioButton radioButton69;
         private System.Windows.Forms.RadioButton radioButton70;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox13;
+        private System.Windows.Forms.GroupBox xml_groupBox13_gb;
         private System.Windows.Forms.RadioButton radioButton61;
         private System.Windows.Forms.RadioButton radioButton62;
         private System.Windows.Forms.RadioButton radioButton63;
         private System.Windows.Forms.RadioButton radioButton64;
         private System.Windows.Forms.RadioButton radioButton65;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox6;
+        private System.Windows.Forms.GroupBox xml_groupBox6_gb;
         private System.Windows.Forms.RadioButton radioButton26;
         private System.Windows.Forms.RadioButton radioButton27;
         private System.Windows.Forms.RadioButton radioButton28;
         private System.Windows.Forms.RadioButton radioButton29;
         private System.Windows.Forms.RadioButton radioButton30;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox4;
+        private System.Windows.Forms.GroupBox xml_groupBox4_gb;
         private System.Windows.Forms.RadioButton radioButton16;
         private System.Windows.Forms.RadioButton radioButton17;
         private System.Windows.Forms.RadioButton radioButton18;
         private System.Windows.Forms.RadioButton radioButton19;
         private System.Windows.Forms.RadioButton radioButton20;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox5;
+        private System.Windows.Forms.GroupBox xml_groupBox5_gb;
         private System.Windows.Forms.RadioButton radioButton21;
         private System.Windows.Forms.RadioButton radioButton22;
         private System.Windows.Forms.RadioButton radioButton23;
         private System.Windows.Forms.RadioButton radioButton24;
         private System.Windows.Forms.RadioButton radioButton25;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox3;
+        private System.Windows.Forms.GroupBox xml_groupBox3_gb;
         private System.Windows.Forms.RadioButton radioButton11;
         private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.RadioButton radioButton13;
