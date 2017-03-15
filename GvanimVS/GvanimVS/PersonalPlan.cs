@@ -34,6 +34,7 @@ namespace GvanimVS
             lastName_tb.Text = dt.Rows[0]["lastName"].ToString();
             DataTable dt1 = SQLmethods.getColsFromTable(SQLmethods.USERS, "*", "ID", dt.Rows[0]["coordinatorID"].ToString(), cmd, da);
             coord_tb.Text = dt1.Rows[0]["firstName"].ToString() + " " + dt1.Rows[0]["lastName"].ToString();
+            updateFieldsFromDB();
         }
 
         private string textBoxesToDictionary()
@@ -83,23 +84,6 @@ namespace GvanimVS
                 }
                 xml_organizer.Add(page.Name, xml_tab);
             }
-
-            //foreach (TabPage page in this.tabControl2.TabPages)
-            //{
-            //    SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
-            //    foreach (Control control in page.Controls)
-            //        if (control is GroupBox)
-            //        {
-            //            if (control.Name.StartsWith("xmlgr"))
-            //            {
-            //                var checkedButton = control.Controls.OfType<RadioButton>()
-            //                                .FirstOrDefault(r => r.Checked);
-            //                xml_tab.Add(control.Name, checkedButton.Text);
-            //            }
-            //        }
-            //    xml_organizer.Add(page.Name, xml_tab);
-
-          //  }
             string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
             return serializedOrganizer;
         }    
@@ -131,27 +115,42 @@ namespace GvanimVS
         private void updateFieldsFromDB()
         {
             //get XML file from DB
+
             string orgenizer = SQLmethods.getXMLFromDB(SQLmethods.MITMODED, "personalPlanXML", ID_tb.Text, cmd);
             //DeSerialize XML file
-            string serialized = Tools.DeserializeXML<string>(orgenizer);
+            xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(orgenizer);
             //Update every field by xml_tab.name
-            foreach (TabPage page in this.tabControl1.TabPages)
+            foreach (KeyValuePair<string, SerializableDictionary<string, string>> dic in xml_organizer)
             {
-               
-                foreach (Control control in page.Controls)
+                TabPage page1 = tabControl1.TabPages[dic.Key];
+                TabPage page2 = tabControl2.TabPages[dic.Key];
+                SerializableDictionary<string, string> xml_tab = dic.Value;
+                foreach (KeyValuePair<string, string> controlKVP in xml_tab)
                 {
-                    if (control is TextBox)
-                        if (control.Name.StartsWith("xml"))
-                            //enter the control.text with the xml.tab.name
+                    if (controlKVP.Key.StartsWith("xml"))
+                    {
+                        if (page1.Controls.ContainsKey(controlKVP.Key))
+                            page1.Controls[controlKVP.Key].Text = controlKVP.Value;
+                        if (page2.Controls.ContainsKey(controlKVP.Key))
+                            page2.Controls[controlKVP.Key].Text = controlKVP.Value;
+                    }
+                    else if (controlKVP.Key.Contains("xmlg"))
+                    {
+                        if (page1.Controls.ContainsKey(controlKVP.Key))
+                            Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page1.Controls[controlKVP.Key]);
+                        if (page2.Controls.ContainsKey(controlKVP.Key))
+                            Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page2.Controls[controlKVP.Key]);
+                    }
+                    else if (controlKVP.Key.Contains("xmlgr"))
+                    {
+                        if (page1.Controls.ContainsKey(controlKVP.Key))
+                            Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page1.Controls[controlKVP.Key]);
+                        if (page2.Controls.ContainsKey(controlKVP.Key))
+                            Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page2.Controls[controlKVP.Key]);
+                    }
 
-                    if (control is DateTimePicker)
-                          //enter the control.text with the xml.tab.name
-                    
-                    if (control is GroupBox)
-                        //enter the radiobox that is checked by the XML indication
-                             
                 }
-             }
+            }
         }
 
         private void quit_page_Click(object sender, EventArgs e)
