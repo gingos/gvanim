@@ -212,5 +212,10 @@ namespace GvanimVS
         {
 
         }
+
+        private void xmlgr_groupBox19_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
