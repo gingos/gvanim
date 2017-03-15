@@ -125,11 +125,14 @@ namespace GvanimVS
 
         private void updateFieldsFromDB(string OrganzierToDeserialize)
         {
-            //get XML file from DB
+            //string orgenizer = SQLmethods.getXMLFromDB(SQLmethods.MITMODED, "personalPlanXML", ID_tb.Text, cmd);
 
-            string orgenizer = SQLmethods.getXMLFromDB(SQLmethods.MITMODED, "personalPlanXML", ID_tb.Text, cmd);
+            //get XML file from DB
+            if (OrganzierToDeserialize.Equals(""))
+                return;
+            
             //DeSerialize XML file
-            xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(orgenizer);
+            xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(OrganzierToDeserialize);
             //Update every field by xml_tab.name
             foreach (KeyValuePair<string, SerializableDictionary<string, string>> dic in xml_organizer)
             {
