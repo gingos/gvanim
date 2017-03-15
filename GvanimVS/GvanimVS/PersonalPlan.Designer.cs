@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.test_download = new System.Windows.Forms.Button();
+            this.test_upload = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.quit_page = new System.Windows.Forms.Button();
             this.personal_plan_tc = new System.Windows.Forms.TabControl();
             this.personal_tab = new System.Windows.Forms.TabPage();
             this.ID_lb = new System.Windows.Forms.Label();
@@ -59,7 +63,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.mazav_tab = new System.Windows.Forms.TabPage();
-            this.xml_mazav_tc = new System.Windows.Forms.TabControl();
+            this.mazav_tc = new System.Windows.Forms.TabControl();
             this.job_functionality_tab = new System.Windows.Forms.TabPage();
             this.xml_groupBox32_gb = new System.Windows.Forms.GroupBox();
             this.radioButton156 = new System.Windows.Forms.RadioButton();
@@ -323,14 +327,10 @@
             this.label54 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
-            this.quit_page = new System.Windows.Forms.Button();
-            this.btn_update = new System.Windows.Forms.Button();
-            this.test_upload = new System.Windows.Forms.Button();
-            this.test_download = new System.Windows.Forms.Button();
             this.personal_plan_tc.SuspendLayout();
             this.personal_tab.SuspendLayout();
             this.mazav_tab.SuspendLayout();
-            this.xml_mazav_tc.SuspendLayout();
+            this.mazav_tc.SuspendLayout();
             this.job_functionality_tab.SuspendLayout();
             this.xml_groupBox32_gb.SuspendLayout();
             this.xml_groupBox25_gb.SuspendLayout();
@@ -372,6 +372,44 @@
             ((System.ComponentModel.ISupportInitialize)(this.xml_rehab_dgv)).BeginInit();
             this.resources_tab.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // test_download
+            // 
+            this.test_download.Location = new System.Drawing.Point(464, 410);
+            this.test_download.Name = "test_download";
+            this.test_download.Size = new System.Drawing.Size(108, 23);
+            this.test_download.TabIndex = 1;
+            this.test_download.Text = "test - download";
+            this.test_download.UseVisualStyleBackColor = true;
+            // 
+            // test_upload
+            // 
+            this.test_upload.Location = new System.Drawing.Point(369, 410);
+            this.test_upload.Name = "test_upload";
+            this.test_upload.Size = new System.Drawing.Size(75, 23);
+            this.test_upload.TabIndex = 1;
+            this.test_upload.Text = "test - upload";
+            this.test_upload.UseVisualStyleBackColor = true;
+            // 
+            // btn_update
+            // 
+            this.btn_update.Location = new System.Drawing.Point(131, 410);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.TabIndex = 1;
+            this.btn_update.Text = "עדכון";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
+            // quit_page
+            // 
+            this.quit_page.Location = new System.Drawing.Point(23, 410);
+            this.quit_page.Name = "quit_page";
+            this.quit_page.Size = new System.Drawing.Size(75, 23);
+            this.quit_page.TabIndex = 1;
+            this.quit_page.Text = "צא";
+            this.quit_page.UseVisualStyleBackColor = true;
+            this.quit_page.Click += new System.EventHandler(this.quit_page_Click);
             // 
             // personal_plan_tc
             // 
@@ -676,7 +714,7 @@
             // 
             // mazav_tab
             // 
-            this.mazav_tab.Controls.Add(this.xml_mazav_tc);
+            this.mazav_tab.Controls.Add(this.mazav_tc);
             this.mazav_tab.Location = new System.Drawing.Point(4, 22);
             this.mazav_tab.Name = "mazav_tab";
             this.mazav_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -686,20 +724,20 @@
             this.mazav_tab.Text = "תמונת מצב";
             this.mazav_tab.UseVisualStyleBackColor = true;
             // 
-            // xml_mazav_tc
+            // mazav_tc
             // 
-            this.xml_mazav_tc.Controls.Add(this.job_functionality_tab);
-            this.xml_mazav_tc.Controls.Add(this.norms_tab);
-            this.xml_mazav_tc.Controls.Add(this.social_skills_tab);
-            this.xml_mazav_tc.Controls.Add(this.activte_assertive_tab);
-            this.xml_mazav_tc.Controls.Add(this.satisfactory_tab);
-            this.xml_mazav_tc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xml_mazav_tc.Location = new System.Drawing.Point(3, 3);
-            this.xml_mazav_tc.Name = "xml_mazav_tc";
-            this.xml_mazav_tc.RightToLeftLayout = true;
-            this.xml_mazav_tc.SelectedIndex = 0;
-            this.xml_mazav_tc.Size = new System.Drawing.Size(956, 360);
-            this.xml_mazav_tc.TabIndex = 0;
+            this.mazav_tc.Controls.Add(this.job_functionality_tab);
+            this.mazav_tc.Controls.Add(this.norms_tab);
+            this.mazav_tc.Controls.Add(this.social_skills_tab);
+            this.mazav_tc.Controls.Add(this.activte_assertive_tab);
+            this.mazav_tc.Controls.Add(this.satisfactory_tab);
+            this.mazav_tc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mazav_tc.Location = new System.Drawing.Point(3, 3);
+            this.mazav_tc.Name = "mazav_tc";
+            this.mazav_tc.RightToLeftLayout = true;
+            this.mazav_tc.SelectedIndex = 0;
+            this.mazav_tc.Size = new System.Drawing.Size(956, 360);
+            this.mazav_tc.TabIndex = 0;
             // 
             // job_functionality_tab
             // 
@@ -3632,44 +3670,6 @@
             this.label52.Text = "מהן נקודות החוזק האישיות שיעזרו לך להתקדם בעבודה : (יחסי אנוש, כוח רצון, כישורים " +
     "ומיומנויות, שאיפות אישיות וכו\'): ";
             // 
-            // quit_page
-            // 
-            this.quit_page.Location = new System.Drawing.Point(23, 410);
-            this.quit_page.Name = "quit_page";
-            this.quit_page.Size = new System.Drawing.Size(75, 23);
-            this.quit_page.TabIndex = 1;
-            this.quit_page.Text = "צא";
-            this.quit_page.UseVisualStyleBackColor = true;
-            this.quit_page.Click += new System.EventHandler(this.quit_page_Click);
-            // 
-            // btn_update
-            // 
-            this.btn_update.Location = new System.Drawing.Point(131, 410);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(75, 23);
-            this.btn_update.TabIndex = 1;
-            this.btn_update.Text = "עדכון";
-            this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
-            // 
-            // test_upload
-            // 
-            this.test_upload.Location = new System.Drawing.Point(369, 410);
-            this.test_upload.Name = "test_upload";
-            this.test_upload.Size = new System.Drawing.Size(75, 23);
-            this.test_upload.TabIndex = 1;
-            this.test_upload.Text = "test - upload";
-            this.test_upload.UseVisualStyleBackColor = true;
-            // 
-            // test_download
-            // 
-            this.test_download.Location = new System.Drawing.Point(464, 410);
-            this.test_download.Name = "test_download";
-            this.test_download.Size = new System.Drawing.Size(108, 23);
-            this.test_download.TabIndex = 1;
-            this.test_download.Text = "test - download";
-            this.test_download.UseVisualStyleBackColor = true;
-            // 
             // PersonalPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3687,7 +3687,7 @@
             this.personal_tab.ResumeLayout(false);
             this.personal_tab.PerformLayout();
             this.mazav_tab.ResumeLayout(false);
-            this.xml_mazav_tc.ResumeLayout(false);
+            this.mazav_tc.ResumeLayout(false);
             this.job_functionality_tab.ResumeLayout(false);
             this.job_functionality_tab.PerformLayout();
             this.xml_groupBox32_gb.ResumeLayout(false);
@@ -3803,7 +3803,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label ID_lb;
         private System.Windows.Forms.TextBox ID_tb;
-        private System.Windows.Forms.TabControl xml_mazav_tc;
+        private System.Windows.Forms.TabControl mazav_tc;
         private System.Windows.Forms.TabPage job_functionality_tab;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;

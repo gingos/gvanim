@@ -38,7 +38,7 @@ namespace GvanimVS
             if (dt1 == null)
                 return;
             coord_tb.Text = dt1.Rows[0]["firstName"].ToString() + " " + dt1.Rows[0]["lastName"].ToString();
-            //updateFieldsFromDB();
+            updateFieldsFromDB();
         }
 
         private string textBoxesToDictionary()
@@ -74,7 +74,7 @@ namespace GvanimVS
                 }
                 xml_organizer.Add(page.Name, xml_tab);              
             }
-            foreach (TabPage page in this.xml_mazav_tc.TabPages)
+            foreach (TabPage page in this.mazav_tc.TabPages)
             {
                 xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
@@ -125,7 +125,7 @@ namespace GvanimVS
         /// </summary>
         /// <param name=""></param>
 
-        /* private void updateFieldsFromDB()
+        private void updateFieldsFromDB()
         {
             //get XML file from DB
 
@@ -135,8 +135,8 @@ namespace GvanimVS
             //Update every field by xml_tab.name
             foreach (KeyValuePair<string, SerializableDictionary<string, string>> dic in xml_organizer)
             {
-                TabPage page1 = tabControl1.TabPages[dic.Key];
-                TabPage page2 = tabControl2.TabPages[dic.Key];
+                TabPage page1 = personal_plan_tc.TabPages[dic.Key];
+                TabPage page2 = mazav_tc.TabPages[dic.Key];
                 SerializableDictionary<string, string> xml_tab = dic.Value;
                 foreach (KeyValuePair<string, string> controlKVP in xml_tab)
                 {
@@ -165,7 +165,7 @@ namespace GvanimVS
                 }
             }
         }
-        */
+        
         private void quit_page_Click(object sender, EventArgs e)
         {
             this.Close();
