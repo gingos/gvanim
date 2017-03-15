@@ -103,7 +103,7 @@
             this.radioButton143 = new System.Windows.Forms.RadioButton();
             this.radioButton144 = new System.Windows.Forms.RadioButton();
             this.radioButton145 = new System.Windows.Forms.RadioButton();
-            this.xmlgr_groupBox30 = new System.Windows.Forms.GroupBox();
+            this.xml_groupBox30_gb = new System.Windows.Forms.GroupBox();
             this.radioButton146 = new System.Windows.Forms.RadioButton();
             this.radioButton147 = new System.Windows.Forms.RadioButton();
             this.radioButton148 = new System.Windows.Forms.RadioButton();
@@ -339,7 +339,7 @@
             this.xmlgr_groupBox27.SuspendLayout();
             this.xmlgr_groupBox28.SuspendLayout();
             this.xmlgr_groupBox29.SuspendLayout();
-            this.xmlgr_groupBox30.SuspendLayout();
+            this.xml_groupBox30_gb.SuspendLayout();
             this.norms_tab.SuspendLayout();
             this.xmlgr_groupBox19.SuspendLayout();
             this.xmlgr_groupBox20.SuspendLayout();
@@ -710,7 +710,7 @@
             this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox27);
             this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox28);
             this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox29);
-            this.job_functionality_tab.Controls.Add(this.xmlgr_groupBox30);
+            this.job_functionality_tab.Controls.Add(this.xml_groupBox30_gb);
             this.job_functionality_tab.Controls.Add(this.label23);
             this.job_functionality_tab.Controls.Add(this.label22);
             this.job_functionality_tab.Controls.Add(this.label21);
@@ -1207,18 +1207,18 @@
             this.radioButton145.Text = "2";
             this.radioButton145.UseVisualStyleBackColor = true;
             // 
-            // xmlgr_groupBox30
+            // xml_groupBox30_gb
             // 
-            this.xmlgr_groupBox30.Controls.Add(this.radioButton146);
-            this.xmlgr_groupBox30.Controls.Add(this.radioButton147);
-            this.xmlgr_groupBox30.Controls.Add(this.radioButton148);
-            this.xmlgr_groupBox30.Controls.Add(this.radioButton149);
-            this.xmlgr_groupBox30.Controls.Add(this.radioButton150);
-            this.xmlgr_groupBox30.Location = new System.Drawing.Point(570, 75);
-            this.xmlgr_groupBox30.Name = "xmlgr_groupBox30";
-            this.xmlgr_groupBox30.Size = new System.Drawing.Size(210, 36);
-            this.xmlgr_groupBox30.TabIndex = 81;
-            this.xmlgr_groupBox30.TabStop = false;
+            this.xml_groupBox30_gb.Controls.Add(this.radioButton146);
+            this.xml_groupBox30_gb.Controls.Add(this.radioButton147);
+            this.xml_groupBox30_gb.Controls.Add(this.radioButton148);
+            this.xml_groupBox30_gb.Controls.Add(this.radioButton149);
+            this.xml_groupBox30_gb.Controls.Add(this.radioButton150);
+            this.xml_groupBox30_gb.Location = new System.Drawing.Point(570, 75);
+            this.xml_groupBox30_gb.Name = "xml_groupBox30_gb";
+            this.xml_groupBox30_gb.Size = new System.Drawing.Size(210, 36);
+            this.xml_groupBox30_gb.TabIndex = 81;
+            this.xml_groupBox30_gb.TabStop = false;
             // 
             // radioButton146
             // 
@@ -3704,8 +3704,8 @@
             this.xmlgr_groupBox28.PerformLayout();
             this.xmlgr_groupBox29.ResumeLayout(false);
             this.xmlgr_groupBox29.PerformLayout();
-            this.xmlgr_groupBox30.ResumeLayout(false);
-            this.xmlgr_groupBox30.PerformLayout();
+            this.xml_groupBox30_gb.ResumeLayout(false);
+            this.xml_groupBox30_gb.PerformLayout();
             this.norms_tab.ResumeLayout(false);
             this.norms_tab.PerformLayout();
             this.xmlgr_groupBox19.ResumeLayout(false);
@@ -3942,7 +3942,7 @@
         private System.Windows.Forms.RadioButton radioButton143;
         private System.Windows.Forms.RadioButton radioButton144;
         private System.Windows.Forms.RadioButton radioButton145;
-        private System.Windows.Forms.GroupBox xmlgr_groupBox30;
+        private System.Windows.Forms.GroupBox xml_groupBox30_gb;
         private System.Windows.Forms.RadioButton radioButton146;
         private System.Windows.Forms.RadioButton radioButton147;
         private System.Windows.Forms.RadioButton radioButton148;
