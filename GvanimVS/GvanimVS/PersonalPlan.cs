@@ -99,6 +99,8 @@ namespace GvanimVS
 
         private void PersonalPlan_Load(object sender, EventArgs e)
         {
+            //TODO:
+            // PROPERLY EMBEDD DATA FROM SERVER
             xml_rehab_dgv.Rows.Add(new string[] { "1", "", "", "", "" });
             xml_rehab_dgv.Rows.Add(new string[] { "2", "", "", "", "" });
             xml_rehab_dgv.Rows.Add(new string[] { "3", "", "", "", "" });
