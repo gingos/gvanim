@@ -79,13 +79,18 @@ namespace GvanimVS
                 xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
+                    if (control is TextBox)
+                        if (control.Name.StartsWith("xml"))
+                            xml_tab.Add(control.Name, control.Text);
                     if (control is GroupBox)
                     {
                         if (control.Name.StartsWith("xml"))
                         {
-                            foreach (RadioButton r in control.Controls.OfType<RadioButton>())
+                            if (control.Controls.OfType<RadioButton>().Any(r => r.Checked))
+                                xml_tab.Add(control.Name, (control.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Name));
+                            /* foreach (RadioButton r in control.Controls.OfType<RadioButton>())
                                 if (r.Checked)
-                                    xml_tab.Add(control.Name, r.Text);
+                                    xml_tab.Add(control.Name, r.Text);*/
                         }
                     }
                 }
