@@ -120,7 +120,7 @@ namespace GvanimVS
         /// </summary>
         /// <param name=""></param>
 
-        /* private void updateFieldsFromDB()
+         private void updateFieldsFromDB()
         {
             //get XML file from DB
 
@@ -142,25 +142,19 @@ namespace GvanimVS
                         if (page2.Controls.ContainsKey(controlKVP.Key))
                             page2.Controls[controlKVP.Key].Text = controlKVP.Value;
                     }
-                    else if (controlKVP.Key.Contains("xmlg"))
+                    else if (controlKVP.Key.Contains("xml"))
                     {
                         if (page1.Controls.ContainsKey(controlKVP.Key))
                             Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page1.Controls[controlKVP.Key]);
                         if (page2.Controls.ContainsKey(controlKVP.Key))
                             Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page2.Controls[controlKVP.Key]);
                     }
-                    else if (controlKVP.Key.Contains("xmlgr"))
-                    {
-                        if (page1.Controls.ContainsKey(controlKVP.Key))
-                            Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page1.Controls[controlKVP.Key]);
-                        if (page2.Controls.ContainsKey(controlKVP.Key))
-                            Tools.initDataGridFromXML(controlKVP.Value, (DataGridView)page2.Controls[controlKVP.Key]);
-                    }
+                   
 
                 }
             }
         }
-        */
+        
         private void quit_page_Click(object sender, EventArgs e)
         {
             this.Close();
