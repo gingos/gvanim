@@ -74,8 +74,7 @@ namespace GvanimVS
                 }
                 xml_organizer.Add(page.Name, xml_tab);
             }
-            
-            foreach (TabPage page in this.mazav_tc.TabPages)
+           /* foreach (TabPage page in this.mazav_tc.TabPages)
             {
                 xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
@@ -93,7 +92,7 @@ namespace GvanimVS
                     }
                 }
                 xml_organizer.Add(page.Name, xml_tab);
-            }
+            } */
             string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
             return serializedOrganizer;
         }
