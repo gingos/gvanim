@@ -59,7 +59,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.mazav_tab = new System.Windows.Forms.TabPage();
-            this.mazav_tc = new System.Windows.Forms.TabControl();
+            this.xml_mazav_tc = new System.Windows.Forms.TabControl();
             this.job_functionality_tab = new System.Windows.Forms.TabPage();
             this.xml_groupBox32_gb = new System.Windows.Forms.GroupBox();
             this.radioButton156 = new System.Windows.Forms.RadioButton();
@@ -330,7 +330,7 @@
             this.personal_plan_tc.SuspendLayout();
             this.personal_tab.SuspendLayout();
             this.mazav_tab.SuspendLayout();
-            this.mazav_tc.SuspendLayout();
+            this.xml_mazav_tc.SuspendLayout();
             this.job_functionality_tab.SuspendLayout();
             this.xml_groupBox32_gb.SuspendLayout();
             this.xml_groupBox25_gb.SuspendLayout();
@@ -676,7 +676,7 @@
             // 
             // mazav_tab
             // 
-            this.mazav_tab.Controls.Add(this.mazav_tc);
+            this.mazav_tab.Controls.Add(this.xml_mazav_tc);
             this.mazav_tab.Location = new System.Drawing.Point(4, 22);
             this.mazav_tab.Name = "mazav_tab";
             this.mazav_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -686,20 +686,20 @@
             this.mazav_tab.Text = "תמונת מצב";
             this.mazav_tab.UseVisualStyleBackColor = true;
             // 
-            // mazav_tc
+            // xml_mazav_tc
             // 
-            this.mazav_tc.Controls.Add(this.job_functionality_tab);
-            this.mazav_tc.Controls.Add(this.norms_tab);
-            this.mazav_tc.Controls.Add(this.social_skills_tab);
-            this.mazav_tc.Controls.Add(this.activte_assertive_tab);
-            this.mazav_tc.Controls.Add(this.satisfactory_tab);
-            this.mazav_tc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mazav_tc.Location = new System.Drawing.Point(3, 3);
-            this.mazav_tc.Name = "mazav_tc";
-            this.mazav_tc.RightToLeftLayout = true;
-            this.mazav_tc.SelectedIndex = 0;
-            this.mazav_tc.Size = new System.Drawing.Size(956, 360);
-            this.mazav_tc.TabIndex = 0;
+            this.xml_mazav_tc.Controls.Add(this.job_functionality_tab);
+            this.xml_mazav_tc.Controls.Add(this.norms_tab);
+            this.xml_mazav_tc.Controls.Add(this.social_skills_tab);
+            this.xml_mazav_tc.Controls.Add(this.activte_assertive_tab);
+            this.xml_mazav_tc.Controls.Add(this.satisfactory_tab);
+            this.xml_mazav_tc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xml_mazav_tc.Location = new System.Drawing.Point(3, 3);
+            this.xml_mazav_tc.Name = "xml_mazav_tc";
+            this.xml_mazav_tc.RightToLeftLayout = true;
+            this.xml_mazav_tc.SelectedIndex = 0;
+            this.xml_mazav_tc.Size = new System.Drawing.Size(956, 360);
+            this.xml_mazav_tc.TabIndex = 0;
             // 
             // job_functionality_tab
             // 
@@ -3687,7 +3687,7 @@
             this.personal_tab.ResumeLayout(false);
             this.personal_tab.PerformLayout();
             this.mazav_tab.ResumeLayout(false);
-            this.mazav_tc.ResumeLayout(false);
+            this.xml_mazav_tc.ResumeLayout(false);
             this.job_functionality_tab.ResumeLayout(false);
             this.job_functionality_tab.PerformLayout();
             this.xml_groupBox32_gb.ResumeLayout(false);
@@ -3803,7 +3803,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label ID_lb;
         private System.Windows.Forms.TextBox ID_tb;
-        private System.Windows.Forms.TabControl mazav_tc;
+        private System.Windows.Forms.TabControl xml_mazav_tc;
         private System.Windows.Forms.TabPage job_functionality_tab;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;

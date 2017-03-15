@@ -47,31 +47,36 @@ namespace GvanimVS
             //using custom class - serializable dictionary 
             //returns the serialization xml as string
             xml_organizer = new SerializableDictionary<string, SerializableDictionary<string, string>>();
+            SerializableDictionary<string, string> xml_tab;
             foreach (TabPage page in this.personal_plan_tc.TabPages)
             {
-                SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
+                xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
-                    if (control is TextBox)
-                        if (control.Name.StartsWith("xml"))
-                            xml_tab.Add(control.Name, control.Text);
-                                    
-                    if (control is DateTimePicker)
-                        xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
-                    if (control is DataGridView)
-                        if(control.Name.StartsWith("xml"))
+                    if (control.Name.StartsWith("xml"))
                     {
-                        dat = Tools.GetContentAsDataTable((DataGridView)xml_rehab_dgv, false);
-                        string dataGrid = Tools.SerializeXML<DataTable>(dat);
-                        xml_tab.Add(control.Name, dataGrid);
+                        if (control is TextBox)
+                            xml_tab.Add(control.Name, control.Text);
+                        else if (control is DateTimePicker)
+                            xml_tab.Add(control.Name, ((DateTimePicker)control).Value.ToShortDateString());
+                        else if (control is DataGridView)
+                            {
+                                dat = Tools.GetContentAsDataTable((DataGridView)xml_rehab_dgv, false);
+                                string dataGrid = Tools.SerializeXML<DataTable>(dat);
+                                xml_tab.Add(control.Name, dataGrid);
+                            }
+                        else if (control is TabControl)
+                        {
+                            string test = Tools.SerializeXML(control.Controls);
+                            xml_tab.Add(control.Name,test );
+                        }
                     }
-
                 }
                 xml_organizer.Add(page.Name, xml_tab);              
             }
-            foreach (TabPage page in this.mazav_tc.TabPages)
+            foreach (TabPage page in this.xml_mazav_tc.TabPages)
             {
-                SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
+                xml_tab = new SerializableDictionary<string, string>();
                 foreach (Control control in page.Controls)
                 {
                     if (control is GroupBox)
