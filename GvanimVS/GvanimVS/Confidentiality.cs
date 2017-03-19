@@ -15,7 +15,7 @@ namespace GvanimVS
         byte[] CONF_DOC = global::GvanimVS.Properties.Resources.confidentiality_doc_template;
 
         private string ID;
-        string serializedOrganizer, savedFileName, chosenFileName;
+        string savedFileName, chosenFileName;
         byte[] savedFileBytes, chosenFileBytes;
         SerializableDictionary<string, string> xml_organizer;
         private bool chosenChanged;
@@ -178,7 +178,7 @@ namespace GvanimVS
                 return;
             }
             addToOrganizer();
-            serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_organizer);
+            string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_organizer);
             if (serializedOrganizer != null)
             {
                 if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "confidentialityXML", "ID", ID, serializedOrganizer, cmd))
@@ -322,7 +322,7 @@ namespace GvanimVS
             xml_organizer["staff_dgv"] = staff_dgv_xml;
             
             //update SQL
-            serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_organizer);
+            string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_organizer);
             if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "confidentialityXML", "ID", ID, serializedOrganizer, cmd))
             {
                 MessageBox.Show("המידע נשמר בהצלחה");

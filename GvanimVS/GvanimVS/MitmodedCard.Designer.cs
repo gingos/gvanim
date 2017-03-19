@@ -46,7 +46,6 @@
             this.phone2_lb = new System.Windows.Forms.Label();
             this.ok_bt = new System.Windows.Forms.Button();
             this.cancel_bt = new System.Windows.Forms.Button();
-            this.profile_pb = new System.Windows.Forms.PictureBox();
             this.coordinator_id_lb = new System.Windows.Forms.Label();
             this.coordinator_id_tb = new System.Windows.Forms.TextBox();
             this.mitmoded_card_tc = new System.Windows.Forms.TabControl();
@@ -130,7 +129,7 @@
             this.employment_roles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mitmoded_job2_tab = new System.Windows.Forms.TabPage();
             this.xml_job_scope_tb = new System.Windows.Forms.TextBox();
-            this.xml_job_free_txt_tb = new System.Windows.Forms.TextBox();
+            this.xml_job_previous_hardships_tb = new System.Windows.Forms.TextBox();
             this.job_free_txt_lb = new System.Windows.Forms.Label();
             this.xml_job_sal_expc_tb = new System.Windows.Forms.TextBox();
             this.job_sal_expc_lb = new System.Windows.Forms.Label();
@@ -164,8 +163,8 @@
             this.job_initial_lb = new System.Windows.Forms.Label();
             this.xml_first_impression = new System.Windows.Forms.TextBox();
             this.summary_lb = new System.Windows.Forms.Label();
-            this.xml_additional_job_info = new System.Windows.Forms.TextBox();
-            this.job_important_lb = new System.Windows.Forms.Label();
+            this.xml_job__free_text_tb = new System.Windows.Forms.TextBox();
+            this.job__free_text_lb = new System.Windows.Forms.Label();
             this.xml_job_target_tb = new System.Windows.Forms.TextBox();
             this.job_target_lb = new System.Windows.Forms.Label();
             this.mitmoded_print_tab = new System.Windows.Forms.TabPage();
@@ -183,7 +182,7 @@
             this.name_dynamic_lb = new System.Windows.Forms.Label();
             this.ID2_lb = new System.Windows.Forms.Label();
             this.name_lb = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
+            this.profile_pb = new System.Windows.Forms.PictureBox();
             this.mitmoded_card_tc.SuspendLayout();
             this.mitmoded_personal_tab.SuspendLayout();
             this.xml_gender_pnl.SuspendLayout();
@@ -199,6 +198,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.skills_dgv)).BeginInit();
             this.mitmoded_job4_tab.SuspendLayout();
             this.mitmoded_print_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.SuspendLayout();
             // 
             // firstName_lb
@@ -359,17 +359,6 @@
             this.cancel_bt.Text = "סגור";
             this.cancel_bt.UseVisualStyleBackColor = true;
             this.cancel_bt.Click += new System.EventHandler(this.cancel_bt_Click);
-            // 
-            // profile_pb
-            // 
-            this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
-            this.profile_pb.Location = new System.Drawing.Point(76, 96);
-            this.profile_pb.Name = "profile_pb";
-            this.profile_pb.Size = new System.Drawing.Size(172, 172);
-            this.profile_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.profile_pb.TabIndex = 16;
-            this.profile_pb.TabStop = false;
-            this.profile_pb.Click += new System.EventHandler(this.profile_pb_Click);
             // 
             // coordinator_id_lb
             // 
@@ -1163,7 +1152,7 @@
             this.employment_roles});
             this.employment_dgv.Location = new System.Drawing.Point(286, 53);
             this.employment_dgv.Name = "employment_dgv";
-            this.employment_dgv.Size = new System.Drawing.Size(647, 231);
+            this.employment_dgv.Size = new System.Drawing.Size(647, 233);
             this.employment_dgv.TabIndex = 0;
             // 
             // employment_year
@@ -1186,7 +1175,7 @@
             // mitmoded_job2_tab
             // 
             this.mitmoded_job2_tab.Controls.Add(this.xml_job_scope_tb);
-            this.mitmoded_job2_tab.Controls.Add(this.xml_job_free_txt_tb);
+            this.mitmoded_job2_tab.Controls.Add(this.xml_job_previous_hardships_tb);
             this.mitmoded_job2_tab.Controls.Add(this.job_free_txt_lb);
             this.mitmoded_job2_tab.Controls.Add(this.xml_job_sal_expc_tb);
             this.mitmoded_job2_tab.Controls.Add(this.job_sal_expc_lb);
@@ -1225,13 +1214,13 @@
             this.xml_job_scope_tb.TabIndex = 26;
             this.xml_job_scope_tb.Text = "מלאה/ חצי משרה/ משמרות: בוקר/צהריים/ערב/לילה";
             // 
-            // xml_job_free_txt_tb
+            // xml_job_previous_hardships_tb
             // 
-            this.xml_job_free_txt_tb.Location = new System.Drawing.Point(186, 544);
-            this.xml_job_free_txt_tb.Multiline = true;
-            this.xml_job_free_txt_tb.Name = "xml_job_free_txt_tb";
-            this.xml_job_free_txt_tb.Size = new System.Drawing.Size(754, 30);
-            this.xml_job_free_txt_tb.TabIndex = 25;
+            this.xml_job_previous_hardships_tb.Location = new System.Drawing.Point(186, 544);
+            this.xml_job_previous_hardships_tb.Multiline = true;
+            this.xml_job_previous_hardships_tb.Name = "xml_job_previous_hardships_tb";
+            this.xml_job_previous_hardships_tb.Size = new System.Drawing.Size(754, 30);
+            this.xml_job_previous_hardships_tb.TabIndex = 25;
             // 
             // job_free_txt_lb
             // 
@@ -1256,9 +1245,9 @@
             this.job_sal_expc_lb.AutoSize = true;
             this.job_sal_expc_lb.Location = new System.Drawing.Point(528, 486);
             this.job_sal_expc_lb.Name = "job_sal_expc_lb";
-            this.job_sal_expc_lb.Size = new System.Drawing.Size(93, 13);
+            this.job_sal_expc_lb.Size = new System.Drawing.Size(68, 13);
             this.job_sal_expc_lb.TabIndex = 22;
-            this.job_sal_expc_lb.Text = "ציפיות מהעבודה";
+            this.job_sal_expc_lb.Text = "ציפיות שכר";
             // 
             // xml_job_hours_tb
             // 
@@ -1477,8 +1466,8 @@
             this.mitmoded_job4_tab.Controls.Add(this.job_initial_lb);
             this.mitmoded_job4_tab.Controls.Add(this.xml_first_impression);
             this.mitmoded_job4_tab.Controls.Add(this.summary_lb);
-            this.mitmoded_job4_tab.Controls.Add(this.xml_additional_job_info);
-            this.mitmoded_job4_tab.Controls.Add(this.job_important_lb);
+            this.mitmoded_job4_tab.Controls.Add(this.xml_job__free_text_tb);
+            this.mitmoded_job4_tab.Controls.Add(this.job__free_text_lb);
             this.mitmoded_job4_tab.Controls.Add(this.xml_job_target_tb);
             this.mitmoded_job4_tab.Controls.Add(this.job_target_lb);
             this.mitmoded_job4_tab.Location = new System.Drawing.Point(4, 22);
@@ -1532,21 +1521,21 @@
             this.summary_lb.TabIndex = 4;
             this.summary_lb.Text = "סיכום";
             // 
-            // xml_additional_job_info
+            // xml_job__free_text_tb
             // 
-            this.xml_additional_job_info.Location = new System.Drawing.Point(193, 84);
-            this.xml_additional_job_info.Multiline = true;
-            this.xml_additional_job_info.Name = "xml_additional_job_info";
-            this.xml_additional_job_info.Size = new System.Drawing.Size(538, 38);
-            this.xml_additional_job_info.TabIndex = 3;
+            this.xml_job__free_text_tb.Location = new System.Drawing.Point(193, 84);
+            this.xml_job__free_text_tb.Multiline = true;
+            this.xml_job__free_text_tb.Name = "xml_job__free_text_tb";
+            this.xml_job__free_text_tb.Size = new System.Drawing.Size(538, 38);
+            this.xml_job__free_text_tb.TabIndex = 3;
             // 
-            // job_important_lb
+            // job__free_text_lb
             // 
-            this.job_important_lb.Location = new System.Drawing.Point(769, 84);
-            this.job_important_lb.Name = "job_important_lb";
-            this.job_important_lb.Size = new System.Drawing.Size(144, 38);
-            this.job_important_lb.TabIndex = 2;
-            this.job_important_lb.Text = "דברים נוספים שחשוב שנדע, לעבודה המשותפת";
+            this.job__free_text_lb.Location = new System.Drawing.Point(769, 84);
+            this.job__free_text_lb.Name = "job__free_text_lb";
+            this.job__free_text_lb.Size = new System.Drawing.Size(144, 38);
+            this.job__free_text_lb.TabIndex = 2;
+            this.job__free_text_lb.Text = "דברים נוספים שחשוב שנדע, לעבודה המשותפת";
             // 
             // xml_job_target_tb
             // 
@@ -1596,6 +1585,7 @@
             this.export_bt.TabIndex = 40;
             this.export_bt.Text = "צור קובץ מוכן להדפסה";
             this.export_bt.UseVisualStyleBackColor = true;
+            this.export_bt.Click += new System.EventHandler(this.export_bt_Click);
             // 
             // xml_last_signed_dynamic_lb
             // 
@@ -1736,6 +1726,17 @@
             this.name_lb.TabIndex = 26;
             this.name_lb.Text = "שם המתמודד:";
             // 
+            // profile_pb
+            // 
+            this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
+            this.profile_pb.Location = new System.Drawing.Point(76, 96);
+            this.profile_pb.Name = "profile_pb";
+            this.profile_pb.Size = new System.Drawing.Size(172, 172);
+            this.profile_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profile_pb.TabIndex = 16;
+            this.profile_pb.TabStop = false;
+            this.profile_pb.Click += new System.EventHandler(this.profile_pb_Click);
+            // 
             // MitmodedCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1747,7 +1748,6 @@
             this.Name = "MitmodedCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "אינטק מועמד";
-            ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
             this.mitmoded_card_tc.ResumeLayout(false);
             this.mitmoded_personal_tab.ResumeLayout(false);
             this.mitmoded_personal_tab.PerformLayout();
@@ -1772,6 +1772,7 @@
             this.mitmoded_job4_tab.PerformLayout();
             this.mitmoded_print_tab.ResumeLayout(false);
             this.mitmoded_print_tab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1845,7 +1846,7 @@
         private System.Windows.Forms.TextBox xml_reason_tb;
         private System.Windows.Forms.Label reason_lb;
         private System.Windows.Forms.Label job_type_lb;
-        private System.Windows.Forms.TextBox xml_job_free_txt_tb;
+        private System.Windows.Forms.TextBox xml_job_previous_hardships_tb;
         private System.Windows.Forms.Label job_free_txt_lb;
         private System.Windows.Forms.TextBox xml_job_sal_expc_tb;
         private System.Windows.Forms.Label job_sal_expc_lb;
@@ -1866,8 +1867,8 @@
         private System.Windows.Forms.Label job_initial_lb;
         private System.Windows.Forms.TextBox xml_first_impression;
         private System.Windows.Forms.Label summary_lb;
-        private System.Windows.Forms.TextBox xml_additional_job_info;
-        private System.Windows.Forms.Label job_important_lb;
+        private System.Windows.Forms.TextBox xml_job__free_text_tb;
+        private System.Windows.Forms.Label job__free_text_lb;
         private System.Windows.Forms.TextBox xml_job_target_tb;
         private System.Windows.Forms.Label job_target_lb;
         private System.Windows.Forms.TabPage mitmoded_print_tab;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.name_lb = new System.Windows.Forms.Label();
             this.user_tb = new System.Windows.Forms.TextBox();
@@ -118,8 +119,7 @@
             // status_pb
             // 
             this.status_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.status_pb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.status_pb.Image = global::GvanimVS.Properties.Resources.red;
+            this.status_pb.Image = ((System.Drawing.Image)(resources.GetObject("status_pb.Image")));
             this.status_pb.Location = new System.Drawing.Point(4, 6);
             this.status_pb.Name = "status_pb";
             this.status_pb.Size = new System.Drawing.Size(38, 34);
@@ -129,6 +129,7 @@
             // 
             // LoginPage
             // 
+            this.AcceptButton = this.login_bt;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 360);

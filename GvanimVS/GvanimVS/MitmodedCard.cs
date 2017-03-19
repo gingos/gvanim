@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spire.Doc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace GvanimVS
@@ -38,7 +40,7 @@ namespace GvanimVS
             //xml_rehab_validity_cb.DataSource = bindDictionary();
             if (MainDT != null)
                 initFieldsFromDT(MainDT);
-            
+
         }
 
         /// <summary>
@@ -59,7 +61,7 @@ namespace GvanimVS
         /// init the skills datagrid and job preferences datagrid
         /// </summary>
         private void initDataGridViews()
-        {   
+        {
             /*
              * set "Auto Generate Columns" to false
              * now, columns (and data) from data tables will join existing data,
@@ -70,7 +72,7 @@ namespace GvanimVS
             fill_skills();
             init_jobPreferencesDGV();
             fill_jobPreferencesDGV();
-            
+
         }
 
         /// <summary>
@@ -86,7 +88,7 @@ namespace GvanimVS
             // change header font style
             System.Windows.Forms.DataGridViewCellStyle boldStyle = new System.Windows.Forms.DataGridViewCellStyle();
             boldStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            
+
 
             skills_dgv.Rows.Add(new string[] { "מיומנויות תקשורת", "" });
             skills_dgv.Rows[0].Cells[0].Style = boldStyle;
@@ -113,7 +115,7 @@ namespace GvanimVS
             skills_dgv.Rows.Add(new string[] { "יכולת ריכוז", "" });
             skills_dgv.Rows.Add(new string[] { "יוזמה - היכולת לקחת משימה מעבר לנדרש", "" });
             skills_dgv.Rows.Add(new string[] { "יכולת לבצע עבודה עצמאית בהתאם להנחיות", "" });
-            skills_dgv.Rows.Add(new string[] { "התמודדות עם תנאים משתנים:" + Environment.NewLine + "-לחץ ממצבים חדשים ושינויים" + Environment.NewLine + "-דרישות התפקיד משתנות" + Environment.NewLine + "-תנאי הסביבה משתנים" , "" });
+            skills_dgv.Rows.Add(new string[] { "התמודדות עם תנאים משתנים:" + Environment.NewLine + "-לחץ ממצבים חדשים ושינויים" + Environment.NewLine + "-דרישות התפקיד משתנות" + Environment.NewLine + "-תנאי הסביבה משתנים", "" });
             skills_dgv.Rows.Add(new string[] { "יכולת לעבודה מורכבת", "" });
             skills_dgv.Rows.Add(new string[] { "יכולת לקבל סמכות / ביקורת", "" });
             skills_dgv.Rows.Add(new string[] { "יכולת לעבודה בזריזות / מהירות", "" });
@@ -170,7 +172,7 @@ namespace GvanimVS
             locationInput.HeaderText = "אפשרויות";
             locationInput.DataPropertyName = "locationInput";
             locationInput.Name = "locationInput";
-            
+
             DataGridViewTextBoxColumn contents = new DataGridViewTextBoxColumn();
             contents.HeaderText = "תכני העבודה";
             contents.DataPropertyName = "contents";
@@ -195,14 +197,14 @@ namespace GvanimVS
 
             //job_preferences_dg.DataSource = dt;
             job_preferences_dgv.Columns.AddRange(location, locationInput, contents, contentsInput, type, typeInput);
-            
+
         }
 
         /// <summary>
         /// init ALL controls from the data table retrieved from server (represents entire form)
         /// </summary>
         /// <param name="dt">datatable hold form important fields & xml repr</param>
-        private void initFieldsFromDT(DataTable dt) 
+        private void initFieldsFromDT(DataTable dt)
         {
 
             foreach (DataRow dr in dt.Rows)
@@ -235,7 +237,7 @@ namespace GvanimVS
 
                 //fill the non-critical form controls
                 initInfoTextBoxes(dr["intecXML"].ToString());
-                
+
             }
         }
 
@@ -248,16 +250,16 @@ namespace GvanimVS
         /// <param name="OrganzierToDeserialize">XML representation of non-critical controls</param>
         private void initInfoTextBoxes(string OrganzierToDeserialize)
         {
-            
+
             if (OrganzierToDeserialize.Equals(""))
                 return;
 
             xml_organizer = Tools.DeserializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(OrganzierToDeserialize);
-            
+
             foreach (KeyValuePair<string, SerializableDictionary<string, string>> dic in xml_organizer)
             {
                 TabPage page = mitmoded_card_tc.TabPages[dic.Key];
-                
+
                 SerializableDictionary<string, string> xml_tab = dic.Value;
                 if (page.Name.Equals("mitmoded_print_tab"))
                 {
@@ -281,17 +283,17 @@ namespace GvanimVS
                             else if ((page.Controls[controlKVP.Key] is ComboBox))
                             {
                                 page.Controls[controlKVP.Key].Enabled = true;
-                                ((ComboBox)page.Controls[controlKVP.Key]).SelectedIndex = int.Parse (controlKVP.Value);
+                                ((ComboBox)page.Controls[controlKVP.Key]).SelectedIndex = int.Parse(controlKVP.Value);
                             }
                             else if ((page.Controls[controlKVP.Key] is Panel))
                             {
                                 //xml_tab.Add(control.Name, ((Panel)control).Controls.OfType<RadioButton>().First(r => r.Checked).Name);
-                                RadioButton rb = (RadioButton)((Panel)page.Controls[controlKVP.Key]).Controls[controlKVP.Value]; 
+                                RadioButton rb = (RadioButton)((Panel)page.Controls[controlKVP.Key]).Controls[controlKVP.Value];
                                 rb.Checked = true;
                             }
 
                         }
-                        
+
                     }
                     else if (controlKVP.Key.Contains("dgv"))
                     {
@@ -300,7 +302,7 @@ namespace GvanimVS
                     }
                 }
             }
-            
+
         }
 
         /// <summary>
@@ -317,7 +319,7 @@ namespace GvanimVS
             {
                 if (page.Name.Equals("mitmoded_print_tab"))
                 {
-                    if (chosenFileBytes!=null)
+                    if (chosenFileBytes != null)
                         saveFileTab();
                     continue;
                 }
@@ -336,13 +338,13 @@ namespace GvanimVS
                             if (((Panel)control).Controls.OfType<RadioButton>().Any(r => r.Checked))
                                 xml_tab.Add(control.Name, ((Panel)control).Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Name);
                     }
-                    
+
                     if (control is DataGridView)
-                        {
-                            DataTable dt = Tools.GetContentAsDataTable((DataGridView)control, true);
-                            string dtToXml = Tools.SerializeXML<DataTable>(dt);
-                            xml_tab.Add(control.Name, dtToXml);
-                        }
+                    {
+                        DataTable dt = Tools.GetContentAsDataTable((DataGridView)control, true);
+                        string dtToXml = Tools.SerializeXML<DataTable>(dt);
+                        xml_tab.Add(control.Name, dtToXml);
+                    }
                 }
                 xml_organizer.Add(page.Name, xml_tab);
             }
@@ -365,11 +367,11 @@ namespace GvanimVS
                 //null because no new image was selected 
                 else
                     imgByte = imageToByteArray(profile_pb.Image);
-                
+
                 //Serialize TextBoxes to xml string
                 string serializedOrganizer = controlsToDictionary();
 
-                
+
                 //insert data into SQL server
                 if (SQLmethods.upsertMitmoded(firstName_tb.Text, lastName_tb.Text, birth_dtp.Value.Date,
                    ID_tb.Text, city_tb.Text, address_tb.Text, phone1_tb.Text, phone2_tb.Text, coordinator_id_tb.Text,
@@ -377,7 +379,7 @@ namespace GvanimVS
                     MessageBox.Show("המידע נשמר בהצלחה");
                 else
                     MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
-                    
+
                 this.Close();
             }
         }
@@ -501,7 +503,7 @@ namespace GvanimVS
                 MessageBox.Show("יש לבחור משך תוקף לאישור ההעסקה");
                 return false;
             }
-            
+
             return true;
         }
 
@@ -574,7 +576,7 @@ namespace GvanimVS
         /// ignore action if cell changed is from system column (all even columns)
         private void skills_dgv_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            if (e.RowIndex <=20 && e.ColumnIndex % 2 == 0)
+            if (e.RowIndex <= 20 && e.ColumnIndex % 2 == 0)
                 e.Cancel = true;
         }
 
@@ -593,7 +595,7 @@ namespace GvanimVS
         /// ignore action if cell changed is from system column (all even columns)
         private void job_preferences_dgv_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            if (e.RowIndex <=12 && e.ColumnIndex % 2 == 0)
+            if (e.RowIndex <= 12 && e.ColumnIndex % 2 == 0)
                 e.Cancel = true;
         }
 
@@ -706,6 +708,27 @@ namespace GvanimVS
             }
         }
 
+        private void export_bt_Click(object sender, EventArgs e)
+        {
+            exportDoc();
+            //serialize datagridview
+            //string staff_dgv_xml = serializeDGV();
+
+            //update serializer
+            //xml_organizer["staff_dgv"] = staff_dgv_xml;
+
+            //update SQL
+            /*
+            serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_organizer);
+            if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "confidentialityXML", "ID", ID, serializedOrganizer, cmd))
+            {
+                MessageBox.Show("המידע נשמר בהצלחה");
+            }
+            else
+                MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");\
+            */
+        }
+
         /// <summary>
         /// preview selected file (warns user if not chosen)
         /// </summary>
@@ -751,11 +774,13 @@ namespace GvanimVS
                     return;
                 }
             }
+
+            //add "file and print" tab to organizer
             saveFileTab();
             string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
             if (serializedOrganizer != null)
             {
-                if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "intecXML","ID",ID,serializedOrganizer,cmd))
+                if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "intecXML", "ID", ID, serializedOrganizer, cmd))
                 {
                     MessageBox.Show("המידע נשמר בהצלחה");
                     xml_saved_file_lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
@@ -767,7 +792,7 @@ namespace GvanimVS
         }
 
         /// <summary>
-        /// helper function: determines if a file exists on dictionary
+        /// add "file and print" tab to xml organizer
         /// </summary>
         private void saveFileTab()
         {
@@ -781,11 +806,118 @@ namespace GvanimVS
 
             xml_organizer["mitmoded_print_tab"] = print_tab;
         }
+
+        /// <summary>
+        /// load "file and print" tab info from dictionary
+        /// </summary>
+        /// <param name="dic"></param>
         private void loadFileTab(Dictionary<string, string> dic)
         {
             savedFileBytes = Tools.strToByte(dic["savedfilebytes"]);
             xml_saved_file_lb.Text = savedFileName = dic["xml_saved_file_lb"];
             xml_last_signed_dynamic_lb.Text = dic["xml_last_signed_dynamic_lb"];
+        }
+
+        /// <summary>
+        /// Generate a temporary MitmodedCard Document
+        /// template is Resources.personal_details_template.doc
+        /// </summary>
+        private void exportDoc()
+        {
+            //initialize word object  
+            Document document = new Document();
+            var assembly = Assembly.GetExecutingAssembly();
+            var resourceName = "GvanimVS.Resources.personal_details_template.doc";
+            using (Stream loadStream = assembly.GetManifestResourceStream(resourceName))
+                //document.LoadFromFile(samplePath);
+                document.LoadFromStream(loadStream, FileFormat.Doc);
+            //get strings to replace  
+            Dictionary<string, string> dictReplace = GetReplaceDictionary();
+            //Replace text  
+            foreach (KeyValuePair<string, string> kvp in dictReplace)
+            {
+                document.Replace(kvp.Key, kvp.Value, true, true);
+            }
+            //Save doc file.  
+            //document.SaveToFile("C:\\Users\\yoadw20\\Desktop\\test1-doc.doc", FileFormat.Doc);
+            //Convert to stream.
+            MemoryStream ms = new MemoryStream();
+            document.SaveToStream(ms, FileFormat.Doc);
+            MessageBox.Show("עיבוד המסמך הסתיים" + "\n" + "שימו לב, עדיין חסרה חתימה למסמך עצמו", "עיבוד המסמך", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Tools.openTempFile(ms.ToArray(), ".doc");
+            document.Close();
+        }
+
+        private Dictionary<string, string> GetReplaceDictionary()
+        {
+            Dictionary<string, string> replaceDict = new Dictionary<string, string>();
+
+            replaceDict["#firstname#"] = firstName_tb.Text;
+            replaceDict["#lastname#"] = lastName_tb.Text;
+            replaceDict["#id#"] = ID;
+            replaceDict["#dateofbirth#"] = birth_dtp.Value.ToShortDateString();
+            try
+            {
+                replaceDict["#gender#"] = xml_gender_pnl.Controls.OfType<RadioButton>().First(r => r.Checked).Text;
+            }
+            catch (InvalidOperationException)
+            {
+                replaceDict["#gender#"] = "";
+            }
+            replaceDict["#familystatus#"] = xml_family_status_tb.Text;
+            replaceDict["#street#"] = address_tb.Text;
+            replaceDict["#city#"] = city_tb.Text ;
+            replaceDict["#phone1#"] = phone1_tb.Text;
+            replaceDict["#phone2#"] = phone2_tb.Text;
+            replaceDict["#familycontactname#"] = xml_family_contact_name_tb.Text;
+            replaceDict["#familycontactphone#"] = xml_family_contact_phone_tb.Text;
+            replaceDict["#emergency1name#"] = xml_emergency_contact1_name_tb.Text;
+            replaceDict["#emergency2name#"] = xml_emergency_contact2_name_tb.Text;
+            replaceDict["#emergency3name#"] = xml_emergency_contact3_name_tb.Text;
+            replaceDict["#emergency1phone#"] = xml_emergency_contact1_phone_tb.Text;
+            replaceDict["#emergency2phone#"] = xml_emergency_contact2_phone_tb.Text;
+            replaceDict["#emergency3phone#"] = xml_emergency_contact3_phone_tb.Text;
+            replaceDict["#referalname#"] = xml_referer_tb.Text ;
+            replaceDict["#referalphone#"] = xml_referer_phone_tb.Text ;
+            replaceDict["#communityname#"] = xml_community_name_tb.Text;
+            replaceDict["#communityphone#"] = xml_community_phone_tb.Text ;
+            replaceDict["#psychiatricname#"] = xml_psychiatrist_name_tb.Text;
+            replaceDict["#psychiatricphone#"] = xml_psychiatrist_phone_tb.Text ;
+            replaceDict["#generalinfo#"] = xml_general_info_tb.Text;
+            replaceDict["#addictions#"] = xml_addictions_tb.Text ;
+            replaceDict["#violence#"] = xml_violence_tb.Text ;
+            replaceDict["#suicide#"] = xml_homicidal_tb.Text;
+            replaceDict["#medicalissues#"] = xml_medical_issues_tb.Text;
+            replaceDict["#psychiatricfollowup#"] = xml_psych_track_tb.Text;
+            replaceDict["#meds#"] = xml_meds_tb.Text;
+            replaceDict["#education#"] = "add datagrid here";
+            replaceDict["#army#"] = xml_military_tb.Text;
+            replaceDict["#employmenthistory#"] = "add datagrid here" ;
+            replaceDict["#recreational#"] = xml_rec_activity_tb.Text;
+            replaceDict["#employmentreason#"] = xml_reason_tb.Text;
+            replaceDict["#employmentdream1#"] = xml_dream_tb.Text;
+            replaceDict["#strengths#"] = xml_strengths_tb.Text;
+            replaceDict["#weaknesses#"] = xml_weakness_tb.Text ;
+            replaceDict["#employmentdream2#"] = xml_dream_todo_tb.Text;
+            replaceDict["#toaquire#"] = xml_skills_improve_tb.Text;
+            replaceDict["#jobscope#"] = xml_job_scope_tb.Text;
+            replaceDict["#jobdays#"] = xml_job_days_tb.Text;
+            replaceDict["#dayoff#"] = xml_job_day_off_tb.Text;
+            replaceDict["#maxhours#"] = xml_job_max_hours_tb.Text;
+            replaceDict["#jobhours#"] = xml_job_hours_tb.Text;
+            replaceDict["#jobexpectations#"] = xml_job_sal_expc_tb.Text;
+            replaceDict["#jobdiffculties#"] = xml_job_previous_hardships_tb.Text;
+            replaceDict["#supertarget#"] = xml_job_target_tb.Text;
+            replaceDict["#jobimportant#"] = job__free_text_lb.Text;
+            replaceDict["#firstgoals#"] = xml_job_first_targets_tb.Text;
+            replaceDict["#chaperon#"] = "";
+            replaceDict["#employee#"] = "";
+            replaceDict["#date#"] = DateTime.Now.ToShortDateString();
+
+
+            //string isEmployed = this.radio_isEmployed_Yes.Checked ? "Yes" : "No";
+
+            return replaceDict;
         }
     }
 }

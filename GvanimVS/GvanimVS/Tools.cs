@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Spire.Doc;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -194,6 +196,44 @@ namespace GvanimVS
             for (int i = 0; i < tempAry.Length; i++)
                 decBytes2[i] = Convert.ToByte(tempAry[i], 16);
             return decBytes2;
+        }
+
+        /// <summary>
+        /// Generate a temporary MitmodedCard Document
+        /// template is Resources.personal_details_template.doc
+        /// </summary>
+        /// <param name="resourceName"> file name as specified in Resources.resx</param>
+        /// <param name="resourceFormat"> file format must be ".<format>" (with preceding dot!)  </param>
+        /// <param name="dictReplace"> dictionary used to replace placeholders </param>
+        public static void exportDoc(string resourceName, string resourceFormat, Dictionary<string,string> dictReplace)
+        {
+            FileFormat format = FileFormat.Auto;
+            if (resourceFormat.Equals(".doc"))
+                format = FileFormat.Doc;
+            else if (resourceFormat.Equals(".pdf"))
+                format = FileFormat.PDF;
+            //initialize word object  
+            Document document = new Document();
+            var assembly = Assembly.GetExecutingAssembly();
+            //var resourceName = "GvanimVS.Resources.personal_details_template.doc";
+            using (Stream loadStream = assembly.GetManifestResourceStream(resourceName))
+                //document.LoadFromFile(samplePath);
+                document.LoadFromStream(loadStream, format);
+            //get strings to replace  
+            //Dictionary<string, string> dictReplace = GetReplaceDictionary();
+            //Replace text  
+            foreach (KeyValuePair<string, string> kvp in dictReplace)
+            {
+                document.Replace(kvp.Key, kvp.Value, true, true);
+            }
+            //Save doc file.  
+            //document.SaveToFile("C:\\Users\\yoadw20\\Desktop\\test1-doc.doc", FileFormat.Doc);
+            //Convert to stream.
+            MemoryStream ms = new MemoryStream();
+            document.SaveToStream(ms, format);
+            MessageBox.Show("עיבוד המסמך הסתיים" + "\n" + "שימו לב, עדיין חסרה חתימה למסמך עצמו", "עיבוד המסמך", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Tools.openTempFile(ms.ToArray(), resourceFormat);
+            document.Close();
         }
     }
 }
