@@ -181,7 +181,7 @@ namespace GvanimVS
             serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_organizer);
             if (serializedOrganizer != null)
             {
-                if (SQLmethods.upsertConfidentiality(ID, serializedOrganizer, cmd))
+                if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "confidentialityXML", "ID", ID, serializedOrganizer, cmd))
                 {
                     MessageBox.Show("המידע נשמר בהצלחה");
                     saved_file_lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
@@ -317,14 +317,13 @@ namespace GvanimVS
             exportDoc();
             //serialize datagridview
             string staff_dgv_xml = serializeDGV();
+            
             //update serializer
-            if (xml_organizer.ContainsKey("staff_dgv"))
-                xml_organizer["staff_dgv"] = staff_dgv_xml;
-            else
-                xml_organizer.Add("staff_dgv", staff_dgv_xml);
+            xml_organizer["staff_dgv"] = staff_dgv_xml;
+            
             //update SQL
             serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_organizer);
-            if (SQLmethods.upsertConfidentiality(ID, serializedOrganizer, cmd))
+            if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "confidentialityXML", "ID", ID, serializedOrganizer, cmd))
             {
                 MessageBox.Show("המידע נשמר בהצלחה");
             }

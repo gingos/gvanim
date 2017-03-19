@@ -303,7 +303,6 @@ namespace GvanimVS
             
         }
 
-
         /// <summary>
         /// creates a dictionary of dictionarys, per tab, per text controls
         /// </summary>

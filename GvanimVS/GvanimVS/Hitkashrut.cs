@@ -161,7 +161,7 @@ namespace GvanimVS
             serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_organizer);
             if (serializedOrganizer != null)
             {
-                if (SQLmethods.upsertHitkashrut(ID, serializedOrganizer, cmd))
+                if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "hitkashrutXML", "ID", ID, serializedOrganizer, cmd))
                 {
                     MessageBox.Show("המידע נשמר בהצלחה");
                     saved_file__lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
