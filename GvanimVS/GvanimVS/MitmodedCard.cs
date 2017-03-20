@@ -921,11 +921,10 @@ namespace GvanimVS
                 p.Format.HorizontalAlignment = Spire.Doc.Documents.HorizontalAlignment.Center;
                 p.Format.IsBidi = true;
                 //Data Format
-                Spire.Doc.Fields.TextRange TR = p.AppendText(dgv.Columns[i].HeaderText);
+                Spire.Doc.Fields.TextRange TR = p.AppendText(dgv.Columns[dgv.ColumnCount - i - 1].HeaderText);
                 TR.CharacterFormat.FontName = "Arial";
                 TR.CharacterFormat.FontSize = 14;
                 TR.CharacterFormat.Bidi = true;
-                TR.CharacterFormat.Bold = true;
             }
 
             //Data Row
@@ -942,7 +941,7 @@ namespace GvanimVS
                     //Fill Data in Rows
                     Paragraph p2 = DataRow.Cells[c].AddParagraph();
                     p2.Format.IsBidi = true;
-                    Spire.Doc.Fields.TextRange TR2 = p2.AppendText(dgv[c,r].Value.ToString());
+                    Spire.Doc.Fields.TextRange TR2 = p2.AppendText(dgv[dgv.ColumnCount - c -1 , r].Value.ToString());
                     TR2.CharacterFormat.Bidi = true;
                     //Format Cells
                     p2.Format.HorizontalAlignment = Spire.Doc.Documents.HorizontalAlignment.Center;
