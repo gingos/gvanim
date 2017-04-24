@@ -137,6 +137,16 @@ namespace GvanimVS
             this.Show();
         }
 
+        private void cv_generator_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var cv = new CVGenerator(con, ID_dynamic_lb.Text))
+            {
+                cv.ShowDialog();
+            }
+            this.Show();
+        }
+
         private void addPsychiatricCheckUp_btn_Click(object sender, EventArgs e)
         {
             this.Hide();

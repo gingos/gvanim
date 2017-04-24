@@ -33,16 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Spire.Doc, Version=5.7.0.54020, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
-      <HintPath>..\packages\FreeSpire.Doc.5.7\lib\net20\Spire.Doc.dll</HintPath>
+    <Reference Include="Spire.Doc, Version=5.8.15.10040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.DocViewer.2.3.2\lib\net40\Spire.Doc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Spire.License, Version=1.3.5.20, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
-      <HintPath>..\packages\FreeSpire.Doc.5.7\lib\net20\Spire.License.dll</HintPath>
+    <Reference Include="Spire.DocViewer.Forms, Version=2.3.2.10040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.DocViewer.2.3.2\lib\net40\Spire.DocViewer.Forms.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Spire.Pdf, Version=3.7.291.54020, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
-      <HintPath>..\packages\FreeSpire.Doc.5.7\lib\net20\Spire.Pdf.dll</HintPath>
+    <Reference Include="Spire.License, Version=1.3.5.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.DocViewer.2.3.2\lib\net40\Spire.License.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=3.8.59.10040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.DocViewer.2.3.2\lib\net40\Spire.Pdf.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -75,6 +79,12 @@
     </Compile>
     <Compile Include="Coordinator.Designer.cs">
       <DependentUpon>Coordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CVGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CVGenerator.Designer.cs">
+      <DependentUpon>CVGenerator.cs</DependentUpon>
     </Compile>
     <Compile Include="DBform.cs">
       <SubType>Form</SubType>
@@ -179,6 +189,9 @@
     <EmbeddedResource Include="Coordinator.resx">
       <DependentUpon>Coordinator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CVGenerator.resx">
+      <DependentUpon>CVGenerator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmplyomentRecord.resx">
       <DependentUpon>EmplyomentRecord.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +216,7 @@
     <EmbeddedResource Include="PersonalPlan.resx">
       <DependentUpon>PersonalPlan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -235,6 +249,8 @@
     </Compile>
     <EmbeddedResource Include="Resources\confidentiality_doc_template.doc" />
     <None Include="Resources\confidentiality_pdf.pdf" />
+    <None Include="Resources\cv1.docx" />
+    <None Include="Resources\cv2.doc" />
     <None Include="Resources\hitkashrut.pdf" />
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +261,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\anonymous_profile.gif" />
+    <None Include="Resources\cv2_thumb.png" />
+    <None Include="Resources\cv1_thumb.png" />
     <EmbeddedResource Include="Resources\personal_details_template.doc" />
     <None Include="Resources\red.png" />
     <None Include="Resources\green.png" />

@@ -15,15 +15,16 @@ namespace GvanimVS
         public static string REPORTS = "ReportsTB";
         public static string USERS = "UsersTB";
         public static string RECORDS = "EmploymentRecordTB";
+        public static string CV = "CVTemplatesTB";
 
 
         public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city,
             string address, string phone1, string phone2, string coordinatorID, byte[] photo,
             string serializedOrganizer, SqlCommand cmd)
         {
-           
-            cmd.CommandText =
+
             #region sqlQuery
+            cmd.CommandText =
             " IF NOT EXISTS (SELECT * FROM " + SQLmethods.MITMODED + " WHERE ID = @pID) "
             + "INSERT INTO " + SQLmethods.MITMODED + " (ID, firstName,lastName,birthday,city, "
             + "streetAddress,phone1,phone2,coordinatorID, photo, "
@@ -77,8 +78,8 @@ namespace GvanimVS
         
         public static bool upsertReport (string reportID, string mitmodedID, string firstName, string lastName, DateTime date, string report, string actions, string coordinatorID, SqlCommand cmd)
         {
-            cmd.CommandText =
             #region sqlQuery
+            cmd.CommandText =
             " IF NOT EXISTS (SELECT * FROM " + REPORTS + " WHERE Id = @pReportID) "
            + "INSERT INTO " + REPORTS + " (Id, mitmodedID, firstName, lastName, Created, Report, actions, coordinatorID) "
            + "VALUES (@pReportID, @pMitmodedID, @pFirstName, @pLastName, @pCreated, @pReport, @pActions, @pCoordinatorID) "
@@ -88,6 +89,7 @@ namespace GvanimVS
            + " WHERE Id = @pReportID";
             #endregion
             #region addParamters
+            cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@pReportID", reportID);
             cmd.Parameters.AddWithValue("@pFirstName", firstName);
             cmd.Parameters.AddWithValue("@pLastName", lastName);
@@ -119,8 +121,8 @@ namespace GvanimVS
         }
         public static bool findMeeting(int ID, DateTime date, string name, SqlCommand cmd)
         {
-            cmd.CommandText =
             #region sqlQuery
+            cmd.CommandText =
                    /*  "DECLARE @id int ='" + ID + "'"
                    + "DECLARE @date datetime = '" + date + "'"
                    + "DECLARE @mitmoded nvarchar(50) = '" + name + "'"
@@ -131,6 +133,38 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pID", ID);
             cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
             cmd.Parameters.AddWithValue("@pMitmoded", name);
+            #endregion
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return false;
+            }
+            #endregion
+            return true;
+        }
+        public static bool InsertCV(byte[] data, string fileName, SqlCommand cmd)
+        {
+            #region sqlQuery
+            cmd.CommandText =
+           "insert into " + CV + "(Name, Data) values (@pName, @pData)";
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            //cmd.Parameters.Add("@pName", SqlDbType.NVarChar).Value = fileName;
+            cmd.Parameters.AddWithValue("@pName", fileName);
+            cmd.Parameters.Add("@pData", SqlDbType.Binary).Value = data;
             #endregion
             #region execute
             try
@@ -414,6 +448,7 @@ namespace GvanimVS
 
             return dt;
         }
+
         //DEPRECATED
         private static string findMeeting(int id, DateTime date, string name)
         {
@@ -473,7 +508,6 @@ namespace GvanimVS
         /// <param name="XMLinfo"></param>
         /// <param name="cmd"></param>
         /// <returns></returns>
-
         public static bool updateXMLFormInDB(string table, string column, string key, string value, string XMLinfo, SqlCommand cmd)
         {
             cmd.CommandText =
@@ -508,6 +542,14 @@ namespace GvanimVS
             return true;
         }
 
+        /// <summary>
+        /// retrieve xml representing form from table
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="column"></param>
+        /// <param name="row"></param>
+        /// <param name="cmd"></param>
+        /// <returns></returns>
         public static string getXMLFromDB(string table, string column, string row, SqlCommand cmd)
         {
             return

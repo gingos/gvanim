@@ -178,6 +178,23 @@ namespace GvanimVS
         }
 
         /// <summary>
+        /// return byte[] of file
+        /// </summary>
+        /// <param name="fileLoc">path of file</param>
+        /// <returns></returns>
+        public static byte[] GetBytes(string fileLoc)
+        {
+            FileStream stream = new FileStream(
+                fileLoc, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            BinaryReader reader = new BinaryReader(stream);
+            byte[] fileByte = reader.ReadBytes((int)stream.Length);
+
+            reader.Close();
+            stream.Close();
+            return fileByte;
+        }
+
+        /// <summary>
         /// returns '-' delimited string representation of the byte array
         /// {32,   0,   0,} --> "20-00-00"
         /// </summary>
