@@ -45,10 +45,11 @@
             this.tochnit_bt = new System.Windows.Forms.Button();
             this.form_categories_tc = new System.Windows.Forms.TabControl();
             this.cat_personal_tab = new System.Windows.Forms.TabPage();
+            this.confidentiality_bt = new System.Windows.Forms.Button();
             this.open_hitkashrut_bt = new System.Windows.Forms.Button();
             this.cat_report_tab = new System.Windows.Forms.TabPage();
             this.cat_meeting_tab = new System.Windows.Forms.TabPage();
-            this.confidentiality_bt = new System.Windows.Forms.Button();
+            this.addPsychiatricCheckUp_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.form_categories_tc.SuspendLayout();
             this.cat_personal_tab.SuspendLayout();
@@ -234,6 +235,16 @@
             this.cat_personal_tab.Text = "פרטים וקליטה";
             this.cat_personal_tab.UseVisualStyleBackColor = true;
             // 
+            // confidentiality_bt
+            // 
+            this.confidentiality_bt.Location = new System.Drawing.Point(122, 45);
+            this.confidentiality_bt.Name = "confidentiality_bt";
+            this.confidentiality_bt.Size = new System.Drawing.Size(106, 23);
+            this.confidentiality_bt.TabIndex = 16;
+            this.confidentiality_bt.Text = "ויתור סודיות";
+            this.confidentiality_bt.UseVisualStyleBackColor = true;
+            this.confidentiality_bt.Click += new System.EventHandler(this.confidentiality_bt_Click);
+            // 
             // open_hitkashrut_bt
             // 
             this.open_hitkashrut_bt.Location = new System.Drawing.Point(122, 16);
@@ -258,6 +269,7 @@
             // 
             // cat_meeting_tab
             // 
+            this.cat_meeting_tab.Controls.Add(this.addPsychiatricCheckUp_btn);
             this.cat_meeting_tab.Controls.Add(this.show_employment_bt);
             this.cat_meeting_tab.Controls.Add(this.add_employment_bt);
             this.cat_meeting_tab.Location = new System.Drawing.Point(4, 22);
@@ -267,15 +279,15 @@
             this.cat_meeting_tab.Text = "פגישות ומעקבים";
             this.cat_meeting_tab.UseVisualStyleBackColor = true;
             // 
-            // confidentiality_bt
+            // addPsychiatricCheckUp_btn
             // 
-            this.confidentiality_bt.Location = new System.Drawing.Point(122, 45);
-            this.confidentiality_bt.Name = "confidentiality_bt";
-            this.confidentiality_bt.Size = new System.Drawing.Size(106, 23);
-            this.confidentiality_bt.TabIndex = 16;
-            this.confidentiality_bt.Text = "ויתור סודיות";
-            this.confidentiality_bt.UseVisualStyleBackColor = true;
-            this.confidentiality_bt.Click += new System.EventHandler(this.confidentiality_bt_Click);
+            this.addPsychiatricCheckUp_btn.Location = new System.Drawing.Point(63, 14);
+            this.addPsychiatricCheckUp_btn.Name = "addPsychiatricCheckUp_btn";
+            this.addPsychiatricCheckUp_btn.Size = new System.Drawing.Size(138, 23);
+            this.addPsychiatricCheckUp_btn.TabIndex = 9;
+            this.addPsychiatricCheckUp_btn.Text = "הוסף מעקב פסיכיאטרי";
+            this.addPsychiatricCheckUp_btn.UseVisualStyleBackColor = true;
+            this.addPsychiatricCheckUp_btn.Click += new System.EventHandler(this.addPsychiatricCheckUp_btn_Click);
             // 
             // Mitmoded
             // 
@@ -328,5 +340,6 @@
         private System.Windows.Forms.TabPage cat_meeting_tab;
         private System.Windows.Forms.Button open_hitkashrut_bt;
         private System.Windows.Forms.Button confidentiality_bt;
+        private System.Windows.Forms.Button addPsychiatricCheckUp_btn;
     }
 }

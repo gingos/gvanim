@@ -42,6 +42,7 @@ namespace GvanimVS
 
             return valid;
         }
+
         public static bool IsAlphabets(string input)
         {
             //Regex r = new Regex("^[a-zA-Z ]+$");
@@ -52,15 +53,18 @@ namespace GvanimVS
             else
                 return false;
         }
+
         public static bool IsValidEmail(string input)
         {
             // Return true if input is in valid e-mail format.
             return Regex.IsMatch(input, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
         }
+
         public static string getID(string input)
         {
             return Regex.Match(input, @"\d+").Value;
         }
+
         public static DataTable GetContentAsDataTable(DataGridView dgv, bool IgnoreHideColumns = false)
         {
             try
@@ -113,6 +117,7 @@ namespace GvanimVS
             if (!XMLfromSQL.Equals(""))
                 XmlToDataGrid(XMLfromSQL, dgv);
         }
+
         private static void XmlToDataGrid(string XMLstring, DataGridView dgv)
         {
             /*

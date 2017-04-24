@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,12 @@ namespace GvanimVS                //TODO: add a special table to DB including de
             InitializeComponent();
         }
 
+        public PsychiatricCheckUp(SqlConnection con, string text) : base(con)
+        {
+            InitializeComponent();
+            this.Text = text;
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -29,8 +36,14 @@ namespace GvanimVS                //TODO: add a special table to DB including de
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog file = new OpenFileDialog();
-           
+            OpenFileDialog f = new OpenFileDialog();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.StreamReader sr = new System.IO.StreamReader(f.FileName);
+                MessageBox.Show(sr.ReadToEnd());
+                sr.Close();
+            }
+
         }
     }
     
