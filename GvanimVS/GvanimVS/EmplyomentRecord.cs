@@ -23,6 +23,7 @@ namespace GvanimVS
             mitmoded_id_lb.Text = ID;
             mitmoded_name_lb.Text = name;
             DataTable dt = SQLmethods.getEmploymentRecordTable(mitmoded_id_lb.Text, cmd, da);
+            //consider using "SQLmethods.getDataTable(string table, string ID, SqlCommand cmd, SqlDataAdapter da)"
             if (dt == null)
                 return;
             dataGridView1.DataSource = dt;
