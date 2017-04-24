@@ -564,7 +564,7 @@ namespace GvanimVS
         {
             #region sqlQuery
             cmd.CommandText =
-           "insert into " + PSY + "(Id, Date, DoctorName, Discription, File) values (@pId, @pDate, @pDoctorName, @pDiscription, @pFile)";
+           "insert into " + PSY + "(Id, Date, DoctorName, Discription, Bikur) values (@pId, @pDate, @pDoctorName, @pDiscription, @pFile)";
             #endregion
             #region addParamters
             cmd.Parameters.Clear();

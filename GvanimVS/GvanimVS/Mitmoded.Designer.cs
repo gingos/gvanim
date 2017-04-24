@@ -51,6 +51,7 @@
             this.cat_meeting_tab = new System.Windows.Forms.TabPage();
             this.cv_generator_bt = new System.Windows.Forms.Button();
             this.addPsychiatricCheckUp_btn = new System.Windows.Forms.Button();
+            this.showPsyCheckUps_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.form_categories_tc.SuspendLayout();
             this.cat_personal_tab.SuspendLayout();
@@ -271,6 +272,7 @@
             // cat_meeting_tab
             // 
             this.cat_meeting_tab.Controls.Add(this.cv_generator_bt);
+            this.cat_meeting_tab.Controls.Add(this.showPsyCheckUps_btn);
             this.cat_meeting_tab.Controls.Add(this.addPsychiatricCheckUp_btn);
             this.cat_meeting_tab.Controls.Add(this.show_employment_bt);
             this.cat_meeting_tab.Controls.Add(this.add_employment_bt);
@@ -283,9 +285,9 @@
             // 
             // cv_generator_bt
             // 
-            this.cv_generator_bt.Location = new System.Drawing.Point(49, 42);
+            this.cv_generator_bt.Location = new System.Drawing.Point(208, 72);
             this.cv_generator_bt.Name = "cv_generator_bt";
-            this.cv_generator_bt.Size = new System.Drawing.Size(151, 23);
+            this.cv_generator_bt.Size = new System.Drawing.Size(165, 23);
             this.cv_generator_bt.TabIndex = 10;
             this.cv_generator_bt.Text = "קורות חיים";
             this.cv_generator_bt.UseVisualStyleBackColor = true;
@@ -300,6 +302,16 @@
             this.addPsychiatricCheckUp_btn.Text = "הוסף מעקב פסיכיאטרי";
             this.addPsychiatricCheckUp_btn.UseVisualStyleBackColor = true;
             this.addPsychiatricCheckUp_btn.Click += new System.EventHandler(this.addPsychiatricCheckUp_btn_Click_1);
+            // 
+            // showPsyCheckUps_btn
+            // 
+            this.showPsyCheckUps_btn.Location = new System.Drawing.Point(49, 43);
+            this.showPsyCheckUps_btn.Name = "showPsyCheckUps_btn";
+            this.showPsyCheckUps_btn.Size = new System.Drawing.Size(152, 23);
+            this.showPsyCheckUps_btn.TabIndex = 9;
+            this.showPsyCheckUps_btn.Text = "הצג מעקבים פסיכיאטריים";
+            this.showPsyCheckUps_btn.UseVisualStyleBackColor = true;
+            this.showPsyCheckUps_btn.Click += new System.EventHandler(this.addPsychiatricCheckUp_btn_Click_1);
             // 
             // Mitmoded
             // 
@@ -354,5 +366,6 @@
         private System.Windows.Forms.Button confidentiality_bt;
         private System.Windows.Forms.Button addPsychiatricCheckUp_btn;
         private System.Windows.Forms.Button cv_generator_bt;
+        private System.Windows.Forms.Button showPsyCheckUps_btn;
     }
 }
