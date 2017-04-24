@@ -38,7 +38,7 @@
             this.close_bt = new System.Windows.Forms.Button();
             this.browse_bt = new System.Windows.Forms.Button();
             this.docDocumentViewer1 = new Spire.DocViewer.Forms.DocDocumentViewer();
-            this.cb1_bt = new System.Windows.Forms.Button();
+            this.cv1_bt = new System.Windows.Forms.Button();
             this.cv2_bt = new System.Windows.Forms.Button();
             this.cv_list_dgv = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.cv1_pb)).BeginInit();
@@ -89,9 +89,9 @@
             // 
             this.cv1_pb.BackgroundImage = global::GvanimVS.Properties.Resources.cv1_thumb;
             this.cv1_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cv1_pb.Location = new System.Drawing.Point(729, 106);
+            this.cv1_pb.Location = new System.Drawing.Point(320, 32);
             this.cv1_pb.Name = "cv1_pb";
-            this.cv1_pb.Size = new System.Drawing.Size(165, 150);
+            this.cv1_pb.Size = new System.Drawing.Size(66, 51);
             this.cv1_pb.TabIndex = 8;
             this.cv1_pb.TabStop = false;
             this.cv1_pb.Click += new System.EventHandler(this.cv1_pb_Click);
@@ -100,9 +100,9 @@
             // 
             this.cv2_pb.BackgroundImage = global::GvanimVS.Properties.Resources.cv2_thumb;
             this.cv2_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cv2_pb.Location = new System.Drawing.Point(499, 106);
+            this.cv2_pb.Location = new System.Drawing.Point(223, 32);
             this.cv2_pb.Name = "cv2_pb";
-            this.cv2_pb.Size = new System.Drawing.Size(165, 150);
+            this.cv2_pb.Size = new System.Drawing.Size(70, 51);
             this.cv2_pb.TabIndex = 9;
             this.cv2_pb.TabStop = false;
             this.cv2_pb.Click += new System.EventHandler(this.cv2_pb_Click);
@@ -143,23 +143,23 @@
             this.docDocumentViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.docDocumentViewer1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.docDocumentViewer1.EnableHandTools = false;
-            this.docDocumentViewer1.Location = new System.Drawing.Point(27, 151);
+            this.docDocumentViewer1.Location = new System.Drawing.Point(457, 106);
             this.docDocumentViewer1.Name = "docDocumentViewer1";
-            this.docDocumentViewer1.Size = new System.Drawing.Size(120, 82);
+            this.docDocumentViewer1.Size = new System.Drawing.Size(740, 412);
             this.docDocumentViewer1.TabIndex = 14;
             this.docDocumentViewer1.Text = "docDocumentViewer1";
             this.docDocumentViewer1.ToPdfParameterList = null;
             this.docDocumentViewer1.ZoomMode = Spire.DocViewer.Forms.ZoomMode.Default;
             // 
-            // cb1_bt
+            // cv1_bt
             // 
-            this.cb1_bt.Location = new System.Drawing.Point(27, 64);
-            this.cb1_bt.Name = "cb1_bt";
-            this.cb1_bt.Size = new System.Drawing.Size(75, 23);
-            this.cb1_bt.TabIndex = 15;
-            this.cb1_bt.Text = "cv1_bt";
-            this.cb1_bt.UseVisualStyleBackColor = true;
-            this.cb1_bt.Click += new System.EventHandler(this.cb1_bt_Click);
+            this.cv1_bt.Location = new System.Drawing.Point(27, 64);
+            this.cv1_bt.Name = "cv1_bt";
+            this.cv1_bt.Size = new System.Drawing.Size(75, 23);
+            this.cv1_bt.TabIndex = 15;
+            this.cv1_bt.Text = "cv1_bt";
+            this.cv1_bt.UseVisualStyleBackColor = true;
+            this.cv1_bt.Click += new System.EventHandler(this.cv1_bt_Click);
             // 
             // cv2_bt
             // 
@@ -172,20 +172,24 @@
             // 
             // cv_list_dgv
             // 
+            this.cv_list_dgv.AllowUserToResizeColumns = false;
+            this.cv_list_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.cv_list_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cv_list_dgv.Location = new System.Drawing.Point(201, 83);
+            this.cv_list_dgv.Location = new System.Drawing.Point(154, 106);
             this.cv_list_dgv.Name = "cv_list_dgv";
-            this.cv_list_dgv.Size = new System.Drawing.Size(240, 150);
+            this.cv_list_dgv.ReadOnly = true;
+            this.cv_list_dgv.Size = new System.Drawing.Size(253, 176);
             this.cv_list_dgv.TabIndex = 17;
+            this.cv_list_dgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cv_list_dgv_CellDoubleClick);
             // 
             // CVGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 358);
+            this.ClientSize = new System.Drawing.Size(1231, 635);
             this.Controls.Add(this.cv_list_dgv);
             this.Controls.Add(this.cv2_bt);
-            this.Controls.Add(this.cb1_bt);
+            this.Controls.Add(this.cv1_bt);
             this.Controls.Add(this.docDocumentViewer1);
             this.Controls.Add(this.browse_bt);
             this.Controls.Add(this.close_bt);
@@ -218,7 +222,7 @@
         private System.Windows.Forms.Button close_bt;
         private System.Windows.Forms.Button browse_bt;
         private Spire.DocViewer.Forms.DocDocumentViewer docDocumentViewer1;
-        private System.Windows.Forms.Button cb1_bt;
+        private System.Windows.Forms.Button cv1_bt;
         private System.Windows.Forms.Button cv2_bt;
         private System.Windows.Forms.DataGridView cv_list_dgv;
     }

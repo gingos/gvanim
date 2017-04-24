@@ -17,8 +17,6 @@ namespace GvanimVS
         byte[] CV1 = global::GvanimVS.Properties.Resources.cv1;
         byte[] CV2 = global::GvanimVS.Properties.Resources.cv2;
 
-        List<byte[]> files;
-
         public CVGenerator(SqlConnection con, string ID) :base(con)
         {
             InitializeComponent();
@@ -26,6 +24,7 @@ namespace GvanimVS
             DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
             if (dt != null)
                 initFieldsFromDT(dt);
+            LoadFiles();
         }
 
         private void initFieldsFromDT(DataTable dt)
@@ -75,9 +74,18 @@ namespace GvanimVS
             this.Close();
         }
 
+        /// <summary>
+        /// Browse for a new CV file to upload
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void browse_bt_Click(object sender, EventArgs e)
         {
-
+            DialogResult dialogResult = MessageBox.Show("האם ברצונכם להעלות קובץ קורות חיים נוסף?", "אישור בחירת קובץ", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
             //open a DOC document
             string fileLoc = BrowseDoc();
 
@@ -87,8 +95,7 @@ namespace GvanimVS
                 byte[] data = Tools.GetBytes(fileLoc);
                 if (AddCV(data, Path.GetFileName(fileLoc)))
                     LoadFiles();
-            }
-            
+            }            
         }
 
         /// <summary>
@@ -120,9 +127,7 @@ namespace GvanimVS
             }
             return null;
             
-        }
-
-        
+        }        
 
         /// <summary>
         /// add chosen CV file to database
@@ -139,33 +144,34 @@ namespace GvanimVS
                 MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים בשרת");
                 return false;
             }
-
         }
 
+        /// <summary>
+        /// Load all CV files currently on the server
+        /// </summary>
         private void LoadFiles()
         {
-            //throw new NotImplementedException();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.CV, "*", cmd, da);
-
-            /*
-            DataTable temp = dt.Copy();
-            temp.Columns.Remove(temp.Columns[1]); // Will remove the third column for example
-            cv_list_dgv.DataSource = temp;
-            */
-
-            
-            cv_list_dgv.DataSource = dt;
-            cv_list_dgv.Columns[1].Visible = false;
-
+            if (dt != null)
+            {
+                cv_list_dgv.DataSource = dt;
+                cv_list_dgv.Columns[0].Visible = false;
+                cv_list_dgv.Columns[1].Visible = false;
+            }
         }
 
-        private void cb1_bt_Click(object sender, EventArgs e)
+        private void cv_list_dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            string docFile = dialog.FileName;
-            System.IO.FileStream stream = new System.IO.FileStream(docFile, System.IO.FileMode.Open, System.IO.FileAccess.Read, System.IO.FileShare.Read);
-            this.docDocumentViewer1.LoadFromStream(stream, Spire.Doc.FileFormat.Auto);
+            DataTable dt = (DataTable)cv_list_dgv.DataSource;
+            MemoryStream stream = new MemoryStream((byte[])dt.Rows[e.RowIndex]["Data"]);
             
+            docDocumentViewer1.LoadFromStream(stream, Spire.Doc.FileFormat.Auto);
+            
+        }
+
+        private void cv1_bt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
