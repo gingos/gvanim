@@ -91,6 +91,7 @@ namespace GvanimVS
         /// <param name="fileLoc">file path</param>
         private bool addPDF(string fileLoc)
         {
+            
             using (var stream = new FileStream(fileLoc, FileMode.Open, FileAccess.Read))
             {
                 using (var reader = new BinaryReader(stream))
@@ -98,6 +99,23 @@ namespace GvanimVS
                     data = reader.ReadBytes((int)stream.Length);
                 }
             }
+
+            if (data == null)
+            {
+                MessageBox.Show("יש לבחור קובץ");
+                return false;
+            }
+            // get suffix to decide file type   
+            string suffix = fileLoc.Substring(fileLoc.LastIndexOf("."));
+            try
+            {
+                Tools.openTempFile(data, suffix);
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+            }
+
             if (SQLmethods.insertPSY(data, this.Text, doctorName_tb.Text, discription_tb.Text, visitDate_dtp.Text, cmd) == true)
             {
                 label4.Show();
