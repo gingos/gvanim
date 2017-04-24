@@ -564,7 +564,8 @@ namespace GvanimVS
         {
             #region sqlQuery
             cmd.CommandText =
-           "insert into " + PSY + "(Id, Date, DoctorName, Discription, File) values (@pId, @pDate, @pDoctorName, @pDiscription, @pFile)";
+           "insert into " + PSY + " (Id, Date, DoctorName, Discription, File) values (@pId, @pDate, @pDoctorName, @pDiscription, @pFile)";
+            //"insert into " + CV + "(Name, Data) values (@pName, @pData)";
             #endregion
             #region addParamters
             cmd.Parameters.Clear();
@@ -572,7 +573,8 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pDate", date);
             cmd.Parameters.AddWithValue("@pDoctorName", doctorName);
             cmd.Parameters.AddWithValue("@pDiscription", discription);
-            cmd.Parameters.Add("@pFile", SqlDbType.VarBinary).Value = data;
+            //cmd.Parameters.Add("@pFile", SqlDbType.VarBinary).Value = data;
+            cmd.Parameters.Add("@pFile", SqlDbType.Binary).Value = data;
             #endregion
             #region execute
             try

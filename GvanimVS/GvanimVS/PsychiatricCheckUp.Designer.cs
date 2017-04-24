@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.doctorName_tb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.close_bt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -122,11 +123,22 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "מכתב ביקור צורף בהצלחה";
             // 
+            // close_bt
+            // 
+            this.close_bt.Location = new System.Drawing.Point(49, 329);
+            this.close_bt.Name = "close_bt";
+            this.close_bt.Size = new System.Drawing.Size(75, 23);
+            this.close_bt.TabIndex = 6;
+            this.close_bt.Text = "סגור";
+            this.close_bt.UseVisualStyleBackColor = true;
+            this.close_bt.Click += new System.EventHandler(this.button2_Click);
+            // 
             // PsychiatricCheckUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 392);
+            this.Controls.Add(this.close_bt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.saveCheckUp_btn);
             this.Controls.Add(this.button1);
@@ -154,5 +166,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox doctorName_tb;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button close_bt;
     }
 }

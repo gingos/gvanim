@@ -91,6 +91,7 @@ namespace GvanimVS
         /// <param name="fileLoc">file path</param>
         private bool addPDF(string fileLoc)
         {
+            //Use Tools.GetBytes here; It has extra paramater - FileShare.ReadWrite, might have future effects
             using (var stream = new FileStream(fileLoc, FileMode.Open, FileAccess.Read))
             {
                 using (var reader = new BinaryReader(stream))
@@ -110,6 +111,11 @@ namespace GvanimVS
                 return false;
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     
