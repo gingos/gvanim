@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.visitDate_dtp = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.discription_tb = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.saveCheckUp_btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.doctorName_tb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -49,12 +49,12 @@
             this.label1.Text = "תאריך הביקור";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dateTimePicker1
+            // visitDate_dtp
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(588, 66);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.visitDate_dtp.Location = new System.Drawing.Point(588, 66);
+            this.visitDate_dtp.Name = "visitDate_dtp";
+            this.visitDate_dtp.Size = new System.Drawing.Size(200, 20);
+            this.visitDate_dtp.TabIndex = 1;
             // 
             // label2
             // 
@@ -66,14 +66,14 @@
             this.label2.Text = "פירוט המצב ע\"פ דיווח";
             this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // discription_tb
             // 
-            this.textBox1.Location = new System.Drawing.Point(399, 159);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(389, 100);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.discription_tb.Location = new System.Drawing.Point(399, 159);
+            this.discription_tb.Multiline = true;
+            this.discription_tb.Name = "discription_tb";
+            this.discription_tb.Size = new System.Drawing.Size(389, 100);
+            this.discription_tb.TabIndex = 2;
+            this.discription_tb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -85,14 +85,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // saveCheckUp_btn
             // 
-            this.button2.Location = new System.Drawing.Point(399, 276);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "שמור ביקור";
-            this.button2.UseVisualStyleBackColor = true;
+            this.saveCheckUp_btn.Location = new System.Drawing.Point(399, 276);
+            this.saveCheckUp_btn.Name = "saveCheckUp_btn";
+            this.saveCheckUp_btn.Size = new System.Drawing.Size(75, 23);
+            this.saveCheckUp_btn.TabIndex = 4;
+            this.saveCheckUp_btn.Text = "שמור ביקור";
+            this.saveCheckUp_btn.UseVisualStyleBackColor = true;
+            this.saveCheckUp_btn.Click += new System.EventHandler(this.saveCheckUp_btn_Click);
             // 
             // label3
             // 
@@ -104,13 +105,13 @@
             this.label3.Text = "שם הרופא ";
             this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
+            // doctorName_tb
             // 
-            this.textBox2.Location = new System.Drawing.Point(399, 111);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(389, 20);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.doctorName_tb.Location = new System.Drawing.Point(399, 111);
+            this.doctorName_tb.Name = "doctorName_tb";
+            this.doctorName_tb.Size = new System.Drawing.Size(389, 20);
+            this.doctorName_tb.TabIndex = 2;
+            this.doctorName_tb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4
             // 
@@ -127,11 +128,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 392);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.saveCheckUp_btn);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.doctorName_tb);
+            this.Controls.Add(this.discription_tb);
+            this.Controls.Add(this.visitDate_dtp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -145,13 +146,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker visitDate_dtp;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox discription_tb;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button saveCheckUp_btn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox doctorName_tb;
         private System.Windows.Forms.Label label4;
     }
 }

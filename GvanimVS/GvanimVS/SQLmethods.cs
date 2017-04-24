@@ -16,6 +16,7 @@ namespace GvanimVS
         public static string USERS = "UsersTB";
         public static string RECORDS = "EmploymentRecordTB";
         public static string CV = "CVTemplatesTB";
+        public static string PSY = "PsychiatricCheckUp";
 
 
         public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city,
@@ -558,6 +559,40 @@ namespace GvanimVS
                 "WHERE " + row + " = " + row;
             
         }
-        
+
+        public static bool insertPSY(byte[] data, string Id, string doctorName, string discription, string date, SqlCommand cmd)
+        {
+            #region sqlQuery
+            cmd.CommandText =
+           "insert into " + PSY + "(Id, Date, DoctorName, Discription, File) values (@pId, @pDate, @pDoctorName, @pDiscription, @pFile)";
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pId", Id);
+            cmd.Parameters.AddWithValue("@pDate", date);
+            cmd.Parameters.AddWithValue("@pDoctorName", doctorName);
+            cmd.Parameters.AddWithValue("@pDiscription", discription);
+            cmd.Parameters.Add("@pFile", SqlDbType.VarBinary).Value = data;
+            #endregion
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return false;
+            }
+            #endregion
+            return true;
+        }
     }
 }

@@ -147,7 +147,8 @@ namespace GvanimVS
             this.Show();
         }
 
-        private void addPsychiatricCheckUp_btn_Click(object sender, EventArgs e)
+
+        private void addPsychiatricCheckUp_btn_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             using (var psy = new PsychiatricCheckUp(con, ID_dynamic_lb.Text))
@@ -155,6 +156,7 @@ namespace GvanimVS
                 psy.ShowDialog();
             }
             this.Show();
+
         }
     }
 }
