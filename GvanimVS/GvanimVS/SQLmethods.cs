@@ -573,8 +573,7 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pDate", date);
             cmd.Parameters.AddWithValue("@pDoctorName", doctorName);
             cmd.Parameters.AddWithValue("@pDiscription", discription);
-            //cmd.Parameters.Add("@pFile", SqlDbType.VarBinary).Value = data;
-            cmd.Parameters.Add("@pFile", SqlDbType.Binary).Value = data;
+            cmd.Parameters.Add("@pFile", SqlDbType.VarBinary, data.Length).Value = data;
             #endregion
             #region execute
             try
