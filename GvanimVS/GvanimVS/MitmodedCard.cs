@@ -905,7 +905,7 @@ namespace GvanimVS
         /// <param name="dgv">Datagridview in form</param>
         private void fillDocumentTable(Table table, DataGridView dgv)
         {
-            DataTable dt = Tools.GetContentAsDataTable(dgv);
+            //DataTable dt = Tools.GetContentAsDataTable(dgv);
             //Header Row
             TableRow FRow = table.Rows[0];
             FRow.IsHeader = true;
