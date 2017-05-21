@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.adress_tb = new System.Windows.Forms.TextBox();
+            this.address_tb = new System.Windows.Forms.TextBox();
             this.addMeeting_bt = new System.Windows.Forms.Button();
             this.cancel_bt = new System.Windows.Forms.Button();
             this.name_lb = new System.Windows.Forms.Label();
@@ -38,18 +38,20 @@
             this.city_tb = new System.Windows.Forms.TextBox();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.timePicker = new System.Windows.Forms.DateTimePicker();
-            this.desc_tb = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.topics_tb = new System.Windows.Forms.TextBox();
+            this.topic_lb = new System.Windows.Forms.Label();
+            this.tasks_lb = new System.Windows.Forms.Label();
+            this.tasks_tb = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // adress_tb
+            // address_tb
             // 
-            this.adress_tb.Location = new System.Drawing.Point(399, 151);
-            this.adress_tb.Name = "adress_tb";
-            this.adress_tb.Size = new System.Drawing.Size(100, 20);
-            this.adress_tb.TabIndex = 0;
-            this.adress_tb.Text = "כתובת";
-            this.adress_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.address_tb.Location = new System.Drawing.Point(141, 103);
+            this.address_tb.Name = "address_tb";
+            this.address_tb.Size = new System.Drawing.Size(227, 20);
+            this.address_tb.TabIndex = 0;
+            this.address_tb.Text = "כתובת";
+            this.address_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // addMeeting_bt
             // 
@@ -94,7 +96,7 @@
             // address_lb
             // 
             this.address_lb.AutoSize = true;
-            this.address_lb.Location = new System.Drawing.Point(533, 120);
+            this.address_lb.Location = new System.Drawing.Point(566, 110);
             this.address_lb.Name = "address_lb";
             this.address_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.address_lb.Size = new System.Drawing.Size(85, 13);
@@ -113,7 +115,7 @@
             // 
             // city_tb
             // 
-            this.city_tb.Location = new System.Drawing.Point(399, 113);
+            this.city_tb.Location = new System.Drawing.Point(432, 103);
             this.city_tb.Name = "city_tb";
             this.city_tb.Size = new System.Drawing.Size(100, 20);
             this.city_tb.TabIndex = 0;
@@ -141,32 +143,53 @@
             this.timePicker.Size = new System.Drawing.Size(87, 20);
             this.timePicker.TabIndex = 6;
             // 
-            // desc_tb
+            // topics_tb
             // 
-            this.desc_tb.Location = new System.Drawing.Point(49, 237);
-            this.desc_tb.Multiline = true;
-            this.desc_tb.Name = "desc_tb";
-            this.desc_tb.Size = new System.Drawing.Size(591, 99);
-            this.desc_tb.TabIndex = 7;
-            this.desc_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.topics_tb.Location = new System.Drawing.Point(57, 193);
+            this.topics_tb.Multiline = true;
+            this.topics_tb.Name = "topics_tb";
+            this.topics_tb.Size = new System.Drawing.Size(591, 99);
+            this.topics_tb.TabIndex = 7;
+            this.topics_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label4
+            // topic_lb
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(533, 204);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(85, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "תיאור הפגישה:";
+            this.topic_lb.AutoSize = true;
+            this.topic_lb.Location = new System.Drawing.Point(489, 156);
+            this.topic_lb.Name = "topic_lb";
+            this.topic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.topic_lb.Size = new System.Drawing.Size(162, 13);
+            this.topic_lb.TabIndex = 8;
+            this.topic_lb.Text = "תיאור הנושאים שעלו בפגישה";
+            // 
+            // tasks_lb
+            // 
+            this.tasks_lb.AutoSize = true;
+            this.tasks_lb.Location = new System.Drawing.Point(473, 320);
+            this.tasks_lb.Name = "tasks_lb";
+            this.tasks_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tasks_lb.Size = new System.Drawing.Size(178, 13);
+            this.tasks_lb.TabIndex = 10;
+            this.tasks_lb.Text = "משימות שהוגדרו להמשך התהליך";
+            // 
+            // tasks_tb
+            // 
+            this.tasks_tb.Location = new System.Drawing.Point(57, 357);
+            this.tasks_tb.Multiline = true;
+            this.tasks_tb.Name = "tasks_tb";
+            this.tasks_tb.Size = new System.Drawing.Size(591, 99);
+            this.tasks_tb.TabIndex = 9;
+            this.tasks_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // AddMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 629);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.desc_tb);
+            this.Controls.Add(this.tasks_lb);
+            this.Controls.Add(this.tasks_tb);
+            this.Controls.Add(this.topic_lb);
+            this.Controls.Add(this.topics_tb);
             this.Controls.Add(this.timePicker);
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.mitmoded_cb);
@@ -176,7 +199,7 @@
             this.Controls.Add(this.cancel_bt);
             this.Controls.Add(this.addMeeting_bt);
             this.Controls.Add(this.city_tb);
-            this.Controls.Add(this.adress_tb);
+            this.Controls.Add(this.address_tb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddMeeting";
             this.Text = "AddMeeting";
@@ -187,7 +210,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox adress_tb;
+        private System.Windows.Forms.TextBox address_tb;
         private System.Windows.Forms.Button addMeeting_bt;
         private System.Windows.Forms.Button cancel_bt;
         private System.Windows.Forms.Label name_lb;
@@ -197,7 +220,9 @@
         private System.Windows.Forms.TextBox city_tb;
         private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.DateTimePicker timePicker;
-        private System.Windows.Forms.TextBox desc_tb;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox topics_tb;
+        private System.Windows.Forms.Label topic_lb;
+        private System.Windows.Forms.Label tasks_lb;
+        private System.Windows.Forms.TextBox tasks_tb;
     }
 }

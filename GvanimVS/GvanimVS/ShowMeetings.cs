@@ -83,7 +83,8 @@ namespace GvanimVS
         private void add_meeting_bt_Click(object sender, EventArgs e)
         {
             AddMeeting meeting = new AddMeeting(con);
-            meeting.Show();
+            meeting.ShowDialog();
+            meeting.Dispose();
         }
     }
 }

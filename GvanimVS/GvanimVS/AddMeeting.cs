@@ -13,13 +13,18 @@ namespace GvanimVS
 {
     public partial class AddMeeting : DBform
     {
-        //TODO: is this class obsolete?
+        public string mitmodedID, meetingID,address, city, topics, tasks;
+        public DateTime date;
         public AddMeeting(SqlConnection con):base(con)
         {
             InitializeComponent();
             mitmoded_cb.DataSource = getMitmodedNames();
         }
 
+        /// <summary>
+        /// Initialize combox with all mitmoded details
+        /// </summary>
+        /// <returns>A list of all names and IDs</returns>
         private object getMitmodedNames()
         {
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "firstName, lastName, ID", cmd, da);
@@ -38,10 +43,16 @@ namespace GvanimVS
 
         private void addMeeting_bt_Click(object sender, EventArgs e)
         {
-            DateTime dt = new DateTime(datePicker.Value.Year, datePicker.Value.Month, datePicker.Value.Day,
+            date = new DateTime(datePicker.Value.Year, datePicker.Value.Month, datePicker.Value.Day,
                 timePicker.Value.Hour, timePicker.Value.Minute, timePicker.Value.Second);
             if (isValid()){
-                MessageBox.Show("valid");
+                address = address_tb.Text;
+                city = city_tb.Text;
+                topics = topics_tb.Text;
+                tasks = tasks_tb.Text;
+                meetingID = String.Concat(date.Day,date.Month,date.Year) + "-" + mitmodedID;
+
+                this.Close();
             }
 
         }
@@ -63,8 +74,8 @@ namespace GvanimVS
 
         private void mitmoded_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedID = mitmoded_cb.SelectedItem.ToString();
-            Tools.getID(selectedID);
+            mitmodedID = Tools.getID(mitmoded_cb.SelectedItem.ToString());
+            
         }
     }
 }
