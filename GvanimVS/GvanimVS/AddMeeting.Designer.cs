@@ -42,11 +42,12 @@
             this.topic_lb = new System.Windows.Forms.Label();
             this.tasks_lb = new System.Windows.Forms.Label();
             this.tasks_tb = new System.Windows.Forms.TextBox();
+            this.occured_ck = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // address_tb
             // 
-            this.address_tb.Location = new System.Drawing.Point(141, 103);
+            this.address_tb.Location = new System.Drawing.Point(199, 103);
             this.address_tb.Name = "address_tb";
             this.address_tb.Size = new System.Drawing.Size(227, 20);
             this.address_tb.TabIndex = 0;
@@ -76,7 +77,7 @@
             // name_lb
             // 
             this.name_lb.AutoSize = true;
-            this.name_lb.Location = new System.Drawing.Point(533, 23);
+            this.name_lb.Location = new System.Drawing.Point(572, 20);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.name_lb.Size = new System.Drawing.Size(79, 13);
@@ -86,7 +87,7 @@
             // date_lb
             // 
             this.date_lb.AutoSize = true;
-            this.date_lb.Location = new System.Drawing.Point(533, 71);
+            this.date_lb.Location = new System.Drawing.Point(533, 70);
             this.date_lb.Name = "date_lb";
             this.date_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.date_lb.Size = new System.Drawing.Size(118, 13);
@@ -96,7 +97,7 @@
             // address_lb
             // 
             this.address_lb.AutoSize = true;
-            this.address_lb.Location = new System.Drawing.Point(566, 110);
+            this.address_lb.Location = new System.Drawing.Point(566, 103);
             this.address_lb.Name = "address_lb";
             this.address_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.address_lb.Size = new System.Drawing.Size(85, 13);
@@ -107,9 +108,9 @@
             // 
             this.mitmoded_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mitmoded_cb.FormattingEnabled = true;
-            this.mitmoded_cb.Location = new System.Drawing.Point(279, 15);
+            this.mitmoded_cb.Location = new System.Drawing.Point(245, 12);
             this.mitmoded_cb.Name = "mitmoded_cb";
-            this.mitmoded_cb.Size = new System.Drawing.Size(220, 21);
+            this.mitmoded_cb.Size = new System.Drawing.Size(253, 21);
             this.mitmoded_cb.TabIndex = 4;
             this.mitmoded_cb.SelectedIndexChanged += new System.EventHandler(this.mitmoded_cb_SelectedIndexChanged);
             // 
@@ -136,7 +137,7 @@
             // 
             this.timePicker.Checked = false;
             this.timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.timePicker.Location = new System.Drawing.Point(279, 63);
+            this.timePicker.Location = new System.Drawing.Point(245, 63);
             this.timePicker.Name = "timePicker";
             this.timePicker.ShowCheckBox = true;
             this.timePicker.ShowUpDown = true;
@@ -145,7 +146,7 @@
             // 
             // topics_tb
             // 
-            this.topics_tb.Location = new System.Drawing.Point(57, 193);
+            this.topics_tb.Location = new System.Drawing.Point(57, 221);
             this.topics_tb.Multiline = true;
             this.topics_tb.Name = "topics_tb";
             this.topics_tb.Size = new System.Drawing.Size(591, 99);
@@ -155,7 +156,7 @@
             // topic_lb
             // 
             this.topic_lb.AutoSize = true;
-            this.topic_lb.Location = new System.Drawing.Point(489, 156);
+            this.topic_lb.Location = new System.Drawing.Point(489, 184);
             this.topic_lb.Name = "topic_lb";
             this.topic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.topic_lb.Size = new System.Drawing.Size(162, 13);
@@ -165,7 +166,7 @@
             // tasks_lb
             // 
             this.tasks_lb.AutoSize = true;
-            this.tasks_lb.Location = new System.Drawing.Point(473, 320);
+            this.tasks_lb.Location = new System.Drawing.Point(473, 348);
             this.tasks_lb.Name = "tasks_lb";
             this.tasks_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tasks_lb.Size = new System.Drawing.Size(178, 13);
@@ -174,18 +175,32 @@
             // 
             // tasks_tb
             // 
-            this.tasks_tb.Location = new System.Drawing.Point(57, 357);
+            this.tasks_tb.Location = new System.Drawing.Point(57, 385);
             this.tasks_tb.Multiline = true;
             this.tasks_tb.Name = "tasks_tb";
             this.tasks_tb.Size = new System.Drawing.Size(591, 99);
             this.tasks_tb.TabIndex = 9;
             this.tasks_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // occured_ck
+            // 
+            this.occured_ck.AutoSize = true;
+            this.occured_ck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.occured_ck.Location = new System.Drawing.Point(504, 141);
+            this.occured_ck.Name = "occured_ck";
+            this.occured_ck.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.occured_ck.Size = new System.Drawing.Size(144, 17);
+            this.occured_ck.TabIndex = 12;
+            this.occured_ck.Text = "האם התרחשה הפגישה?";
+            this.occured_ck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.occured_ck.UseVisualStyleBackColor = true;
+            // 
             // AddMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 629);
+            this.Controls.Add(this.occured_ck);
             this.Controls.Add(this.tasks_lb);
             this.Controls.Add(this.tasks_tb);
             this.Controls.Add(this.topic_lb);
@@ -224,5 +239,6 @@
         private System.Windows.Forms.Label topic_lb;
         private System.Windows.Forms.Label tasks_lb;
         private System.Windows.Forms.TextBox tasks_tb;
+        private System.Windows.Forms.CheckBox occured_ck;
     }
 }

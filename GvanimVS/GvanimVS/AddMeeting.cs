@@ -13,12 +13,13 @@ namespace GvanimVS
 {
     public partial class AddMeeting : DBform
     {
-        public string mitmodedID, meetingID,address, city, topics, tasks;
+        public string coordinatorID, mitmodedID, meetingID,address, city, topics, tasks;
         public DateTime date;
-        public AddMeeting(SqlConnection con):base(con)
+        public AddMeeting(string coordinatorID, SqlConnection con):base(con)
         {
             InitializeComponent();
             mitmoded_cb.DataSource = getMitmodedNames();
+            this.coordinatorID = coordinatorID;
         }
 
         /// <summary>
@@ -46,12 +47,20 @@ namespace GvanimVS
             date = new DateTime(datePicker.Value.Year, datePicker.Value.Month, datePicker.Value.Day,
                 timePicker.Value.Hour, timePicker.Value.Minute, timePicker.Value.Second);
             if (isValid()){
-                address = address_tb.Text;
-                city = city_tb.Text;
-                topics = topics_tb.Text;
-                tasks = tasks_tb.Text;
+                //address = address_tb.Text;
+                //city = city_tb.Text;
+                //topics = topics_tb.Text;
+                //tasks = tasks_tb.Text;
                 meetingID = String.Concat(date.Day,date.Month,date.Year) + "-" + mitmodedID;
 
+                if (SQLmethods.upsertMeeting (coordinatorID, meetingID, mitmodedID, date, address_tb.Text, occured_ck.Checked ? 1 : 0, city_tb.Text, topics_tb.Text, tasks_tb.Text, cmd))
+                {
+                    MessageBox.Show("המידע נשמר בהצלחה");
+                }
+                else
+                {
+                    MessageBox.Show("אירעה שגיאה בעת שמירת הנתונים");
+                }
                 this.Close();
             }
 

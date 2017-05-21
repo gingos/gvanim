@@ -150,6 +150,50 @@ namespace GvanimVS
             return true;
         }
 
+        public static bool upsertMeeting (string coordinatorID, string meetingID, string mitmodedID, DateTime date, string address, int occured, string city, string topics, string tasks, SqlCommand cmd)
+        {
+            #region sqlQuery
+            cmd.CommandText =
+            "IF NOT EXISTS (SELECT * FROM " + MEETINGS + " WHERE meetingId = @pMeetingID) "
+           + "INSERT INTO " + MEETINGS + " (coordinatorID, meetingID, date, mitmodedID, address,occured, city, topics, tasks) "
+           + "VALUES (@pCoordinatorID, @pMeetingID, @pDate, @pMitmodedID, @pAddress,@pOccured, @pCity, @pTopics, @pTasks) "
+           + "ELSE "
+           + "UPDATE " + MEETINGS + " "
+           + "SET coordinatorID = @pCoordinatorID, date = @pDate, mitmodedID = @pMitmodedID, address = @pAddress, occured = @pOccured, city = @pCity, topics = @pTopics, tasks = @pTasks "
+           + "WHERE meetingID = @pMeetingID";
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
+            cmd.Parameters.AddWithValue("@pMeetingID", meetingID);
+            cmd.Parameters.AddWithValue("@pMitmodedID", mitmodedID);
+            cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
+            cmd.Parameters.AddWithValue("@pAddress", address);
+            cmd.Parameters.Add("@pOccured", SqlDbType.Bit).Value = occured;
+            cmd.Parameters.AddWithValue("@pCity", city);
+            cmd.Parameters.AddWithValue("@pTopics", topics);
+            cmd.Parameters.AddWithValue("@pTasks", tasks);
+            #endregion
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return false;
+            }
+            #endregion
+            return true;
+        }
         /// <summary>
         /// insert new CV to system
         /// </summary>
