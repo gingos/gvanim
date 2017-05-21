@@ -62,7 +62,8 @@ namespace GvanimVS
 
         public static string getID(string input)
         {
-            return Regex.Match(input, @"\d+").Value;
+            //return Regex.Match(input, @"\d+").Value;
+            return Regex.Match(input, @"[0-9]{9}").Value;
         }
 
         public static DataTable GetContentAsDataTable(DataGridView dgv, bool IgnoreHideColumns = false)

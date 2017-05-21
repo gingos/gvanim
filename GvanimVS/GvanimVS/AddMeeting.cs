@@ -17,6 +17,18 @@ namespace GvanimVS
         public AddMeeting(SqlConnection con):base(con)
         {
             InitializeComponent();
+            mitmoded_cb.DataSource = getMitmodedNames();
+        }
+
+        private object getMitmodedNames()
+        {
+            DataTable dt = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "firstName, lastName, ID", cmd, da);
+            List<string> names = new List<string>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                names.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString() + " - " + dr["ID"].ToString());
+            }
+            return names;
         }
 
         private void cancel_bt_Click(object sender, EventArgs e)
@@ -47,6 +59,12 @@ namespace GvanimVS
                 return false;
             }
             return true;
+        }
+
+        private void mitmoded_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedID = mitmoded_cb.SelectedItem.ToString();
+            Tools.getID(selectedID);
         }
     }
 }

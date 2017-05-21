@@ -158,6 +158,7 @@
             this.searchMeeting_bt.TabIndex = 5;
             this.searchMeeting_bt.Text = "חפש פגישה";
             this.searchMeeting_bt.UseVisualStyleBackColor = true;
+            this.searchMeeting_bt.Click += new System.EventHandler(this.searchMeeting_bt_Click);
             // 
             // cancel_bt
             // 
@@ -187,7 +188,7 @@
             this.Controls.Add(this.adress_tb);
             this.Controls.Add(this.city_tb);
             this.Controls.Add(this.meetingID_tb);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FindMeeting";
             this.Text = "FindMeeting";
             this.Load += new System.EventHandler(this.FindMeeting_Load);

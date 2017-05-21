@@ -120,40 +120,40 @@ namespace GvanimVS
             #endregion
             return true;
         }
-        public static bool findMeeting(int ID, DateTime date, string name, SqlCommand cmd)
+        public static DataTable findMeeting(int meetingID, DateTime date, string mitmodedID, SqlCommand cmd, SqlDataAdapter da)
         {
+            DataTable dt = new DataTable();
             #region sqlQuery
             cmd.CommandText =
-                   /*  "DECLARE @id int ='" + ID + "'"
-                   + "DECLARE @date datetime = '" + date + "'"
-                   + "DECLARE @mitmoded nvarchar(50) = '" + name + "'"
-                   +*/ "SELECT FROM " + MEETINGS + "WHERE Id = @pID OR Mitmoded = @pMitmoded OR Date = @pDate";
+                   //"SELECT FROM " + MEETINGS + "WHERE Id = @pID OR Mitmoded = @pMitmoded OR Date = @pDate";
+                   "SELECT * FROM " + MEETINGS + "WHERE MeetingId LIKE '%@pMeetingId%' AND MitmodedID LIKE '%@MitmodedID%' AND Date LIKE '%@pDate%'";
             #endregion
             #region addParamters
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@pID", ID);
+            cmd.Parameters.AddWithValue("@pMeetingId", meetingID);
+            cmd.Parameters.AddWithValue("@MitmodedID", mitmodedID);
             cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
-            cmd.Parameters.AddWithValue("@pMitmoded", name);
+            //cmd.Parameters.AddWithValue("@pMitmoded", name);
             #endregion
             #region execute
             try
             {
-                cmd.ExecuteNonQuery();
+                da.Fill(dt);
             }
             catch (SqlException ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.ToString());
-                return false;
+                return null;
             }
             catch (TimeoutException)
             {
                 System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
                     + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
                     System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
-                return false;
+                return null;
             }
             #endregion
-            return true;
+            return dt;
         }
         public static bool InsertCV(byte[] data, string fileName, SqlCommand cmd)
         {

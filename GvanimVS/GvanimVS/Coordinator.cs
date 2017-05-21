@@ -94,5 +94,15 @@ namespace GvanimVS
         {
 
         }
+
+        private void showMeetings_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var meetings = new ShowMeetings(con, coordinatorID))
+            {
+                meetings.ShowDialog();
+            }
+            this.Close();
+        }
     }
 }

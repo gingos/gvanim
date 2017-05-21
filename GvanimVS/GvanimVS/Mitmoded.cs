@@ -158,5 +158,17 @@ namespace GvanimVS
             this.Show();
 
         }
+
+        private void add_employment_bt_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("יש לעדכן קוד עבור אפשרות זו");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            
+            
+        }
     }
 }
