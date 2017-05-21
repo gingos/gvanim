@@ -37,7 +37,7 @@
             this.ID_lb = new System.Windows.Forms.Label();
             this.name_dynamic_lb = new System.Windows.Forms.Label();
             this.name_lb = new System.Windows.Forms.Label();
-            this.pdfDocumentViewer1 = new Spire.PdfViewer.Forms.PdfDocumentViewer();
+            this.officeViewer1 = new Spire.OfficeViewer.Forms.OfficeViewer();
             ((System.ComponentModel.ISupportInitialize)(this.cv_list_dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,24 +133,22 @@
             this.name_lb.TabIndex = 4;
             this.name_lb.Text = "שם: ";
             // 
-            // pdfDocumentViewer1
+            // officeViewer1
             // 
-            this.pdfDocumentViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.pdfDocumentViewer1.Location = new System.Drawing.Point(463, 106);
-            this.pdfDocumentViewer1.MultiPagesThreshold = 60;
-            this.pdfDocumentViewer1.Name = "pdfDocumentViewer1";
-            this.pdfDocumentViewer1.Size = new System.Drawing.Size(716, 412);
-            this.pdfDocumentViewer1.TabIndex = 18;
-            this.pdfDocumentViewer1.Text = "pdfDocumentViewer1";
-            this.pdfDocumentViewer1.Threshold = 60;
-            this.pdfDocumentViewer1.ZoomMode = Spire.PdfViewer.Forms.ZoomMode.Default;
+            this.officeViewer1.IsToolBarVisible = true;
+            this.officeViewer1.Location = new System.Drawing.Point(463, 105);
+            this.officeViewer1.Name = "officeViewer1";
+            this.officeViewer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.officeViewer1.Size = new System.Drawing.Size(716, 412);
+            this.officeViewer1.TabIndex = 19;
+            this.officeViewer1.Text = "officeViewer1";
             // 
             // CVGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 635);
-            this.Controls.Add(this.pdfDocumentViewer1);
+            this.Controls.Add(this.officeViewer1);
             this.Controls.Add(this.cv_list_dgv);
             this.Controls.Add(this.export_bt);
             this.Controls.Add(this.browse_bt);
@@ -179,6 +177,6 @@
         private System.Windows.Forms.Button browse_bt;
         private System.Windows.Forms.Button export_bt;
         private System.Windows.Forms.DataGridView cv_list_dgv;
-        private Spire.PdfViewer.Forms.PdfDocumentViewer pdfDocumentViewer1;
+        private Spire.OfficeViewer.Forms.OfficeViewer officeViewer1;
     }
 }

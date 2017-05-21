@@ -54,7 +54,8 @@ namespace GvanimVS
                 return;
             }
             //open document, get its original location
-            string fileLoc = BrowseDoc();
+            //string fileLoc = BrowseDoc();
+            string fileLoc = BrowseFile();
 
             //get file byte[] and name to store in server
             if (fileLoc != null)
@@ -64,17 +65,16 @@ namespace GvanimVS
                     LoadFiles();
             }            
         }
-
+               
         /// <summary>
         /// Browse for a new CV file
         /// </summary>
-        /// the PDF previewer can only work with PDF files; If needed - a file will be converted
         /// <returns>file path</returns>
-        private string BrowseDoc()
+        private string BrowseFile()
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Word97-2003 files(*.doc)|*.doc|Word2007-2010 files (*.docx)|*.docx|All files (*.*)|*.*";
-            dialog.Title = "Select a DOC file";
+            dialog.Filter = "Word97-2003 files(*.doc)|*.doc|Word2007-2010 files (*.docx)|*.docx|PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
+            dialog.Title = "Select a file";
             dialog.Multiselect = false;
             dialog.InitialDirectory = System.IO.Path.GetFullPath(@"..\..\..\..\..\..\Data");
             DialogResult result = dialog.ShowDialog();
@@ -84,17 +84,11 @@ namespace GvanimVS
                 try
                 {
                     //Load document from file.
-                    MemoryStream fileStream;
-                    string ext = Path.GetExtension(dialog.FileName);
-                    // Must convert to PDF if loaded is of version *.Doc, *.Docx, etc..
-                    if (!ext.Equals("pdf"))
-                        fileStream = convertToPDF(Tools.GetBytes(dialog.FileName));
-                    // File is PDF, no conversion needed
-                    else
-                        fileStream = new MemoryStream(Tools.GetBytes(dialog.FileName));
-
-                    //load result                   
-                    this.pdfDocumentViewer1.LoadFromStream(fileStream);
+                    using (MemoryStream fileStream = new MemoryStream(Tools.GetBytes(dialog.FileName)))
+                    {
+                        //load result                   
+                        this.officeViewer1.LoadFromStream(fileStream);
+                    }
                     //this.docDocumentViewer1.LoadFromFile(dialog.FileName);
                     return dialog.FileName;
 
@@ -105,7 +99,7 @@ namespace GvanimVS
                 }
             }
             return null;
-            
+
         }
 
         /// <summary>
@@ -171,15 +165,18 @@ namespace GvanimVS
             //save original file information to later export
             currentBytes = (byte[])dt.Rows[e.RowIndex]["Data"];
             currentName = dt.Rows[e.RowIndex]["Name"].ToString();
-            MemoryStream stream = new MemoryStream(currentBytes);
-
-            // if original file was not PDF format, convert.
-            if (!currentName.Contains("pdf"))
-                stream = convertToPDF(currentBytes);
-            pdfDocumentViewer1.LoadFromStream(stream);
-            //stream.Dispose();
+            
+            using (MemoryStream stream = new MemoryStream(currentBytes))
+            {
+                officeViewer1.LoadFromStream(stream);
+            }
         }
 
+        /// <summary>
+        /// Open file currently viewed in Office Viewer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void export_bt_Click(object sender, EventArgs e)
         {
             Tools.openTempFile(currentBytes, currentName.Substring(currentName.LastIndexOf(".")));
