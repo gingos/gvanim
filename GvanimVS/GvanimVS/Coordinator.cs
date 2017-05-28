@@ -55,7 +55,7 @@ namespace GvanimVS
             am.Activate();
             */
             this.Hide();
-            using (var am = new AddMeeting(con))
+            using (var am = new AddMeeting(coordinatorID, con))
             {
                 am.ShowDialog();
             }
@@ -63,7 +63,7 @@ namespace GvanimVS
         }
         private void editMeeting_bt_Click(object sender, EventArgs e)
         {
-            FindMeeting fm = new FindMeeting();
+            FindMeeting fm = new FindMeeting(con, coordinatorID);
             fm.Activate();
         }
 
@@ -93,6 +93,16 @@ namespace GvanimVS
         private void Coordinator_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void showMeetings_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var meetings = new ShowMeetings(con, coordinatorID))
+            {
+                meetings.ShowDialog();
+            }
+            this.Close();
         }
     }
 }

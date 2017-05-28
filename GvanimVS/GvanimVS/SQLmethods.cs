@@ -18,7 +18,23 @@ namespace GvanimVS
         public static string CV = "CVTemplatesTB";
         public static string PSY = "PsychiatricCheckUp";
 
-
+        /// <summary>
+        /// Insert or update new mitmoded data
+        /// </summary>
+        /// required: name, date of registration, ID, city, address, phone, coordinatorID, photo
+        /// <param name="first"></param>
+        /// <param name="last"></param>
+        /// <param name="date"></param>
+        /// <param name="ID"></param>
+        /// <param name="city"></param>
+        /// <param name="address"></param>
+        /// <param name="phone1"></param>
+        /// <param name="phone2"></param>
+        /// <param name="coordinatorID"></param>
+        /// <param name="photo"></param>
+        /// <param name="serializedOrganizer"></param>
+        /// <param name="cmd"></param>
+        /// <returns>True if succeeds, else if fails</returns>
         public static bool upsertMitmoded(string first, string last, DateTime date, string ID, string city,
             string address, string phone1, string phone2, string coordinatorID, byte[] photo,
             string serializedOrganizer, SqlCommand cmd)
@@ -77,6 +93,19 @@ namespace GvanimVS
             return true;
         }
         
+        /// <summary>
+        /// Insert or update new report to system
+        /// </summary>
+        /// <param name="reportID"></param>
+        /// <param name="mitmodedID"></param>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="date"></param>
+        /// <param name="report"></param>
+        /// <param name="actions"></param>
+        /// <param name="coordinatorID"></param>
+        /// <param name="cmd"></param>
+        /// <returns>True if succeeds, false if fails</returns>
         public static bool upsertReport (string reportID, string mitmodedID, string firstName, string lastName, DateTime date, string report, string actions, string coordinatorID, SqlCommand cmd)
         {
             #region sqlQuery
@@ -120,20 +149,30 @@ namespace GvanimVS
             #endregion
             return true;
         }
-        public static bool findMeeting(int ID, DateTime date, string name, SqlCommand cmd)
+
+        public static bool upsertMeeting (string coordinatorID, string meetingID, string mitmodedID, DateTime date, string address, int occured, string city, string topics, string tasks, SqlCommand cmd)
         {
             #region sqlQuery
             cmd.CommandText =
-                   /*  "DECLARE @id int ='" + ID + "'"
-                   + "DECLARE @date datetime = '" + date + "'"
-                   + "DECLARE @mitmoded nvarchar(50) = '" + name + "'"
-                   +*/ "SELECT FROM " + MEETINGS + "WHERE Id = @pID OR Mitmoded = @pMitmoded OR Date = @pDate";
+            "IF NOT EXISTS (SELECT * FROM " + MEETINGS + " WHERE meetingId = @pMeetingID) "
+           + "INSERT INTO " + MEETINGS + " (coordinatorID, meetingID, date, mitmodedID, address,occured, city, topics, tasks) "
+           + "VALUES (@pCoordinatorID, @pMeetingID, @pDate, @pMitmodedID, @pAddress,@pOccured, @pCity, @pTopics, @pTasks) "
+           + "ELSE "
+           + "UPDATE " + MEETINGS + " "
+           + "SET coordinatorID = @pCoordinatorID, date = @pDate, mitmodedID = @pMitmodedID, address = @pAddress, occured = @pOccured, city = @pCity, topics = @pTopics, tasks = @pTasks "
+           + "WHERE meetingID = @pMeetingID";
             #endregion
             #region addParamters
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@pID", ID);
-            cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
-            cmd.Parameters.AddWithValue("@pMitmoded", name);
+            cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
+            cmd.Parameters.AddWithValue("@pMeetingID", meetingID);
+            cmd.Parameters.AddWithValue("@pMitmodedID", mitmodedID);
+            cmd.Parameters.Add("@pDate", SqlDbType.DateTime).Value = date;
+            cmd.Parameters.AddWithValue("@pAddress", address);
+            cmd.Parameters.Add("@pOccured", SqlDbType.Bit).Value = occured;
+            cmd.Parameters.AddWithValue("@pCity", city);
+            cmd.Parameters.AddWithValue("@pTopics", topics);
+            cmd.Parameters.AddWithValue("@pTasks", tasks);
             #endregion
             #region execute
             try
@@ -155,6 +194,14 @@ namespace GvanimVS
             #endregion
             return true;
         }
+        /// <summary>
+        /// insert new CV to system
+        /// </summary>
+        /// files can be doc, docx, PDF...
+        /// <param name="data"></param>
+        /// <param name="fileName"></param>
+        /// <param name="cmd"></param>
+        /// <returns>True if succeeds, false if fails</returns>
         public static bool InsertCV(byte[] data, string fileName, SqlCommand cmd)
         {
             #region sqlQuery
@@ -187,7 +234,17 @@ namespace GvanimVS
             #endregion
             return true;
         }
+        
         //in the future, perhaps add paramter: table name to look for various data
+
+        /// <summary>
+        /// Get all data rows by user ID
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="ID"></param>
+        /// <param name="cmd"></param>
+        /// <param name="da"></param>
+        /// <returns>Datatable of matching rows if succeeds, else null</returns>
         public static DataTable getDataTable(string table, string ID, SqlCommand cmd, SqlDataAdapter da)
         {
             //OVERLOAD: used for mimoded (and more, not login)
@@ -226,6 +283,16 @@ namespace GvanimVS
             #endregion
             return dt;
         }
+
+        /// <summary>
+        /// Get and match user credentials in login
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="user"></param>
+        /// <param name="password"></param>
+        /// <param name="cmd"></param>
+        /// <param name="da"></param>
+        /// <returns>Data table with name & password if succeeds, else null</returns>
         public static DataTable getDataTable(string table, string user, string password, SqlCommand cmd, SqlDataAdapter da)
         {
             //OVERLOAD: used for users login
@@ -272,6 +339,15 @@ namespace GvanimVS
             #endregion
             return dt;
         }
+
+        /// <summary>
+        /// Get all of the specified columns from the specified table
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="cols"></param>
+        /// <param name="cmd"></param>
+        /// <param name="da"></param>
+        /// <returns>Datatable of all rows if succeeds, null if fails</returns>
         public static DataTable getColsFromTable(string table, string cols, SqlCommand cmd, SqlDataAdapter da)
         {
             DataTable dt = new DataTable();
@@ -303,6 +379,17 @@ namespace GvanimVS
             #endregion
             return dt;
         }
+
+        /// <summary>
+        /// Get all of the specified columns from the specified table, according to row key-value
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="cols"></param>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <param name="cmd"></param>
+        /// <param name="da"></param>
+        /// <returns>Datatable of all rows if succeeds, null if fails</returns>
         public static DataTable getColsFromTable(string table, string cols, string key, string value, SqlCommand cmd, SqlDataAdapter da)
         {
             DataTable dt = new DataTable();
@@ -337,6 +424,14 @@ namespace GvanimVS
             #endregion
             return dt;
         }
+
+        /// <summary>
+        /// Get employment record table by user ID
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <param name="cmd"></param>
+        /// <param name="da"></param>
+        /// <returns>Datatable of all user's employment record if succeeds, null if fails</returns>
         public static DataTable getEmploymentRecordTable(string ID, SqlCommand cmd, SqlDataAdapter da)
         {
             DataTable dt = new DataTable();
@@ -372,6 +467,18 @@ namespace GvanimVS
             #endregion
             return dt;
         }
+
+        /// <summary>
+        /// search for users by first or last name
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="ID"></param>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="city"></param>
+        /// <param name="cmd"></param>
+        /// <param name="da"></param>
+        /// <returns></returns>
         public static DataTable searchUsersInTable(string table, string ID, string firstName, string lastName, string city, SqlCommand cmd, SqlDataAdapter da)
         {
             DataTable dt = new DataTable();
@@ -418,6 +525,16 @@ namespace GvanimVS
             #endregion
             return dt;
         }
+
+        /// <summary>
+        /// Find report according to repordID\userID\date
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="mitmodedID"></param>
+        /// <param name="date"></param>
+        /// <param name="cmd"></param>
+        /// <param name="da"></param>
+        /// <returns></returns>
         public static DataTable findReport(string id, string mitmodedID, DateTime date, SqlCommand cmd, SqlDataAdapter da)
         {
             DataTable dt = new DataTable();
@@ -450,15 +567,51 @@ namespace GvanimVS
             return dt;
         }
 
-        //DEPRECATED
-        private static string findMeeting(int id, DateTime date, string name)
+        /// <summary>
+        /// Find meeting according to specified details
+        /// </summary>
+        /// <param name="meetingID"></param>
+        /// <param name="date"></param>
+        /// <param name="mitmodedID"></param>
+        /// <param name="cmd"></param>
+        /// <param name="da"></param>
+        /// <returns></returns>
+        public static DataTable findMeeting(int meetingID, DateTime date, string mitmodedID, SqlCommand cmd, SqlDataAdapter da)
         {
-            return
-                     "DECLARE @id int ='" + id + "'"
-                   + "DECLARE @date datetime = '" + date + "'"
-                   + "DECLARE @mitmoded nvarchar(50) = '" + name + "'"
-                   + "SELECT FROM " + MEETINGS + "WHERE Id = @id OR mitmoded = @mitmoded OR Date = @date";
+            DataTable dt = new DataTable();
+            #region sqlQuery
+            cmd.CommandText =
+                   //"SELECT FROM " + MEETINGS + "WHERE Id = @pID OR Mitmoded = @pMitmoded OR Date = @pDate";
+                   "SELECT * FROM " + MEETINGS + "WHERE MeetingId LIKE '%@pMeetingId%' AND MitmodedID LIKE '%@MitmodedID%' AND Date LIKE '%@pDate%'";
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pMeetingId", meetingID);
+            cmd.Parameters.AddWithValue("@MitmodedID", mitmodedID);
+            cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
+            //cmd.Parameters.AddWithValue("@pMitmoded", name);
+            #endregion
+            #region execute
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
+            #endregion
+            return dt;
         }
+        
         //DEPRECATED
         public static string upsertMitmoded(string first, string last, DateTime date, string ID, string city, string address, string phone1, string phone2, byte[] photo)
         {

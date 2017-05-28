@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spire.Doc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,8 @@ namespace GvanimVS
     {
         byte[] CV1 = global::GvanimVS.Properties.Resources.cv1;
         byte[] CV2 = global::GvanimVS.Properties.Resources.cv2;
+        byte[] currentBytes;
+        string currentName;
 
         public CVGenerator(SqlConnection con, string ID) :base(con)
         {
@@ -24,6 +27,7 @@ namespace GvanimVS
             DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
             if (dt != null)
                 initFieldsFromDT(dt);
+            // fill the list of existing templates
             LoadFiles();
         }
 
@@ -31,44 +35,7 @@ namespace GvanimVS
         {
             name_dynamic_lb.Text = dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["lastName"].ToString();
         }
-
-        /// <summary>
-        /// Open cv1 as full template (no name printed, full sample fields exist)
-        /// </summary>
-        private void cv1_pb_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Tools.openTempFile(CV1, ".docx");
-            }
-            catch (System.IO.IOException)
-            {
-                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
-            }
-        }
-
-        /// <summary>
-        /// /// Open cv2 as full template (no name printed, full sample fields exist)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void cv2_pb_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Tools.openTempFile(CV2, ".doc");
-            }
-            catch (System.IO.IOException)
-            {
-                MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
-            }
-        }
-
-        private void Open_CV(string v)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         private void close_bt_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -86,8 +53,9 @@ namespace GvanimVS
             {
                 return;
             }
-            //open a DOC document
-            string fileLoc = BrowseDoc();
+            //open document, get its original location
+            //string fileLoc = BrowseDoc();
+            string fileLoc = BrowseFile();
 
             //get file byte[] and name to store in server
             if (fileLoc != null)
@@ -97,16 +65,16 @@ namespace GvanimVS
                     LoadFiles();
             }            
         }
-
+               
         /// <summary>
         /// Browse for a new CV file
         /// </summary>
         /// <returns>file path</returns>
-        private string BrowseDoc()
+        private string BrowseFile()
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Word97-2003 files(*.doc)|*.doc|Word2007-2010 files (*.docx)|*.docx|All files (*.*)|*.*";
-            dialog.Title = "Select a DOC file";
+            dialog.Filter = "Word97-2003 files(*.doc)|*.doc|Word2007-2010 files (*.docx)|*.docx|PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
+            dialog.Title = "Select a file";
             dialog.Multiselect = false;
             dialog.InitialDirectory = System.IO.Path.GetFullPath(@"..\..\..\..\..\..\Data");
             DialogResult result = dialog.ShowDialog();
@@ -115,8 +83,13 @@ namespace GvanimVS
             {
                 try
                 {
-                    //Load DOC document from file.
-                    this.docDocumentViewer1.LoadFromFile(dialog.FileName);
+                    //Load document from file.
+                    using (MemoryStream fileStream = new MemoryStream(Tools.GetBytes(dialog.FileName)))
+                    {
+                        //load result                   
+                        this.officeViewer1.LoadFromStream(fileStream);
+                    }
+                    //this.docDocumentViewer1.LoadFromFile(dialog.FileName);
                     return dialog.FileName;
 
                 }
@@ -126,8 +99,28 @@ namespace GvanimVS
                 }
             }
             return null;
-            
-        }        
+
+        }
+
+        /// <summary>
+        /// Convert file bytes to PDF
+        /// </summary>
+        /// called when file is NOT standard PDF format: DOC, DOCX etc
+        /// <param name="fileBytes">Byte[], byte representation of the file</param>
+        /// <returns>PDF stream of file</returns>
+        private MemoryStream convertToPDF(byte[] fileBytes)
+        {
+            Document document = new Document();
+            //byte[] fileBytes = Tools.GetBytes(fileName);
+            using (Stream fileToStream = new MemoryStream(fileBytes))
+            {
+                document.LoadFromStream(fileToStream, FileFormat.Auto);
+            }
+            MemoryStream streamToFile = new MemoryStream();
+            document.SaveToStream(streamToFile, FileFormat.PDF);
+            return streamToFile;
+                        
+        }
 
         /// <summary>
         /// add chosen CV file to database
@@ -154,24 +147,39 @@ namespace GvanimVS
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.CV, "*", cmd, da);
             if (dt != null)
             {
+                //hide the id and byte[] columns
                 cv_list_dgv.DataSource = dt;
                 cv_list_dgv.Columns[0].Visible = false;
                 cv_list_dgv.Columns[1].Visible = false;
             }
         }
 
+        /// <summary>
+        /// Occurs when user double clicks in part of row in the templates list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cv_list_dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataTable dt = (DataTable)cv_list_dgv.DataSource;
-            MemoryStream stream = new MemoryStream((byte[])dt.Rows[e.RowIndex]["Data"]);
+            //save original file information to later export
+            currentBytes = (byte[])dt.Rows[e.RowIndex]["Data"];
+            currentName = dt.Rows[e.RowIndex]["Name"].ToString();
             
-            docDocumentViewer1.LoadFromStream(stream, Spire.Doc.FileFormat.Auto);
-            
+            using (MemoryStream stream = new MemoryStream(currentBytes))
+            {
+                officeViewer1.LoadFromStream(stream);
+            }
         }
 
-        private void cv1_bt_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Open file currently viewed in Office Viewer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void export_bt_Click(object sender, EventArgs e)
         {
-
+            Tools.openTempFile(currentBytes, currentName.Substring(currentName.LastIndexOf(".")));
         }
     }
 }

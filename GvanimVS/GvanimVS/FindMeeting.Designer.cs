@@ -30,167 +30,200 @@
         {
             this.meetingID_tb = new System.Windows.Forms.TextBox();
             this.city_tb = new System.Windows.Forms.TextBox();
-            this.adress_tb = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.mitmodedName_cb = new System.Windows.Forms.ComboBox();
-            this.Occured_cb = new System.Windows.Forms.ComboBox();
+            this.address_tb = new System.Windows.Forms.TextBox();
+            this.start_date_dtp = new System.Windows.Forms.DateTimePicker();
+            this.firstName_lb = new System.Windows.Forms.Label();
+            this.meetingID_lb = new System.Windows.Forms.Label();
+            this.address_lb = new System.Windows.Forms.Label();
+            this.city_lb = new System.Windows.Forms.Label();
+            this.start_date_lb = new System.Windows.Forms.Label();
             this.searchMeeting_bt = new System.Windows.Forms.Button();
             this.cancel_bt = new System.Windows.Forms.Button();
+            this.occured_chk = new System.Windows.Forms.CheckBox();
+            this.lastName_lb = new System.Windows.Forms.Label();
+            this.firstName_tb = new System.Windows.Forms.TextBox();
+            this.lastName_tb = new System.Windows.Forms.TextBox();
+            this.end_date_lb = new System.Windows.Forms.Label();
+            this.end_date_dtp = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // meetingID_tb
             // 
-            this.meetingID_tb.Location = new System.Drawing.Point(194, 57);
+            this.meetingID_tb.Location = new System.Drawing.Point(224, 54);
             this.meetingID_tb.Name = "meetingID_tb";
-            this.meetingID_tb.Size = new System.Drawing.Size(100, 20);
+            this.meetingID_tb.Size = new System.Drawing.Size(189, 20);
             this.meetingID_tb.TabIndex = 0;
             // 
             // city_tb
             // 
-            this.city_tb.Location = new System.Drawing.Point(194, 138);
+            this.city_tb.Location = new System.Drawing.Point(375, 128);
             this.city_tb.Name = "city_tb";
-            this.city_tb.Size = new System.Drawing.Size(100, 20);
+            this.city_tb.Size = new System.Drawing.Size(198, 20);
             this.city_tb.TabIndex = 0;
-            this.city_tb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // adress_tb
+            // address_tb
             // 
-            this.adress_tb.Location = new System.Drawing.Point(194, 177);
-            this.adress_tb.Name = "adress_tb";
-            this.adress_tb.Size = new System.Drawing.Size(100, 20);
-            this.adress_tb.TabIndex = 0;
-            this.adress_tb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.address_tb.Location = new System.Drawing.Point(28, 132);
+            this.address_tb.Name = "address_tb";
+            this.address_tb.Size = new System.Drawing.Size(198, 20);
+            this.address_tb.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // start_date_dtp
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(93, 268);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.start_date_dtp.Checked = false;
+            this.start_date_dtp.Location = new System.Drawing.Point(373, 177);
+            this.start_date_dtp.Name = "start_date_dtp";
+            this.start_date_dtp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.start_date_dtp.RightToLeftLayout = true;
+            this.start_date_dtp.ShowCheckBox = true;
+            this.start_date_dtp.Size = new System.Drawing.Size(200, 20);
+            this.start_date_dtp.TabIndex = 1;
             // 
-            // label1
+            // firstName_lb
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(337, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "אנא בחרי את שם המתמודד";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.firstName_lb.AutoSize = true;
+            this.firstName_lb.Location = new System.Drawing.Point(582, 94);
+            this.firstName_lb.Name = "firstName_lb";
+            this.firstName_lb.Size = new System.Drawing.Size(51, 13);
+            this.firstName_lb.TabIndex = 2;
+            this.firstName_lb.Text = "שם פרטי";
             // 
-            // label2
+            // meetingID_lb
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(337, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "אם ידוע מס\"ד של הפגישה נא לרשום אותו כאן";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.meetingID_lb.AutoSize = true;
+            this.meetingID_lb.Location = new System.Drawing.Point(419, 57);
+            this.meetingID_lb.Name = "meetingID_lb";
+            this.meetingID_lb.Size = new System.Drawing.Size(214, 13);
+            this.meetingID_lb.TabIndex = 2;
+            this.meetingID_lb.Text = "מס\"ד פגישה (ניתן לחפש גם ת.ז. מתמודד)";
             // 
-            // label3
+            // address_lb
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(337, 184);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "אם ידועה הכתובת נא לרשום אותה כאן";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
+            this.address_lb.AutoSize = true;
+            this.address_lb.Location = new System.Drawing.Point(274, 139);
+            this.address_lb.Name = "address_lb";
+            this.address_lb.Size = new System.Drawing.Size(40, 13);
+            this.address_lb.TabIndex = 2;
+            this.address_lb.Text = "כתובת";
             // 
-            // label4
+            // city_lb
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(337, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "אם ידוע שם העיר נא לרשום אותו כאן";
-            this.label4.Click += new System.EventHandler(this.label2_Click);
+            this.city_lb.AutoSize = true;
+            this.city_lb.Location = new System.Drawing.Point(608, 135);
+            this.city_lb.Name = "city_lb";
+            this.city_lb.Size = new System.Drawing.Size(25, 13);
+            this.city_lb.TabIndex = 2;
+            this.city_lb.Text = "עיר";
             // 
-            // label5
+            // start_date_lb
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 229);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "האם הפגישה התקיימה או בוטלה";
-            this.label5.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(337, 274);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "אם ידוע התאריך נא לכתוב אותו כאן";
-            this.label6.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // mitmodedName_cb
-            // 
-            this.mitmodedName_cb.FormattingEnabled = true;
-            this.mitmodedName_cb.Location = new System.Drawing.Point(173, 95);
-            this.mitmodedName_cb.Name = "mitmodedName_cb";
-            this.mitmodedName_cb.Size = new System.Drawing.Size(121, 21);
-            this.mitmodedName_cb.TabIndex = 3;
-            // 
-            // Occured_cb
-            // 
-            this.Occured_cb.FormattingEnabled = true;
-            this.Occured_cb.Location = new System.Drawing.Point(171, 220);
-            this.Occured_cb.Name = "Occured_cb";
-            this.Occured_cb.Size = new System.Drawing.Size(121, 21);
-            this.Occured_cb.TabIndex = 4;
+            this.start_date_lb.AutoSize = true;
+            this.start_date_lb.Location = new System.Drawing.Point(594, 177);
+            this.start_date_lb.Name = "start_date_lb";
+            this.start_date_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.start_date_lb.Size = new System.Drawing.Size(42, 26);
+            this.start_date_lb.TabIndex = 2;
+            this.start_date_lb.Text = "טווח \r\nהתחלה";
             // 
             // searchMeeting_bt
             // 
-            this.searchMeeting_bt.Location = new System.Drawing.Point(216, 321);
+            this.searchMeeting_bt.Location = new System.Drawing.Point(151, 347);
             this.searchMeeting_bt.Name = "searchMeeting_bt";
             this.searchMeeting_bt.Size = new System.Drawing.Size(75, 23);
             this.searchMeeting_bt.TabIndex = 5;
             this.searchMeeting_bt.Text = "חפש פגישה";
             this.searchMeeting_bt.UseVisualStyleBackColor = true;
+            this.searchMeeting_bt.Click += new System.EventHandler(this.searchMeeting_bt_Click);
             // 
             // cancel_bt
             // 
-            this.cancel_bt.Location = new System.Drawing.Point(108, 321);
+            this.cancel_bt.Location = new System.Drawing.Point(43, 347);
             this.cancel_bt.Name = "cancel_bt";
             this.cancel_bt.Size = new System.Drawing.Size(75, 23);
             this.cancel_bt.TabIndex = 5;
-            this.cancel_bt.Text = "ביטול";
+            this.cancel_bt.Text = "סגור";
             this.cancel_bt.UseVisualStyleBackColor = true;
+            this.cancel_bt.Click += new System.EventHandler(this.cancel_bt_Click);
+            // 
+            // occured_chk
+            // 
+            this.occured_chk.AutoSize = true;
+            this.occured_chk.Location = new System.Drawing.Point(28, 50);
+            this.occured_chk.Name = "occured_chk";
+            this.occured_chk.Size = new System.Drawing.Size(140, 17);
+            this.occured_chk.TabIndex = 6;
+            this.occured_chk.Text = "האם הפגישה התקיימה";
+            this.occured_chk.UseVisualStyleBackColor = true;
+            // 
+            // lastName_lb
+            // 
+            this.lastName_lb.AutoSize = true;
+            this.lastName_lb.Location = new System.Drawing.Point(251, 94);
+            this.lastName_lb.Name = "lastName_lb";
+            this.lastName_lb.Size = new System.Drawing.Size(63, 13);
+            this.lastName_lb.TabIndex = 7;
+            this.lastName_lb.Text = "שם משפחה";
+            // 
+            // firstName_tb
+            // 
+            this.firstName_tb.Location = new System.Drawing.Point(375, 87);
+            this.firstName_tb.Name = "firstName_tb";
+            this.firstName_tb.Size = new System.Drawing.Size(198, 20);
+            this.firstName_tb.TabIndex = 8;
+            // 
+            // lastName_tb
+            // 
+            this.lastName_tb.Location = new System.Drawing.Point(28, 87);
+            this.lastName_tb.Name = "lastName_tb";
+            this.lastName_tb.Size = new System.Drawing.Size(198, 20);
+            this.lastName_tb.TabIndex = 9;
+            // 
+            // end_date_lb
+            // 
+            this.end_date_lb.AutoSize = true;
+            this.end_date_lb.Location = new System.Drawing.Point(283, 177);
+            this.end_date_lb.Name = "end_date_lb";
+            this.end_date_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.end_date_lb.Size = new System.Drawing.Size(34, 26);
+            this.end_date_lb.TabIndex = 11;
+            this.end_date_lb.Text = "טווח \r\nסיום";
+            // 
+            // end_date_dtp
+            // 
+            this.end_date_dtp.Checked = false;
+            this.end_date_dtp.Location = new System.Drawing.Point(28, 177);
+            this.end_date_dtp.Name = "end_date_dtp";
+            this.end_date_dtp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.end_date_dtp.RightToLeftLayout = true;
+            this.end_date_dtp.ShowCheckBox = true;
+            this.end_date_dtp.Size = new System.Drawing.Size(200, 20);
+            this.end_date_dtp.TabIndex = 10;
             // 
             // FindMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 374);
+            this.ClientSize = new System.Drawing.Size(682, 397);
+            this.Controls.Add(this.end_date_lb);
+            this.Controls.Add(this.end_date_dtp);
+            this.Controls.Add(this.lastName_tb);
+            this.Controls.Add(this.firstName_tb);
+            this.Controls.Add(this.lastName_lb);
+            this.Controls.Add(this.occured_chk);
             this.Controls.Add(this.cancel_bt);
             this.Controls.Add(this.searchMeeting_bt);
-            this.Controls.Add(this.Occured_cb);
-            this.Controls.Add(this.mitmodedName_cb);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.adress_tb);
+            this.Controls.Add(this.city_lb);
+            this.Controls.Add(this.meetingID_lb);
+            this.Controls.Add(this.start_date_lb);
+            this.Controls.Add(this.address_lb);
+            this.Controls.Add(this.firstName_lb);
+            this.Controls.Add(this.start_date_dtp);
+            this.Controls.Add(this.address_tb);
             this.Controls.Add(this.city_tb);
             this.Controls.Add(this.meetingID_tb);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FindMeeting";
             this.Text = "FindMeeting";
-            this.Load += new System.EventHandler(this.FindMeeting_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,17 +233,20 @@
 
         private System.Windows.Forms.TextBox meetingID_tb;
         private System.Windows.Forms.TextBox city_tb;
-        private System.Windows.Forms.TextBox adress_tb;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox mitmodedName_cb;
-        private System.Windows.Forms.ComboBox Occured_cb;
+        private System.Windows.Forms.TextBox address_tb;
+        private System.Windows.Forms.DateTimePicker start_date_dtp;
+        private System.Windows.Forms.Label firstName_lb;
+        private System.Windows.Forms.Label meetingID_lb;
+        private System.Windows.Forms.Label address_lb;
+        private System.Windows.Forms.Label city_lb;
+        private System.Windows.Forms.Label start_date_lb;
         private System.Windows.Forms.Button searchMeeting_bt;
         private System.Windows.Forms.Button cancel_bt;
+        private System.Windows.Forms.CheckBox occured_chk;
+        private System.Windows.Forms.Label lastName_lb;
+        private System.Windows.Forms.TextBox firstName_tb;
+        private System.Windows.Forms.TextBox lastName_tb;
+        private System.Windows.Forms.Label end_date_lb;
+        private System.Windows.Forms.DateTimePicker end_date_dtp;
     }
 }

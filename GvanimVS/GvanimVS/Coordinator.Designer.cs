@@ -88,6 +88,7 @@
             this.showMeetings_bt.TabIndex = 5;
             this.showMeetings_bt.Text = "הצג פגישות";
             this.showMeetings_bt.UseVisualStyleBackColor = true;
+            this.showMeetings_bt.Click += new System.EventHandler(this.showMeetings_bt_Click);
             // 
             // writeReport_bt
             // 

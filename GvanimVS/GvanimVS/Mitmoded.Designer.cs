@@ -49,9 +49,10 @@
             this.open_hitkashrut_bt = new System.Windows.Forms.Button();
             this.cat_report_tab = new System.Windows.Forms.TabPage();
             this.cat_meeting_tab = new System.Windows.Forms.TabPage();
+            this.show_meetings_bt = new System.Windows.Forms.Button();
             this.cv_generator_bt = new System.Windows.Forms.Button();
-            this.addPsychiatricCheckUp_btn = new System.Windows.Forms.Button();
             this.showPsyCheckUps_btn = new System.Windows.Forms.Button();
+            this.addPsychiatricCheckUp_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.form_categories_tc.SuspendLayout();
             this.cat_personal_tab.SuspendLayout();
@@ -134,10 +135,11 @@
             this.add_employment_bt.Enabled = false;
             this.add_employment_bt.Location = new System.Drawing.Point(207, 43);
             this.add_employment_bt.Name = "add_employment_bt";
-            this.add_employment_bt.Size = new System.Drawing.Size(166, 23);
+            this.add_employment_bt.Size = new System.Drawing.Size(165, 23);
             this.add_employment_bt.TabIndex = 8;
             this.add_employment_bt.Text = "הוסף פריט תעסוקה";
             this.add_employment_bt.UseVisualStyleBackColor = true;
+            this.add_employment_bt.Click += new System.EventHandler(this.add_employment_bt_Click);
             // 
             // add_report_bt
             // 
@@ -271,6 +273,7 @@
             // 
             // cat_meeting_tab
             // 
+            this.cat_meeting_tab.Controls.Add(this.show_meetings_bt);
             this.cat_meeting_tab.Controls.Add(this.cv_generator_bt);
             this.cat_meeting_tab.Controls.Add(this.showPsyCheckUps_btn);
             this.cat_meeting_tab.Controls.Add(this.addPsychiatricCheckUp_btn);
@@ -283,6 +286,16 @@
             this.cat_meeting_tab.Text = "פגישות ומעקבים";
             this.cat_meeting_tab.UseVisualStyleBackColor = true;
             // 
+            // show_meetings_bt
+            // 
+            this.show_meetings_bt.Location = new System.Drawing.Point(36, 72);
+            this.show_meetings_bt.Name = "show_meetings_bt";
+            this.show_meetings_bt.Size = new System.Drawing.Size(165, 23);
+            this.show_meetings_bt.TabIndex = 11;
+            this.show_meetings_bt.Text = "מעקב פגישות אישיות וקשר";
+            this.show_meetings_bt.UseVisualStyleBackColor = true;
+            this.show_meetings_bt.Click += new System.EventHandler(this.button1_Click);
+            // 
             // cv_generator_bt
             // 
             this.cv_generator_bt.Location = new System.Drawing.Point(208, 72);
@@ -293,25 +306,25 @@
             this.cv_generator_bt.UseVisualStyleBackColor = true;
             this.cv_generator_bt.Click += new System.EventHandler(this.cv_generator_bt_Click);
             // 
-            // addPsychiatricCheckUp_btn
-            // 
-            this.addPsychiatricCheckUp_btn.Location = new System.Drawing.Point(49, 14);
-            this.addPsychiatricCheckUp_btn.Name = "addPsychiatricCheckUp_btn";
-            this.addPsychiatricCheckUp_btn.Size = new System.Drawing.Size(152, 23);
-            this.addPsychiatricCheckUp_btn.TabIndex = 9;
-            this.addPsychiatricCheckUp_btn.Text = "הוסף מעקב פסיכיאטרי";
-            this.addPsychiatricCheckUp_btn.UseVisualStyleBackColor = true;
-            this.addPsychiatricCheckUp_btn.Click += new System.EventHandler(this.addPsychiatricCheckUp_btn_Click_1);
-            // 
             // showPsyCheckUps_btn
             // 
-            this.showPsyCheckUps_btn.Location = new System.Drawing.Point(49, 43);
+            this.showPsyCheckUps_btn.Location = new System.Drawing.Point(36, 43);
             this.showPsyCheckUps_btn.Name = "showPsyCheckUps_btn";
-            this.showPsyCheckUps_btn.Size = new System.Drawing.Size(152, 23);
+            this.showPsyCheckUps_btn.Size = new System.Drawing.Size(165, 23);
             this.showPsyCheckUps_btn.TabIndex = 9;
             this.showPsyCheckUps_btn.Text = "הצג מעקבים פסיכיאטריים";
             this.showPsyCheckUps_btn.UseVisualStyleBackColor = true;
             this.showPsyCheckUps_btn.Click += new System.EventHandler(this.addPsychiatricCheckUp_btn_Click_1);
+            // 
+            // addPsychiatricCheckUp_btn
+            // 
+            this.addPsychiatricCheckUp_btn.Location = new System.Drawing.Point(36, 14);
+            this.addPsychiatricCheckUp_btn.Name = "addPsychiatricCheckUp_btn";
+            this.addPsychiatricCheckUp_btn.Size = new System.Drawing.Size(165, 23);
+            this.addPsychiatricCheckUp_btn.TabIndex = 9;
+            this.addPsychiatricCheckUp_btn.Text = "הוסף מעקב פסיכיאטרי";
+            this.addPsychiatricCheckUp_btn.UseVisualStyleBackColor = true;
+            this.addPsychiatricCheckUp_btn.Click += new System.EventHandler(this.addPsychiatricCheckUp_btn_Click_1);
             // 
             // Mitmoded
             // 
@@ -367,5 +380,6 @@
         private System.Windows.Forms.Button addPsychiatricCheckUp_btn;
         private System.Windows.Forms.Button cv_generator_bt;
         private System.Windows.Forms.Button showPsyCheckUps_btn;
+        private System.Windows.Forms.Button show_meetings_bt;
     }
 }
