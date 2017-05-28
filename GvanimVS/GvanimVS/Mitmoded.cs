@@ -84,7 +84,7 @@ namespace GvanimVS
         private void change_coordinator_bt_Click(object sender, EventArgs e)
         {
             //TODO
-           throw new NotImplementedException();
+            MessageBox.Show("Not Implemented Yet");
         }
 
         private void Mitmoded_Load(object sender, EventArgs e)
@@ -167,8 +167,10 @@ namespace GvanimVS
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            
-            
+            using (ShowMeetings show = new ShowMeetings(con, coordinatorID))
+            {
+                show.ShowDialog();
+            }
         }
     }
 }

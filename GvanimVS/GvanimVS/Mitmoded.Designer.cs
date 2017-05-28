@@ -49,10 +49,10 @@
             this.open_hitkashrut_bt = new System.Windows.Forms.Button();
             this.cat_report_tab = new System.Windows.Forms.TabPage();
             this.cat_meeting_tab = new System.Windows.Forms.TabPage();
+            this.show_meetings_bt = new System.Windows.Forms.Button();
             this.cv_generator_bt = new System.Windows.Forms.Button();
             this.showPsyCheckUps_btn = new System.Windows.Forms.Button();
             this.addPsychiatricCheckUp_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.form_categories_tc.SuspendLayout();
             this.cat_personal_tab.SuspendLayout();
@@ -273,7 +273,7 @@
             // 
             // cat_meeting_tab
             // 
-            this.cat_meeting_tab.Controls.Add(this.button1);
+            this.cat_meeting_tab.Controls.Add(this.show_meetings_bt);
             this.cat_meeting_tab.Controls.Add(this.cv_generator_bt);
             this.cat_meeting_tab.Controls.Add(this.showPsyCheckUps_btn);
             this.cat_meeting_tab.Controls.Add(this.addPsychiatricCheckUp_btn);
@@ -285,6 +285,16 @@
             this.cat_meeting_tab.TabIndex = 2;
             this.cat_meeting_tab.Text = "פגישות ומעקבים";
             this.cat_meeting_tab.UseVisualStyleBackColor = true;
+            // 
+            // show_meetings_bt
+            // 
+            this.show_meetings_bt.Location = new System.Drawing.Point(36, 72);
+            this.show_meetings_bt.Name = "show_meetings_bt";
+            this.show_meetings_bt.Size = new System.Drawing.Size(165, 23);
+            this.show_meetings_bt.TabIndex = 11;
+            this.show_meetings_bt.Text = "מעקב פגישות אישיות וקשר";
+            this.show_meetings_bt.UseVisualStyleBackColor = true;
+            this.show_meetings_bt.Click += new System.EventHandler(this.button1_Click);
             // 
             // cv_generator_bt
             // 
@@ -315,16 +325,6 @@
             this.addPsychiatricCheckUp_btn.Text = "הוסף מעקב פסיכיאטרי";
             this.addPsychiatricCheckUp_btn.UseVisualStyleBackColor = true;
             this.addPsychiatricCheckUp_btn.Click += new System.EventHandler(this.addPsychiatricCheckUp_btn_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(36, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "מעקב פגישות אישיות וקשר";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Mitmoded
             // 
@@ -380,6 +380,6 @@
         private System.Windows.Forms.Button addPsychiatricCheckUp_btn;
         private System.Windows.Forms.Button cv_generator_bt;
         private System.Windows.Forms.Button showPsyCheckUps_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button show_meetings_bt;
     }
 }

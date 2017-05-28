@@ -215,7 +215,7 @@ namespace GvanimVS
                 ID_dynamic_lb.Text = ID;
                 firstName_tb.Text = dr["firstName"].ToString();
                 lastName_tb.Text = dr["lastName"].ToString();
-                name_dynamic_lb.Text = firstName_tb.Text + lastName_tb.Text;
+                name_dynamic_lb.Text = firstName_tb.Text + " " + lastName_tb.Text;
                 if (dr["birthday"] != null)
                 {
                     birth_dtp.Value = (DateTime)dr["birthday"];

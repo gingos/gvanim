@@ -167,7 +167,7 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
             cmd.Parameters.AddWithValue("@pMeetingID", meetingID);
             cmd.Parameters.AddWithValue("@pMitmodedID", mitmodedID);
-            cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
+            cmd.Parameters.Add("@pDate", SqlDbType.DateTime).Value = date;
             cmd.Parameters.AddWithValue("@pAddress", address);
             cmd.Parameters.Add("@pOccured", SqlDbType.Bit).Value = occured;
             cmd.Parameters.AddWithValue("@pCity", city);
@@ -611,15 +611,7 @@ namespace GvanimVS
             #endregion
             return dt;
         }
-        //DEPRECATED
-        private static string findMeeting(int id, DateTime date, string name)
-        {
-            return
-                     "DECLARE @id int ='" + id + "'"
-                   + "DECLARE @date datetime = '" + date + "'"
-                   + "DECLARE @mitmoded nvarchar(50) = '" + name + "'"
-                   + "SELECT FROM " + MEETINGS + "WHERE Id = @id OR mitmoded = @mitmoded OR Date = @date";
-        }
+        
         //DEPRECATED
         public static string upsertMitmoded(string first, string last, DateTime date, string ID, string city, string address, string phone1, string phone2, byte[] photo)
         {
