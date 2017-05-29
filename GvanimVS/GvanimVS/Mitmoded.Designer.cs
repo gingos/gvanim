@@ -53,6 +53,9 @@
             this.cv_generator_bt = new System.Windows.Forms.Button();
             this.showPsyCheckUps_btn = new System.Windows.Forms.Button();
             this.addPsychiatricCheckUp_btn = new System.Windows.Forms.Button();
+            this.score_lb = new System.Windows.Forms.Label();
+            this.score_dynamic_lb = new System.Windows.Forms.Label();
+            this.keyword_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.form_categories_tc.SuspendLayout();
             this.cat_personal_tab.SuspendLayout();
@@ -200,7 +203,6 @@
             this.coordinator_dynamic_lb.Size = new System.Drawing.Size(72, 13);
             this.coordinator_dynamic_lb.TabIndex = 13;
             this.coordinator_dynamic_lb.Text = "<coordinator>";
-            this.coordinator_dynamic_lb.Click += new System.EventHandler(this.coordinator_dynamic_lb_Click);
             // 
             // tochnit_bt
             // 
@@ -294,7 +296,7 @@
             this.show_meetings_bt.TabIndex = 11;
             this.show_meetings_bt.Text = "מעקב פגישות אישיות וקשר";
             this.show_meetings_bt.UseVisualStyleBackColor = true;
-            this.show_meetings_bt.Click += new System.EventHandler(this.button1_Click);
+            this.show_meetings_bt.Click += new System.EventHandler(this.show_meetings_bt_Click);
             // 
             // cv_generator_bt
             // 
@@ -326,11 +328,48 @@
             this.addPsychiatricCheckUp_btn.UseVisualStyleBackColor = true;
             this.addPsychiatricCheckUp_btn.Click += new System.EventHandler(this.addPsychiatricCheckUp_btn_Click_1);
             // 
+            // score_lb
+            // 
+            this.score_lb.AutoSize = true;
+            this.score_lb.Location = new System.Drawing.Point(146, 21);
+            this.score_lb.Name = "score_lb";
+            this.score_lb.Size = new System.Drawing.Size(79, 13);
+            this.score_lb.TabIndex = 16;
+            this.score_lb.Text = "דירוג מתמודד";
+            // 
+            // score_dynamic_lb
+            // 
+            this.score_dynamic_lb.AutoSize = true;
+            this.score_dynamic_lb.Location = new System.Drawing.Point(53, 21);
+            this.score_dynamic_lb.Name = "score_dynamic_lb";
+            this.score_dynamic_lb.Size = new System.Drawing.Size(45, 13);
+            this.score_dynamic_lb.TabIndex = 17;
+            this.score_dynamic_lb.Text = "<score>";
+            // 
+            // keyword_bt
+            // 
+            this.keyword_bt.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.keyword_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.keyword_bt.Cursor = System.Windows.Forms.Cursors.Default;
+            this.keyword_bt.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.keyword_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.keyword_bt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.keyword_bt.Location = new System.Drawing.Point(501, 263);
+            this.keyword_bt.Name = "keyword_bt";
+            this.keyword_bt.Size = new System.Drawing.Size(146, 23);
+            this.keyword_bt.TabIndex = 18;
+            this.keyword_bt.Text = "סריקה עבור מילות מפתח";
+            this.keyword_bt.UseVisualStyleBackColor = false;
+            this.keyword_bt.Click += new System.EventHandler(this.keyword_bt_Click);
+            // 
             // Mitmoded
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 358);
+            this.Controls.Add(this.keyword_bt);
+            this.Controls.Add(this.score_dynamic_lb);
+            this.Controls.Add(this.score_lb);
             this.Controls.Add(this.form_categories_tc);
             this.Controls.Add(this.coordinator_dynamic_lb);
             this.Controls.Add(this.coordinator_name_lb);
@@ -343,7 +382,6 @@
             this.Controls.Add(this.name_lb);
             this.Name = "Mitmoded";
             this.Text = "Mitmoded";
-            this.Load += new System.EventHandler(this.Mitmoded_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
             this.form_categories_tc.ResumeLayout(false);
             this.cat_personal_tab.ResumeLayout(false);
@@ -381,5 +419,8 @@
         private System.Windows.Forms.Button cv_generator_bt;
         private System.Windows.Forms.Button showPsyCheckUps_btn;
         private System.Windows.Forms.Button show_meetings_bt;
+        private System.Windows.Forms.Label score_lb;
+        private System.Windows.Forms.Label score_dynamic_lb;
+        private System.Windows.Forms.Button keyword_bt;
     }
 }

@@ -18,6 +18,7 @@ namespace GvanimVS
         byte[] PERSONAL_PDF = global::GvanimVS.Properties.Resources.personal_details;
         byte[] PERSONAL_DOC = global::GvanimVS.Properties.Resources.personal_details_template;
 
+
         private byte[] imgByte, chosenFileBytes, savedFileBytes;
         //private bool imgChanged;
         private string ID, chosenFileName, savedFileName;
@@ -1044,6 +1045,101 @@ namespace GvanimVS
             //string isEmployed = this.radio_isEmployed_Yes.Checked ? "Yes" : "No";
 
             return replaceDict;
+        }
+
+        /// <summary>
+        /// Calculate Mitmoded Score
+        /// </summary>
+        /// Scans free text for key words, number of past jobs, and strong\weak points
+        /// <param name="score">initial score = 100</param>
+        /// <returns>updated mitmoded score</returns>
+        internal double CalculateIntecScore(double score)
+        {
+            score = ScanBagOfWords(score);
+            score = ScanJobs(score);
+
+            return score;
+        }
+
+        /// <summary>
+        /// Scan all textboxes for free text containing key words
+        /// </summary>
+        /// <param name="score"></param>
+        /// <returns></returns>
+        private double ScanBagOfWords(double score)
+        {
+            Dictionary<string, double> bag = CreateBagOfWords();
+            foreach (TabPage page in mitmoded_card_tc.TabPages)
+            {
+                foreach (Control control in page.Controls)
+                {
+                    if (control is TextBox)
+                    {
+                        foreach (string key in bag.Keys)
+                        {
+                            if (control.Text.Contains(key))
+                            {
+                                score -= bag[key];
+                                Console.WriteLine("found word: " + key + ", new score is " + score);
+                            }
+                        }
+                    }
+                }
+            }
+            return score;
+        }
+
+        /// <summary>
+        /// Calculate
+        /// </summary>
+        /// <param name="score"></param>
+        /// <returns></returns>
+        private double ScanJobs (double score)
+        {
+            double yearsEmployed =0;
+            int differentJobs = xml_employment_dgv.Rows.Count;
+            if (differentJobs > 10)
+            {
+                Console.WriteLine("Above {} different jobs, not steady", differentJobs);
+                score -= 5;
+            }
+            else if (differentJobs < 3)
+            {
+                foreach (DataGridViewRow row in xml_employment_dgv.Rows)
+                {
+                    // try to calculate time spent according to year column
+                    // if text is range, calculate it
+                    string exp = row.Cells[0].Value.ToString();
+                    if (exp.Contains("-"))
+                    {
+                        yearsEmployed += (double)new DataTable().Compute(exp, "");
+                    }
+                    else
+                        yearsEmployed += 1;
+                }
+            }
+            if (yearsEmployed < 3)
+            {
+                Console.WriteLine("total years employed is {}, too few", yearsEmployed);
+                score -= 10;
+            }
+            return score;
+        }
+
+        private double ScanEducation (double score)
+        {
+            return score;
+        }
+
+        private double ScanAttributes (double score)
+        {
+            return score;
+        }
+
+        private Dictionary<string, double> CreateBagOfWords()
+        {
+            return new Dictionary<string, double> { { "עצוב", 1.5 }, { "דכאון", 2.5 }, { "אכזבה", 2.5 }, {"קשה",1.5 },
+                {"מתקשה",2.25 } };
         }
     }
 }

@@ -14,6 +14,8 @@ namespace GvanimVS
     public partial class Mitmoded : DBform
     {
         private string coordinatorID;
+        private double SCORE = 100;
+
         public Mitmoded()
         {
             InitializeComponent();
@@ -22,19 +24,27 @@ namespace GvanimVS
         {
             InitializeComponent();
         }
-        public Mitmoded(SqlConnection con, string ID) : base(con)
+        public Mitmoded(SqlConnection con, string mitmodedID) : base(con)
         {
             InitializeComponent();
-            ID_dynamic_lb.Text = ID;
-            DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
+            ID_dynamic_lb.Text = mitmodedID;
+            DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, mitmodedID, cmd, da);
             if (dt!= null)
                 initFieldsFromDT(dt);
         }
 
+        /// <summary>
+        /// Init dynamic labels with user details
+        /// </summary>
+        /// Details are name, ID, score; retrieved from DB
+        /// <param name="dt"></param>
         private void initFieldsFromDT(DataTable dt)
         {
             name_dynamic_lb.Text = dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["lastName"].ToString();
             coordinatorID = dt.Rows[0]["coordinatorID"].ToString();
+
+            //score_dynamic_lb.Text = dt.Rows[0]["grade"].ToString();
+            score_dynamic_lb.Text = SCORE.ToString();
             //TODO:
             //possible query: equal\inner join on "coordinatorID:
             coordinator_dynamic_lb.Text = getCoordinatorName(coordinatorID);
@@ -87,11 +97,6 @@ namespace GvanimVS
             MessageBox.Show("Not Implemented Yet");
         }
 
-        private void Mitmoded_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void add_report_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -100,11 +105,6 @@ namespace GvanimVS
                 report.ShowDialog();
             }
             this.Show();
-        }
-
-        private void coordinator_dynamic_lb_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_tochnit_Click(object sender, EventArgs e)
@@ -147,7 +147,6 @@ namespace GvanimVS
             this.Show();
         }
 
-
         private void addPsychiatricCheckUp_btn_Click_1(object sender, EventArgs e)
         {
             this.Hide();
@@ -164,7 +163,7 @@ namespace GvanimVS
             MessageBox.Show("יש לעדכן קוד עבור אפשרות זו");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void show_meetings_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
             using (ShowMeetings show = new ShowMeetings(con, coordinatorID))
@@ -172,5 +171,17 @@ namespace GvanimVS
                 show.ShowDialog();
             }
         }
+
+        private void keyword_bt_Click(object sender, EventArgs e)
+        {
+            //open Intec form
+            MitmodedCard card = new MitmodedCard(con, ID_dynamic_lb.Text);
+            //apply Intec.scan() with supplied BOW vector
+            SCORE = card.CalculateIntecScore(100);
+            score_dynamic_lb.Text = SCORE.ToString();
+           
+        }
+
+
     }
 }
