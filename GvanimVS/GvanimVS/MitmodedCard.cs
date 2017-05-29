@@ -1105,14 +1105,18 @@ namespace GvanimVS
             }
             else if (differentJobs < 3)
             {
-                foreach (DataGridViewRow row in xml_employment_dgv.Rows)
-                {
+                for (int i=0; i < xml_employment_dgv.Rows.Count -1; i++ ){
+                    DataGridViewRow row = xml_employment_dgv.Rows[i];
                     // try to calculate time spent according to year column
                     // if text is range, calculate it
                     string exp = row.Cells[0].Value.ToString();
                     if (exp.Contains("-"))
                     {
-                        yearsEmployed += (double)new DataTable().Compute(exp, "");
+                        var sum = (new DataTable().Compute(exp, ""));
+                        Decimal dsum = Convert.ToDecimal(sum);
+                        dsum = Math.Abs(dsum);
+                        Console.WriteLine("spent {0} years at job {1}", dsum, row.Cells[1].Value);
+                        yearsEmployed += Convert.ToDouble(dsum);
                     }
                     else
                         yearsEmployed += 1;
@@ -1120,7 +1124,7 @@ namespace GvanimVS
             }
             if (yearsEmployed < 3)
             {
-                Console.WriteLine("total years employed is {}, too few", yearsEmployed);
+                Console.WriteLine("total years employed is {0}, too few", yearsEmployed);
                 score -= 10;
             }
             return score;
