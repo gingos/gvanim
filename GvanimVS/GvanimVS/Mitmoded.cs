@@ -179,7 +179,17 @@ namespace GvanimVS
             //apply Intec.scan() with supplied BOW vector
             SCORE = card.CalculateIntecScore(100);
             score_dynamic_lb.Text = SCORE.ToString();
-           
+            if (SCORE <= 60)
+            {
+                MessageBox.Show("מתמודד בטווח האדום, יש לבדוק את הכרטיס האישי שלו");
+                score_dynamic_lb.ForeColor = Color.Red;
+            }
+            else if (SCORE >60 && SCORE <= 80)
+            {
+                MessageBox.Show("מתמודד בטווח הצהוב, יש לבדוק את הכרטיס האישי שלו");
+                score_dynamic_lb.ForeColor = Color.Orange;
+            }
+
         }
 
 

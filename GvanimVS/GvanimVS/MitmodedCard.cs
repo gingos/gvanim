@@ -1057,7 +1057,8 @@ namespace GvanimVS
         {
             score = ScanBagOfWords(score);
             score = ScanJobs(score);
-
+            score = ScanEducation(score);
+            score = ScanAttributes(score);
             return score;
         }
 
@@ -1090,7 +1091,7 @@ namespace GvanimVS
         }
 
         /// <summary>
-        /// Calculate
+        /// Calculate Score by number of different jobs or too little employment total time
         /// </summary>
         /// <param name="score"></param>
         /// <returns></returns>
@@ -1118,6 +1119,7 @@ namespace GvanimVS
                         Console.WriteLine("spent {0} years at job {1}", dsum, row.Cells[1].Value);
                         yearsEmployed += Convert.ToDouble(dsum);
                     }
+                    //if only specified one year or empty
                     else
                         yearsEmployed += 1;
                 }
@@ -1130,13 +1132,73 @@ namespace GvanimVS
             return score;
         }
 
+        /// <summary>
+        /// Calculate score by number of education institutes
+        /// </summary>
+        /// Increases score by 10 if university found, decrease by 5 if not
+        /// Also decrease if less than 2 institutes
+        /// <param name="score"></param>
+        /// <returns></returns>
         private double ScanEducation (double score)
         {
-            return score;
+            //string[] column0Array = new string[xml_education_dgv.Rows.Count];
+            int numOfEduPlaces;
+            var query = xml_education_dgv.Rows.
+                Cast<DataGridViewRow>().
+                Where(r => r.Cells["education_dg_edu_col"].Value !=null &&
+                r.Cells["education_dg_edu_col"].Value.ToString().Equals("אוניברסיטה"))
+                .ToArray();
+            
+            if ( query.Length!= 0)
+            {
+                score += 10;
+                Console.WriteLine("university found, score + 10");
+            }
+            else
+            {
+                score -= 5;
+                Console.WriteLine("university not found, score - 5");
+                // also not enough education institues
+                // it is possible for university to be the only institute - that's a good thing
+                numOfEduPlaces = xml_education_dgv.Rows.Count;
+                //less than 3, actually checks for 2, always an empty row is present in datagrid
+                if (numOfEduPlaces < 3)
+                {
+                    score -= 5;
+                    Console.WriteLine("only {0} education institutes found, score is now {1}", numOfEduPlaces, score);
+                }
+            }
+                return score;
         }
 
+        /// <summary>
+        /// Scan skills for low and medium abilities
+        /// </summary>
+        /// <param name="score"></param>
+        /// <returns></returns>
         private double ScanAttributes (double score)
         {
+            //Make a list <string> of the column "skill description" in the skills datagrid
+            List<string> list = xml_skills_dgv.Rows
+                             .OfType<DataGridViewRow>()
+                             .Where(r => r.Cells["notes_col"].Value != null)
+                             .Select(r => r.Cells["notes_col"].Value.ToString())
+                             .ToList();
+            Dictionary<string, double> skillsIndex = CreateSkillIndex();
+            foreach (var item in list)
+            {
+                if (item.Contains("נמוך") || item.Contains("נמוכה"))
+                {
+                    score -= 2.5;
+                    Console.WriteLine("low skill, score-= 2.5, is now {0}", score);
+                }
+                else if (item.Contains("בינונית") || item.Contains("בינונית"))
+                {
+                    score -= 1.0;
+                    Console.WriteLine("medium skill, score-= 1.0, is now {0}", score);
+                }
+
+            }
             return score;
         }
 
@@ -1144,6 +1206,12 @@ namespace GvanimVS
         {
             return new Dictionary<string, double> { { "עצוב", 1.5 }, { "דכאון", 2.5 }, { "אכזבה", 2.5 }, {"קשה",1.5 },
                 {"מתקשה",2.25 } };
+        }
+
+        private Dictionary<string, double> CreateSkillIndex()
+        {
+            return new Dictionary<string, double> { { "נמוך", 2.5 }, { "נמוכה", 2.5 }, { "בינוני", 1.0 }, {"בינונית",1.0 },
+                 };
         }
     }
 }
