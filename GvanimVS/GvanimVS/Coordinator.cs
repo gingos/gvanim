@@ -55,7 +55,7 @@ namespace GvanimVS
             am.Activate();
             */
             this.Hide();
-            using (var am = new AddMeeting(coordinatorID, con))
+            using (var am = new MeetingAdd(coordinatorID, con))
             {
                 am.ShowDialog();
             }
@@ -98,7 +98,7 @@ namespace GvanimVS
         private void showMeetings_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (var meetings = new ShowMeetings(con, coordinatorID))
+            using (var meetings = new MeetingShow(con, coordinatorID))
             {
                 meetings.ShowDialog();
             }

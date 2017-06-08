@@ -316,7 +316,7 @@
             this.showPsyCheckUps_btn.TabIndex = 9;
             this.showPsyCheckUps_btn.Text = "הצג מעקבים פסיכיאטריים";
             this.showPsyCheckUps_btn.UseVisualStyleBackColor = true;
-            this.showPsyCheckUps_btn.Click += new System.EventHandler(this.addPsychiatricCheckUp_btn_Click_1);
+            this.showPsyCheckUps_btn.Click += new System.EventHandler(this.showPsyCheckUps_btn_Click);
             // 
             // addPsychiatricCheckUp_btn
             // 

@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace GvanimVS
 {
-    public partial class AddMeeting : DBform
+    public partial class MeetingAdd : DBform
     {
         public string coordinatorID, mitmodedID, meetingID,address, city, topics, tasks;
         public DateTime date;
-        public AddMeeting(string coordinatorID, SqlConnection con):base(con)
+        public MeetingAdd(string coordinatorID, SqlConnection con):base(con)
         {
             InitializeComponent();
             mitmoded_cb.DataSource = getMitmodedNames();

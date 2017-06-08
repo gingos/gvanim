@@ -102,11 +102,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddMeeting.cs">
+    <Compile Include="MeetingAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddMeeting.Designer.cs">
-      <DependentUpon>AddMeeting.cs</DependentUpon>
+    <Compile Include="MeetingAdd.Designer.cs">
+      <DependentUpon>MeetingAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Confidentiality.cs">
       <SubType>Form</SubType>
@@ -199,6 +199,12 @@
     <Compile Include="PsychiatricCheckUp.Designer.cs">
       <DependentUpon>PsychiatricCheckUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="PsychiatricShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PsychiatricShow.Designer.cs">
+      <DependentUpon>PsychiatricShow.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegionManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,16 +230,16 @@
       <DependentUpon>SelectMimoded.cs</DependentUpon>
     </Compile>
     <Compile Include="SerializableDictionary.cs" />
-    <Compile Include="ShowMeetings.cs">
+    <Compile Include="MeetingShow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowMeetings.Designer.cs">
-      <DependentUpon>ShowMeetings.cs</DependentUpon>
+    <Compile Include="MeetingShow.Designer.cs">
+      <DependentUpon>MeetingShow.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLmethods.cs" />
     <Compile Include="Tools.cs" />
-    <EmbeddedResource Include="AddMeeting.resx">
-      <DependentUpon>AddMeeting.cs</DependentUpon>
+    <EmbeddedResource Include="MeetingAdd.resx">
+      <DependentUpon>MeetingAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Confidentiality.resx">
       <DependentUpon>Confidentiality.cs</DependentUpon>
@@ -280,6 +286,9 @@
     <EmbeddedResource Include="PsychiatricCheckUp.resx">
       <DependentUpon>PsychiatricCheckUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PsychiatricShow.resx">
+      <DependentUpon>PsychiatricShow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegionManager.resx">
       <DependentUpon>RegionManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,8 +301,8 @@
     <EmbeddedResource Include="SelectMimoded.resx">
       <DependentUpon>SelectMimoded.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShowMeetings.resx">
-      <DependentUpon>ShowMeetings.cs</DependentUpon>
+    <EmbeddedResource Include="MeetingShow.resx">
+      <DependentUpon>MeetingShow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -155,7 +155,6 @@ namespace GvanimVS
                 psy.ShowDialog();
             }
             this.Show();
-
         }
 
         private void add_employment_bt_Click(object sender, EventArgs e)
@@ -166,7 +165,7 @@ namespace GvanimVS
         private void show_meetings_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (ShowMeetings show = new ShowMeetings(con, coordinatorID))
+            using (MeetingShow show = new MeetingShow(con, coordinatorID))
             {
                 show.ShowDialog();
             }
@@ -192,6 +191,14 @@ namespace GvanimVS
 
         }
 
-
+        private void showPsyCheckUps_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var psy = new PsychiatricShow(con, ID_dynamic_lb.Text))
+            {
+                psy.ShowDialog();
+            }
+            this.Show();
+        }
     }
 }
