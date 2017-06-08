@@ -149,13 +149,7 @@ namespace GvanimVS
 
         private void addPsychiatricCheckUp_btn_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            using (var psy = new PsychiatricCheckUp(con, ID_dynamic_lb.Text))
-            {
-                psy.ShowDialog();
-            }
-            this.Show();
-
+            MessageBox.Show("not implemented yet");
         }
 
         private void add_employment_bt_Click(object sender, EventArgs e)
@@ -192,6 +186,9 @@ namespace GvanimVS
 
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("not implemented yet");
+        }
     }
 }
