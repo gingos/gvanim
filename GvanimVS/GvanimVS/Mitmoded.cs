@@ -20,7 +20,7 @@ namespace GvanimVS
         {
             InitializeComponent();
         }
-        public Mitmoded (SqlConnection con):base(con)
+        public Mitmoded(SqlConnection con) : base(con)
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace GvanimVS
             InitializeComponent();
             ID_dynamic_lb.Text = mitmodedID;
             DataTable dt = SQLmethods.getDataTable(SQLmethods.MITMODED, mitmodedID, cmd, da);
-            if (dt!= null)
+            if (dt != null)
                 initFieldsFromDT(dt);
         }
 
@@ -150,9 +150,13 @@ namespace GvanimVS
         private void addPsychiatricCheckUp_btn_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("not implemented yet");
-            }
-            this.Show();
         }
+
+        private void showPsyCheckUps_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void add_employment_bt_Click(object sender, EventArgs e)
         {
@@ -180,14 +184,12 @@ namespace GvanimVS
                 MessageBox.Show("מתמודד בטווח האדום, יש לבדוק את הכרטיס האישי שלו");
                 score_dynamic_lb.ForeColor = Color.Red;
             }
-            else if (SCORE >60 && SCORE <= 80)
+            else if (SCORE > 60 && SCORE <= 80)
             {
                 MessageBox.Show("מתמודד בטווח הצהוב, יש לבדוק את הכרטיס האישי שלו");
                 score_dynamic_lb.ForeColor = Color.Orange;
             }
-
         }
-
-
     }
-}
+ }
+

@@ -143,7 +143,6 @@
             this.add_employment_bt.TabIndex = 8;
             this.add_employment_bt.Text = "הוסף פריט תעסוקה";
             this.add_employment_bt.UseVisualStyleBackColor = true;
-            this.add_employment_bt.Click += new System.EventHandler(this.add_employment_bt_Click);
             // 
             // add_report_bt
             // 
@@ -264,7 +263,6 @@
             // 
             // cat_report_tab
             // 
-            this.cat_report_tab.Controls.Add(this.button1);
             this.cat_report_tab.Controls.Add(this.show_reports_bt);
             this.cat_report_tab.Controls.Add(this.add_report_bt);
             this.cat_report_tab.Location = new System.Drawing.Point(4, 22);
@@ -283,7 +281,6 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "הצג התראות";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cat_meeting_tab
             // 
@@ -308,7 +305,6 @@
             this.show_meetings_bt.TabIndex = 11;
             this.show_meetings_bt.Text = "מעקב פגישות אישיות וקשר";
             this.show_meetings_bt.UseVisualStyleBackColor = true;
-            this.show_meetings_bt.Click += new System.EventHandler(this.show_meetings_bt_Click);
             // 
             // cv_generator_bt
             // 
@@ -372,7 +368,6 @@
             this.keyword_bt.TabIndex = 18;
             this.keyword_bt.Text = "סריקה עבור מילות מפתח";
             this.keyword_bt.UseVisualStyleBackColor = false;
-            this.keyword_bt.Click += new System.EventHandler(this.keyword_bt_Click);
             // 
             // Mitmoded
             // 
@@ -392,6 +387,7 @@
             this.Controls.Add(this.ID_lb);
             this.Controls.Add(this.name_dynamic_lb);
             this.Controls.Add(this.name_lb);
+            this.Controls.Add(this.button1);
             this.Name = "Mitmoded";
             this.Text = "Mitmoded";
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
