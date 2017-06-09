@@ -150,6 +150,8 @@ namespace GvanimVS
         private void addPsychiatricCheckUp_btn_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("not implemented yet");
+            }
+            this.Show();
         }
 
         private void add_employment_bt_Click(object sender, EventArgs e)
@@ -160,7 +162,7 @@ namespace GvanimVS
         private void show_meetings_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (ShowMeetings show = new ShowMeetings(con, coordinatorID))
+            using (MeetingShow show = new MeetingShow(con, coordinatorID))
             {
                 show.ShowDialog();
             }
@@ -186,9 +188,6 @@ namespace GvanimVS
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("not implemented yet");
-        }
+
     }
 }

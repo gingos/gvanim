@@ -1,6 +1,6 @@
 ﻿namespace GvanimVS
 {
-    partial class AddMeeting
+    partial class MeetingAdd
     {
         /// <summary>
         /// Required designer variable.

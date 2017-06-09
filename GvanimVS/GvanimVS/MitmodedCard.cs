@@ -1123,12 +1123,13 @@ namespace GvanimVS
                     else
                         yearsEmployed += 1;
                 }
+                if (yearsEmployed < 3)
+                {
+                    Console.WriteLine("total years employed is {0}, too few", yearsEmployed);
+                    score -= 10;
+                }
             }
-            if (yearsEmployed < 3)
-            {
-                Console.WriteLine("total years employed is {0}, too few", yearsEmployed);
-                score -= 10;
-            }
+
             return score;
         }
 

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace GvanimVS
 {
-    public partial class ShowMeetings : DBform
+    public partial class PsychiatricShow : DBform
     {
-        public ShowMeetings(SqlConnection con, string ID) : base(con)
+        public PsychiatricShow(SqlConnection con, string ID) : base(con)
         {
             InitializeComponent();
             coordinatorID_lb.Text = ID;
@@ -30,10 +30,13 @@ namespace GvanimVS
             DataTable dt = fastSearch();
             if (dt != null)
             {
-                meetings_dgv.DataSource = dt;
+                followUps_dgv.DataSource = dt;
             }
         }
 
+        //TODO:
+        // hide file column causes run-time problems.
+        //possible feature: open file on double click.
         /// <summary>
         /// return data on mitmoded by name
         /// </summary>
@@ -45,7 +48,7 @@ namespace GvanimVS
             string cmdText = "";
             #region sqlQuery
             cmdText =
-                "SELECT meeting.* FROM MeetingsTB meeting, MitmodedTb mitmoded WHERE meeting.mitmodedID = mitmoded.ID " +
+                "SELECT checkup.* FROM PsychiatricCheckUpTB checkup, MitmodedTb mitmoded WHERE checkup.Id = mitmoded.ID " +
                 "AND (mitmoded.firstName + mitmoded.lastName LIKE '%' + @pName + '%' OR (mitmoded.lastName + mitmoded.firstName LIKE '%' + @pName + '%')) ";
             cmd.CommandText = cmdText;
             #endregion
@@ -76,25 +79,23 @@ namespace GvanimVS
         }
 
         private void detailed_search_Click(object sender, EventArgs e)
-        {            
-            FindMeeting find = new FindMeeting(con, coordinatorID_lb.Text);
+        {
+            //TODO:
+            /*
+            FindPsychiatry find = new FinPsychiatry(con, coordinatorID_lb.Text);
             find.ShowDialog();
             DataTable dt = find.getDetails();
             if (dt != null)
                 meetings_dgv.DataSource = dt;
             find.Dispose();
+            */
         }
 
-        private void add_meeting_bt_Click(object sender, EventArgs e)
+        private void add_psy_followup_bt_Click(object sender, EventArgs e)
         {
-            /*
-            AddMeeting meeting = new AddMeeting(coordinatorID_lb.Text, con);
-            meeting.ShowDialog();
-            meeting.Dispose();
-            */
-            using (AddMeeting meeting = new AddMeeting(coordinatorID_lb.Text, con))
+            using (PsychiatricCheckUp check = new PsychiatricCheckUp(con, coordinatorID_lb.Text))
             {
-                meeting.ShowDialog();
+                check.ShowDialog();
             }
         }
     }
