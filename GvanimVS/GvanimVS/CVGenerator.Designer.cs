@@ -46,7 +46,7 @@
             this.cv_list_dgv.AllowUserToResizeColumns = false;
             this.cv_list_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.cv_list_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cv_list_dgv.Location = new System.Drawing.Point(154, 106);
+            this.cv_list_dgv.Location = new System.Drawing.Point(919, 133);
             this.cv_list_dgv.Name = "cv_list_dgv";
             this.cv_list_dgv.ReadOnly = true;
             this.cv_list_dgv.Size = new System.Drawing.Size(253, 412);
@@ -55,7 +55,7 @@
             // 
             // export_bt
             // 
-            this.export_bt.Location = new System.Drawing.Point(1087, 532);
+            this.export_bt.Location = new System.Drawing.Point(730, 564);
             this.export_bt.Name = "export_bt";
             this.export_bt.Size = new System.Drawing.Size(92, 23);
             this.export_bt.TabIndex = 15;
@@ -65,7 +65,7 @@
             // 
             // browse_bt
             // 
-            this.browse_bt.Location = new System.Drawing.Point(320, 532);
+            this.browse_bt.Location = new System.Drawing.Point(1085, 564);
             this.browse_bt.Name = "browse_bt";
             this.browse_bt.Size = new System.Drawing.Size(87, 23);
             this.browse_bt.TabIndex = 13;
@@ -75,7 +75,7 @@
             // 
             // close_bt
             // 
-            this.close_bt.Location = new System.Drawing.Point(22, 589);
+            this.close_bt.Location = new System.Drawing.Point(33, 564);
             this.close_bt.Name = "close_bt";
             this.close_bt.Size = new System.Drawing.Size(75, 23);
             this.close_bt.TabIndex = 11;
@@ -87,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(513, 64);
+            this.label1.Location = new System.Drawing.Point(922, 85);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(253, 16);
@@ -136,7 +136,7 @@
             // officeViewer1
             // 
             this.officeViewer1.IsToolBarVisible = true;
-            this.officeViewer1.Location = new System.Drawing.Point(463, 105);
+            this.officeViewer1.Location = new System.Drawing.Point(106, 133);
             this.officeViewer1.Name = "officeViewer1";
             this.officeViewer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.officeViewer1.Size = new System.Drawing.Size(716, 412);

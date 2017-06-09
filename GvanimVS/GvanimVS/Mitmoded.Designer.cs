@@ -265,6 +265,7 @@
             // 
             this.cat_report_tab.Controls.Add(this.show_reports_bt);
             this.cat_report_tab.Controls.Add(this.add_report_bt);
+            this.cat_report_tab.Controls.Add(this.button1);
             this.cat_report_tab.Location = new System.Drawing.Point(4, 22);
             this.cat_report_tab.Name = "cat_report_tab";
             this.cat_report_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -275,7 +276,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(208, 20);
+            this.button1.Location = new System.Drawing.Point(229, 20);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 23);
             this.button1.TabIndex = 10;
@@ -332,7 +333,7 @@
             this.addPsychiatricCheckUp_btn.Name = "addPsychiatricCheckUp_btn";
             this.addPsychiatricCheckUp_btn.Size = new System.Drawing.Size(165, 23);
             this.addPsychiatricCheckUp_btn.TabIndex = 9;
-            this.addPsychiatricCheckUp_btn.Text = "הצג חוות דעת צד ג\'";
+            this.addPsychiatricCheckUp_btn.Text = "צירוף מסמכים";
             this.addPsychiatricCheckUp_btn.UseVisualStyleBackColor = true;
             this.addPsychiatricCheckUp_btn.Click += new System.EventHandler(this.addPsychiatricCheckUp_btn_Click_1);
             // 
@@ -387,7 +388,6 @@
             this.Controls.Add(this.ID_lb);
             this.Controls.Add(this.name_dynamic_lb);
             this.Controls.Add(this.name_lb);
-            this.Controls.Add(this.button1);
             this.Name = "Mitmoded";
             this.Text = "Mitmoded";
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();

@@ -15,8 +15,6 @@ namespace GvanimVS
 {
     public partial class CVGenerator : DBform
     {
-        byte[] CV1 = global::GvanimVS.Properties.Resources.cv1;
-        byte[] CV2 = global::GvanimVS.Properties.Resources.cv2;
         byte[] currentBytes;
         string currentName;
 
@@ -31,6 +29,11 @@ namespace GvanimVS
             LoadFiles();
         }
 
+        /// <summary>
+        /// Init name and ID labels of user
+        /// </summary>
+        /// Init according to datatable from server.
+        /// <param name="dt"></param>
         private void initFieldsFromDT(DataTable dt)
         {
             name_dynamic_lb.Text = dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["lastName"].ToString();
@@ -54,7 +57,6 @@ namespace GvanimVS
                 return;
             }
             //open document, get its original location
-            //string fileLoc = BrowseDoc();
             string fileLoc = BrowseFile();
 
             //get file byte[] and name to store in server
@@ -100,26 +102,6 @@ namespace GvanimVS
             }
             return null;
 
-        }
-
-        /// <summary>
-        /// Convert file bytes to PDF
-        /// </summary>
-        /// called when file is NOT standard PDF format: DOC, DOCX etc
-        /// <param name="fileBytes">Byte[], byte representation of the file</param>
-        /// <returns>PDF stream of file</returns>
-        private MemoryStream convertToPDF(byte[] fileBytes)
-        {
-            Document document = new Document();
-            //byte[] fileBytes = Tools.GetBytes(fileName);
-            using (Stream fileToStream = new MemoryStream(fileBytes))
-            {
-                document.LoadFromStream(fileToStream, FileFormat.Auto);
-            }
-            MemoryStream streamToFile = new MemoryStream();
-            document.SaveToStream(streamToFile, FileFormat.PDF);
-            return streamToFile;
-                        
         }
 
         /// <summary>

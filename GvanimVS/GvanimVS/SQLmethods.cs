@@ -17,6 +17,7 @@ namespace GvanimVS
         public static string RECORDS = "EmploymentRecordTB";
         public static string CV = "CVTemplatesTB";
         public static string PSY = "PsychiatricCheckUp";
+        public static string EXTRA = "ExtraFilesTB";
 
         /// <summary>
         /// Insert or update new mitmoded data
@@ -194,6 +195,7 @@ namespace GvanimVS
             #endregion
             return true;
         }
+        
         /// <summary>
         /// insert new CV to system
         /// </summary>
@@ -234,7 +236,51 @@ namespace GvanimVS
             #endregion
             return true;
         }
-        
+
+        /// <summary>
+        /// insert new file to system
+        /// </summary>
+        /// files can be doc, docx, PDF...
+        /// Automatic add today's date
+        /// <param name="data">file bytes</param>
+        /// <param name="fileName">file name</param>
+        /// <param name="cmd"></param>
+        /// <returns>True if succeeds, false if fails</returns>
+        public static bool InsertExtraFile(string MitmodedId, string fileName, string owner, byte[] data, SqlCommand cmd)
+        {
+            #region sqlQuery
+            cmd.CommandText =
+           "insert into " + EXTRA + "(MitmodedID, FileName, FileData, Owner, CreatedDate ) values (@pMitmodedID, @pFileName, @pData, @pOwner, GETDATE())";
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pMitmodedID", MitmodedId);
+            cmd.Parameters.AddWithValue("@pFileName", fileName);
+            cmd.Parameters.AddWithValue("@pOwner", owner);
+            cmd.Parameters.Add("@pData", SqlDbType.Binary).Value = data;
+            #endregion
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return false;
+            }
+            #endregion
+            return true;
+        }
+
+
         //in the future, perhaps add paramter: table name to look for various data
 
         /// <summary>
