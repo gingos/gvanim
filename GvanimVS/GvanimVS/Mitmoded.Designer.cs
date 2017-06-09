@@ -57,6 +57,7 @@
             this.score_lb = new System.Windows.Forms.Label();
             this.score_dynamic_lb = new System.Windows.Forms.Label();
             this.keyword_bt = new System.Windows.Forms.Button();
+            this.unusual_event_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.form_categories_tc.SuspendLayout();
             this.cat_personal_tab.SuspendLayout();
@@ -263,6 +264,7 @@
             // 
             // cat_report_tab
             // 
+            this.cat_report_tab.Controls.Add(this.unusual_event_bt);
             this.cat_report_tab.Controls.Add(this.show_reports_bt);
             this.cat_report_tab.Controls.Add(this.add_report_bt);
             this.cat_report_tab.Controls.Add(this.button1);
@@ -370,6 +372,16 @@
             this.keyword_bt.Text = "סריקה עבור מילות מפתח";
             this.keyword_bt.UseVisualStyleBackColor = false;
             // 
+            // unusual_event_bt
+            // 
+            this.unusual_event_bt.Location = new System.Drawing.Point(208, 49);
+            this.unusual_event_bt.Name = "unusual_event_bt";
+            this.unusual_event_bt.Size = new System.Drawing.Size(133, 23);
+            this.unusual_event_bt.TabIndex = 11;
+            this.unusual_event_bt.Text = "הוסף אירוע חריג";
+            this.unusual_event_bt.UseVisualStyleBackColor = true;
+            this.unusual_event_bt.Click += new System.EventHandler(this.unusual_event_bt_Click);
+            // 
             // Mitmoded
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,5 +443,6 @@
         private System.Windows.Forms.Label score_dynamic_lb;
         private System.Windows.Forms.Button keyword_bt;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button unusual_event_bt;
     }
 }
