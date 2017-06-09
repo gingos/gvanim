@@ -190,6 +190,16 @@ namespace GvanimVS
                 score_dynamic_lb.ForeColor = Color.Orange;
             }
         }
+
+        private void unusual_event_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (Unusual_event ue = new Unusual_event(con, ID_dynamic_lb.Text))
+            {
+                ue.ShowDialog();
+            }
+            this.Show();
+        }
     }
  }
 

@@ -244,6 +244,12 @@
     </Compile>
     <Compile Include="SQLmethods.cs" />
     <Compile Include="Tools.cs" />
+    <Compile Include="Unusual_event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unusual_event.Designer.cs">
+      <DependentUpon>Unusual_event.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Alerts.resx">
       <DependentUpon>Alerts.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MeetingShow.resx">
       <DependentUpon>MeetingShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unusual_event.resx">
+      <DependentUpon>Unusual_event.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
