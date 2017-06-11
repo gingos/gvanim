@@ -83,6 +83,7 @@ namespace GvanimVS
 
         private void saveUnusualEvent()
         {
+            string checkedSubjects = WhatIsChecked();
             SqlDataAdapter da = new SqlDataAdapter();
             DataTable dt = new DataTable();
             dt = SQLmethods.getCoordinatorId(this.mitmodedID, da, cmd);
@@ -90,7 +91,7 @@ namespace GvanimVS
             try
             {
                 SQLmethods.upsertUE(coordinatorId, this.mitmodedID, dateConverter(dateTimePicker1.Value), textBox6.Text, textBox2.Text, textBox3.Text, checkBoxConverter(checkBox3),
-                                textBox4.Text, dgvToXml(dataGridView1), textBox5.Text, cmd);
+                                textBox4.Text, dgvToXml(dataGridView1), textBox5.Text, checkedSubjects, cmd);
             }
             catch (SqlException ex)
             {
@@ -130,6 +131,33 @@ namespace GvanimVS
             }
             string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_tab);
             return serializedOrganizer;
+        }
+
+        private string WhatIsChecked()
+        {
+            string res = null;
+            // Display in a message box all the items that are checked.
+
+            // First show the index and check state of all selected items.
+            foreach (int indexChecked in checkedListBox1.CheckedIndices)
+            {
+                // The indexChecked variable contains the index of the item.
+                MessageBox.Show("Index#: " + indexChecked.ToString() + ", is checked. Checked state is:" +
+                                checkedListBox1.GetItemCheckState(indexChecked).ToString() + ".");
+            }
+
+            // Next show the object title and check state for each item selected.
+            foreach (object itemChecked in checkedListBox1.CheckedItems)
+            {
+
+                // Use the IndexOf method to get the index of an item.
+                MessageBox.Show("Item with title: \"" + itemChecked.ToString() +
+                                "\", is checked. Checked state is: " +
+                                checkedListBox1.GetItemCheckState(checkedListBox1.Items.IndexOf(itemChecked)).ToString() + ".");
+                res += itemChecked.ToString() + " ";
+            }
+            return res;
+
         }
     }
 }

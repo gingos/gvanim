@@ -797,11 +797,11 @@ namespace GvanimVS
 
         public static bool upsertUE(string mitmodedID, string coordinatorID, string date, string place, string address,
                                     string hospital, int hospitaliztion, string discription, string XMLinfo, string preSigns,
-                                    SqlCommand cmd)
+                                    string checkedSubjects, SqlCommand cmd)
         {
             #region sqlQuery
-            cmd.CommandText = "insert into " + EVENT + "(CoordinatorID, MitmodedID, Date, Place, Address, Hospital, Hospitalization, Discription, Whitness, Pre-sings)"
-                + " values (@pCoordinatorId, @pMitmodedId, @pDate, @pPlace, @pAddress, @pHospital, @pHospitalization, @pDiscription, @pWhitness, @pPreSigns)";
+            cmd.CommandText = "insert into " + EVENT + "(CoordinatorID, MitmodedID, Date, Place, Address, Hospital, Hospitalization, Discription, Whitness, PreSigns, CheckedSubjects)"
+                + " values (@pCoordinatorId, @pMitmodedId, @pDate, @pPlace, @pAddress, @pHospital, @pHospitalization, @pDiscription, @pWhitness, @pPreSigns, @pCheckedSubjects)";
             #endregion
             #region addParameters
             cmd.Parameters.Clear();
@@ -815,6 +815,7 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pDiscription", discription);
             cmd.Parameters.Add("@pWhitness", SqlDbType.Xml, XMLinfo.Length).Value = XMLinfo;
             cmd.Parameters.AddWithValue("@pPreSigns", preSigns);
+            cmd.Parameters.Add("@pCheckedSubjects", checkedSubjects);
 
             #endregion
             #region execute
