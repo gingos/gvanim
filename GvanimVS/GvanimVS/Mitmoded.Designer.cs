@@ -48,6 +48,7 @@
             this.confidentiality_bt = new System.Windows.Forms.Button();
             this.open_hitkashrut_bt = new System.Windows.Forms.Button();
             this.cat_report_tab = new System.Windows.Forms.TabPage();
+            this.unusual_event_search_bt = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cat_meeting_tab = new System.Windows.Forms.TabPage();
             this.show_meetings_bt = new System.Windows.Forms.Button();
@@ -57,7 +58,7 @@
             this.score_lb = new System.Windows.Forms.Label();
             this.score_dynamic_lb = new System.Windows.Forms.Label();
             this.keyword_bt = new System.Windows.Forms.Button();
-            this.unusual_event_bt = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.form_categories_tc.SuspendLayout();
             this.cat_personal_tab.SuspendLayout();
@@ -264,7 +265,8 @@
             // 
             // cat_report_tab
             // 
-            this.cat_report_tab.Controls.Add(this.unusual_event_bt);
+            this.cat_report_tab.Controls.Add(this.button2);
+            this.cat_report_tab.Controls.Add(this.unusual_event_search_bt);
             this.cat_report_tab.Controls.Add(this.show_reports_bt);
             this.cat_report_tab.Controls.Add(this.add_report_bt);
             this.cat_report_tab.Controls.Add(this.button1);
@@ -275,6 +277,16 @@
             this.cat_report_tab.TabIndex = 1;
             this.cat_report_tab.Text = "דו\"חות והתראות";
             this.cat_report_tab.UseVisualStyleBackColor = true;
+            // 
+            // unusual_event_search_bt
+            // 
+            this.unusual_event_search_bt.Location = new System.Drawing.Point(229, 78);
+            this.unusual_event_search_bt.Name = "unusual_event_search_bt";
+            this.unusual_event_search_bt.Size = new System.Drawing.Size(133, 23);
+            this.unusual_event_search_bt.TabIndex = 11;
+            this.unusual_event_search_bt.Text = "חפש אירוע חריג";
+            this.unusual_event_search_bt.UseVisualStyleBackColor = true;
+            this.unusual_event_search_bt.Click += new System.EventHandler(this.unusual_event_bt_Click);
             // 
             // button1
             // 
@@ -372,15 +384,15 @@
             this.keyword_bt.Text = "סריקה עבור מילות מפתח";
             this.keyword_bt.UseVisualStyleBackColor = false;
             // 
-            // unusual_event_bt
+            // button2
             // 
-            this.unusual_event_bt.Location = new System.Drawing.Point(208, 49);
-            this.unusual_event_bt.Name = "unusual_event_bt";
-            this.unusual_event_bt.Size = new System.Drawing.Size(133, 23);
-            this.unusual_event_bt.TabIndex = 11;
-            this.unusual_event_bt.Text = "הוסף אירוע חריג";
-            this.unusual_event_bt.UseVisualStyleBackColor = true;
-            this.unusual_event_bt.Click += new System.EventHandler(this.unusual_event_bt_Click);
+            this.button2.Location = new System.Drawing.Point(229, 49);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "הוסף אירוע חריג";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.unusual_event_bt_Click);
             // 
             // Mitmoded
             // 
@@ -443,6 +455,7 @@
         private System.Windows.Forms.Label score_dynamic_lb;
         private System.Windows.Forms.Button keyword_bt;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button unusual_event_bt;
+        private System.Windows.Forms.Button unusual_event_search_bt;
+        private System.Windows.Forms.Button button2;
     }
 }

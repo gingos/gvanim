@@ -15,7 +15,9 @@ namespace GvanimVS
     {
         private SqlConnection con;
         private string mitmodedID;
-
+        DataTable dt = new DataTable();
+        SqlDataAdapter da = new SqlDataAdapter();
+         
         public Unusual_event()
         {
             InitializeComponent();
@@ -26,20 +28,6 @@ namespace GvanimVS
             this.con = con;
             this.mitmodedID = text;
             InitializeComponent();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            label6.Show();
-            textBox3.Show();
-            label7.Show();
-            radioButton2.Show();
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            label8.Show();
-            radioButton3.Show();
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -54,27 +42,94 @@ namespace GvanimVS
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            tableLayoutPanel1.Show();
+           
+        }
 
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tableLayoutPanel1.Controls.Add(new Label() { Text = "שם" }, 1, 0);
-            tableLayoutPanel1.Controls.Add(new Label() { Text = "טלפון" }, 2, 0);
-            tableLayoutPanel1.Controls.Add(new Label() { Text = "פרטים נוספים" }, 3, 0);
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            label6.Show();
+            textBox3.Show();
+            label7.Show();
+            checkBox2.Show();
+        }
 
-            // For Add New Row (Loop this code for add multiple rows)
-            for (int i=0; i < numericUpDown1.Value; i++)
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            label8.Show();
+            checkBox3.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.ColumnCount = 3;
+            dataGridView1.RowCount = Convert.ToInt32(textBox1.Text);
+            dataGridView1.Columns[0].FillWeight = 20;
+            dataGridView1.Columns[1].FillWeight = 20;
+            dataGridView1.Columns[2].FillWeight = 60;
+
+            dataGridView1.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            saveUnusualEvent();
+            this.Close();
+        }
+
+        private void saveUnusualEvent()
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            dt = SQLmethods.getCoordinatorId(this.mitmodedID, da, cmd);
+            string coordinatorId = dt.Rows[0]["coordinatorId"].ToString();
+            try
             {
-                tableLayoutPanel1.RowCount = tableLayoutPanel1.RowCount + 1;
-                tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-                tableLayoutPanel1.Controls.Add(new Label() { Text = "Street, City, State" }, 1, tableLayoutPanel1.RowCount - 1);
-                tableLayoutPanel1.Controls.Add(new Label() { Text = "888888888888" }, 2, tableLayoutPanel1.RowCount - 1);
-                tableLayoutPanel1.Controls.Add(new Label() { Text = "xxxxxxx@gmail.com" }, 3, tableLayoutPanel1.RowCount - 1);
-            }     
+                SQLmethods.upsertUE(coordinatorId, this.mitmodedID, dateConverter(dateTimePicker1.Value), textBox6.Text, textBox2.Text, textBox3.Text, checkBoxConverter(checkBox3),
+                                textBox4.Text, dgvToXml(dataGridView1), textBox5.Text, cmd);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+            }
+        }
+
+        private static string dateConverter(DateTime date)
+        {
+            return date.Date.ToString("yyyy-MM-dd");
+        }
+
+        private static int checkBoxConverter(CheckBox checkbox)
+        {
+            if (checkbox.Checked)
+            {
+                return 1;
+            }
+            return 0;
+        }
+
+        private string dgvToXml(DataGridView dgv)
+        {
+
+            SerializableDictionary<string, string> xml_tab = new SerializableDictionary<string, string>();
+            if (dgv is DataGridView)
+            {
+                DataTable dt = Tools.GetContentAsDataTable((DataGridView)dgv, true);
+                string dtToXml = Tools.SerializeXML<DataTable>(dt);
+                xml_tab.Add(dgv.Name, dtToXml);
+            }
+            string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, string>>(xml_tab);
+            return serializedOrganizer;
         }
     }
 }

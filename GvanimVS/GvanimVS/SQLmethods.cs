@@ -18,6 +18,7 @@ namespace GvanimVS
         public static string CV = "CVTemplatesTB";
         public static string PSY = "PsychiatricCheckUp";
         public static string EXTRA = "ExtraFilesTB";
+        public static string EVENT = "UnusualEventTB";
 
         /// <summary>
         /// Insert or update new mitmoded data
@@ -792,6 +793,75 @@ namespace GvanimVS
             }
             #endregion
             return true;
+        }
+
+        public static bool upsertUE(string mitmodedID, string coordinatorID, string date, string place, string address,
+                                    string hospital, int hospitaliztion, string discription, string XMLinfo, string preSigns,
+                                    SqlCommand cmd)
+        {
+            #region sqlQuery
+            cmd.CommandText = "insert into " + EVENT + "(CoordinatorID, MitmodedID, Date, Place, Address, Hospital, Hospitalization, Discription, Whitness, Pre-sings)"
+                + " values (@pCoordinatorId, @pMitmodedId, @pDate, @pPlace, @pAddress, @pHospital, @pHospitalization, @pDiscription, @pWhitness, @pPreSigns)";
+            #endregion
+            #region addParameters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
+            cmd.Parameters.AddWithValue("@pMitmodedId", mitmodedID);
+            cmd.Parameters.AddWithValue("@pDate", date);
+            cmd.Parameters.AddWithValue("@pPlace", place);
+            cmd.Parameters.AddWithValue("@pAddress", address);
+            cmd.Parameters.AddWithValue("@pHospital", hospital);
+            cmd.Parameters.AddWithValue("@pHospitalization", hospitaliztion);
+            cmd.Parameters.AddWithValue("@pDiscription", discription);
+            cmd.Parameters.Add("@pWhitness", SqlDbType.Xml, XMLinfo.Length).Value = XMLinfo;
+            cmd.Parameters.AddWithValue("@pPreSigns", preSigns);
+
+            #endregion
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("אירעה שגיאה, אנא נסו שנית");
+                return false;
+            }
+            #endregion
+            return true;
+        }
+
+        public static DataTable getCoordinatorId(string mitmoded, SqlDataAdapter da, SqlCommand cmd)
+        {
+            DataTable dt = new DataTable();
+            #region sqlQuery
+            cmd.CommandText = "SELECT CoordinatorId From " + MITMODED + " WHERE " + mitmoded + " = ID";
+            #endregion
+            #region execute
+            da.SelectCommand = cmd;
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
+            #endregion
+            return dt;
         }
     }
 }
