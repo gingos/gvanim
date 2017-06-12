@@ -63,7 +63,7 @@ namespace GvanimVS
         }
         private void editMeeting_bt_Click(object sender, EventArgs e)
         {
-            FindMeeting fm = new FindMeeting(con, coordinatorID);
+            MeetingFind fm = new MeetingFind(con, coordinatorID);
             fm.Activate();
         }
 

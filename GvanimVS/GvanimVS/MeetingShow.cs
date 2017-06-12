@@ -77,7 +77,7 @@ namespace GvanimVS
 
         private void detailed_search_Click(object sender, EventArgs e)
         {            
-            FindMeeting find = new FindMeeting(con, coordinatorID_lb.Text);
+            MeetingFind find = new MeetingFind(con, coordinatorID_lb.Text);
             find.ShowDialog();
             DataTable dt = find.getDetails();
             if (dt != null)
