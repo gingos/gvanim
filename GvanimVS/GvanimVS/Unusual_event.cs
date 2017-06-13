@@ -13,9 +13,8 @@ namespace GvanimVS
 {
     public partial class Unusual_event : DBform
     {
-        private SqlConnection con;
         private string mitmodedID;
-        DataTable dt = new DataTable();
+        DataTable dt;
          
         public Unusual_event()
         {
@@ -24,9 +23,9 @@ namespace GvanimVS
 
         public Unusual_event(SqlConnection con, string text):base(con)
         {
-            this.con = con;
-            this.mitmodedID = text;
             InitializeComponent();
+            this.mitmodedID = text;
+            dt = new DataTable();
         }
 
         private void label10_Click(object sender, EventArgs e)
