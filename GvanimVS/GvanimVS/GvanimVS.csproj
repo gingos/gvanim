@@ -151,11 +151,11 @@
     <Compile Include="EmplyomentRecord.Designer.cs">
       <DependentUpon>EmplyomentRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindMeeting.cs">
+    <Compile Include="MeetingFind.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindMeeting.Designer.cs">
-      <DependentUpon>FindMeeting.cs</DependentUpon>
+    <Compile Include="MeetingFind.Designer.cs">
+      <DependentUpon>MeetingFind.cs</DependentUpon>
     </Compile>
     <Compile Include="FindReport.cs">
       <SubType>Form</SubType>
@@ -284,8 +284,8 @@
     <EmbeddedResource Include="EmplyomentRecord.resx">
       <DependentUpon>EmplyomentRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindMeeting.resx">
-      <DependentUpon>FindMeeting.cs</DependentUpon>
+    <EmbeddedResource Include="MeetingFind.resx">
+      <DependentUpon>MeetingFind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindReport.resx">
       <DependentUpon>FindReport.cs</DependentUpon>

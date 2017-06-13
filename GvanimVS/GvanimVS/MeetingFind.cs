@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace GvanimVS
 {
-    public partial class FindMeeting : DBform
+    public partial class MeetingFind : DBform
     {
         private DataTable dt;
         private string coordinatorID;
-        public FindMeeting(SqlConnection con, string coordinatorID) :base(con)
+        public MeetingFind(SqlConnection con, string coordinatorID) :base(con)
         {
             InitializeComponent();
             dt = new DataTable();
