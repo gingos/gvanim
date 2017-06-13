@@ -44,6 +44,7 @@
             this.identity_exception_lb = new System.Windows.Forms.Label();
             this.job_lb = new System.Windows.Forms.Label();
             this.job_cb = new System.Windows.Forms.ComboBox();
+            this.job_exception_lb = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // private_name_lb
@@ -128,7 +129,7 @@
             // 
             // close_bt
             // 
-            this.close_bt.Location = new System.Drawing.Point(46, 291);
+            this.close_bt.Location = new System.Drawing.Point(46, 310);
             this.close_bt.Name = "close_bt";
             this.close_bt.Size = new System.Drawing.Size(75, 23);
             this.close_bt.TabIndex = 2;
@@ -138,7 +139,7 @@
             // 
             // save_bt
             // 
-            this.save_bt.Location = new System.Drawing.Point(156, 290);
+            this.save_bt.Location = new System.Drawing.Point(156, 309);
             this.save_bt.Name = "save_bt";
             this.save_bt.Size = new System.Drawing.Size(75, 23);
             this.save_bt.TabIndex = 3;
@@ -188,11 +189,23 @@
             this.job_cb.Size = new System.Drawing.Size(121, 21);
             this.job_cb.TabIndex = 5;
             // 
+            // job_exception_lb
+            // 
+            this.job_exception_lb.AutoSize = true;
+            this.job_exception_lb.ForeColor = System.Drawing.Color.Red;
+            this.job_exception_lb.Location = new System.Drawing.Point(153, 269);
+            this.job_exception_lb.Name = "job_exception_lb";
+            this.job_exception_lb.Size = new System.Drawing.Size(91, 13);
+            this.job_exception_lb.TabIndex = 6;
+            this.job_exception_lb.Text = "נא לבחור תפקיד";
+            this.job_exception_lb.Visible = false;
+            // 
             // CreateCoordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 363);
+            this.Controls.Add(this.job_exception_lb);
             this.Controls.Add(this.job_cb);
             this.Controls.Add(this.identity_exception_lb);
             this.Controls.Add(this.email_exception_lb);
@@ -234,5 +247,6 @@
         private System.Windows.Forms.Label identity_exception_lb;
         private System.Windows.Forms.Label job_lb;
         private System.Windows.Forms.ComboBox job_cb;
+        private System.Windows.Forms.Label job_exception_lb;
     }
 }

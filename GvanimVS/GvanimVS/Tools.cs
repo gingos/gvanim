@@ -60,6 +60,12 @@ namespace GvanimVS
             return Regex.IsMatch(input, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
         }
 
+        public static bool verifyID(string input)
+        {
+            Regex reg = new Regex(@"\b[0-9]{9}\b");
+            return reg.IsMatch(input);
+        }
+
         public static string getID(string input)
         {
             //return Regex.Match(input, @"\d+").Value;

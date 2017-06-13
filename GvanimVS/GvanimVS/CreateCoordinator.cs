@@ -35,28 +35,28 @@ namespace GvanimVS
 
         private void save_bt_Click(object sender, EventArgs e)
         {
-            bool locker;
             string job;
-            if (job_cb.SelectedItem.ToString().Equals("מנהלת"))
-            {
-                job = "region manager";
-            }
-            else
-            {
-                job = "coordinator";
-            }
 
-            locker = verifydata();
-            if (locker == false)
+            
+            
+            if (!verifydata())
             {
-                MessageBox.Show("please fix input");
+                MessageBox.Show("קלט לא תקין, נא בדקו את אותו ונסו שוב");
             }
             else
             {
-                bool end = SQLmethods.upsertUser(firstName_tb.Text, lastName_tb.Text, email_tb.Text, identity_tb.Text, password_tb.Text, job, cmd);
-                if (end == false)
+                if (job_cb.SelectedItem.ToString().Equals("מנהלת"))
                 {
-                    MessageBox.Show("אירעה שגיאה במהלך הזנת הנתונים, אנא נסי שוב");
+                    job = "region manager";
+                }
+                else
+                {
+                    job = "coordinator";
+                }
+
+                if (!SQLmethods.upsertUser(firstName_tb.Text, lastName_tb.Text, email_tb.Text, identity_tb.Text, password_tb.Text, job, cmd))
+                {
+                    MessageBox.Show("אירעה שגיאה במהלך הזנת הנתונים, אנא נסו שוב");
                 }
                 else
                 {
@@ -69,40 +69,33 @@ namespace GvanimVS
         private bool verifydata()
         {
             bool validation = true;
-            validation = verifyEmail(email_tb.Text);
-            if (validation == false)
+            if (!Tools.IsValidEmail(email_tb.Text))
             {
                 email_exception_lb.Show();
+                validation = false;
             }
+            else
+                email_exception_lb.Hide();
 
-            validation = verifyID(identity_tb.Text);
-            if (validation == false)
+            if (!Tools.verifyID(identity_tb.Text))
             {
                 identity_exception_lb.Show();
+                validation = false;
             }
+            else
+                identity_exception_lb.Hide();
+
+            if (job_cb.SelectedItem == null)
+            {
+                job_exception_lb.Show();
+                validation = false;
+            }
+            else
+                job_exception_lb.Hide();
 
             return validation;
 
         }
 
-        private bool verifyID(string identity)
-        {
-            Regex reg = new Regex(@"\b[0-9]{9}\b");
-            if (!reg.IsMatch(identity))
-            {
-                return false;
-            }
-            return true;
-        }
-
-        private bool verifyEmail(string email)
-        {
-            Regex reg = new Regex(@"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z.-]{2,5}\b");
-            if (!reg.IsMatch(email))
-            {
-                return false;
-            }
-            return true;
-        }
     }
 }
