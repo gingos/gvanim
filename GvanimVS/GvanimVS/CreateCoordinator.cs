@@ -15,7 +15,6 @@ namespace GvanimVS
 {
     public partial class CreateCoordinator : DBform
     {
-        private SqlConnection con;
         private string managerID;
 
         public CreateCoordinator()
@@ -23,9 +22,9 @@ namespace GvanimVS
             InitializeComponent();
         }
 
-        public CreateCoordinator(SqlConnection con, string managerID)
+        public CreateCoordinator(SqlConnection con, string managerID):base(con)
         {
-            this.con = con;
+            InitializeComponent();
             this.managerID = managerID;
         }
 
