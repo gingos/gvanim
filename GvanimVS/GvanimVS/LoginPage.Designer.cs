@@ -105,6 +105,7 @@
             this.signup_bt.TabIndex = 6;
             this.signup_bt.Text = "הרשמה למשתמשים חדשים";
             this.signup_bt.UseVisualStyleBackColor = true;
+            this.signup_bt.Click += new System.EventHandler(this.signup_bt_Click);
             // 
             // exit_bt
             // 

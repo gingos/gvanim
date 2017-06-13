@@ -206,7 +206,7 @@ namespace GvanimVS
             this.Show();
         }
 
-        private void inisial_event_search_bt_Click(object sender, EventArgs e)
+        private void unusual_event_serch_bt_click(object sender, EventArgs e)
         {
             this.Hide();
             using (unusualEventSearch ues = new unusualEventSearch(con, ID_dynamic_lb.Text))

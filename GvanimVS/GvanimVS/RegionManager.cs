@@ -52,7 +52,27 @@ namespace GvanimVS
 
         private void addCoordinator_bt_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("activate coordinator card(?)");
+            this.Hide();
+            using (var newCoordinator = new CreateCoordinator(con, ID))
+            {
+                newCoordinator.ShowDialog();
+            }
+            this.Close();
+        }
+
+        private void showReports_bt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showMeetings_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var meetings = new MeetingShow(con, ID))
+            {
+                meetings.ShowDialog();
+            }
+            this.Close();
         }
     }
 }

@@ -795,7 +795,7 @@ namespace GvanimVS
             return true;
         }
 
-        public static bool upsertUE(string mitmodedID, string coordinatorID, string date, string place, string address,
+        public static bool upsertUE(string mitmodedID, string coordinatorID, DateTime date, string place, string address,
                                     string hospital, int hospitaliztion, string discription, string XMLinfo, string preSigns,
                                     string checkedSubjects, SqlCommand cmd)
         {
@@ -815,7 +815,7 @@ namespace GvanimVS
             cmd.Parameters.AddWithValue("@pDiscription", discription);
             cmd.Parameters.Add("@pWhitness", SqlDbType.Xml, XMLinfo.Length).Value = XMLinfo;
             cmd.Parameters.AddWithValue("@pPreSigns", preSigns);
-            cmd.Parameters.Add("@pCheckedSubjects", checkedSubjects);
+            cmd.Parameters.AddWithValue("@pCheckedSubjects", checkedSubjects);
 
             #endregion
             #region execute
@@ -863,6 +863,46 @@ namespace GvanimVS
             }
             #endregion
             return dt;
+        }
+
+        public static bool upsertUser(string firstName, string LastName, string email, string ID, string password, string role, SqlCommand cmd)
+        {
+            #region sqlQuery
+            cmd.CommandText =
+            "UPDATE " + SQLmethods.USERS
+            + " SET firstName = @pFirst, lastName = @pLast, ID = @pCoordinatorID, "
+            + "email = @pEmail, password = @pPassword, role = @pRole";
+            #endregion
+
+            #region addParameters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pCoordinatorID", ID);
+            cmd.Parameters.AddWithValue("@pFirst", firstName);
+            cmd.Parameters.AddWithValue("@pLast", LastName);
+            cmd.Parameters.AddWithValue("@pEmail", email);
+            cmd.Parameters.AddWithValue("@pPassword", password);
+            cmd.Parameters.AddWithValue("@pRole", role);
+            #endregion
+
+            #region execute
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("אירעה שגיאה, אנא נסו שנית");
+                return false;
+            }
+            #endregion
+            return true;
+
+
         }
     }
 }

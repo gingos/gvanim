@@ -37,7 +37,6 @@
             this.show_reports_bt = new System.Windows.Forms.Button();
             this.add_employment_bt = new System.Windows.Forms.Button();
             this.add_report_bt = new System.Windows.Forms.Button();
-            this.profile_pb = new System.Windows.Forms.PictureBox();
             this.close_bt = new System.Windows.Forms.Button();
             this.change_coordinator_bt = new System.Windows.Forms.Button();
             this.coordinator_name_lb = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.confidentiality_bt = new System.Windows.Forms.Button();
             this.open_hitkashrut_bt = new System.Windows.Forms.Button();
             this.cat_report_tab = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.unusual_event_search_bt = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cat_meeting_tab = new System.Windows.Forms.TabPage();
@@ -58,12 +58,12 @@
             this.score_lb = new System.Windows.Forms.Label();
             this.score_dynamic_lb = new System.Windows.Forms.Label();
             this.keyword_bt = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
+            this.profile_pb = new System.Windows.Forms.PictureBox();
             this.form_categories_tc.SuspendLayout();
             this.cat_personal_tab.SuspendLayout();
             this.cat_report_tab.SuspendLayout();
             this.cat_meeting_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).BeginInit();
             this.SuspendLayout();
             // 
             // name_lb
@@ -155,16 +155,6 @@
             this.add_report_bt.Text = "הוסף דוח";
             this.add_report_bt.UseVisualStyleBackColor = true;
             this.add_report_bt.Click += new System.EventHandler(this.add_report_bt_Click);
-            // 
-            // profile_pb
-            // 
-            this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
-            this.profile_pb.Location = new System.Drawing.Point(53, 68);
-            this.profile_pb.Name = "profile_pb";
-            this.profile_pb.Size = new System.Drawing.Size(172, 172);
-            this.profile_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.profile_pb.TabIndex = 5;
-            this.profile_pb.TabStop = false;
             // 
             // close_bt
             // 
@@ -278,6 +268,16 @@
             this.cat_report_tab.Text = "דו\"חות והתראות";
             this.cat_report_tab.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(229, 49);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "הוסף אירוע חריג";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.unusual_event_bt_Click);
+            // 
             // unusual_event_search_bt
             // 
             this.unusual_event_search_bt.Location = new System.Drawing.Point(229, 78);
@@ -286,7 +286,7 @@
             this.unusual_event_search_bt.TabIndex = 11;
             this.unusual_event_search_bt.Text = "חפש אירוע חריג";
             this.unusual_event_search_bt.UseVisualStyleBackColor = true;
-            this.unusual_event_search_bt.Click += new System.EventHandler(this.unusual_event_bt_Click);
+            this.unusual_event_search_bt.Click += new System.EventHandler(this.unusual_event_serch_bt_click);
             // 
             // button1
             // 
@@ -384,15 +384,15 @@
             this.keyword_bt.Text = "סריקה עבור מילות מפתח";
             this.keyword_bt.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // profile_pb
             // 
-            this.button2.Location = new System.Drawing.Point(229, 49);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "הוסף אירוע חריג";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.unusual_event_bt_Click);
+            this.profile_pb.Image = global::GvanimVS.Properties.Resources.anonymous_profile;
+            this.profile_pb.Location = new System.Drawing.Point(53, 68);
+            this.profile_pb.Name = "profile_pb";
+            this.profile_pb.Size = new System.Drawing.Size(172, 172);
+            this.profile_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.profile_pb.TabIndex = 5;
+            this.profile_pb.TabStop = false;
             // 
             // Mitmoded
             // 
@@ -414,11 +414,11 @@
             this.Controls.Add(this.name_lb);
             this.Name = "Mitmoded";
             this.Text = "Mitmoded";
-            ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
             this.form_categories_tc.ResumeLayout(false);
             this.cat_personal_tab.ResumeLayout(false);
             this.cat_report_tab.ResumeLayout(false);
             this.cat_meeting_tab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.profile_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

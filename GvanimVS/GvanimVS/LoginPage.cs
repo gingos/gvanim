@@ -255,5 +255,10 @@ namespace GvanimVS
 
             this.status_pb.Image = global::GvanimVS.Properties.Resources.green;
         }
+
+        private void signup_bt_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException("Not implemented yet");
+        }
     }
 }

@@ -109,6 +109,12 @@
     <Compile Include="Alerts.Designer.cs">
       <DependentUpon>Alerts.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCoordinator.Designer.cs">
+      <DependentUpon>CreateCoordinator.cs</DependentUpon>
+    </Compile>
     <Compile Include="MeetingAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </Compile>
     <EmbeddedResource Include="Alerts.resx">
       <DependentUpon>Alerts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateCoordinator.resx">
+      <DependentUpon>CreateCoordinator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MeetingAdd.resx">
       <DependentUpon>MeetingAdd.cs</DependentUpon>

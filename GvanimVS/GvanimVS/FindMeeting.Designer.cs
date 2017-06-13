@@ -131,7 +131,7 @@
             this.searchMeeting_bt.Name = "searchMeeting_bt";
             this.searchMeeting_bt.Size = new System.Drawing.Size(75, 23);
             this.searchMeeting_bt.TabIndex = 5;
-            this.searchMeeting_bt.Text = "חפש פגישה";
+            this.searchMeeting_bt.Text = "חפש אירוע";
             this.searchMeeting_bt.UseVisualStyleBackColor = true;
             this.searchMeeting_bt.Click += new System.EventHandler(this.searchMeeting_bt_Click);
             // 

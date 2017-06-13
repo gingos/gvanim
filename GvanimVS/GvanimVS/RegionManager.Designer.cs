@@ -28,52 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.addMitmoded_bt = new System.Windows.Forms.Button();
-            this.addCoordinator_bt = new System.Windows.Forms.Button();
-            this.showReports_bt = new System.Windows.Forms.Button();
-            this.showMeetings_bt = new System.Windows.Forms.Button();
-            this.ok_bt = new System.Windows.Forms.Button();
-            this.cancel_bt = new System.Windows.Forms.Button();
             this.info_bt = new System.Windows.Forms.Button();
+            this.cancel_bt = new System.Windows.Forms.Button();
+            this.ok_bt = new System.Windows.Forms.Button();
+            this.showMeetings_bt = new System.Windows.Forms.Button();
+            this.showReports_bt = new System.Windows.Forms.Button();
+            this.addCoordinator_bt = new System.Windows.Forms.Button();
+            this.addMitmoded_bt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // addMitmoded_bt
+            // info_bt
             // 
-            this.addMitmoded_bt.Location = new System.Drawing.Point(495, 82);
-            this.addMitmoded_bt.Name = "addMitmoded_bt";
-            this.addMitmoded_bt.Size = new System.Drawing.Size(113, 23);
-            this.addMitmoded_bt.TabIndex = 0;
-            this.addMitmoded_bt.Text = "הוסף מתמודד";
-            this.addMitmoded_bt.UseVisualStyleBackColor = true;
-            this.addMitmoded_bt.Click += new System.EventHandler(this.addMitmoded_bt_Click);
+            this.info_bt.Location = new System.Drawing.Point(52, 25);
+            this.info_bt.Name = "info_bt";
+            this.info_bt.Size = new System.Drawing.Size(75, 23);
+            this.info_bt.TabIndex = 6;
+            this.info_bt.Text = "הצג פרטים";
+            this.info_bt.UseVisualStyleBackColor = true;
+            this.info_bt.Click += new System.EventHandler(this.info_bt_Click);
             // 
-            // addCoordinator_bt
+            // cancel_bt
             // 
-            this.addCoordinator_bt.Location = new System.Drawing.Point(495, 128);
-            this.addCoordinator_bt.Name = "addCoordinator_bt";
-            this.addCoordinator_bt.Size = new System.Drawing.Size(112, 23);
-            this.addCoordinator_bt.TabIndex = 1;
-            this.addCoordinator_bt.Text = "הוסף רכז";
-            this.addCoordinator_bt.UseVisualStyleBackColor = true;
-            this.addCoordinator_bt.Click += new System.EventHandler(this.addCoordinator_bt_Click);
-            // 
-            // showReports_bt
-            // 
-            this.showReports_bt.Location = new System.Drawing.Point(495, 182);
-            this.showReports_bt.Name = "showReports_bt";
-            this.showReports_bt.Size = new System.Drawing.Size(112, 23);
-            this.showReports_bt.TabIndex = 2;
-            this.showReports_bt.Text = "הצג דו\"חות";
-            this.showReports_bt.UseVisualStyleBackColor = true;
-            // 
-            // showMeetings_bt
-            // 
-            this.showMeetings_bt.Location = new System.Drawing.Point(495, 238);
-            this.showMeetings_bt.Name = "showMeetings_bt";
-            this.showMeetings_bt.Size = new System.Drawing.Size(112, 23);
-            this.showMeetings_bt.TabIndex = 3;
-            this.showMeetings_bt.Text = "הצג פגישות";
-            this.showMeetings_bt.UseVisualStyleBackColor = true;
+            this.cancel_bt.Location = new System.Drawing.Point(140, 280);
+            this.cancel_bt.Name = "cancel_bt";
+            this.cancel_bt.Size = new System.Drawing.Size(75, 23);
+            this.cancel_bt.TabIndex = 5;
+            this.cancel_bt.Text = "ביטול";
+            this.cancel_bt.UseVisualStyleBackColor = true;
             // 
             // ok_bt
             // 
@@ -86,24 +67,45 @@
             this.ok_bt.UseVisualStyleBackColor = true;
             this.ok_bt.Click += new System.EventHandler(this.ok_bt_Click);
             // 
-            // cancel_bt
+            // showMeetings_bt
             // 
-            this.cancel_bt.Location = new System.Drawing.Point(140, 280);
-            this.cancel_bt.Name = "cancel_bt";
-            this.cancel_bt.Size = new System.Drawing.Size(75, 23);
-            this.cancel_bt.TabIndex = 5;
-            this.cancel_bt.Text = "ביטול";
-            this.cancel_bt.UseVisualStyleBackColor = true;
+            this.showMeetings_bt.Location = new System.Drawing.Point(495, 238);
+            this.showMeetings_bt.Name = "showMeetings_bt";
+            this.showMeetings_bt.Size = new System.Drawing.Size(112, 23);
+            this.showMeetings_bt.TabIndex = 3;
+            this.showMeetings_bt.Text = "הצג פגישות";
+            this.showMeetings_bt.UseVisualStyleBackColor = true;
+            this.showMeetings_bt.Click += new System.EventHandler(this.showMeetings_bt_Click);
             // 
-            // info_bt
+            // showReports_bt
             // 
-            this.info_bt.Location = new System.Drawing.Point(52, 25);
-            this.info_bt.Name = "info_bt";
-            this.info_bt.Size = new System.Drawing.Size(75, 23);
-            this.info_bt.TabIndex = 6;
-            this.info_bt.Text = "הצג פרטים";
-            this.info_bt.UseVisualStyleBackColor = true;
-            this.info_bt.Click += new System.EventHandler(this.info_bt_Click);
+            this.showReports_bt.Location = new System.Drawing.Point(495, 182);
+            this.showReports_bt.Name = "showReports_bt";
+            this.showReports_bt.Size = new System.Drawing.Size(112, 23);
+            this.showReports_bt.TabIndex = 2;
+            this.showReports_bt.Text = "הצג דו\"חות";
+            this.showReports_bt.UseVisualStyleBackColor = true;
+            this.showReports_bt.Click += new System.EventHandler(this.showReports_bt_Click);
+            // 
+            // addCoordinator_bt
+            // 
+            this.addCoordinator_bt.Location = new System.Drawing.Point(495, 128);
+            this.addCoordinator_bt.Name = "addCoordinator_bt";
+            this.addCoordinator_bt.Size = new System.Drawing.Size(112, 23);
+            this.addCoordinator_bt.TabIndex = 1;
+            this.addCoordinator_bt.Text = "הוסף רכז";
+            this.addCoordinator_bt.UseVisualStyleBackColor = true;
+            this.addCoordinator_bt.Click += new System.EventHandler(this.addCoordinator_bt_Click);
+            // 
+            // addMitmoded_bt
+            // 
+            this.addMitmoded_bt.Location = new System.Drawing.Point(495, 82);
+            this.addMitmoded_bt.Name = "addMitmoded_bt";
+            this.addMitmoded_bt.Size = new System.Drawing.Size(113, 23);
+            this.addMitmoded_bt.TabIndex = 0;
+            this.addMitmoded_bt.Text = "הוסף מתמודד";
+            this.addMitmoded_bt.UseVisualStyleBackColor = true;
+            this.addMitmoded_bt.Click += new System.EventHandler(this.addMitmoded_bt_Click);
             // 
             // RegionManager
             // 

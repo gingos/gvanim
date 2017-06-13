@@ -130,6 +130,7 @@
             this.editCoordinator_bt.TabIndex = 8;
             this.editCoordinator_bt.Text = "עדכן פרטי רכז";
             this.editCoordinator_bt.UseVisualStyleBackColor = true;
+            this.editCoordinator_bt.Click += new System.EventHandler(this.editCoordinator_bt_Click);
             // 
             // Coordinator
             // 

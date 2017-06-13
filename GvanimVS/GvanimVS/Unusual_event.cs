@@ -16,7 +16,6 @@ namespace GvanimVS
         private SqlConnection con;
         private string mitmodedID;
         DataTable dt = new DataTable();
-        SqlDataAdapter da = new SqlDataAdapter();
          
         public Unusual_event()
         {
@@ -90,7 +89,7 @@ namespace GvanimVS
             string coordinatorId = dt.Rows[0]["coordinatorId"].ToString();
             try
             {
-                SQLmethods.upsertUE(coordinatorId, this.mitmodedID, dateConverter(dateTimePicker1.Value), textBox6.Text, textBox2.Text, textBox3.Text, checkBoxConverter(checkBox3),
+                SQLmethods.upsertUE(coordinatorId, this.mitmodedID, dateTimePicker1.Value, textBox6.Text, textBox2.Text, textBox3.Text, checkBoxConverter(checkBox3),
                                 textBox4.Text, dgvToXml(dataGridView1), textBox5.Text, checkedSubjects, cmd);
             }
             catch (SqlException ex)

@@ -104,5 +104,10 @@ namespace GvanimVS
             }
             this.Close();
         }
+
+        private void editCoordinator_bt_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException("Not implemented yet");
+        }
     }
 }
