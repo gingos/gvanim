@@ -215,6 +215,16 @@ namespace GvanimVS
             }
             this.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (Alerts al = new Alerts(con, ID_dynamic_lb.Text))
+            {
+                al.ShowDialog();
+            }
+            this.Show();
+        }
     }
  }
 

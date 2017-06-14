@@ -109,6 +109,12 @@
     <Compile Include="Alerts.Designer.cs">
       <DependentUpon>Alerts.cs</DependentUpon>
     </Compile>
+    <Compile Include="CoordinatorCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoordinatorCard.Designer.cs">
+      <DependentUpon>CoordinatorCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateCoordinator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +272,9 @@
     <EmbeddedResource Include="Alerts.resx">
       <DependentUpon>Alerts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CoordinatorCard.resx">
+      <DependentUpon>CoordinatorCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateCoordinator.resx">
       <DependentUpon>CreateCoordinator.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +350,7 @@
     <EmbeddedResource Include="Unusual_event.resx">
       <DependentUpon>Unusual_event.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

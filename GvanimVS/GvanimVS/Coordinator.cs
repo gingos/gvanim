@@ -107,7 +107,12 @@ namespace GvanimVS
 
         private void editCoordinator_bt_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException("Not implemented yet");
+            this.Hide();
+            using (var cc = new CoordinatorCard(con, coordinatorID))
+            {
+                cc.ShowDialog();
+            }
+            this.Close();
         }
     }
 }

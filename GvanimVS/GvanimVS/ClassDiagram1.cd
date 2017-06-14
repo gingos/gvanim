@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GvanimVS.Alerts" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAAAACAAAAAAAACAAAACAAgAAAIAAAAAEAAIAAA=</HashCode>
+      <FileName>Alerts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.Confidentiality" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQSMUAUgACAIigABzADAYA+CgCgmEAIEgAAoABFIQgA=</HashCode>
+      <FileName>Confidentiality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.Coordinator" Collapsed="true">
+    <Position X="18.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGEAAA0ACCIADAAAASAAIADAAAAEQJgAAAEAAAgAAA=</HashCode>
+      <FileName>Coordinator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.CreateCoordinator" Collapsed="true">
+    <Position X="27.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCQEAABAAKAAAYBgAQCAAQICCAIgAAIgAEAACAEAAAI=</HashCode>
+      <FileName>CreateCoordinator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.CVGenerator" Collapsed="true">
+    <Position X="38.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEMAAIAACAAAJAAQACAAACiEAJAAAIggAAAAAAIBgA=</HashCode>
+      <FileName>CVGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.DBform" Collapsed="true">
+    <Position X="26.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAAQAAACAAQACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.EmplyomentRecord" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAEAAAiAAAAAAAASAAAACAAggAEIAAAAAAAAAAQA=</HashCode>
+      <FileName>EmplyomentRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.FindReport" Collapsed="true">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACQQACAgEJASgASAAYACAAgAAABABAAAAAIAAAA=</HashCode>
+      <FileName>FindReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.Hitkashrut" Collapsed="true">
+    <Position X="20.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQSMAIGgACABggADRADAAAsCgACiFAIAgAAoAABIAgA=</HashCode>
+      <FileName>Hitkashrut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.LoginPage" Collapsed="true">
+    <Position X="29.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIAABAKKACUMAAAACAAQACAAAQAAAAAAASAADIIBY=</HashCode>
+      <FileName>LoginPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.MeetingAdd" Collapsed="true">
+    <Position X="41" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICEIAiICASAACIAQAQGQCIACAAIACAhgEAAECQAAAAA=</HashCode>
+      <FileName>MeetingAdd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.MeetingFind" Collapsed="true">
+    <Position X="47.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASAAACABACAkAYAAAAiAAADCAQAAIABCGAQECAAAgAA=</HashCode>
+      <FileName>MeetingFind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.MeetingShow" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAASAIAIAAAACAAAACAAAgAAIAAEACAQACgAA=</HashCode>
+      <FileName>MeetingShow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.Mitmoded" Collapsed="true">
+    <Position X="14" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAwEBACACASQAQCCQEhgjARAYIxJIgEgEksgpDiw=</HashCode>
+      <FileName>Mitmoded.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.MitmodedCard" Collapsed="true">
+    <Position X="23" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>R2TNduGhsDkaiv4P1enOvSuDkF9ybil+2L1+/g9IZ2A=</HashCode>
+      <FileName>MitmodedCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.PersonalPlan" Collapsed="true">
+    <Position X="32" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/yRv90wACSCACNQiAEfk/07i9p/wf97vm6Gbf3Pv+zc=</HashCode>
+      <FileName>PersonalPlan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.Program" Collapsed="true">
+    <Position X="54.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.PsychiatricCheckUp" Collapsed="true">
+    <Position X="50" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgQgADAAABAAAACAAAASAAgIAAIAAGIQAAsAAAA=</HashCode>
+      <FileName>PsychiatricCheckUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.PsychiatricShow" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAgACAIAAAAAACAAQACAAAgAAIAAAACAQACgAA=</HashCode>
+      <FileName>PsychiatricShow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.RegionManager" Collapsed="true">
+    <Position X="16.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAQAkACAAgIAAAASAAAACgAAAAQAIgAIAAEAAAAA=</HashCode>
+      <FileName>RegionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.RegionManagerCard" Collapsed="true">
+    <Position X="25.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAACAAACAEgJACAAiAAAgCABEoAAAFmEAECggAAwI=</HashCode>
+      <FileName>RegionManagerCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.RelatedDocs" Collapsed="true">
+    <Position X="34.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAMBEAAAiAAALIAAACAAACiEAIAAAIggAAAAEAIBAA=</HashCode>
+      <FileName>RelatedDocs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.Report" Collapsed="true">
+    <Position X="43.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAASAgACAgAJgSgACAgMACAAAAABBIAAIAAAAAAgI=</HashCode>
+      <FileName>Report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.SelectMimoded" Collapsed="true">
+    <Position X="52.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEAAAAACBAgAAAEAyACAFCAAAABAIAGAEACgAAAgI=</HashCode>
+      <FileName>SelectMimoded.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.SerializableDictionary&lt;TKey, TValue&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="58.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAABAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>SerializableDictionary.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GvanimVS.SQLmethods" Collapsed="true">
+    <Position X="56.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>LAFEAQAAACAEAAAACAACZAAEiAAACAABIABAgAAAoAg=</HashCode>
+      <FileName>SQLmethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.Tools" Collapsed="true">
+    <Position X="58.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADCAAACAAQAwCACBAAAAAAEACAAAAAAASABAAEAAAAA=</HashCode>
+      <FileName>Tools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.Unusual_event" Collapsed="true">
+    <Position X="36.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cCgAAAEAASEBABGSCACAKYBSIAgYAAAAMOQAIAEAAAA=</HashCode>
+      <FileName>Unusual_event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.unusualEventSearch" Collapsed="true">
+    <Position X="45.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQHEAFAABCAoAQAAgJSAAQDCABAgAAIDEEQGAAAAgAA=</HashCode>
+      <FileName>unusualEventSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.Properties.Resources" Collapsed="true">
+    <Position X="56.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEBAAAAEAAAgAQIhEAAAAQAAAAAAAAAAAAAAAIg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GvanimVS.Properties.Settings" Collapsed="true">
+    <Position X="54.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -13,6 +13,12 @@ namespace GvanimVS
 {
     public partial class Alerts : DBform
     {
+        public Alerts(SqlConnection con, string text) : base(con)
+        {
+            this.Text = text;
+            InitializeComponent();
+        }
+
         public Alerts(SqlConnection con, string ID, string name) : base(con)
         {
             InitializeComponent();
