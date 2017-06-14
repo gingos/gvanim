@@ -198,7 +198,12 @@ namespace GvanimVS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("NOT YET IMPLEMENTED");
+            this.Hide();
+            using (var UP = new UpdatePassword(con, ID))
+            {
+                UP.ShowDialog();
+            }
+            this.Close();
         }
     }
 }

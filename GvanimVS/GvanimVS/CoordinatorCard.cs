@@ -34,7 +34,12 @@ namespace GvanimVS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException("not implemented yet");
+            this.Hide();
+            using (var UP = new UpdatePassword(con, coordinatorID))
+            {
+                UP.ShowDialog();
+            }
+            this.Close();
         }
 
         private void ok_bt_Click(object sender, EventArgs e)

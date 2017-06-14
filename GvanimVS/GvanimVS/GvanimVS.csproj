@@ -269,6 +269,12 @@
     <Compile Include="Unusual_event.Designer.cs">
       <DependentUpon>Unusual_event.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePassword.Designer.cs">
+      <DependentUpon>UpdatePassword.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Alerts.resx">
       <DependentUpon>Alerts.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Unusual_event.resx">
       <DependentUpon>Unusual_event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePassword.resx">
+      <DependentUpon>UpdatePassword.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
