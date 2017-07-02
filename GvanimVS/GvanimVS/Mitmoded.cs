@@ -168,14 +168,6 @@ namespace GvanimVS
             MessageBox.Show("יש לעדכן קוד עבור אפשרות זו");
         }
 
-        private void show_meetings_bt_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            using (MeetingShow show = new MeetingShow(con, coordinatorID))
-            {
-                show.ShowDialog();
-            }
-        }
 
         private void keyword_bt_Click(object sender, EventArgs e)
         {
@@ -222,6 +214,16 @@ namespace GvanimVS
             using (Alerts al = new Alerts(con, ID_dynamic_lb.Text))
             {
                 al.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void show_meetings_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (MeetingShow show = new MeetingShow(con, coordinatorID, ID_dynamic_lb.Text))
+            {
+                show.ShowDialog();
             }
             this.Show();
         }
