@@ -70,7 +70,7 @@ namespace GvanimVS
         private void addMitmoded_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (var mc = new MitmodedCard(con))
+            using (var mc = new MitmodedCard(con, "", coordinatorID))
             {
                 mc.ShowDialog();
             }
@@ -102,7 +102,7 @@ namespace GvanimVS
             {
                 meetings.ShowDialog();
             }
-            this.Close();
+            this.Show();
         }
 
         private void editCoordinator_bt_Click(object sender, EventArgs e)
