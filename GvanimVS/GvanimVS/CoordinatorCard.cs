@@ -22,11 +22,12 @@ namespace GvanimVS
             InitializeComponent();
         }
 
-        public CoordinatorCard(SqlConnection con, string coordinatorID)
+        public CoordinatorCard(SqlConnection con, string coordinatorID):base(con)
         {
+            InitializeComponent();
             this.con = con;
             this.coordinatorID = coordinatorID;
-            InitializeComponent();
+            
             DataTable dt = SQLmethods.getDataTable(SQLmethods.USERS, coordinatorID, cmd, da);
             if (dt != null)
                 initFieldsFromDT(dt);
@@ -44,7 +45,7 @@ namespace GvanimVS
 
         private void ok_bt_Click(object sender, EventArgs e)
         {
-            Console.Write("MimodedCard-->ok button--> Saving to database...\n");
+            Console.WriteLine("MimodedCard-->ok button--> Trying to access database...\n");
             if (verifyFields())
                 this.Close();
         }
