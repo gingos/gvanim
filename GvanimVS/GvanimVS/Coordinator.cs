@@ -112,7 +112,7 @@ namespace GvanimVS
             {
                 cc.ShowDialog();
             }
-            this.Close();
+            this.Show();
         }
     }
 }
