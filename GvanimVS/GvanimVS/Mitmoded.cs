@@ -81,7 +81,7 @@ namespace GvanimVS
         private void info_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (var mitCard = new MitmodedCard(con, ID_dynamic_lb.Text))
+            using (var mitCard = new MitmodedCard(con, ID_dynamic_lb.Text, coordinatorID))
             {
                 mitCard.ShowDialog();
             }
@@ -168,19 +168,11 @@ namespace GvanimVS
             MessageBox.Show("יש לעדכן קוד עבור אפשרות זו");
         }
 
-        private void show_meetings_bt_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            using (MeetingShow show = new MeetingShow(con, coordinatorID))
-            {
-                show.ShowDialog();
-            }
-        }
 
         private void keyword_bt_Click(object sender, EventArgs e)
         {
             //open Intec form
-            MitmodedCard card = new MitmodedCard(con, ID_dynamic_lb.Text);
+            MitmodedCard card = new MitmodedCard(con, ID_dynamic_lb.Text, coordinatorID);
             //apply Intec.scan() with supplied BOW vector
             SCORE = card.CalculateIntecScore(100);
             score_dynamic_lb.Text = SCORE.ToString();
@@ -222,6 +214,16 @@ namespace GvanimVS
             using (Alerts al = new Alerts(con, ID_dynamic_lb.Text))
             {
                 al.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void show_meetings_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (MeetingShow show = new MeetingShow(con, coordinatorID, ID_dynamic_lb.Text))
+            {
+                show.ShowDialog();
             }
             this.Show();
         }

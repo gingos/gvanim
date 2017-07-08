@@ -21,7 +21,7 @@ namespace GvanimVS
 
         private byte[] imgByte, chosenFileBytes, savedFileBytes;
         //private bool imgChanged;
-        private string ID, chosenFileName, savedFileName;
+        private string mitmodedID, chosenFileName, savedFileName;
         private DataTable MainDT;
         private SerializableDictionary<string, SerializableDictionary<string, string>> xml_organizer;
         private bool chosenChanged;
@@ -31,22 +31,28 @@ namespace GvanimVS
             InitializeComponent();
             //imgChanged = false;
         }
-        public MitmodedCard(SqlConnection con, string ID) : base(con)
+        public MitmodedCard(SqlConnection con, string mitmodedID, string coordinatorID) : base(con)
         {
             InitializeComponent();
-            this.ID = ID;
-            InitMembers();
-            //imgChanged = false;
-            MainDT = SQLmethods.getDataTable(SQLmethods.MITMODED, ID, cmd, da);
-            InitDataGridViews();
-            //xml_rehab_validity_cb.DataSource = bindDictionary();
-            if (MainDT != null)
-                InitFieldsFromDT(MainDT);
 
-            // change header font style
-            // TODO: resets at form show. unknown bug.
-            boldRows();
+            if (!coordinatorID.Equals(""))
+                coordinator_id_tb.Text = coordinatorID;
 
+            if (mitmodedID.Equals(""))
+            {    
+                this.mitmodedID = mitmodedID;
+                InitMembers();
+                //imgChanged = false;
+                MainDT = SQLmethods.getDataTable(SQLmethods.MITMODED, mitmodedID, cmd, da);
+                InitDataGridViews();
+                //xml_rehab_validity_cb.DataSource = bindDictionary();
+                if (MainDT != null)
+                    InitFieldsFromDT(MainDT);
+
+                // change header font style
+                // TODO: resets at form show. unknown bug.
+                boldRows();
+            }
         }
 
         /// <summary>
@@ -56,7 +62,7 @@ namespace GvanimVS
         /// <param name="ID"> mitmoded ID</param>
         private void InitMembers()
         {
-            ID_tb.Text = ID;
+            ID_tb.Text = mitmodedID;
             chosenChanged = false;
             xml_rehab_validity_cb.DataSource = Tools.bindDictionary2<string, int>(new Dictionary<string, int>
                 { { "אנא בחרו משך זמן", 0 }, { "3 חודשים", 3 }, {"6 חודשים", 6 }, {"12 חודשים", 12 } },
@@ -213,7 +219,7 @@ namespace GvanimVS
 
             foreach (DataRow dr in dt.Rows)
             {
-                ID_dynamic_lb.Text = ID;
+                ID_dynamic_lb.Text = mitmodedID;
                 firstName_tb.Text = dr["firstName"].ToString();
                 lastName_tb.Text = dr["lastName"].ToString();
                 name_dynamic_lb.Text = firstName_tb.Text + " " + lastName_tb.Text;
@@ -791,7 +797,7 @@ namespace GvanimVS
             string serializedOrganizer = Tools.SerializeXML<SerializableDictionary<string, SerializableDictionary<string, string>>>(xml_organizer);
             if (serializedOrganizer != null)
             {
-                if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "intecXML", "ID", ID, serializedOrganizer, cmd))
+                if (SQLmethods.updateXMLFormInDB(SQLmethods.MITMODED, "intecXML", "ID", mitmodedID, serializedOrganizer, cmd))
                 {
                     MessageBox.Show("המידע נשמר בהצלחה");
                     xml_saved_file_lb.Text = chosenFileName.Substring(chosenFileName.LastIndexOf('\\') + 1);
@@ -983,7 +989,7 @@ namespace GvanimVS
 
             replaceDict["#firstname#"] = firstName_tb.Text;
             replaceDict["#lastname#"] = lastName_tb.Text;
-            replaceDict["#id#"] = ID;
+            replaceDict["#id#"] = mitmodedID;
             replaceDict["#dateofbirth#"] = birth_dtp.Value.ToShortDateString();
             try
             {

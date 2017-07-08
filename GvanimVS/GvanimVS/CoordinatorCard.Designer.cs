@@ -88,7 +88,7 @@
             this.cancel_bt.Name = "cancel_bt";
             this.cancel_bt.Size = new System.Drawing.Size(75, 23);
             this.cancel_bt.TabIndex = 41;
-            this.cancel_bt.Text = "ביטול";
+            this.cancel_bt.Text = "סגור";
             this.cancel_bt.UseVisualStyleBackColor = true;
             this.cancel_bt.Click += new System.EventHandler(this.cancel_bt_Click);
             // 
@@ -98,7 +98,7 @@
             this.ok_bt.Name = "ok_bt";
             this.ok_bt.Size = new System.Drawing.Size(75, 23);
             this.ok_bt.TabIndex = 40;
-            this.ok_bt.Text = "שמור וצא";
+            this.ok_bt.Text = "עדכון";
             this.ok_bt.UseVisualStyleBackColor = true;
             this.ok_bt.Click += new System.EventHandler(this.ok_bt_Click);
             // 

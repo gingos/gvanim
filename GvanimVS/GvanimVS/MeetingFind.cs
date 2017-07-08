@@ -22,6 +22,15 @@ namespace GvanimVS
             this.coordinatorID = coordinatorID;
         }
 
+        public MeetingFind(SqlConnection con, string coordinatorID, string mitmodedID) : base(con)
+        {
+            InitializeComponent();
+            dt = new DataTable();
+            this.coordinatorID = coordinatorID;
+            meetingID_tb.Text = mitmodedID;
+            meetingID_tb.Enabled = false;
+        }
+
         private void searchMeeting_bt_Click(object sender, EventArgs e)
         {
             dt = DetailedSearch();

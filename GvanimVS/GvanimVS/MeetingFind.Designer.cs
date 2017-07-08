@@ -127,7 +127,7 @@
             // 
             // searchMeeting_bt
             // 
-            this.searchMeeting_bt.Location = new System.Drawing.Point(151, 347);
+            this.searchMeeting_bt.Location = new System.Drawing.Point(151, 262);
             this.searchMeeting_bt.Name = "searchMeeting_bt";
             this.searchMeeting_bt.Size = new System.Drawing.Size(75, 23);
             this.searchMeeting_bt.TabIndex = 5;
@@ -137,7 +137,7 @@
             // 
             // cancel_bt
             // 
-            this.cancel_bt.Location = new System.Drawing.Point(43, 347);
+            this.cancel_bt.Location = new System.Drawing.Point(43, 262);
             this.cancel_bt.Name = "cancel_bt";
             this.cancel_bt.Size = new System.Drawing.Size(75, 23);
             this.cancel_bt.TabIndex = 5;
@@ -199,11 +199,11 @@
             this.end_date_dtp.Size = new System.Drawing.Size(200, 20);
             this.end_date_dtp.TabIndex = 10;
             // 
-            // FindMeeting
+            // MeetingFind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 397);
+            this.ClientSize = new System.Drawing.Size(682, 317);
             this.Controls.Add(this.end_date_lb);
             this.Controls.Add(this.end_date_dtp);
             this.Controls.Add(this.lastName_tb);
@@ -222,7 +222,7 @@
             this.Controls.Add(this.city_tb);
             this.Controls.Add(this.meetingID_tb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FindMeeting";
+            this.Name = "MeetingFind";
             this.Text = "FindMeeting";
             this.ResumeLayout(false);
             this.PerformLayout();

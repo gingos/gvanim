@@ -40,7 +40,7 @@
             // 
             // close_bt
             // 
-            this.close_bt.Location = new System.Drawing.Point(38, 633);
+            this.close_bt.Location = new System.Drawing.Point(71, 525);
             this.close_bt.Name = "close_bt";
             this.close_bt.Size = new System.Drawing.Size(75, 23);
             this.close_bt.TabIndex = 4;
@@ -109,11 +109,11 @@
             this.add_meeting_bt.UseVisualStyleBackColor = true;
             this.add_meeting_bt.Click += new System.EventHandler(this.add_meeting_bt_Click);
             // 
-            // ShowMeetings
+            // MeetingShow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 714);
+            this.ClientSize = new System.Drawing.Size(1244, 567);
             this.Controls.Add(this.add_meeting_bt);
             this.Controls.Add(this.coordinatorID_lb);
             this.Controls.Add(this.detailed_search);
@@ -121,7 +121,7 @@
             this.Controls.Add(this.mitmoded_name_tb);
             this.Controls.Add(this.meetings_dgv);
             this.Controls.Add(this.close_bt);
-            this.Name = "ShowMeetings";
+            this.Name = "MeetingShow";
             this.Text = "ShowMeetings";
             ((System.ComponentModel.ISupportInitialize)(this.meetings_dgv)).EndInit();
             this.ResumeLayout(false);

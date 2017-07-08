@@ -13,11 +13,23 @@ namespace GvanimVS
 {
     public partial class MeetingShow : DBform
     {
-        public MeetingShow(SqlConnection con, string ID) : base(con)
+        public MeetingShow(SqlConnection con, string coordinatorID) : base(con)
         {
             InitializeComponent();
-            coordinatorID_lb.Text = ID;
+            coordinatorID_lb.Text = coordinatorID;
+        }
 
+        public MeetingShow (SqlConnection con, string coordinatorID, string mitmodedID): base(con)
+        {
+            InitializeComponent();
+            coordinatorID_lb.Text = coordinatorID;
+            mitmoded_name_tb.Text = mitmodedID;
+            mitmoded_name_tb.Enabled = false;
+            DataTable dt = fastSearch();
+            if (dt.Rows.Count != 0)
+            {
+                meetings_dgv.DataSource = dt;
+            }
         }
 
         private void close_bt_Click(object sender, EventArgs e)
@@ -45,13 +57,20 @@ namespace GvanimVS
             string cmdText = "";
             #region sqlQuery
             cmdText =
-                "SELECT meeting.* FROM MeetingsTB meeting, MitmodedTb mitmoded WHERE meeting.mitmodedID = mitmoded.ID " +
-                "AND (mitmoded.firstName + mitmoded.lastName LIKE '%' + @pName + '%' OR (mitmoded.lastName + mitmoded.firstName LIKE '%' + @pName + '%')) ";
+                "SELECT mitmoded.firstName, mitmoded.lastName, meeting.* FROM MeetingsTB meeting, MitmodedTb mitmoded " +
+                "WHERE meeting.mitmodedID = mitmoded.ID " +
+                "AND mitmoded.coordinatorID = @pCoordinator " +
+                "AND " +
+                "( (mitmoded.firstName + ' ' + mitmoded.lastName LIKE '%' + @pName + '%') " +
+                "OR (mitmoded.lastName + ' ' + mitmoded.firstName LIKE '%' + @pName + '%') " +
+                "OR (mitmoded.ID = @pName ) ) ";
+                
             cmd.CommandText = cmdText;
             #endregion
             #region addParamaters
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@pName", mitmoded_name_tb.Text);
+            cmd.Parameters.AddWithValue("@pCoordinator", coordinatorID_lb.Text);
             #endregion
             #region execute
             da.SelectCommand = cmd;
@@ -76,11 +95,15 @@ namespace GvanimVS
         }
 
         private void detailed_search_Click(object sender, EventArgs e)
-        {            
-            MeetingFind find = new MeetingFind(con, coordinatorID_lb.Text);
+        {
+            MeetingFind find;
+            if (mitmoded_name_tb.Enabled)
+                find = new MeetingFind(con, coordinatorID_lb.Text);
+            else
+                find = new MeetingFind(con, coordinatorID_lb.Text, mitmoded_name_tb.Text);
             find.ShowDialog();
             DataTable dt = find.getDetails();
-            if (dt != null)
+            if (dt.Rows.Count != 0)
                 meetings_dgv.DataSource = dt;
             find.Dispose();
         }

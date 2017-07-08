@@ -321,6 +321,7 @@
             this.show_meetings_bt.TabIndex = 11;
             this.show_meetings_bt.Text = "מעקב פגישות אישיות וקשר";
             this.show_meetings_bt.UseVisualStyleBackColor = true;
+            this.show_meetings_bt.Click += new System.EventHandler(this.show_meetings_bt_Click);
             // 
             // cv_generator_bt
             // 
