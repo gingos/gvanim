@@ -17,25 +17,36 @@ namespace GvanimVS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            LoginPage login = new LoginPage();
+            /*  LoginPage login = new LoginPage();
+              while (true)
+              {
+                  try
+                  {
+                      Application.Run(login);
+                      break;
+                  }
+                  catch (TimeoutException)
+                  {
+                      MessageBox.Show("הקשר עם השרת נותק. אנא בדקו את החיבור ונסו שוב");
+                  }
+                  catch (SqlException)
+                  {
+                      MessageBox.Show("הקשר עם השרת נותק. אנא בדקו את החיבור ונסו שוב");
+                  }
+              }*/
+            ShapedForm1 sf = new ShapedForm1();
             while (true)
             {
                 try
                 {
-                    Application.Run(login);
+                    Application.Run(sf);
                     break;
                 }
                 catch (TimeoutException)
                 {
-                    MessageBox.Show("הקשר עם השרת נותק. אנא בדקו את החיבור ונסו שוב");
+                    MessageBox.Show("error");
                 }
-                catch (SqlException)
-                {
-                    MessageBox.Show("הקשר עם השרת נותק. אנא בדקו את החיבור ונסו שוב");
-                }
-            }
-                        
-        }
-        
+            }              
+        }   
     }
 }

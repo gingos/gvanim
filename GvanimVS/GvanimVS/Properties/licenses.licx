@@ -1,5 +1,8 @@
-Spire.PdfViewer.Forms.PdfDocumentViewer, Spire.PdfViewer.Forms, Version=2.11.40.14340, Culture=neutral, PublicKeyToken=663f351905198cb3
 Spire.DocViewer.Forms.DocDocumentViewer, Spire.DocViewer.Forms, Version=2.3.21.14040, Culture=neutral, PublicKeyToken=663f351905198cb3
-Spire.DocViewer.Forms.DocDocumentViewer, Spire.DocViewer.Forms, Version=2.3.2.10040, Culture=neutral, PublicKeyToken=663f351905198cb3
-Spire.PdfViewer.Forms.PdfDocumentViewer, Spire.PdfViewer.Forms, Version=2.11.0.6340, Culture=neutral, PublicKeyToken=663f351905198cb3
-Spire.PdfViewer.Forms.PdfDocumentViewer, Spire.PdfViewer.Forms, Version=2.11.0.6340, Culture=neutral, PublicKeyToken=663f351905198cb3
+Telerik.WinControls.UI.RadMenu, Telerik.WinControls.UI, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
+Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
+Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
+Telerik.WinControls.UI.Docking.RadDock, Telerik.WinControls.RadDock, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
+Telerik.WinControls.UI.RadTitleBar, Telerik.WinControls.UI, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
+Spire.PdfViewer.Forms.PdfDocumentViewer, Spire.PdfViewer.Forms, Version=2.11.40.14340, Culture=neutral, PublicKeyToken=663f351905198cb3
+Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e

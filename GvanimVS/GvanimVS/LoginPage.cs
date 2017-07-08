@@ -16,14 +16,29 @@ namespace GvanimVS
     {
         string CONNECTION_STRING = "Data Source= gingos.database.windows.net;Initial Catalog=gvanimDB;Persist Security Info=True;User ID=gingos;Password=wolf20Schneid!";
         volatile bool connected;
+        Form parent;
 
         public LoginPage(SqlConnection con) : base(con)
         {
             InitializeComponent();
         }
-        public LoginPage() : base()
+        public LoginPage(Panel panel1) : base()
         {
             InitializeComponent();
+            //panel1.FindForm().Controls.Equals("Label1").Text = "מסך התחברות";
+            //Form parent = panel1.FindForm();
+            //foreach (Control c in parent.Controls)
+            //{
+            //    if (c.Name.Equals("headersPanel"))
+            //    {
+            //        c.Text = "מסך התחברות";
+            //        c.Show();
+            //    }
+            //}
+            this.Dock = DockStyle.Fill;
+            header();
+            //this.Width = this.Parent.Width;
+            //this.Height = this.Parent.Height;
             con = new SqlConnection(CONNECTION_STRING);
             connected = false;
         }
@@ -49,7 +64,7 @@ namespace GvanimVS
                 else
                 {
                     login_bt.Enabled = false;
-                    signup_bt.Enabled = false;
+                    
                     MessageBox.Show("קיימת בעיה בחיבור האינטרנט" + "\n" + "התכנית תנסה להתחבר שוב, אנא המתינו");
                     CheckInternetConnectionSync();
                     if (connected)
@@ -60,7 +75,7 @@ namespace GvanimVS
                     else
                         MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" + "\n" + "אנא נסו שוב בעוד מספר רגעים");
                     login_bt.Enabled = true;
-                    signup_bt.Enabled = true;
+                    
 
                 }
             }
@@ -116,7 +131,7 @@ namespace GvanimVS
             this.Hide();
             openMatchingUserGui(dr);
             login_bt.Enabled = true;
-            signup_bt.Enabled = true;
+            
             this.Show();
         }
 
@@ -255,10 +270,30 @@ namespace GvanimVS
 
             this.status_pb.Image = global::GvanimVS.Properties.Resources.green;
         }
-
-        private void signup_bt_Click(object sender, EventArgs e)
+ 
+        private void login_bt_MouseHover(object sender, EventArgs e)
         {
-            throw new NotImplementedException("Not implemented yet");
+            login_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void login_bt_MouseLeave(object sender, EventArgs e)
+        {
+            login_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void header()
+        {
+            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
