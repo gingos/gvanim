@@ -294,6 +294,9 @@
     <EmbeddedResource Include="CreateCoordinator.resx">
       <DependentUpon>CreateCoordinator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hitkashrut.resx">
+      <DependentUpon>Hitkashrut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MeetingAdd.resx">
       <DependentUpon>MeetingAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +397,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\anonymous_profile.gif" />
+    <None Include="Resources\Close Window_50px.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\User Location_50px.png" />
+    <None Include="Resources\Checklist_50px.png" />
+    <None Include="Resources\Information_50px.png" />
+    <None Include="Resources\Details_50px.png" />
+    <None Include="Resources\calendar-5.png" />
     <None Include="Resources\cv2_thumb.png" />
     <None Include="Resources\cv1_thumb.png" />
     <EmbeddedResource Include="Resources\personal_details_template.doc" />

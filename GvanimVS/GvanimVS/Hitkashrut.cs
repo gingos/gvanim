@@ -238,7 +238,67 @@ namespace GvanimVS
             else
                 return null;
         }
-       
+
+        private void choose_pdf_bt_MouseHover(object sender, EventArgs e)
+        {
+            choose_pdf_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void choose_pdf_bt_MouseLeave(object sender, EventArgs e)
+        {
+            choose_pdf_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void preview_selected_bt_MouseHover(object sender, EventArgs e)
+        {
+            preview_selected_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void preview_selected_bt_MouseLeave(object sender, EventArgs e)
+        {
+            preview_selected_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void show_pdf_bt_MouseHover(object sender, EventArgs e)
+        {
+            show_pdf_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void show_pdf_bt_MouseLeave(object sender, EventArgs e)
+        {
+            show_pdf_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void upload_pdf_bt_MouseHover(object sender, EventArgs e)
+        {
+            upload_pdf_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void upload_pdf_bt_MouseLeave(object sender, EventArgs e)
+        {
+            upload_pdf_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void preview_saved_bt_MouseHover(object sender, EventArgs e)
+        {
+            preview_saved_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void preview_saved_bt_MouseLeave(object sender, EventArgs e)
+        {
+            preview_saved_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
         /// <summary>
         /// return the byteArray of chosen file
         /// </summary>

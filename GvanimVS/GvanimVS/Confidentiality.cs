@@ -438,7 +438,77 @@ namespace GvanimVS
                 MessageBox.Show("אין אפשרות לפתוח את המסמך." + "\n" + "ייתכן והוא כבר פתוח.", "שגיאה בפתיחת המסמך", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
             }
         }
-        
+
+        private void choose_file_bt_MouseHover(object sender, EventArgs e)
+        {
+            choose_file_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void choose_file_bt_MouseLeave(object sender, EventArgs e)
+        {
+            choose_file_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void preview_selected_bt_MouseHover(object sender, EventArgs e)
+        {
+            preview_selected_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void preview_selected_bt_MouseLeave(object sender, EventArgs e)
+        {
+            preview_selected_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void upload_file_bt_MouseHover(object sender, EventArgs e)
+        {
+            upload_file_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void upload_file_bt_MouseLeave(object sender, EventArgs e)
+        {
+            upload_file_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void preview_saved_bt_MouseHover(object sender, EventArgs e)
+        {
+            preview_saved_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void preview_saved_bt_MouseLeave(object sender, EventArgs e)
+        {
+            preview_saved_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void show_pdf_bt_MouseHover(object sender, EventArgs e)
+        {
+            show_pdf_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void show_pdf_bt_MouseLeave(object sender, EventArgs e)
+        {
+            show_pdf_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void export_bt_MouseHover(object sender, EventArgs e)
+        {
+            export_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void export_bt_MouseLeave(object sender, EventArgs e)
+        {
+            export_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = System.Drawing.Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+        }
+
         /// <summary>
         /// Allow a maximum of 4 people here
         /// if more than 4 rows, adding will be disabled

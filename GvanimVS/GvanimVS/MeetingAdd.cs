@@ -15,6 +15,27 @@ namespace GvanimVS
     {
         public string coordinatorID, mitmodedID, meetingID,address, city, topics, tasks;
         public DateTime date;
+
+        private void add_meeting_bt_MouseHover(object sender, EventArgs e)
+        {
+            add_meeting_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void add_meeting_bt_MouseLeave(object sender, EventArgs e)
+        {
+            add_meeting_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.CornflowerBlue;
+        }
+
         public MeetingAdd(string coordinatorID, SqlConnection con):base(con)
         {
             InitializeComponent();
@@ -35,11 +56,6 @@ namespace GvanimVS
                 names.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString() + " - " + dr["ID"].ToString());
             }
             return names;
-        }
-
-        private void cancel_bt_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void addMeeting_bt_Click(object sender, EventArgs e)
@@ -85,6 +101,11 @@ namespace GvanimVS
         {
             mitmodedID = Tools.getID(mitmoded_cb.SelectedItem.ToString());
             
+        }
+
+        private void close_bt_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

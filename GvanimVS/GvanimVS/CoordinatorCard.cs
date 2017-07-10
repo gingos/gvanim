@@ -206,5 +206,35 @@ namespace GvanimVS
             }
             return true;
         }
+
+        private void ok_bt_MouseHover(object sender, EventArgs e)
+        {
+            ok_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void ok_bt_MouseLeave(object sender, EventArgs e)
+        {
+            ok_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void cancel_bt_MouseHover(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void cancel_bt_MouseLeave(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void update_password_bt_MouseHover(object sender, EventArgs e)
+        {
+            update_password_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void update_password_bt_MouseLeave(object sender, EventArgs e)
+        {
+            update_password_bt.BackColor = Color.CornflowerBlue;
+        }
     }
 }

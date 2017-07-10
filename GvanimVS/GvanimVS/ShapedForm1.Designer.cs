@@ -28,84 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShapedForm1));
-            this.headersPanel = new Telerik.WinControls.UI.RadPanel();
-            this.exit_bt = new System.Windows.Forms.Button();
-            this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
-            this.sideBarPanel = new Telerik.WinControls.UI.RadPanel();
-            this.logoPanel = new Telerik.WinControls.UI.RadPanel();
             this.object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5 = new Telerik.WinControls.RootRadElement();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.object_e6937db5_f4db_4257_8b95_9660a6a0c550 = new Telerik.WinControls.RootRadElement();
-            ((System.ComponentModel.ISupportInitialize)(this.headersPanel)).BeginInit();
+            this.headersPanel = new System.Windows.Forms.Panel();
+            this.logoPanel = new System.Windows.Forms.Panel();
+            this.exit_bt = new System.Windows.Forms.Button();
+            this.sideBarPanel = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.headersPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sideBarPanel)).BeginInit();
             this.sideBarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPanel)).BeginInit();
             this.SuspendLayout();
-            // 
-            // headersPanel
-            // 
-            this.headersPanel.AllowDrop = true;
-            this.headersPanel.BackColor = System.Drawing.Color.SkyBlue;
-            this.headersPanel.Controls.Add(this.exit_bt);
-            this.headersPanel.Controls.Add(this.radPanel2);
-            this.headersPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headersPanel.ForeColor = System.Drawing.Color.Transparent;
-            this.headersPanel.Location = new System.Drawing.Point(168, 0);
-            this.headersPanel.Name = "headersPanel";
-            this.headersPanel.Size = new System.Drawing.Size(738, 48);
-            this.headersPanel.TabIndex = 0;
-            this.headersPanel.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.headersPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.radPanel1_Paint);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.headersPanel.GetChildAt(0).GetChildAt(1))).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.FitToAvailableSize;
-            // 
-            // exit_bt
-            // 
-            this.exit_bt.AllowDrop = true;
-            this.exit_bt.BackColor = System.Drawing.Color.Transparent;
-            this.exit_bt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit_bt.BackgroundImage")));
-            this.exit_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.exit_bt.FlatAppearance.BorderSize = 0;
-            this.exit_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit_bt.ForeColor = System.Drawing.Color.Transparent;
-            this.exit_bt.Location = new System.Drawing.Point(12, 12);
-            this.exit_bt.Name = "exit_bt";
-            this.exit_bt.Size = new System.Drawing.Size(27, 27);
-            this.exit_bt.TabIndex = 2;
-            this.exit_bt.UseVisualStyleBackColor = true;
-            this.exit_bt.Click += new System.EventHandler(this.exit_bt_Click);
-            // 
-            // radPanel2
-            // 
-            this.radPanel2.Location = new System.Drawing.Point(747, 0);
-            this.radPanel2.Name = "radPanel2";
-            this.radPanel2.Size = new System.Drawing.Size(168, 468);
-            this.radPanel2.TabIndex = 1;
-            this.radPanel2.Text = "radPanel2";
-            // 
-            // sideBarPanel
-            // 
-            this.sideBarPanel.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.sideBarPanel.Controls.Add(this.logoPanel);
-            this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideBarPanel.Location = new System.Drawing.Point(0, 0);
-            this.sideBarPanel.Name = "sideBarPanel";
-            this.sideBarPanel.Size = new System.Drawing.Size(168, 466);
-            this.sideBarPanel.TabIndex = 1;
-            this.sideBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.radPanel3_Paint);
-            // 
-            // logoPanel
-            // 
-            this.logoPanel.BackColor = System.Drawing.Color.SteelBlue;
-            this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logoPanel.ForeColor = System.Drawing.Color.Transparent;
-            this.logoPanel.Location = new System.Drawing.Point(0, 0);
-            this.logoPanel.Name = "logoPanel";
-            this.logoPanel.Size = new System.Drawing.Size(168, 48);
-            this.logoPanel.TabIndex = 2;
-            this.logoPanel.Text = "radPanel4";
             // 
             // object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5
             // 
@@ -113,19 +48,118 @@
             this.object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5.StretchHorizontally = true;
             this.object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5.StretchVertically = true;
             // 
-            // panel1
+            // mainPanel
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(168, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(738, 418);
-            this.panel1.TabIndex = 3;
+            this.mainPanel.Location = new System.Drawing.Point(203, 62);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(703, 404);
+            this.mainPanel.TabIndex = 3;
             // 
             // object_e6937db5_f4db_4257_8b95_9660a6a0c550
             // 
             this.object_e6937db5_f4db_4257_8b95_9660a6a0c550.Name = "object_e6937db5_f4db_4257_8b95_9660a6a0c550";
             this.object_e6937db5_f4db_4257_8b95_9660a6a0c550.StretchHorizontally = true;
             this.object_e6937db5_f4db_4257_8b95_9660a6a0c550.StretchVertically = true;
+            // 
+            // headersPanel
+            // 
+            this.headersPanel.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.headersPanel.Controls.Add(this.logoPanel);
+            this.headersPanel.Controls.Add(this.exit_bt);
+            this.headersPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headersPanel.Location = new System.Drawing.Point(0, 0);
+            this.headersPanel.Name = "headersPanel";
+            this.headersPanel.Size = new System.Drawing.Size(906, 62);
+            this.headersPanel.TabIndex = 4;
+            // 
+            // logoPanel
+            // 
+            this.logoPanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.logoPanel.BackgroundImage = global::GvanimVS.Properties.Resources.logo;
+            this.logoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logoPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.logoPanel.Location = new System.Drawing.Point(706, 0);
+            this.logoPanel.Name = "logoPanel";
+            this.logoPanel.Size = new System.Drawing.Size(200, 62);
+            this.logoPanel.TabIndex = 3;
+            // 
+            // exit_bt
+            // 
+            this.exit_bt.AllowDrop = true;
+            this.exit_bt.BackColor = System.Drawing.Color.Transparent;
+            this.exit_bt.BackgroundImage = global::GvanimVS.Properties.Resources.Close_Window_50px;
+            this.exit_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.exit_bt.FlatAppearance.BorderSize = 0;
+            this.exit_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit_bt.ForeColor = System.Drawing.Color.Transparent;
+            this.exit_bt.Location = new System.Drawing.Point(15, 18);
+            this.exit_bt.Name = "exit_bt";
+            this.exit_bt.Size = new System.Drawing.Size(27, 27);
+            this.exit_bt.TabIndex = 2;
+            this.exit_bt.UseVisualStyleBackColor = true;
+            this.exit_bt.Click += new System.EventHandler(this.exit_bt_Click_1);
+            // 
+            // sideBarPanel
+            // 
+            this.sideBarPanel.BackColor = System.Drawing.Color.LightSlateGray;
+            this.sideBarPanel.Controls.Add(this.button3);
+            this.sideBarPanel.Controls.Add(this.button2);
+            this.sideBarPanel.Controls.Add(this.button1);
+            this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideBarPanel.Location = new System.Drawing.Point(0, 62);
+            this.sideBarPanel.Name = "sideBarPanel";
+            this.sideBarPanel.Size = new System.Drawing.Size(200, 404);
+            this.sideBarPanel.TabIndex = 5;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SlateGray;
+            this.button3.BackgroundImage = global::GvanimVS.Properties.Resources.Information_50px;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 149);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(200, 46);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "התראות";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SlateGray;
+            this.button2.BackgroundImage = global::GvanimVS.Properties.Resources.Checklist_50px;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 97);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 46);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "הצג דוחות";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SlateGray;
+            this.button1.BackgroundImage = global::GvanimVS.Properties.Resources.User_Location_50px;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 46);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "הצג פגישות";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ShapedForm1
             // 
@@ -135,9 +169,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(906, 466);
             this.ControlBox = false;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.headersPanel);
             this.Controls.Add(this.sideBarPanel);
+            this.Controls.Add(this.headersPanel);
+            this.Controls.Add(this.mainPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ShapedForm1";
@@ -146,24 +181,22 @@
             this.ShowInTaskbar = false;
             this.Text = "";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.headersPanel)).EndInit();
             this.headersPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sideBarPanel)).EndInit();
             this.sideBarPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoPanel)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Telerik.WinControls.UI.RadPanel radPanel2;
-        private Telerik.WinControls.UI.RadPanel sideBarPanel;
-        private Telerik.WinControls.UI.RadPanel logoPanel;
         private Telerik.WinControls.RootRadElement object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5;
-        public Telerik.WinControls.UI.RadPanel headersPanel;
-        private System.Windows.Forms.Button exit_bt;
-        private System.Windows.Forms.Panel panel1;
         private Telerik.WinControls.RootRadElement object_e6937db5_f4db_4257_8b95_9660a6a0c550;
+        private System.Windows.Forms.Panel headersPanel;
+        private System.Windows.Forms.Button exit_bt;
+        private System.Windows.Forms.Panel logoPanel;
+        private System.Windows.Forms.Panel sideBarPanel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Panel mainPanel;
     }
 }

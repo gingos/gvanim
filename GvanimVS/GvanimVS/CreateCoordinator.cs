@@ -97,5 +97,44 @@ namespace GvanimVS
 
         }
 
+        private void password_tb_Click(object sender, EventArgs e)
+        {
+            password_tb.Text = "";
+        }
+
+        private void identity_tb_Click(object sender, EventArgs e)
+        {
+            identity_tb.Text = "";
+        }
+
+        private void email_tb_Click(object sender, EventArgs e)
+        {
+            email_tb.Text = "";
+        }
+
+        private void lastName_tb_Click(object sender, EventArgs e)
+        {
+            lastName_tb.Text = "";
+        }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void save_bt_MouseHover(object sender, EventArgs e)
+        {
+            save_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void save_bt_MouseLeave(object sender, EventArgs e)
+        {
+            save_bt.BackColor = Color.CornflowerBlue;
+        }
     }
 }

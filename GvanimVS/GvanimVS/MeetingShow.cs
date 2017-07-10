@@ -120,5 +120,45 @@ namespace GvanimVS
                 meeting.ShowDialog();
             }
         }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void add_meeting_bt_MouseHover(object sender, EventArgs e)
+        {
+            add_meeting_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void add_meeting_bt_MouseLeave(object sender, EventArgs e)
+        {
+            add_meeting_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void fast_search_bt_MouseHover(object sender, EventArgs e)
+        {
+            fast_search_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void fast_search_bt_MouseLeave(object sender, EventArgs e)
+        {
+            fast_search_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void detailed_search_MouseHover(object sender, EventArgs e)
+        {
+            detailed_search_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void detailed_search_MouseLeave(object sender, EventArgs e)
+        {
+            detailed_search_bt.BackColor = Color.CornflowerBlue;
+        }
     }
 }

@@ -78,6 +78,26 @@ namespace GvanimVS
             //Report r = new Report()
         }
 
+        private void searchReport_bt_MouseHover(object sender, EventArgs e)
+        {
+            searchReport_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void searchReport_bt_MouseLeave(object sender, EventArgs e)
+        {
+            searchReport_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void cancel_bt_MouseHover(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void cancel_bt_MouseLeave(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.CornflowerBlue;
+        }
+
         private void changeDataHeadersToHebrew()
         {
             dataGridView1.Columns["Id"].HeaderCell.Value ="מספר דוח";

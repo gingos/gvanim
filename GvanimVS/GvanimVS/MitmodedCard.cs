@@ -1139,6 +1139,86 @@ namespace GvanimVS
             return score;
         }
 
+        private void choose_file_bt_MouseHover(object sender, EventArgs e)
+        {
+            choose_file_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void choose_file_bt_MouseLeave(object sender, EventArgs e)
+        {
+            choose_file_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void preview_selected_bt_MouseHover(object sender, EventArgs e)
+        {
+            preview_selected_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void preview_selected_bt_MouseLeave(object sender, EventArgs e)
+        {
+            preview_selected_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void upload_file_bt_MouseHover(object sender, EventArgs e)
+        {
+            upload_file_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void upload_file_bt_MouseLeave(object sender, EventArgs e)
+        {
+            upload_file_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void preview_saved_bt_MouseHover(object sender, EventArgs e)
+        {
+            preview_saved_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void preview_saved_bt_MouseLeave(object sender, EventArgs e)
+        {
+            preview_saved_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void show_pdf_bt_MouseHover(object sender, EventArgs e)
+        {
+            show_pdf_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void show_pdf_bt_MouseLeave(object sender, EventArgs e)
+        {
+            show_pdf_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void export_bt_MouseHover(object sender, EventArgs e)
+        {
+            export_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void export_bt_MouseLeave(object sender, EventArgs e)
+        {
+            export_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void ok_bt_MouseHover(object sender, EventArgs e)
+        {
+            ok_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void ok_bt_MouseLeave(object sender, EventArgs e)
+        {
+            ok_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void cancel_bt_MouseHover(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void cancel_bt_MouseLeave(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.CornflowerBlue;
+        }
+
         /// <summary>
         /// Calculate score by number of education institutes
         /// </summary>

@@ -15,8 +15,8 @@ namespace GvanimVS
     public partial class LoginPage : DBform
     {
         string CONNECTION_STRING = "Data Source= gingos.database.windows.net;Initial Catalog=gvanimDB;Persist Security Info=True;User ID=gingos;Password=wolf20Schneid!";
-        volatile bool connected;
-        Form parent;
+        public volatile bool connected;
+        public DataTable dt;
 
         public LoginPage(SqlConnection con) : base(con)
         {
@@ -25,60 +25,8 @@ namespace GvanimVS
         public LoginPage(Panel panel1) : base()
         {
             InitializeComponent();
-            //panel1.FindForm().Controls.Equals("Label1").Text = "מסך התחברות";
-            //Form parent = panel1.FindForm();
-            //foreach (Control c in parent.Controls)
-            //{
-            //    if (c.Name.Equals("headersPanel"))
-            //    {
-            //        c.Text = "מסך התחברות";
-            //        c.Show();
-            //    }
-            //}
-            this.Dock = DockStyle.Fill;
-            header();
-            //this.Width = this.Parent.Width;
-            //this.Height = this.Parent.Height;
             con = new SqlConnection(CONNECTION_STRING);
             connected = false;
-        }
-
-        private void exit_bt_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        /// <summary>
-        /// Occures when "Login" button is clicked.
-        /// If username & password are valid, and connection available, will attempt user login.
-        /// if no connection available, force retry and then attempt user login
-        /// </summary>
-        private void login_bt_Click(object sender, EventArgs e)
-        {
-            if (verifyFields())
-            {
-                if (connected)
-                {
-                    attemptLogin();
-                }
-                else
-                {
-                    login_bt.Enabled = false;
-                    
-                    MessageBox.Show("קיימת בעיה בחיבור האינטרנט" + "\n" + "התכנית תנסה להתחבר שוב, אנא המתינו");
-                    CheckInternetConnectionSync();
-                    if (connected)
-                    {
-                        connectionSuccess();
-                        attemptLogin();
-                    }
-                    else
-                        MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" + "\n" + "אנא נסו שוב בעוד מספר רגעים");
-                    login_bt.Enabled = true;
-                    
-
-                }
-            }
         }
 
         /// <summary>
@@ -106,7 +54,7 @@ namespace GvanimVS
         /// </summary>
         private void attemptLogin()
         {
-            DataTable dt = SQLmethods.getDataTable(SQLmethods.USERS, user_tb.Text, password_tb.Text,
+            dt = SQLmethods.getDataTable(SQLmethods.USERS, user_tb.Text, password_tb.Text,
                         cmd, da);
             if (dt == null)
                 return;
@@ -138,7 +86,7 @@ namespace GvanimVS
         /// <summary>
         /// Open GUI according to its role
         /// </summary>
-        private void openMatchingUserGui(DataRow dr)
+        public void openMatchingUserGui(DataRow dr)
         {
             switch (dr["role"].ToString())
             {
@@ -281,19 +229,47 @@ namespace GvanimVS
             login_bt.BackColor = Color.CornflowerBlue;
         }
 
-        private void header()
+        /// <summary>
+        /// Occures when "Login" button is clicked.
+        /// If username & password are valid, and connection available, will attempt user login.
+        /// if no connection available, force retry and then attempt user login
+        /// </summary>
+        private void login_bt_Click_1(object sender, EventArgs e)
         {
-            
+            if (verifyFields())
+            {
+                if (connected)
+                {
+                    attemptLogin();
+                }
+                else
+                {
+                    login_bt.Enabled = false;
+
+                    MessageBox.Show("קיימת בעיה בחיבור האינטרנט" + "\n" + "התכנית תנסה להתחבר שוב, אנא המתינו");
+                    CheckInternetConnectionSync();
+                    if (connected)
+                    {
+                        connectionSuccess();
+                        attemptLogin();
+                    }
+                    else
+                        MessageBox.Show("הגישה לשרת אינה אפשרית כרגע" + "\n" + "אנא נסו שוב בעוד מספר רגעים");
+                    login_bt.Enabled = true;
+
+
+                }
+            }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void user_tb_Click(object sender, EventArgs e)
         {
-
+            user_tb.Text = "";
         }
 
-        private void LoginPage_Load(object sender, EventArgs e)
+        private void password_tb_Click(object sender, EventArgs e)
         {
-
+            password_tb.Text = "";
         }
     }
 }

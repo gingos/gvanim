@@ -101,5 +101,50 @@ namespace GvanimVS
         {
             this.Close();
         }
+
+        private void meetingID_tb_Click(object sender, EventArgs e)
+        {
+            meetingID_tb.Text = "";
+        }
+
+        private void firstName_tb_Click(object sender, EventArgs e)
+        {
+            firstName_tb.Text = "";
+        }
+
+        private void lastName_tb_Click(object sender, EventArgs e)
+        {
+            lastName_tb.Text = "";
+        }
+
+        private void city_tb_Click(object sender, EventArgs e)
+        {
+            city_tb.Text = "";
+        }
+
+        private void address_tb_Click(object sender, EventArgs e)
+        {
+            address_tb.Text = "";
+        }
+
+        private void searchMeeting_bt_MouseHover(object sender, EventArgs e)
+        {
+            searchMeeting_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void searchMeeting_bt_MouseLeave(object sender, EventArgs e)
+        {
+            searchMeeting_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void cancel_bt_MouseHover(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void cancel_bt_MouseLeave(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.CornflowerBlue;
+        }
     }
 }

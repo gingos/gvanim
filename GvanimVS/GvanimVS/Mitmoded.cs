@@ -227,6 +227,176 @@ namespace GvanimVS
             }
             this.Show();
         }
+
+        private void change_coordinator_bt_MouseHover(object sender, EventArgs e)
+        {
+            change_coordinator_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void change_coordinator_bt_MouseLeave(object sender, EventArgs e)
+        {
+            change_coordinator_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void info_bt_MouseHover(object sender, EventArgs e)
+        {
+            info_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void info_bt_MouseLeave(object sender, EventArgs e)
+        {
+            info_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void tochnit_bt_MouseHover(object sender, EventArgs e)
+        {
+            tochnit_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void tochnit_bt_MouseLeave(object sender, EventArgs e)
+        {
+            tochnit_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void open_hitkashrut_bt_MouseHover(object sender, EventArgs e)
+        {
+            open_hitkashrut_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void open_hitkashrut_bt_MouseLeave(object sender, EventArgs e)
+        {
+            open_hitkashrut_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void confidentiality_bt_MouseHover(object sender, EventArgs e)
+        {
+            confidentiality_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void confidentiality_bt_MouseLeave(object sender, EventArgs e)
+        {
+            confidentiality_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.RoyalBlue;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.CornflowerBlue;
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.RoyalBlue;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.CornflowerBlue;
+        }
+
+        private void unusual_event_search_bt_MouseHover(object sender, EventArgs e)
+        {
+            unusual_event_search_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void unusual_event_search_bt_MouseLeave(object sender, EventArgs e)
+        {
+            unusual_event_search_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void show_reports_bt_MouseHover(object sender, EventArgs e)
+        {
+            show_reports_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void show_reports_bt_MouseLeave(object sender, EventArgs e)
+        {
+            show_reports_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void add_report_bt_MouseHover(object sender, EventArgs e)
+        {
+            add_report_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void add_report_bt_MouseLeave(object sender, EventArgs e)
+        {
+            add_report_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void show_employment_bt_MouseHover(object sender, EventArgs e)
+        {
+            show_employment_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void show_employment_bt_MouseLeave(object sender, EventArgs e)
+        {
+            show_employment_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void add_employment_bt_MouseHover(object sender, EventArgs e)
+        {
+            add_employment_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void add_employment_bt_MouseLeave(object sender, EventArgs e)
+        {
+            add_employment_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void cv_generator_bt_MouseHover(object sender, EventArgs e)
+        {
+            cv_generator_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void cv_generator_bt_MouseLeave(object sender, EventArgs e)
+        {
+            cv_generator_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void addPsychiatricCheckUp_btn_MouseHover(object sender, EventArgs e)
+        {
+            addPsychiatricCheckUp_btn.BackColor = Color.RoyalBlue;
+        }
+
+        private void addPsychiatricCheckUp_btn_MouseLeave(object sender, EventArgs e)
+        {
+            addPsychiatricCheckUp_btn.BackColor = Color.CornflowerBlue;
+        }
+
+        private void showPsyCheckUps_btn_MouseHover(object sender, EventArgs e)
+        {
+            showPsyCheckUps_btn.BackColor = Color.RoyalBlue;
+        }
+
+        private void showPsyCheckUps_btn_MouseLeave(object sender, EventArgs e)
+        {
+            showPsyCheckUps_btn.BackColor = Color.CornflowerBlue;
+        }
+
+        private void show_meetings_bt_MouseHover(object sender, EventArgs e)
+        {
+            show_meetings_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void show_meetings_bt_MouseLeave(object sender, EventArgs e)
+        {
+            show_meetings_bt.BackColor = Color.CornflowerBlue;
+        }
     }
  }
 
