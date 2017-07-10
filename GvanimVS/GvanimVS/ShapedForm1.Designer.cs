@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5 = new Telerik.WinControls.RootRadElement();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.object_e6937db5_f4db_4257_8b95_9660a6a0c550 = new Telerik.WinControls.RootRadElement();
             this.headersPanel = new System.Windows.Forms.Panel();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.exit_bt = new System.Windows.Forms.Button();
@@ -42,12 +40,6 @@
             this.sideBarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5
-            // 
-            this.object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5.Name = "object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5";
-            this.object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5.StretchHorizontally = true;
-            this.object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5.StretchVertically = true;
-            // 
             // mainPanel
             // 
             this.mainPanel.Location = new System.Drawing.Point(203, 62);
@@ -55,12 +47,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(703, 404);
             this.mainPanel.TabIndex = 3;
-            // 
-            // object_e6937db5_f4db_4257_8b95_9660a6a0c550
-            // 
-            this.object_e6937db5_f4db_4257_8b95_9660a6a0c550.Name = "object_e6937db5_f4db_4257_8b95_9660a6a0c550";
-            this.object_e6937db5_f4db_4257_8b95_9660a6a0c550.StretchHorizontally = true;
-            this.object_e6937db5_f4db_4257_8b95_9660a6a0c550.StretchVertically = true;
             // 
             // headersPanel
             // 
@@ -188,8 +174,6 @@
         }
 
         #endregion
-        private Telerik.WinControls.RootRadElement object_57c1cbc0_ca4c_489e_aa9f_17d67748caa5;
-        private Telerik.WinControls.RootRadElement object_e6937db5_f4db_4257_8b95_9660a6a0c550;
         private System.Windows.Forms.Panel headersPanel;
         private System.Windows.Forms.Button exit_bt;
         private System.Windows.Forms.Panel logoPanel;
