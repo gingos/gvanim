@@ -205,5 +205,75 @@ namespace GvanimVS
             }
             this.Close();
         }
+
+        private void firstName_tb_Click(object sender, EventArgs e)
+        {
+            firstName_tb.Text = "";
+        }
+
+        private void lastName_tb_Click(object sender, EventArgs e)
+        {
+            lastName_tb.Text = "";
+        }
+
+        private void ID_tb_Click(object sender, EventArgs e)
+        {
+            ID_tb.Text = "";
+        }
+
+        private void city_tb_Click(object sender, EventArgs e)
+        {
+            city_tb.Text = "";
+        }
+
+        private void address_tb_Click(object sender, EventArgs e)
+        {
+            address_tb.Text = "";
+        }
+
+        private void phone1_tb_Click(object sender, EventArgs e)
+        {
+            phone1_tb.Text = "";
+        }
+
+        private void phone2_tb_Click(object sender, EventArgs e)
+        {
+            phone2_tb.Text = "";
+        }
+
+        private void email_tb_Click(object sender, EventArgs e)
+        {
+            email_tb.Text = "";
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.RoyalBlue;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.CornflowerBlue;
+        }
+
+        private void ok_bt_MouseHover(object sender, EventArgs e)
+        {
+            ok_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void ok_bt_MouseLeave(object sender, EventArgs e)
+        {
+            ok_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void cancel_bt_MouseHover(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void cancel_bt_MouseLeave(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.CornflowerBlue;
+        }
     }
 }

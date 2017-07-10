@@ -43,101 +43,131 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(805, 66);
+            this.label1.Location = new System.Drawing.Point(605, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "תאריך הביקור";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // visitDate_dtp
             // 
-            this.visitDate_dtp.Location = new System.Drawing.Point(588, 66);
+            this.visitDate_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.visitDate_dtp.Location = new System.Drawing.Point(434, 89);
+            this.visitDate_dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.visitDate_dtp.Name = "visitDate_dtp";
-            this.visitDate_dtp.Size = new System.Drawing.Size(200, 20);
+            this.visitDate_dtp.Size = new System.Drawing.Size(147, 25);
             this.visitDate_dtp.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(805, 159);
+            this.label2.Location = new System.Drawing.Point(605, 232);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 13);
+            this.label2.Size = new System.Drawing.Size(147, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "פירוט המצב ע\"פ דיווח";
             this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
             // discription_tb
             // 
-            this.discription_tb.Location = new System.Drawing.Point(399, 159);
+            this.discription_tb.Location = new System.Drawing.Point(64, 232);
+            this.discription_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.discription_tb.Multiline = true;
             this.discription_tb.Name = "discription_tb";
-            this.discription_tb.Size = new System.Drawing.Size(389, 100);
+            this.discription_tb.Size = new System.Drawing.Size(517, 152);
             this.discription_tb.TabIndex = 2;
             this.discription_tb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(661, 276);
+            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(413, 412);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 23);
+            this.button1.Size = new System.Drawing.Size(169, 35);
             this.button1.TabIndex = 3;
             this.button1.Text = "צרף מכתב ביקור";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // saveCheckUp_btn
             // 
-            this.saveCheckUp_btn.Location = new System.Drawing.Point(399, 276);
+            this.saveCheckUp_btn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.saveCheckUp_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveCheckUp_btn.ForeColor = System.Drawing.Color.White;
+            this.saveCheckUp_btn.Location = new System.Drawing.Point(64, 412);
+            this.saveCheckUp_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.saveCheckUp_btn.Name = "saveCheckUp_btn";
-            this.saveCheckUp_btn.Size = new System.Drawing.Size(75, 23);
+            this.saveCheckUp_btn.Size = new System.Drawing.Size(100, 35);
             this.saveCheckUp_btn.TabIndex = 4;
             this.saveCheckUp_btn.Text = "שמור ביקור";
-            this.saveCheckUp_btn.UseVisualStyleBackColor = true;
+            this.saveCheckUp_btn.UseVisualStyleBackColor = false;
             this.saveCheckUp_btn.Click += new System.EventHandler(this.saveCheckUp_btn_Click);
+            this.saveCheckUp_btn.MouseLeave += new System.EventHandler(this.saveCheckUp_btn_MouseLeave);
+            this.saveCheckUp_btn.MouseHover += new System.EventHandler(this.saveCheckUp_btn_MouseHover);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(805, 114);
+            this.label3.Location = new System.Drawing.Point(605, 163);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "שם הרופא ";
             this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
             // doctorName_tb
             // 
-            this.doctorName_tb.Location = new System.Drawing.Point(399, 111);
+            this.doctorName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.doctorName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.doctorName_tb.Location = new System.Drawing.Point(184, 163);
+            this.doctorName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.doctorName_tb.Name = "doctorName_tb";
-            this.doctorName_tb.Size = new System.Drawing.Size(389, 20);
+            this.doctorName_tb.Size = new System.Drawing.Size(398, 18);
             this.doctorName_tb.TabIndex = 2;
+            this.doctorName_tb.Text = "_________________________________________________";
             this.doctorName_tb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(647, 320);
+            this.label4.Location = new System.Drawing.Point(395, 480);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 13);
+            this.label4.Size = new System.Drawing.Size(180, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "מכתב ביקור צורף בהצלחה";
             // 
             // close_bt
             // 
-            this.close_bt.Location = new System.Drawing.Point(49, 329);
+            this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_bt.ForeColor = System.Drawing.Color.White;
+            this.close_bt.Location = new System.Drawing.Point(65, 506);
+            this.close_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.close_bt.Name = "close_bt";
-            this.close_bt.Size = new System.Drawing.Size(75, 23);
+            this.close_bt.Size = new System.Drawing.Size(100, 35);
             this.close_bt.TabIndex = 6;
             this.close_bt.Text = "סגור";
-            this.close_bt.UseVisualStyleBackColor = true;
+            this.close_bt.UseVisualStyleBackColor = false;
             this.close_bt.Click += new System.EventHandler(this.button2_Click);
+            this.close_bt.MouseLeave += new System.EventHandler(this.close_bt_MouseLeave);
+            this.close_bt.MouseHover += new System.EventHandler(this.close_bt_MouseHover);
             // 
             // PsychiatricCheckUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 392);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(790, 603);
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.saveCheckUp_btn);
@@ -148,6 +178,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PsychiatricCheckUp";
             this.Text = "PsychiatricCheckUp";
             this.ResumeLayout(false);

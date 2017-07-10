@@ -74,5 +74,65 @@ namespace GvanimVS
             }
             this.Close();
         }
+
+        private void info_bt_MouseHover(object sender, EventArgs e)
+        {
+            info_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void info_bt_MouseLeave(object sender, EventArgs e)
+        {
+            info_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void addMitmoded_bt_MouseHover(object sender, EventArgs e)
+        {
+            addMitmoded_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void addMitmoded_bt_MouseLeave(object sender, EventArgs e)
+        {
+            addMitmoded_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void addCoordinator_bt_MouseHover(object sender, EventArgs e)
+        {
+            addCoordinator_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void addCoordinator_bt_MouseLeave(object sender, EventArgs e)
+        {
+            addCoordinator_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void showReports_bt_MouseHover(object sender, EventArgs e)
+        {
+            showReports_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void showReports_bt_MouseLeave(object sender, EventArgs e)
+        {
+            showReports_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void showMeetings_bt_MouseHover(object sender, EventArgs e)
+        {
+            showMeetings_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void showMeetings_bt_MouseLeave(object sender, EventArgs e)
+        {
+            showMeetings_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void ok_bt_MouseHover(object sender, EventArgs e)
+        {
+            ok_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void ok_bt_MouseLeave(object sender, EventArgs e)
+        {
+            ok_bt.BackColor = Color.CornflowerBlue;
+        }
     }
 }

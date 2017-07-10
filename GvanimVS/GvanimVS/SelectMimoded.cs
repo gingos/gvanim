@@ -85,6 +85,26 @@ namespace GvanimVS
             mitmoded_dgv.Columns["city"].HeaderCell.Value = "עיר";
         }
 
+        private void search_bt_MouseHover(object sender, EventArgs e)
+        {
+            search_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void search_bt_MouseLeave(object sender, EventArgs e)
+        {
+            search_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.CornflowerBlue;
+        }
+
         private void search_bt_Click(object sender, EventArgs e)
         {
             if (verifyFields())

@@ -197,5 +197,35 @@ namespace GvanimVS
                 Tools.openTempFile(currentBytes, currentName.Substring(currentName.LastIndexOf(".")));
             }
         }
+
+        private void browse_bt_MouseHover(object sender, EventArgs e)
+        {
+            browse_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void browse_bt_MouseLeave(object sender, EventArgs e)
+        {
+            browse_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void export_bt_MouseHover(object sender, EventArgs e)
+        {
+            export_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void export_bt_MouseLeave(object sender, EventArgs e)
+        {
+            export_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.CornflowerBlue;
+        }
     }
 }

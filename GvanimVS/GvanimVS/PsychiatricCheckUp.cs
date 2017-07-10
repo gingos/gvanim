@@ -134,6 +134,36 @@ namespace GvanimVS
         {
             this.Close();
         }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.RoyalBlue;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.CornflowerBlue;
+        }
+
+        private void saveCheckUp_btn_MouseHover(object sender, EventArgs e)
+        {
+            saveCheckUp_btn.BackColor = Color.RoyalBlue;
+        }
+
+        private void saveCheckUp_btn_MouseLeave(object sender, EventArgs e)
+        {
+            saveCheckUp_btn.BackColor = Color.CornflowerBlue;
+        }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.CornflowerBlue;
+        }
     }
     
 }

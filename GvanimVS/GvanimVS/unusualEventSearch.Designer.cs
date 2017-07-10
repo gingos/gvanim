@@ -44,22 +44,23 @@
             this.fast_search_bt = new System.Windows.Forms.Button();
             this.mitmoded_name_tb = new System.Windows.Forms.TextBox();
             this.events_dgv = new System.Windows.Forms.DataGridView();
-            this.fastSearch_bt = new System.Windows.Forms.Button();
-            this.extendedSerarch_bt = new System.Windows.Forms.Button();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Place = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fastSearch_bt = new System.Windows.Forms.Button();
+            this.extendedSerarch_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.events_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // end_date_lb
             // 
             this.end_date_lb.AutoSize = true;
-            this.end_date_lb.Location = new System.Drawing.Point(292, 138);
+            this.end_date_lb.Location = new System.Drawing.Point(391, 172);
+            this.end_date_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.end_date_lb.Name = "end_date_lb";
             this.end_date_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.end_date_lb.Size = new System.Drawing.Size(34, 26);
+            this.end_date_lb.Size = new System.Drawing.Size(41, 40);
             this.end_date_lb.TabIndex = 26;
             this.end_date_lb.Text = "טווח \r\nסיום";
             this.end_date_lb.Visible = false;
@@ -67,21 +68,24 @@
             // end_date_dtp
             // 
             this.end_date_dtp.Checked = false;
-            this.end_date_dtp.Location = new System.Drawing.Point(37, 138);
+            this.end_date_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.end_date_dtp.Location = new System.Drawing.Point(48, 172);
+            this.end_date_dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.end_date_dtp.Name = "end_date_dtp";
             this.end_date_dtp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.end_date_dtp.RightToLeftLayout = true;
             this.end_date_dtp.ShowCheckBox = true;
-            this.end_date_dtp.Size = new System.Drawing.Size(200, 20);
+            this.end_date_dtp.Size = new System.Drawing.Size(265, 25);
             this.end_date_dtp.TabIndex = 25;
             this.end_date_dtp.Visible = false;
             // 
             // city_lb
             // 
             this.city_lb.AutoSize = true;
-            this.city_lb.Location = new System.Drawing.Point(600, 100);
+            this.city_lb.Location = new System.Drawing.Point(811, 114);
+            this.city_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.city_lb.Name = "city_lb";
-            this.city_lb.Size = new System.Drawing.Size(33, 13);
+            this.city_lb.Size = new System.Drawing.Size(43, 20);
             this.city_lb.TabIndex = 16;
             this.city_lb.Text = "מקום";
             this.city_lb.Visible = false;
@@ -89,19 +93,21 @@
             // meetingID_lb
             // 
             this.meetingID_lb.AutoSize = true;
-            this.meetingID_lb.Location = new System.Drawing.Point(422, 77);
+            this.meetingID_lb.Location = new System.Drawing.Point(561, 78);
+            this.meetingID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.meetingID_lb.Name = "meetingID_lb";
-            this.meetingID_lb.Size = new System.Drawing.Size(0, 13);
+            this.meetingID_lb.Size = new System.Drawing.Size(0, 20);
             this.meetingID_lb.TabIndex = 17;
             this.meetingID_lb.Visible = false;
             // 
             // start_date_lb
             // 
             this.start_date_lb.AutoSize = true;
-            this.start_date_lb.Location = new System.Drawing.Point(603, 138);
+            this.start_date_lb.Location = new System.Drawing.Point(803, 172);
+            this.start_date_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.start_date_lb.Name = "start_date_lb";
             this.start_date_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.start_date_lb.Size = new System.Drawing.Size(42, 26);
+            this.start_date_lb.Size = new System.Drawing.Size(58, 40);
             this.start_date_lb.TabIndex = 18;
             this.start_date_lb.Text = "טווח \r\nהתחלה";
             this.start_date_lb.Visible = false;
@@ -109,9 +115,10 @@
             // address_lb
             // 
             this.address_lb.AutoSize = true;
-            this.address_lb.Location = new System.Drawing.Point(283, 100);
+            this.address_lb.Location = new System.Drawing.Point(376, 114);
+            this.address_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.address_lb.Name = "address_lb";
-            this.address_lb.Size = new System.Drawing.Size(40, 13);
+            this.address_lb.Size = new System.Drawing.Size(52, 20);
             this.address_lb.TabIndex = 19;
             this.address_lb.Text = "כתובת";
             this.address_lb.Visible = false;
@@ -119,85 +126,113 @@
             // start_date_dtp
             // 
             this.start_date_dtp.Checked = false;
-            this.start_date_dtp.Location = new System.Drawing.Point(382, 138);
+            this.start_date_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.start_date_dtp.Location = new System.Drawing.Point(508, 172);
+            this.start_date_dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.start_date_dtp.Name = "start_date_dtp";
             this.start_date_dtp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.start_date_dtp.RightToLeftLayout = true;
             this.start_date_dtp.ShowCheckBox = true;
-            this.start_date_dtp.Size = new System.Drawing.Size(200, 20);
+            this.start_date_dtp.Size = new System.Drawing.Size(265, 25);
             this.start_date_dtp.TabIndex = 15;
             this.start_date_dtp.Visible = false;
             // 
             // address_tb
             // 
-            this.address_tb.Location = new System.Drawing.Point(37, 93);
+            this.address_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.address_tb.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.address_tb.Location = new System.Drawing.Point(47, 114);
+            this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(198, 20);
+            this.address_tb.Size = new System.Drawing.Size(265, 18);
             this.address_tb.TabIndex = 12;
+            this.address_tb.Text = "_________________________________________________";
             this.address_tb.Visible = false;
+            this.address_tb.Click += new System.EventHandler(this.address_tb_Click);
             // 
             // place_tb
             // 
-            this.place_tb.Location = new System.Drawing.Point(382, 93);
+            this.place_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.place_tb.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.place_tb.Location = new System.Drawing.Point(510, 114);
+            this.place_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.place_tb.Name = "place_tb";
-            this.place_tb.Size = new System.Drawing.Size(198, 20);
+            this.place_tb.Size = new System.Drawing.Size(263, 18);
             this.place_tb.TabIndex = 13;
+            this.place_tb.Text = "_________________________________________________";
             this.place_tb.Visible = false;
+            this.place_tb.Click += new System.EventHandler(this.place_tb_Click);
             // 
             // close_bt
             // 
-            this.close_bt.Location = new System.Drawing.Point(40, 12);
+            this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_bt.ForeColor = System.Drawing.Color.White;
+            this.close_bt.Location = new System.Drawing.Point(48, 569);
+            this.close_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.close_bt.Name = "close_bt";
-            this.close_bt.Size = new System.Drawing.Size(75, 23);
+            this.close_bt.Size = new System.Drawing.Size(100, 35);
             this.close_bt.TabIndex = 27;
             this.close_bt.Text = "סגור";
-            this.close_bt.UseVisualStyleBackColor = true;
+            this.close_bt.UseVisualStyleBackColor = false;
             this.close_bt.Click += new System.EventHandler(this.close_bt_Click);
+            this.close_bt.MouseLeave += new System.EventHandler(this.close_bt_MouseLeave);
+            this.close_bt.MouseHover += new System.EventHandler(this.close_bt_MouseHover);
             // 
             // searchEvent_bt
             // 
-            this.searchEvent_bt.Location = new System.Drawing.Point(49, 187);
+            this.searchEvent_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.searchEvent_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchEvent_bt.ForeColor = System.Drawing.Color.White;
+            this.searchEvent_bt.Location = new System.Drawing.Point(48, 249);
+            this.searchEvent_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchEvent_bt.Name = "searchEvent_bt";
-            this.searchEvent_bt.Size = new System.Drawing.Size(75, 23);
+            this.searchEvent_bt.Size = new System.Drawing.Size(100, 35);
             this.searchEvent_bt.TabIndex = 27;
             this.searchEvent_bt.Text = "חפש אירוע";
-            this.searchEvent_bt.UseVisualStyleBackColor = true;
+            this.searchEvent_bt.UseVisualStyleBackColor = false;
             this.searchEvent_bt.Visible = false;
             this.searchEvent_bt.Click += new System.EventHandler(this.searchEvent_bt_Click);
+            this.searchEvent_bt.MouseLeave += new System.EventHandler(this.searchEvent_bt_MouseLeave);
+            this.searchEvent_bt.MouseHover += new System.EventHandler(this.searchEvent_bt_MouseHover);
             // 
             // coordinatorID_lb
             // 
             this.coordinatorID_lb.AutoSize = true;
-            this.coordinatorID_lb.Location = new System.Drawing.Point(47, -149);
+            this.coordinatorID_lb.Location = new System.Drawing.Point(63, -229);
+            this.coordinatorID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.coordinatorID_lb.Name = "coordinatorID_lb";
-            this.coordinatorID_lb.Size = new System.Drawing.Size(142, 13);
+            this.coordinatorID_lb.Size = new System.Drawing.Size(193, 20);
             this.coordinatorID_lb.TabIndex = 32;
             this.coordinatorID_lb.Text = "<coordinatorID_dynamic_lb>";
             // 
             // detailed_search
             // 
-            this.detailed_search.Location = new System.Drawing.Point(662, -125);
+            this.detailed_search.Location = new System.Drawing.Point(883, -192);
+            this.detailed_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.detailed_search.Name = "detailed_search";
-            this.detailed_search.Size = new System.Drawing.Size(10, 10);
+            this.detailed_search.Size = new System.Drawing.Size(13, 15);
             this.detailed_search.TabIndex = 31;
             this.detailed_search.Text = "חיפוש לפי פרטים נוספים";
             this.detailed_search.UseVisualStyleBackColor = true;
             // 
             // fast_search_bt
             // 
-            this.fast_search_bt.Location = new System.Drawing.Point(865, -125);
+            this.fast_search_bt.Location = new System.Drawing.Point(1153, -192);
+            this.fast_search_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fast_search_bt.Name = "fast_search_bt";
-            this.fast_search_bt.Size = new System.Drawing.Size(10, 10);
+            this.fast_search_bt.Size = new System.Drawing.Size(13, 15);
             this.fast_search_bt.TabIndex = 30;
             this.fast_search_bt.Text = "חיפוש מהיר";
             this.fast_search_bt.UseVisualStyleBackColor = true;
             // 
             // mitmoded_name_tb
             // 
-            this.mitmoded_name_tb.Location = new System.Drawing.Point(956, -138);
+            this.mitmoded_name_tb.Location = new System.Drawing.Point(1275, -212);
+            this.mitmoded_name_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mitmoded_name_tb.Name = "mitmoded_name_tb";
             this.mitmoded_name_tb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mitmoded_name_tb.Size = new System.Drawing.Size(10, 20);
+            this.mitmoded_name_tb.Size = new System.Drawing.Size(12, 25);
             this.mitmoded_name_tb.TabIndex = 29;
             this.mitmoded_name_tb.Text = "חיפוש שם מתמודד";
             // 
@@ -212,33 +247,14 @@
             this.Place,
             this.Address,
             this.Subject});
-            this.events_dgv.Location = new System.Drawing.Point(40, 232);
+            this.events_dgv.Location = new System.Drawing.Point(48, 318);
+            this.events_dgv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.events_dgv.Name = "events_dgv";
             this.events_dgv.ReadOnly = true;
             this.events_dgv.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.events_dgv.Size = new System.Drawing.Size(570, 148);
+            this.events_dgv.Size = new System.Drawing.Size(807, 228);
             this.events_dgv.TabIndex = 28;
             this.events_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.events_dgv_CellContentClick);
-            // 
-            // fastSearch_bt
-            // 
-            this.fastSearch_bt.Location = new System.Drawing.Point(519, 12);
-            this.fastSearch_bt.Name = "fastSearch_bt";
-            this.fastSearch_bt.Size = new System.Drawing.Size(91, 23);
-            this.fastSearch_bt.TabIndex = 27;
-            this.fastSearch_bt.Text = "חיפוש מהיר";
-            this.fastSearch_bt.UseVisualStyleBackColor = true;
-            this.fastSearch_bt.Click += new System.EventHandler(this.fastSearch_bt_Click);
-            // 
-            // extendedSerarch_bt
-            // 
-            this.extendedSerarch_bt.Location = new System.Drawing.Point(397, 12);
-            this.extendedSerarch_bt.Name = "extendedSerarch_bt";
-            this.extendedSerarch_bt.Size = new System.Drawing.Size(103, 23);
-            this.extendedSerarch_bt.TabIndex = 27;
-            this.extendedSerarch_bt.Text = "חיפוש מורחב";
-            this.extendedSerarch_bt.UseVisualStyleBackColor = true;
-            this.extendedSerarch_bt.Click += new System.EventHandler(this.extendedSerarch_bt_Click);
             // 
             // Date
             // 
@@ -272,11 +288,44 @@
             this.Subject.Name = "Subject";
             this.Subject.ReadOnly = true;
             // 
+            // fastSearch_bt
+            // 
+            this.fastSearch_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.fastSearch_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fastSearch_bt.ForeColor = System.Drawing.Color.White;
+            this.fastSearch_bt.Location = new System.Drawing.Point(692, 18);
+            this.fastSearch_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fastSearch_bt.Name = "fastSearch_bt";
+            this.fastSearch_bt.Size = new System.Drawing.Size(121, 35);
+            this.fastSearch_bt.TabIndex = 27;
+            this.fastSearch_bt.Text = "חיפוש מהיר";
+            this.fastSearch_bt.UseVisualStyleBackColor = false;
+            this.fastSearch_bt.Click += new System.EventHandler(this.fastSearch_bt_Click);
+            this.fastSearch_bt.MouseLeave += new System.EventHandler(this.fastSearch_bt_MouseLeave);
+            this.fastSearch_bt.MouseHover += new System.EventHandler(this.fastSearch_bt_MouseHover);
+            // 
+            // extendedSerarch_bt
+            // 
+            this.extendedSerarch_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.extendedSerarch_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.extendedSerarch_bt.ForeColor = System.Drawing.Color.White;
+            this.extendedSerarch_bt.Location = new System.Drawing.Point(527, 18);
+            this.extendedSerarch_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.extendedSerarch_bt.Name = "extendedSerarch_bt";
+            this.extendedSerarch_bt.Size = new System.Drawing.Size(137, 35);
+            this.extendedSerarch_bt.TabIndex = 27;
+            this.extendedSerarch_bt.Text = "חיפוש מורחב";
+            this.extendedSerarch_bt.UseVisualStyleBackColor = false;
+            this.extendedSerarch_bt.Click += new System.EventHandler(this.extendedSerarch_bt_Click);
+            this.extendedSerarch_bt.MouseLeave += new System.EventHandler(this.extendedSerarch_bt_MouseLeave);
+            this.extendedSerarch_bt.MouseHover += new System.EventHandler(this.extendedSerarch_bt_MouseHover);
+            // 
             // unusualEventSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 460);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(897, 621);
             this.Controls.Add(this.coordinatorID_lb);
             this.Controls.Add(this.detailed_search);
             this.Controls.Add(this.fast_search_bt);
@@ -295,6 +344,9 @@
             this.Controls.Add(this.start_date_dtp);
             this.Controls.Add(this.address_tb);
             this.Controls.Add(this.place_tb);
+            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "unusualEventSearch";
             this.Text = "unusualEventSearch";
             this.Load += new System.EventHandler(this.unusualEventSearch_Load);

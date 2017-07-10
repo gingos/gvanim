@@ -229,5 +229,25 @@ namespace GvanimVS
         {
 
         }
+
+        private void btn_update_MouseHover(object sender, EventArgs e)
+        {
+            btn_update.BackColor = Color.RoyalBlue;
+        }
+
+        private void btn_update_MouseLeave(object sender, EventArgs e)
+        {
+            btn_update.BackColor = Color.CornflowerBlue;
+        }
+
+        private void quit_page_MouseHover(object sender, EventArgs e)
+        {
+            quit_page.BackColor = Color.RoyalBlue;
+        }
+
+        private void quit_page_MouseLeave(object sender, EventArgs e)
+        {
+            quit_page.BackColor = Color.CornflowerBlue;
+        }
     }
 }

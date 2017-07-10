@@ -45,128 +45,153 @@
             // 
             // saveReport_bt
             // 
-            this.saveReport_bt.Location = new System.Drawing.Point(106, 334);
+            this.saveReport_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.saveReport_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveReport_bt.ForeColor = System.Drawing.Color.White;
+            this.saveReport_bt.Location = new System.Drawing.Point(141, 514);
+            this.saveReport_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.saveReport_bt.Name = "saveReport_bt";
-            this.saveReport_bt.Size = new System.Drawing.Size(129, 23);
+            this.saveReport_bt.Size = new System.Drawing.Size(172, 35);
             this.saveReport_bt.TabIndex = 0;
             this.saveReport_bt.Text = "שמור דו\"ח וסגור";
-            this.saveReport_bt.UseVisualStyleBackColor = true;
+            this.saveReport_bt.UseVisualStyleBackColor = false;
             this.saveReport_bt.Click += new System.EventHandler(this.saveReport_bt_Click);
+            this.saveReport_bt.MouseLeave += new System.EventHandler(this.saveReport_bt_MouseLeave);
+            this.saveReport_bt.MouseHover += new System.EventHandler(this.saveReport_bt_MouseHover);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(495, 49);
+            this.label1.Location = new System.Drawing.Point(660, 75);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = ":מס\"ד";
             // 
             // ReportSerialNum_lb
             // 
             this.ReportSerialNum_lb.AutoSize = true;
-            this.ReportSerialNum_lb.Location = new System.Drawing.Point(327, 49);
+            this.ReportSerialNum_lb.Location = new System.Drawing.Point(436, 75);
+            this.ReportSerialNum_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ReportSerialNum_lb.Name = "ReportSerialNum_lb";
-            this.ReportSerialNum_lb.Size = new System.Drawing.Size(51, 13);
+            this.ReportSerialNum_lb.Size = new System.Drawing.Size(71, 20);
             this.ReportSerialNum_lb.TabIndex = 3;
             this.ReportSerialNum_lb.Text = "yy-dd-mm";
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(260, 80);
+            this.comboBox1.Location = new System.Drawing.Point(347, 123);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 21);
+            this.comboBox1.Size = new System.Drawing.Size(288, 28);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(495, 87);
+            this.label2.Location = new System.Drawing.Point(660, 126);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(98, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = ":שם המתמודד";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(260, 127);
+            this.dateTimePicker1.Location = new System.Drawing.Point(347, 195);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(216, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(287, 25);
             this.dateTimePicker1.TabIndex = 6;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(495, 127);
+            this.label3.Location = new System.Drawing.Point(660, 195);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = ":תאריך";
             // 
             // reportDiscription_tb
             // 
-            this.reportDiscription_tb.Location = new System.Drawing.Point(107, 168);
+            this.reportDiscription_tb.Location = new System.Drawing.Point(143, 258);
+            this.reportDiscription_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.reportDiscription_tb.Multiline = true;
             this.reportDiscription_tb.Name = "reportDiscription_tb";
-            this.reportDiscription_tb.Size = new System.Drawing.Size(370, 54);
+            this.reportDiscription_tb.Size = new System.Drawing.Size(492, 81);
             this.reportDiscription_tb.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(495, 171);
+            this.label4.Location = new System.Drawing.Point(660, 261);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.Size = new System.Drawing.Size(46, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = ":תאור";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(495, 255);
+            this.label5.Location = new System.Drawing.Point(660, 392);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.Size = new System.Drawing.Size(110, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = ":פעולות שננקטו";
             // 
             // activityDiscription_tb
             // 
-            this.activityDiscription_tb.Location = new System.Drawing.Point(106, 255);
+            this.activityDiscription_tb.Location = new System.Drawing.Point(141, 392);
+            this.activityDiscription_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.activityDiscription_tb.Multiline = true;
             this.activityDiscription_tb.Name = "activityDiscription_tb";
-            this.activityDiscription_tb.Size = new System.Drawing.Size(370, 54);
+            this.activityDiscription_tb.Size = new System.Drawing.Size(492, 81);
             this.activityDiscription_tb.TabIndex = 9;
             // 
             // cancel_bt
             // 
-            this.cancel_bt.Location = new System.Drawing.Point(25, 334);
+            this.cancel_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.cancel_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel_bt.ForeColor = System.Drawing.Color.White;
+            this.cancel_bt.Location = new System.Drawing.Point(33, 514);
+            this.cancel_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cancel_bt.Name = "cancel_bt";
-            this.cancel_bt.Size = new System.Drawing.Size(75, 23);
+            this.cancel_bt.Size = new System.Drawing.Size(100, 35);
             this.cancel_bt.TabIndex = 11;
             this.cancel_bt.Text = "ביטול";
-            this.cancel_bt.UseVisualStyleBackColor = true;
+            this.cancel_bt.UseVisualStyleBackColor = false;
             this.cancel_bt.Click += new System.EventHandler(this.cancel_bt_Click);
+            this.cancel_bt.MouseLeave += new System.EventHandler(this.cancel_bt_MouseLeave);
+            this.cancel_bt.MouseHover += new System.EventHandler(this.cancel_bt_MouseHover);
             // 
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
-            this.ID_lb.Location = new System.Drawing.Point(384, 49);
+            this.ID_lb.Location = new System.Drawing.Point(512, 75);
+            this.ID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_lb.Name = "ID_lb";
-            this.ID_lb.Size = new System.Drawing.Size(18, 13);
+            this.ID_lb.Size = new System.Drawing.Size(22, 20);
             this.ID_lb.TabIndex = 12;
             this.ID_lb.Text = "ID";
             // 
             // Report
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 369);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(812, 565);
             this.ControlBox = false;
             this.Controls.Add(this.ID_lb);
             this.Controls.Add(this.cancel_bt);
@@ -181,6 +206,9 @@
             this.Controls.Add(this.ReportSerialNum_lb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saveReport_bt);
+            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Report";
             this.ShowIcon = false;
             this.Text = "Report";

@@ -84,6 +84,27 @@ namespace GvanimVS
             ID_lb.Text = mitmodedID;
             ReportSerialNum_lb.Refresh();
         }
+
+        private void saveReport_bt_MouseHover(object sender, EventArgs e)
+        {
+            saveReport_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void saveReport_bt_MouseLeave(object sender, EventArgs e)
+        {
+            saveReport_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void cancel_bt_MouseHover(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void cancel_bt_MouseLeave(object sender, EventArgs e)
+        {
+            cancel_bt.BackColor = Color.CornflowerBlue;
+        }
+
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 

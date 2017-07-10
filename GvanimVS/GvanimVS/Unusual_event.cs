@@ -46,7 +46,7 @@ namespace GvanimVS
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             label6.Show();
-            textBox3.Show();
+            hospital_tb.Show();
             label7.Show();
             checkBox2.Show();
         }
@@ -60,7 +60,7 @@ namespace GvanimVS
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             dataGridView1.ColumnCount = 3;
-            dataGridView1.RowCount = Convert.ToInt32(textBox1.Text);
+            dataGridView1.RowCount = Convert.ToInt32(howMuch_tb.Text);
             dataGridView1.Columns[0].FillWeight = 20;
             dataGridView1.Columns[1].FillWeight = 20;
             dataGridView1.Columns[2].FillWeight = 60;
@@ -88,7 +88,7 @@ namespace GvanimVS
             string coordinatorId = dt.Rows[0]["coordinatorId"].ToString();
             try
             {
-                SQLmethods.upsertUE(coordinatorId, this.mitmodedID, dateTimePicker1.Value, textBox6.Text, textBox2.Text, textBox3.Text, checkBoxConverter(checkBox3),
+                SQLmethods.upsertUE(coordinatorId, this.mitmodedID, dateTimePicker1.Value, place_tb.Text, address_tb.Text, hospital_tb.Text, checkBoxConverter(checkBox3),
                                 textBox4.Text, dgvToXml(dataGridView1), textBox5.Text, checkedSubjects, cmd);
             }
             catch (SqlException ex)
@@ -156,6 +156,41 @@ namespace GvanimVS
             }
             return res;
 
+        }
+
+        private void textBox6_Click(object sender, EventArgs e)
+        {
+            place_tb.Text = "";
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            address_tb.Text = "";
+        }
+
+        private void howMuch_tb_Click(object sender, EventArgs e)
+        {
+            howMuch_tb.Text = "";
+        }
+
+        private void save_bt_MouseHover(object sender, EventArgs e)
+        {
+            save_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void save_bt_MouseLeave(object sender, EventArgs e)
+        {
+            save_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.CornflowerBlue;
         }
     }
 }

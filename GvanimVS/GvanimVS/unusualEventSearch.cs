@@ -162,5 +162,55 @@ namespace GvanimVS
         {
 
         }
+
+        private void place_tb_Click(object sender, EventArgs e)
+        {
+            place_tb.Text = "";
+        }
+
+        private void address_tb_Click(object sender, EventArgs e)
+        {
+            address_tb.Text = "";
+        }
+
+        private void fastSearch_bt_MouseHover(object sender, EventArgs e)
+        {
+            fastSearch_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void fastSearch_bt_MouseLeave(object sender, EventArgs e)
+        {
+            fastSearch_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void extendedSerarch_bt_MouseHover(object sender, EventArgs e)
+        {
+            extendedSerarch_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void extendedSerarch_bt_MouseLeave(object sender, EventArgs e)
+        {
+            extendedSerarch_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void searchEvent_bt_MouseHover(object sender, EventArgs e)
+        {
+            searchEvent_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void searchEvent_bt_MouseLeave(object sender, EventArgs e)
+        {
+            searchEvent_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void close_bt_MouseHover(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.RoyalBlue;
+        }
+
+        private void close_bt_MouseLeave(object sender, EventArgs e)
+        {
+            close_bt.BackColor = Color.CornflowerBlue;
+        }
     }
 }
