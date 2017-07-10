@@ -45,7 +45,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.status_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.status_pb.Image = ((System.Drawing.Image)(resources.GetObject("status_pb.Image")));
-            this.status_pb.Location = new System.Drawing.Point(364, 4);
+            this.status_pb.Location = new System.Drawing.Point(24, 18);
             this.status_pb.Name = "status_pb";
             this.status_pb.Size = new System.Drawing.Size(28, 27);
             this.status_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -56,12 +56,12 @@
             // 
             this.name_lb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.name_lb.AutoSize = true;
-            this.name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_lb.ForeColor = System.Drawing.Color.Black;
             this.name_lb.Location = new System.Drawing.Point(364, 102);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_lb.Size = new System.Drawing.Size(142, 20);
+            this.name_lb.Size = new System.Drawing.Size(147, 20);
             this.name_lb.TabIndex = 0;
             this.name_lb.Text = "תעודת זהות \\ אימייל:";
             // 
@@ -71,7 +71,7 @@
             this.login_bt.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.login_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.login_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.login_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_bt.ForeColor = System.Drawing.Color.White;
             this.login_bt.Location = new System.Drawing.Point(259, 256);
             this.login_bt.Margin = new System.Windows.Forms.Padding(25);
@@ -116,7 +116,7 @@
             // 
             this.password_lb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.password_lb.AutoSize = true;
-            this.password_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password_lb.ForeColor = System.Drawing.Color.Black;
             this.password_lb.Location = new System.Drawing.Point(450, 181);
             this.password_lb.Name = "password_lb";
@@ -127,6 +127,7 @@
             // 
             // LoginPage
             // 
+            this.AcceptButton = this.login_bt;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;

@@ -33,9 +33,9 @@
             this.logoPanel = new System.Windows.Forms.Panel();
             this.exit_bt = new System.Windows.Forms.Button();
             this.sideBarPanel = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.alert_bt = new System.Windows.Forms.Button();
+            this.report_show_bt = new System.Windows.Forms.Button();
+            this.meeting_show_bt = new System.Windows.Forms.Button();
             this.headersPanel.SuspendLayout();
             this.sideBarPanel.SuspendLayout();
             this.SuspendLayout();
@@ -89,63 +89,63 @@
             // sideBarPanel
             // 
             this.sideBarPanel.BackColor = System.Drawing.Color.LightSlateGray;
-            this.sideBarPanel.Controls.Add(this.button3);
-            this.sideBarPanel.Controls.Add(this.button2);
-            this.sideBarPanel.Controls.Add(this.button1);
+            this.sideBarPanel.Controls.Add(this.alert_bt);
+            this.sideBarPanel.Controls.Add(this.report_show_bt);
+            this.sideBarPanel.Controls.Add(this.meeting_show_bt);
             this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBarPanel.Location = new System.Drawing.Point(0, 62);
             this.sideBarPanel.Name = "sideBarPanel";
             this.sideBarPanel.Size = new System.Drawing.Size(200, 404);
             this.sideBarPanel.TabIndex = 5;
             // 
-            // button3
+            // alert_bt
             // 
-            this.button3.BackColor = System.Drawing.Color.SlateGray;
-            this.button3.BackgroundImage = global::GvanimVS.Properties.Resources.Information_50px;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 149);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 46);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "התראות";
-            this.button3.UseVisualStyleBackColor = false;
+            this.alert_bt.BackColor = System.Drawing.Color.SlateGray;
+            this.alert_bt.BackgroundImage = global::GvanimVS.Properties.Resources.Information_50px;
+            this.alert_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.alert_bt.FlatAppearance.BorderSize = 0;
+            this.alert_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.alert_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alert_bt.ForeColor = System.Drawing.Color.White;
+            this.alert_bt.Location = new System.Drawing.Point(0, 149);
+            this.alert_bt.Name = "alert_bt";
+            this.alert_bt.Size = new System.Drawing.Size(200, 46);
+            this.alert_bt.TabIndex = 0;
+            this.alert_bt.Text = "התראות";
+            this.alert_bt.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // report_show_bt
             // 
-            this.button2.BackColor = System.Drawing.Color.SlateGray;
-            this.button2.BackgroundImage = global::GvanimVS.Properties.Resources.Checklist_50px;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 97);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 46);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "הצג דוחות";
-            this.button2.UseVisualStyleBackColor = false;
+            this.report_show_bt.BackColor = System.Drawing.Color.SlateGray;
+            this.report_show_bt.BackgroundImage = global::GvanimVS.Properties.Resources.Checklist_50px;
+            this.report_show_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.report_show_bt.FlatAppearance.BorderSize = 0;
+            this.report_show_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.report_show_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.report_show_bt.ForeColor = System.Drawing.Color.White;
+            this.report_show_bt.Location = new System.Drawing.Point(0, 97);
+            this.report_show_bt.Name = "report_show_bt";
+            this.report_show_bt.Size = new System.Drawing.Size(200, 46);
+            this.report_show_bt.TabIndex = 0;
+            this.report_show_bt.Text = "הצג דוחות";
+            this.report_show_bt.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // meeting_show_bt
             // 
-            this.button1.BackColor = System.Drawing.Color.SlateGray;
-            this.button1.BackgroundImage = global::GvanimVS.Properties.Resources.User_Location_50px;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "הצג פגישות";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.meeting_show_bt.BackColor = System.Drawing.Color.SlateGray;
+            this.meeting_show_bt.BackgroundImage = global::GvanimVS.Properties.Resources.User_Location_50px;
+            this.meeting_show_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.meeting_show_bt.FlatAppearance.BorderSize = 0;
+            this.meeting_show_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.meeting_show_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meeting_show_bt.ForeColor = System.Drawing.Color.White;
+            this.meeting_show_bt.Location = new System.Drawing.Point(0, 45);
+            this.meeting_show_bt.Name = "meeting_show_bt";
+            this.meeting_show_bt.Size = new System.Drawing.Size(200, 46);
+            this.meeting_show_bt.TabIndex = 0;
+            this.meeting_show_bt.Text = "הצג פגישות";
+            this.meeting_show_bt.UseVisualStyleBackColor = false;
+            this.meeting_show_bt.Click += new System.EventHandler(this.button1_Click);
             // 
             // ShapedForm1
             // 
@@ -178,9 +178,9 @@
         private System.Windows.Forms.Button exit_bt;
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Panel sideBarPanel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button meeting_show_bt;
+        private System.Windows.Forms.Button alert_bt;
+        private System.Windows.Forms.Button report_show_bt;
         public System.Windows.Forms.Panel mainPanel;
     }
 }

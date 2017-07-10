@@ -21,8 +21,9 @@ namespace GvanimVS
         public LoginPage(SqlConnection con) : base(con)
         {
             InitializeComponent();
+            con = new SqlConnection(CONNECTION_STRING);
         }
-        public LoginPage(Panel panel1) : base()
+        public LoginPage(Panel panel) : base()
         {
             InitializeComponent();
             con = new SqlConnection(CONNECTION_STRING);

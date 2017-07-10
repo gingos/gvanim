@@ -15,8 +15,8 @@ namespace GvanimVS
 
         public ShapedForm1(SqlConnection con) : base(con)
         {
-            LoginPage lp = new LoginPage(con);
             InitializeComponent();
+            LoginPage lp = new LoginPage(con);
         }
 
         public ShapedForm1()
