@@ -60,7 +60,7 @@ namespace GvanimVS
             if (dt == null)
                 return;
             if (dt.Rows.Count == 0)
-                MessageBox.Show("שם משתמש או סיסמא אינם נכונים");
+                MessageBox.Show("שם משתמש או סיסמא אינם נכונים", "שגיאה", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
             else
             {
                 showWelcomeMessage(dt);
@@ -74,9 +74,10 @@ namespace GvanimVS
         private void showWelcomeMessage(DataTable dt)
         {
             DataRow dr = dt.Rows[0];
-            MessageBox.Show("ברוך הבא\n " +
+            MessageBox.Show("ברוך הבא\n" +
                 dr["firstName"] + " " + dr["lastName"] + "\n" +
-                dr["role"].ToString());
+                dr["role"].ToString(), "כניסה למערכת",
+                MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
             this.Hide();
             openMatchingUserGui(dr);
             login_bt.Enabled = true;
