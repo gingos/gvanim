@@ -28,7 +28,7 @@ namespace GvanimVS
         private void writeReport_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (Report r = new Report(con, coordinatorID))
+            using (ReportAdd r = new ReportAdd(con, coordinatorID))
             {
                 r.ShowDialog();
             }
@@ -38,7 +38,7 @@ namespace GvanimVS
         {
             //TODO: yair : create search by parameter in FindReport for reports and create a full ctor in Report for viewing the report
             this.Hide();
-            using (FindReport fr = new FindReport(con, coordinatorID))
+            using (ReportFind fr = new ReportFind(con, coordinatorID))
             {
                 fr.ShowDialog();
             }

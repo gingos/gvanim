@@ -1,6 +1,6 @@
 ﻿namespace GvanimVS
 {
-    partial class Report
+    partial class ReportAdd
     {
         /// <summary>
         /// Required designer variable.

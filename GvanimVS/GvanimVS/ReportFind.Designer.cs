@@ -1,6 +1,6 @@
 ﻿namespace GvanimVS
 {
-    partial class FindReport
+    partial class ReportFind
     {
         /// <summary>
         /// Required designer variable.

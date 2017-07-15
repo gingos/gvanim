@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace GvanimVS
 {
-    public partial class Report : DBform
+    public partial class ReportAdd : DBform
     {
         string mitmodedID, coordinatorID, mitmodedFirst, mitmodedLast;
-        public Report(SqlConnection con, string coordinatorID):base(con)
+        public ReportAdd(SqlConnection con, string coordinatorID):base(con)
         {
             InitializeComponent();
             this.coordinatorID = coordinatorID;
             initFields("from coordinator");
         }
-        public Report(SqlConnection con, string coordinatorID, string mitmodedID):base(con)
+        public ReportAdd(SqlConnection con, string coordinatorID, string mitmodedID):base(con)
         {
             InitializeComponent();
             this.mitmodedID = mitmodedID; 

@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace GvanimVS
 {
-    public partial class FindReport : DBform
+    public partial class ReportFind : DBform
     {
         string mitmodedID, coordinatorID;
-        public FindReport(SqlConnection con, string coordinatorID) : base(con)
+        public ReportFind(SqlConnection con, string coordinatorID) : base(con)
         {
             InitializeComponent();
             DataTable dt = SQLmethods.getColsFromTable(SQLmethods.REPORTS, "Id, mitmodedID, firstName, lastName, Created, Report, actions", cmd, da);
