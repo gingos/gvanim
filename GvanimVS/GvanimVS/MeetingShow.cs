@@ -125,40 +125,58 @@ namespace GvanimVS
         {
             close_bt.BackColor = Color.RoyalBlue;
         }
-
         private void close_bt_MouseLeave(object sender, EventArgs e)
         {
             close_bt.BackColor = Color.CornflowerBlue;
         }
-
         private void add_meeting_bt_MouseHover(object sender, EventArgs e)
         {
             add_meeting_bt.BackColor = Color.RoyalBlue;
         }
-
         private void add_meeting_bt_MouseLeave(object sender, EventArgs e)
         {
             add_meeting_bt.BackColor = Color.CornflowerBlue;
         }
-
         private void fast_search_bt_MouseHover(object sender, EventArgs e)
         {
             fast_search_bt.BackColor = Color.RoyalBlue;
         }
-
         private void fast_search_bt_MouseLeave(object sender, EventArgs e)
         {
             fast_search_bt.BackColor = Color.CornflowerBlue;
         }
-
         private void detailed_search_MouseHover(object sender, EventArgs e)
         {
             detailed_search_bt.BackColor = Color.RoyalBlue;
         }
-
         private void detailed_search_MouseLeave(object sender, EventArgs e)
         {
             detailed_search_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void meetings_dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string name = meetings_dgv["firstName", e.RowIndex].Value.ToString() + " " + meetings_dgv["lastName", e.RowIndex].Value.ToString();
+            //message box: do you wish to edit $mitmodedID
+            DialogResult dialogResult = MessageBox.Show(String.Format("{0}:\n{1}","האם ברצונכם לערוך את המתמודד",name), "אישור בחירת מתמודד", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //open mitmodedAdd with c-tor for meetings : (meetings_dgv[meetingIDColumn, e.RowIndex].Value.ToString(), con) 
+                this.Hide();
+                //using (MeetingAdd meetingEdit = new MeetingAdd (meetings_dgv["mitmodedID", e.RowIndex].Value.ToString(), "mitmoded", con))
+                using (MeetingAdd meetingEdit = new MeetingAdd(coordinatorID_lb.Text, meetings_dgv.Rows[e.RowIndex], con))
+                {
+                    meetingEdit.ShowDialog();
+                }
+                this.Show();
+                //refresh datagrid after returning from meeting edit
+                DataTable dt = fastSearch();
+                if (dt.Rows.Count != 0)
+                {
+                    meetings_dgv.DataSource = dt;
+                }
+            }
+            
         }
     }
 }

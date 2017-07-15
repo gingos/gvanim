@@ -42,7 +42,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(71, 452);
             this.close_bt.Name = "close_bt";
@@ -67,16 +67,17 @@
             this.meetings_dgv.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.meetings_dgv.Size = new System.Drawing.Size(817, 286);
             this.meetings_dgv.TabIndex = 5;
+            this.meetings_dgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.meetings_dgv_CellDoubleClick);
             // 
             // mitmoded_name_tb
             // 
             this.mitmoded_name_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mitmoded_name_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mitmoded_name_tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mitmoded_name_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.mitmoded_name_tb.Location = new System.Drawing.Point(716, 43);
             this.mitmoded_name_tb.Name = "mitmoded_name_tb";
             this.mitmoded_name_tb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mitmoded_name_tb.Size = new System.Drawing.Size(172, 18);
+            this.mitmoded_name_tb.Size = new System.Drawing.Size(172, 19);
             this.mitmoded_name_tb.TabIndex = 7;
             this.mitmoded_name_tb.Text = "חיפוש שם מתמודד";
             // 
@@ -84,7 +85,7 @@
             // 
             this.fast_search_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.fast_search_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fast_search_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fast_search_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fast_search_bt.ForeColor = System.Drawing.Color.White;
             this.fast_search_bt.Location = new System.Drawing.Point(609, 38);
             this.fast_search_bt.Name = "fast_search_bt";
@@ -100,7 +101,7 @@
             // 
             this.detailed_search_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.detailed_search_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.detailed_search_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailed_search_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailed_search_bt.ForeColor = System.Drawing.Color.White;
             this.detailed_search_bt.Location = new System.Drawing.Point(391, 36);
             this.detailed_search_bt.Name = "detailed_search_bt";
@@ -115,10 +116,10 @@
             // coordinatorID_lb
             // 
             this.coordinatorID_lb.AutoSize = true;
-            this.coordinatorID_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coordinatorID_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coordinatorID_lb.Location = new System.Drawing.Point(77, 39);
             this.coordinatorID_lb.Name = "coordinatorID_lb";
-            this.coordinatorID_lb.Size = new System.Drawing.Size(193, 20);
+            this.coordinatorID_lb.Size = new System.Drawing.Size(212, 20);
             this.coordinatorID_lb.TabIndex = 10;
             this.coordinatorID_lb.Text = "<coordinatorID_dynamic_lb>";
             // 
@@ -126,7 +127,7 @@
             // 
             this.add_meeting_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.add_meeting_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_meeting_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_meeting_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_meeting_bt.ForeColor = System.Drawing.Color.White;
             this.add_meeting_bt.Location = new System.Drawing.Point(769, 452);
             this.add_meeting_bt.Name = "add_meeting_bt";

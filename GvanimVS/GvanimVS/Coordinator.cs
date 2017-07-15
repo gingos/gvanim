@@ -127,12 +127,12 @@ namespace GvanimVS
 
         private void editMeeting_bt_MouseHover(object sender, EventArgs e)
         {
-            editMeeting_bt.BackColor = Color.RoyalBlue;
+            showMeetings_bt.BackColor = Color.RoyalBlue;
         }
 
         private void editMeeting_bt_MouseLeave(object sender, EventArgs e)
         {
-            editMeeting_bt.BackColor = Color.CornflowerBlue;
+            showMeetings_bt.BackColor = Color.CornflowerBlue;
         }
 
         private void writeReport_bt_MouseHover(object sender, EventArgs e)
