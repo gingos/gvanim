@@ -638,6 +638,52 @@ namespace GvanimVS
         }
 
         /// <summary>
+        /// Retrieve all reports by this.coordinatorID
+        /// </summary>
+        /// <param name="reportID"></param>
+        /// <param name="mitmodedID"></param>
+        /// <param name="date"></param>
+        /// <param name="cmd"></param>
+        /// <param name="da"></param>
+        /// <returns></returns>
+        public static DataTable findReport(string coordinatorID, SqlCommand cmd, SqlDataAdapter da)
+        {
+            DataTable dt = new DataTable();
+            string cmdText = "";
+            #region sqlQuery
+            cmdText =
+                "SELECT mitmoded.firstName, mitmoded.lastName, reports.* FROM ReportsTB reports, MitmodedTb mitmoded " +
+                "WHERE reports.mitmodedID = mitmoded.ID " +
+                "AND reports.coordinatorID = @pCoordinatorID ";
+            cmd.CommandText = cmdText;
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
+            #endregion
+            #region execute
+            da.SelectCommand = cmd;
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
+            #endregion
+            return dt;
+        }
+
+        /// <summary>
         /// Find meeting according to specified details
         /// </summary>
         /// <param name="meetingID"></param>

@@ -37,6 +37,7 @@
             this.searchReport_bt = new System.Windows.Forms.Button();
             this.cancel_bt = new System.Windows.Forms.Button();
             this.reports_dgv = new System.Windows.Forms.DataGridView();
+            this.addReport_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.reports_dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,6 +149,20 @@
             this.reports_dgv.TabIndex = 8;
             this.reports_dgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
+            // addReport_bt
+            // 
+            this.addReport_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.addReport_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addReport_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addReport_bt.ForeColor = System.Drawing.Color.White;
+            this.addReport_bt.Location = new System.Drawing.Point(393, 347);
+            this.addReport_bt.Name = "addReport_bt";
+            this.addReport_bt.Size = new System.Drawing.Size(97, 31);
+            this.addReport_bt.TabIndex = 9;
+            this.addReport_bt.Text = "הוספת דו\"ח";
+            this.addReport_bt.UseVisualStyleBackColor = false;
+            this.addReport_bt.Click += new System.EventHandler(this.addReport_bt_Click);
+            // 
             // ReportFind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +170,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(893, 410);
             this.ControlBox = false;
+            this.Controls.Add(this.addReport_bt);
             this.Controls.Add(this.reports_dgv);
             this.Controls.Add(this.cancel_bt);
             this.Controls.Add(this.searchReport_bt);
@@ -185,7 +201,6 @@
         private System.Windows.Forms.Button searchReport_bt;
         private System.Windows.Forms.Button cancel_bt;
         private System.Windows.Forms.DataGridView reports_dgv;
-
-       
+        private System.Windows.Forms.Button addReport_bt;
     }
 }

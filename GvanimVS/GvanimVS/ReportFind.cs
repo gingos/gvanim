@@ -13,79 +13,21 @@ namespace GvanimVS
 {
     public partial class ReportFind : DBform
     {
-        string mitmodedID, coordinatorID;
+        string coordinatorID;
         public ReportFind(SqlConnection con, string coordinatorID) : base(con)
         {
             InitializeComponent();
             this.coordinatorID = coordinatorID;
-            DataTable formDT = fastSearch();
+            //DataTable formDT = fastSearch();
+            DataTable formDT = SQLmethods.findReport(coordinatorID,cmd,da);
             if (formDT != null)
             {
                 reports_dgv.DataSource = formDT;
                 reports_dgv.Columns["coordinatorID"].Visible = false;
                 changeDataHeadersToHebrew();
                 mitmoded_name_cb.DataSource = getMitmodedNames(formDT);
+            }
 
-            }
-            
-            /*
-            DataTable namesDT = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "coordinatorID", coordinatorID, cmd, da);
-            if (namesDT == null)
-                return;
-            foreach (DataRow dr in namesDT.Rows)
-            {
-                mitmoded_name_cb.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString()
-                    + " - " + dr["ID"]);
-            }
-            */
-        }
-
-        /// <summary>
-        /// Retrieve all reports by this.coordinatorID
-        /// </summary>
-        /// <returns></returns>
-        private DataTable fastSearch()
-        {
-            DataTable dt = new DataTable();
-            string cmdText = "";
-            #region sqlQuery
-            cmdText =
-                "SELECT mitmoded.firstName, mitmoded.lastName, reports.* FROM ReportsTB reports, MitmodedTb mitmoded " +
-                "WHERE reports.mitmodedID = mitmoded.ID " +
-                "AND reports.coordinatorID = @pCoordinator ";
-            /*
-                "AND " +
-                "( (mitmoded.firstName + ' ' + mitmoded.lastName LIKE '%' + @pName + '%') " +
-                "OR (mitmoded.lastName + ' ' + mitmoded.firstName LIKE '%' + @pName + '%') " +
-                "OR (mitmoded.ID = @pName ) ) ";
-            */
-            cmd.CommandText = cmdText;
-            #endregion
-            #region addParamaters
-            cmd.Parameters.Clear();
-            //cmd.Parameters.AddWithValue("@pName", mitmoded_name_tb.Text);
-            cmd.Parameters.AddWithValue("@pCoordinator", coordinatorID);
-            #endregion
-            #region execute
-            da.SelectCommand = cmd;
-            try
-            {
-                da.Fill(dt);
-            }
-            catch (SqlException ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.ToString());
-                return null;
-            }
-            catch (TimeoutException)
-            {
-                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
-                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
-                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
-                return null;
-            }
-            #endregion
-            return dt;
         }
 
         /// <summary>
@@ -154,6 +96,16 @@ namespace GvanimVS
         private void cancel_bt_MouseLeave(object sender, EventArgs e)
         {
             cancel_bt.BackColor = Color.CornflowerBlue;
+        }
+
+        private void addReport_bt_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (ReportAdd r = new ReportAdd(con, coordinatorID))
+            {
+                r.ShowDialog();
+            }
+            this.Show();
         }
 
         private void changeDataHeadersToHebrew()
