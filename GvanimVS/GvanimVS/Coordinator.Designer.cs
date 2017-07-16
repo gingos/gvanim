@@ -31,11 +31,9 @@
             this.editCoordinator_bt = new System.Windows.Forms.Button();
             this.addMitmoded_bt = new System.Windows.Forms.Button();
             this.close_bt = new System.Windows.Forms.Button();
-            this.de_showMeetings_bt = new System.Windows.Forms.Button();
             this.showMeetings_bt = new System.Windows.Forms.Button();
             this.editMitmoded_bt = new System.Windows.Forms.Button();
             this.addMeeting_bt = new System.Windows.Forms.Button();
-            this.editReport_bt = new System.Windows.Forms.Button();
             this.showReports_bt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -84,17 +82,6 @@
             this.close_bt.Text = "סגור";
             this.close_bt.UseVisualStyleBackColor = false;
             this.close_bt.Click += new System.EventHandler(this.close_bt_Click);
-            // 
-            // de_showMeetings_bt
-            // 
-            this.de_showMeetings_bt.Enabled = false;
-            this.de_showMeetings_bt.Location = new System.Drawing.Point(364, 280);
-            this.de_showMeetings_bt.Name = "de_showMeetings_bt";
-            this.de_showMeetings_bt.Size = new System.Drawing.Size(96, 23);
-            this.de_showMeetings_bt.TabIndex = 5;
-            this.de_showMeetings_bt.Text = "הצג פגישות";
-            this.de_showMeetings_bt.UseVisualStyleBackColor = true;
-            this.de_showMeetings_bt.Click += new System.EventHandler(this.showMeetings_bt_Click);
             // 
             // showMeetings_bt
             // 
@@ -145,16 +132,6 @@
             this.addMeeting_bt.MouseLeave += new System.EventHandler(this.addMeeting_bt_MouseLeave);
             this.addMeeting_bt.MouseHover += new System.EventHandler(this.addMeeting_bt_MouseHover);
             // 
-            // editReport_bt
-            // 
-            this.editReport_bt.Location = new System.Drawing.Point(235, 280);
-            this.editReport_bt.Name = "editReport_bt";
-            this.editReport_bt.Size = new System.Drawing.Size(120, 23);
-            this.editReport_bt.TabIndex = 1;
-            this.editReport_bt.Text = "חפש דו\"ח";
-            this.editReport_bt.UseVisualStyleBackColor = true;
-            this.editReport_bt.Click += new System.EventHandler(this.editReport_bt_Click);
-            // 
             // showReports_bt
             // 
             this.showReports_bt.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -182,11 +159,9 @@
             this.Controls.Add(this.editCoordinator_bt);
             this.Controls.Add(this.addMitmoded_bt);
             this.Controls.Add(this.close_bt);
-            this.Controls.Add(this.de_showMeetings_bt);
             this.Controls.Add(this.showMeetings_bt);
             this.Controls.Add(this.editMitmoded_bt);
             this.Controls.Add(this.addMeeting_bt);
-            this.Controls.Add(this.editReport_bt);
             this.Controls.Add(this.showReports_bt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Coordinator";
@@ -199,10 +174,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button editReport_bt;
         private System.Windows.Forms.Button addMeeting_bt;
         private System.Windows.Forms.Button editMitmoded_bt;
-        private System.Windows.Forms.Button de_showMeetings_bt;
         private System.Windows.Forms.Button showReports_bt;
         private System.Windows.Forms.Button close_bt;
         private System.Windows.Forms.Button addMitmoded_bt;
