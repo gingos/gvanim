@@ -17,24 +17,91 @@ namespace GvanimVS
         public ReportFind(SqlConnection con, string coordinatorID) : base(con)
         {
             InitializeComponent();
-            DataTable dt = SQLmethods.getColsFromTable(SQLmethods.REPORTS, "Id, mitmodedID, firstName, lastName, Created, Report, actions", cmd, da);
-            if (dt != null)
-                dataGridView1.DataSource = dt;
-            changeDataHeadersToHebrew();
-            DataTable dt1 = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "coordinatorID", coordinatorID, cmd, da);
-            if (dt1 == null)
-                return;
-            foreach (DataRow dr in dt1.Rows)
+            this.coordinatorID = coordinatorID;
+            DataTable formDT = fastSearch();
+            if (formDT != null)
             {
-                comboBox1.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString()
-                    + ", תעודת זהות: " + dr["ID"]);
-            }
+                reports_dgv.DataSource = formDT;
+                reports_dgv.Columns["coordinatorID"].Visible = false;
+                changeDataHeadersToHebrew();
+                mitmoded_name_cb.DataSource = getMitmodedNames(formDT);
 
+            }
+            
+            /*
+            DataTable namesDT = SQLmethods.getColsFromTable(SQLmethods.MITMODED, "*", "coordinatorID", coordinatorID, cmd, da);
+            if (namesDT == null)
+                return;
+            foreach (DataRow dr in namesDT.Rows)
+            {
+                mitmoded_name_cb.Items.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString()
+                    + " - " + dr["ID"]);
+            }
+            */
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Retrieve all reports by this.coordinatorID
+        /// </summary>
+        /// <returns></returns>
+        private DataTable fastSearch()
         {
+            DataTable dt = new DataTable();
+            string cmdText = "";
+            #region sqlQuery
+            cmdText =
+                "SELECT mitmoded.firstName, mitmoded.lastName, reports.* FROM ReportsTB reports, MitmodedTb mitmoded " +
+                "WHERE reports.mitmodedID = mitmoded.ID " +
+                "AND reports.coordinatorID = @pCoordinator ";
+            /*
+                "AND " +
+                "( (mitmoded.firstName + ' ' + mitmoded.lastName LIKE '%' + @pName + '%') " +
+                "OR (mitmoded.lastName + ' ' + mitmoded.firstName LIKE '%' + @pName + '%') " +
+                "OR (mitmoded.ID = @pName ) ) ";
+            */
+            cmd.CommandText = cmdText;
+            #endregion
+            #region addParamaters
+            cmd.Parameters.Clear();
+            //cmd.Parameters.AddWithValue("@pName", mitmoded_name_tb.Text);
+            cmd.Parameters.AddWithValue("@pCoordinator", coordinatorID);
+            #endregion
+            #region execute
+            da.SelectCommand = cmd;
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
+            #endregion
+            return dt;
+        }
 
+        /// <summary>
+        /// Initialize combobox with mitmoded names
+        /// </summary>
+        /// format: first last - mitmodedID
+        /// <param name="dt">datatable representing ReportsTB by coordinator ID</param>
+        /// <returns></returns>
+        private object getMitmodedNames(DataTable dt)
+        {
+            List<string> names = new List<string>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                names.Add(dr["firstName"].ToString() + " " + dr["lastName"].ToString() + " - " + dr["mitmodedID"].ToString());
+            }
+            return names;
         }
 
         private void cancel_bt_Click(object sender, EventArgs e)
@@ -44,32 +111,23 @@ namespace GvanimVS
 
         private void searchReport_bt_Click(object sender, EventArgs e)
         {
-           DataTable dt = SQLmethods.findReport(reportNum_tb.Text, comboBox1.SelectedItem.ToString(), dateTimePicker1.Value.Date, cmd, da);
-           if (dt == null)
+            string mitmodedID = mitmoded_name_cb.SelectedItem.ToString();
+            //extract ID: first last - ID, so ID is at "-"+space+1
+            mitmodedID = mitmodedID.Substring(mitmodedID.IndexOf("-")+2);
+
+            //to make date of meeting optional, we overload SQL.findReport with nullable options
+            DataTable dt;
+            if (datepicker_dtp.Checked)
+                dt = SQLmethods.findReport(report_id_tb.Text,coordinatorID ,mitmodedID ,
+                    datepicker_dtp.Value.Date, cmd, da);
+            else
+                dt = SQLmethods.findReport(report_id_tb.Text, coordinatorID, mitmodedID,
+                   null, cmd, da);
+            if (dt == null)
                return;
-           dataGridView1.DataSource = dt;
+           reports_dgv.DataSource = dt;
            changeDataHeadersToHebrew();
             
-        }
-
-        private void reportNum_tb_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void FindReport_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -100,13 +158,14 @@ namespace GvanimVS
 
         private void changeDataHeadersToHebrew()
         {
-            dataGridView1.Columns["Id"].HeaderCell.Value ="מספר דוח";
-            dataGridView1.Columns["mitmodedID"].HeaderCell.Value = "תעודת זהות מתמודד";
-            dataGridView1.Columns["firstName"].HeaderCell.Value = "שם פרטי";
-            dataGridView1.Columns["lastName"].HeaderCell.Value = "שם משפחה";
-            dataGridView1.Columns["Created"].HeaderCell.Value = "תאריך";
-            dataGridView1.Columns["Report"].HeaderCell.Value = "פרטי הדוח";
-            dataGridView1.Columns["actions"].HeaderCell.Value = "פעולות שננקטו";
+            reports_dgv.Columns["Id"].HeaderCell.Value ="מספר דוח";
+            reports_dgv.Columns["mitmodedID"].HeaderCell.Value = "ת.ז. מתמודד";
+            reports_dgv.Columns["firstName"].HeaderCell.Value = "שם פרטי";
+            reports_dgv.Columns["lastName"].HeaderCell.Value = "שם משפחה";
+            reports_dgv.Columns["Created"].HeaderCell.Value = "תאריך";
+            reports_dgv.Columns["Report"].HeaderCell.Value = "פרטי הדוח";
+            reports_dgv.Columns["actions"].HeaderCell.Value = "פעולות שננקטו";
+            reports_dgv.Columns["coordinatorID"].HeaderCell.Value = "ת.ז. רכז";
         }
     }
 }
