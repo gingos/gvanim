@@ -25,10 +25,10 @@ namespace GvanimVS
             this.Text += ": " + ID;
         }
 
-        private void writeReport_bt_Click(object sender, EventArgs e)
+        private void showReports_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (ReportAdd r = new ReportAdd(con, coordinatorID))
+            using (ReportFind r = new ReportFind(con, coordinatorID))
             {
                 r.ShowDialog();
             }
@@ -137,12 +137,12 @@ namespace GvanimVS
 
         private void writeReport_bt_MouseHover(object sender, EventArgs e)
         {
-            writeReport_bt.BackColor = Color.RoyalBlue;
+            showReports_bt.BackColor = Color.RoyalBlue;
         }
 
         private void writeReport_bt_MouseLeave(object sender, EventArgs e)
         {
-            writeReport_bt.BackColor = Color.CornflowerBlue;
+            showReports_bt.BackColor = Color.CornflowerBlue;
         }
 
         private void editCoordinator_bt_MouseHover(object sender, EventArgs e)
