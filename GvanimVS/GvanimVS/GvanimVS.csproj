@@ -163,11 +163,11 @@
     <Compile Include="MeetingFind.Designer.cs">
       <DependentUpon>MeetingFind.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindReport.cs">
+    <Compile Include="ReportFind.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindReport.Designer.cs">
-      <DependentUpon>FindReport.cs</DependentUpon>
+    <Compile Include="ReportFind.Designer.cs">
+      <DependentUpon>ReportFind.cs</DependentUpon>
     </Compile>
     <Compile Include="RelatedDocs.cs">
       <SubType>Form</SubType>
@@ -236,11 +236,11 @@
     <Compile Include="RegionManagerCard.Designer.cs">
       <DependentUpon>RegionManagerCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report.cs">
+    <Compile Include="ReportAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report.Designer.cs">
-      <DependentUpon>Report.cs</DependentUpon>
+    <Compile Include="ReportAdd.Designer.cs">
+      <DependentUpon>ReportAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectMimoded.cs">
       <SubType>Form</SubType>
@@ -314,8 +314,8 @@
     <EmbeddedResource Include="MeetingFind.resx">
       <DependentUpon>MeetingFind.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindReport.resx">
-      <DependentUpon>FindReport.cs</DependentUpon>
+    <EmbeddedResource Include="ReportFind.resx">
+      <DependentUpon>ReportFind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RelatedDocs.resx">
       <DependentUpon>RelatedDocs.cs</DependentUpon>
@@ -350,8 +350,8 @@
     <EmbeddedResource Include="RegionManagerCard.resx">
       <DependentUpon>RegionManagerCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report.resx">
-      <DependentUpon>Report.cs</DependentUpon>
+    <EmbeddedResource Include="ReportAdd.resx">
+      <DependentUpon>ReportAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectMimoded.resx">
       <DependentUpon>SelectMimoded.cs</DependentUpon>

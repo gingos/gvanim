@@ -50,10 +50,10 @@
             // private_name_lb
             // 
             this.private_name_lb.AutoSize = true;
-            this.private_name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.private_name_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.private_name_lb.Location = new System.Drawing.Point(416, 49);
             this.private_name_lb.Name = "private_name_lb";
-            this.private_name_lb.Size = new System.Drawing.Size(66, 20);
+            this.private_name_lb.Size = new System.Drawing.Size(65, 20);
             this.private_name_lb.TabIndex = 0;
             this.private_name_lb.Text = "שם פרטי";
             // 
@@ -69,10 +69,10 @@
             // family_name_lb
             // 
             this.family_name_lb.AutoSize = true;
-            this.family_name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.family_name_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.family_name_lb.Location = new System.Drawing.Point(416, 90);
             this.family_name_lb.Name = "family_name_lb";
-            this.family_name_lb.Size = new System.Drawing.Size(86, 20);
+            this.family_name_lb.Size = new System.Drawing.Size(81, 20);
             this.family_name_lb.TabIndex = 0;
             this.family_name_lb.Text = "שם משפחה";
             // 
@@ -89,10 +89,10 @@
             // email_lb
             // 
             this.email_lb.AutoSize = true;
-            this.email_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email_lb.Location = new System.Drawing.Point(416, 135);
             this.email_lb.Name = "email_lb";
-            this.email_lb.Size = new System.Drawing.Size(91, 20);
+            this.email_lb.Size = new System.Drawing.Size(94, 20);
             this.email_lb.TabIndex = 0;
             this.email_lb.Text = "כתובת דוא\"ל";
             // 
@@ -109,10 +109,10 @@
             // identity_lb
             // 
             this.identity_lb.AutoSize = true;
-            this.identity_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.identity_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.identity_lb.Location = new System.Drawing.Point(416, 180);
             this.identity_lb.Name = "identity_lb";
-            this.identity_lb.Size = new System.Drawing.Size(85, 20);
+            this.identity_lb.Size = new System.Drawing.Size(87, 20);
             this.identity_lb.TabIndex = 0;
             this.identity_lb.Text = "תעודת זהות";
             // 
@@ -129,7 +129,7 @@
             // password_lb
             // 
             this.password_lb.AutoSize = true;
-            this.password_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password_lb.Location = new System.Drawing.Point(416, 229);
             this.password_lb.Name = "password_lb";
             this.password_lb.Size = new System.Drawing.Size(112, 20);
@@ -150,7 +150,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(46, 310);
             this.close_bt.Name = "close_bt";
@@ -166,7 +166,7 @@
             // 
             this.save_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.save_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save_bt.ForeColor = System.Drawing.Color.White;
             this.save_bt.Location = new System.Drawing.Point(156, 309);
             this.save_bt.Name = "save_bt";
@@ -181,11 +181,11 @@
             // email_exception_lb
             // 
             this.email_exception_lb.AutoSize = true;
-            this.email_exception_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_exception_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email_exception_lb.ForeColor = System.Drawing.Color.Red;
             this.email_exception_lb.Location = new System.Drawing.Point(42, 135);
             this.email_exception_lb.Name = "email_exception_lb";
-            this.email_exception_lb.Size = new System.Drawing.Size(163, 20);
+            this.email_exception_lb.Size = new System.Drawing.Size(165, 20);
             this.email_exception_lb.TabIndex = 4;
             this.email_exception_lb.Text = "כתובת אימייל לא תקינה";
             this.email_exception_lb.Visible = false;
@@ -193,11 +193,11 @@
             // identity_exception_lb
             // 
             this.identity_exception_lb.AutoSize = true;
-            this.identity_exception_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.identity_exception_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.identity_exception_lb.ForeColor = System.Drawing.Color.Red;
             this.identity_exception_lb.Location = new System.Drawing.Point(53, 178);
             this.identity_exception_lb.Name = "identity_exception_lb";
-            this.identity_exception_lb.Size = new System.Drawing.Size(152, 20);
+            this.identity_exception_lb.Size = new System.Drawing.Size(153, 20);
             this.identity_exception_lb.TabIndex = 4;
             this.identity_exception_lb.Text = "תעודת זהות לא תקינה";
             this.identity_exception_lb.Visible = false;
@@ -205,7 +205,7 @@
             // job_lb
             // 
             this.job_lb.AutoSize = true;
-            this.job_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.job_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job_lb.Location = new System.Drawing.Point(416, 272);
             this.job_lb.Name = "job_lb";
             this.job_lb.Size = new System.Drawing.Size(50, 20);
@@ -216,7 +216,7 @@
             // 
             this.job_cb.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.job_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.job_cb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.job_cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job_cb.FormattingEnabled = true;
             this.job_cb.Items.AddRange(new object[] {
             "מנהלת",
@@ -229,11 +229,11 @@
             // job_exception_lb
             // 
             this.job_exception_lb.AutoSize = true;
-            this.job_exception_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.job_exception_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job_exception_lb.ForeColor = System.Drawing.Color.Red;
             this.job_exception_lb.Location = new System.Drawing.Point(92, 272);
             this.job_exception_lb.Name = "job_exception_lb";
-            this.job_exception_lb.Size = new System.Drawing.Size(113, 20);
+            this.job_exception_lb.Size = new System.Drawing.Size(116, 20);
             this.job_exception_lb.TabIndex = 6;
             this.job_exception_lb.Text = "נא לבחור תפקיד";
             this.job_exception_lb.Visible = false;
@@ -244,6 +244,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(540, 363);
+            this.ControlBox = false;
             this.Controls.Add(this.job_exception_lb);
             this.Controls.Add(this.job_cb);
             this.Controls.Add(this.identity_exception_lb);
@@ -261,7 +262,7 @@
             this.Controls.Add(this.email_lb);
             this.Controls.Add(this.family_name_lb);
             this.Controls.Add(this.private_name_lb);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "CreateCoordinator";
             this.Text = "CreateCoordinator";
             this.ResumeLayout(false);

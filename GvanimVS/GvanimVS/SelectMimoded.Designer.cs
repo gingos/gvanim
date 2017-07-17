@@ -49,7 +49,7 @@
             this.mitmoded_dgv.AllowUserToDeleteRows = false;
             this.mitmoded_dgv.AllowUserToOrderColumns = true;
             this.mitmoded_dgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mitmoded_dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.mitmoded_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.mitmoded_dgv.BackgroundColor = System.Drawing.Color.White;
@@ -87,7 +87,7 @@
             this.ID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID_lb.Size = new System.Drawing.Size(85, 20);
+            this.ID_lb.Size = new System.Drawing.Size(87, 20);
             this.ID_lb.TabIndex = 3;
             this.ID_lb.Text = "תעודת זהות";
             // 
@@ -98,7 +98,7 @@
             this.firstName_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstName_lb.Name = "firstName_lb";
             this.firstName_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.firstName_lb.Size = new System.Drawing.Size(66, 20);
+            this.firstName_lb.Size = new System.Drawing.Size(65, 20);
             this.firstName_lb.TabIndex = 4;
             this.firstName_lb.Text = "שם פרטי";
             // 
@@ -108,7 +108,7 @@
             this.city_lb.Location = new System.Drawing.Point(311, 37);
             this.city_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.city_lb.Name = "city_lb";
-            this.city_lb.Size = new System.Drawing.Size(30, 20);
+            this.city_lb.Size = new System.Drawing.Size(33, 20);
             this.city_lb.TabIndex = 5;
             this.city_lb.Text = "עיר";
             // 
@@ -161,7 +161,7 @@
             this.lastName_lb.Location = new System.Drawing.Point(260, 80);
             this.lastName_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastName_lb.Name = "lastName_lb";
-            this.lastName_lb.Size = new System.Drawing.Size(86, 20);
+            this.lastName_lb.Size = new System.Drawing.Size(81, 20);
             this.lastName_lb.TabIndex = 10;
             this.lastName_lb.Text = "שם משפחה";
             // 
@@ -176,10 +176,11 @@
             // 
             // SelectMimoded
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(771, 557);
+            this.ControlBox = false;
             this.Controls.Add(this.lastName_tb);
             this.Controls.Add(this.lastName_lb);
             this.Controls.Add(this.city_tb);
@@ -191,8 +192,8 @@
             this.Controls.Add(this.ID_lb);
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.mitmoded_dgv);
-            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SelectMimoded";
             this.Text = "SelectMimoded";

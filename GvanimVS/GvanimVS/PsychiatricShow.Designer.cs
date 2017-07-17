@@ -78,7 +78,7 @@
             this.mitmoded_name_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mitmoded_name_tb.Name = "mitmoded_name_tb";
             this.mitmoded_name_tb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mitmoded_name_tb.Size = new System.Drawing.Size(228, 18);
+            this.mitmoded_name_tb.Size = new System.Drawing.Size(228, 19);
             this.mitmoded_name_tb.TabIndex = 10;
             this.mitmoded_name_tb.Text = "חיפוש שם מתמודד";
             // 
@@ -135,16 +135,17 @@
             this.coordinatorID_lb.Location = new System.Drawing.Point(104, 35);
             this.coordinatorID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.coordinatorID_lb.Name = "coordinatorID_lb";
-            this.coordinatorID_lb.Size = new System.Drawing.Size(193, 20);
+            this.coordinatorID_lb.Size = new System.Drawing.Size(212, 20);
             this.coordinatorID_lb.TabIndex = 16;
             this.coordinatorID_lb.Text = "<coordinatorID_dynamic_lb>";
             // 
             // PsychiatricShow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(924, 488);
+            this.ControlBox = false;
             this.Controls.Add(this.coordinatorID_lb);
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.add_psy_followup_bt);
@@ -152,8 +153,8 @@
             this.Controls.Add(this.detailed_search_bt);
             this.Controls.Add(this.fast_search_bt);
             this.Controls.Add(this.mitmoded_name_tb);
-            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PsychiatricShow";
             this.Text = "PsychiatricShow";

@@ -209,7 +209,7 @@
             this.firstName_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.firstName_lb.Name = "firstName_lb";
             this.firstName_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.firstName_lb.Size = new System.Drawing.Size(50, 14);
+            this.firstName_lb.Size = new System.Drawing.Size(51, 13);
             this.firstName_lb.TabIndex = 0;
             this.firstName_lb.Text = "שם פרטי";
             this.firstName_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,7 +219,7 @@
             this.firstName_tb.Location = new System.Drawing.Point(514, 34);
             this.firstName_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.firstName_tb.Name = "firstName_tb";
-            this.firstName_tb.Size = new System.Drawing.Size(167, 19);
+            this.firstName_tb.Size = new System.Drawing.Size(167, 20);
             this.firstName_tb.TabIndex = 1;
             // 
             // lastName_tb
@@ -227,7 +227,7 @@
             this.lastName_tb.Location = new System.Drawing.Point(238, 34);
             this.lastName_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.lastName_tb.Name = "lastName_tb";
-            this.lastName_tb.Size = new System.Drawing.Size(167, 19);
+            this.lastName_tb.Size = new System.Drawing.Size(167, 20);
             this.lastName_tb.TabIndex = 3;
             // 
             // lastName_lb
@@ -238,7 +238,7 @@
             this.lastName_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lastName_lb.Name = "lastName_lb";
             this.lastName_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lastName_lb.Size = new System.Drawing.Size(64, 14);
+            this.lastName_lb.Size = new System.Drawing.Size(63, 13);
             this.lastName_lb.TabIndex = 2;
             this.lastName_lb.Text = "שם משפחה";
             // 
@@ -250,7 +250,7 @@
             this.birth_dtp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.birth_dtp.Name = "birth_dtp";
             this.birth_dtp.ShowCheckBox = true;
-            this.birth_dtp.Size = new System.Drawing.Size(130, 19);
+            this.birth_dtp.Size = new System.Drawing.Size(130, 20);
             this.birth_dtp.TabIndex = 4;
             // 
             // birth_lb
@@ -260,7 +260,7 @@
             this.birth_lb.Location = new System.Drawing.Point(686, 78);
             this.birth_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.birth_lb.Name = "birth_lb";
-            this.birth_lb.Size = new System.Drawing.Size(61, 14);
+            this.birth_lb.Size = new System.Drawing.Size(69, 13);
             this.birth_lb.TabIndex = 5;
             this.birth_lb.Text = "תאריך לידה";
             // 
@@ -269,7 +269,7 @@
             this.ID_tb.Location = new System.Drawing.Point(238, 78);
             this.ID_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ID_tb.Name = "ID_tb";
-            this.ID_tb.Size = new System.Drawing.Size(167, 19);
+            this.ID_tb.Size = new System.Drawing.Size(167, 20);
             this.ID_tb.TabIndex = 7;
             // 
             // ID_lb
@@ -280,7 +280,7 @@
             this.ID_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID_lb.Size = new System.Drawing.Size(63, 14);
+            this.ID_lb.Size = new System.Drawing.Size(67, 13);
             this.ID_lb.TabIndex = 6;
             this.ID_lb.Text = "תעודת זהות";
             this.ID_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -290,7 +290,7 @@
             this.city_tb.Location = new System.Drawing.Point(514, 129);
             this.city_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.city_tb.Name = "city_tb";
-            this.city_tb.Size = new System.Drawing.Size(167, 19);
+            this.city_tb.Size = new System.Drawing.Size(167, 20);
             this.city_tb.TabIndex = 9;
             // 
             // city_lb
@@ -301,7 +301,7 @@
             this.city_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.city_lb.Name = "city_lb";
             this.city_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.city_lb.Size = new System.Drawing.Size(58, 14);
+            this.city_lb.Size = new System.Drawing.Size(64, 13);
             this.city_lb.TabIndex = 8;
             this.city_lb.Text = "עיר מגורים";
             // 
@@ -310,7 +310,7 @@
             this.address_tb.Location = new System.Drawing.Point(238, 126);
             this.address_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(167, 19);
+            this.address_tb.Size = new System.Drawing.Size(167, 20);
             this.address_tb.TabIndex = 11;
             // 
             // street_lb
@@ -321,7 +321,7 @@
             this.street_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.street_lb.Name = "street_lb";
             this.street_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.street_lb.Size = new System.Drawing.Size(52, 14);
+            this.street_lb.Size = new System.Drawing.Size(56, 13);
             this.street_lb.TabIndex = 10;
             this.street_lb.Text = "רחוב ומס\'";
             // 
@@ -330,7 +330,7 @@
             this.phone1_tb.Location = new System.Drawing.Point(514, 174);
             this.phone1_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.phone1_tb.Name = "phone1_tb";
-            this.phone1_tb.Size = new System.Drawing.Size(167, 19);
+            this.phone1_tb.Size = new System.Drawing.Size(167, 20);
             this.phone1_tb.TabIndex = 13;
             // 
             // phone1_lb
@@ -341,7 +341,7 @@
             this.phone1_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.phone1_lb.Name = "phone1_lb";
             this.phone1_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.phone1_lb.Size = new System.Drawing.Size(41, 14);
+            this.phone1_lb.Size = new System.Drawing.Size(47, 13);
             this.phone1_lb.TabIndex = 12;
             this.phone1_lb.Text = "טלפון 1";
             // 
@@ -350,7 +350,7 @@
             this.phone2_tb.Location = new System.Drawing.Point(238, 174);
             this.phone2_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.phone2_tb.Name = "phone2_tb";
-            this.phone2_tb.Size = new System.Drawing.Size(167, 19);
+            this.phone2_tb.Size = new System.Drawing.Size(167, 20);
             this.phone2_tb.TabIndex = 15;
             // 
             // phone2_lb
@@ -361,7 +361,7 @@
             this.phone2_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.phone2_lb.Name = "phone2_lb";
             this.phone2_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.phone2_lb.Size = new System.Drawing.Size(41, 14);
+            this.phone2_lb.Size = new System.Drawing.Size(47, 13);
             this.phone2_lb.TabIndex = 14;
             this.phone2_lb.Text = "טלפון 2";
             // 
@@ -407,7 +407,7 @@
             this.coordinator_id_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.coordinator_id_lb.Name = "coordinator_id_lb";
             this.coordinator_id_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.coordinator_id_lb.Size = new System.Drawing.Size(61, 14);
+            this.coordinator_id_lb.Size = new System.Drawing.Size(62, 13);
             this.coordinator_id_lb.TabIndex = 20;
             this.coordinator_id_lb.Text = "רכזת (ת.ז.):";
             // 
@@ -416,7 +416,7 @@
             this.coordinator_id_tb.Location = new System.Drawing.Point(63, 300);
             this.coordinator_id_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.coordinator_id_tb.Name = "coordinator_id_tb";
-            this.coordinator_id_tb.Size = new System.Drawing.Size(84, 19);
+            this.coordinator_id_tb.Size = new System.Drawing.Size(84, 20);
             this.coordinator_id_tb.TabIndex = 21;
             // 
             // mitmoded_card_tc
@@ -476,11 +476,11 @@
             this.mitmoded_personal_tab.Controls.Add(this.street_lb);
             this.mitmoded_personal_tab.Controls.Add(this.xml_gender_pnl);
             this.mitmoded_personal_tab.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mitmoded_personal_tab.Location = new System.Drawing.Point(4, 23);
+            this.mitmoded_personal_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_personal_tab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mitmoded_personal_tab.Name = "mitmoded_personal_tab";
             this.mitmoded_personal_tab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mitmoded_personal_tab.Size = new System.Drawing.Size(838, 629);
+            this.mitmoded_personal_tab.Size = new System.Drawing.Size(838, 630);
             this.mitmoded_personal_tab.TabIndex = 0;
             this.mitmoded_personal_tab.Text = "פרטים אישיים";
             this.mitmoded_personal_tab.UseVisualStyleBackColor = true;
@@ -490,7 +490,7 @@
             this.xml_family_status_tb.Location = new System.Drawing.Point(238, 211);
             this.xml_family_status_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_family_status_tb.Name = "xml_family_status_tb";
-            this.xml_family_status_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_family_status_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_family_status_tb.TabIndex = 41;
             // 
             // family_status_lb
@@ -501,7 +501,7 @@
             this.family_status_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.family_status_lb.Name = "family_status_lb";
             this.family_status_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.family_status_lb.Size = new System.Drawing.Size(73, 14);
+            this.family_status_lb.Size = new System.Drawing.Size(76, 13);
             this.family_status_lb.TabIndex = 40;
             this.family_status_lb.Text = "מצב משפחתי:";
             // 
@@ -513,7 +513,7 @@
             this.sex_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sex_lb.Name = "sex_lb";
             this.sex_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.sex_lb.Size = new System.Drawing.Size(23, 14);
+            this.sex_lb.Size = new System.Drawing.Size(27, 13);
             this.sex_lb.TabIndex = 36;
             this.sex_lb.Text = "מין:";
             // 
@@ -524,7 +524,7 @@
             this.xml_rehab_validity_expires_lb.Location = new System.Drawing.Point(535, 364);
             this.xml_rehab_validity_expires_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.xml_rehab_validity_expires_lb.Name = "xml_rehab_validity_expires_lb";
-            this.xml_rehab_validity_expires_lb.Size = new System.Drawing.Size(96, 14);
+            this.xml_rehab_validity_expires_lb.Size = new System.Drawing.Size(115, 13);
             this.xml_rehab_validity_expires_lb.TabIndex = 35;
             this.xml_rehab_validity_expires_lb.Text = "עדיין לא ניתן אישור";
             // 
@@ -535,7 +535,7 @@
             this.validity_expires_lb.Location = new System.Drawing.Point(686, 364);
             this.validity_expires_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.validity_expires_lb.Name = "validity_expires_lb";
-            this.validity_expires_lb.Size = new System.Drawing.Size(113, 14);
+            this.validity_expires_lb.Size = new System.Drawing.Size(122, 13);
             this.validity_expires_lb.TabIndex = 34;
             this.validity_expires_lb.Text = "תאריך פקיעת האישור:";
             // 
@@ -547,7 +547,7 @@
             this.xml_rehab_validity_cb.Location = new System.Drawing.Point(303, 320);
             this.xml_rehab_validity_cb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_rehab_validity_cb.Name = "xml_rehab_validity_cb";
-            this.xml_rehab_validity_cb.Size = new System.Drawing.Size(102, 22);
+            this.xml_rehab_validity_cb.Size = new System.Drawing.Size(102, 21);
             this.xml_rehab_validity_cb.TabIndex = 33;
             this.xml_rehab_validity_cb.SelectedIndexChanged += new System.EventHandler(this.xml_rehab_validity_cm_SelectedIndexChanged);
             // 
@@ -558,7 +558,7 @@
             this.rehab_validity_lb.Location = new System.Drawing.Point(409, 323);
             this.rehab_validity_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rehab_validity_lb.Name = "rehab_validity_lb";
-            this.rehab_validity_lb.Size = new System.Drawing.Size(93, 14);
+            this.rehab_validity_lb.Size = new System.Drawing.Size(98, 13);
             this.rehab_validity_lb.TabIndex = 32;
             this.rehab_validity_lb.Text = "משך זמן ההחלטה:";
             // 
@@ -570,7 +570,7 @@
             this.xml_rehab_committee_dtp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_rehab_committee_dtp.Name = "xml_rehab_committee_dtp";
             this.xml_rehab_committee_dtp.ShowCheckBox = true;
-            this.xml_rehab_committee_dtp.Size = new System.Drawing.Size(130, 19);
+            this.xml_rehab_committee_dtp.Size = new System.Drawing.Size(130, 20);
             this.xml_rehab_committee_dtp.TabIndex = 31;
             this.xml_rehab_committee_dtp.ValueChanged += new System.EventHandler(this.rehab_committee_dtp_ValueChanged);
             // 
@@ -593,7 +593,7 @@
             this.xml_intake_date_dtp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_intake_date_dtp.Name = "xml_intake_date_dtp";
             this.xml_intake_date_dtp.ShowCheckBox = true;
-            this.xml_intake_date_dtp.Size = new System.Drawing.Size(130, 19);
+            this.xml_intake_date_dtp.Size = new System.Drawing.Size(130, 20);
             this.xml_intake_date_dtp.TabIndex = 22;
             // 
             // intake_date_lb
@@ -603,7 +603,7 @@
             this.intake_date_lb.Location = new System.Drawing.Point(686, 267);
             this.intake_date_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.intake_date_lb.Name = "intake_date_lb";
-            this.intake_date_lb.Size = new System.Drawing.Size(70, 14);
+            this.intake_date_lb.Size = new System.Drawing.Size(76, 13);
             this.intake_date_lb.TabIndex = 23;
             this.intake_date_lb.Text = "תאריך קליטה";
             // 
@@ -637,7 +637,7 @@
             this.gender_female_rb.Location = new System.Drawing.Point(38, 4);
             this.gender_female_rb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gender_female_rb.Name = "gender_female_rb";
-            this.gender_female_rb.Size = new System.Drawing.Size(49, 18);
+            this.gender_female_rb.Size = new System.Drawing.Size(51, 17);
             this.gender_female_rb.TabIndex = 38;
             this.gender_female_rb.TabStop = true;
             this.gender_female_rb.Text = "נקבה";
@@ -650,7 +650,7 @@
             this.gender_male_rb.Location = new System.Drawing.Point(119, 4);
             this.gender_male_rb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gender_male_rb.Name = "gender_male_rb";
-            this.gender_male_rb.Size = new System.Drawing.Size(41, 18);
+            this.gender_male_rb.Size = new System.Drawing.Size(43, 17);
             this.gender_male_rb.TabIndex = 37;
             this.gender_male_rb.TabStop = true;
             this.gender_male_rb.Text = "זכר";
@@ -686,11 +686,11 @@
             this.mitmoded_contacts_tab.Controls.Add(this.referer_phone_lb);
             this.mitmoded_contacts_tab.Controls.Add(this.xml_referer_tb);
             this.mitmoded_contacts_tab.Controls.Add(this.referer_lb);
-            this.mitmoded_contacts_tab.Location = new System.Drawing.Point(4, 23);
+            this.mitmoded_contacts_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_contacts_tab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mitmoded_contacts_tab.Name = "mitmoded_contacts_tab";
             this.mitmoded_contacts_tab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mitmoded_contacts_tab.Size = new System.Drawing.Size(838, 629);
+            this.mitmoded_contacts_tab.Size = new System.Drawing.Size(838, 630);
             this.mitmoded_contacts_tab.TabIndex = 8;
             this.mitmoded_contacts_tab.Text = "אנשי קשר";
             this.mitmoded_contacts_tab.UseVisualStyleBackColor = true;
@@ -700,7 +700,7 @@
             this.xml_psychiatrist_phone_tb.Location = new System.Drawing.Point(273, 360);
             this.xml_psychiatrist_phone_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_psychiatrist_phone_tb.Name = "xml_psychiatrist_phone_tb";
-            this.xml_psychiatrist_phone_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_psychiatrist_phone_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_psychiatrist_phone_tb.TabIndex = 57;
             // 
             // psychiatrist_phone_lb
@@ -711,7 +711,7 @@
             this.psychiatrist_phone_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.psychiatrist_phone_lb.Name = "psychiatrist_phone_lb";
             this.psychiatrist_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.psychiatrist_phone_lb.Size = new System.Drawing.Size(36, 14);
+            this.psychiatrist_phone_lb.Size = new System.Drawing.Size(41, 13);
             this.psychiatrist_phone_lb.TabIndex = 56;
             this.psychiatrist_phone_lb.Text = "טלפון:";
             // 
@@ -720,7 +720,7 @@
             this.xml_psychiatrist_name_tb.Location = new System.Drawing.Point(529, 360);
             this.xml_psychiatrist_name_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_psychiatrist_name_tb.Name = "xml_psychiatrist_name_tb";
-            this.xml_psychiatrist_name_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_psychiatrist_name_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_psychiatrist_name_tb.TabIndex = 55;
             // 
             // psychiatrist_name_lb
@@ -731,7 +731,7 @@
             this.psychiatrist_name_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.psychiatrist_name_lb.Name = "psychiatrist_name_lb";
             this.psychiatrist_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.psychiatrist_name_lb.Size = new System.Drawing.Size(82, 14);
+            this.psychiatrist_name_lb.Size = new System.Drawing.Size(91, 13);
             this.psychiatrist_name_lb.TabIndex = 54;
             this.psychiatrist_name_lb.Text = "רופא פסיכיאטר:";
             // 
@@ -751,7 +751,7 @@
             this.community_phone_lb.Location = new System.Drawing.Point(453, 209);
             this.community_phone_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.community_phone_lb.Name = "community_phone_lb";
-            this.community_phone_lb.Size = new System.Drawing.Size(36, 14);
+            this.community_phone_lb.Size = new System.Drawing.Size(41, 13);
             this.community_phone_lb.TabIndex = 52;
             this.community_phone_lb.Text = "טלפון:";
             // 
@@ -763,7 +763,7 @@
             this.emergency_contact3_phone_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emergency_contact3_phone_lb.Name = "emergency_contact3_phone_lb";
             this.emergency_contact3_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.emergency_contact3_phone_lb.Size = new System.Drawing.Size(36, 14);
+            this.emergency_contact3_phone_lb.Size = new System.Drawing.Size(41, 13);
             this.emergency_contact3_phone_lb.TabIndex = 51;
             this.emergency_contact3_phone_lb.Text = "טלפון:";
             // 
@@ -775,7 +775,7 @@
             this.emergency_contact2_phone_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emergency_contact2_phone_lb.Name = "emergency_contact2_phone_lb";
             this.emergency_contact2_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.emergency_contact2_phone_lb.Size = new System.Drawing.Size(36, 14);
+            this.emergency_contact2_phone_lb.Size = new System.Drawing.Size(41, 13);
             this.emergency_contact2_phone_lb.TabIndex = 50;
             this.emergency_contact2_phone_lb.Text = "טלפון:";
             // 
@@ -784,7 +784,7 @@
             this.xml_emergency_contact3_phone_tb.Location = new System.Drawing.Point(273, 174);
             this.xml_emergency_contact3_phone_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_emergency_contact3_phone_tb.Name = "xml_emergency_contact3_phone_tb";
-            this.xml_emergency_contact3_phone_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_emergency_contact3_phone_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_emergency_contact3_phone_tb.TabIndex = 49;
             // 
             // xml_emergency_contact2_phone_tb
@@ -792,7 +792,7 @@
             this.xml_emergency_contact2_phone_tb.Location = new System.Drawing.Point(273, 136);
             this.xml_emergency_contact2_phone_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_emergency_contact2_phone_tb.Name = "xml_emergency_contact2_phone_tb";
-            this.xml_emergency_contact2_phone_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_emergency_contact2_phone_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_emergency_contact2_phone_tb.TabIndex = 48;
             // 
             // xml_emergency_contact1_phone_tb
@@ -800,7 +800,7 @@
             this.xml_emergency_contact1_phone_tb.Location = new System.Drawing.Point(273, 98);
             this.xml_emergency_contact1_phone_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_emergency_contact1_phone_tb.Name = "xml_emergency_contact1_phone_tb";
-            this.xml_emergency_contact1_phone_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_emergency_contact1_phone_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_emergency_contact1_phone_tb.TabIndex = 47;
             // 
             // emergency_contact1_phone_lb
@@ -811,7 +811,7 @@
             this.emergency_contact1_phone_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emergency_contact1_phone_lb.Name = "emergency_contact1_phone_lb";
             this.emergency_contact1_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.emergency_contact1_phone_lb.Size = new System.Drawing.Size(36, 14);
+            this.emergency_contact1_phone_lb.Size = new System.Drawing.Size(41, 13);
             this.emergency_contact1_phone_lb.TabIndex = 46;
             this.emergency_contact1_phone_lb.Text = "טלפון:";
             // 
@@ -820,7 +820,7 @@
             this.xml_family_contact_phone_tb.Location = new System.Drawing.Point(273, 58);
             this.xml_family_contact_phone_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_family_contact_phone_tb.Name = "xml_family_contact_phone_tb";
-            this.xml_family_contact_phone_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_family_contact_phone_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_family_contact_phone_tb.TabIndex = 45;
             // 
             // family_contact_phone_lb
@@ -831,7 +831,7 @@
             this.family_contact_phone_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.family_contact_phone_lb.Name = "family_contact_phone_lb";
             this.family_contact_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.family_contact_phone_lb.Size = new System.Drawing.Size(36, 14);
+            this.family_contact_phone_lb.Size = new System.Drawing.Size(41, 13);
             this.family_contact_phone_lb.TabIndex = 44;
             this.family_contact_phone_lb.Text = "טלפון:";
             // 
@@ -840,7 +840,7 @@
             this.xml_emergency_contact3_name_tb.Location = new System.Drawing.Point(529, 174);
             this.xml_emergency_contact3_name_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_emergency_contact3_name_tb.Name = "xml_emergency_contact3_name_tb";
-            this.xml_emergency_contact3_name_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_emergency_contact3_name_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_emergency_contact3_name_tb.TabIndex = 43;
             // 
             // emergency_contact3_name_lb
@@ -851,7 +851,7 @@
             this.emergency_contact3_name_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emergency_contact3_name_lb.Name = "emergency_contact3_name_lb";
             this.emergency_contact3_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.emergency_contact3_name_lb.Size = new System.Drawing.Size(114, 14);
+            this.emergency_contact3_name_lb.Size = new System.Drawing.Size(123, 13);
             this.emergency_contact3_name_lb.TabIndex = 42;
             this.emergency_contact3_name_lb.Text = "איש קשר חירום (נוסף):";
             // 
@@ -860,7 +860,7 @@
             this.xml_emergency_contact2_name_tb.Location = new System.Drawing.Point(529, 136);
             this.xml_emergency_contact2_name_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_emergency_contact2_name_tb.Name = "xml_emergency_contact2_name_tb";
-            this.xml_emergency_contact2_name_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_emergency_contact2_name_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_emergency_contact2_name_tb.TabIndex = 41;
             // 
             // emergency_contact2_name_lb
@@ -871,7 +871,7 @@
             this.emergency_contact2_name_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emergency_contact2_name_lb.Name = "emergency_contact2_name_lb";
             this.emergency_contact2_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.emergency_contact2_name_lb.Size = new System.Drawing.Size(114, 14);
+            this.emergency_contact2_name_lb.Size = new System.Drawing.Size(123, 13);
             this.emergency_contact2_name_lb.TabIndex = 40;
             this.emergency_contact2_name_lb.Text = "איש קשר חירום (נוסף):";
             // 
@@ -880,7 +880,7 @@
             this.xml_emergency_contact1_name_tb.Location = new System.Drawing.Point(529, 98);
             this.xml_emergency_contact1_name_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_emergency_contact1_name_tb.Name = "xml_emergency_contact1_name_tb";
-            this.xml_emergency_contact1_name_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_emergency_contact1_name_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_emergency_contact1_name_tb.TabIndex = 39;
             // 
             // emergency_contact1_name_lb
@@ -891,7 +891,7 @@
             this.emergency_contact1_name_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emergency_contact1_name_lb.Name = "emergency_contact1_name_lb";
             this.emergency_contact1_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.emergency_contact1_name_lb.Size = new System.Drawing.Size(84, 14);
+            this.emergency_contact1_name_lb.Size = new System.Drawing.Size(90, 13);
             this.emergency_contact1_name_lb.TabIndex = 38;
             this.emergency_contact1_name_lb.Text = "איש קשר חירום:";
             // 
@@ -900,7 +900,7 @@
             this.xml_family_contact_name_tb.Location = new System.Drawing.Point(529, 58);
             this.xml_family_contact_name_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_family_contact_name_tb.Name = "xml_family_contact_name_tb";
-            this.xml_family_contact_name_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_family_contact_name_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_family_contact_name_tb.TabIndex = 37;
             // 
             // family_contact_name_lb
@@ -911,7 +911,7 @@
             this.family_contact_name_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.family_contact_name_lb.Name = "family_contact_name_lb";
             this.family_contact_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.family_contact_name_lb.Size = new System.Drawing.Size(100, 14);
+            this.family_contact_name_lb.Size = new System.Drawing.Size(104, 13);
             this.family_contact_name_lb.TabIndex = 36;
             this.family_contact_name_lb.Text = "איש קשר במשפחה:";
             // 
@@ -931,7 +931,7 @@
             this.community_name_lb.Location = new System.Drawing.Point(709, 209);
             this.community_name_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.community_name_lb.Name = "community_name_lb";
-            this.community_name_lb.Size = new System.Drawing.Size(81, 28);
+            this.community_name_lb.Size = new System.Drawing.Size(89, 26);
             this.community_name_lb.TabIndex = 34;
             this.community_name_lb.Text = "גורמים בקהילה:\r\n(מתאמי טיפול)";
             // 
@@ -940,7 +940,7 @@
             this.xml_referer_phone_tb.Location = new System.Drawing.Point(273, 318);
             this.xml_referer_phone_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_referer_phone_tb.Name = "xml_referer_phone_tb";
-            this.xml_referer_phone_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_referer_phone_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_referer_phone_tb.TabIndex = 33;
             // 
             // referer_phone_lb
@@ -951,7 +951,7 @@
             this.referer_phone_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.referer_phone_lb.Name = "referer_phone_lb";
             this.referer_phone_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.referer_phone_lb.Size = new System.Drawing.Size(36, 14);
+            this.referer_phone_lb.Size = new System.Drawing.Size(41, 13);
             this.referer_phone_lb.TabIndex = 32;
             this.referer_phone_lb.Text = "טלפון:";
             // 
@@ -960,7 +960,7 @@
             this.xml_referer_tb.Location = new System.Drawing.Point(529, 318);
             this.xml_referer_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_referer_tb.Name = "xml_referer_tb";
-            this.xml_referer_tb.Size = new System.Drawing.Size(167, 19);
+            this.xml_referer_tb.Size = new System.Drawing.Size(167, 20);
             this.xml_referer_tb.TabIndex = 31;
             // 
             // referer_lb
@@ -971,7 +971,7 @@
             this.referer_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.referer_lb.Name = "referer_lb";
             this.referer_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.referer_lb.Size = new System.Drawing.Size(60, 14);
+            this.referer_lb.Size = new System.Drawing.Size(63, 13);
             this.referer_lb.TabIndex = 30;
             this.referer_lb.Text = "גורם מפנה:";
             // 
@@ -991,11 +991,11 @@
             this.mitmoded_personal2_tab.Controls.Add(this.xml_addictions_tb);
             this.mitmoded_personal2_tab.Controls.Add(this.addictions_lb);
             this.mitmoded_personal2_tab.Controls.Add(this.xml_general_info_tb);
-            this.mitmoded_personal2_tab.Location = new System.Drawing.Point(4, 23);
+            this.mitmoded_personal2_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_personal2_tab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mitmoded_personal2_tab.Name = "mitmoded_personal2_tab";
             this.mitmoded_personal2_tab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mitmoded_personal2_tab.Size = new System.Drawing.Size(838, 629);
+            this.mitmoded_personal2_tab.Size = new System.Drawing.Size(838, 630);
             this.mitmoded_personal2_tab.TabIndex = 1;
             this.mitmoded_personal2_tab.Text = "רקע אישי משפחתי רפואי";
             this.mitmoded_personal2_tab.UseVisualStyleBackColor = true;
@@ -1029,7 +1029,7 @@
             this.psych_track_lb.Location = new System.Drawing.Point(182, 250);
             this.psych_track_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.psych_track_lb.Name = "psych_track_lb";
-            this.psych_track_lb.Size = new System.Drawing.Size(182, 14);
+            this.psych_track_lb.Size = new System.Drawing.Size(200, 13);
             this.psych_track_lb.TabIndex = 11;
             this.psych_track_lb.Text = "מסגרת מעקב פסיכיאטרי כולל תדירות";
             // 
@@ -1051,7 +1051,7 @@
             this.medical_issues_lb.Location = new System.Drawing.Point(278, 15);
             this.medical_issues_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.medical_issues_lb.Name = "medical_issues_lb";
-            this.medical_issues_lb.Size = new System.Drawing.Size(74, 14);
+            this.medical_issues_lb.Size = new System.Drawing.Size(84, 13);
             this.medical_issues_lb.TabIndex = 9;
             this.medical_issues_lb.Text = "בעיות רפואיות";
             // 
@@ -1073,7 +1073,7 @@
             this.general_info_lb.Location = new System.Drawing.Point(542, 20);
             this.general_info_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.general_info_lb.Name = "general_info_lb";
-            this.general_info_lb.Size = new System.Drawing.Size(211, 14);
+            this.general_info_lb.Size = new System.Drawing.Size(234, 13);
             this.general_info_lb.TabIndex = 7;
             this.general_info_lb.Text = "מצב משפחתי, גיל, מגורים ופרטים רלוונטיים";
             // 
@@ -1114,7 +1114,7 @@
             this.violence_lb.Location = new System.Drawing.Point(640, 368);
             this.violence_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.violence_lb.Name = "violence_lb";
-            this.violence_lb.Size = new System.Drawing.Size(133, 14);
+            this.violence_lb.Size = new System.Drawing.Size(150, 13);
             this.violence_lb.TabIndex = 3;
             this.violence_lb.Text = "אלימות בעבר: כן\\לא, פירוט";
             // 
@@ -1136,7 +1136,7 @@
             this.addictions_lb.Location = new System.Drawing.Point(626, 250);
             this.addictions_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addictions_lb.Name = "addictions_lb";
-            this.addictions_lb.Size = new System.Drawing.Size(150, 14);
+            this.addictions_lb.Size = new System.Drawing.Size(167, 13);
             this.addictions_lb.TabIndex = 1;
             this.addictions_lb.Text = "התמכרויות בעבר: כן\\לא, פירוט";
             // 
@@ -1157,11 +1157,11 @@
             this.mitmoded_ed_army_tab.Controls.Add(this.military_lb);
             this.mitmoded_ed_army_tab.Controls.Add(this.education_lb);
             this.mitmoded_ed_army_tab.Controls.Add(this.xml_education_dgv);
-            this.mitmoded_ed_army_tab.Location = new System.Drawing.Point(4, 23);
+            this.mitmoded_ed_army_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_ed_army_tab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mitmoded_ed_army_tab.Name = "mitmoded_ed_army_tab";
             this.mitmoded_ed_army_tab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mitmoded_ed_army_tab.Size = new System.Drawing.Size(838, 629);
+            this.mitmoded_ed_army_tab.Size = new System.Drawing.Size(838, 630);
             this.mitmoded_ed_army_tab.TabIndex = 2;
             this.mitmoded_ed_army_tab.Text = "השכלה ושירות צבאי";
             this.mitmoded_ed_army_tab.UseVisualStyleBackColor = true;
@@ -1182,7 +1182,7 @@
             this.military_lb.Location = new System.Drawing.Point(627, 272);
             this.military_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.military_lb.Name = "military_lb";
-            this.military_lb.Size = new System.Drawing.Size(61, 14);
+            this.military_lb.Size = new System.Drawing.Size(69, 13);
             this.military_lb.TabIndex = 2;
             this.military_lb.Text = "שירות צבאי";
             // 
@@ -1193,7 +1193,7 @@
             this.education_lb.Location = new System.Drawing.Point(561, 27);
             this.education_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.education_lb.Name = "education_lb";
-            this.education_lb.Size = new System.Drawing.Size(136, 14);
+            this.education_lb.Size = new System.Drawing.Size(151, 13);
             this.education_lb.TabIndex = 1;
             this.education_lb.Text = "השכלה/תעודות/קורסים וכו\'";
             // 
@@ -1231,11 +1231,11 @@
             this.mitmoded_job_tab.Controls.Add(this.rec_activity_lb);
             this.mitmoded_job_tab.Controls.Add(this.employment_lb);
             this.mitmoded_job_tab.Controls.Add(this.xml_employment_dgv);
-            this.mitmoded_job_tab.Location = new System.Drawing.Point(4, 23);
+            this.mitmoded_job_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job_tab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mitmoded_job_tab.Name = "mitmoded_job_tab";
             this.mitmoded_job_tab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mitmoded_job_tab.Size = new System.Drawing.Size(838, 629);
+            this.mitmoded_job_tab.Size = new System.Drawing.Size(838, 630);
             this.mitmoded_job_tab.TabIndex = 3;
             this.mitmoded_job_tab.Text = "עבודה 1";
             this.mitmoded_job_tab.UseVisualStyleBackColor = true;
@@ -1247,7 +1247,7 @@
             this.dream_lb.Location = new System.Drawing.Point(253, 427);
             this.dream_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dream_lb.Name = "dream_lb";
-            this.dream_lb.Size = new System.Drawing.Size(171, 14);
+            this.dream_lb.Size = new System.Drawing.Size(180, 13);
             this.dream_lb.TabIndex = 16;
             this.dream_lb.Text = "מהו החלום שלך בתחום התעסוקה?";
             // 
@@ -1276,7 +1276,7 @@
             this.reason_lb.Location = new System.Drawing.Point(517, 427);
             this.reason_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.reason_lb.Name = "reason_lb";
-            this.reason_lb.Size = new System.Drawing.Size(293, 14);
+            this.reason_lb.Size = new System.Drawing.Size(319, 13);
             this.reason_lb.TabIndex = 13;
             this.reason_lb.Text = "מה הסיבה שבגללה עכשיו אתה רוצה להשתלב בשוק העבודה?";
             // 
@@ -1296,7 +1296,7 @@
             this.rec_activity_lb.Location = new System.Drawing.Point(676, 287);
             this.rec_activity_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rec_activity_lb.Name = "rec_activity_lb";
-            this.rec_activity_lb.Size = new System.Drawing.Size(114, 14);
+            this.rec_activity_lb.Size = new System.Drawing.Size(128, 13);
             this.rec_activity_lb.TabIndex = 3;
             this.rec_activity_lb.Text = "פעילויות בשעות הפנאי";
             // 
@@ -1307,7 +1307,7 @@
             this.employment_lb.Location = new System.Drawing.Point(634, 20);
             this.employment_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employment_lb.Name = "employment_lb";
-            this.employment_lb.Size = new System.Drawing.Size(150, 14);
+            this.employment_lb.Size = new System.Drawing.Size(175, 13);
             this.employment_lb.TabIndex = 2;
             this.employment_lb.Text = "ניסיון עבודה והסטוריה שיקומית";
             // 
@@ -1367,11 +1367,11 @@
             this.mitmoded_job2_tab.Controls.Add(this.xml_strengths_tb);
             this.mitmoded_job2_tab.Controls.Add(this.strengths_lb);
             this.mitmoded_job2_tab.Controls.Add(this.expectations_lb);
-            this.mitmoded_job2_tab.Location = new System.Drawing.Point(4, 23);
+            this.mitmoded_job2_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job2_tab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mitmoded_job2_tab.Name = "mitmoded_job2_tab";
             this.mitmoded_job2_tab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mitmoded_job2_tab.Size = new System.Drawing.Size(838, 629);
+            this.mitmoded_job2_tab.Size = new System.Drawing.Size(838, 630);
             this.mitmoded_job2_tab.TabIndex = 4;
             this.mitmoded_job2_tab.Text = "עבודה 2";
             this.mitmoded_job2_tab.UseVisualStyleBackColor = true;
@@ -1381,7 +1381,7 @@
             this.xml_job_scope_tb.Location = new System.Drawing.Point(432, 426);
             this.xml_job_scope_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_job_scope_tb.Name = "xml_job_scope_tb";
-            this.xml_job_scope_tb.Size = new System.Drawing.Size(259, 19);
+            this.xml_job_scope_tb.Size = new System.Drawing.Size(259, 20);
             this.xml_job_scope_tb.TabIndex = 26;
             this.xml_job_scope_tb.Text = "מלאה/ חצי משרה/ משמרות: בוקר/צהריים/ערב/לילה";
             // 
@@ -1401,7 +1401,7 @@
             this.job_free_txt_lb.Location = new System.Drawing.Point(323, 569);
             this.job_free_txt_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.job_free_txt_lb.Name = "job_free_txt_lb";
-            this.job_free_txt_lb.Size = new System.Drawing.Size(469, 14);
+            this.job_free_txt_lb.Size = new System.Drawing.Size(517, 13);
             this.job_free_txt_lb.TabIndex = 24;
             this.job_free_txt_lb.Text = "תחומים לשיפור במסגרת העבודה או שהוו קושי בעבר (התמדה, הגעה בזמן, יכולת לקבל ביקור" +
     "ת וכו\'): ";
@@ -1422,7 +1422,7 @@
             this.job_sal_expc_lb.Location = new System.Drawing.Point(440, 524);
             this.job_sal_expc_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.job_sal_expc_lb.Name = "job_sal_expc_lb";
-            this.job_sal_expc_lb.Size = new System.Drawing.Size(61, 14);
+            this.job_sal_expc_lb.Size = new System.Drawing.Size(68, 13);
             this.job_sal_expc_lb.TabIndex = 22;
             this.job_sal_expc_lb.Text = "ציפיות שכר";
             // 
@@ -1442,7 +1442,7 @@
             this.job_hours_lb.Location = new System.Drawing.Point(695, 520);
             this.job_hours_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.job_hours_lb.Name = "job_hours_lb";
-            this.job_hours_lb.Size = new System.Drawing.Size(97, 14);
+            this.job_hours_lb.Size = new System.Drawing.Size(109, 13);
             this.job_hours_lb.TabIndex = 20;
             this.job_hours_lb.Text = "שעות עבודה רצויות";
             // 
@@ -1451,7 +1451,7 @@
             this.xml_job_max_hours_tb.Location = new System.Drawing.Point(62, 470);
             this.xml_job_max_hours_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_job_max_hours_tb.Name = "xml_job_max_hours_tb";
-            this.xml_job_max_hours_tb.Size = new System.Drawing.Size(122, 19);
+            this.xml_job_max_hours_tb.Size = new System.Drawing.Size(122, 20);
             this.xml_job_max_hours_tb.TabIndex = 19;
             // 
             // job_max_hours_lb
@@ -1469,7 +1469,7 @@
             this.xml_job_day_off_tb.Location = new System.Drawing.Point(281, 474);
             this.xml_job_day_off_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_job_day_off_tb.Name = "xml_job_day_off_tb";
-            this.xml_job_day_off_tb.Size = new System.Drawing.Size(155, 19);
+            this.xml_job_day_off_tb.Size = new System.Drawing.Size(155, 20);
             this.xml_job_day_off_tb.TabIndex = 17;
             // 
             // day_off_lb
@@ -1479,7 +1479,7 @@
             this.day_off_lb.Location = new System.Drawing.Point(440, 474);
             this.day_off_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.day_off_lb.Name = "day_off_lb";
-            this.day_off_lb.Size = new System.Drawing.Size(79, 14);
+            this.day_off_lb.Size = new System.Drawing.Size(89, 13);
             this.day_off_lb.TabIndex = 16;
             this.day_off_lb.Text = "יום חופשי קבוע";
             // 
@@ -1488,7 +1488,7 @@
             this.xml_job_days_tb.Location = new System.Drawing.Point(536, 470);
             this.xml_job_days_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_job_days_tb.Name = "xml_job_days_tb";
-            this.xml_job_days_tb.Size = new System.Drawing.Size(155, 19);
+            this.xml_job_days_tb.Size = new System.Drawing.Size(155, 20);
             this.xml_job_days_tb.TabIndex = 15;
             // 
             // job_days_lb
@@ -1498,7 +1498,7 @@
             this.job_days_lb.Location = new System.Drawing.Point(720, 470);
             this.job_days_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.job_days_lb.Name = "job_days_lb";
-            this.job_days_lb.Size = new System.Drawing.Size(71, 14);
+            this.job_days_lb.Size = new System.Drawing.Size(79, 13);
             this.job_days_lb.TabIndex = 14;
             this.job_days_lb.Text = "מס\' ימי עבודה";
             // 
@@ -1509,7 +1509,7 @@
             this.job_size_lb.Location = new System.Drawing.Point(732, 430);
             this.job_size_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.job_size_lb.Name = "job_size_lb";
-            this.job_size_lb.Size = new System.Drawing.Size(63, 14);
+            this.job_size_lb.Size = new System.Drawing.Size(65, 13);
             this.job_size_lb.TabIndex = 13;
             this.job_size_lb.Text = "היקף משרה";
             // 
@@ -1520,7 +1520,7 @@
             this.job_type_lb.Location = new System.Drawing.Point(573, 402);
             this.job_type_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.job_type_lb.Name = "job_type_lb";
-            this.job_type_lb.Size = new System.Drawing.Size(219, 14);
+            this.job_type_lb.Size = new System.Drawing.Size(239, 13);
             this.job_type_lb.TabIndex = 12;
             this.job_type_lb.Text = "סוג העבודה המבוקש – העדפות למקום עבודה:";
             // 
@@ -1540,7 +1540,7 @@
             this.skills_improve_lb.Location = new System.Drawing.Point(45, 227);
             this.skills_improve_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.skills_improve_lb.Name = "skills_improve_lb";
-            this.skills_improve_lb.Size = new System.Drawing.Size(375, 14);
+            this.skills_improve_lb.Size = new System.Drawing.Size(417, 13);
             this.skills_improve_lb.TabIndex = 10;
             this.skills_improve_lb.Text = "האם יש כישורים נוספים שהיית רוצה לפתח/לרכוש כדי להיכנס לעולם העבודה? ";
             // 
@@ -1560,7 +1560,7 @@
             this.dream_todo_lb.Location = new System.Drawing.Point(156, 68);
             this.dream_todo_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dream_todo_lb.Name = "dream_todo_lb";
-            this.dream_todo_lb.Size = new System.Drawing.Size(264, 14);
+            this.dream_todo_lb.Size = new System.Drawing.Size(287, 13);
             this.dream_todo_lb.TabIndex = 8;
             this.dream_todo_lb.Text = "בכדי להגשים את החלום שלך, מה צריך לעשות לדעתך?";
             // 
@@ -1580,7 +1580,7 @@
             this.weakness_lb.Location = new System.Drawing.Point(612, 227);
             this.weakness_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.weakness_lb.Name = "weakness_lb";
-            this.weakness_lb.Size = new System.Drawing.Size(174, 14);
+            this.weakness_lb.Size = new System.Drawing.Size(192, 13);
             this.weakness_lb.TabIndex = 5;
             this.weakness_lb.Text = "איפה יותר קשה לך? (נקודות חולשה)";
             // 
@@ -1600,7 +1600,7 @@
             this.strengths_lb.Location = new System.Drawing.Point(536, 68);
             this.strengths_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.strengths_lb.Name = "strengths_lb";
-            this.strengths_lb.Size = new System.Drawing.Size(262, 14);
+            this.strengths_lb.Size = new System.Drawing.Size(284, 13);
             this.strengths_lb.TabIndex = 3;
             this.strengths_lb.Text = "מהן נקודות החוזק שלך? (במה אתה מרגיש שאתה טוב?)";
             // 
@@ -1611,7 +1611,7 @@
             this.expectations_lb.Location = new System.Drawing.Point(695, 31);
             this.expectations_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.expectations_lb.Name = "expectations_lb";
-            this.expectations_lb.Size = new System.Drawing.Size(82, 14);
+            this.expectations_lb.Size = new System.Drawing.Size(93, 13);
             this.expectations_lb.TabIndex = 0;
             this.expectations_lb.Text = "ציפיות מהעבודה";
             // 
@@ -1619,11 +1619,11 @@
             // 
             this.mitmoded_job3_tab.Controls.Add(this.xml_job_preferences_dgv);
             this.mitmoded_job3_tab.Controls.Add(this.xml_skills_dgv);
-            this.mitmoded_job3_tab.Location = new System.Drawing.Point(4, 23);
+            this.mitmoded_job3_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job3_tab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mitmoded_job3_tab.Name = "mitmoded_job3_tab";
             this.mitmoded_job3_tab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mitmoded_job3_tab.Size = new System.Drawing.Size(838, 629);
+            this.mitmoded_job3_tab.Size = new System.Drawing.Size(838, 630);
             this.mitmoded_job3_tab.TabIndex = 5;
             this.mitmoded_job3_tab.Text = "עבודה 3";
             this.mitmoded_job3_tab.UseVisualStyleBackColor = true;
@@ -1680,11 +1680,11 @@
             this.mitmoded_job4_tab.Controls.Add(this.job__free_text_lb);
             this.mitmoded_job4_tab.Controls.Add(this.xml_job_target_tb);
             this.mitmoded_job4_tab.Controls.Add(this.job_target_lb);
-            this.mitmoded_job4_tab.Location = new System.Drawing.Point(4, 23);
+            this.mitmoded_job4_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_job4_tab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mitmoded_job4_tab.Name = "mitmoded_job4_tab";
             this.mitmoded_job4_tab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mitmoded_job4_tab.Size = new System.Drawing.Size(838, 629);
+            this.mitmoded_job4_tab.Size = new System.Drawing.Size(838, 630);
             this.mitmoded_job4_tab.TabIndex = 6;
             this.mitmoded_job4_tab.Text = "עבודה 4";
             this.mitmoded_job4_tab.UseVisualStyleBackColor = true;
@@ -1706,7 +1706,7 @@
             this.job_first_targets_lb.Location = new System.Drawing.Point(687, 234);
             this.job_first_targets_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.job_first_targets_lb.Name = "job_first_targets_lb";
-            this.job_first_targets_lb.Size = new System.Drawing.Size(84, 14);
+            this.job_first_targets_lb.Size = new System.Drawing.Size(92, 13);
             this.job_first_targets_lb.TabIndex = 7;
             this.job_first_targets_lb.Text = "מטרות ראשוניות";
             // 
@@ -1717,7 +1717,7 @@
             this.job_initial_lb.Location = new System.Drawing.Point(629, 181);
             this.job_initial_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.job_initial_lb.Name = "job_initial_lb";
-            this.job_initial_lb.Size = new System.Drawing.Size(146, 14);
+            this.job_initial_lb.Size = new System.Drawing.Size(158, 13);
             this.job_initial_lb.TabIndex = 6;
             this.job_initial_lb.Text = "הערכה ראשונית של המתמודד";
             // 
@@ -1726,7 +1726,7 @@
             this.xml_first_impression.Location = new System.Drawing.Point(161, 181);
             this.xml_first_impression.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_first_impression.Name = "xml_first_impression";
-            this.xml_first_impression.Size = new System.Drawing.Size(449, 19);
+            this.xml_first_impression.Size = new System.Drawing.Size(449, 20);
             this.xml_first_impression.TabIndex = 5;
             // 
             // summary_lb
@@ -1736,7 +1736,7 @@
             this.summary_lb.Location = new System.Drawing.Point(732, 132);
             this.summary_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.summary_lb.Name = "summary_lb";
-            this.summary_lb.Size = new System.Drawing.Size(34, 14);
+            this.summary_lb.Size = new System.Drawing.Size(38, 13);
             this.summary_lb.TabIndex = 4;
             this.summary_lb.Text = "סיכום";
             // 
@@ -1764,7 +1764,7 @@
             this.xml_job_target_tb.Location = new System.Drawing.Point(161, 46);
             this.xml_job_target_tb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.xml_job_target_tb.Name = "xml_job_target_tb";
-            this.xml_job_target_tb.Size = new System.Drawing.Size(449, 19);
+            this.xml_job_target_tb.Size = new System.Drawing.Size(449, 20);
             this.xml_job_target_tb.TabIndex = 1;
             // 
             // job_target_lb
@@ -1774,7 +1774,7 @@
             this.job_target_lb.Location = new System.Drawing.Point(652, 46);
             this.job_target_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.job_target_lb.Name = "job_target_lb";
-            this.job_target_lb.Size = new System.Drawing.Size(120, 14);
+            this.job_target_lb.Size = new System.Drawing.Size(130, 13);
             this.job_target_lb.TabIndex = 0;
             this.job_target_lb.Text = "מטרת על לחיפוש עבודה";
             // 
@@ -1794,11 +1794,11 @@
             this.mitmoded_print_tab.Controls.Add(this.name_dynamic_lb);
             this.mitmoded_print_tab.Controls.Add(this.ID2_lb);
             this.mitmoded_print_tab.Controls.Add(this.name_lb);
-            this.mitmoded_print_tab.Location = new System.Drawing.Point(4, 23);
+            this.mitmoded_print_tab.Location = new System.Drawing.Point(4, 22);
             this.mitmoded_print_tab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mitmoded_print_tab.Name = "mitmoded_print_tab";
             this.mitmoded_print_tab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mitmoded_print_tab.Size = new System.Drawing.Size(838, 629);
+            this.mitmoded_print_tab.Size = new System.Drawing.Size(838, 630);
             this.mitmoded_print_tab.TabIndex = 7;
             this.mitmoded_print_tab.Text = "חתימה והדפסה";
             this.mitmoded_print_tab.UseVisualStyleBackColor = true;
@@ -1828,7 +1828,7 @@
             this.xml_last_signed_dynamic_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.xml_last_signed_dynamic_lb.Name = "xml_last_signed_dynamic_lb";
             this.xml_last_signed_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.xml_last_signed_dynamic_lb.Size = new System.Drawing.Size(69, 14);
+            this.xml_last_signed_dynamic_lb.Size = new System.Drawing.Size(72, 13);
             this.xml_last_signed_dynamic_lb.TabIndex = 38;
             this.xml_last_signed_dynamic_lb.Text = "<last_signed>";
             // 
@@ -1840,7 +1840,7 @@
             this.last_signed_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.last_signed_lb.Name = "last_signed_lb";
             this.last_signed_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.last_signed_lb.Size = new System.Drawing.Size(107, 14);
+            this.last_signed_lb.Size = new System.Drawing.Size(116, 13);
             this.last_signed_lb.TabIndex = 37;
             this.last_signed_lb.Text = "תאריך חתימה אחרון: ";
             // 
@@ -1853,7 +1853,7 @@
             this.xml_saved_file_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.xml_saved_file_lb.Name = "xml_saved_file_lb";
             this.xml_saved_file_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.xml_saved_file_lb.Size = new System.Drawing.Size(116, 14);
+            this.xml_saved_file_lb.Size = new System.Drawing.Size(129, 13);
             this.xml_saved_file_lb.TabIndex = 36;
             this.xml_saved_file_lb.Text = "אין קובץ שמור במערכת";
             this.xml_saved_file_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1868,7 +1868,7 @@
             this.chosen_file_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.chosen_file_lb.Name = "chosen_file_lb";
             this.chosen_file_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chosen_file_lb.Size = new System.Drawing.Size(95, 14);
+            this.chosen_file_lb.Size = new System.Drawing.Size(106, 13);
             this.chosen_file_lb.TabIndex = 35;
             this.chosen_file_lb.Text = "בחרו קובץ לשמירה";
             this.chosen_file_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1967,7 +1967,7 @@
             this.ID_dynamic_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ID_dynamic_lb.Name = "ID_dynamic_lb";
             this.ID_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID_dynamic_lb.Size = new System.Drawing.Size(30, 14);
+            this.ID_dynamic_lb.Size = new System.Drawing.Size(30, 13);
             this.ID_dynamic_lb.TabIndex = 29;
             this.ID_dynamic_lb.Text = "<ID>";
             this.ID_dynamic_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1981,7 +1981,7 @@
             this.name_dynamic_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.name_dynamic_lb.Name = "name_dynamic_lb";
             this.name_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_dynamic_lb.Size = new System.Drawing.Size(44, 14);
+            this.name_dynamic_lb.Size = new System.Drawing.Size(45, 13);
             this.name_dynamic_lb.TabIndex = 28;
             this.name_dynamic_lb.Text = "<name>";
             this.name_dynamic_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1994,7 +1994,7 @@
             this.ID2_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ID2_lb.Name = "ID2_lb";
             this.ID2_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID2_lb.Size = new System.Drawing.Size(28, 14);
+            this.ID2_lb.Size = new System.Drawing.Size(28, 13);
             this.ID2_lb.TabIndex = 27;
             this.ID2_lb.Text = "ת.ז.:";
             // 
@@ -2006,13 +2006,13 @@
             this.name_lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_lb.Size = new System.Drawing.Size(72, 14);
+            this.name_lb.Size = new System.Drawing.Size(76, 13);
             this.name_lb.TabIndex = 26;
             this.name_lb.Text = "שם המתמודד:";
             // 
             // MitmodedCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(846, 694);
@@ -2020,8 +2020,8 @@
             this.Controls.Add(this.cancel_bt);
             this.Controls.Add(this.ok_bt);
             this.Controls.Add(this.mitmoded_card_tc);
-            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "MitmodedCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -135,18 +135,19 @@
             // 
             // RegionManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(472, 549);
+            this.ControlBox = false;
             this.Controls.Add(this.info_bt);
             this.Controls.Add(this.ok_bt);
             this.Controls.Add(this.showMeetings_bt);
             this.Controls.Add(this.showReports_bt);
             this.Controls.Add(this.addCoordinator_bt);
             this.Controls.Add(this.addMitmoded_bt);
-            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RegionManager";
             this.Text = "RegionManager";

@@ -34,16 +34,14 @@
             this.showMeetings_bt = new System.Windows.Forms.Button();
             this.editMitmoded_bt = new System.Windows.Forms.Button();
             this.addMeeting_bt = new System.Windows.Forms.Button();
-            this.editReport_bt = new System.Windows.Forms.Button();
-            this.writeReport_bt = new System.Windows.Forms.Button();
-            this.editMeeting_bt = new System.Windows.Forms.Button();
+            this.showReports_bt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // editCoordinator_bt
             // 
             this.editCoordinator_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.editCoordinator_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editCoordinator_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editCoordinator_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editCoordinator_bt.ForeColor = System.Drawing.Color.White;
             this.editCoordinator_bt.Location = new System.Drawing.Point(222, 135);
             this.editCoordinator_bt.Name = "editCoordinator_bt";
@@ -59,7 +57,7 @@
             // 
             this.addMitmoded_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.addMitmoded_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addMitmoded_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMitmoded_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMitmoded_bt.ForeColor = System.Drawing.Color.White;
             this.addMitmoded_bt.Location = new System.Drawing.Point(364, 95);
             this.addMitmoded_bt.Name = "addMitmoded_bt";
@@ -75,31 +73,37 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(32, 317);
             this.close_bt.Name = "close_bt";
             this.close_bt.Size = new System.Drawing.Size(96, 32);
             this.close_bt.TabIndex = 6;
-            this.close_bt.Text = "ביטול";
+            this.close_bt.Text = "סגור";
             this.close_bt.UseVisualStyleBackColor = false;
             this.close_bt.Click += new System.EventHandler(this.close_bt_Click);
             // 
             // showMeetings_bt
             // 
-            this.showMeetings_bt.Location = new System.Drawing.Point(364, 280);
+            this.showMeetings_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.showMeetings_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showMeetings_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showMeetings_bt.ForeColor = System.Drawing.Color.White;
+            this.showMeetings_bt.Location = new System.Drawing.Point(222, 175);
             this.showMeetings_bt.Name = "showMeetings_bt";
-            this.showMeetings_bt.Size = new System.Drawing.Size(96, 23);
-            this.showMeetings_bt.TabIndex = 5;
+            this.showMeetings_bt.Size = new System.Drawing.Size(133, 33);
+            this.showMeetings_bt.TabIndex = 4;
             this.showMeetings_bt.Text = "הצג פגישות";
-            this.showMeetings_bt.UseVisualStyleBackColor = true;
+            this.showMeetings_bt.UseVisualStyleBackColor = false;
             this.showMeetings_bt.Click += new System.EventHandler(this.showMeetings_bt_Click);
+            this.showMeetings_bt.MouseLeave += new System.EventHandler(this.editMeeting_bt_MouseLeave);
+            this.showMeetings_bt.MouseHover += new System.EventHandler(this.editMeeting_bt_MouseHover);
             // 
             // editMitmoded_bt
             // 
             this.editMitmoded_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.editMitmoded_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editMitmoded_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editMitmoded_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editMitmoded_bt.ForeColor = System.Drawing.Color.White;
             this.editMitmoded_bt.Location = new System.Drawing.Point(222, 95);
             this.editMitmoded_bt.Name = "editMitmoded_bt";
@@ -116,9 +120,9 @@
             this.addMeeting_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.addMeeting_bt.Enabled = false;
             this.addMeeting_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addMeeting_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMeeting_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMeeting_bt.ForeColor = System.Drawing.Color.White;
-            this.addMeeting_bt.Location = new System.Drawing.Point(364, 175);
+            this.addMeeting_bt.Location = new System.Drawing.Point(513, 280);
             this.addMeeting_bt.Name = "addMeeting_bt";
             this.addMeeting_bt.Size = new System.Drawing.Size(144, 33);
             this.addMeeting_bt.TabIndex = 2;
@@ -128,49 +132,21 @@
             this.addMeeting_bt.MouseLeave += new System.EventHandler(this.addMeeting_bt_MouseLeave);
             this.addMeeting_bt.MouseHover += new System.EventHandler(this.addMeeting_bt_MouseHover);
             // 
-            // editReport_bt
+            // showReports_bt
             // 
-            this.editReport_bt.Location = new System.Drawing.Point(235, 280);
-            this.editReport_bt.Name = "editReport_bt";
-            this.editReport_bt.Size = new System.Drawing.Size(120, 23);
-            this.editReport_bt.TabIndex = 1;
-            this.editReport_bt.Text = "חפש דו\"ח";
-            this.editReport_bt.UseVisualStyleBackColor = true;
-            this.editReport_bt.Click += new System.EventHandler(this.editReport_bt_Click);
-            // 
-            // writeReport_bt
-            // 
-            this.writeReport_bt.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.writeReport_bt.Enabled = false;
-            this.writeReport_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.writeReport_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.writeReport_bt.ForeColor = System.Drawing.Color.White;
-            this.writeReport_bt.Location = new System.Drawing.Point(364, 135);
-            this.writeReport_bt.Name = "writeReport_bt";
-            this.writeReport_bt.Size = new System.Drawing.Size(144, 34);
-            this.writeReport_bt.TabIndex = 0;
-            this.writeReport_bt.Text = "כתוב דו\"ח";
-            this.writeReport_bt.UseMnemonic = false;
-            this.writeReport_bt.UseVisualStyleBackColor = false;
-            this.writeReport_bt.Click += new System.EventHandler(this.writeReport_bt_Click);
-            this.writeReport_bt.MouseLeave += new System.EventHandler(this.writeReport_bt_MouseLeave);
-            this.writeReport_bt.MouseHover += new System.EventHandler(this.writeReport_bt_MouseHover);
-            // 
-            // editMeeting_bt
-            // 
-            this.editMeeting_bt.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.editMeeting_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editMeeting_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editMeeting_bt.ForeColor = System.Drawing.Color.White;
-            this.editMeeting_bt.Location = new System.Drawing.Point(222, 175);
-            this.editMeeting_bt.Name = "editMeeting_bt";
-            this.editMeeting_bt.Size = new System.Drawing.Size(133, 33);
-            this.editMeeting_bt.TabIndex = 4;
-            this.editMeeting_bt.Text = "ערוך פרטי פגישה";
-            this.editMeeting_bt.UseVisualStyleBackColor = false;
-            this.editMeeting_bt.Click += new System.EventHandler(this.editMeeting_bt_Click);
-            this.editMeeting_bt.MouseLeave += new System.EventHandler(this.editMeeting_bt_MouseLeave);
-            this.editMeeting_bt.MouseHover += new System.EventHandler(this.editMeeting_bt_MouseHover);
+            this.showReports_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.showReports_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showReports_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showReports_bt.ForeColor = System.Drawing.Color.White;
+            this.showReports_bt.Location = new System.Drawing.Point(364, 175);
+            this.showReports_bt.Name = "showReports_bt";
+            this.showReports_bt.Size = new System.Drawing.Size(144, 34);
+            this.showReports_bt.TabIndex = 0;
+            this.showReports_bt.Text = "הצג דו\"חות";
+            this.showReports_bt.UseVisualStyleBackColor = false;
+            this.showReports_bt.Click += new System.EventHandler(this.showReports_bt_Click);
+            this.showReports_bt.MouseLeave += new System.EventHandler(this.writeReport_bt_MouseLeave);
+            this.showReports_bt.MouseHover += new System.EventHandler(this.writeReport_bt_MouseHover);
             // 
             // Coordinator
             // 
@@ -184,12 +160,10 @@
             this.Controls.Add(this.addMitmoded_bt);
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.showMeetings_bt);
-            this.Controls.Add(this.editMeeting_bt);
             this.Controls.Add(this.editMitmoded_bt);
             this.Controls.Add(this.addMeeting_bt);
-            this.Controls.Add(this.editReport_bt);
-            this.Controls.Add(this.writeReport_bt);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.showReports_bt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Coordinator";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -200,14 +174,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button editReport_bt;
         private System.Windows.Forms.Button addMeeting_bt;
         private System.Windows.Forms.Button editMitmoded_bt;
-        private System.Windows.Forms.Button showMeetings_bt;
-        private System.Windows.Forms.Button writeReport_bt;
+        private System.Windows.Forms.Button showReports_bt;
         private System.Windows.Forms.Button close_bt;
         private System.Windows.Forms.Button addMitmoded_bt;
         private System.Windows.Forms.Button editCoordinator_bt;
-        private System.Windows.Forms.Button editMeeting_bt;
+        private System.Windows.Forms.Button showMeetings_bt;
     }
 }

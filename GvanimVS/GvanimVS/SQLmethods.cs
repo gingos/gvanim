@@ -574,25 +574,48 @@ namespace GvanimVS
         }
 
         /// <summary>
-        /// Find report according to repordID\userID\date
+        /// Find report according to repordID\userID\date?
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="reportID"></param>
         /// <param name="mitmodedID"></param>
         /// <param name="date"></param>
         /// <param name="cmd"></param>
         /// <param name="da"></param>
         /// <returns></returns>
-        public static DataTable findReport(string id, string mitmodedID, DateTime date, SqlCommand cmd, SqlDataAdapter da)
+        public static DataTable findReport(string reportID, string coordinatorID, string mitmodedID, DateTime? date, SqlCommand cmd, SqlDataAdapter da)
         {
             DataTable dt = new DataTable();
+            #region sqlQuery
+            if (date != null)
+            {
+                cmd.CommandText = "SELECT mitmoded.firstName, mitmoded.lastName, reports.* " +
+                    "FROM " + REPORTS + " reports, " + MITMODED + " mitmoded " +
+                    "WHERE reports.Id LIKE '%' + @pReportID +'%' " +
+                    "AND reports.coordinatorID LIKE '%' + @pCoordinatorID + '%' " +
+                    "AND reports.MitmodedID LIKE '%' + @pMitmoded +'%' " +
+                    "AND reports.mitmodedID = mitmoded.ID " +
+                    "AND Created = @pDate ";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT mitmoded.firstName, mitmoded.lastName, reports.* " +
+                    "FROM " + REPORTS +" reports, " + MITMODED + " mitmoded " + 
+                    "WHERE reports.Id LIKE '%' + @pReportID +'%' " +
+                    "AND reports.coordinatorID LIKE '%' + @pCoordinatorID + '%' " +
+                    "AND reports.MitmodedID LIKE '%' + @pMitmoded +'%' " + 
+                    "AND reports.mitmodedID = mitmoded.ID";    
+            }
 
-            cmd.CommandText = "SELECT * FROM " + REPORTS + "WHERE Id = @pID AND MitmodedID = @pMitmoded AND Created = @pDate";
-
+            #endregion
+            #region addParamters
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@pID", id);
-            cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
+            cmd.Parameters.AddWithValue("@pReportID", reportID);
+            if (date != null)
+                cmd.Parameters.Add("@pDate", SqlDbType.Date).Value = date;
             cmd.Parameters.AddWithValue("@pMitmoded", mitmodedID);
-
+            cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
+            #endregion
+            #region execute
             da.SelectCommand = cmd;
             try
             {
@@ -610,7 +633,53 @@ namespace GvanimVS
                     System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
                 return null;
             }
+            #endregion
+            return dt;
+        }
 
+        /// <summary>
+        /// Retrieve all reports by this.coordinatorID
+        /// </summary>
+        /// <param name="reportID"></param>
+        /// <param name="mitmodedID"></param>
+        /// <param name="date"></param>
+        /// <param name="cmd"></param>
+        /// <param name="da"></param>
+        /// <returns></returns>
+        public static DataTable findReport(string coordinatorID, SqlCommand cmd, SqlDataAdapter da)
+        {
+            DataTable dt = new DataTable();
+            string cmdText = "";
+            #region sqlQuery
+            cmdText =
+                "SELECT mitmoded.firstName, mitmoded.lastName, reports.* FROM ReportsTB reports, MitmodedTb mitmoded " +
+                "WHERE reports.mitmodedID = mitmoded.ID " +
+                "AND reports.coordinatorID = @pCoordinatorID ";
+            cmd.CommandText = cmdText;
+            #endregion
+            #region addParamters
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@pCoordinatorID", coordinatorID);
+            #endregion
+            #region execute
+            da.SelectCommand = cmd;
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (SqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return null;
+            }
+            catch (TimeoutException)
+            {
+                System.Windows.Forms.MessageBox.Show("משך הזמן התקין ליצירת קשר עם השרת עבר." + "\n"
+                    + "אנא בדקו את חיבור האינטרנט ונסו שוב", "שגיאת חיבור", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error, System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                    System.Windows.Forms.MessageBoxOptions.RightAlign | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                return null;
+            }
+            #endregion
             return dt;
         }
 

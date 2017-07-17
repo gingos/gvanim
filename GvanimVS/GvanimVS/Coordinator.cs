@@ -26,10 +26,10 @@ namespace GvanimVS
             this.Text += ": " + ID;
         }
 
-        private void writeReport_bt_Click(object sender, EventArgs e)
+        private void showReports_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (Report r = new Report(con, coordinatorID))
+            using (ReportFind r = new ReportFind(con, coordinatorID))
             {
                 r.ShowDialog();
             }
@@ -39,7 +39,7 @@ namespace GvanimVS
         {
             //TODO: yair : create search by parameter in FindReport for reports and create a full ctor in Report for viewing the report
             this.Hide();
-            using (FindReport fr = new FindReport(con, coordinatorID))
+            using (ReportFind fr = new ReportFind(con, coordinatorID))
             {
                 fr.ShowDialog();
             }
@@ -128,22 +128,22 @@ namespace GvanimVS
 
         private void editMeeting_bt_MouseHover(object sender, EventArgs e)
         {
-            editMeeting_bt.BackColor = Color.RoyalBlue;
+            showMeetings_bt.BackColor = Color.RoyalBlue;
         }
 
         private void editMeeting_bt_MouseLeave(object sender, EventArgs e)
         {
-            editMeeting_bt.BackColor = Color.CornflowerBlue;
+            showMeetings_bt.BackColor = Color.CornflowerBlue;
         }
 
         private void writeReport_bt_MouseHover(object sender, EventArgs e)
         {
-            writeReport_bt.BackColor = Color.RoyalBlue;
+            showReports_bt.BackColor = Color.RoyalBlue;
         }
 
         private void writeReport_bt_MouseLeave(object sender, EventArgs e)
         {
-            writeReport_bt.BackColor = Color.CornflowerBlue;
+            showReports_bt.BackColor = Color.CornflowerBlue;
         }
 
         private void editCoordinator_bt_MouseHover(object sender, EventArgs e)

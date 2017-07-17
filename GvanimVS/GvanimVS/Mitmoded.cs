@@ -100,7 +100,7 @@ namespace GvanimVS
         private void add_report_bt_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (var report = new Report(con, coordinatorID, ID_dynamic_lb.Text))
+            using (var report = new ReportAdd(con, coordinatorID, ID_dynamic_lb.Text))
             {
                 report.ShowDialog();
             }
