@@ -40,7 +40,7 @@
             // 
             this.editCoordinator_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.editCoordinator_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editCoordinator_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editCoordinator_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editCoordinator_bt.ForeColor = System.Drawing.Color.White;
             this.editCoordinator_bt.Location = new System.Drawing.Point(222, 135);
             this.editCoordinator_bt.Name = "editCoordinator_bt";
@@ -56,7 +56,7 @@
             // 
             this.addMitmoded_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.addMitmoded_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addMitmoded_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMitmoded_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMitmoded_bt.ForeColor = System.Drawing.Color.White;
             this.addMitmoded_bt.Location = new System.Drawing.Point(364, 95);
             this.addMitmoded_bt.Name = "addMitmoded_bt";
@@ -72,7 +72,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(32, 317);
             this.close_bt.Name = "close_bt";
@@ -86,7 +86,7 @@
             // 
             this.showMeetings_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.showMeetings_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showMeetings_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showMeetings_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showMeetings_bt.ForeColor = System.Drawing.Color.White;
             this.showMeetings_bt.Location = new System.Drawing.Point(222, 175);
             this.showMeetings_bt.Name = "showMeetings_bt";
@@ -102,7 +102,7 @@
             // 
             this.editMitmoded_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.editMitmoded_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editMitmoded_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editMitmoded_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editMitmoded_bt.ForeColor = System.Drawing.Color.White;
             this.editMitmoded_bt.Location = new System.Drawing.Point(222, 95);
             this.editMitmoded_bt.Name = "editMitmoded_bt";
@@ -118,7 +118,7 @@
             // 
             this.showReports_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.showReports_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showReports_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showReports_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showReports_bt.ForeColor = System.Drawing.Color.White;
             this.showReports_bt.Location = new System.Drawing.Point(364, 175);
             this.showReports_bt.Name = "showReports_bt";
@@ -144,6 +144,7 @@
             this.Controls.Add(this.showMeetings_bt);
             this.Controls.Add(this.editMitmoded_bt);
             this.Controls.Add(this.showReports_bt);
+            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Coordinator";
             this.Padding = new System.Windows.Forms.Padding(1);

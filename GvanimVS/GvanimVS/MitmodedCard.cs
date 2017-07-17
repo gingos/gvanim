@@ -1219,6 +1219,11 @@ namespace GvanimVS
             cancel_bt.BackColor = Color.CornflowerBlue;
         }
 
+        private void mitmoded_personal_tab_Click(object sender, EventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// Calculate score by number of education institutes
         /// </summary>

@@ -57,11 +57,11 @@
             // firstName_lb
             // 
             this.firstName_lb.AutoSize = true;
-            this.firstName_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstName_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstName_lb.Location = new System.Drawing.Point(469, 41);
             this.firstName_lb.Name = "firstName_lb";
             this.firstName_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.firstName_lb.Size = new System.Drawing.Size(65, 20);
+            this.firstName_lb.Size = new System.Drawing.Size(66, 20);
             this.firstName_lb.TabIndex = 0;
             this.firstName_lb.Text = "שם פרטי";
             this.firstName_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,32 +89,32 @@
             // lastName_lb
             // 
             this.lastName_lb.AutoSize = true;
-            this.lastName_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastName_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastName_lb.Location = new System.Drawing.Point(469, 79);
             this.lastName_lb.Name = "lastName_lb";
             this.lastName_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lastName_lb.Size = new System.Drawing.Size(81, 20);
+            this.lastName_lb.Size = new System.Drawing.Size(86, 20);
             this.lastName_lb.TabIndex = 2;
             this.lastName_lb.Text = "שם משפחה";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(263, 122);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // birth_lb
             // 
             this.birth_lb.AutoSize = true;
-            this.birth_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birth_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birth_lb.Location = new System.Drawing.Point(469, 122);
             this.birth_lb.Name = "birth_lb";
-            this.birth_lb.Size = new System.Drawing.Size(88, 20);
+            this.birth_lb.Size = new System.Drawing.Size(83, 20);
             this.birth_lb.TabIndex = 5;
             this.birth_lb.Text = "תאריך לידה";
             // 
@@ -131,11 +131,11 @@
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
-            this.ID_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_lb.Location = new System.Drawing.Point(469, 161);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID_lb.Size = new System.Drawing.Size(87, 20);
+            this.ID_lb.Size = new System.Drawing.Size(85, 20);
             this.ID_lb.TabIndex = 6;
             this.ID_lb.Text = "תעודת זהות";
             this.ID_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,11 +153,11 @@
             // city_lb
             // 
             this.city_lb.AutoSize = true;
-            this.city_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.city_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.city_lb.Location = new System.Drawing.Point(469, 201);
             this.city_lb.Name = "city_lb";
             this.city_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.city_lb.Size = new System.Drawing.Size(82, 20);
+            this.city_lb.Size = new System.Drawing.Size(77, 20);
             this.city_lb.TabIndex = 8;
             this.city_lb.Text = "עיר מגורים";
             // 
@@ -174,11 +174,11 @@
             // street_lb
             // 
             this.street_lb.AutoSize = true;
-            this.street_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.street_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.street_lb.Location = new System.Drawing.Point(469, 243);
             this.street_lb.Name = "street_lb";
             this.street_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.street_lb.Size = new System.Drawing.Size(73, 20);
+            this.street_lb.Size = new System.Drawing.Size(71, 20);
             this.street_lb.TabIndex = 10;
             this.street_lb.Text = "רחוב ומס\'";
             // 
@@ -195,11 +195,11 @@
             // phone1_lb
             // 
             this.phone1_lb.AutoSize = true;
-            this.phone1_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone1_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phone1_lb.Location = new System.Drawing.Point(469, 280);
             this.phone1_lb.Name = "phone1_lb";
             this.phone1_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.phone1_lb.Size = new System.Drawing.Size(61, 20);
+            this.phone1_lb.Size = new System.Drawing.Size(56, 20);
             this.phone1_lb.TabIndex = 12;
             this.phone1_lb.Text = "טלפון 1";
             // 
@@ -216,11 +216,11 @@
             // phone2_lb
             // 
             this.phone2_lb.AutoSize = true;
-            this.phone2_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone2_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phone2_lb.Location = new System.Drawing.Point(469, 317);
             this.phone2_lb.Name = "phone2_lb";
             this.phone2_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.phone2_lb.Size = new System.Drawing.Size(61, 20);
+            this.phone2_lb.Size = new System.Drawing.Size(56, 20);
             this.phone2_lb.TabIndex = 14;
             this.phone2_lb.Text = "טלפון 2";
             // 
@@ -240,7 +240,7 @@
             // 
             this.ok_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ok_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ok_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ok_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ok_bt.ForeColor = System.Drawing.Color.White;
             this.ok_bt.Location = new System.Drawing.Point(107, 345);
             this.ok_bt.Name = "ok_bt";
@@ -256,7 +256,7 @@
             // 
             this.cancel_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.cancel_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_bt.ForeColor = System.Drawing.Color.White;
             this.cancel_bt.Location = new System.Drawing.Point(12, 345);
             this.cancel_bt.Name = "cancel_bt";
@@ -281,11 +281,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(213, 201);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(38, 20);
+            this.label1.Size = new System.Drawing.Size(35, 20);
             this.label1.TabIndex = 20;
             this.label1.Text = "מייל";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -294,7 +294,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(107, 280);
             this.button1.Name = "button1";

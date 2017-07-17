@@ -49,6 +49,7 @@
             // 
             // meetingID_tb
             // 
+            this.meetingID_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meetingID_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.meetingID_tb.Location = new System.Drawing.Point(302, 86);
             this.meetingID_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -59,6 +60,7 @@
             // 
             // city_tb
             // 
+            this.city_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.city_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.city_tb.Location = new System.Drawing.Point(499, 203);
             this.city_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -69,6 +71,7 @@
             // 
             // address_tb
             // 
+            this.address_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.address_tb.Location = new System.Drawing.Point(39, 203);
             this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -80,6 +83,7 @@
             // start_date_dtp
             // 
             this.start_date_dtp.Checked = false;
+            this.start_date_dtp.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.start_date_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.start_date_dtp.Location = new System.Drawing.Point(580, 272);
             this.start_date_dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -87,57 +91,62 @@
             this.start_date_dtp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.start_date_dtp.RightToLeftLayout = true;
             this.start_date_dtp.ShowCheckBox = true;
-            this.start_date_dtp.Size = new System.Drawing.Size(182, 26);
+            this.start_date_dtp.Size = new System.Drawing.Size(182, 25);
             this.start_date_dtp.TabIndex = 1;
             // 
             // firstName_lb
             // 
             this.firstName_lb.AutoSize = true;
+            this.firstName_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstName_lb.Location = new System.Drawing.Point(780, 137);
             this.firstName_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstName_lb.Name = "firstName_lb";
-            this.firstName_lb.Size = new System.Drawing.Size(65, 20);
+            this.firstName_lb.Size = new System.Drawing.Size(66, 20);
             this.firstName_lb.TabIndex = 2;
             this.firstName_lb.Text = "שם פרטי";
             // 
             // meetingID_lb
             // 
             this.meetingID_lb.AutoSize = true;
+            this.meetingID_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meetingID_lb.Location = new System.Drawing.Point(576, 86);
             this.meetingID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.meetingID_lb.Name = "meetingID_lb";
-            this.meetingID_lb.Size = new System.Drawing.Size(276, 20);
+            this.meetingID_lb.Size = new System.Drawing.Size(270, 20);
             this.meetingID_lb.TabIndex = 2;
             this.meetingID_lb.Text = "מס\"ד פגישה (ניתן לחפש גם ת.ז. מתמודד)";
             // 
             // address_lb
             // 
             this.address_lb.AutoSize = true;
+            this.address_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address_lb.Location = new System.Drawing.Point(369, 206);
             this.address_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.address_lb.Name = "address_lb";
-            this.address_lb.Size = new System.Drawing.Size(51, 20);
+            this.address_lb.Size = new System.Drawing.Size(52, 20);
             this.address_lb.TabIndex = 2;
             this.address_lb.Text = "כתובת";
             // 
             // city_lb
             // 
             this.city_lb.AutoSize = true;
+            this.city_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.city_lb.Location = new System.Drawing.Point(812, 206);
             this.city_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.city_lb.Name = "city_lb";
-            this.city_lb.Size = new System.Drawing.Size(33, 20);
+            this.city_lb.Size = new System.Drawing.Size(30, 20);
             this.city_lb.TabIndex = 2;
             this.city_lb.Text = "עיר";
             // 
             // start_date_lb
             // 
             this.start_date_lb.AutoSize = true;
+            this.start_date_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.start_date_lb.Location = new System.Drawing.Point(792, 272);
             this.start_date_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.start_date_lb.Name = "start_date_lb";
             this.start_date_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.start_date_lb.Size = new System.Drawing.Size(56, 40);
+            this.start_date_lb.Size = new System.Drawing.Size(58, 40);
             this.start_date_lb.TabIndex = 2;
             this.start_date_lb.Text = "טווח \r\nהתחלה";
             // 
@@ -145,6 +154,7 @@
             // 
             this.searchMeeting_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.searchMeeting_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchMeeting_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchMeeting_bt.ForeColor = System.Drawing.Color.White;
             this.searchMeeting_bt.Location = new System.Drawing.Point(201, 403);
             this.searchMeeting_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -161,6 +171,7 @@
             // 
             this.cancel_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.cancel_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_bt.ForeColor = System.Drawing.Color.White;
             this.cancel_bt.Location = new System.Drawing.Point(57, 403);
             this.cancel_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -176,10 +187,11 @@
             // occured_chk
             // 
             this.occured_chk.AutoSize = true;
+            this.occured_chk.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.occured_chk.Location = new System.Drawing.Point(37, 86);
             this.occured_chk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.occured_chk.Name = "occured_chk";
-            this.occured_chk.Size = new System.Drawing.Size(170, 24);
+            this.occured_chk.Size = new System.Drawing.Size(177, 24);
             this.occured_chk.TabIndex = 6;
             this.occured_chk.Text = "האם הפגישה התקיימה";
             this.occured_chk.UseVisualStyleBackColor = true;
@@ -187,15 +199,17 @@
             // lastName_lb
             // 
             this.lastName_lb.AutoSize = true;
+            this.lastName_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastName_lb.Location = new System.Drawing.Point(335, 137);
             this.lastName_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastName_lb.Name = "lastName_lb";
-            this.lastName_lb.Size = new System.Drawing.Size(81, 20);
+            this.lastName_lb.Size = new System.Drawing.Size(86, 20);
             this.lastName_lb.TabIndex = 7;
             this.lastName_lb.Text = "שם משפחה";
             // 
             // firstName_tb
             // 
+            this.firstName_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.firstName_tb.Location = new System.Drawing.Point(499, 137);
             this.firstName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -206,6 +220,7 @@
             // 
             // lastName_tb
             // 
+            this.lastName_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lastName_tb.Location = new System.Drawing.Point(39, 137);
             this.lastName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -217,17 +232,19 @@
             // end_date_lb
             // 
             this.end_date_lb.AutoSize = true;
+            this.end_date_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.end_date_lb.Location = new System.Drawing.Point(369, 272);
             this.end_date_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.end_date_lb.Name = "end_date_lb";
             this.end_date_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.end_date_lb.Size = new System.Drawing.Size(43, 40);
+            this.end_date_lb.Size = new System.Drawing.Size(41, 40);
             this.end_date_lb.TabIndex = 11;
             this.end_date_lb.Text = "טווח \r\nסיום";
             // 
             // end_date_dtp
             // 
             this.end_date_dtp.Checked = false;
+            this.end_date_dtp.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.end_date_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.end_date_dtp.Location = new System.Drawing.Point(147, 272);
             this.end_date_dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -235,7 +252,7 @@
             this.end_date_dtp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.end_date_dtp.RightToLeftLayout = true;
             this.end_date_dtp.ShowCheckBox = true;
-            this.end_date_dtp.Size = new System.Drawing.Size(155, 26);
+            this.end_date_dtp.Size = new System.Drawing.Size(155, 25);
             this.end_date_dtp.TabIndex = 10;
             // 
             // MeetingFind

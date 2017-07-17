@@ -42,6 +42,7 @@
             // 
             this.detailed_search_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.detailed_search_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.detailed_search_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailed_search_bt.ForeColor = System.Drawing.Color.White;
             this.detailed_search_bt.Location = new System.Drawing.Point(283, 75);
             this.detailed_search_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -58,6 +59,7 @@
             // 
             this.fast_search_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.fast_search_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fast_search_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fast_search_bt.ForeColor = System.Drawing.Color.White;
             this.fast_search_bt.Location = new System.Drawing.Point(520, 75);
             this.fast_search_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -73,12 +75,13 @@
             // mitmoded_name_tb
             // 
             this.mitmoded_name_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mitmoded_name_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mitmoded_name_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.mitmoded_name_tb.Location = new System.Drawing.Point(641, 79);
             this.mitmoded_name_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mitmoded_name_tb.Name = "mitmoded_name_tb";
             this.mitmoded_name_tb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mitmoded_name_tb.Size = new System.Drawing.Size(228, 19);
+            this.mitmoded_name_tb.Size = new System.Drawing.Size(228, 18);
             this.mitmoded_name_tb.TabIndex = 10;
             this.mitmoded_name_tb.Text = "חיפוש שם מתמודד";
             // 
@@ -101,6 +104,7 @@
             // 
             this.add_psy_followup_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.add_psy_followup_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_psy_followup_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_psy_followup_bt.ForeColor = System.Drawing.Color.White;
             this.add_psy_followup_bt.Location = new System.Drawing.Point(701, 391);
             this.add_psy_followup_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -117,6 +121,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(95, 391);
             this.close_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -132,10 +137,11 @@
             // coordinatorID_lb
             // 
             this.coordinatorID_lb.AutoSize = true;
+            this.coordinatorID_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coordinatorID_lb.Location = new System.Drawing.Point(104, 35);
             this.coordinatorID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.coordinatorID_lb.Name = "coordinatorID_lb";
-            this.coordinatorID_lb.Size = new System.Drawing.Size(212, 20);
+            this.coordinatorID_lb.Size = new System.Drawing.Size(193, 20);
             this.coordinatorID_lb.TabIndex = 16;
             this.coordinatorID_lb.Text = "<coordinatorID_dynamic_lb>";
             // 

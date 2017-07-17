@@ -48,7 +48,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(43, 295);
             this.close_bt.Name = "close_bt";
@@ -64,7 +64,7 @@
             // 
             this.show_pdf_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.show_pdf_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.show_pdf_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.show_pdf_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.show_pdf_bt.ForeColor = System.Drawing.Color.White;
             this.show_pdf_bt.Location = new System.Drawing.Point(21, 21);
             this.show_pdf_bt.Name = "show_pdf_bt";
@@ -80,7 +80,7 @@
             // 
             this.choose_pdf_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.choose_pdf_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.choose_pdf_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.choose_pdf_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.choose_pdf_bt.ForeColor = System.Drawing.Color.White;
             this.choose_pdf_bt.Location = new System.Drawing.Point(438, 163);
             this.choose_pdf_bt.Name = "choose_pdf_bt";
@@ -95,51 +95,51 @@
             // last_signed_lb
             // 
             this.last_signed_lb.AutoSize = true;
-            this.last_signed_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.last_signed_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.last_signed_lb.Location = new System.Drawing.Point(500, 103);
             this.last_signed_lb.Name = "last_signed_lb";
             this.last_signed_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.last_signed_lb.Size = new System.Drawing.Size(153, 20);
+            this.last_signed_lb.Size = new System.Drawing.Size(146, 20);
             this.last_signed_lb.TabIndex = 4;
             this.last_signed_lb.Text = "תאריך חתימה אחרון: ";
             // 
             // last_signed_dynamic_lb
             // 
             this.last_signed_dynamic_lb.AutoSize = true;
-            this.last_signed_dynamic_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.last_signed_dynamic_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.last_signed_dynamic_lb.Location = new System.Drawing.Point(344, 103);
             this.last_signed_dynamic_lb.Name = "last_signed_dynamic_lb";
             this.last_signed_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.last_signed_dynamic_lb.Size = new System.Drawing.Size(108, 20);
+            this.last_signed_dynamic_lb.Size = new System.Drawing.Size(102, 20);
             this.last_signed_dynamic_lb.TabIndex = 5;
             this.last_signed_dynamic_lb.Text = "<last_signed>";
             // 
             // name_lb
             // 
             this.name_lb.AutoSize = true;
-            this.name_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_lb.Location = new System.Drawing.Point(537, 21);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_lb.Size = new System.Drawing.Size(103, 20);
+            this.name_lb.Size = new System.Drawing.Size(101, 20);
             this.name_lb.TabIndex = 6;
             this.name_lb.Text = "שם המתמודד: ";
             // 
             // name_dynamic_lb
             // 
             this.name_dynamic_lb.AutoSize = true;
-            this.name_dynamic_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_dynamic_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_dynamic_lb.Location = new System.Drawing.Point(537, 51);
             this.name_dynamic_lb.Name = "name_dynamic_lb";
             this.name_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_dynamic_lb.Size = new System.Drawing.Size(67, 20);
+            this.name_dynamic_lb.Size = new System.Drawing.Size(65, 20);
             this.name_dynamic_lb.TabIndex = 7;
             this.name_dynamic_lb.Text = "<name>";
             // 
             // ID_dynamic_lb
             // 
             this.ID_dynamic_lb.AutoSize = true;
-            this.ID_dynamic_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_dynamic_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_dynamic_lb.Location = new System.Drawing.Point(367, 51);
             this.ID_dynamic_lb.Name = "ID_dynamic_lb";
             this.ID_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -150,11 +150,11 @@
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
-            this.ID_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_lb.Location = new System.Drawing.Point(384, 21);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID_lb.Size = new System.Drawing.Size(37, 20);
+            this.ID_lb.Size = new System.Drawing.Size(34, 20);
             this.ID_lb.TabIndex = 8;
             this.ID_lb.Text = "ת.ז.:";
             // 
@@ -162,7 +162,7 @@
             // 
             this.upload_pdf_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.upload_pdf_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.upload_pdf_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upload_pdf_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upload_pdf_bt.ForeColor = System.Drawing.Color.White;
             this.upload_pdf_bt.Location = new System.Drawing.Point(73, 163);
             this.upload_pdf_bt.Name = "upload_pdf_bt";
@@ -178,7 +178,7 @@
             // 
             this.preview_selected_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.preview_selected_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.preview_selected_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.preview_selected_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preview_selected_bt.ForeColor = System.Drawing.Color.White;
             this.preview_selected_bt.Location = new System.Drawing.Point(438, 205);
             this.preview_selected_bt.Name = "preview_selected_bt";
@@ -194,7 +194,7 @@
             // 
             this.preview_saved_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.preview_saved_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.preview_saved_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.preview_saved_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preview_saved_bt.ForeColor = System.Drawing.Color.White;
             this.preview_saved_bt.Location = new System.Drawing.Point(74, 205);
             this.preview_saved_bt.Name = "preview_saved_bt";
@@ -209,20 +209,20 @@
             // chosen_file_lb
             // 
             this.chosen_file_lb.AutoSize = true;
-            this.chosen_file_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chosen_file_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chosen_file_lb.Location = new System.Drawing.Point(434, 244);
             this.chosen_file_lb.Name = "chosen_file_lb";
-            this.chosen_file_lb.Size = new System.Drawing.Size(157, 20);
+            this.chosen_file_lb.Size = new System.Drawing.Size(142, 20);
             this.chosen_file_lb.TabIndex = 13;
             this.chosen_file_lb.Text = "<chosen_file_name>";
             // 
             // saved_file__lb
             // 
             this.saved_file__lb.AutoSize = true;
-            this.saved_file__lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saved_file__lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saved_file__lb.Location = new System.Drawing.Point(69, 244);
             this.saved_file__lb.Name = "saved_file__lb";
-            this.saved_file__lb.Size = new System.Drawing.Size(147, 20);
+            this.saved_file__lb.Size = new System.Drawing.Size(137, 20);
             this.saved_file__lb.TabIndex = 14;
             this.saved_file__lb.Text = "<saved_file_name>";
             // 

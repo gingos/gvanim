@@ -48,6 +48,7 @@
             // 
             // address_tb
             // 
+            this.address_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.address_tb.Location = new System.Drawing.Point(265, 158);
             this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -61,6 +62,7 @@
             // 
             this.addMeeting_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.addMeeting_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMeeting_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMeeting_bt.ForeColor = System.Drawing.Color.White;
             this.addMeeting_bt.Location = new System.Drawing.Point(180, 858);
             this.addMeeting_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -75,6 +77,7 @@
             // 
             this.cancel_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.cancel_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_bt.Location = new System.Drawing.Point(41, 858);
             this.cancel_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cancel_bt.Name = "cancel_bt";
@@ -86,19 +89,19 @@
             // name_lb
             // 
             this.name_lb.AutoSize = true;
-            this.name_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_lb.Location = new System.Drawing.Point(763, 31);
             this.name_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_lb.Size = new System.Drawing.Size(103, 20);
+            this.name_lb.Size = new System.Drawing.Size(101, 20);
             this.name_lb.TabIndex = 3;
             this.name_lb.Text = " שם המתמודד:";
             // 
             // date_lb
             // 
             this.date_lb.AutoSize = true;
-            this.date_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_lb.Location = new System.Drawing.Point(711, 108);
             this.date_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.date_lb.Name = "date_lb";
@@ -110,12 +113,12 @@
             // address_lb
             // 
             this.address_lb.AutoSize = true;
-            this.address_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address_lb.Location = new System.Drawing.Point(755, 158);
             this.address_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.address_lb.Name = "address_lb";
             this.address_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.address_lb.Size = new System.Drawing.Size(104, 20);
+            this.address_lb.Size = new System.Drawing.Size(106, 20);
             this.address_lb.TabIndex = 3;
             this.address_lb.Text = "מיקום הפגישה:";
             // 
@@ -123,6 +126,7 @@
             // 
             this.mitmoded_cb.BackColor = System.Drawing.Color.White;
             this.mitmoded_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mitmoded_cb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mitmoded_cb.FormattingEnabled = true;
             this.mitmoded_cb.Location = new System.Drawing.Point(372, 28);
             this.mitmoded_cb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -133,6 +137,7 @@
             // 
             // city_tb
             // 
+            this.city_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.city_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.city_tb.Location = new System.Drawing.Point(576, 158);
             this.city_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -146,16 +151,18 @@
             // 
             this.datePicker.Checked = false;
             this.datePicker.CustomFormat = "dd/MM/yyyy  HH:mm";
+            this.datePicker.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datePicker.Location = new System.Drawing.Point(507, 108);
             this.datePicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.datePicker.Name = "datePicker";
             this.datePicker.ShowCheckBox = true;
-            this.datePicker.Size = new System.Drawing.Size(201, 26);
+            this.datePicker.Size = new System.Drawing.Size(201, 25);
             this.datePicker.TabIndex = 5;
             // 
             // topics_tb
             // 
+            this.topics_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topics_tb.Location = new System.Drawing.Point(76, 240);
             this.topics_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.topics_tb.Multiline = true;
@@ -167,29 +174,30 @@
             // topic_lb
             // 
             this.topic_lb.AutoSize = true;
-            this.topic_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topic_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topic_lb.Location = new System.Drawing.Point(650, 215);
             this.topic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.topic_lb.Name = "topic_lb";
             this.topic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.topic_lb.Size = new System.Drawing.Size(199, 20);
+            this.topic_lb.Size = new System.Drawing.Size(198, 20);
             this.topic_lb.TabIndex = 8;
             this.topic_lb.Text = "תיאור הנושאים שעלו בפגישה";
             // 
             // tasks_lb
             // 
             this.tasks_lb.AutoSize = true;
-            this.tasks_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tasks_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tasks_lb.Location = new System.Drawing.Point(637, 418);
             this.tasks_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tasks_lb.Name = "tasks_lb";
             this.tasks_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tasks_lb.Size = new System.Drawing.Size(226, 20);
+            this.tasks_lb.Size = new System.Drawing.Size(223, 20);
             this.tasks_lb.TabIndex = 10;
             this.tasks_lb.Text = "משימות שהוגדרו להמשך התהליך";
             // 
             // tasks_tb
             // 
+            this.tasks_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tasks_tb.Location = new System.Drawing.Point(76, 443);
             this.tasks_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tasks_tb.Multiline = true;
@@ -202,12 +210,12 @@
             // 
             this.occured_ck.AutoSize = true;
             this.occured_ck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.occured_ck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.occured_ck.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.occured_ck.Location = new System.Drawing.Point(265, 158);
             this.occured_ck.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.occured_ck.Name = "occured_ck";
             this.occured_ck.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.occured_ck.Size = new System.Drawing.Size(180, 24);
+            this.occured_ck.Size = new System.Drawing.Size(186, 24);
             this.occured_ck.TabIndex = 12;
             this.occured_ck.Text = "האם התרחשה הפגישה?";
             this.occured_ck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -217,7 +225,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(46, 658);
             this.close_bt.Name = "close_bt";
@@ -233,7 +241,7 @@
             // 
             this.add_meeting_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.add_meeting_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_meeting_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_meeting_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_meeting_bt.ForeColor = System.Drawing.Color.White;
             this.add_meeting_bt.Location = new System.Drawing.Point(159, 658);
             this.add_meeting_bt.Name = "add_meeting_bt";

@@ -47,6 +47,7 @@
             // 
             this.saveReport_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.saveReport_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveReport_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveReport_bt.ForeColor = System.Drawing.Color.White;
             this.saveReport_bt.Location = new System.Drawing.Point(141, 514);
             this.saveReport_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -62,20 +63,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(660, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = ":מס\"ד";
             // 
             // ReportSerialNum_lb
             // 
             this.ReportSerialNum_lb.AutoSize = true;
+            this.ReportSerialNum_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReportSerialNum_lb.Location = new System.Drawing.Point(436, 75);
             this.ReportSerialNum_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ReportSerialNum_lb.Name = "ReportSerialNum_lb";
-            this.ReportSerialNum_lb.Size = new System.Drawing.Size(91, 20);
+            this.ReportSerialNum_lb.Size = new System.Drawing.Size(85, 20);
             this.ReportSerialNum_lb.TabIndex = 3;
             this.ReportSerialNum_lb.Text = "mm-dd-yyyy";
             // 
@@ -83,6 +86,7 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.White;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(347, 123);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -94,16 +98,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(660, 126);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
+            this.label2.Size = new System.Drawing.Size(98, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = ":שם המתמודד";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(347, 195);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -111,22 +117,24 @@
             this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateTimePicker1.RightToLeftLayout = true;
             this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(287, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(287, 25);
             this.dateTimePicker1.TabIndex = 6;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(660, 195);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 20);
+            this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = ":תאריך";
             // 
             // reportDiscription_tb
             // 
+            this.reportDiscription_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportDiscription_tb.Location = new System.Drawing.Point(143, 258);
             this.reportDiscription_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.reportDiscription_tb.Multiline = true;
@@ -137,25 +145,28 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(660, 261);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
+            this.label4.Size = new System.Drawing.Size(50, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = ":תיאור";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(660, 392);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 20);
+            this.label5.Size = new System.Drawing.Size(110, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = ":פעולות שננקטו";
             // 
             // activityDiscription_tb
             // 
+            this.activityDiscription_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activityDiscription_tb.Location = new System.Drawing.Point(141, 392);
             this.activityDiscription_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.activityDiscription_tb.Multiline = true;
@@ -167,6 +178,7 @@
             // 
             this.cancel_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.cancel_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_bt.ForeColor = System.Drawing.Color.White;
             this.cancel_bt.Location = new System.Drawing.Point(33, 514);
             this.cancel_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -182,10 +194,11 @@
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
+            this.ID_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_lb.Location = new System.Drawing.Point(537, 75);
             this.ID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_lb.Name = "ID_lb";
-            this.ID_lb.Size = new System.Drawing.Size(33, 20);
+            this.ID_lb.Size = new System.Drawing.Size(32, 20);
             this.ID_lb.TabIndex = 12;
             this.ID_lb.Text = "ת.ז.";
             // 

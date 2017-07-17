@@ -42,6 +42,7 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainPanel.Location = new System.Drawing.Point(203, 62);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel.Name = "mainPanel";
@@ -54,6 +55,7 @@
             this.headersPanel.Controls.Add(this.logoPanel);
             this.headersPanel.Controls.Add(this.exit_bt);
             this.headersPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headersPanel.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headersPanel.Location = new System.Drawing.Point(0, 0);
             this.headersPanel.Name = "headersPanel";
             this.headersPanel.Size = new System.Drawing.Size(906, 62);
@@ -65,6 +67,7 @@
             this.logoPanel.BackgroundImage = global::GvanimVS.Properties.Resources.logo;
             this.logoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.logoPanel.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoPanel.Location = new System.Drawing.Point(706, 0);
             this.logoPanel.Name = "logoPanel";
             this.logoPanel.Size = new System.Drawing.Size(200, 62);
@@ -78,6 +81,7 @@
             this.exit_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.exit_bt.FlatAppearance.BorderSize = 0;
             this.exit_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit_bt.ForeColor = System.Drawing.Color.Transparent;
             this.exit_bt.Location = new System.Drawing.Point(15, 18);
             this.exit_bt.Name = "exit_bt";
@@ -93,6 +97,7 @@
             this.sideBarPanel.Controls.Add(this.report_show_bt);
             this.sideBarPanel.Controls.Add(this.meeting_show_bt);
             this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideBarPanel.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sideBarPanel.Location = new System.Drawing.Point(0, 62);
             this.sideBarPanel.Name = "sideBarPanel";
             this.sideBarPanel.Size = new System.Drawing.Size(200, 404);
@@ -105,7 +110,7 @@
             this.alert_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.alert_bt.FlatAppearance.BorderSize = 0;
             this.alert_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alert_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alert_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alert_bt.ForeColor = System.Drawing.Color.White;
             this.alert_bt.Location = new System.Drawing.Point(0, 149);
             this.alert_bt.Name = "alert_bt";
@@ -121,7 +126,7 @@
             this.report_show_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.report_show_bt.FlatAppearance.BorderSize = 0;
             this.report_show_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.report_show_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.report_show_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.report_show_bt.ForeColor = System.Drawing.Color.White;
             this.report_show_bt.Location = new System.Drawing.Point(0, 97);
             this.report_show_bt.Name = "report_show_bt";
@@ -137,7 +142,7 @@
             this.meeting_show_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.meeting_show_bt.FlatAppearance.BorderSize = 0;
             this.meeting_show_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.meeting_show_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meeting_show_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meeting_show_bt.ForeColor = System.Drawing.Color.White;
             this.meeting_show_bt.Location = new System.Drawing.Point(0, 45);
             this.meeting_show_bt.Name = "meeting_show_bt";

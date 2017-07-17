@@ -58,11 +58,12 @@
             // 
             this.update_password_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.update_password_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update_password_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_password_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update_password_bt.ForeColor = System.Drawing.Color.White;
-            this.update_password_bt.Location = new System.Drawing.Point(93, 268);
+            this.update_password_bt.Location = new System.Drawing.Point(124, 412);
+            this.update_password_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.update_password_bt.Name = "update_password_bt";
-            this.update_password_bt.Size = new System.Drawing.Size(106, 34);
+            this.update_password_bt.Size = new System.Drawing.Size(141, 52);
             this.update_password_bt.TabIndex = 44;
             this.update_password_bt.Text = "עדכון סיסמא";
             this.update_password_bt.UseVisualStyleBackColor = false;
@@ -73,19 +74,21 @@
             // email_tb
             // 
             this.email_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.email_tb.Location = new System.Drawing.Point(9, 231);
+            this.email_tb.Location = new System.Drawing.Point(12, 355);
+            this.email_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.email_tb.Name = "email_tb";
-            this.email_tb.Size = new System.Drawing.Size(153, 20);
+            this.email_tb.Size = new System.Drawing.Size(203, 25);
             this.email_tb.TabIndex = 43;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(168, 234);
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(224, 360);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(38, 20);
+            this.label1.Size = new System.Drawing.Size(35, 20);
             this.label1.TabIndex = 42;
             this.label1.Text = "מייל";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,11 +97,12 @@
             // 
             this.cancel_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.cancel_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_bt.ForeColor = System.Drawing.Color.White;
-            this.cancel_bt.Location = new System.Drawing.Point(2, 308);
+            this.cancel_bt.Location = new System.Drawing.Point(3, 474);
+            this.cancel_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cancel_bt.Name = "cancel_bt";
-            this.cancel_bt.Size = new System.Drawing.Size(85, 34);
+            this.cancel_bt.Size = new System.Drawing.Size(113, 52);
             this.cancel_bt.TabIndex = 41;
             this.cancel_bt.Text = "סגור";
             this.cancel_bt.UseVisualStyleBackColor = false;
@@ -111,11 +115,12 @@
             this.ok_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ok_bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ok_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ok_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ok_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ok_bt.ForeColor = System.Drawing.Color.White;
-            this.ok_bt.Location = new System.Drawing.Point(93, 308);
+            this.ok_bt.Location = new System.Drawing.Point(124, 474);
+            this.ok_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ok_bt.Name = "ok_bt";
-            this.ok_bt.Size = new System.Drawing.Size(106, 34);
+            this.ok_bt.Size = new System.Drawing.Size(141, 52);
             this.ok_bt.TabIndex = 40;
             this.ok_bt.Text = "עדכון";
             this.ok_bt.UseVisualStyleBackColor = false;
@@ -126,95 +131,105 @@
             // phone2_tb
             // 
             this.phone2_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.phone2_tb.Location = new System.Drawing.Point(221, 304);
+            this.phone2_tb.Location = new System.Drawing.Point(295, 468);
+            this.phone2_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.phone2_tb.Name = "phone2_tb";
-            this.phone2_tb.Size = new System.Drawing.Size(200, 20);
+            this.phone2_tb.Size = new System.Drawing.Size(265, 25);
             this.phone2_tb.TabIndex = 38;
             // 
             // phone2_lb
             // 
             this.phone2_lb.AutoSize = true;
-            this.phone2_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone2_lb.Location = new System.Drawing.Point(427, 308);
+            this.phone2_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone2_lb.Location = new System.Drawing.Point(569, 474);
+            this.phone2_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.phone2_lb.Name = "phone2_lb";
             this.phone2_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.phone2_lb.Size = new System.Drawing.Size(61, 20);
+            this.phone2_lb.Size = new System.Drawing.Size(56, 20);
             this.phone2_lb.TabIndex = 37;
             this.phone2_lb.Text = "טלפון 2";
             // 
             // phone1_tb
             // 
             this.phone1_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.phone1_tb.Location = new System.Drawing.Point(221, 271);
+            this.phone1_tb.Location = new System.Drawing.Point(295, 417);
+            this.phone1_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.phone1_tb.Name = "phone1_tb";
-            this.phone1_tb.Size = new System.Drawing.Size(200, 20);
+            this.phone1_tb.Size = new System.Drawing.Size(265, 25);
             this.phone1_tb.TabIndex = 36;
             // 
             // phone1_lb
             // 
             this.phone1_lb.AutoSize = true;
-            this.phone1_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone1_lb.Location = new System.Drawing.Point(427, 271);
+            this.phone1_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone1_lb.Location = new System.Drawing.Point(569, 417);
+            this.phone1_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.phone1_lb.Name = "phone1_lb";
             this.phone1_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.phone1_lb.Size = new System.Drawing.Size(61, 20);
+            this.phone1_lb.Size = new System.Drawing.Size(56, 20);
             this.phone1_lb.TabIndex = 35;
             this.phone1_lb.Text = "טלפון 1";
             // 
             // address_tb
             // 
             this.address_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.address_tb.Location = new System.Drawing.Point(221, 234);
+            this.address_tb.Location = new System.Drawing.Point(295, 360);
+            this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(200, 20);
+            this.address_tb.Size = new System.Drawing.Size(265, 25);
             this.address_tb.TabIndex = 34;
             // 
             // street_lb
             // 
             this.street_lb.AutoSize = true;
-            this.street_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.street_lb.Location = new System.Drawing.Point(427, 234);
+            this.street_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.street_lb.Location = new System.Drawing.Point(569, 360);
+            this.street_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.street_lb.Name = "street_lb";
             this.street_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.street_lb.Size = new System.Drawing.Size(73, 20);
+            this.street_lb.Size = new System.Drawing.Size(71, 20);
             this.street_lb.TabIndex = 33;
             this.street_lb.Text = "רחוב ומס\'";
             // 
             // city_tb
             // 
             this.city_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.city_tb.Location = new System.Drawing.Point(221, 192);
+            this.city_tb.Location = new System.Drawing.Point(295, 295);
+            this.city_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.city_tb.Name = "city_tb";
-            this.city_tb.Size = new System.Drawing.Size(200, 20);
+            this.city_tb.Size = new System.Drawing.Size(265, 25);
             this.city_tb.TabIndex = 32;
             // 
             // city_lb
             // 
             this.city_lb.AutoSize = true;
-            this.city_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.city_lb.Location = new System.Drawing.Point(427, 192);
+            this.city_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.city_lb.Location = new System.Drawing.Point(569, 295);
+            this.city_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.city_lb.Name = "city_lb";
             this.city_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.city_lb.Size = new System.Drawing.Size(82, 20);
+            this.city_lb.Size = new System.Drawing.Size(77, 20);
             this.city_lb.TabIndex = 31;
             this.city_lb.Text = "עיר מגורים";
             // 
             // ID_tb
             // 
             this.ID_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.ID_tb.Location = new System.Drawing.Point(221, 152);
+            this.ID_tb.Location = new System.Drawing.Point(295, 234);
+            this.ID_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ID_tb.Name = "ID_tb";
-            this.ID_tb.Size = new System.Drawing.Size(200, 20);
+            this.ID_tb.Size = new System.Drawing.Size(265, 25);
             this.ID_tb.TabIndex = 30;
             // 
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
-            this.ID_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_lb.Location = new System.Drawing.Point(427, 152);
+            this.ID_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_lb.Location = new System.Drawing.Point(569, 234);
+            this.ID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID_lb.Size = new System.Drawing.Size(87, 20);
+            this.ID_lb.Size = new System.Drawing.Size(85, 20);
             this.ID_lb.TabIndex = 29;
             this.ID_lb.Text = "תעודת זהות";
             this.ID_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,10 +237,11 @@
             // birth_lb
             // 
             this.birth_lb.AutoSize = true;
-            this.birth_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birth_lb.Location = new System.Drawing.Point(427, 113);
+            this.birth_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birth_lb.Location = new System.Drawing.Point(569, 174);
+            this.birth_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.birth_lb.Name = "birth_lb";
-            this.birth_lb.Size = new System.Drawing.Size(88, 20);
+            this.birth_lb.Size = new System.Drawing.Size(83, 20);
             this.birth_lb.TabIndex = 28;
             this.birth_lb.Text = "תאריך לידה";
             // 
@@ -234,47 +250,52 @@
             this.dateTimePicker1.Checked = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(273, 113);
+            this.dateTimePicker1.Location = new System.Drawing.Point(364, 174);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(148, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(196, 26);
             this.dateTimePicker1.TabIndex = 27;
             // 
             // lastName_tb
             // 
             this.lastName_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.lastName_tb.Location = new System.Drawing.Point(221, 70);
+            this.lastName_tb.Location = new System.Drawing.Point(295, 108);
+            this.lastName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastName_tb.Name = "lastName_tb";
-            this.lastName_tb.Size = new System.Drawing.Size(200, 20);
+            this.lastName_tb.Size = new System.Drawing.Size(265, 25);
             this.lastName_tb.TabIndex = 26;
             // 
             // lastName_lb
             // 
             this.lastName_lb.AutoSize = true;
-            this.lastName_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastName_lb.Location = new System.Drawing.Point(427, 70);
+            this.lastName_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastName_lb.Location = new System.Drawing.Point(569, 108);
+            this.lastName_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastName_lb.Name = "lastName_lb";
             this.lastName_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lastName_lb.Size = new System.Drawing.Size(81, 20);
+            this.lastName_lb.Size = new System.Drawing.Size(86, 20);
             this.lastName_lb.TabIndex = 25;
             this.lastName_lb.Text = "שם משפחה";
             // 
             // firstName_tb
             // 
             this.firstName_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.firstName_tb.Location = new System.Drawing.Point(221, 32);
+            this.firstName_tb.Location = new System.Drawing.Point(295, 49);
+            this.firstName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstName_tb.Name = "firstName_tb";
-            this.firstName_tb.Size = new System.Drawing.Size(200, 20);
+            this.firstName_tb.Size = new System.Drawing.Size(265, 25);
             this.firstName_tb.TabIndex = 24;
             // 
             // firstName_lb
             // 
             this.firstName_lb.AutoSize = true;
-            this.firstName_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstName_lb.Location = new System.Drawing.Point(427, 32);
+            this.firstName_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstName_lb.Location = new System.Drawing.Point(569, 49);
+            this.firstName_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstName_lb.Name = "firstName_lb";
             this.firstName_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.firstName_lb.Size = new System.Drawing.Size(65, 20);
+            this.firstName_lb.Size = new System.Drawing.Size(66, 20);
             this.firstName_lb.TabIndex = 23;
             this.firstName_lb.Text = "שם פרטי";
             this.firstName_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,9 +304,10 @@
             // 
             this.profile_pb.Image = ((System.Drawing.Image)(resources.GetObject("profile_pb.Image")));
             this.profile_pb.InitialImage = ((System.Drawing.Image)(resources.GetObject("profile_pb.InitialImage")));
-            this.profile_pb.Location = new System.Drawing.Point(12, 32);
+            this.profile_pb.Location = new System.Drawing.Point(16, 49);
+            this.profile_pb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.profile_pb.Name = "profile_pb";
-            this.profile_pb.Size = new System.Drawing.Size(187, 159);
+            this.profile_pb.Size = new System.Drawing.Size(249, 245);
             this.profile_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profile_pb.TabIndex = 39;
             this.profile_pb.TabStop = false;
@@ -293,12 +315,12 @@
             // 
             // CoordinatorCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(718, 438);
+            this.ClientSize = new System.Drawing.Size(957, 674);
             this.ControlBox = false;
             this.Controls.Add(this.update_password_bt);
             this.Controls.Add(this.email_tb);
@@ -322,7 +344,9 @@
             this.Controls.Add(this.lastName_lb);
             this.Controls.Add(this.firstName_tb);
             this.Controls.Add(this.firstName_lb);
+            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CoordinatorCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CoordinatorCard";

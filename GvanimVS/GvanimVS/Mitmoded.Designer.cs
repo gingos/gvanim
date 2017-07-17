@@ -69,11 +69,12 @@
             // name_lb
             // 
             this.name_lb.AutoSize = true;
+            this.name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_lb.Location = new System.Drawing.Point(813, 49);
             this.name_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_lb.Size = new System.Drawing.Size(37, 20);
+            this.name_lb.Size = new System.Drawing.Size(38, 20);
             this.name_lb.TabIndex = 0;
             this.name_lb.Text = "שם: ";
             // 
@@ -81,27 +82,30 @@
             // 
             this.name_dynamic_lb.AutoSize = true;
             this.name_dynamic_lb.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.name_dynamic_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_dynamic_lb.Location = new System.Drawing.Point(624, 49);
             this.name_dynamic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name_dynamic_lb.Name = "name_dynamic_lb";
-            this.name_dynamic_lb.Size = new System.Drawing.Size(67, 20);
+            this.name_dynamic_lb.Size = new System.Drawing.Size(65, 20);
             this.name_dynamic_lb.TabIndex = 1;
             this.name_dynamic_lb.Text = "<name>";
             // 
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
+            this.ID_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_lb.Location = new System.Drawing.Point(447, 49);
             this.ID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID_lb.Size = new System.Drawing.Size(91, 20);
+            this.ID_lb.Size = new System.Drawing.Size(88, 20);
             this.ID_lb.TabIndex = 2;
             this.ID_lb.Text = "תעודת זהות:";
             // 
             // ID_dynamic_lb
             // 
             this.ID_dynamic_lb.AutoSize = true;
+            this.ID_dynamic_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_dynamic_lb.Location = new System.Drawing.Point(341, 48);
             this.ID_dynamic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_dynamic_lb.Name = "ID_dynamic_lb";
@@ -113,6 +117,7 @@
             // 
             this.info_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.info_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.info_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.info_bt.ForeColor = System.Drawing.Color.White;
             this.info_bt.Location = new System.Drawing.Point(279, 25);
             this.info_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -130,6 +135,7 @@
             this.show_employment_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.show_employment_bt.Enabled = false;
             this.show_employment_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.show_employment_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.show_employment_bt.ForeColor = System.Drawing.Color.White;
             this.show_employment_bt.Location = new System.Drawing.Point(277, 23);
             this.show_employment_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -146,6 +152,7 @@
             // 
             this.show_reports_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.show_reports_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.show_reports_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.show_reports_bt.ForeColor = System.Drawing.Color.White;
             this.show_reports_bt.Location = new System.Drawing.Point(50, 31);
             this.show_reports_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -163,6 +170,7 @@
             this.add_employment_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.add_employment_bt.Enabled = false;
             this.add_employment_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_employment_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_employment_bt.ForeColor = System.Drawing.Color.White;
             this.add_employment_bt.Location = new System.Drawing.Point(277, 68);
             this.add_employment_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -178,6 +186,7 @@
             // 
             this.add_report_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.add_report_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_report_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_report_bt.ForeColor = System.Drawing.Color.White;
             this.add_report_bt.Location = new System.Drawing.Point(50, 75);
             this.add_report_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -194,6 +203,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(75, 405);
             this.close_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -210,6 +220,7 @@
             // 
             this.change_coordinator_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.change_coordinator_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.change_coordinator_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.change_coordinator_bt.ForeColor = System.Drawing.Color.White;
             this.change_coordinator_bt.Location = new System.Drawing.Point(345, 91);
             this.change_coordinator_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -225,22 +236,24 @@
             // coordinator_name_lb
             // 
             this.coordinator_name_lb.AutoSize = true;
+            this.coordinator_name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coordinator_name_lb.Location = new System.Drawing.Point(805, 98);
             this.coordinator_name_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.coordinator_name_lb.Name = "coordinator_name_lb";
             this.coordinator_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.coordinator_name_lb.Size = new System.Drawing.Size(46, 20);
+            this.coordinator_name_lb.Size = new System.Drawing.Size(44, 20);
             this.coordinator_name_lb.TabIndex = 12;
             this.coordinator_name_lb.Text = "רכזת:";
             // 
             // coordinator_dynamic_lb
             // 
             this.coordinator_dynamic_lb.AutoSize = true;
+            this.coordinator_dynamic_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coordinator_dynamic_lb.Location = new System.Drawing.Point(611, 98);
             this.coordinator_dynamic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.coordinator_dynamic_lb.Name = "coordinator_dynamic_lb";
             this.coordinator_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.coordinator_dynamic_lb.Size = new System.Drawing.Size(107, 20);
+            this.coordinator_dynamic_lb.Size = new System.Drawing.Size(101, 20);
             this.coordinator_dynamic_lb.TabIndex = 13;
             this.coordinator_dynamic_lb.Text = "<coordinator>";
             // 
@@ -248,6 +261,7 @@
             // 
             this.tochnit_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.tochnit_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tochnit_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tochnit_bt.ForeColor = System.Drawing.Color.White;
             this.tochnit_bt.Location = new System.Drawing.Point(279, 69);
             this.tochnit_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -265,6 +279,7 @@
             this.form_categories_tc.Controls.Add(this.cat_personal_tab);
             this.form_categories_tc.Controls.Add(this.cat_report_tab);
             this.form_categories_tc.Controls.Add(this.cat_meeting_tab);
+            this.form_categories_tc.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.form_categories_tc.Location = new System.Drawing.Point(345, 155);
             this.form_categories_tc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.form_categories_tc.Name = "form_categories_tc";
@@ -280,6 +295,7 @@
             this.cat_personal_tab.Controls.Add(this.open_hitkashrut_bt);
             this.cat_personal_tab.Controls.Add(this.info_bt);
             this.cat_personal_tab.Controls.Add(this.tochnit_bt);
+            this.cat_personal_tab.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cat_personal_tab.Location = new System.Drawing.Point(4, 29);
             this.cat_personal_tab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cat_personal_tab.Name = "cat_personal_tab";
@@ -293,6 +309,7 @@
             // 
             this.confidentiality_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.confidentiality_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confidentiality_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confidentiality_bt.ForeColor = System.Drawing.Color.White;
             this.confidentiality_bt.Location = new System.Drawing.Point(83, 69);
             this.confidentiality_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -309,6 +326,7 @@
             // 
             this.open_hitkashrut_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.open_hitkashrut_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.open_hitkashrut_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.open_hitkashrut_bt.ForeColor = System.Drawing.Color.White;
             this.open_hitkashrut_bt.Location = new System.Drawing.Point(83, 25);
             this.open_hitkashrut_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -328,6 +346,7 @@
             this.cat_report_tab.Controls.Add(this.show_reports_bt);
             this.cat_report_tab.Controls.Add(this.add_report_bt);
             this.cat_report_tab.Controls.Add(this.button1);
+            this.cat_report_tab.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cat_report_tab.Location = new System.Drawing.Point(4, 29);
             this.cat_report_tab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cat_report_tab.Name = "cat_report_tab";
@@ -341,6 +360,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(279, 75);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -357,6 +377,7 @@
             // 
             this.unusual_event_search_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.unusual_event_search_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.unusual_event_search_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unusual_event_search_bt.ForeColor = System.Drawing.Color.White;
             this.unusual_event_search_bt.Location = new System.Drawing.Point(279, 120);
             this.unusual_event_search_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -373,6 +394,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(279, 31);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -393,6 +415,7 @@
             this.cat_meeting_tab.Controls.Add(this.addPsychiatricCheckUp_btn);
             this.cat_meeting_tab.Controls.Add(this.show_employment_bt);
             this.cat_meeting_tab.Controls.Add(this.add_employment_bt);
+            this.cat_meeting_tab.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cat_meeting_tab.Location = new System.Drawing.Point(4, 29);
             this.cat_meeting_tab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cat_meeting_tab.Name = "cat_meeting_tab";
@@ -405,6 +428,7 @@
             // 
             this.show_meetings_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.show_meetings_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.show_meetings_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.show_meetings_bt.ForeColor = System.Drawing.Color.White;
             this.show_meetings_bt.Location = new System.Drawing.Point(49, 112);
             this.show_meetings_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -421,6 +445,7 @@
             // 
             this.cv_generator_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.cv_generator_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cv_generator_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cv_generator_bt.ForeColor = System.Drawing.Color.White;
             this.cv_generator_bt.Location = new System.Drawing.Point(279, 112);
             this.cv_generator_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -437,6 +462,7 @@
             // 
             this.showPsyCheckUps_btn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.showPsyCheckUps_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPsyCheckUps_btn.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showPsyCheckUps_btn.ForeColor = System.Drawing.Color.White;
             this.showPsyCheckUps_btn.Location = new System.Drawing.Point(49, 68);
             this.showPsyCheckUps_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -453,6 +479,7 @@
             // 
             this.addPsychiatricCheckUp_btn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.addPsychiatricCheckUp_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPsychiatricCheckUp_btn.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPsychiatricCheckUp_btn.ForeColor = System.Drawing.Color.White;
             this.addPsychiatricCheckUp_btn.Location = new System.Drawing.Point(49, 23);
             this.addPsychiatricCheckUp_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -468,20 +495,22 @@
             // score_lb
             // 
             this.score_lb.AutoSize = true;
+            this.score_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score_lb.Location = new System.Drawing.Point(195, 32);
             this.score_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.score_lb.Name = "score_lb";
-            this.score_lb.Size = new System.Drawing.Size(101, 20);
+            this.score_lb.Size = new System.Drawing.Size(92, 20);
             this.score_lb.TabIndex = 16;
             this.score_lb.Text = "דירוג מתמודד";
             // 
             // score_dynamic_lb
             // 
             this.score_dynamic_lb.AutoSize = true;
+            this.score_dynamic_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score_dynamic_lb.Location = new System.Drawing.Point(71, 32);
             this.score_dynamic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.score_dynamic_lb.Name = "score_dynamic_lb";
-            this.score_dynamic_lb.Size = new System.Drawing.Size(66, 20);
+            this.score_dynamic_lb.Size = new System.Drawing.Size(62, 20);
             this.score_dynamic_lb.TabIndex = 17;
             this.score_dynamic_lb.Text = "<score>";
             // 
@@ -492,6 +521,7 @@
             this.keyword_bt.Cursor = System.Windows.Forms.Cursors.Default;
             this.keyword_bt.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.keyword_bt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.keyword_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keyword_bt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.keyword_bt.Location = new System.Drawing.Point(668, 405);
             this.keyword_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

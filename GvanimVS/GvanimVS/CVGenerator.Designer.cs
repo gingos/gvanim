@@ -58,7 +58,7 @@
             // 
             this.export_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.export_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.export_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.export_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.export_bt.ForeColor = System.Drawing.Color.White;
             this.export_bt.Location = new System.Drawing.Point(705, 564);
             this.export_bt.Name = "export_bt";
@@ -74,7 +74,7 @@
             // 
             this.browse_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.browse_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.browse_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.browse_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.browse_bt.ForeColor = System.Drawing.Color.White;
             this.browse_bt.Location = new System.Drawing.Point(1052, 564);
             this.browse_bt.Name = "browse_bt";
@@ -90,7 +90,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(24, 564);
             this.close_bt.Name = "close_bt";
@@ -105,18 +105,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(883, 81);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(295, 20);
+            this.label1.Size = new System.Drawing.Size(293, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "לחיצה כפולה על שם הקובץ לתצוגה מקדימה";
             // 
             // ID_dynamic_lb
             // 
             this.ID_dynamic_lb.AutoSize = true;
-            this.ID_dynamic_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_dynamic_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_dynamic_lb.Location = new System.Drawing.Point(733, 31);
             this.ID_dynamic_lb.Name = "ID_dynamic_lb";
             this.ID_dynamic_lb.Size = new System.Drawing.Size(44, 20);
@@ -126,22 +126,22 @@
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
-            this.ID_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_lb.Location = new System.Drawing.Point(848, 32);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID_lb.Size = new System.Drawing.Size(91, 20);
+            this.ID_lb.Size = new System.Drawing.Size(88, 20);
             this.ID_lb.TabIndex = 6;
             this.ID_lb.Text = "תעודת זהות:";
             // 
             // name_lb
             // 
             this.name_lb.AutoSize = true;
-            this.name_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_lb.Location = new System.Drawing.Point(1138, 31);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_lb.Size = new System.Drawing.Size(37, 20);
+            this.name_lb.Size = new System.Drawing.Size(38, 20);
             this.name_lb.TabIndex = 4;
             this.name_lb.Text = "שם: ";
             // 
@@ -159,10 +159,10 @@
             // 
             this.name_dynamic_lb.AutoSize = true;
             this.name_dynamic_lb.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.name_dynamic_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_dynamic_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_dynamic_lb.Location = new System.Drawing.Point(1021, 31);
             this.name_dynamic_lb.Name = "name_dynamic_lb";
-            this.name_dynamic_lb.Size = new System.Drawing.Size(67, 20);
+            this.name_dynamic_lb.Size = new System.Drawing.Size(65, 20);
             this.name_dynamic_lb.TabIndex = 5;
             this.name_dynamic_lb.Text = "<name>";
             // 

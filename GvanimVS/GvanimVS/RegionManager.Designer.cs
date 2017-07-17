@@ -40,6 +40,7 @@
             // 
             this.info_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.info_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.info_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.info_bt.ForeColor = System.Drawing.Color.White;
             this.info_bt.Location = new System.Drawing.Point(69, 38);
             this.info_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -56,6 +57,7 @@
             // 
             this.ok_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ok_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ok_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ok_bt.ForeColor = System.Drawing.Color.White;
             this.ok_bt.Location = new System.Drawing.Point(69, 415);
             this.ok_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -73,6 +75,7 @@
             // 
             this.showMeetings_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.showMeetings_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showMeetings_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showMeetings_bt.ForeColor = System.Drawing.Color.White;
             this.showMeetings_bt.Location = new System.Drawing.Point(254, 334);
             this.showMeetings_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -89,6 +92,7 @@
             // 
             this.showReports_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.showReports_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showReports_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showReports_bt.ForeColor = System.Drawing.Color.White;
             this.showReports_bt.Location = new System.Drawing.Point(254, 248);
             this.showReports_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -105,6 +109,7 @@
             // 
             this.addCoordinator_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.addCoordinator_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addCoordinator_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCoordinator_bt.ForeColor = System.Drawing.Color.White;
             this.addCoordinator_bt.Location = new System.Drawing.Point(254, 165);
             this.addCoordinator_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -121,6 +126,7 @@
             // 
             this.addMitmoded_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.addMitmoded_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMitmoded_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMitmoded_bt.ForeColor = System.Drawing.Color.White;
             this.addMitmoded_bt.Location = new System.Drawing.Point(254, 94);
             this.addMitmoded_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

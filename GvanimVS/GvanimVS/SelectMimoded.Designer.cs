@@ -68,6 +68,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(51, 465);
             this.close_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -83,32 +84,35 @@
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
+            this.ID_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_lb.Location = new System.Drawing.Point(581, 37);
             this.ID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID_lb.Size = new System.Drawing.Size(87, 20);
+            this.ID_lb.Size = new System.Drawing.Size(85, 20);
             this.ID_lb.TabIndex = 3;
             this.ID_lb.Text = "תעודת זהות";
             // 
             // firstName_lb
             // 
             this.firstName_lb.AutoSize = true;
+            this.firstName_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstName_lb.Location = new System.Drawing.Point(603, 85);
             this.firstName_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstName_lb.Name = "firstName_lb";
             this.firstName_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.firstName_lb.Size = new System.Drawing.Size(65, 20);
+            this.firstName_lb.Size = new System.Drawing.Size(66, 20);
             this.firstName_lb.TabIndex = 4;
             this.firstName_lb.Text = "שם פרטי";
             // 
             // city_lb
             // 
             this.city_lb.AutoSize = true;
+            this.city_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.city_lb.Location = new System.Drawing.Point(311, 37);
             this.city_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.city_lb.Name = "city_lb";
-            this.city_lb.Size = new System.Drawing.Size(33, 20);
+            this.city_lb.Size = new System.Drawing.Size(30, 20);
             this.city_lb.TabIndex = 5;
             this.city_lb.Text = "עיר";
             // 
@@ -116,6 +120,7 @@
             // 
             this.search_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.search_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.search_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search_bt.ForeColor = System.Drawing.Color.White;
             this.search_bt.Location = new System.Drawing.Point(571, 465);
             this.search_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -130,6 +135,7 @@
             // 
             // ID_tb
             // 
+            this.ID_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.ID_tb.Location = new System.Drawing.Point(374, 37);
             this.ID_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -139,6 +145,7 @@
             // 
             // firstName_tb
             // 
+            this.firstName_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.firstName_tb.Location = new System.Drawing.Point(374, 80);
             this.firstName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -148,6 +155,7 @@
             // 
             // city_tb
             // 
+            this.city_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.city_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.city_tb.Location = new System.Drawing.Point(54, 37);
             this.city_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -158,15 +166,17 @@
             // lastName_lb
             // 
             this.lastName_lb.AutoSize = true;
+            this.lastName_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastName_lb.Location = new System.Drawing.Point(260, 80);
             this.lastName_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastName_lb.Name = "lastName_lb";
-            this.lastName_lb.Size = new System.Drawing.Size(81, 20);
+            this.lastName_lb.Size = new System.Drawing.Size(86, 20);
             this.lastName_lb.TabIndex = 10;
             this.lastName_lb.Text = "שם משפחה";
             // 
             // lastName_tb
             // 
+            this.lastName_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lastName_tb.Location = new System.Drawing.Point(56, 85);
             this.lastName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

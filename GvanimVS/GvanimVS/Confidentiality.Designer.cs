@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.name_lb = new System.Windows.Forms.Label();
             this.ID_lb = new System.Windows.Forms.Label();
             this.name_dynamic_lb = new System.Windows.Forms.Label();
@@ -54,7 +53,8 @@
             // 
             this.name_lb.AutoSize = true;
             this.name_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name_lb.Location = new System.Drawing.Point(802, 27);
+            this.name_lb.Location = new System.Drawing.Point(1069, 42);
+            this.name_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.name_lb.Size = new System.Drawing.Size(99, 20);
@@ -65,7 +65,8 @@
             // 
             this.ID_lb.AutoSize = true;
             this.ID_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_lb.Location = new System.Drawing.Point(564, 27);
+            this.ID_lb.Location = new System.Drawing.Point(752, 42);
+            this.ID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ID_lb.Size = new System.Drawing.Size(37, 20);
@@ -77,7 +78,8 @@
             this.name_dynamic_lb.AutoEllipsis = true;
             this.name_dynamic_lb.AutoSize = true;
             this.name_dynamic_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name_dynamic_lb.Location = new System.Drawing.Point(802, 56);
+            this.name_dynamic_lb.Location = new System.Drawing.Point(1069, 86);
+            this.name_dynamic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name_dynamic_lb.Name = "name_dynamic_lb";
             this.name_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.name_dynamic_lb.Size = new System.Drawing.Size(67, 20);
@@ -90,7 +92,8 @@
             this.ID_dynamic_lb.AutoEllipsis = true;
             this.ID_dynamic_lb.AutoSize = true;
             this.ID_dynamic_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_dynamic_lb.Location = new System.Drawing.Point(547, 56);
+            this.ID_dynamic_lb.Location = new System.Drawing.Point(729, 86);
+            this.ID_dynamic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_dynamic_lb.Name = "ID_dynamic_lb";
             this.ID_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ID_dynamic_lb.Size = new System.Drawing.Size(44, 20);
@@ -104,9 +107,10 @@
             this.show_pdf_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.show_pdf_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.show_pdf_bt.ForeColor = System.Drawing.Color.White;
-            this.show_pdf_bt.Location = new System.Drawing.Point(12, 12);
+            this.show_pdf_bt.Location = new System.Drawing.Point(16, 18);
+            this.show_pdf_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.show_pdf_bt.Name = "show_pdf_bt";
-            this.show_pdf_bt.Size = new System.Drawing.Size(216, 35);
+            this.show_pdf_bt.Size = new System.Drawing.Size(288, 54);
             this.show_pdf_bt.TabIndex = 4;
             this.show_pdf_bt.Text = "הצג תבנית מסמך ויתור סודיות";
             this.show_pdf_bt.UseVisualStyleBackColor = false;
@@ -119,7 +123,8 @@
             this.saved_file_lb.AutoEllipsis = true;
             this.saved_file_lb.AutoSize = true;
             this.saved_file_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saved_file_lb.Location = new System.Drawing.Point(736, 290);
+            this.saved_file_lb.Location = new System.Drawing.Point(981, 446);
+            this.saved_file_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.saved_file_lb.Name = "saved_file_lb";
             this.saved_file_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.saved_file_lb.Size = new System.Drawing.Size(147, 20);
@@ -134,7 +139,8 @@
             this.chosen_file_lb.AutoSize = true;
             this.chosen_file_lb.Enabled = false;
             this.chosen_file_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chosen_file_lb.Location = new System.Drawing.Point(736, 163);
+            this.chosen_file_lb.Location = new System.Drawing.Point(981, 251);
+            this.chosen_file_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.chosen_file_lb.Name = "chosen_file_lb";
             this.chosen_file_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chosen_file_lb.Size = new System.Drawing.Size(157, 20);
@@ -150,9 +156,10 @@
             this.preview_saved_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.preview_saved_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preview_saved_bt.ForeColor = System.Drawing.Color.White;
-            this.preview_saved_bt.Location = new System.Drawing.Point(757, 247);
+            this.preview_saved_bt.Location = new System.Drawing.Point(1009, 380);
+            this.preview_saved_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.preview_saved_bt.Name = "preview_saved_bt";
-            this.preview_saved_bt.Size = new System.Drawing.Size(119, 40);
+            this.preview_saved_bt.Size = new System.Drawing.Size(159, 62);
             this.preview_saved_bt.TabIndex = 18;
             this.preview_saved_bt.Text = "הצג קובץ שמור";
             this.preview_saved_bt.UseVisualStyleBackColor = false;
@@ -167,9 +174,10 @@
             this.preview_selected_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.preview_selected_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preview_selected_bt.ForeColor = System.Drawing.Color.White;
-            this.preview_selected_bt.Location = new System.Drawing.Point(757, 124);
+            this.preview_selected_bt.Location = new System.Drawing.Point(1009, 191);
+            this.preview_selected_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.preview_selected_bt.Name = "preview_selected_bt";
-            this.preview_selected_bt.Size = new System.Drawing.Size(119, 36);
+            this.preview_selected_bt.Size = new System.Drawing.Size(159, 55);
             this.preview_selected_bt.TabIndex = 17;
             this.preview_selected_bt.Text = "הצג קובץ נבחר";
             this.preview_selected_bt.UseVisualStyleBackColor = false;
@@ -183,9 +191,10 @@
             this.upload_file_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.upload_file_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upload_file_bt.ForeColor = System.Drawing.Color.White;
-            this.upload_file_bt.Location = new System.Drawing.Point(757, 207);
+            this.upload_file_bt.Location = new System.Drawing.Point(1009, 318);
+            this.upload_file_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.upload_file_bt.Name = "upload_file_bt";
-            this.upload_file_bt.Size = new System.Drawing.Size(119, 34);
+            this.upload_file_bt.Size = new System.Drawing.Size(159, 52);
             this.upload_file_bt.TabIndex = 16;
             this.upload_file_bt.Text = "שמור";
             this.upload_file_bt.UseVisualStyleBackColor = false;
@@ -199,9 +208,10 @@
             this.choose_file_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.choose_file_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.choose_file_bt.ForeColor = System.Drawing.Color.White;
-            this.choose_file_bt.Location = new System.Drawing.Point(757, 79);
+            this.choose_file_bt.Location = new System.Drawing.Point(1009, 122);
+            this.choose_file_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choose_file_bt.Name = "choose_file_bt";
-            this.choose_file_bt.Size = new System.Drawing.Size(119, 39);
+            this.choose_file_bt.Size = new System.Drawing.Size(159, 60);
             this.choose_file_bt.TabIndex = 15;
             this.choose_file_bt.Text = "בחר קובץ";
             this.choose_file_bt.UseVisualStyleBackColor = false;
@@ -215,9 +225,10 @@
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
-            this.close_bt.Location = new System.Drawing.Point(35, 471);
+            this.close_bt.Location = new System.Drawing.Point(47, 725);
+            this.close_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.close_bt.Name = "close_bt";
-            this.close_bt.Size = new System.Drawing.Size(85, 32);
+            this.close_bt.Size = new System.Drawing.Size(113, 49);
             this.close_bt.TabIndex = 21;
             this.close_bt.Text = "סגור";
             this.close_bt.UseVisualStyleBackColor = false;
@@ -229,7 +240,8 @@
             // 
             this.last_signed_dynamic_lb.AutoSize = true;
             this.last_signed_dynamic_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.last_signed_dynamic_lb.Location = new System.Drawing.Point(300, 56);
+            this.last_signed_dynamic_lb.Location = new System.Drawing.Point(400, 86);
+            this.last_signed_dynamic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.last_signed_dynamic_lb.Name = "last_signed_dynamic_lb";
             this.last_signed_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.last_signed_dynamic_lb.Size = new System.Drawing.Size(108, 20);
@@ -240,7 +252,8 @@
             // 
             this.last_signed_lb.AutoSize = true;
             this.last_signed_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.last_signed_lb.Location = new System.Drawing.Point(300, 27);
+            this.last_signed_lb.Location = new System.Drawing.Point(400, 42);
+            this.last_signed_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.last_signed_lb.Name = "last_signed_lb";
             this.last_signed_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.last_signed_lb.Size = new System.Drawing.Size(153, 20);
@@ -257,19 +270,12 @@
             this.staff_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
             this.position});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.staff_dgv.DefaultCellStyle = dataGridViewCellStyle1;
             this.staff_dgv.GridColor = System.Drawing.SystemColors.ScrollBar;
-            this.staff_dgv.Location = new System.Drawing.Point(105, 105);
+            this.staff_dgv.Location = new System.Drawing.Point(140, 162);
+            this.staff_dgv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.staff_dgv.Name = "staff_dgv";
             this.staff_dgv.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.staff_dgv.Size = new System.Drawing.Size(540, 122);
+            this.staff_dgv.Size = new System.Drawing.Size(720, 188);
             this.staff_dgv.TabIndex = 24;
             this.staff_dgv.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.staff_dgv_UserAddedRow);
             this.staff_dgv.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.staff_dgv_UserDeletedRow);
@@ -290,9 +296,10 @@
             this.export_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.export_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.export_bt.ForeColor = System.Drawing.Color.White;
-            this.export_bt.Location = new System.Drawing.Point(12, 56);
+            this.export_bt.Location = new System.Drawing.Point(16, 86);
+            this.export_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.export_bt.Name = "export_bt";
-            this.export_bt.Size = new System.Drawing.Size(216, 33);
+            this.export_bt.Size = new System.Drawing.Size(288, 51);
             this.export_bt.TabIndex = 25;
             this.export_bt.Text = "צור קובץ מוכן להדפסה";
             this.export_bt.UseVisualStyleBackColor = false;
@@ -302,10 +309,10 @@
             // 
             // Confidentiality
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(939, 538);
+            this.ClientSize = new System.Drawing.Size(1252, 729);
             this.ControlBox = false;
             this.Controls.Add(this.export_bt);
             this.Controls.Add(this.staff_dgv);
@@ -323,7 +330,9 @@
             this.Controls.Add(this.name_dynamic_lb);
             this.Controls.Add(this.ID_lb);
             this.Controls.Add(this.name_lb);
+            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Confidentiality";
             this.Text = "Confidentiality";
             ((System.ComponentModel.ISupportInitialize)(this.staff_dgv)).EndInit();

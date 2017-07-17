@@ -43,36 +43,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(605, 89);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 20);
+            this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "תאריך הביקור";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // visitDate_dtp
             // 
+            this.visitDate_dtp.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.visitDate_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.visitDate_dtp.Location = new System.Drawing.Point(434, 89);
             this.visitDate_dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.visitDate_dtp.Name = "visitDate_dtp";
-            this.visitDate_dtp.Size = new System.Drawing.Size(147, 26);
+            this.visitDate_dtp.Size = new System.Drawing.Size(147, 25);
             this.visitDate_dtp.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(605, 232);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 20);
+            this.label2.Size = new System.Drawing.Size(147, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "פירוט המצב ע\"פ דיווח";
             this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
             // discription_tb
             // 
+            this.discription_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.discription_tb.Location = new System.Drawing.Point(64, 232);
             this.discription_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.discription_tb.Multiline = true;
@@ -85,6 +89,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(413, 412);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -101,6 +106,7 @@
             // 
             this.saveCheckUp_btn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.saveCheckUp_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveCheckUp_btn.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveCheckUp_btn.ForeColor = System.Drawing.Color.White;
             this.saveCheckUp_btn.Location = new System.Drawing.Point(64, 412);
             this.saveCheckUp_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -116,16 +122,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(605, 163);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "שם הרופא ";
             this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
             // doctorName_tb
             // 
+            this.doctorName_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doctorName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.doctorName_tb.Location = new System.Drawing.Point(184, 163);
             this.doctorName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -137,10 +145,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(395, 480);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 20);
+            this.label4.Size = new System.Drawing.Size(180, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "מכתב ביקור צורף בהצלחה";
             // 
@@ -148,6 +157,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(65, 506);
             this.close_bt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

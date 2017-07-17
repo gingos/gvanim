@@ -43,53 +43,54 @@
             // 
             // report_id_tb
             // 
+            this.report_id_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.report_id_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.report_id_tb.Location = new System.Drawing.Point(327, 60);
             this.report_id_tb.Name = "report_id_tb";
-            this.report_id_tb.Size = new System.Drawing.Size(163, 20);
+            this.report_id_tb.Size = new System.Drawing.Size(163, 25);
             this.report_id_tb.TabIndex = 0;
             // 
             // report_id_lb
             // 
             this.report_id_lb.AutoSize = true;
-            this.report_id_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.report_id_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.report_id_lb.Location = new System.Drawing.Point(550, 60);
             this.report_id_lb.Name = "report_id_lb";
-            this.report_id_lb.Size = new System.Drawing.Size(266, 20);
+            this.report_id_lb.Size = new System.Drawing.Size(255, 20);
             this.report_id_lb.TabIndex = 1;
             this.report_id_lb.Text = "מס\"ד דו\"ח (ניתן לחפש גם ת.ז. מתמודד)";
             // 
             // mitmoded_name_lb
             // 
             this.mitmoded_name_lb.AutoSize = true;
-            this.mitmoded_name_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mitmoded_name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mitmoded_name_lb.Location = new System.Drawing.Point(540, 94);
             this.mitmoded_name_lb.Name = "mitmoded_name_lb";
-            this.mitmoded_name_lb.Size = new System.Drawing.Size(280, 20);
+            this.mitmoded_name_lb.Size = new System.Drawing.Size(268, 20);
             this.mitmoded_name_lb.TabIndex = 3;
             this.mitmoded_name_lb.Text = "אם ידוע שם המתמודד נא לבחור אותו כאן";
             // 
             // date_lb
             // 
             this.date_lb.AutoSize = true;
-            this.date_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_lb.Location = new System.Drawing.Point(574, 128);
             this.date_lb.Name = "date_lb";
-            this.date_lb.Size = new System.Drawing.Size(246, 20);
+            this.date_lb.Size = new System.Drawing.Size(234, 20);
             this.date_lb.TabIndex = 4;
             this.date_lb.Text = "אם ידוע התאריך נא לבחור אותו כאן";
             // 
             // datepicker_dtp
             // 
             this.datepicker_dtp.Checked = false;
-            this.datepicker_dtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datepicker_dtp.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datepicker_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datepicker_dtp.Location = new System.Drawing.Point(327, 128);
             this.datepicker_dtp.Name = "datepicker_dtp";
             this.datepicker_dtp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.datepicker_dtp.RightToLeftLayout = true;
             this.datepicker_dtp.ShowCheckBox = true;
-            this.datepicker_dtp.Size = new System.Drawing.Size(163, 26);
+            this.datepicker_dtp.Size = new System.Drawing.Size(163, 25);
             this.datepicker_dtp.TabIndex = 5;
             // 
             // mitmoded_name_cb
@@ -97,18 +98,18 @@
             this.mitmoded_name_cb.BackColor = System.Drawing.Color.White;
             this.mitmoded_name_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mitmoded_name_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mitmoded_name_cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mitmoded_name_cb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mitmoded_name_cb.FormattingEnabled = true;
             this.mitmoded_name_cb.Location = new System.Drawing.Point(310, 96);
             this.mitmoded_name_cb.Name = "mitmoded_name_cb";
-            this.mitmoded_name_cb.Size = new System.Drawing.Size(180, 21);
+            this.mitmoded_name_cb.Size = new System.Drawing.Size(180, 28);
             this.mitmoded_name_cb.TabIndex = 6;
             // 
             // searchReport_bt
             // 
             this.searchReport_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.searchReport_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchReport_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchReport_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchReport_bt.ForeColor = System.Drawing.Color.White;
             this.searchReport_bt.Location = new System.Drawing.Point(719, 347);
             this.searchReport_bt.Name = "searchReport_bt";
@@ -124,7 +125,7 @@
             // 
             this.cancel_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.cancel_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_bt.ForeColor = System.Drawing.Color.White;
             this.cancel_bt.Location = new System.Drawing.Point(57, 347);
             this.cancel_bt.Name = "cancel_bt";
@@ -153,7 +154,7 @@
             // 
             this.addReport_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.addReport_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addReport_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addReport_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addReport_bt.ForeColor = System.Drawing.Color.White;
             this.addReport_bt.Location = new System.Drawing.Point(393, 347);
             this.addReport_bt.Name = "addReport_bt";
