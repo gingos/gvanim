@@ -35,6 +35,7 @@
             this.user_tb = new System.Windows.Forms.TextBox();
             this.password_tb = new System.Windows.Forms.TextBox();
             this.password_lb = new System.Windows.Forms.Label();
+            this.close_bt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.status_pb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +86,7 @@
             // user_tb
             // 
             this.user_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.user_tb.ForeColor = System.Drawing.Color.DarkGray;
+            this.user_tb.ForeColor = System.Drawing.Color.DimGray;
             this.user_tb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.user_tb.Location = new System.Drawing.Point(250, 138);
             this.user_tb.MaxLength = 50;
@@ -98,7 +99,7 @@
             // password_tb
             // 
             this.password_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.password_tb.ForeColor = System.Drawing.Color.DarkGray;
+            this.password_tb.ForeColor = System.Drawing.Color.DimGray;
             this.password_tb.Location = new System.Drawing.Point(250, 215);
             this.password_tb.MaxLength = 50;
             this.password_tb.Name = "password_tb";
@@ -121,6 +122,23 @@
             this.password_lb.TabIndex = 14;
             this.password_lb.Text = "סיסמא:";
             // 
+            // close_bt
+            // 
+            this.close_bt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.close_bt.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_bt.ForeColor = System.Drawing.Color.White;
+            this.close_bt.Location = new System.Drawing.Point(24, 342);
+            this.close_bt.Margin = new System.Windows.Forms.Padding(25);
+            this.close_bt.Name = "close_bt";
+            this.close_bt.Size = new System.Drawing.Size(229, 35);
+            this.close_bt.TabIndex = 15;
+            this.close_bt.Text = "סגור";
+            this.close_bt.UseVisualStyleBackColor = false;
+            this.close_bt.Click += new System.EventHandler(this.close_bt_Click);
+            // 
             // LoginPage
             // 
             this.AcceptButton = this.login_bt;
@@ -129,6 +147,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(672, 418);
             this.ControlBox = false;
+            this.Controls.Add(this.close_bt);
             this.Controls.Add(this.name_lb);
             this.Controls.Add(this.login_bt);
             this.Controls.Add(this.user_tb);
@@ -156,5 +175,6 @@
         private System.Windows.Forms.TextBox user_tb;
         private System.Windows.Forms.TextBox password_tb;
         private System.Windows.Forms.Label password_lb;
+        private System.Windows.Forms.Button close_bt;
     }
 }

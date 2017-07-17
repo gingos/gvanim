@@ -274,5 +274,10 @@ namespace GvanimVS
         {
             password_tb.Text = "";
         }
+
+        private void close_bt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

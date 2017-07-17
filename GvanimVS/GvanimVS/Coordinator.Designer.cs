@@ -33,7 +33,6 @@
             this.close_bt = new System.Windows.Forms.Button();
             this.showMeetings_bt = new System.Windows.Forms.Button();
             this.editMitmoded_bt = new System.Windows.Forms.Button();
-            this.addMeeting_bt = new System.Windows.Forms.Button();
             this.showReports_bt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -115,23 +114,6 @@
             this.editMitmoded_bt.MouseLeave += new System.EventHandler(this.editMitmoded_bt_MouseLeave);
             this.editMitmoded_bt.MouseHover += new System.EventHandler(this.editMitmoded_bt_MouseHover);
             // 
-            // addMeeting_bt
-            // 
-            this.addMeeting_bt.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.addMeeting_bt.Enabled = false;
-            this.addMeeting_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addMeeting_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addMeeting_bt.ForeColor = System.Drawing.Color.White;
-            this.addMeeting_bt.Location = new System.Drawing.Point(513, 280);
-            this.addMeeting_bt.Name = "addMeeting_bt";
-            this.addMeeting_bt.Size = new System.Drawing.Size(144, 33);
-            this.addMeeting_bt.TabIndex = 2;
-            this.addMeeting_bt.Text = "הוסף פגישה";
-            this.addMeeting_bt.UseVisualStyleBackColor = false;
-            this.addMeeting_bt.Click += new System.EventHandler(this.addMeeting_bt_Click);
-            this.addMeeting_bt.MouseLeave += new System.EventHandler(this.addMeeting_bt_MouseLeave);
-            this.addMeeting_bt.MouseHover += new System.EventHandler(this.addMeeting_bt_MouseHover);
-            // 
             // showReports_bt
             // 
             this.showReports_bt.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -161,7 +143,6 @@
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.showMeetings_bt);
             this.Controls.Add(this.editMitmoded_bt);
-            this.Controls.Add(this.addMeeting_bt);
             this.Controls.Add(this.showReports_bt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Coordinator";
@@ -174,7 +155,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button addMeeting_bt;
         private System.Windows.Forms.Button editMitmoded_bt;
         private System.Windows.Forms.Button showReports_bt;
         private System.Windows.Forms.Button close_bt;
