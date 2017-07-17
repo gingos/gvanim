@@ -97,15 +97,23 @@ namespace GvanimVS
         private void detailed_search_Click(object sender, EventArgs e)
         {
             MeetingFind find;
+            DataTable dt;
+            this.Hide();
+            //to determine if opened via coordinator or mitmoded
             if (mitmoded_name_tb.Enabled)
+                //mitmoded is inserted by cooridnator
                 find = new MeetingFind(con, coordinatorID_lb.Text);
             else
+                //text box disabled, because it is locked for specific mitmoded ID
                 find = new MeetingFind(con, coordinatorID_lb.Text, mitmoded_name_tb.Text);
-            find.ShowDialog();
-            DataTable dt = find.getDetails();
-            if (dt.Rows.Count != 0)
-                meetings_dgv.DataSource = dt;
-            find.Dispose();
+            using (find)
+            {
+                find.ShowDialog();
+                 dt = find.getDetails();
+                if (dt.Rows.Count != 0)
+                    meetings_dgv.DataSource = dt;
+            }
+            this.Show();
         }
 
         private void add_meeting_bt_Click(object sender, EventArgs e)

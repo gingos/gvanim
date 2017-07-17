@@ -34,7 +34,7 @@ namespace GvanimVS
         private void searchMeeting_bt_Click(object sender, EventArgs e)
         {
             dt = DetailedSearch();
-            this.Close();
+            this.Hide();
         }
 
         public DataTable getDetails()
