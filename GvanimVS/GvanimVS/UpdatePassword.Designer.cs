@@ -44,7 +44,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(129, 20);
+            this.label1.Size = new System.Drawing.Size(128, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "אנא הכניסי סיסמא";
             // 
@@ -54,7 +54,7 @@
             this.label2.Location = new System.Drawing.Point(262, 156);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(249, 20);
+            this.label2.Size = new System.Drawing.Size(244, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "אנא הכניסי את אותה הסיסמא בשנית";
             // 
@@ -65,7 +65,7 @@
             this.textBox1.Location = new System.Drawing.Point(219, 91);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 18);
+            this.textBox1.Size = new System.Drawing.Size(300, 19);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "_________________________________________________";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
@@ -77,7 +77,7 @@
             this.textBox2.Location = new System.Drawing.Point(221, 213);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 18);
+            this.textBox2.Size = new System.Drawing.Size(300, 19);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "_________________________________________________";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
@@ -122,17 +122,18 @@
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(140, 20);
+            this.label3.Size = new System.Drawing.Size(142, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "הסיסמאות אינן זהות";
             this.label3.Visible = false;
             // 
             // UpdatePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(588, 343);
+            this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ok_bt);
             this.Controls.Add(this.cancel_bt);
@@ -140,8 +141,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UpdatePassword";
             this.Text = "UpdatePassword";

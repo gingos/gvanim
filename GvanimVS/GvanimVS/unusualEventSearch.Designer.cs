@@ -60,7 +60,7 @@
             this.end_date_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.end_date_lb.Name = "end_date_lb";
             this.end_date_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.end_date_lb.Size = new System.Drawing.Size(41, 40);
+            this.end_date_lb.Size = new System.Drawing.Size(43, 40);
             this.end_date_lb.TabIndex = 26;
             this.end_date_lb.Text = "טווח \r\nסיום";
             this.end_date_lb.Visible = false;
@@ -75,7 +75,7 @@
             this.end_date_dtp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.end_date_dtp.RightToLeftLayout = true;
             this.end_date_dtp.ShowCheckBox = true;
-            this.end_date_dtp.Size = new System.Drawing.Size(265, 25);
+            this.end_date_dtp.Size = new System.Drawing.Size(265, 26);
             this.end_date_dtp.TabIndex = 25;
             this.end_date_dtp.Visible = false;
             // 
@@ -85,7 +85,7 @@
             this.city_lb.Location = new System.Drawing.Point(811, 114);
             this.city_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.city_lb.Name = "city_lb";
-            this.city_lb.Size = new System.Drawing.Size(43, 20);
+            this.city_lb.Size = new System.Drawing.Size(42, 20);
             this.city_lb.TabIndex = 16;
             this.city_lb.Text = "מקום";
             this.city_lb.Visible = false;
@@ -107,7 +107,7 @@
             this.start_date_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.start_date_lb.Name = "start_date_lb";
             this.start_date_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.start_date_lb.Size = new System.Drawing.Size(58, 40);
+            this.start_date_lb.Size = new System.Drawing.Size(56, 40);
             this.start_date_lb.TabIndex = 18;
             this.start_date_lb.Text = "טווח \r\nהתחלה";
             this.start_date_lb.Visible = false;
@@ -118,7 +118,7 @@
             this.address_lb.Location = new System.Drawing.Point(376, 114);
             this.address_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.address_lb.Name = "address_lb";
-            this.address_lb.Size = new System.Drawing.Size(52, 20);
+            this.address_lb.Size = new System.Drawing.Size(51, 20);
             this.address_lb.TabIndex = 19;
             this.address_lb.Text = "כתובת";
             this.address_lb.Visible = false;
@@ -133,7 +133,7 @@
             this.start_date_dtp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.start_date_dtp.RightToLeftLayout = true;
             this.start_date_dtp.ShowCheckBox = true;
-            this.start_date_dtp.Size = new System.Drawing.Size(265, 25);
+            this.start_date_dtp.Size = new System.Drawing.Size(265, 26);
             this.start_date_dtp.TabIndex = 15;
             this.start_date_dtp.Visible = false;
             // 
@@ -144,7 +144,7 @@
             this.address_tb.Location = new System.Drawing.Point(47, 114);
             this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(265, 18);
+            this.address_tb.Size = new System.Drawing.Size(265, 19);
             this.address_tb.TabIndex = 12;
             this.address_tb.Text = "_________________________________________________";
             this.address_tb.Visible = false;
@@ -157,7 +157,7 @@
             this.place_tb.Location = new System.Drawing.Point(510, 114);
             this.place_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.place_tb.Name = "place_tb";
-            this.place_tb.Size = new System.Drawing.Size(263, 18);
+            this.place_tb.Size = new System.Drawing.Size(263, 19);
             this.place_tb.TabIndex = 13;
             this.place_tb.Text = "_________________________________________________";
             this.place_tb.Visible = false;
@@ -202,7 +202,7 @@
             this.coordinatorID_lb.Location = new System.Drawing.Point(63, -229);
             this.coordinatorID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.coordinatorID_lb.Name = "coordinatorID_lb";
-            this.coordinatorID_lb.Size = new System.Drawing.Size(193, 20);
+            this.coordinatorID_lb.Size = new System.Drawing.Size(212, 20);
             this.coordinatorID_lb.TabIndex = 32;
             this.coordinatorID_lb.Text = "<coordinatorID_dynamic_lb>";
             // 
@@ -232,7 +232,7 @@
             this.mitmoded_name_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mitmoded_name_tb.Name = "mitmoded_name_tb";
             this.mitmoded_name_tb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mitmoded_name_tb.Size = new System.Drawing.Size(12, 25);
+            this.mitmoded_name_tb.Size = new System.Drawing.Size(12, 26);
             this.mitmoded_name_tb.TabIndex = 29;
             this.mitmoded_name_tb.Text = "חיפוש שם מתמודד";
             // 
@@ -322,10 +322,11 @@
             // 
             // unusualEventSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(897, 621);
+            this.ControlBox = false;
             this.Controls.Add(this.coordinatorID_lb);
             this.Controls.Add(this.detailed_search);
             this.Controls.Add(this.fast_search_bt);
@@ -344,8 +345,8 @@
             this.Controls.Add(this.start_date_dtp);
             this.Controls.Add(this.address_tb);
             this.Controls.Add(this.place_tb);
-            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "unusualEventSearch";
             this.Text = "unusualEventSearch";

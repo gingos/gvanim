@@ -104,7 +104,7 @@
             this.howMuch_tb.Location = new System.Drawing.Point(336, 574);
             this.howMuch_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.howMuch_tb.Name = "howMuch_tb";
-            this.howMuch_tb.Size = new System.Drawing.Size(132, 18);
+            this.howMuch_tb.Size = new System.Drawing.Size(132, 19);
             this.howMuch_tb.TabIndex = 12;
             this.howMuch_tb.Text = "_________________________________________________";
             this.howMuch_tb.Click += new System.EventHandler(this.howMuch_tb_Click);
@@ -117,7 +117,7 @@
             this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox3.Size = new System.Drawing.Size(40, 24);
+            this.checkBox3.Size = new System.Drawing.Size(43, 24);
             this.checkBox3.TabIndex = 9;
             this.checkBox3.Text = "כן";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox2.Size = new System.Drawing.Size(40, 24);
+            this.checkBox2.Size = new System.Drawing.Size(43, 24);
             this.checkBox2.TabIndex = 9;
             this.checkBox2.Text = "כן";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@
             this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox1.Size = new System.Drawing.Size(40, 24);
+            this.checkBox1.Size = new System.Drawing.Size(43, 24);
             this.checkBox1.TabIndex = 9;
             this.checkBox1.Text = "כן";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@
             this.label7.Location = new System.Drawing.Point(689, 322);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 20);
+            this.label7.Size = new System.Drawing.Size(215, 20);
             this.label7.TabIndex = 5;
             this.label7.Text = "?האם האשפוז היה על רקע נפשי";
             this.label7.Visible = false;
@@ -176,7 +176,7 @@
             this.label11.Location = new System.Drawing.Point(476, 572);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 20);
+            this.label11.Size = new System.Drawing.Size(91, 20);
             this.label11.TabIndex = 5;
             this.label11.Text = "?אם כן, כמה";
             // 
@@ -186,7 +186,7 @@
             this.label8.Location = new System.Drawing.Point(365, 323);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(175, 20);
+            this.label8.Size = new System.Drawing.Size(177, 20);
             this.label8.TabIndex = 5;
             this.label8.Text = "?אם כן, האם הוא היה כפוי";
             this.label8.Visible = false;
@@ -197,7 +197,7 @@
             this.label6.Location = new System.Drawing.Point(365, 274);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 20);
+            this.label6.Size = new System.Drawing.Size(173, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "?אם כן, באיזה בית חולים";
             this.label6.Visible = false;
@@ -236,7 +236,7 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkedListBox1.ScrollAlwaysVisible = true;
-            this.checkedListBox1.Size = new System.Drawing.Size(228, 44);
+            this.checkedListBox1.Size = new System.Drawing.Size(228, 25);
             this.checkedListBox1.TabIndex = 3;
             this.checkedListBox1.ThreeDCheckBoxes = true;
             // 
@@ -247,7 +247,7 @@
             this.hospital_tb.Location = new System.Drawing.Point(62, 274);
             this.hospital_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.hospital_tb.Name = "hospital_tb";
-            this.hospital_tb.Size = new System.Drawing.Size(265, 18);
+            this.hospital_tb.Size = new System.Drawing.Size(265, 19);
             this.hospital_tb.TabIndex = 2;
             this.hospital_tb.Text = "_________________________________________________";
             this.hospital_tb.Visible = false;
@@ -259,7 +259,7 @@
             this.address_tb.Location = new System.Drawing.Point(62, 135);
             this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(265, 18);
+            this.address_tb.Size = new System.Drawing.Size(265, 19);
             this.address_tb.TabIndex = 2;
             this.address_tb.Text = "_________________________________________________";
             this.address_tb.Click += new System.EventHandler(this.textBox2_Click);
@@ -270,7 +270,7 @@
             this.label3.Location = new System.Drawing.Point(367, 135);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 20);
+            this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "כתובת";
             // 
@@ -280,7 +280,7 @@
             this.label5.Location = new System.Drawing.Point(737, 274);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 20);
+            this.label5.Size = new System.Drawing.Size(172, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "?האם האירוע כלל אשפוז";
             // 
@@ -290,7 +290,7 @@
             this.label10.Location = new System.Drawing.Point(762, 572);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 20);
+            this.label10.Size = new System.Drawing.Size(158, 20);
             this.label10.TabIndex = 1;
             this.label10.Text = "?האם היו עדים לאירוע";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -301,7 +301,7 @@
             this.label9.Location = new System.Drawing.Point(817, 383);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 20);
+            this.label9.Size = new System.Drawing.Size(100, 20);
             this.label9.TabIndex = 1;
             this.label9.Text = "תיאור האירוע";
             // 
@@ -311,7 +311,7 @@
             this.label4.Location = new System.Drawing.Point(832, 206);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "סוג אירוע";
             // 
@@ -321,7 +321,7 @@
             this.label2.Location = new System.Drawing.Point(813, 135);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "מקום האירוע";
             // 
@@ -331,7 +331,7 @@
             this.label1.Location = new System.Drawing.Point(813, 77);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "מועד האירוע";
             // 
@@ -341,7 +341,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(561, 68);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(197, 25);
+            this.dateTimePicker1.Size = new System.Drawing.Size(197, 26);
             this.dateTimePicker1.TabIndex = 0;
             // 
             // label12
@@ -350,7 +350,7 @@
             this.label12.Location = new System.Drawing.Point(648, 810);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(223, 20);
+            this.label12.Size = new System.Drawing.Size(230, 20);
             this.label12.TabIndex = 1;
             this.label12.Text = "?האם היו סימנים מקדימים לאירוע";
             this.label12.Click += new System.EventHandler(this.label10_Click);
@@ -403,18 +403,19 @@
             this.place_tb.Location = new System.Drawing.Point(493, 135);
             this.place_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.place_tb.Name = "place_tb";
-            this.place_tb.Size = new System.Drawing.Size(265, 18);
+            this.place_tb.Size = new System.Drawing.Size(265, 19);
             this.place_tb.TabIndex = 2;
             this.place_tb.Text = "_________________________________________________";
             this.place_tb.Click += new System.EventHandler(this.textBox6_Click);
             // 
             // Unusual_event
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(936, 733);
+            this.ControlBox = false;
             this.Controls.Add(this.save_bt);
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.dataGridView1);
@@ -441,8 +442,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Unusual_event";
             this.Text = "טופס אירוע חריג";
