@@ -163,7 +163,7 @@
             this.Controls.Add(this.editMitmoded_bt);
             this.Controls.Add(this.addMeeting_bt);
             this.Controls.Add(this.showReports_bt);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Coordinator";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

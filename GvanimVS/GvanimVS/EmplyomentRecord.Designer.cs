@@ -40,42 +40,42 @@
             // id_lb
             // 
             this.id_lb.AutoSize = true;
-            this.id_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id_lb.Location = new System.Drawing.Point(568, 35);
             this.id_lb.Name = "id_lb";
             this.id_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.id_lb.Size = new System.Drawing.Size(88, 20);
+            this.id_lb.Size = new System.Drawing.Size(91, 20);
             this.id_lb.TabIndex = 0;
             this.id_lb.Text = "תעודת זהות:";
             // 
             // name_lb
             // 
             this.name_lb.AutoSize = true;
-            this.name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_lb.Location = new System.Drawing.Point(622, 71);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_lb.Size = new System.Drawing.Size(34, 20);
+            this.name_lb.Size = new System.Drawing.Size(33, 20);
             this.name_lb.TabIndex = 1;
             this.name_lb.Text = "שם:";
             // 
             // mitmoded_id_lb
             // 
             this.mitmoded_id_lb.AutoSize = true;
-            this.mitmoded_id_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mitmoded_id_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mitmoded_id_lb.Location = new System.Drawing.Point(495, 39);
             this.mitmoded_id_lb.Name = "mitmoded_id_lb";
-            this.mitmoded_id_lb.Size = new System.Drawing.Size(22, 20);
+            this.mitmoded_id_lb.Size = new System.Drawing.Size(26, 20);
             this.mitmoded_id_lb.TabIndex = 2;
             this.mitmoded_id_lb.Text = "ID";
             // 
             // mitmoded_name_lb
             // 
             this.mitmoded_name_lb.AutoSize = true;
-            this.mitmoded_name_lb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mitmoded_name_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mitmoded_name_lb.Location = new System.Drawing.Point(495, 71);
             this.mitmoded_name_lb.Name = "mitmoded_name_lb";
-            this.mitmoded_name_lb.Size = new System.Drawing.Size(67, 20);
+            this.mitmoded_name_lb.Size = new System.Drawing.Size(73, 20);
             this.mitmoded_name_lb.TabIndex = 3;
             this.mitmoded_name_lb.Text = "full name";
             // 
@@ -93,7 +93,7 @@
             // 
             this.close_bt.BackColor = System.Drawing.Color.CornflowerBlue;
             this.close_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.close_bt.ForeColor = System.Drawing.Color.White;
             this.close_bt.Location = new System.Drawing.Point(50, 365);
             this.close_bt.Name = "close_bt";
@@ -109,13 +109,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(700, 410);
+            this.ControlBox = false;
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.mitmoded_name_lb);
             this.Controls.Add(this.mitmoded_id_lb);
             this.Controls.Add(this.name_lb);
             this.Controls.Add(this.id_lb);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "EmplyomentRecord";
             this.Text = "EmplyomentRecord";
             this.Load += new System.EventHandler(this.EmplyomentRecord_Load);

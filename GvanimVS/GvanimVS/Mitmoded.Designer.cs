@@ -73,7 +73,7 @@
             this.name_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name_lb.Name = "name_lb";
             this.name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_lb.Size = new System.Drawing.Size(38, 20);
+            this.name_lb.Size = new System.Drawing.Size(37, 20);
             this.name_lb.TabIndex = 0;
             this.name_lb.Text = "שם: ";
             // 
@@ -84,7 +84,7 @@
             this.name_dynamic_lb.Location = new System.Drawing.Point(624, 49);
             this.name_dynamic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name_dynamic_lb.Name = "name_dynamic_lb";
-            this.name_dynamic_lb.Size = new System.Drawing.Size(65, 20);
+            this.name_dynamic_lb.Size = new System.Drawing.Size(67, 20);
             this.name_dynamic_lb.TabIndex = 1;
             this.name_dynamic_lb.Text = "<name>";
             // 
@@ -95,7 +95,7 @@
             this.ID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ID_lb.Size = new System.Drawing.Size(88, 20);
+            this.ID_lb.Size = new System.Drawing.Size(91, 20);
             this.ID_lb.TabIndex = 2;
             this.ID_lb.Text = "תעודת זהות:";
             // 
@@ -229,7 +229,7 @@
             this.coordinator_name_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.coordinator_name_lb.Name = "coordinator_name_lb";
             this.coordinator_name_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.coordinator_name_lb.Size = new System.Drawing.Size(44, 20);
+            this.coordinator_name_lb.Size = new System.Drawing.Size(46, 20);
             this.coordinator_name_lb.TabIndex = 12;
             this.coordinator_name_lb.Text = "רכזת:";
             // 
@@ -240,7 +240,7 @@
             this.coordinator_dynamic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.coordinator_dynamic_lb.Name = "coordinator_dynamic_lb";
             this.coordinator_dynamic_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.coordinator_dynamic_lb.Size = new System.Drawing.Size(101, 20);
+            this.coordinator_dynamic_lb.Size = new System.Drawing.Size(107, 20);
             this.coordinator_dynamic_lb.TabIndex = 13;
             this.coordinator_dynamic_lb.Text = "<coordinator>";
             // 
@@ -471,7 +471,7 @@
             this.score_lb.Location = new System.Drawing.Point(195, 32);
             this.score_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.score_lb.Name = "score_lb";
-            this.score_lb.Size = new System.Drawing.Size(92, 20);
+            this.score_lb.Size = new System.Drawing.Size(101, 20);
             this.score_lb.TabIndex = 16;
             this.score_lb.Text = "דירוג מתמודד";
             // 
@@ -481,7 +481,7 @@
             this.score_dynamic_lb.Location = new System.Drawing.Point(71, 32);
             this.score_dynamic_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.score_dynamic_lb.Name = "score_dynamic_lb";
-            this.score_dynamic_lb.Size = new System.Drawing.Size(62, 20);
+            this.score_dynamic_lb.Size = new System.Drawing.Size(66, 20);
             this.score_dynamic_lb.TabIndex = 17;
             this.score_dynamic_lb.Text = "<score>";
             // 
@@ -514,10 +514,11 @@
             // 
             // Mitmoded
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(965, 551);
+            this.ControlBox = false;
             this.Controls.Add(this.keyword_bt);
             this.Controls.Add(this.score_dynamic_lb);
             this.Controls.Add(this.score_lb);
@@ -531,8 +532,8 @@
             this.Controls.Add(this.ID_lb);
             this.Controls.Add(this.name_dynamic_lb);
             this.Controls.Add(this.name_lb);
-            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Mitmoded";
             this.Text = "Mitmoded";

@@ -180,7 +180,7 @@
             this.Controls.Add(this.mitmoded_name_lb);
             this.Controls.Add(this.report_id_lb);
             this.Controls.Add(this.report_id_tb);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ReportFind";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FindReport";

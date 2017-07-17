@@ -135,12 +135,12 @@
             this.Controls.Add(this.password_tb);
             this.Controls.Add(this.password_lb);
             this.Controls.Add(this.status_pb);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "LoginPage";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "________________________________";
+            this.Text = "Login Page";
             this.Shown += new System.EventHandler(this.LoginPage_Shown);
             this.Click += new System.EventHandler(this.user_tb_Click);
             ((System.ComponentModel.ISupportInitialize)(this.status_pb)).EndInit();
