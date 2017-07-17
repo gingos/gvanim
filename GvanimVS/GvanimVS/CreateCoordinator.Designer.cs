@@ -59,14 +59,12 @@
             // 
             // firstName_tb
             // 
-            this.firstName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstName_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.firstName_tb.Location = new System.Drawing.Point(228, 49);
             this.firstName_tb.Name = "firstName_tb";
-            this.firstName_tb.Size = new System.Drawing.Size(164, 18);
+            this.firstName_tb.Size = new System.Drawing.Size(164, 25);
             this.firstName_tb.TabIndex = 1;
-            this.firstName_tb.Text = "_________________________________________________";
             // 
             // family_name_lb
             // 
@@ -80,14 +78,12 @@
             // 
             // lastName_tb
             // 
-            this.lastName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastName_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lastName_tb.Location = new System.Drawing.Point(228, 87);
             this.lastName_tb.Name = "lastName_tb";
-            this.lastName_tb.Size = new System.Drawing.Size(164, 18);
+            this.lastName_tb.Size = new System.Drawing.Size(164, 25);
             this.lastName_tb.TabIndex = 1;
-            this.lastName_tb.Text = "_________________________________________________";
             this.lastName_tb.Click += new System.EventHandler(this.lastName_tb_Click);
             // 
             // email_lb
@@ -102,14 +98,12 @@
             // 
             // email_tb
             // 
-            this.email_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.email_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.email_tb.Location = new System.Drawing.Point(228, 132);
             this.email_tb.Name = "email_tb";
-            this.email_tb.Size = new System.Drawing.Size(164, 18);
+            this.email_tb.Size = new System.Drawing.Size(164, 25);
             this.email_tb.TabIndex = 1;
-            this.email_tb.Text = "_________________________________________________";
             this.email_tb.Click += new System.EventHandler(this.email_tb_Click);
             // 
             // identity_lb
@@ -124,14 +118,12 @@
             // 
             // identity_tb
             // 
-            this.identity_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.identity_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.identity_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.identity_tb.Location = new System.Drawing.Point(228, 180);
             this.identity_tb.Name = "identity_tb";
-            this.identity_tb.Size = new System.Drawing.Size(164, 18);
+            this.identity_tb.Size = new System.Drawing.Size(164, 25);
             this.identity_tb.TabIndex = 1;
-            this.identity_tb.Text = "_________________________________________________";
             this.identity_tb.Click += new System.EventHandler(this.identity_tb_Click);
             // 
             // password_lb
@@ -146,14 +138,12 @@
             // 
             // password_tb
             // 
-            this.password_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.password_tb.Location = new System.Drawing.Point(228, 229);
             this.password_tb.Name = "password_tb";
-            this.password_tb.Size = new System.Drawing.Size(164, 18);
+            this.password_tb.Size = new System.Drawing.Size(164, 25);
             this.password_tb.TabIndex = 1;
-            this.password_tb.Text = "_________________________________________________";
             this.password_tb.Click += new System.EventHandler(this.password_tb_Click);
             // 
             // close_bt
@@ -224,6 +214,7 @@
             // 
             // job_cb
             // 
+            this.job_cb.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.job_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.job_cb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job_cb.FormattingEnabled = true;

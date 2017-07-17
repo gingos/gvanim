@@ -290,6 +290,9 @@
     <EmbeddedResource Include="CreateCoordinator.resx">
       <DependentUpon>CreateCoordinator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DBform.resx">
+      <DependentUpon>DBform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hitkashrut.resx">
       <DependentUpon>Hitkashrut.cs</DependentUpon>
     </EmbeddedResource>

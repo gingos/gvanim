@@ -35,11 +35,12 @@ namespace GvanimVS
                   }
               }*/
             ShapedForm1 sf = new ShapedForm1();
+            LoginPage lp = new LoginPage();
             while (true)
             {
                 try
                 {
-                    Application.Run(sf);
+                    Application.Run(lp);
                     break;
                 }
                 catch (TimeoutException)

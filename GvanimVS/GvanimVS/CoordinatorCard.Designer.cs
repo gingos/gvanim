@@ -72,13 +72,11 @@
             // 
             // email_tb
             // 
-            this.email_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.email_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.email_tb.Location = new System.Drawing.Point(9, 238);
+            this.email_tb.Location = new System.Drawing.Point(9, 231);
             this.email_tb.Name = "email_tb";
-            this.email_tb.Size = new System.Drawing.Size(153, 13);
+            this.email_tb.Size = new System.Drawing.Size(153, 20);
             this.email_tb.TabIndex = 43;
-            this.email_tb.Text = "_________________________________________________";
             // 
             // label1
             // 
@@ -127,13 +125,11 @@
             // 
             // phone2_tb
             // 
-            this.phone2_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phone2_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.phone2_tb.Location = new System.Drawing.Point(221, 311);
+            this.phone2_tb.Location = new System.Drawing.Point(221, 304);
             this.phone2_tb.Name = "phone2_tb";
-            this.phone2_tb.Size = new System.Drawing.Size(200, 13);
+            this.phone2_tb.Size = new System.Drawing.Size(200, 20);
             this.phone2_tb.TabIndex = 38;
-            this.phone2_tb.Text = "_________________________________________________";
             // 
             // phone2_lb
             // 
@@ -148,13 +144,11 @@
             // 
             // phone1_tb
             // 
-            this.phone1_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phone1_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.phone1_tb.Location = new System.Drawing.Point(221, 278);
+            this.phone1_tb.Location = new System.Drawing.Point(221, 271);
             this.phone1_tb.Name = "phone1_tb";
-            this.phone1_tb.Size = new System.Drawing.Size(200, 13);
+            this.phone1_tb.Size = new System.Drawing.Size(200, 20);
             this.phone1_tb.TabIndex = 36;
-            this.phone1_tb.Text = "_________________________________________________";
             // 
             // phone1_lb
             // 
@@ -169,13 +163,11 @@
             // 
             // address_tb
             // 
-            this.address_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.address_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.address_tb.Location = new System.Drawing.Point(221, 241);
+            this.address_tb.Location = new System.Drawing.Point(221, 234);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(200, 13);
+            this.address_tb.Size = new System.Drawing.Size(200, 20);
             this.address_tb.TabIndex = 34;
-            this.address_tb.Text = "_________________________________________________";
             // 
             // street_lb
             // 
@@ -190,13 +182,11 @@
             // 
             // city_tb
             // 
-            this.city_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.city_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.city_tb.Location = new System.Drawing.Point(221, 199);
+            this.city_tb.Location = new System.Drawing.Point(221, 192);
             this.city_tb.Name = "city_tb";
-            this.city_tb.Size = new System.Drawing.Size(200, 13);
+            this.city_tb.Size = new System.Drawing.Size(200, 20);
             this.city_tb.TabIndex = 32;
-            this.city_tb.Text = "_________________________________________________";
             // 
             // city_lb
             // 
@@ -211,13 +201,11 @@
             // 
             // ID_tb
             // 
-            this.ID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ID_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.ID_tb.Location = new System.Drawing.Point(221, 159);
+            this.ID_tb.Location = new System.Drawing.Point(221, 152);
             this.ID_tb.Name = "ID_tb";
-            this.ID_tb.Size = new System.Drawing.Size(200, 13);
+            this.ID_tb.Size = new System.Drawing.Size(200, 20);
             this.ID_tb.TabIndex = 30;
-            this.ID_tb.Text = "_________________________________________________";
             // 
             // ID_lb
             // 
@@ -254,13 +242,11 @@
             // 
             // lastName_tb
             // 
-            this.lastName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastName_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.lastName_tb.Location = new System.Drawing.Point(221, 77);
+            this.lastName_tb.Location = new System.Drawing.Point(221, 70);
             this.lastName_tb.Name = "lastName_tb";
-            this.lastName_tb.Size = new System.Drawing.Size(200, 13);
+            this.lastName_tb.Size = new System.Drawing.Size(200, 20);
             this.lastName_tb.TabIndex = 26;
-            this.lastName_tb.Text = "_________________________________________________";
             // 
             // lastName_lb
             // 
@@ -275,13 +261,11 @@
             // 
             // firstName_tb
             // 
-            this.firstName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstName_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.firstName_tb.Location = new System.Drawing.Point(221, 39);
+            this.firstName_tb.Location = new System.Drawing.Point(221, 32);
             this.firstName_tb.Name = "firstName_tb";
-            this.firstName_tb.Size = new System.Drawing.Size(200, 13);
+            this.firstName_tb.Size = new System.Drawing.Size(200, 20);
             this.firstName_tb.TabIndex = 24;
-            this.firstName_tb.Text = "_________________________________________________";
             // 
             // firstName_lb
             // 

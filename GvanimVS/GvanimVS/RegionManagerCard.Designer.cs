@@ -68,26 +68,22 @@
             // 
             // firstName_tb
             // 
-            this.firstName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstName_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.firstName_tb.Location = new System.Drawing.Point(263, 41);
             this.firstName_tb.Name = "firstName_tb";
-            this.firstName_tb.Size = new System.Drawing.Size(200, 18);
+            this.firstName_tb.Size = new System.Drawing.Size(200, 25);
             this.firstName_tb.TabIndex = 1;
-            this.firstName_tb.Text = "_________________________________________________";
             this.firstName_tb.Click += new System.EventHandler(this.firstName_tb_Click);
             // 
             // lastName_tb
             // 
-            this.lastName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastName_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lastName_tb.Location = new System.Drawing.Point(263, 79);
             this.lastName_tb.Name = "lastName_tb";
-            this.lastName_tb.Size = new System.Drawing.Size(200, 18);
+            this.lastName_tb.Size = new System.Drawing.Size(200, 25);
             this.lastName_tb.TabIndex = 3;
-            this.lastName_tb.Text = "_________________________________________________";
             this.lastName_tb.Click += new System.EventHandler(this.lastName_tb_Click);
             // 
             // lastName_lb
@@ -124,14 +120,12 @@
             // 
             // ID_tb
             // 
-            this.ID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ID_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.ID_tb.Location = new System.Drawing.Point(263, 161);
             this.ID_tb.Name = "ID_tb";
-            this.ID_tb.Size = new System.Drawing.Size(200, 18);
+            this.ID_tb.Size = new System.Drawing.Size(200, 25);
             this.ID_tb.TabIndex = 7;
-            this.ID_tb.Text = "_________________________________________________";
             this.ID_tb.Click += new System.EventHandler(this.ID_tb_Click);
             // 
             // ID_lb
@@ -148,14 +142,12 @@
             // 
             // city_tb
             // 
-            this.city_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.city_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.city_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.city_tb.Location = new System.Drawing.Point(263, 201);
             this.city_tb.Name = "city_tb";
-            this.city_tb.Size = new System.Drawing.Size(200, 18);
+            this.city_tb.Size = new System.Drawing.Size(200, 25);
             this.city_tb.TabIndex = 9;
-            this.city_tb.Text = "_________________________________________________";
             this.city_tb.Click += new System.EventHandler(this.city_tb_Click);
             // 
             // city_lb
@@ -171,14 +163,12 @@
             // 
             // address_tb
             // 
-            this.address_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.address_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.address_tb.Location = new System.Drawing.Point(263, 243);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(200, 18);
+            this.address_tb.Size = new System.Drawing.Size(200, 25);
             this.address_tb.TabIndex = 11;
-            this.address_tb.Text = "_________________________________________________";
             this.address_tb.Click += new System.EventHandler(this.address_tb_Click);
             // 
             // street_lb
@@ -194,14 +184,12 @@
             // 
             // phone1_tb
             // 
-            this.phone1_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phone1_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phone1_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.phone1_tb.Location = new System.Drawing.Point(263, 280);
             this.phone1_tb.Name = "phone1_tb";
-            this.phone1_tb.Size = new System.Drawing.Size(200, 18);
+            this.phone1_tb.Size = new System.Drawing.Size(200, 25);
             this.phone1_tb.TabIndex = 13;
-            this.phone1_tb.Text = "_________________________________________________";
             this.phone1_tb.Click += new System.EventHandler(this.phone1_tb_Click);
             // 
             // phone1_lb
@@ -217,14 +205,12 @@
             // 
             // phone2_tb
             // 
-            this.phone2_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.phone2_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phone2_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.phone2_tb.Location = new System.Drawing.Point(263, 317);
             this.phone2_tb.Name = "phone2_tb";
-            this.phone2_tb.Size = new System.Drawing.Size(200, 18);
+            this.phone2_tb.Size = new System.Drawing.Size(200, 25);
             this.phone2_tb.TabIndex = 15;
-            this.phone2_tb.Text = "_________________________________________________";
             this.phone2_tb.Click += new System.EventHandler(this.phone2_tb_Click);
             // 
             // phone2_lb
@@ -284,14 +270,12 @@
             // 
             // email_tb
             // 
-            this.email_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.email_tb.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.email_tb.Location = new System.Drawing.Point(12, 201);
             this.email_tb.Name = "email_tb";
-            this.email_tb.Size = new System.Drawing.Size(195, 18);
+            this.email_tb.Size = new System.Drawing.Size(195, 25);
             this.email_tb.TabIndex = 21;
-            this.email_tb.Text = "_________________________________________________";
             this.email_tb.Click += new System.EventHandler(this.email_tb_Click);
             // 
             // label1

@@ -130,36 +130,30 @@
             // 
             // ID_tb
             // 
-            this.ID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ID_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.ID_tb.Location = new System.Drawing.Point(374, 37);
             this.ID_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ID_tb.Name = "ID_tb";
-            this.ID_tb.Size = new System.Drawing.Size(177, 18);
+            this.ID_tb.Size = new System.Drawing.Size(177, 25);
             this.ID_tb.TabIndex = 7;
-            this.ID_tb.Text = "_________________________________________________";
             // 
             // firstName_tb
             // 
-            this.firstName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.firstName_tb.Location = new System.Drawing.Point(374, 80);
             this.firstName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstName_tb.Name = "firstName_tb";
-            this.firstName_tb.Size = new System.Drawing.Size(177, 18);
+            this.firstName_tb.Size = new System.Drawing.Size(177, 25);
             this.firstName_tb.TabIndex = 8;
-            this.firstName_tb.Text = "_________________________________________________";
             // 
             // city_tb
             // 
-            this.city_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.city_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.city_tb.Location = new System.Drawing.Point(54, 37);
             this.city_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.city_tb.Name = "city_tb";
-            this.city_tb.Size = new System.Drawing.Size(177, 18);
+            this.city_tb.Size = new System.Drawing.Size(177, 25);
             this.city_tb.TabIndex = 9;
-            this.city_tb.Text = "_________________________________________________";
             // 
             // lastName_lb
             // 
@@ -173,14 +167,12 @@
             // 
             // lastName_tb
             // 
-            this.lastName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lastName_tb.Location = new System.Drawing.Point(56, 85);
             this.lastName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastName_tb.Name = "lastName_tb";
-            this.lastName_tb.Size = new System.Drawing.Size(175, 18);
+            this.lastName_tb.Size = new System.Drawing.Size(175, 25);
             this.lastName_tb.TabIndex = 11;
-            this.lastName_tb.Text = "_________________________________________________";
             // 
             // SelectMimoded
             // 

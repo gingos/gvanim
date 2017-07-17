@@ -49,12 +49,11 @@
             // 
             // address_tb
             // 
-            this.address_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.address_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.address_tb.Location = new System.Drawing.Point(265, 158);
             this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(301, 18);
+            this.address_tb.Size = new System.Drawing.Size(301, 25);
             this.address_tb.TabIndex = 0;
             this.address_tb.Text = "כתובת";
             this.address_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -135,12 +134,11 @@
             // 
             // city_tb
             // 
-            this.city_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.city_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.city_tb.Location = new System.Drawing.Point(576, 158);
             this.city_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.city_tb.Name = "city_tb";
-            this.city_tb.Size = new System.Drawing.Size(132, 18);
+            this.city_tb.Size = new System.Drawing.Size(132, 25);
             this.city_tb.TabIndex = 0;
             this.city_tb.Text = "עיר";
             this.city_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;

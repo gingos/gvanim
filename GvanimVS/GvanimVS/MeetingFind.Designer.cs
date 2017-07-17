@@ -49,38 +49,32 @@
             // 
             // meetingID_tb
             // 
-            this.meetingID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.meetingID_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.meetingID_tb.Location = new System.Drawing.Point(302, 86);
             this.meetingID_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.meetingID_tb.Name = "meetingID_tb";
-            this.meetingID_tb.Size = new System.Drawing.Size(251, 18);
+            this.meetingID_tb.Size = new System.Drawing.Size(251, 25);
             this.meetingID_tb.TabIndex = 0;
-            this.meetingID_tb.Text = "_________________________________________________";
             this.meetingID_tb.Click += new System.EventHandler(this.meetingID_tb_Click);
             // 
             // city_tb
             // 
-            this.city_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.city_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.city_tb.Location = new System.Drawing.Point(499, 203);
             this.city_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.city_tb.Name = "city_tb";
-            this.city_tb.Size = new System.Drawing.Size(263, 18);
+            this.city_tb.Size = new System.Drawing.Size(263, 25);
             this.city_tb.TabIndex = 0;
-            this.city_tb.Text = "_________________________________________________";
             this.city_tb.Click += new System.EventHandler(this.city_tb_Click);
             // 
             // address_tb
             // 
-            this.address_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.address_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.address_tb.Location = new System.Drawing.Point(39, 203);
             this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(263, 18);
+            this.address_tb.Size = new System.Drawing.Size(263, 25);
             this.address_tb.TabIndex = 0;
-            this.address_tb.Text = "_________________________________________________";
             this.address_tb.Click += new System.EventHandler(this.address_tb_Click);
             // 
             // start_date_dtp
@@ -202,26 +196,22 @@
             // 
             // firstName_tb
             // 
-            this.firstName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.firstName_tb.Location = new System.Drawing.Point(499, 137);
             this.firstName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstName_tb.Name = "firstName_tb";
-            this.firstName_tb.Size = new System.Drawing.Size(263, 18);
+            this.firstName_tb.Size = new System.Drawing.Size(263, 25);
             this.firstName_tb.TabIndex = 8;
-            this.firstName_tb.Text = "_________________________________________________";
             this.firstName_tb.Click += new System.EventHandler(this.firstName_tb_Click);
             // 
             // lastName_tb
             // 
-            this.lastName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lastName_tb.Location = new System.Drawing.Point(39, 137);
             this.lastName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastName_tb.Name = "lastName_tb";
-            this.lastName_tb.Size = new System.Drawing.Size(263, 18);
+            this.lastName_tb.Size = new System.Drawing.Size(263, 25);
             this.lastName_tb.TabIndex = 9;
-            this.lastName_tb.Text = "_________________________________________________";
             this.lastName_tb.Click += new System.EventHandler(this.lastName_tb_Click);
             // 
             // end_date_lb

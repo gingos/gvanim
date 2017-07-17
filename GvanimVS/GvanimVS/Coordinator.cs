@@ -21,6 +21,7 @@ namespace GvanimVS
         public Coordinator(SqlConnection con, string ID) : base(con)
         {
             InitializeComponent();
+            
             this.coordinatorID = ID;
             this.Text += ": " + ID;
         }

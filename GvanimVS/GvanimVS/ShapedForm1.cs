@@ -22,7 +22,7 @@ namespace GvanimVS
         public ShapedForm1()
         {
             InitializeComponent();
-            lp = new LoginPage(mainPanel);
+            lp = new LoginPage();
             lp.TopLevel = false;
             lp.AutoScroll = true;
             mainPanel.Controls.Add(lp);

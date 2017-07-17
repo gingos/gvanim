@@ -126,14 +126,12 @@
             // 
             // doctorName_tb
             // 
-            this.doctorName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.doctorName_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.doctorName_tb.Location = new System.Drawing.Point(184, 163);
             this.doctorName_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.doctorName_tb.Name = "doctorName_tb";
-            this.doctorName_tb.Size = new System.Drawing.Size(398, 18);
+            this.doctorName_tb.Size = new System.Drawing.Size(398, 25);
             this.doctorName_tb.TabIndex = 2;
-            this.doctorName_tb.Text = "_________________________________________________";
             this.doctorName_tb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4

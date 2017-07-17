@@ -139,27 +139,23 @@
             // 
             // address_tb
             // 
-            this.address_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.address_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.address_tb.Location = new System.Drawing.Point(47, 114);
             this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(265, 18);
+            this.address_tb.Size = new System.Drawing.Size(265, 25);
             this.address_tb.TabIndex = 12;
-            this.address_tb.Text = "_________________________________________________";
             this.address_tb.Visible = false;
             this.address_tb.Click += new System.EventHandler(this.address_tb_Click);
             // 
             // place_tb
             // 
-            this.place_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.place_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.place_tb.Location = new System.Drawing.Point(510, 114);
             this.place_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.place_tb.Name = "place_tb";
-            this.place_tb.Size = new System.Drawing.Size(263, 18);
+            this.place_tb.Size = new System.Drawing.Size(263, 25);
             this.place_tb.TabIndex = 13;
-            this.place_tb.Text = "_________________________________________________";
             this.place_tb.Visible = false;
             this.place_tb.Click += new System.EventHandler(this.place_tb_Click);
             // 

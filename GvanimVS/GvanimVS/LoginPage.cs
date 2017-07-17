@@ -17,13 +17,14 @@ namespace GvanimVS
         string CONNECTION_STRING = "Data Source= gingos.database.windows.net;Initial Catalog=gvanimDB;Persist Security Info=True;User ID=gingos;Password=wolf20Schneid!";
         public volatile bool connected;
         public DataTable dt;
+        public Panel mainPanel;
 
         public LoginPage(SqlConnection con) : base(con)
         {
             InitializeComponent();
             con = new SqlConnection(CONNECTION_STRING);
         }
-        public LoginPage(Panel panel) : base()
+        public LoginPage() : base()
         {
             InitializeComponent();
             con = new SqlConnection(CONNECTION_STRING);

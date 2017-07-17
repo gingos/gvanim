@@ -42,13 +42,11 @@
             // 
             // reportNum_tb
             // 
-            this.reportNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.reportNum_tb.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.reportNum_tb.Location = new System.Drawing.Point(145, 74);
             this.reportNum_tb.Name = "reportNum_tb";
-            this.reportNum_tb.Size = new System.Drawing.Size(100, 13);
+            this.reportNum_tb.Size = new System.Drawing.Size(100, 20);
             this.reportNum_tb.TabIndex = 0;
-            this.reportNum_tb.Text = "_________________________________________________";
             this.reportNum_tb.TextChanged += new System.EventHandler(this.reportNum_tb_TextChanged);
             // 
             // label1
@@ -94,7 +92,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

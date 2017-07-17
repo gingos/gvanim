@@ -99,14 +99,12 @@
             // 
             // howMuch_tb
             // 
-            this.howMuch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.howMuch_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.howMuch_tb.Location = new System.Drawing.Point(336, 574);
             this.howMuch_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.howMuch_tb.Name = "howMuch_tb";
-            this.howMuch_tb.Size = new System.Drawing.Size(132, 18);
+            this.howMuch_tb.Size = new System.Drawing.Size(132, 25);
             this.howMuch_tb.TabIndex = 12;
-            this.howMuch_tb.Text = "_________________________________________________";
             this.howMuch_tb.Click += new System.EventHandler(this.howMuch_tb_Click);
             this.howMuch_tb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -242,26 +240,22 @@
             // 
             // hospital_tb
             // 
-            this.hospital_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.hospital_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.hospital_tb.Location = new System.Drawing.Point(62, 274);
             this.hospital_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.hospital_tb.Name = "hospital_tb";
-            this.hospital_tb.Size = new System.Drawing.Size(265, 18);
+            this.hospital_tb.Size = new System.Drawing.Size(265, 25);
             this.hospital_tb.TabIndex = 2;
-            this.hospital_tb.Text = "_________________________________________________";
             this.hospital_tb.Visible = false;
             // 
             // address_tb
             // 
-            this.address_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.address_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.address_tb.Location = new System.Drawing.Point(62, 135);
             this.address_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(265, 18);
+            this.address_tb.Size = new System.Drawing.Size(265, 25);
             this.address_tb.TabIndex = 2;
-            this.address_tb.Text = "_________________________________________________";
             this.address_tb.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // label3
@@ -398,14 +392,12 @@
             // 
             // place_tb
             // 
-            this.place_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.place_tb.ForeColor = System.Drawing.SystemColors.GrayText;
             this.place_tb.Location = new System.Drawing.Point(493, 135);
             this.place_tb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.place_tb.Name = "place_tb";
-            this.place_tb.Size = new System.Drawing.Size(265, 18);
+            this.place_tb.Size = new System.Drawing.Size(265, 25);
             this.place_tb.TabIndex = 2;
-            this.place_tb.Text = "_________________________________________________";
             this.place_tb.Click += new System.EventHandler(this.textBox6_Click);
             // 
             // Unusual_event

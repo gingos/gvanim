@@ -60,26 +60,22 @@
             // 
             // textBox1
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
             this.textBox1.Location = new System.Drawing.Point(219, 91);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 18);
+            this.textBox1.Size = new System.Drawing.Size(300, 25);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "_________________________________________________";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
             // textBox2
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.ForeColor = System.Drawing.SystemColors.GrayText;
             this.textBox2.Location = new System.Drawing.Point(221, 213);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 18);
+            this.textBox2.Size = new System.Drawing.Size(300, 25);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "_________________________________________________";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // cancel_bt
