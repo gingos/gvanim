@@ -91,7 +91,7 @@
             // ID_lb
             // 
             this.ID_lb.AutoSize = true;
-            this.ID_lb.Location = new System.Drawing.Point(416, 49);
+            this.ID_lb.Location = new System.Drawing.Point(447, 49);
             this.ID_lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ID_lb.Name = "ID_lb";
             this.ID_lb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -500,6 +500,7 @@
             this.keyword_bt.TabIndex = 18;
             this.keyword_bt.Text = "סריקה עבור מילות מפתח";
             this.keyword_bt.UseVisualStyleBackColor = false;
+            this.keyword_bt.Click += new System.EventHandler(this.keyword_bt_Click);
             // 
             // profile_pb
             // 

@@ -54,8 +54,8 @@ namespace GvanimVS
                 return;
             string first = mitmoded_dgv["firstName", e.RowIndex].Value.ToString();
             string last = mitmoded_dgv["lastName", e.RowIndex].Value.ToString();
-            DialogResult dialogResult = MessageBox.Show("האם ברצונך לערוך את" + "\n" +first +" " + last, "אישור בחירת מתמודד", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
-            if (dialogResult == DialogResult.Yes)
+            //DialogResult dialogResult = MessageBox.Show("האם ברצונך לערוך את" + "\n" +first +" " + last, "אישור בחירת מתמודד", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
+            if (true)// == DialogResult.Yes)
             {
                 ID = mitmoded_dgv["ID", e.RowIndex].Value.ToString();
                 Console.WriteLine("SelectMitmoded-->click--> ID = " + ID);
@@ -66,7 +66,7 @@ namespace GvanimVS
                 }
                 this.Show();
             }
-            else if (dialogResult == DialogResult.No)
+            else// if (dialogResult == DialogResult.No)
             {
                 return;
             }

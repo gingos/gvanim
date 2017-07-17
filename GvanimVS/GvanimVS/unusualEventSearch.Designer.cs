@@ -322,6 +322,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(897, 621);
+            this.ControlBox = false;
             this.Controls.Add(this.coordinatorID_lb);
             this.Controls.Add(this.detailed_search);
             this.Controls.Add(this.fast_search_bt);
@@ -341,7 +342,6 @@
             this.Controls.Add(this.address_tb);
             this.Controls.Add(this.place_tb);
             this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "unusualEventSearch";
             this.Text = "unusualEventSearch";

@@ -109,12 +109,13 @@ namespace GvanimVS
 
         private void btn_tochnit_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            using (var tochnit = new PersonalPlan(con, ID_dynamic_lb.Text))
-            {
-                tochnit.ShowDialog();
-            }
-            this.Show();
+            MessageBox.Show("דף זה נמצא בפיתוח");
+            //this.Hide();
+            //using (var tochnit = new PersonalPlan(con, ID_dynamic_lb.Text))
+            //{
+            //    tochnit.ShowDialog();
+            //}
+            //this.Show();
         }
 
         private void open_hitkashrut_bt_Click(object sender, EventArgs e)

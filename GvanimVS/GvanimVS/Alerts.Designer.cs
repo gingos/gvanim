@@ -105,7 +105,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.name_dynamic_lb);
             this.Controls.Add(this.name_lb);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Alerts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alerts";

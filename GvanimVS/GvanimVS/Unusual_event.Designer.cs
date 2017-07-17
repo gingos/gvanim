@@ -406,7 +406,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(936, 733);
+            this.ClientSize = new System.Drawing.Size(948, 378);
+            this.ControlBox = false;
             this.Controls.Add(this.save_bt);
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.dataGridView1);
@@ -434,7 +435,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
             this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Unusual_event";
             this.Text = "טופס אירוע חריג";
