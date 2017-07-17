@@ -85,31 +85,27 @@
             // user_tb
             // 
             this.user_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.user_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.user_tb.ForeColor = System.Drawing.Color.DarkGray;
             this.user_tb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.user_tb.Location = new System.Drawing.Point(250, 138);
             this.user_tb.MaxLength = 50;
             this.user_tb.Name = "user_tb";
             this.user_tb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.user_tb.Size = new System.Drawing.Size(252, 13);
+            this.user_tb.Size = new System.Drawing.Size(252, 20);
             this.user_tb.TabIndex = 1;
-            this.user_tb.Text = "__________________________________________";
             this.user_tb.Click += new System.EventHandler(this.user_tb_Click);
             // 
             // password_tb
             // 
             this.password_tb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.password_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password_tb.ForeColor = System.Drawing.Color.DarkGray;
             this.password_tb.Location = new System.Drawing.Point(250, 215);
             this.password_tb.MaxLength = 50;
             this.password_tb.Name = "password_tb";
             this.password_tb.PasswordChar = '*';
             this.password_tb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.password_tb.Size = new System.Drawing.Size(251, 13);
+            this.password_tb.Size = new System.Drawing.Size(251, 20);
             this.password_tb.TabIndex = 2;
-            this.password_tb.Text = "__________________________________________";
             this.password_tb.Click += new System.EventHandler(this.password_tb_Click);
             // 
             // password_lb
