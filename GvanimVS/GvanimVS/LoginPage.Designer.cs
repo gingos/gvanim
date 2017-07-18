@@ -36,7 +36,9 @@
             this.password_tb = new System.Windows.Forms.TextBox();
             this.password_lb = new System.Windows.Forms.Label();
             this.close_bt = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.status_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // status_pb
@@ -141,6 +143,16 @@
             this.close_bt.UseVisualStyleBackColor = false;
             this.close_bt.Click += new System.EventHandler(this.close_bt_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::GvanimVS.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(521, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 72);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginPage
             // 
             this.AcceptButton = this.login_bt;
@@ -149,6 +161,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(672, 418);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.close_bt);
             this.Controls.Add(this.name_lb);
             this.Controls.Add(this.login_bt);
@@ -165,6 +178,7 @@
             this.Shown += new System.EventHandler(this.LoginPage_Shown);
             this.Click += new System.EventHandler(this.user_tb_Click);
             ((System.ComponentModel.ISupportInitialize)(this.status_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,5 +192,6 @@
         private System.Windows.Forms.TextBox password_tb;
         private System.Windows.Forms.Label password_lb;
         private System.Windows.Forms.Button close_bt;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -88,7 +88,7 @@
             this.showMeetings_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showMeetings_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showMeetings_bt.ForeColor = System.Drawing.Color.White;
-            this.showMeetings_bt.Location = new System.Drawing.Point(222, 175);
+            this.showMeetings_bt.Location = new System.Drawing.Point(301, 175);
             this.showMeetings_bt.Name = "showMeetings_bt";
             this.showMeetings_bt.Size = new System.Drawing.Size(133, 33);
             this.showMeetings_bt.TabIndex = 4;
@@ -120,7 +120,7 @@
             this.showReports_bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showReports_bt.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showReports_bt.ForeColor = System.Drawing.Color.White;
-            this.showReports_bt.Location = new System.Drawing.Point(364, 175);
+            this.showReports_bt.Location = new System.Drawing.Point(364, 135);
             this.showReports_bt.Name = "showReports_bt";
             this.showReports_bt.Size = new System.Drawing.Size(144, 34);
             this.showReports_bt.TabIndex = 0;
@@ -136,7 +136,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(738, 418);
+            this.ClientSize = new System.Drawing.Size(833, 418);
             this.ControlBox = false;
             this.Controls.Add(this.editCoordinator_bt);
             this.Controls.Add(this.addMitmoded_bt);
